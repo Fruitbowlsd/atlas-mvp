@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+venv/
+atlas.db
+
+node_modules/
+dist/
+backend/app/static/
+
+.env
+.DS_Store
