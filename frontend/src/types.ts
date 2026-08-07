@@ -134,3 +134,87 @@ export interface CalculateResult {
   findings: Finding[];
   heatmap: HeatmapRow[];
 }
+
+export interface RegulatoryVersion {
+  id: number;
+  name: string;
+  sector: string;
+  status: string;
+  source_reference: string | null;
+  is_active: boolean;
+  valid_from: string | null;
+  predecessor_version_id: number | null;
+}
+
+export interface RegulatoryVersionCreate {
+  name: string;
+  sector?: string;
+  status?: string;
+  source_reference?: string | null;
+  valid_from?: string | null;
+  predecessor_version_id?: number | null;
+}
+
+export type ChangeCategory =
+  | "neuer_prozess"
+  | "neues_pflichtfeld"
+  | "neuer_code"
+  | "neue_qualitaetsregel"
+  | "neuer_testfall";
+
+export type RiskLevel = "hoch" | "mittel" | "niedrig";
+export type ChangeStatus = "entwurf" | "veroeffentlicht";
+
+export interface RegulatoryChange {
+  id: number;
+  title: string;
+  description: string | null;
+  category: ChangeCategory;
+  process_group_id: number | null;
+  process_group_name: string | null;
+  pi_id: number | null;
+  pi_number: string | null;
+  risk: RiskLevel;
+  effort: RiskLevel;
+  source_url: string | null;
+  status: ChangeStatus;
+  origin: "manuell" | "ki_vorschlag";
+  regulatory_version_id: number;
+  created_at: string;
+}
+
+export interface RegulatoryImpactRequirementRef {
+  requirement_code: string;
+  title: string;
+  pi_number: string | null;
+}
+
+export interface RegulatoryImpact {
+  has_upcoming_version: boolean;
+  upcoming_version_id: number | null;
+  upcoming_version_name: string | null;
+  upcoming_version_valid_from: string | null;
+  current_coverage: number | null;
+  projected_coverage: number | null;
+  remain_valid_count: number;
+  newly_required: RegulatoryImpactRequirementRef[];
+  dropped: RegulatoryImpactRequirementRef[];
+  published_change_count: number;
+  risk_hoch_count: number;
+  risk_mittel_count: number;
+  risk_niedrig_count: number;
+  affected_process_groups: string[];
+  new_test_case_count: number;
+}
+
+export interface RegulatoryChangeCreate {
+  title: string;
+  description?: string | null;
+  category: ChangeCategory;
+  process_group_id?: number | null;
+  pi_id?: number | null;
+  risk?: RiskLevel;
+  effort?: RiskLevel;
+  source_url?: string | null;
+  regulatory_version_id: number;
+}

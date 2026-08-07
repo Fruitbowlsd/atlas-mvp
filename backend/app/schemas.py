@@ -151,6 +151,116 @@ class ImportConfirmRequest(BaseModel):
     items: List[ImportConfirmItem]
 
 
+class RegulatoryVersionOut(BaseModel):
+    id: int
+    name: str
+    sector: str
+    status: str
+    source_reference: Optional[str]
+    is_active: bool
+    valid_from: Optional[datetime]
+    predecessor_version_id: Optional[int]
+
+    class Config:
+        from_attributes = True
+
+
+class RegulatoryVersionCreate(BaseModel):
+    name: str
+    sector: str = "gas"
+    status: str = "konsultation"  # konsultation | final
+    source_reference: Optional[str] = None
+    valid_from: Optional[datetime] = None
+    predecessor_version_id: Optional[int] = None
+
+
+class RegulatoryChangeCreate(BaseModel):
+    title: str
+    description: Optional[str] = None
+    category: str  # neuer_prozess | neues_pflichtfeld | neuer_code | neue_qualitaetsregel | neuer_testfall
+    process_group_id: Optional[int] = None
+    pi_id: Optional[int] = None
+    risk: str = "mittel"    # hoch | mittel | niedrig
+    effort: str = "mittel"  # hoch | mittel | niedrig
+    source_url: Optional[str] = None
+    regulatory_version_id: int
+
+
+class RegulatoryChangeUpdate(BaseModel):
+    title: Optional[str] = None
+    description: Optional[str] = None
+    category: Optional[str] = None
+    process_group_id: Optional[int] = None
+    pi_id: Optional[int] = None
+    risk: Optional[str] = None
+    effort: Optional[str] = None
+    source_url: Optional[str] = None
+    status: Optional[str] = None  # entwurf | veroeffentlicht
+
+
+class RegulatoryChangeOut(BaseModel):
+    id: int
+    title: str
+    description: Optional[str]
+    category: str
+    process_group_id: Optional[int]
+    process_group_name: Optional[str] = None
+    pi_id: Optional[int]
+    pi_number: Optional[str] = None
+    risk: str
+    effort: str
+    source_url: Optional[str]
+    status: str
+    origin: str
+    regulatory_version_id: int
+    created_at: datetime
+
+
+class RequirementDiffOut(BaseModel):
+    change_type: str  # neu | geaendert | entfallen
+    requirement_code: str
+    title: str
+    pi_number: Optional[str]
+    changed_fields: List[str] = []
+    old_title: Optional[str] = None
+
+
+class RegulatoryDiffSummary(BaseModel):
+    old_version_id: int
+    new_version_id: int
+    added_count: int
+    changed_count: int
+    removed_count: int
+    entries: List[RequirementDiffOut]
+
+
+class RegulatoryImpactRequirementRef(BaseModel):
+    requirement_code: str
+    title: str
+    pi_number: Optional[str] = None
+
+
+class RegulatoryImpactOut(BaseModel):
+    has_upcoming_version: bool
+    upcoming_version_id: Optional[int] = None
+    upcoming_version_name: Optional[str] = None
+    upcoming_version_valid_from: Optional[datetime] = None
+
+    current_coverage: Optional[float] = None
+    projected_coverage: Optional[float] = None
+
+    remain_valid_count: int = 0
+    newly_required: List[RegulatoryImpactRequirementRef] = []
+    dropped: List[RegulatoryImpactRequirementRef] = []
+
+    published_change_count: int = 0
+    risk_hoch_count: int = 0
+    risk_mittel_count: int = 0
+    risk_niedrig_count: int = 0
+    affected_process_groups: List[str] = []
+    new_test_case_count: int = 0
+
+
 class SapCloudAlmImportRequest(BaseModel):
     token_url: str
     client_id: str

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey, DateTime, Text
+from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey, DateTime, Text, UniqueConstraint
 from sqlalchemy.orm import relationship
 from datetime import datetime
 
@@ -13,8 +13,16 @@ class RegulatoryVersion(Base):
     sector = Column(String, nullable=False)         # "gas"
     status = Column(String, default="konsultation")  # konsultation | final
     source_reference = Column(String)
+    # Ab hier: Mehrfach-Versionen-Konzept (Abschnitt 11.7 der Planung) -- vorher gab
+    # es im System immer nur genau eine RegulatoryVersion.
+    is_active = Column(Boolean, default=False)       # genau eine Version = Default fuer neue Assessments
+    valid_from = Column(DateTime, nullable=True)     # z.B. Stichtag "01.10.2027"
+    created_at = Column(DateTime, default=datetime.utcnow)
+    predecessor_version_id = Column(Integer, ForeignKey("regulatory_versions.id"), nullable=True)
 
     requirements = relationship("Requirement", back_populates="regulatory_version")
+    changes = relationship("RegulatoryChange", back_populates="regulatory_version")
+    predecessor = relationship("RegulatoryVersion", remote_side=[id])
 
 
 class ProcessGroup(Base):
@@ -47,9 +55,14 @@ class ProcessIdentifier(Base):
 
 class Requirement(Base):
     __tablename__ = "requirements"
+    # code ist NICHT mehr global unique, sondern nur je RegulatoryVersion: fuer die
+    # Diff-Logik (Abschnitt 11.2/11.7) muss derselbe Code in mehreren Versionen
+    # parallel vorkommen koennen, z.B. unveraendert von der alten in die neue
+    # Version uebernommen.
+    __table_args__ = (UniqueConstraint("code", "regulatory_version_id", name="uq_requirement_code_per_version"),)
 
     id = Column(Integer, primary_key=True)
-    code = Column(String, unique=True, nullable=False)
+    code = Column(String, nullable=False)
     title = Column(String, nullable=False)
     description = Column(Text)
     pi_id = Column(Integer, ForeignKey("process_identifiers.id"))
@@ -146,3 +159,73 @@ class Finding(Base):
 
     assessment = relationship("Assessment", back_populates="findings")
     requirement = relationship("Requirement")
+
+
+class RegulatoryChange(Base):
+    """Einzelne regulatorische Aenderung einer (neuen) RegulatoryVersion -- Kernentitaet
+    der Regulatory Intelligence (Planungsdokument Abschnitt 11.3). Wird zunaechst
+    manuell durch einen Kurator angelegt (11.4); die Anthropic-Anbindung (11.2, Schritt
+    4) ergaenzt spaeter KI-Vorschlaege ueber das origin-Feld -- Muster wie bei
+    AssessmentRequirement.data_source ("System schlaegt vor, Mensch bestaetigt")."""
+    __tablename__ = "regulatory_changes"
+
+    id = Column(Integer, primary_key=True)
+    title = Column(String, nullable=False)
+    description = Column(Text)
+    # neuer_prozess | neues_pflichtfeld | neuer_code | neue_qualitaetsregel | neuer_testfall
+    category = Column(String, nullable=False)
+    process_group_id = Column(Integer, ForeignKey("process_groups.id"), nullable=True)
+    pi_id = Column(Integer, ForeignKey("process_identifiers.id"), nullable=True)
+    risk = Column(String, default="mittel")        # hoch | mittel | niedrig
+    effort = Column(String, default="mittel")      # hoch | mittel | niedrig
+    source_url = Column(String)
+    status = Column(String, default="entwurf")     # entwurf | veroeffentlicht
+    origin = Column(String, default="manuell")     # manuell | ki_vorschlag
+    regulatory_version_id = Column(Integer, ForeignKey("regulatory_versions.id"), nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    regulatory_version = relationship("RegulatoryVersion", back_populates="changes")
+    process_group = relationship("ProcessGroup")
+    pi = relationship("ProcessIdentifier")
+    technology_mappings = relationship("RegulatoryChangeTechnologyMapping", back_populates="regulatory_change")
+
+
+class TechnologySystem(Base):
+    """Ebene 2 (optionaler 'Technology Pack'), z.B. 'SAP Utilities'. In dieser Session
+    noch ohne Kuratoren-UI/Scraper -- Tabelle wird bereits angelegt, um eine zweite
+    Schema-Aenderung zu vermeiden, wenn Ebene 2 umgesetzt wird (siehe 11.7)."""
+    __tablename__ = "technology_systems"
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)   # z.B. "SAP Utilities"
+    vendor = Column(String)                 # z.B. "SAP"
+
+    release_notes = relationship("TechnologyReleaseNote", back_populates="technology_system")
+
+
+class TechnologyReleaseNote(Base):
+    """Nur Referenz: Titel + eigene Kurzfassung + Link -- NIE Volltexte spiegeln.
+    Herstellerdokumente wie SAP Notes sind lizenzpflichtig/nicht frei
+    weiterverbreitbar (siehe 11.1)."""
+    __tablename__ = "technology_release_notes"
+
+    id = Column(Integer, primary_key=True)
+    technology_system_id = Column(Integer, ForeignKey("technology_systems.id"), nullable=False)
+    title = Column(String, nullable=False)
+    own_summary = Column(Text)
+    external_url = Column(String)
+
+    technology_system = relationship("TechnologySystem", back_populates="release_notes")
+
+
+class RegulatoryChangeTechnologyMapping(Base):
+    """Verknuepfung n:m -- welche RegulatoryChange wird durch welche
+    TechnologyReleaseNote in einem konkreten System umgesetzt."""
+    __tablename__ = "regulatory_change_technology_mappings"
+
+    id = Column(Integer, primary_key=True)
+    regulatory_change_id = Column(Integer, ForeignKey("regulatory_changes.id"), nullable=False)
+    technology_release_note_id = Column(Integer, ForeignKey("technology_release_notes.id"), nullable=False)
+
+    regulatory_change = relationship("RegulatoryChange", back_populates="technology_mappings")
+    technology_release_note = relationship("TechnologyReleaseNote")

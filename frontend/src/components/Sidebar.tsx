@@ -1,4 +1,13 @@
-export type Step = "uebersicht" | "kundenprofil" | "marktkommunikation" | "assessment" | "import" | "ergebnisse" | "roadmap";
+export type Step =
+  | "uebersicht"
+  | "kundenprofil"
+  | "marktkommunikation"
+  | "assessment"
+  | "import"
+  | "ergebnisse"
+  | "formatumstellung"
+  | "roadmap"
+  | "kuration";
 
 interface StepDef {
   key: Step;
@@ -20,7 +29,9 @@ export function Sidebar({ active, onSelect, hasAssessment }: Props) {
     { key: "assessment", label: "Assessment", enabled: hasAssessment },
     { key: "import", label: "Import", enabled: hasAssessment },
     { key: "ergebnisse", label: "Ergebnisse", enabled: hasAssessment },
+    { key: "formatumstellung", label: "Formatumstellungs-Impact", enabled: hasAssessment },
     { key: "roadmap", label: "Roadmap", enabled: true },
+    { key: "kuration", label: "Kuration (intern)", enabled: true },
   ];
 
   return (

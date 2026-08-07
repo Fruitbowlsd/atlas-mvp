@@ -12,6 +12,8 @@ import { Login } from "./components/Login";
 import { MarketCommunicationTriangle } from "./components/MarketCommunicationTriangle";
 import { Import } from "./components/Import";
 import { Roadmap } from "./components/Roadmap";
+import { RegulatoryCuration } from "./components/RegulatoryCuration";
+import { RegulatoryImpactView } from "./components/RegulatoryImpactView";
 
 export default function App() {
   const [authChecked, setAuthChecked] = useState(false);
@@ -106,6 +108,10 @@ export default function App() {
       return <Roadmap />;
     }
 
+    if (step === "kuration") {
+      return <RegulatoryCuration />;
+    }
+
     if (step === "kundenprofil") {
       if (detail) {
         return <ProfileSummary assessment={detail.assessment} onEdit={resetToWizard} />;
@@ -177,6 +183,10 @@ export default function App() {
           <FindingsList findings={findings} />
         </div>
       );
+    }
+
+    if (step === "formatumstellung") {
+      return <RegulatoryImpactView assessmentId={detail.assessment.id} />;
     }
 
     // uebersicht

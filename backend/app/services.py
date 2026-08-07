@@ -10,13 +10,28 @@ QUALITY_WEIGHTS = {
 }
 
 
-def _is_relevant(ar: models.AssessmentRequirement, segments: set[str]) -> bool:
-    req = ar.requirement
+def get_active_regulatory_version(db: Session) -> models.RegulatoryVersion | None:
+    """Liefert die aktuell aktive RegulatoryVersion -- der Default-Referenzkatalog
+    fuer neue Assessments (Abschnitt 11.7: Mehrfach-Versionen-Konzept). Vorher gab
+    es dafuer nur `RegulatoryVersion.query.first()`, weil es genau eine Version gab."""
+    return db.query(models.RegulatoryVersion).filter(models.RegulatoryVersion.is_active == True).first()  # noqa: E712
+
+
+def requirement_matches_segments(req: models.Requirement, segments: set[str]) -> bool:
+    """Prueft, ob ein Requirement fuer die uebergebenen Kundensegmente (slp/rlm)
+    relevant ist. Von _is_relevant() UND der Regulatory-Impact-Berechnung
+    (Schritt 2e, siehe routers_regulatory.py) gemeinsam genutzt -- dort gibt es
+    fuer die kommende Version noch keine AssessmentRequirement-Zeilen, nur die
+    rohen Requirements."""
     if "slp" in segments and req.applies_to_slp:
         return True
     if "rlm" in segments and req.applies_to_rlm:
         return True
     return False
+
+
+def _is_relevant(ar: models.AssessmentRequirement, segments: set[str]) -> bool:
+    return requirement_matches_segments(ar.requirement, segments)
 
 
 def calculate_score(db: Session, assessment: models.Assessment) -> models.ScoreResult:

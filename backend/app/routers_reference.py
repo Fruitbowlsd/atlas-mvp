@@ -8,13 +8,9 @@ from .auth import require_auth
 router = APIRouter(prefix="/api", tags=["reference"], dependencies=[Depends(require_auth)])
 
 
-@router.get("/regulatory-versions")
+@router.get("/regulatory-versions", response_model=list[schemas.RegulatoryVersionOut])
 def list_regulatory_versions(db: Session = Depends(get_db)):
-    versions = db.query(models.RegulatoryVersion).all()
-    return [
-        {"id": v.id, "name": v.name, "sector": v.sector, "status": v.status}
-        for v in versions
-    ]
+    return db.query(models.RegulatoryVersion).order_by(models.RegulatoryVersion.id).all()
 
 
 @router.get("/process-groups", response_model=list[schemas.ProcessGroupOut])
