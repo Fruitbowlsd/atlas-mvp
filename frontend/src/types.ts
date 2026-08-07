@@ -163,7 +163,7 @@ export type ChangeCategory =
   | "neuer_testfall";
 
 export type RiskLevel = "hoch" | "mittel" | "niedrig";
-export type ChangeStatus = "entwurf" | "veroeffentlicht";
+export type ChangeStatus = "zu_pruefen" | "entwurf" | "veroeffentlicht";
 
 export interface RegulatoryChange {
   id: number;

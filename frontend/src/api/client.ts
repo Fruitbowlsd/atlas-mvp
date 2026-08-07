@@ -104,6 +104,9 @@ export const api = {
       body: JSON.stringify(payload),
     }),
 
+  deleteRegulatoryVersion: (id: number) =>
+    request<{ deleted: boolean }>(`/regulatory-versions/${id}`, { method: "DELETE" }),
+
   listRegulatoryChanges: (regulatoryVersionId: number) =>
     request<RegulatoryChange[]>(`/regulatory-changes?regulatory_version_id=${regulatoryVersionId}`),
 

@@ -204,6 +204,50 @@ REQUIREMENTS = [
     ("LB-44021-ANTWORT", "Zustimmung/Ablehnung ueber Antwort auf Aenderungsmeldung", "44021", None, None, "niedrig", True, True),
 ]
 
+# --- Regulatory Intelligence: Demo-Daten fuer ein reales Vorher-Nachher-Paar ---
+# (Planungsdokument Abschnitt 11.8 -- feste Seed-/Demo-Daten statt Live-Monitoring.
+# Mitteilung 56 ist die verbindliche Endfassung nach der Konsultation aus
+# Mitteilung 55 der BNetzA-Beschlusskammer 6 (Zug/Mess/Datenformate). Kein
+# automatischer Scraper/Monitoring-Job -- die Aenderungen unten sind manuell
+# nachempfunden, nicht automatisch aus dem Dokument extrahiert.)
+REGULATORY_VERSION_2 = {
+    "name": "Mitteilung Nr. 56 / gültig ab 01.10.2026",
+    "sector": "gas",
+    "status": "verbindlich",
+    "source_reference": (
+        "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/"
+        "835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+    ),
+    "is_active": False,  # bevorstehende Formatumstellung -- noch nicht der Standardkatalog
+}
+
+# (title, description, category, risk, effort, process_group_code, pi_number)
+# process_group_code/pi_number sind optional (None), wenn die Aenderung katalogweit
+# gilt statt an eine einzelne Prozessgruppe/PI gebunden zu sein.
+REGULATORY_CHANGES_V2 = [
+    (
+        "Neue Anwendungsübersicht der Prüfidentifikatoren 4.0",
+        "Mitteilung 56 führt eine überarbeitete Anwendungsübersicht der PIs ein "
+        "(Version 4.0) -- betrifft die Zuordnung von Prüfidentifikatoren über "
+        "mehrere Prozessgruppen hinweg und muss gegen den bestehenden Katalog "
+        "abgeglichen werden.",
+        "neue_qualitaetsregel", "mittel", "mittel", None, None,
+    ),
+    (
+        "Änderungen an Codeliste-Konfigurationen 1.4",
+        "Codeliste-Konfigurationen wurden auf Version 1.4 aktualisiert -- "
+        "einzelne Codes wurden ergänzt bzw. umbenannt. Technisch schmale, aber "
+        "verbindliche Anpassung.",
+        "neuer_code", "niedrig", "niedrig", None, None,
+    ),
+    (
+        "Neue Testfälle für die Anmeldung (PI 44001)",
+        "Mitteilung 56 ergänzt zusätzliche Prüffälle für den Anmeldeprozess, "
+        "u.a. zur Konsistenz der neuen PI-Anwendungsübersicht.",
+        "neuer_testfall", "niedrig", "niedrig", "registration", "44001",
+    ),
+]
+
 DEMO_CUSTOMER_NAME = "Demo Gaslieferant GmbH"
 
 IMPLEMENTIERT = "implementiert"

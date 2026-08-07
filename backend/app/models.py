@@ -11,7 +11,7 @@ class RegulatoryVersion(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)          # z.B. "GeLi Gas 2.0 / UTILMD Gas G1.1"
     sector = Column(String, nullable=False)         # "gas"
-    status = Column(String, default="konsultation")  # konsultation | final
+    status = Column(String, default="konsultation")  # konsultation | final | verbindlich
     source_reference = Column(String)
     # Ab hier: Mehrfach-Versionen-Konzept (Abschnitt 11.7 der Planung) -- vorher gab
     # es im System immer nur genau eine RegulatoryVersion.
@@ -179,7 +179,7 @@ class RegulatoryChange(Base):
     risk = Column(String, default="mittel")        # hoch | mittel | niedrig
     effort = Column(String, default="mittel")      # hoch | mittel | niedrig
     source_url = Column(String)
-    status = Column(String, default="entwurf")     # entwurf | veroeffentlicht
+    status = Column(String, default="entwurf")     # zu_pruefen | entwurf | veroeffentlicht (Kanban-Spalten)
     origin = Column(String, default="manuell")     # manuell | ki_vorschlag
     regulatory_version_id = Column(Integer, ForeignKey("regulatory_versions.id"), nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
