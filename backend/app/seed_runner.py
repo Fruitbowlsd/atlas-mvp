@@ -132,4 +132,28 @@ def run_seed(db: Session):
         )
         db.add(ar)
 
+    # Regulatory Intelligence: reales Vorher-Nachher-Paar als feste Demo-Grundlage
+    # (Abschnitt 11.8 -- kein Live-Monitoring, keine automatische Extraktion).
+    reg_version_2 = models.RegulatoryVersion(
+        **sd.REGULATORY_VERSION_2,
+        predecessor_version_id=reg_version.id,
+    )
+    db.add(reg_version_2)
+    db.flush()
+
+    for title, description, category, risk, effort, group_code, pi_number in sd.REGULATORY_CHANGES_V2:
+        db.add(models.RegulatoryChange(
+            title=title,
+            description=description,
+            category=category,
+            risk=risk,
+            effort=effort,
+            process_group_id=group_by_code[group_code].id if group_code else None,
+            pi_id=pi_by_number[pi_number].id if pi_number else None,
+            source_url=sd.REGULATORY_VERSION_2["source_reference"],
+            status="veroeffentlicht",  # direkt als Demo-Karten in der "Veroeffentlicht"-Spalte sichtbar
+            origin="manuell",
+            regulatory_version_id=reg_version_2.id,
+        ))
+
     db.commit()

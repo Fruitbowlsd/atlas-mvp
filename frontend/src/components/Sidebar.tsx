@@ -5,9 +5,8 @@ export type Step =
   | "assessment"
   | "import"
   | "ergebnisse"
-  | "formatumstellung"
   | "roadmap"
-  | "kuration";
+  | "formataenderungen";
 
 interface StepDef {
   key: Step;
@@ -22,17 +21,32 @@ interface Props {
 }
 
 export function Sidebar({ active, onSelect, hasAssessment }: Props) {
-  const steps: StepDef[] = [
+  // Kundenbezogene Eintraege -- sichtbar/relevant fuer die Kunden-Sicht des MVP.
+  const customerSteps: StepDef[] = [
     { key: "uebersicht", label: "Übersicht", enabled: hasAssessment },
     { key: "kundenprofil", label: "Kundenprofil", enabled: true },
     { key: "marktkommunikation", label: "Marktkommunikation", enabled: hasAssessment },
     { key: "assessment", label: "Assessment", enabled: hasAssessment },
     { key: "import", label: "Import", enabled: hasAssessment },
     { key: "ergebnisse", label: "Ergebnisse", enabled: hasAssessment },
-    { key: "formatumstellung", label: "Formatumstellungs-Impact", enabled: hasAssessment },
     { key: "roadmap", label: "Roadmap", enabled: true },
-    { key: "kuration", label: "Kuration (intern)", enabled: true },
   ];
+
+  // Rein interne Bereiche -- optisch abgesetzt, nicht Teil der Kunden-Sicht.
+  const internalSteps: StepDef[] = [
+    { key: "formataenderungen", label: "Formatänderungen", enabled: true },
+  ];
+
+  const renderItem = (s: StepDef) => (
+    <button
+      key={s.key}
+      className={`sidebar-item ${active === s.key ? "active" : ""} ${!s.enabled ? "disabled" : ""}`}
+      onClick={() => s.enabled && onSelect(s.key)}
+      disabled={!s.enabled}
+    >
+      {s.label}
+    </button>
+  );
 
   return (
     <div className="sidebar">
@@ -45,16 +59,10 @@ export function Sidebar({ active, onSelect, hasAssessment }: Props) {
       </div>
 
       <nav className="sidebar-nav">
-        {steps.map((s) => (
-          <button
-            key={s.key}
-            className={`sidebar-item ${active === s.key ? "active" : ""} ${!s.enabled ? "disabled" : ""}`}
-            onClick={() => s.enabled && onSelect(s.key)}
-            disabled={!s.enabled}
-          >
-            {s.label}
-          </button>
-        ))}
+        {customerSteps.map(renderItem)}
+        <div className="sidebar-divider" />
+        <div className="sidebar-section-label">Intern</div>
+        {internalSteps.map(renderItem)}
       </nav>
 
       <div className="sidebar-footer">

@@ -12,7 +12,9 @@ router = APIRouter(prefix="/api", tags=["regulatory-intelligence"], dependencies
 
 CATEGORIES = {"neuer_prozess", "neues_pflichtfeld", "neuer_code", "neue_qualitaetsregel", "neuer_testfall"}
 RISK_EFFORT_LEVELS = {"hoch", "mittel", "niedrig"}
-STATUSES = {"entwurf", "veroeffentlicht"}
+# Kanban-Spalten (Schritt 3/Korrektur): zu_pruefen = KI-Vorschlag noch nicht bestaetigt,
+# entwurf = manuell in Bearbeitung, veroeffentlicht = live fuer Kunden sichtbar.
+STATUSES = {"zu_pruefen", "entwurf", "veroeffentlicht"}
 
 
 def _validate_change_fields(category: str | None, risk: str | None, effort: str | None, status: str | None) -> None:
@@ -75,6 +77,34 @@ def create_regulatory_version(payload: schemas.RegulatoryVersionCreate, db: Sess
     return version
 
 
+@router.delete("/regulatory-versions/{version_id}")
+def delete_regulatory_version(version_id: int, db: Session = Depends(get_db)):
+    """Loescht eine kuratierte Version wieder -- z.B. um versehentlich angelegte
+    Test-/Fehleintraege (etwa durch falsche Tastaturbelegung vertippte Namen) zu
+    entfernen. Schuetzt die aktive Version und jede Version, auf die sich bereits
+    ein Assessment bezieht, vor dem Loeschen."""
+    version = db.query(models.RegulatoryVersion).filter(models.RegulatoryVersion.id == version_id).first()
+    if not version:
+        raise HTTPException(status_code=404, detail="RegulatoryVersion nicht gefunden")
+    if version.is_active:
+        raise HTTPException(status_code=400, detail="Die aktive Version kann nicht geloescht werden")
+
+    in_use = db.query(models.Assessment).filter(models.Assessment.regulatory_version_id == version_id).first()
+    if in_use:
+        raise HTTPException(status_code=400, detail="Version wird bereits von mindestens einem Assessment verwendet und kann nicht geloescht werden")
+
+    db.query(models.RegulatoryChange).filter(models.RegulatoryChange.regulatory_version_id == version_id).delete()
+    db.query(models.Requirement).filter(models.Requirement.regulatory_version_id == version_id).delete()
+    # Andere Versionen, die diese als Vorgaenger fuehren, verlieren die Referenz statt
+    # mitgeloescht zu werden -- verhindert eine Kettenreaktion durch eine Loeschung.
+    db.query(models.RegulatoryVersion).filter(models.RegulatoryVersion.predecessor_version_id == version_id).update(
+        {"predecessor_version_id": None}
+    )
+    db.delete(version)
+    db.commit()
+    return {"deleted": True}
+
+
 @router.get("/regulatory-versions/{version_id}/diff", response_model=schemas.RegulatoryDiffSummary)
 def get_regulatory_diff(version_id: int, against: int | None = None, db: Session = Depends(get_db)):
     """Klassischer Requirement-Diff (Pipeline-Schritt 3, Abschnitt 11.2) zwischen
@@ -120,8 +150,9 @@ def analyze_regulatory_diff(version_id: int, against: int | None = None, db: Ses
     """Pipeline-Schritt 4 (Abschnitt 11.2): holt den klassischen Diff (Schritt 3,
     siehe get_regulatory_diff), schickt NUR die neuen/geaenderten Zeilen an die
     Anthropic-API (ai_analysis.py) und legt das Ergebnis als KI-Vorschlaege
-    (status=entwurf, origin=ki_vorschlag) an -- der Kurator prueft sie in der
-    Kuratoren-UI (Schritt 2b) wie jede andere RegulatoryChange."""
+    (status=zu_pruefen, origin=ki_vorschlag) an -- der Kurator prueft sie in der
+    Kanban-Spalte "Zu pruefen" (Kuratoren-UI, Schritt 2b) wie jede andere
+    RegulatoryChange."""
     new_version = db.query(models.RegulatoryVersion).filter(models.RegulatoryVersion.id == version_id).first()
     if not new_version:
         raise HTTPException(status_code=404, detail="RegulatoryVersion nicht gefunden")
@@ -161,7 +192,7 @@ def analyze_regulatory_diff(version_id: int, against: int | None = None, db: Ses
             risk=risk if risk in RISK_EFFORT_LEVELS else "mittel",
             effort=effort if effort in RISK_EFFORT_LEVELS else "mittel",
             regulatory_version_id=version_id,
-            status="entwurf",       # auch KI-Vorschlaege starten immer als Entwurf
+            status="zu_pruefen",    # KI-Vorschlaege starten unbestaetigt in der ersten Kanban-Spalte
             origin="ki_vorschlag",
         )
         db.add(change)
