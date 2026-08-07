@@ -12,6 +12,7 @@ REGULATORY_VERSION = {
     "sector": "gas",
     "status": "konsultation",
     "source_reference": "BDEW/EDI@Energy Konsultationsfassung 01.08.2025",
+    "is_active": True,  # Default-Referenzkatalog fuer neue Assessments (Abschnitt 11.7)
 }
 
 PROCESS_GROUPS = [

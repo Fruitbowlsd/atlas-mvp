@@ -5,6 +5,12 @@ import type {
   AssessmentSummary,
   CalculateResult,
   ImportPreview,
+  ProcessGroup,
+  RegulatoryChange,
+  RegulatoryChangeCreate,
+  RegulatoryImpact,
+  RegulatoryVersion,
+  RegulatoryVersionCreate,
   SapCloudAlmForm,
 } from "../types";
 
@@ -87,4 +93,38 @@ export const api = {
       method: "POST",
       body: JSON.stringify({ source_name: sourceName, items }),
     }),
+
+  listProcessGroups: () => request<ProcessGroup[]>("/process-groups"),
+
+  listRegulatoryVersions: () => request<RegulatoryVersion[]>("/regulatory-versions"),
+
+  createRegulatoryVersion: (payload: RegulatoryVersionCreate) =>
+    request<RegulatoryVersion>("/regulatory-versions", {
+      method: "POST",
+      body: JSON.stringify(payload),
+    }),
+
+  listRegulatoryChanges: (regulatoryVersionId: number) =>
+    request<RegulatoryChange[]>(`/regulatory-changes?regulatory_version_id=${regulatoryVersionId}`),
+
+  createRegulatoryChange: (payload: RegulatoryChangeCreate) =>
+    request<RegulatoryChange>("/regulatory-changes", {
+      method: "POST",
+      body: JSON.stringify(payload),
+    }),
+
+  updateRegulatoryChange: (id: number, payload: Partial<RegulatoryChangeCreate & { status: string }>) =>
+    request<RegulatoryChange>(`/regulatory-changes/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify(payload),
+    }),
+
+  deleteRegulatoryChange: (id: number) =>
+    request<{ deleted: boolean }>(`/regulatory-changes/${id}`, { method: "DELETE" }),
+
+  analyzeDiff: (versionId: number) =>
+    request<RegulatoryChange[]>(`/regulatory-versions/${versionId}/analyze-diff`, { method: "POST" }),
+
+  getRegulatoryImpact: (assessmentId: number) =>
+    request<RegulatoryImpact>(`/assessments/${assessmentId}/regulatory-impact`),
 };

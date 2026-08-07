@@ -68,8 +68,14 @@ richtiges Auth (z.B. OAuth, einzelne Benutzerkonten) zu ersetzen.
 ```bash
 cd backend
 pip install -r requirements.txt
-uvicorn app.main:app --reload
+uvicorn app.main:app --reload --env-file .env
 ```
+
+`--env-file .env` laedt eine lokale `backend/.env`-Datei (z.B. fuer
+`ANTHROPIC_API_KEY`, siehe [.env.example](backend/.env.example)) in die
+Prozessumgebung -- ohne das Flag wird `.env` **nicht** automatisch gelesen,
+nur echte Shell-/Systemvariablen. Auf Railway betrifft das nicht: dort werden
+Variablen direkt in die Prozessumgebung injiziert.
 
 ### Frontend
 

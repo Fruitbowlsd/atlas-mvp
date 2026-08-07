@@ -48,9 +48,10 @@ def create_assessment(payload: schemas.AssessmentCreate, db: Session = Depends(g
     if not segments or not segments.issubset({"slp", "rlm"}):
         raise HTTPException(status_code=400, detail="customer_segments muss 'slp', 'rlm' oder 'slp,rlm' sein")
 
-    # Im MVP gibt es nur den regulatorischen Stand + Requirement-Katalog fuer Gas /
-    # Lieferbeginn -> jede neue Bewertung nutzt denselben Referenzkatalog.
-    reg_version = db.query(models.RegulatoryVersion).first()
+    # Neue Bewertungen nutzen immer die aktuell aktive RegulatoryVersion als
+    # Referenzkatalog (Abschnitt 11.7: mehrere Versionen koennen parallel existieren,
+    # z.B. waehrend eine bevorstehende Formatumstellung schon kuratiert wird).
+    reg_version = services.get_active_regulatory_version(db)
     if not reg_version:
         raise HTTPException(status_code=500, detail="Referenzdaten nicht geseedet")
 
