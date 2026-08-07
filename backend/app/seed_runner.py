@@ -141,13 +141,50 @@ def run_seed(db: Session):
     db.add(reg_version_2)
     db.flush()
 
-    for title, description, category, risk, effort, group_code, pi_number in sd.REGULATORY_CHANGES_V2:
+    # Katalog der neuen Version = bestehender Katalog unveraendert uebernommen plus
+    # die von Mitteilung 56 ergaenzten Requirements. Damit liefert der Diff ein
+    # realistisches Bild ("das meiste bleibt gueltig, einiges kommt dazu") statt
+    # eines leeren Katalogs, den die Diff-Logik als "alles entfallen" lesen wuerde.
+    for req, _pi_number in requirements:
+        db.add(models.Requirement(
+            code=req.code,
+            title=req.title,
+            description=req.description,
+            pi_id=req.pi_id,
+            transaction_reason=req.transaction_reason,
+            response_code=req.response_code,
+            criticality=req.criticality,
+            weight=req.weight,
+            applies_to_slp=req.applies_to_slp,
+            applies_to_rlm=req.applies_to_rlm,
+            is_conditional=req.is_conditional,
+            regulatory_version_id=reg_version_2.id,
+        ))
+
+    for code, title, pi_number, tx_reason, resp_code, criticality, slp, rlm in sd.REQUIREMENTS_V2_NEW:
+        db.add(models.Requirement(
+            code=code,
+            title=title,
+            pi_id=pi_by_number[pi_number].id,
+            transaction_reason=tx_reason,
+            response_code=resp_code,
+            criticality=criticality,
+            weight=sd.WEIGHT_BY_CRITICALITY[criticality],
+            applies_to_slp=slp,
+            applies_to_rlm=rlm,
+            regulatory_version_id=reg_version_2.id,
+        ))
+
+    for (title, description, category, risk, effort, person_days,
+         recommendation, group_code, pi_number) in sd.REGULATORY_CHANGES_V2:
         db.add(models.RegulatoryChange(
             title=title,
             description=description,
             category=category,
             risk=risk,
             effort=effort,
+            effort_person_days=person_days,
+            recommendation=recommendation,
             process_group_id=group_by_code[group_code].id if group_code else None,
             pi_id=pi_by_number[pi_number].id if pi_number else None,
             source_url=sd.REGULATORY_VERSION_2["source_reference"],

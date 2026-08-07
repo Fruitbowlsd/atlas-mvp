@@ -176,6 +176,8 @@ export interface RegulatoryChange {
   pi_number: string | null;
   risk: RiskLevel;
   effort: RiskLevel;
+  effort_person_days: number | null;
+  recommendation: string | null;
   source_url: string | null;
   status: ChangeStatus;
   origin: "manuell" | "ki_vorschlag";
@@ -189,22 +191,43 @@ export interface RegulatoryImpactRequirementRef {
   pi_number: string | null;
 }
 
+export interface RegulatoryImpactChange {
+  id: number;
+  title: string;
+  description: string | null;
+  category: ChangeCategory;
+  risk: RiskLevel;
+  effort: RiskLevel;
+  effort_person_days: number | null;
+  recommendation: string | null;
+  source_url: string | null;
+  process_group_name: string | null;
+  pi_number: string | null;
+  origin: "manuell" | "ki_vorschlag";
+  is_reviewed: boolean;
+}
+
 export interface RegulatoryImpact {
   has_upcoming_version: boolean;
   upcoming_version_id: number | null;
   upcoming_version_name: string | null;
   upcoming_version_valid_from: string | null;
+  upcoming_version_status: string | null;
   current_coverage: number | null;
   projected_coverage: number | null;
   remain_valid_count: number;
+  remain_valid: RegulatoryImpactRequirementRef[];
   newly_required: RegulatoryImpactRequirementRef[];
   dropped: RegulatoryImpactRequirementRef[];
   published_change_count: number;
   risk_hoch_count: number;
   risk_mittel_count: number;
   risk_niedrig_count: number;
+  overall_risk: RiskLevel | null;
+  total_person_days: number | null;
   affected_process_groups: string[];
   new_test_case_count: number;
+  changes: RegulatoryImpactChange[];
 }
 
 export interface RegulatoryChangeCreate {

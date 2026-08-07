@@ -178,6 +178,13 @@ class RegulatoryChange(Base):
     pi_id = Column(Integer, ForeignKey("process_identifiers.id"), nullable=True)
     risk = Column(String, default="mittel")        # hoch | mittel | niedrig
     effort = Column(String, default="mittel")      # hoch | mittel | niedrig
+    # Konkrete Aufwandsschaetzung zusaetzlich zur groben Stufe -- mit "mittel" allein
+    # laesst sich keine Ressourcenplanung machen. Optional, weil nicht jede Aenderung
+    # zum Kurationszeitpunkt schon belastbar schaetzbar ist.
+    effort_person_days = Column(Integer, nullable=True)
+    # Handlungsempfehlung fuer den Kunden ("was ist jetzt zu tun") -- Gegenstueck zu
+    # Finding.recommendation im Assessment-Bereich.
+    recommendation = Column(Text, nullable=True)
     source_url = Column(String)
     status = Column(String, default="entwurf")     # zu_pruefen | entwurf | veroeffentlicht (Kanban-Spalten)
     origin = Column(String, default="manuell")     # manuell | ki_vorschlag

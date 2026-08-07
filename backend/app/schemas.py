@@ -182,6 +182,8 @@ class RegulatoryChangeCreate(BaseModel):
     pi_id: Optional[int] = None
     risk: str = "mittel"    # hoch | mittel | niedrig
     effort: str = "mittel"  # hoch | mittel | niedrig
+    effort_person_days: Optional[int] = None
+    recommendation: Optional[str] = None
     source_url: Optional[str] = None
     regulatory_version_id: int
 
@@ -194,8 +196,10 @@ class RegulatoryChangeUpdate(BaseModel):
     pi_id: Optional[int] = None
     risk: Optional[str] = None
     effort: Optional[str] = None
+    effort_person_days: Optional[int] = None
+    recommendation: Optional[str] = None
     source_url: Optional[str] = None
-    status: Optional[str] = None  # entwurf | veroeffentlicht
+    status: Optional[str] = None  # zu_pruefen | entwurf | veroeffentlicht
 
 
 class RegulatoryChangeOut(BaseModel):
@@ -209,6 +213,8 @@ class RegulatoryChangeOut(BaseModel):
     pi_number: Optional[str] = None
     risk: str
     effort: str
+    effort_person_days: Optional[int] = None
+    recommendation: Optional[str] = None
     source_url: Optional[str]
     status: str
     origin: str
@@ -240,16 +246,38 @@ class RegulatoryImpactRequirementRef(BaseModel):
     pi_number: Optional[str] = None
 
 
+class RegulatoryImpactChange(BaseModel):
+    """Eine kundensichtbare (= veroeffentlichte) Aenderung inkl. Handlungsempfehlung
+    und Herkunft, damit der Kunde einschaetzen kann, worauf er sich verlaesst."""
+    id: int
+    title: str
+    description: Optional[str]
+    category: str
+    risk: str
+    effort: str
+    effort_person_days: Optional[int]
+    recommendation: Optional[str]
+    source_url: Optional[str]
+    process_group_name: Optional[str]
+    pi_number: Optional[str]
+    origin: str  # manuell | ki_vorschlag
+    # Kundensichtbar sind ausschliesslich veroeffentlichte Eintraege -- die haben die
+    # Kuration durchlaufen und gelten damit als redaktionell geprueft.
+    is_reviewed: bool
+
+
 class RegulatoryImpactOut(BaseModel):
     has_upcoming_version: bool
     upcoming_version_id: Optional[int] = None
     upcoming_version_name: Optional[str] = None
     upcoming_version_valid_from: Optional[datetime] = None
+    upcoming_version_status: Optional[str] = None  # konsultation | final | verbindlich
 
     current_coverage: Optional[float] = None
     projected_coverage: Optional[float] = None
 
     remain_valid_count: int = 0
+    remain_valid: List[RegulatoryImpactRequirementRef] = []
     newly_required: List[RegulatoryImpactRequirementRef] = []
     dropped: List[RegulatoryImpactRequirementRef] = []
 
@@ -257,8 +285,13 @@ class RegulatoryImpactOut(BaseModel):
     risk_hoch_count: int = 0
     risk_mittel_count: int = 0
     risk_niedrig_count: int = 0
+    # Hoechstes vorkommendes Einzelrisiko bestimmt das Gesamtrisiko -- eine einzige
+    # "hoch"-Aenderung macht die gesamte Umstellung zum Hochrisiko-Vorhaben.
+    overall_risk: Optional[str] = None  # hoch | mittel | niedrig
+    total_person_days: Optional[int] = None  # Summe, sofern ueberhaupt gepflegt
     affected_process_groups: List[str] = []
     new_test_case_count: int = 0
+    changes: List[RegulatoryImpactChange] = []
 
 
 class SapCloudAlmImportRequest(BaseModel):
