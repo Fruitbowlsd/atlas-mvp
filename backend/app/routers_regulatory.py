@@ -79,32 +79,10 @@ def create_regulatory_version(payload: schemas.RegulatoryVersionCreate, db: Sess
     return version
 
 
-@router.delete("/regulatory-versions/{version_id}")
-def delete_regulatory_version(version_id: int, db: Session = Depends(get_db)):
-    """Loescht eine kuratierte Version wieder -- z.B. um versehentlich angelegte
-    Test-/Fehleintraege (etwa durch falsche Tastaturbelegung vertippte Namen) zu
-    entfernen. Schuetzt die aktive Version und jede Version, auf die sich bereits
-    ein Assessment bezieht, vor dem Loeschen."""
-    version = db.query(models.RegulatoryVersion).filter(models.RegulatoryVersion.id == version_id).first()
-    if not version:
-        raise HTTPException(status_code=404, detail="RegulatoryVersion nicht gefunden")
-    if version.is_active:
-        raise HTTPException(status_code=400, detail="Die aktive Version kann nicht geloescht werden")
-
-    in_use = db.query(models.Assessment).filter(models.Assessment.regulatory_version_id == version_id).first()
-    if in_use:
-        raise HTTPException(status_code=400, detail="Version wird bereits von mindestens einem Assessment verwendet und kann nicht geloescht werden")
-
-    db.query(models.RegulatoryChange).filter(models.RegulatoryChange.regulatory_version_id == version_id).delete()
-    db.query(models.Requirement).filter(models.Requirement.regulatory_version_id == version_id).delete()
-    # Andere Versionen, die diese als Vorgaenger fuehren, verlieren die Referenz statt
-    # mitgeloescht zu werden -- verhindert eine Kettenreaktion durch eine Loeschung.
-    db.query(models.RegulatoryVersion).filter(models.RegulatoryVersion.predecessor_version_id == version_id).update(
-        {"predecessor_version_id": None}
-    )
-    db.delete(version)
-    db.commit()
-    return {"deleted": True}
+# Bewusst KEIN DELETE-Endpunkt fuer RegulatoryVersion: ein Fehlklick hatte eine
+# kuratierte Version samt aller zugehoerigen Aenderungen unwiederbringlich
+# geloescht. Versionen werden deshalb gar nicht mehr entfernt -- der Seed legt
+# fehlende Demo-Versionen beim Start ohnehin wieder an (siehe seed_runner.py).
 
 
 @router.get("/regulatory-versions/{version_id}/diff", response_model=schemas.RegulatoryDiffSummary)

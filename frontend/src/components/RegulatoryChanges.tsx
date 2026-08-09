@@ -125,24 +125,6 @@ export function RegulatoryChanges({ assessmentId }: Props) {
     }
   };
 
-  const handleDeleteVersion = async () => {
-    if (selectedVersionId === null) return;
-    const version = versions.find((v) => v.id === selectedVersionId);
-    if (!version) return;
-    if (!window.confirm(`Version "${version.name}" wirklich löschen? Alle zugehörigen Änderungen werden mitgelöscht.`)) return;
-    setLoading(true);
-    setError(null);
-    try {
-      await api.deleteRegulatoryVersion(selectedVersionId);
-      setSelectedVersionId(null);
-      await loadVersions();
-    } catch (e) {
-      setError((e as Error).message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleAnalyzeDiff = async () => {
     if (selectedVersionId === null) return;
     setAnalyzing(true);
@@ -275,6 +257,8 @@ export function RegulatoryChanges({ assessmentId }: Props) {
 
   const availablePis = processGroups.find((g) => g.id === form.process_group_id)?.pis ?? [];
   const selectedVersion = versions.find((v) => v.id === selectedVersionId) ?? null;
+  // Kuriert wird immer eine kommende Version -- die aktive ist der aktuelle Stand.
+  const hasUpcomingVersion = versions.some((v) => !v.is_active);
 
   const statusLabel = (status: string) => {
     if (status === "final") return "Final";
@@ -331,11 +315,6 @@ export function RegulatoryChanges({ assessmentId }: Props) {
             <button type="button" className="text-button" onClick={() => setShowNewVersionForm((s) => !s)}>
               + neue Version
             </button>
-            {selectedVersion && !selectedVersion.is_active && (
-              <button type="button" className="text-button" onClick={handleDeleteVersion}>
-                Version löschen
-              </button>
-            )}
           </div>
 
           {selectedVersion && (
@@ -383,7 +362,22 @@ export function RegulatoryChanges({ assessmentId }: Props) {
 
           {error && <div className="form-error">{error}</div>}
 
-          {selectedVersionId !== null && (
+          {/* Ohne eine Version neben dem aktuellen Stand gibt es nichts zu kuratieren --
+              dann eine Erklaerung plus Einstieg zeigen statt einer leeren Flaeche. */}
+          {!hasUpcomingVersion && !showNewVersionForm && (
+            <div className="board-empty-state">
+              <div className="board-empty-title">Keine bevorstehende Formatumstellung erfasst.</div>
+              <div className="board-empty-text">
+                Lege eine neue Version an, um die Änderungen einer kommenden
+                Formatumstellung zu kuratieren.
+              </div>
+              <button type="button" className="recalc-button" onClick={() => setShowNewVersionForm(true)}>
+                + Neue Version anlegen
+              </button>
+            </div>
+          )}
+
+          {hasUpcomingVersion && selectedVersionId !== null && (
             <div className="kanban-board">
               {COLUMNS.map((col) => {
                 const cards = changes.filter((c) => c.status === col.status);
