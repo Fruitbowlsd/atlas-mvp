@@ -1,3 +1,5 @@
+from datetime import datetime
+
 # Seed-Datensatz fuer das MVP: Lieferbeginn Gas (GeLi Gas 2.0 / UTILMD Gas G1.1,
 # Konsultationsstand 01.08.2025).
 #
@@ -214,6 +216,9 @@ REGULATORY_VERSION_2 = {
     "name": "Mitteilung Nr. 56 / gültig ab 01.10.2026",
     "sector": "gas",
     "status": "verbindlich",
+    # Stichtag als echtes Feld, nicht nur im Namen -- die Kunden-Ansicht rechnet
+    # daraus den Countdown ("noch X Wochen bis zum Stichtag").
+    "valid_from": datetime(2026, 10, 1),
     "source_reference": (
         "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/"
         "835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
@@ -221,7 +226,8 @@ REGULATORY_VERSION_2 = {
     "is_active": False,  # bevorstehende Formatumstellung -- noch nicht der Standardkatalog
 }
 
-# (title, description, category, risk, effort, process_group_code, pi_number)
+# (title, description, category, risk, effort, effort_person_days, recommendation,
+#  process_group_code, pi_number)
 # process_group_code/pi_number sind optional (None), wenn die Aenderung katalogweit
 # gilt statt an eine einzelne Prozessgruppe/PI gebunden zu sein.
 REGULATORY_CHANGES_V2 = [
@@ -231,21 +237,41 @@ REGULATORY_CHANGES_V2 = [
         "(Version 4.0) -- betrifft die Zuordnung von Prüfidentifikatoren über "
         "mehrere Prozessgruppen hinweg und muss gegen den bestehenden Katalog "
         "abgeglichen werden.",
-        "neue_qualitaetsregel", "mittel", "mittel", None, None,
+        "neue_qualitaetsregel", "mittel", "mittel", 5,
+        "Bestehende PI-Zuordnungen gegen die neue Übersicht 4.0 abgleichen und "
+        "Abweichungen dokumentieren, bevor die Testfälle angepasst werden.",
+        None, None,
     ),
     (
         "Änderungen an Codeliste-Konfigurationen 1.4",
         "Codeliste-Konfigurationen wurden auf Version 1.4 aktualisiert -- "
         "einzelne Codes wurden ergänzt bzw. umbenannt. Technisch schmale, aber "
         "verbindliche Anpassung.",
-        "neuer_code", "niedrig", "niedrig", None, None,
+        "neuer_code", "niedrig", "niedrig", 1,
+        "Codelisten im Umsystem aktualisieren und die betroffenen Mappings "
+        "einmalig gegen die neue Fassung prüfen.",
+        None, None,
     ),
     (
         "Neue Testfälle für die Anmeldung (PI 44001)",
         "Mitteilung 56 ergänzt zusätzliche Prüffälle für den Anmeldeprozess, "
         "u.a. zur Konsistenz der neuen PI-Anwendungsübersicht.",
-        "neuer_testfall", "niedrig", "niedrig", "registration", "44001",
+        "neuer_testfall", "niedrig", "niedrig", 2,
+        "Die ergänzten Prüffälle in den bestehenden Testkatalog für PI 44001 "
+        "aufnehmen und im nächsten Regressionslauf mitfahren lassen.",
+        "registration", "44001",
     ),
+]
+
+# Requirement-Katalog der neuen Version: Mitteilung 56 ersetzt den bestehenden
+# Katalog nicht, sondern ergaenzt ihn -- der Seed uebernimmt daher alle Requirements
+# aus Version 1 unveraendert und legt zusaetzlich die unten gelisteten neuen an.
+# Ohne das wuerde der Diff den leeren Katalog als "alles entfallen" lesen.
+# (code, title, pi_number, transaction_reason, response_code, criticality, slp, rlm)
+REQUIREMENTS_V2_NEW = [
+    ("LB-44001-PI-UEBERSICHT-40", "PI-Zuordnung nach Anwendungsübersicht 4.0", "44001", None, None, "hoch", True, True),
+    ("LB-44003-CODELISTE-14", "Antwortcodes gemäß Codeliste-Konfiguration 1.4", "44003", None, None, "mittel", True, True),
+    ("LB-44001-TESTFALL-M56", "Ergänzte Prüffälle Anmeldung (Mitteilung 56)", "44001", None, None, "mittel", True, True),
 ]
 
 DEMO_CUSTOMER_NAME = "Demo Gaslieferant GmbH"

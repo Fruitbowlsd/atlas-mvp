@@ -1,52 +1,67 @@
 """Leichtgewichtige Schema-Migration ohne Alembic.
 
 `Base.metadata.create_all()` (siehe main.py) legt fehlende TABELLEN an, aendert
-aber niemals Spalten einer bereits existierenden Tabelle. Fuer neue Spalten an
-`regulatory_versions` (Mehrfach-Versionen-Konzept, Abschnitt 11.7) braucht es
-deshalb diesen kleinen, idempotenten Nachzieh-Schritt. Portabel fuer SQLite
-(lokal/aktuelles Railway-Deployment) und Postgres (dokumentierte Option via
-DATABASE_URL) -- ueber den SQLAlchemy-Inspector geprueft, keine DB-spezifischen
-Annahmen.
+aber niemals Spalten einer bereits existierenden Tabelle. Fuer nachtraeglich
+hinzugekommene Spalten braucht es deshalb diesen kleinen, idempotenten
+Nachzieh-Schritt. Portabel fuer SQLite (lokal/aktuelles Railway-Deployment) und
+Postgres (dokumentierte Option via DATABASE_URL) -- ueber den SQLAlchemy-
+Inspector geprueft, keine DB-spezifischen Annahmen.
 """
 from sqlalchemy import inspect, text
 from sqlalchemy.engine import Engine
 
 from . import models
 
-# (Spaltenname, DDL-Typ inkl. Default) -- alle Spalten, die nachtraeglich zu
-# regulatory_versions dazugekommen sind.
-_PENDING_COLUMNS = [
-    ("is_active", "BOOLEAN DEFAULT FALSE"),
-    ("valid_from", "TIMESTAMP"),
-    ("created_at", "TIMESTAMP"),
-    ("predecessor_version_id", "INTEGER"),
-]
+# Tabelle -> [(Spaltenname, DDL-Typ inkl. Default)] fuer alle Spalten, die nach
+# der ersten Version des Schemas dazugekommen sind. Alle hier gelisteten Spalten
+# sind nullable bzw. haben einen Default -- damit reicht ein einfaches
+# ALTER TABLE ADD COLUMN, ein Tabellen-Rebuild ist nicht noetig.
+_PENDING_COLUMNS = {
+    # Mehrfach-Versionen-Konzept (Abschnitt 11.7)
+    "regulatory_versions": [
+        ("is_active", "BOOLEAN DEFAULT FALSE"),
+        ("valid_from", "TIMESTAMP"),
+        ("created_at", "TIMESTAMP"),
+        ("predecessor_version_id", "INTEGER"),
+    ],
+    # Konkrete Aufwandsschaetzung + Handlungsempfehlung fuer die Kunden-Ansicht
+    "regulatory_changes": [
+        ("effort_person_days", "INTEGER"),
+        ("recommendation", "TEXT"),
+    ],
+}
 
 
 def run_light_migrations(engine: Engine) -> None:
     inspector = inspect(engine)
-    if "regulatory_versions" not in inspector.get_table_names():
-        return  # Tabelle wird gleich frisch von create_all() angelegt, nichts nachzuziehen
+    existing_tables = set(inspector.get_table_names())
 
-    existing_columns = {c["name"] for c in inspector.get_columns("regulatory_versions")}
+    for table, columns in _PENDING_COLUMNS.items():
+        if table not in existing_tables:
+            continue  # wird gleich frisch von create_all() angelegt, nichts nachzuziehen
 
-    with engine.begin() as conn:
-        for column, ddl in _PENDING_COLUMNS:
-            if column in existing_columns:
-                continue
-            conn.execute(text(f"ALTER TABLE regulatory_versions ADD COLUMN {column} {ddl}"))
+        existing_columns = {c["name"] for c in inspector.get_columns(table)}
+        missing = [(name, ddl) for name, ddl in columns if name not in existing_columns]
+        if not missing:
+            continue
 
-        # Bestandsdaten aus der Zeit vor dem Mehrfach-Versionen-Konzept haben
-        # is_active noch nicht gesetzt -- genau eine aktive Version sicherstellen,
-        # sonst liefert get_active_regulatory_version() plötzlich nichts mehr.
-        has_active = conn.execute(
-            text("SELECT COUNT(*) FROM regulatory_versions WHERE is_active = TRUE")
-        ).scalar()
-        if not has_active:
-            conn.execute(text(
-                "UPDATE regulatory_versions SET is_active = TRUE "
-                "WHERE id = (SELECT MIN(id) FROM regulatory_versions)"
-            ))
+        with engine.begin() as conn:
+            for name, ddl in missing:
+                conn.execute(text(f"ALTER TABLE {table} ADD COLUMN {name} {ddl}"))
+
+    if "regulatory_versions" in existing_tables:
+        with engine.begin() as conn:
+            # Bestandsdaten aus der Zeit vor dem Mehrfach-Versionen-Konzept haben
+            # is_active noch nicht gesetzt -- genau eine aktive Version sicherstellen,
+            # sonst liefert get_active_regulatory_version() plötzlich nichts mehr.
+            has_active = conn.execute(
+                text("SELECT COUNT(*) FROM regulatory_versions WHERE is_active = TRUE")
+            ).scalar()
+            if not has_active:
+                conn.execute(text(
+                    "UPDATE regulatory_versions SET is_active = TRUE "
+                    "WHERE id = (SELECT MIN(id) FROM regulatory_versions)"
+                ))
 
     _migrate_requirement_code_uniqueness(engine)
 

@@ -40,6 +40,8 @@ def _to_change_out(change: models.RegulatoryChange) -> schemas.RegulatoryChangeO
         pi_number=change.pi.pi_number if change.pi else None,
         risk=change.risk,
         effort=change.effort,
+        effort_person_days=change.effort_person_days,
+        recommendation=change.recommendation,
         source_url=change.source_url,
         status=change.status,
         origin=change.origin,
@@ -252,10 +254,17 @@ def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
     # X: bleiben gueltig -- Code existiert in beiden Katalogen (unveraendert ODER
     # geaendert, siehe 11.5: "unabhaengig vom bisherigen Stand") UND war beim
     # Kunden bereits implementiert.
-    remain_valid_count = sum(
-        1 for code, old_req in old_reqs_by_code.items()
-        if code in new_reqs_by_code and ar_by_code.get(code) and ar_by_code[code].implementation_status == "implementiert"
-    )
+    remain_valid = [
+        schemas.RegulatoryImpactRequirementRef(
+            requirement_code=code,
+            title=new_reqs_by_code[code].title,
+            pi_number=new_reqs_by_code[code].pi.pi_number if new_reqs_by_code[code].pi else None,
+        )
+        for code in old_reqs_by_code
+        if code in new_reqs_by_code
+        and ar_by_code.get(code)
+        and ar_by_code[code].implementation_status == "implementiert"
+    ]
 
     # Y: neu benoetigt -- nur neue Codes, die fuer die Kundensegmente ueberhaupt relevant sind.
     newly_required = [
@@ -289,29 +298,66 @@ def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
     )
     projected_coverage = round(100 * covered_new_weight / total_new_weight, 1)
 
-    # Nur veroeffentlichte Aenderungen sind kundensichtbar -- Entwuerfe bleiben
-    # kuratorenintern (11.4).
+    # Nur veroeffentlichte Aenderungen sind kundensichtbar -- Entwuerfe und
+    # ungeprüfte Atlas-Vorschlaege bleiben kuratorenintern (11.4).
     published_changes = db.query(models.RegulatoryChange).filter(
         models.RegulatoryChange.regulatory_version_id == upcoming.id,
         models.RegulatoryChange.status == "veroeffentlicht",
-    ).options(joinedload(models.RegulatoryChange.process_group)).all()
+    ).options(
+        joinedload(models.RegulatoryChange.process_group),
+        joinedload(models.RegulatoryChange.pi),
+    ).all()
+
+    # Gesamtrisiko = hoechstes vorkommendes Einzelrisiko (eine "hoch"-Aenderung
+    # reicht, um die gesamte Umstellung als hohes Risiko einzustufen).
+    overall_risk = next(
+        (level for level in ("hoch", "mittel", "niedrig") if any(c.risk == level for c in published_changes)),
+        None,
+    )
+
+    # Nur summieren, wenn ueberhaupt jemand Personentage gepflegt hat -- sonst
+    # wuerde eine "0 PT"-Angabe eine Schaetzung vortaeuschen, die es nicht gibt.
+    person_day_values = [c.effort_person_days for c in published_changes if c.effort_person_days is not None]
+    total_person_days = sum(person_day_values) if person_day_values else None
 
     return schemas.RegulatoryImpactOut(
         has_upcoming_version=True,
         upcoming_version_id=upcoming.id,
         upcoming_version_name=upcoming.name,
         upcoming_version_valid_from=upcoming.valid_from,
+        upcoming_version_status=upcoming.status,
         current_coverage=current_coverage,
         projected_coverage=projected_coverage,
-        remain_valid_count=remain_valid_count,
+        remain_valid_count=len(remain_valid),
+        remain_valid=remain_valid,
         newly_required=newly_required,
         dropped=dropped,
         published_change_count=len(published_changes),
         risk_hoch_count=sum(1 for c in published_changes if c.risk == "hoch"),
         risk_mittel_count=sum(1 for c in published_changes if c.risk == "mittel"),
         risk_niedrig_count=sum(1 for c in published_changes if c.risk == "niedrig"),
+        overall_risk=overall_risk,
+        total_person_days=total_person_days,
         affected_process_groups=sorted({c.process_group.name for c in published_changes if c.process_group}),
         new_test_case_count=sum(1 for c in published_changes if c.category == "neuer_testfall"),
+        changes=[
+            schemas.RegulatoryImpactChange(
+                id=c.id,
+                title=c.title,
+                description=c.description,
+                category=c.category,
+                risk=c.risk,
+                effort=c.effort,
+                effort_person_days=c.effort_person_days,
+                recommendation=c.recommendation,
+                source_url=c.source_url,
+                process_group_name=c.process_group.name if c.process_group else None,
+                pi_number=c.pi.pi_number if c.pi else None,
+                origin=c.origin,
+                is_reviewed=True,  # veroeffentlicht == Kuration durchlaufen
+            )
+            for c in published_changes
+        ],
     )
 
 
@@ -347,6 +393,8 @@ def create_regulatory_change(payload: schemas.RegulatoryChangeCreate, db: Sessio
         pi_id=payload.pi_id,
         risk=payload.risk,
         effort=payload.effort,
+        effort_person_days=payload.effort_person_days,
+        recommendation=payload.recommendation,
         source_url=payload.source_url,
         regulatory_version_id=payload.regulatory_version_id,
         status="entwurf",     # manuell angelegte Aenderungen starten immer als Entwurf
