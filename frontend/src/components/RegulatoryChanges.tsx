@@ -20,10 +20,11 @@ const CATEGORY_LABELS: Record<ChangeCategory, string> = {
 
 const RISK_OPTIONS: RiskLevel[] = ["hoch", "mittel", "niedrig"];
 
-const COLUMNS: { status: ChangeStatus; title: string }[] = [
-  { status: "zu_pruefen", title: "Zu prüfen" },
-  { status: "entwurf", title: "Entwurf" },
-  { status: "veroeffentlicht", title: "Veröffentlicht" },
+// Nutzerseitig leistet "Atlas" die Analyse -- nicht "eine KI".
+const COLUMNS: { status: ChangeStatus; title: string; subtitle: string }[] = [
+  { status: "zu_pruefen", title: "Zu prüfen", subtitle: "von Atlas vorgeschlagen" },
+  { status: "entwurf", title: "Entwurf", subtitle: "in Bearbeitung" },
+  { status: "veroeffentlicht", title: "Veröffentlicht", subtitle: "für Kunden sichtbar" },
 ];
 
 interface ChangeFormState {
@@ -34,6 +35,8 @@ interface ChangeFormState {
   pi_id: number | "";
   risk: RiskLevel;
   effort: RiskLevel;
+  effort_person_days: string;  // als Text gehalten, damit das Feld auch leer bleiben kann
+  recommendation: string;
   source_url: string;
   status: ChangeStatus;
 }
@@ -46,6 +49,8 @@ const EMPTY_FORM: ChangeFormState = {
   pi_id: "",
   risk: "mittel",
   effort: "mittel",
+  effort_person_days: "",
+  recommendation: "",
   source_url: "",
   status: "entwurf",
 };
@@ -169,11 +174,30 @@ export function RegulatoryChanges({ assessmentId }: Props) {
       pi_id: c.pi_id ?? "",
       risk: c.risk,
       effort: c.effort,
+      effort_person_days: c.effort_person_days === null ? "" : String(c.effort_person_days),
+      recommendation: c.recommendation ?? "",
       source_url: c.source_url ?? "",
       status: c.status,
     });
     setError(null);
     setModalOpen(true);
+  };
+
+  /** Statuswechsel direkt von der Karte aus -- ohne das Detail-Panel zu oeffnen.
+   *  Bewusst ein Dropdown statt Drag & Drop: der Uebergang "Zu pruefen -> Entwurf"
+   *  soll ein bewusster Pruefschritt bleiben, kein schnelles Durchwinken. */
+  const moveCard = async (change: RegulatoryChange, status: ChangeStatus) => {
+    if (status === change.status) return;
+    setError(null);
+    // Optimistisch umsortieren, damit die Karte sofort in die neue Spalte wandert.
+    setChanges((prev) => prev.map((c) => (c.id === change.id ? { ...c, status } : c)));
+    try {
+      const updated = await api.updateRegulatoryChange(change.id, { status });
+      setChanges((prev) => prev.map((c) => (c.id === updated.id ? updated : c)));
+    } catch (e) {
+      setChanges((prev) => prev.map((c) => (c.id === change.id ? change : c)));  // zuruecksetzen
+      setError((e as Error).message);
+    }
   };
 
   const closeModal = () => setModalOpen(false);
@@ -182,6 +206,12 @@ export function RegulatoryChanges({ assessmentId }: Props) {
     if (!form.title.trim() || selectedVersionId === null) return;
     setLoading(true);
     setError(null);
+    const personDays = form.effort_person_days.trim() === "" ? null : Number(form.effort_person_days);
+    if (personDays !== null && (!Number.isFinite(personDays) || personDays < 0)) {
+      setError("Personentage müssen eine Zahl ≥ 0 sein.");
+      setLoading(false);
+      return;
+    }
     try {
       if (editingId === null) {
         const created = await api.createRegulatoryChange({
@@ -192,6 +222,8 @@ export function RegulatoryChanges({ assessmentId }: Props) {
           pi_id: form.pi_id === "" ? null : Number(form.pi_id),
           risk: form.risk,
           effort: form.effort,
+          effort_person_days: personDays,
+          recommendation: form.recommendation.trim() || null,
           source_url: form.source_url.trim() || null,
           regulatory_version_id: selectedVersionId,
         });
@@ -210,6 +242,8 @@ export function RegulatoryChanges({ assessmentId }: Props) {
           pi_id: form.pi_id === "" ? null : Number(form.pi_id),
           risk: form.risk,
           effort: form.effort,
+          effort_person_days: personDays,
+          recommendation: form.recommendation.trim() || null,
           source_url: form.source_url.trim() || null,
           status: form.status,
         });
@@ -253,7 +287,7 @@ export function RegulatoryChanges({ assessmentId }: Props) {
       <div className="section-title" style={{ marginTop: 0 }}>Formatänderungen</div>
       <p style={{ color: "var(--text-muted)", fontSize: 13, maxWidth: 560, marginBottom: 20 }}>
         Interner Bereich, nicht Teil der Kunden-Sicht. Regulatorische Änderungen einer
-        bevorstehenden Formatumstellung kuratieren — KI-Vorschläge prüfen, manuell
+        bevorstehenden Formatumstellung kuratieren — Atlas-Vorschläge prüfen, manuell
         ergänzen und veröffentlichen.
       </p>
 
@@ -287,7 +321,10 @@ export function RegulatoryChanges({ assessmentId }: Props) {
             >
               {versions.map((v) => (
                 <option key={v.id} value={v.id}>
-                  {v.name} {v.is_active ? "(aktiv)" : "(Entwurf)"}
+                  {/* is_active sagt aus, ob das der Standard-Katalog fuer neue Assessments
+                      ist -- NICHT, ob die Version regulatorisch noch ein Entwurf ist. Der
+                      Reifegrad steht separat unten als status (Konsultation/Verbindlich). */}
+                  {v.name} {v.is_active ? "(aktueller Stand)" : "(bevorstehend)"}
                 </option>
               ))}
             </select>
@@ -309,7 +346,7 @@ export function RegulatoryChanges({ assessmentId }: Props) {
               </div>
               {selectedVersion.predecessor_version_id !== null && (
                 <button type="button" className="text-button" onClick={handleAnalyzeDiff} disabled={analyzing}>
-                  {analyzing ? "Analysiere Diff …" : "🤖 KI-Vorschläge aus Diff generieren"}
+                  {analyzing ? "Atlas analysiert …" : "Atlas-Analyse starten"}
                 </button>
               )}
               <button type="button" className="recalc-button" onClick={openNewCard} style={{ marginLeft: "auto" }}>
@@ -353,20 +390,42 @@ export function RegulatoryChanges({ assessmentId }: Props) {
                 return (
                   <div className="kanban-column" key={col.status}>
                     <div className="kanban-column-header">
-                      <span className="kanban-column-title">{col.title}</span>
+                      <div>
+                        <div className="kanban-column-title">{col.title}</div>
+                        <div className="kanban-column-subtitle">{col.subtitle}</div>
+                      </div>
                       <span className="kanban-column-count">{cards.length}</span>
                     </div>
                     <div className="kanban-cards">
                       {cards.length === 0 && <div className="kanban-empty">Keine Einträge</div>}
                       {cards.map((c) => (
-                        <button key={c.id} className="kanban-card" onClick={() => openCard(c)}>
-                          <div className="kanban-card-title">{c.title}</div>
-                          <div className="kanban-card-badges">
-                            <span className={`risk-badge risk-${c.risk}`}>{c.risk}</span>
-                            <span className="risk-badge risk-niedrig">{CATEGORY_LABELS[c.category]}</span>
-                            {c.origin === "ki_vorschlag" && <span className="risk-badge risk-mittel">🤖 KI</span>}
-                          </div>
-                        </button>
+                        <div key={c.id} className="kanban-card">
+                          {/* Karteninhalt oeffnet das Detail-Panel, das Status-Select
+                              daneben nicht -- deshalb Geschwister statt verschachtelt. */}
+                          <button className="kanban-card-main" onClick={() => openCard(c)}>
+                            <div className="kanban-card-title">{c.title}</div>
+                            <div className="kanban-card-badges">
+                              <span className={`risk-badge risk-${c.risk}`}>{c.risk}</span>
+                              <span className="risk-badge risk-niedrig">{CATEGORY_LABELS[c.category]}</span>
+                              {c.effort_person_days !== null && (
+                                <span className="risk-badge risk-niedrig">{c.effort_person_days} PT</span>
+                              )}
+                              {c.origin === "ki_vorschlag" && (
+                                <span className="risk-badge risk-mittel">Atlas</span>
+                              )}
+                            </div>
+                          </button>
+                          <select
+                            className="kanban-card-status"
+                            value={c.status}
+                            onChange={(e) => moveCard(c, e.target.value as ChangeStatus)}
+                            aria-label={`Status von "${c.title}" ändern`}
+                          >
+                            {COLUMNS.map((o) => (
+                              <option key={o.status} value={o.status}>{o.title}</option>
+                            ))}
+                          </select>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -453,6 +512,31 @@ export function RegulatoryChanges({ assessmentId }: Props) {
                   {availablePis.map((pi) => <option key={pi.id} value={pi.id}>{pi.pi_number} — {pi.name}</option>)}
                 </select>
               </div>
+            </div>
+            <div className="form-field">
+              <label className="form-label">Geschätzter Aufwand in Personentagen (optional)</label>
+              <input
+                className="text-input"
+                type="number"
+                min={0}
+                placeholder="z. B. 5"
+                value={form.effort_person_days}
+                onChange={(e) => setForm({ ...form, effort_person_days: e.target.value })}
+              />
+              <div className="field-hint">
+                Wird in der Kunden-Ansicht zu einem Gesamtaufwand aufsummiert — mit
+                „mittel" allein lässt sich nicht planen.
+              </div>
+            </div>
+            <div className="form-field">
+              <label className="form-label">Handlungsempfehlung (optional)</label>
+              <textarea
+                className="text-input"
+                rows={3}
+                placeholder="Was sollte der Kunde konkret tun?"
+                value={form.recommendation}
+                onChange={(e) => setForm({ ...form, recommendation: e.target.value })}
+              />
             </div>
             <div className="form-field">
               <label className="form-label">Quelle (URL, optional)</label>

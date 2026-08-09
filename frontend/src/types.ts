@@ -238,6 +238,8 @@ export interface RegulatoryChangeCreate {
   pi_id?: number | null;
   risk?: RiskLevel;
   effort?: RiskLevel;
+  effort_person_days?: number | null;
+  recommendation?: string | null;
   source_url?: string | null;
   regulatory_version_id: number;
 }

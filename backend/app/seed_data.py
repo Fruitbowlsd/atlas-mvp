@@ -1,3 +1,5 @@
+from datetime import datetime
+
 # Seed-Datensatz fuer das MVP: Lieferbeginn Gas (GeLi Gas 2.0 / UTILMD Gas G1.1,
 # Konsultationsstand 01.08.2025).
 #
@@ -214,6 +216,9 @@ REGULATORY_VERSION_2 = {
     "name": "Mitteilung Nr. 56 / gültig ab 01.10.2026",
     "sector": "gas",
     "status": "verbindlich",
+    # Stichtag als echtes Feld, nicht nur im Namen -- die Kunden-Ansicht rechnet
+    # daraus den Countdown ("noch X Wochen bis zum Stichtag").
+    "valid_from": datetime(2026, 10, 1),
     "source_reference": (
         "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/"
         "835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
