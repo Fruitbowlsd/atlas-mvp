@@ -51,10 +51,27 @@ def _demo_status(pi_number: str, group_code: str, applies_slp: bool, applies_rlm
     return (sd.IMPLEMENTIERT, sd.GETESTET, result, evidence)
 
 
-def run_seed(db: Session):
-    if db.query(models.RegulatoryVersion).first():
-        return  # bereits geseedet
+def _version_by_name(db: Session, name: str) -> models.RegulatoryVersion | None:
+    return db.query(models.RegulatoryVersion).filter(models.RegulatoryVersion.name == name).first()
 
+
+def run_seed(db: Session):
+    """Legt fehlende Demo-Daten an -- bewusst je Datensatz geprueft statt alles
+    oder nichts. Frueher stoppte ein einziger Guard ("existiert irgendeine
+    RegulatoryVersion? -> fertig") den kompletten Seed, sobald die Basisversion
+    da war: eine geloeschte Folgeversion kam dadurch auch nach einem Neustart
+    nie zurueck. Jetzt wird jeder Block einzeln nachgezogen, ohne vorhandene
+    Daten zu duplizieren."""
+    if not _version_by_name(db, sd.REGULATORY_VERSION["name"]):
+        _seed_base(db)
+
+    if not _version_by_name(db, sd.REGULATORY_VERSION_2["name"]):
+        _seed_upcoming_version(db)
+
+
+def _seed_base(db: Session):
+    """Basiskatalog (GeLi Gas 2.0 / UTILMD Gas G1.1) plus Demo-Kunde und dessen
+    Assessment."""
     reg_version = models.RegulatoryVersion(**sd.REGULATORY_VERSION)
     db.add(reg_version)
     db.flush()
@@ -132,11 +149,28 @@ def run_seed(db: Session):
         )
         db.add(ar)
 
-    # Regulatory Intelligence: reales Vorher-Nachher-Paar als feste Demo-Grundlage
-    # (Abschnitt 11.8 -- kein Live-Monitoring, keine automatische Extraktion).
+    db.commit()
+
+
+def _seed_upcoming_version(db: Session):
+    """Bevorstehende Formatumstellung (Mitteilung Nr. 56) als feste Demo-Grundlage
+    -- Abschnitt 11.8: kein Live-Monitoring, keine automatische Extraktion.
+    Liest den Basiskatalog aus der DB statt ihn uebergeben zu bekommen, damit der
+    Block auch nachtraeglich allein laufen kann (z.B. wenn die Version zwischendurch
+    entfernt wurde und beim naechsten Start wiederkommen soll)."""
+    base_version = _version_by_name(db, sd.REGULATORY_VERSION["name"])
+    if base_version is None:
+        return  # ohne Basiskatalog gibt es nichts fortzuschreiben
+
+    group_by_code = {g.code: g for g in db.query(models.ProcessGroup).all()}
+    pi_by_number = {p.pi_number: p for p in db.query(models.ProcessIdentifier).all()}
+    base_requirements = db.query(models.Requirement).filter(
+        models.Requirement.regulatory_version_id == base_version.id
+    ).all()
+
     reg_version_2 = models.RegulatoryVersion(
         **sd.REGULATORY_VERSION_2,
-        predecessor_version_id=reg_version.id,
+        predecessor_version_id=base_version.id,
     )
     db.add(reg_version_2)
     db.flush()
@@ -145,7 +179,7 @@ def run_seed(db: Session):
     # die von Mitteilung 56 ergaenzten Requirements. Damit liefert der Diff ein
     # realistisches Bild ("das meiste bleibt gueltig, einiges kommt dazu") statt
     # eines leeren Katalogs, den die Diff-Logik als "alles entfallen" lesen wuerde.
-    for req, _pi_number in requirements:
+    for req in base_requirements:
         db.add(models.Requirement(
             code=req.code,
             title=req.title,
