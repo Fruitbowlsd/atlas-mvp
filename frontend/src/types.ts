@@ -144,6 +144,16 @@ export interface RegulatoryVersion {
   is_active: boolean;
   valid_from: string | null;
   predecessor_version_id: number | null;
+  summary: string | null;
+  updated_at: string | null;
+}
+
+export interface RegulatoryVersionUpdate {
+  name?: string;
+  status?: string;
+  valid_from?: string | null;
+  source_reference?: string | null;
+  summary?: string | null;
 }
 
 export interface RegulatoryVersionCreate {
@@ -178,6 +188,8 @@ export interface RegulatoryChange {
   effort: RiskLevel;
   effort_person_days: number | null;
   recommendation: string | null;
+  message_type: string | null;
+  effective_message_type: string | null;
   source_url: string | null;
   status: ChangeStatus;
   origin: "manuell" | "ki_vorschlag";
@@ -200,6 +212,7 @@ export interface RegulatoryImpactChange {
   effort: RiskLevel;
   effort_person_days: number | null;
   recommendation: string | null;
+  message_type: string | null;
   source_url: string | null;
   process_group_name: string | null;
   pi_number: string | null;
@@ -213,6 +226,8 @@ export interface RegulatoryImpact {
   upcoming_version_name: string | null;
   upcoming_version_valid_from: string | null;
   upcoming_version_status: string | null;
+  upcoming_version_summary: string | null;
+  upcoming_version_last_updated: string | null;
   current_coverage: number | null;
   projected_coverage: number | null;
   remain_valid_count: number;
@@ -226,6 +241,7 @@ export interface RegulatoryImpact {
   overall_risk: RiskLevel | null;
   total_person_days: number | null;
   affected_process_groups: string[];
+  affected_message_types: string[];
   new_test_case_count: number;
   changes: RegulatoryImpactChange[];
 }
@@ -240,6 +256,7 @@ export interface RegulatoryChangeCreate {
   effort?: RiskLevel;
   effort_person_days?: number | null;
   recommendation?: string | null;
+  message_type?: string | null;
   source_url?: string | null;
   regulatory_version_id: number;
 }

@@ -210,7 +210,7 @@ def _seed_upcoming_version(db: Session):
         ))
 
     for (title, description, category, risk, effort, person_days,
-         recommendation, group_code, pi_number) in sd.REGULATORY_CHANGES_V2:
+         recommendation, message_type, group_code, pi_number) in sd.REGULATORY_CHANGES_V2:
         db.add(models.RegulatoryChange(
             title=title,
             description=description,
@@ -219,6 +219,7 @@ def _seed_upcoming_version(db: Session):
             effort=effort,
             effort_person_days=person_days,
             recommendation=recommendation,
+            message_type=message_type,
             process_group_id=group_by_code[group_code].id if group_code else None,
             pi_id=pi_by_number[pi_number].id if pi_number else None,
             source_url=sd.REGULATORY_VERSION_2["source_reference"],

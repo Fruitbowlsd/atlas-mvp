@@ -15,6 +15,9 @@ RISK_EFFORT_LEVELS = {"hoch", "mittel", "niedrig"}
 # Kanban-Spalten (Schritt 3/Korrektur): zu_pruefen = KI-Vorschlag noch nicht bestaetigt,
 # entwurf = manuell in Bearbeitung, veroeffentlicht = live fuer Kunden sichtbar.
 STATUSES = {"zu_pruefen", "entwurf", "veroeffentlicht"}
+# Regulatorischer Reifegrad einer Version -- orthogonal zu is_active (= Standard-
+# Katalog fuer neue Assessments) und zu den Kanban-Status oben.
+VERSION_STATUSES = {"konsultation", "final", "verbindlich"}
 
 
 def _validate_change_fields(category: str | None, risk: str | None, effort: str | None, status: str | None) -> None:
@@ -42,6 +45,8 @@ def _to_change_out(change: models.RegulatoryChange) -> schemas.RegulatoryChangeO
         effort=change.effort,
         effort_person_days=change.effort_person_days,
         recommendation=change.recommendation,
+        message_type=change.message_type,
+        effective_message_type=change.effective_message_type,
         source_url=change.source_url,
         status=change.status,
         origin=change.origin,
@@ -51,6 +56,27 @@ def _to_change_out(change: models.RegulatoryChange) -> schemas.RegulatoryChangeO
 
 
 # --- RegulatoryVersion: Anlegen kommt hier dazu, Auflisten bleibt in routers_reference.py ---
+
+@router.patch("/regulatory-versions/{version_id}", response_model=schemas.RegulatoryVersionOut)
+def update_regulatory_version(version_id: int, payload: schemas.RegulatoryVersionUpdate, db: Session = Depends(get_db)):
+    """Nachpflegen der Versions-Metadaten -- im MVP vor allem die kuratierte
+    Zusammenfassung, die in der Kunden-Vorschau angezeigt wird."""
+    version = db.query(models.RegulatoryVersion).filter(models.RegulatoryVersion.id == version_id).first()
+    if not version:
+        raise HTTPException(status_code=404, detail="RegulatoryVersion nicht gefunden")
+
+    data = payload.model_dump(exclude_unset=True)
+    status = data.get("status")
+    if status is not None and status not in VERSION_STATUSES:
+        raise HTTPException(status_code=400, detail=f"status muss einer von {sorted(VERSION_STATUSES)} sein")
+
+    for field, value in data.items():
+        setattr(version, field, value)
+
+    db.commit()
+    db.refresh(version)
+    return version
+
 
 @router.post("/regulatory-versions", response_model=schemas.RegulatoryVersionOut)
 def create_regulatory_version(payload: schemas.RegulatoryVersionCreate, db: Session = Depends(get_db)):
@@ -298,12 +324,25 @@ def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
     person_day_values = [c.effort_person_days for c in published_changes if c.effort_person_days is not None]
     total_person_days = sum(person_day_values) if person_day_values else None
 
+    # "Zuletzt aktualisiert": juengster Zeitpunkt aus der Version selbst und ihren
+    # kundensichtbaren Aenderungen -- der Kunde sieht dadurch, wie frisch der Stand ist.
+    timestamps = [t for t in (
+        [upcoming.updated_at] + [c.updated_at for c in published_changes]
+    ) if t is not None]
+    last_updated = max(timestamps) if timestamps else None
+
+    affected_message_types = sorted({
+        mt for mt in (c.effective_message_type for c in published_changes) if mt
+    })
+
     return schemas.RegulatoryImpactOut(
         has_upcoming_version=True,
         upcoming_version_id=upcoming.id,
         upcoming_version_name=upcoming.name,
         upcoming_version_valid_from=upcoming.valid_from,
         upcoming_version_status=upcoming.status,
+        upcoming_version_summary=upcoming.summary,
+        upcoming_version_last_updated=last_updated,
         current_coverage=current_coverage,
         projected_coverage=projected_coverage,
         remain_valid_count=len(remain_valid),
@@ -317,6 +356,7 @@ def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
         overall_risk=overall_risk,
         total_person_days=total_person_days,
         affected_process_groups=sorted({c.process_group.name for c in published_changes if c.process_group}),
+        affected_message_types=affected_message_types,
         new_test_case_count=sum(1 for c in published_changes if c.category == "neuer_testfall"),
         changes=[
             schemas.RegulatoryImpactChange(
@@ -328,6 +368,7 @@ def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
                 effort=c.effort,
                 effort_person_days=c.effort_person_days,
                 recommendation=c.recommendation,
+                message_type=c.effective_message_type,
                 source_url=c.source_url,
                 process_group_name=c.process_group.name if c.process_group else None,
                 pi_number=c.pi.pi_number if c.pi else None,
@@ -373,6 +414,7 @@ def create_regulatory_change(payload: schemas.RegulatoryChangeCreate, db: Sessio
         effort=payload.effort,
         effort_person_days=payload.effort_person_days,
         recommendation=payload.recommendation,
+        message_type=payload.message_type,
         source_url=payload.source_url,
         regulatory_version_id=payload.regulatory_version_id,
         status="entwurf",     # manuell angelegte Aenderungen starten immer als Entwurf

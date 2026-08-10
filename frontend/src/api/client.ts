@@ -11,6 +11,7 @@ import type {
   RegulatoryImpact,
   RegulatoryVersion,
   RegulatoryVersionCreate,
+  RegulatoryVersionUpdate,
   SapCloudAlmForm,
 } from "../types";
 
@@ -101,6 +102,12 @@ export const api = {
   createRegulatoryVersion: (payload: RegulatoryVersionCreate) =>
     request<RegulatoryVersion>("/regulatory-versions", {
       method: "POST",
+      body: JSON.stringify(payload),
+    }),
+
+  updateRegulatoryVersion: (id: number, payload: RegulatoryVersionUpdate) =>
+    request<RegulatoryVersion>(`/regulatory-versions/${id}`, {
+      method: "PATCH",
       body: JSON.stringify(payload),
     }),
 

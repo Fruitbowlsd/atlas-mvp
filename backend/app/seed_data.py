@@ -224,12 +224,25 @@ REGULATORY_VERSION_2 = {
         "835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
     ),
     "is_active": False,  # bevorstehende Formatumstellung -- noch nicht der Standardkatalog
+    # Kuratierte Kurzfassung fuer die Kunden-Vorschau -- manuell formuliert, nicht
+    # automatisch erzeugt (im MVP gibt es keine Live-Analyse-Pipeline, Abschnitt 11.8).
+    "summary": (
+        "Mitteilung 56 ist die verbindliche Endfassung nach der Konsultation aus "
+        "Mitteilung 55. Inhaltlich betrifft sie vor allem zwei Punkte: die neue "
+        "Anwendungsübersicht der Prüfidentifikatoren (Version 4.0) und aktualisierte "
+        "Codeliste-Konfigurationen (Version 1.4). Für Lieferanten heißt das: die "
+        "bestehende PI-Zuordnung muss gegen die neue Übersicht abgeglichen und die "
+        "Codelisten in den Umsystemen nachgezogen werden. Der Aufwand ist überschaubar, "
+        "der Stichtag mit dem 01.10.2026 aber verbindlich."
+    ),
 }
 
 # (title, description, category, risk, effort, effort_person_days, recommendation,
-#  process_group_code, pi_number)
+#  message_type, process_group_code, pi_number)
 # process_group_code/pi_number sind optional (None), wenn die Aenderung katalogweit
 # gilt statt an eine einzelne Prozessgruppe/PI gebunden zu sein.
+# message_type nur setzen, wenn KEIN PI verknuepft ist -- sonst wird der Typ aus
+# ProcessIdentifier.message_type abgeleitet (siehe RegulatoryChange.effective_message_type).
 REGULATORY_CHANGES_V2 = [
     (
         "Neue Anwendungsübersicht der Prüfidentifikatoren 4.0",
@@ -240,7 +253,7 @@ REGULATORY_CHANGES_V2 = [
         "neue_qualitaetsregel", "mittel", "mittel", 5,
         "Bestehende PI-Zuordnungen gegen die neue Übersicht 4.0 abgleichen und "
         "Abweichungen dokumentieren, bevor die Testfälle angepasst werden.",
-        None, None,
+        "UTILMD", None, None,
     ),
     (
         "Änderungen an Codeliste-Konfigurationen 1.4",
@@ -250,7 +263,7 @@ REGULATORY_CHANGES_V2 = [
         "neuer_code", "niedrig", "niedrig", 1,
         "Codelisten im Umsystem aktualisieren und die betroffenen Mappings "
         "einmalig gegen die neue Fassung prüfen.",
-        None, None,
+        "MSCONS", None, None,
     ),
     (
         "Neue Testfälle für die Anmeldung (PI 44001)",
@@ -259,7 +272,7 @@ REGULATORY_CHANGES_V2 = [
         "neuer_testfall", "niedrig", "niedrig", 2,
         "Die ergänzten Prüffälle in den bestehenden Testkatalog für PI 44001 "
         "aufnehmen und im nächsten Regressionslauf mitfahren lassen.",
-        "registration", "44001",
+        None, "registration", "44001",  # message_type wird aus PI 44001 abgeleitet
     ),
 ]
 

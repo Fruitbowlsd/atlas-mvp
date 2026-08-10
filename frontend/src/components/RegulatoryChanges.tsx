@@ -37,6 +37,7 @@ interface ChangeFormState {
   effort: RiskLevel;
   effort_person_days: string;  // als Text gehalten, damit das Feld auch leer bleiben kann
   recommendation: string;
+  message_type: string;
   source_url: string;
   status: ChangeStatus;
 }
@@ -51,6 +52,7 @@ const EMPTY_FORM: ChangeFormState = {
   effort: "mittel",
   effort_person_days: "",
   recommendation: "",
+  message_type: "",
   source_url: "",
   status: "entwurf",
 };
@@ -66,6 +68,9 @@ export function RegulatoryChanges({ assessmentId }: Props) {
   const [processGroups, setProcessGroups] = useState<ProcessGroup[]>([]);
   const [selectedVersionId, setSelectedVersionId] = useState<number | null>(null);
   const [changes, setChanges] = useState<RegulatoryChange[]>([]);
+
+  const [showSummaryForm, setShowSummaryForm] = useState(false);
+  const [summaryDraft, setSummaryDraft] = useState("");
 
   const [showNewVersionForm, setShowNewVersionForm] = useState(false);
   const [newVersionName, setNewVersionName] = useState("");
@@ -125,6 +130,23 @@ export function RegulatoryChanges({ assessmentId }: Props) {
     }
   };
 
+  const handleSaveSummary = async () => {
+    if (selectedVersionId === null) return;
+    setLoading(true);
+    setError(null);
+    try {
+      const updated = await api.updateRegulatoryVersion(selectedVersionId, {
+        summary: summaryDraft.trim() || null,
+      });
+      setVersions((prev) => prev.map((v) => (v.id === updated.id ? updated : v)));
+      setShowSummaryForm(false);
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleAnalyzeDiff = async () => {
     if (selectedVersionId === null) return;
     setAnalyzing(true);
@@ -158,6 +180,7 @@ export function RegulatoryChanges({ assessmentId }: Props) {
       effort: c.effort,
       effort_person_days: c.effort_person_days === null ? "" : String(c.effort_person_days),
       recommendation: c.recommendation ?? "",
+      message_type: c.message_type ?? "",
       source_url: c.source_url ?? "",
       status: c.status,
     });
@@ -206,6 +229,7 @@ export function RegulatoryChanges({ assessmentId }: Props) {
           effort: form.effort,
           effort_person_days: personDays,
           recommendation: form.recommendation.trim() || null,
+          message_type: form.message_type.trim() || null,
           source_url: form.source_url.trim() || null,
           regulatory_version_id: selectedVersionId,
         });
@@ -226,6 +250,7 @@ export function RegulatoryChanges({ assessmentId }: Props) {
           effort: form.effort,
           effort_person_days: personDays,
           recommendation: form.recommendation.trim() || null,
+          message_type: form.message_type.trim() || null,
           source_url: form.source_url.trim() || null,
           status: form.status,
         });
@@ -328,8 +353,42 @@ export function RegulatoryChanges({ assessmentId }: Props) {
                   {analyzing ? "Atlas analysiert …" : "Atlas-Analyse starten"}
                 </button>
               )}
+              <button
+                type="button"
+                className="text-button"
+                onClick={() => {
+                  // Beim Oeffnen den gespeicherten Text laden, damit bestehende
+                  // Zusammenfassungen bearbeitet statt ueberschrieben werden.
+                  if (!showSummaryForm) setSummaryDraft(selectedVersion.summary ?? "");
+                  setShowSummaryForm((s) => !s);
+                }}
+              >
+                {showSummaryForm ? "Zusammenfassung schließen" : "Zusammenfassung bearbeiten"}
+              </button>
               <button type="button" className="recalc-button" onClick={openNewCard} style={{ marginLeft: "auto" }}>
                 + Neue Änderung
+              </button>
+            </div>
+          )}
+
+          {showSummaryForm && selectedVersion && (
+            <div className="import-panel" style={{ marginBottom: 24, maxWidth: 640 }}>
+              <div className="form-field" style={{ marginBottom: 12 }}>
+                <label className="form-label">Atlas-Zusammenfassung</label>
+                <textarea
+                  className="text-input"
+                  rows={6}
+                  placeholder="Was ändert sich mit diesem Release? Kurzfassung für die Kunden-Vorschau …"
+                  value={summaryDraft}
+                  onChange={(e) => setSummaryDraft(e.target.value)}
+                />
+                <div className="field-hint">
+                  Wird dem Kunden in der Vorschau prominent angezeigt. Bewusst manuell
+                  kuratiert — im MVP erzeugt Atlas diesen Text nicht automatisch.
+                </div>
+              </div>
+              <button type="button" className="recalc-button" onClick={handleSaveSummary} disabled={loading}>
+                {loading ? "Speichere …" : "Zusammenfassung speichern"}
               </button>
             </div>
           )}
@@ -505,6 +564,23 @@ export function RegulatoryChanges({ assessmentId }: Props) {
                   <option value="">— keine —</option>
                   {availablePis.map((pi) => <option key={pi.id} value={pi.id}>{pi.pi_number} — {pi.name}</option>)}
                 </select>
+              </div>
+            </div>
+            <div className="form-field">
+              <label className="form-label">Nachrichtentyp (optional)</label>
+              <input
+                className="text-input"
+                placeholder={
+                  availablePis.find((pi) => pi.id === form.pi_id)?.message_type
+                    ? `wird aus dem PI abgeleitet: ${availablePis.find((pi) => pi.id === form.pi_id)?.message_type}`
+                    : "z. B. UTILMD, MSCONS"
+                }
+                value={form.message_type}
+                onChange={(e) => setForm({ ...form, message_type: e.target.value })}
+              />
+              <div className="field-hint">
+                Nur nötig, wenn kein PI verknüpft ist — sonst wird der Typ automatisch
+                aus dem Prüfidentifikator übernommen.
               </div>
             </div>
             <div className="form-field">
