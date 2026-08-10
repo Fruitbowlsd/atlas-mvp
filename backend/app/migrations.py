@@ -17,19 +17,30 @@ from . import models
 # sind nullable bzw. haben einen Default -- damit reicht ein einfaches
 # ALTER TABLE ADD COLUMN, ein Tabellen-Rebuild ist nicht noetig.
 _PENDING_COLUMNS = {
-    # Mehrfach-Versionen-Konzept (Abschnitt 11.7)
+    # Mehrfach-Versionen-Konzept (Abschnitt 11.7), spaeter ergaenzt um die
+    # kuratierte Zusammenfassung + Aenderungszeitstempel fuer die Kunden-Vorschau.
     "regulatory_versions": [
         ("is_active", "BOOLEAN DEFAULT FALSE"),
         ("valid_from", "TIMESTAMP"),
         ("created_at", "TIMESTAMP"),
         ("predecessor_version_id", "INTEGER"),
+        ("summary", "TEXT"),
+        ("updated_at", "TIMESTAMP"),
     ],
-    # Konkrete Aufwandsschaetzung + Handlungsempfehlung fuer die Kunden-Ansicht
+    # Konkrete Aufwandsschaetzung + Handlungsempfehlung fuer die Kunden-Ansicht,
+    # plus Nachrichtentyp und Aenderungszeitstempel.
     "regulatory_changes": [
         ("effort_person_days", "INTEGER"),
         ("recommendation", "TEXT"),
+        ("message_type", "VARCHAR"),
+        ("updated_at", "TIMESTAMP"),
     ],
 }
+
+# Neu hinzugekommene updated_at-Spalten waeren fuer Bestandszeilen NULL -- die
+# Kunden-Vorschau wuerde dann "Zuletzt aktualisiert: -" anzeigen, obwohl ein
+# sinnvoller Wert bekannt ist. Daher einmalig aus created_at nachziehen.
+_UPDATED_AT_BACKFILL = ["regulatory_versions", "regulatory_changes"]
 
 
 def run_light_migrations(engine: Engine) -> None:
@@ -48,6 +59,11 @@ def run_light_migrations(engine: Engine) -> None:
         with engine.begin() as conn:
             for name, ddl in missing:
                 conn.execute(text(f"ALTER TABLE {table} ADD COLUMN {name} {ddl}"))
+
+            if table in _UPDATED_AT_BACKFILL and any(n == "updated_at" for n, _ in missing):
+                conn.execute(text(
+                    f"UPDATE {table} SET updated_at = created_at WHERE updated_at IS NULL"
+                ))
 
     if "regulatory_versions" in existing_tables:
         with engine.begin() as conn:

@@ -160,9 +160,21 @@ class RegulatoryVersionOut(BaseModel):
     is_active: bool
     valid_from: Optional[datetime]
     predecessor_version_id: Optional[int]
+    summary: Optional[str] = None
+    updated_at: Optional[datetime] = None
 
     class Config:
         from_attributes = True
+
+
+class RegulatoryVersionUpdate(BaseModel):
+    """Nachpflegen der Versions-Metadaten -- im MVP vor allem die kuratierte
+    Zusammenfassung fuer die Kunden-Vorschau."""
+    name: Optional[str] = None
+    status: Optional[str] = None  # konsultation | final | verbindlich
+    valid_from: Optional[datetime] = None
+    source_reference: Optional[str] = None
+    summary: Optional[str] = None
 
 
 class RegulatoryVersionCreate(BaseModel):
@@ -184,6 +196,7 @@ class RegulatoryChangeCreate(BaseModel):
     effort: str = "mittel"  # hoch | mittel | niedrig
     effort_person_days: Optional[int] = None
     recommendation: Optional[str] = None
+    message_type: Optional[str] = None  # leer -> wird aus dem verknuepften PI abgeleitet
     source_url: Optional[str] = None
     regulatory_version_id: int
 
@@ -198,6 +211,7 @@ class RegulatoryChangeUpdate(BaseModel):
     effort: Optional[str] = None
     effort_person_days: Optional[int] = None
     recommendation: Optional[str] = None
+    message_type: Optional[str] = None
     source_url: Optional[str] = None
     status: Optional[str] = None  # zu_pruefen | entwurf | veroeffentlicht
 
@@ -215,6 +229,8 @@ class RegulatoryChangeOut(BaseModel):
     effort: str
     effort_person_days: Optional[int] = None
     recommendation: Optional[str] = None
+    message_type: Optional[str] = None          # eigener Wert (leer = aus PI abgeleitet)
+    effective_message_type: Optional[str] = None  # tatsaechlich geltender Wert
     source_url: Optional[str]
     status: str
     origin: str
@@ -257,6 +273,7 @@ class RegulatoryImpactChange(BaseModel):
     effort: str
     effort_person_days: Optional[int]
     recommendation: Optional[str]
+    message_type: Optional[str]
     source_url: Optional[str]
     process_group_name: Optional[str]
     pi_number: Optional[str]
@@ -272,6 +289,10 @@ class RegulatoryImpactOut(BaseModel):
     upcoming_version_name: Optional[str] = None
     upcoming_version_valid_from: Optional[datetime] = None
     upcoming_version_status: Optional[str] = None  # konsultation | final | verbindlich
+    # Kuratierte Kurzfassung (manuell gepflegt, keine Live-Generierung)
+    upcoming_version_summary: Optional[str] = None
+    # Juengster Aenderungszeitpunkt aus Version + zugehoerigen veroeffentlichten Changes
+    upcoming_version_last_updated: Optional[datetime] = None
 
     current_coverage: Optional[float] = None
     projected_coverage: Optional[float] = None
@@ -290,6 +311,7 @@ class RegulatoryImpactOut(BaseModel):
     overall_risk: Optional[str] = None  # hoch | mittel | niedrig
     total_person_days: Optional[int] = None  # Summe, sofern ueberhaupt gepflegt
     affected_process_groups: List[str] = []
+    affected_message_types: List[str] = []
     new_test_case_count: int = 0
     changes: List[RegulatoryImpactChange] = []
 

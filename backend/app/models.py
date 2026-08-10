@@ -18,7 +18,12 @@ class RegulatoryVersion(Base):
     is_active = Column(Boolean, default=False)       # genau eine Version = Default fuer neue Assessments
     valid_from = Column(DateTime, nullable=True)     # z.B. Stichtag "01.10.2027"
     created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     predecessor_version_id = Column(Integer, ForeignKey("regulatory_versions.id"), nullable=True)
+    # Kuratierte Kurzfassung "was aendert sich mit diesem Release" fuer die Kunden-
+    # Vorschau. Bewusst ein manuell gepflegtes Feld, KEINE Live-Generierung -- im MVP
+    # gibt es keine Analyse-Pipeline, die das laufend erzeugen koennte (Abschnitt 11.8).
+    summary = Column(Text, nullable=True)
 
     requirements = relationship("Requirement", back_populates="regulatory_version")
     changes = relationship("RegulatoryChange", back_populates="regulatory_version")
@@ -186,10 +191,24 @@ class RegulatoryChange(Base):
     # Finding.recommendation im Assessment-Bereich.
     recommendation = Column(Text, nullable=True)
     source_url = Column(String)
+    # Nachrichtentyp (UTILMD, MSCONS, ...). Bewusst nullable: ist ein PI verknuepft,
+    # steht der Typ schon an ProcessIdentifier.message_type und wird von dort
+    # abgeleitet (siehe effective_message_type) -- dieses Feld dient als Angabe fuer
+    # katalogweite Aenderungen ohne PI. So gibt es nie zwei widersprechende Werte.
+    message_type = Column(String, nullable=True)
     status = Column(String, default="entwurf")     # zu_pruefen | entwurf | veroeffentlicht (Kanban-Spalten)
     origin = Column(String, default="manuell")     # manuell | ki_vorschlag
     regulatory_version_id = Column(Integer, ForeignKey("regulatory_versions.id"), nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    @property
+    def effective_message_type(self) -> str | None:
+        """Nachrichtentyp der Aenderung: eigener Wert hat Vorrang, sonst der des
+        verknuepften PI. Eine einzige Quelle fuer die Anzeige und die KPI-Zaehlung."""
+        if self.message_type:
+            return self.message_type
+        return self.pi.message_type if self.pi else None
 
     regulatory_version = relationship("RegulatoryVersion", back_populates="changes")
     process_group = relationship("ProcessGroup")

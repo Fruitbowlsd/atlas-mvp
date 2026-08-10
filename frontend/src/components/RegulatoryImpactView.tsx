@@ -182,8 +182,49 @@ export function RegulatoryImpactView({ assessmentId }: Props) {
               {countdown.text}
             </span>
           )}
+          {impact.upcoming_version_last_updated && (
+            <span className="deadline-updated">
+              Zuletzt aktualisiert:{" "}
+              {new Date(impact.upcoming_version_last_updated).toLocaleDateString("de-DE")}
+            </span>
+          )}
         </div>
       )}
+
+      {/* Kuratierte Kurzfassung -- bewusst NICHT als "automatisch generiert"
+          ausgewiesen: im MVP gibt es keine Live-Analyse-Pipeline (Abschnitt 11.8). */}
+      {impact.upcoming_version_summary && (
+        <div className="atlas-summary">
+          <div className="atlas-summary-title">Atlas-Zusammenfassung</div>
+          <div className="atlas-summary-subtitle">
+            Was ändert sich
+            {impact.upcoming_version_valid_from &&
+              ` zum ${new Date(impact.upcoming_version_valid_from).toLocaleDateString("de-DE")}`}
+            ?
+          </div>
+          <p className="atlas-summary-text">{impact.upcoming_version_summary}</p>
+          <div className="atlas-summary-note">manuell kuratiert von Atlas</div>
+        </div>
+      )}
+
+      <div className="kpi-grid">
+        <div className="kpi-card">
+          <div className="kpi-value">{impact.published_change_count}</div>
+          <div className="kpi-label">Änderungen</div>
+        </div>
+        <div className="kpi-card">
+          <div className="kpi-value">{impact.affected_process_groups.length}</div>
+          <div className="kpi-label">Betroffene Prozessgruppen</div>
+        </div>
+        <div className="kpi-card">
+          <div className="kpi-value">{impact.affected_message_types.length}</div>
+          <div className="kpi-label">Betroffene Nachrichtentypen</div>
+        </div>
+        <div className={`kpi-card ${impact.risk_hoch_count > 0 ? "kpi-card-alert" : ""}`}>
+          <div className="kpi-value">{impact.risk_hoch_count}</div>
+          <div className="kpi-label">Änderungen mit Risiko hoch</div>
+        </div>
+      </div>
 
       <div className={`overall-risk-banner overall-risk-${impact.overall_risk ?? "niedrig"}`}>
         <div>
@@ -268,6 +309,10 @@ export function RegulatoryImpactView({ assessmentId }: Props) {
               <div style={{ display: "flex", gap: 6, margin: "4px 0 8px", flexWrap: "wrap" }}>
                 <span className={`risk-badge risk-${c.risk}`}>Risiko: {RISK_LABELS[c.risk]}</span>
                 <span className="risk-badge risk-niedrig">{CATEGORY_LABELS[c.category] ?? c.category}</span>
+                {c.message_type && <span className="risk-badge badge-message-type">{c.message_type}</span>}
+                {c.process_group_name && (
+                  <span className="risk-badge risk-niedrig">{c.process_group_name}</span>
+                )}
                 {c.effort_person_days !== null && (
                   <span className="risk-badge risk-niedrig">{c.effort_person_days} PT</span>
                 )}
@@ -281,14 +326,19 @@ export function RegulatoryImpactView({ assessmentId }: Props) {
               {c.recommendation && (
                 <div className="finding-rec">→ Empfehlung: {c.recommendation}</div>
               )}
-              <div style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 6 }}>
-                {c.process_group_name && <span>{c.process_group_name} </span>}
-                {c.pi_number && <span className="pi-number" style={{ marginRight: 6 }}>{c.pi_number}</span>}
-                {c.source_url && (
-                  <a href={c.source_url} target="_blank" rel="noreferrer" style={{ color: "var(--accent-dark)" }}>
-                    Quelle
-                  </a>
-                )}
+              <div className="change-card-footer">
+                <div style={{ fontSize: 12, color: "var(--text-muted)" }}>
+                  {c.pi_number && <span className="pi-number" style={{ marginRight: 6 }}>{c.pi_number}</span>}
+                  {c.source_url && (
+                    <a href={c.source_url} target="_blank" rel="noreferrer" style={{ color: "var(--accent-dark)" }}>
+                      Quelle
+                    </a>
+                  )}
+                </div>
+                {/* Platzhalter -- die Detailansicht folgt in Phase 3. */}
+                <button className="text-button" disabled title="Detailansicht folgt">
+                  Details ansehen
+                </button>
               </div>
             </div>
           ))}
