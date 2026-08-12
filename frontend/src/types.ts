@@ -77,6 +77,8 @@ export interface AssessmentSummary {
 
 export type MarketRole = "lieferant" | "grund_ersatzversorger" | "beides";
 
+export type AssessmentType = "readiness" | "compliance" | "historisch";
+
 export interface AssessmentOut {
   id: number;
   customer_id: number;
@@ -86,6 +88,20 @@ export interface AssessmentOut {
   customer_segments: string;
   status: string;
   created_at: string;
+  regulatory_version_id: number | null;
+  regulatory_version_name: string | null;
+  assessment_type: AssessmentType | null;
+}
+
+export interface AssessmentHistoryItem {
+  id: number;
+  regulatory_version_id: number | null;
+  regulatory_version_name: string | null;
+  assessment_type: AssessmentType;
+  status: string;
+  created_at: string;
+  regulatory_coverage: number | null;
+  quality_grade: number | null;
 }
 
 export interface AssessmentCreate {
@@ -93,6 +109,7 @@ export interface AssessmentCreate {
   market_role: MarketRole;
   customer_segments: string;
   business_scenario?: string;
+  regulatory_version_id: number;
 }
 
 export interface AssessmentDetail {

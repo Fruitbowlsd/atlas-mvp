@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from sqlalchemy.orm import Session
 from . import models
 
@@ -15,6 +17,40 @@ def get_active_regulatory_version(db: Session) -> models.RegulatoryVersion | Non
     fuer neue Assessments (Abschnitt 11.7: Mehrfach-Versionen-Konzept). Vorher gab
     es dafuer nur `RegulatoryVersion.query.first()`, weil es genau eine Version gab."""
     return db.query(models.RegulatoryVersion).filter(models.RegulatoryVersion.is_active == True).first()  # noqa: E712
+
+
+def derive_assessment_type(
+    version: models.RegulatoryVersion,
+    all_versions: list[models.RegulatoryVersion],
+    today: datetime | None = None,
+) -> str:
+    """Leitet den Assessment-Typ aus dem Stichtag der zugehoerigen RegulatoryVersion ab
+    (Abschnitt 12.5) -- bewusst LIVE berechnet und nicht gespeichert, weil sich der Typ
+    allein durch Zeitablauf aendert: aus einem "readiness" wird ohne jede Datenaenderung
+    irgendwann "compliance" und spaeter "historisch".
+
+    readiness   -- Stichtag liegt in der Zukunft (Vorbereitung auf eine Umstellung)
+    compliance  -- die aktuell geltende Version (juengster Stichtag <= heute)
+    historisch  -- von einer neueren, bereits geltenden Version abgeloest
+
+    Ein leeres valid_from bedeutet "gilt seit jeher" (die Basis-Version hat keinen
+    Stichtag) -- sonst fiele sie durch alle drei Faelle und haette gar keinen Typ.
+    """
+    today = today or datetime.utcnow()
+
+    def effective_start(v: models.RegulatoryVersion) -> datetime:
+        return v.valid_from or datetime.min
+
+    if version.valid_from is not None and version.valid_from > today:
+        return "readiness"
+
+    already_valid = [v for v in all_versions if v.valid_from is None or v.valid_from <= today]
+    if not already_valid:
+        return "historisch"
+
+    # id als Tiebreaker, damit mehrere Versionen ohne Stichtag deterministisch ordnen
+    newest = max(already_valid, key=lambda v: (effective_start(v), v.id))
+    return "compliance" if newest.id == version.id else "historisch"
 
 
 def requirement_matches_segments(req: models.Requirement, segments: set[str]) -> bool:

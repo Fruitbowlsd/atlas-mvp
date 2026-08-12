@@ -6,6 +6,8 @@ from . import models, schemas, services
 from .auth import require_auth
 
 router = APIRouter(prefix="/api/assessments", tags=["assessments"], dependencies=[Depends(require_auth)])
+# Kundenbezogene Endpunkte -- ein Kunde kann mehrere Assessments haben (Abschnitt 12.3)
+customer_router = APIRouter(prefix="/api/customers", tags=["customers"], dependencies=[Depends(require_auth)])
 
 
 def _get_assessment_or_404(db: Session, assessment_id: int) -> models.Assessment:
@@ -25,7 +27,13 @@ def _get_assessment_or_404(db: Session, assessment_id: int) -> models.Assessment
     return assessment
 
 
-def _to_assessment_out(assessment: models.Assessment) -> schemas.AssessmentOut:
+def _to_assessment_out(assessment: models.Assessment, db: Session) -> schemas.AssessmentOut:
+    version = assessment.regulatory_version
+    assessment_type = None
+    if version is not None:
+        all_versions = db.query(models.RegulatoryVersion).all()
+        assessment_type = services.derive_assessment_type(version, all_versions)
+
     return schemas.AssessmentOut(
         id=assessment.id,
         customer_id=assessment.customer_id,
@@ -35,35 +43,27 @@ def _to_assessment_out(assessment: models.Assessment) -> schemas.AssessmentOut:
         customer_segments=assessment.customer_segments,
         status=assessment.status,
         created_at=assessment.created_at,
+        regulatory_version_id=assessment.regulatory_version_id,
+        regulatory_version_name=version.name if version else None,
+        assessment_type=assessment_type,
     )
 
 
-@router.post("", response_model=schemas.AssessmentOut)
-def create_assessment(payload: schemas.AssessmentCreate, db: Session = Depends(get_db)):
-    valid_roles = {"lieferant", "grund_ersatzversorger", "beides"}
-    if payload.market_role not in valid_roles:
-        raise HTTPException(status_code=400, detail=f"market_role muss einer von {valid_roles} sein")
-
-    segments = {s.strip() for s in payload.customer_segments.split(",") if s.strip()}
-    if not segments or not segments.issubset({"slp", "rlm"}):
-        raise HTTPException(status_code=400, detail="customer_segments muss 'slp', 'rlm' oder 'slp,rlm' sein")
-
-    # Neue Bewertungen nutzen immer die aktuell aktive RegulatoryVersion als
-    # Referenzkatalog (Abschnitt 11.7: mehrere Versionen koennen parallel existieren,
-    # z.B. waehrend eine bevorstehende Formatumstellung schon kuratiert wird).
-    reg_version = services.get_active_regulatory_version(db)
-    if not reg_version:
-        raise HTTPException(status_code=500, detail="Referenzdaten nicht geseedet")
-
-    customer = models.Customer(name=payload.customer_name, market_role=payload.market_role, sector="gas")
-    db.add(customer)
-    db.flush()
-
+def _create_assessment_for(
+    db: Session,
+    customer: models.Customer,
+    reg_version: models.RegulatoryVersion,
+    segments_csv: str,
+    segments: set[str],
+) -> models.Assessment:
+    """Legt ein Assessment samt seiner AssessmentRequirement-Zeilen an. Gemeinsam
+    genutzt vom Wizard (neuer Kunde) und vom Anlegen eines weiteren Assessments
+    fuer einen bestehenden Kunden (Abschnitt 12.3)."""
     assessment = models.Assessment(
         customer_id=customer.id,
         regulatory_version_id=reg_version.id,
         business_scenario="lieferantenwechsel",  # im MVP fest
-        customer_segments=payload.customer_segments,
+        customer_segments=segments_csv,
         status="in_bearbeitung",
     )
     db.add(assessment)
@@ -81,11 +81,110 @@ def create_assessment(payload: schemas.AssessmentCreate, db: Session = Depends(g
             requirement_id=req.id,
             relevance_status="relevant",
         ))
+    return assessment
+
+
+@router.post("", response_model=schemas.AssessmentOut)
+def create_assessment(payload: schemas.AssessmentCreate, db: Session = Depends(get_db)):
+    valid_roles = {"lieferant", "grund_ersatzversorger", "beides"}
+    if payload.market_role not in valid_roles:
+        raise HTTPException(status_code=400, detail=f"market_role muss einer von {valid_roles} sein")
+
+    segments = {s.strip() for s in payload.customer_segments.split(",") if s.strip()}
+    if not segments or not segments.issubset({"slp", "rlm"}):
+        raise HTTPException(status_code=400, detail="customer_segments muss 'slp', 'rlm' oder 'slp,rlm' sein")
+
+    # Gegen welchen regulatorischen Stand gemessen wird, waehlt der Nutzer jetzt
+    # explizit im Wizard (Abschnitt 12.4) -- vorher war das implizit immer die
+    # aktive Version, was mit mehreren parallelen Versionen nicht mehr reicht.
+    reg_version = db.query(models.RegulatoryVersion).filter(
+        models.RegulatoryVersion.id == payload.regulatory_version_id
+    ).first()
+    if not reg_version:
+        raise HTTPException(status_code=404, detail="RegulatoryVersion nicht gefunden")
+
+    customer = models.Customer(name=payload.customer_name, market_role=payload.market_role, sector="gas")
+    db.add(customer)
+    db.flush()
+
+    assessment = _create_assessment_for(db, customer, reg_version, payload.customer_segments, segments)
 
     db.commit()
     db.refresh(assessment)
     assessment.customer = customer
-    return _to_assessment_out(assessment)
+    return _to_assessment_out(assessment, db)
+
+
+@customer_router.get("/{customer_id}/assessments", response_model=list[schemas.AssessmentHistoryItem])
+def list_customer_assessments(customer_id: int, db: Session = Depends(get_db)):
+    """Assessment-Historie eines Kunden (Abschnitt 12.3). Der Typ je Eintrag wird
+    live abgeleitet, damit er sich mit dem Zeitablauf mitbewegt."""
+    customer = db.query(models.Customer).filter(models.Customer.id == customer_id).first()
+    if not customer:
+        raise HTTPException(status_code=404, detail="Kunde nicht gefunden")
+
+    assessments = (
+        db.query(models.Assessment)
+        .options(joinedload(models.Assessment.regulatory_version), joinedload(models.Assessment.score_result))
+        .filter(models.Assessment.customer_id == customer_id)
+        .order_by(models.Assessment.created_at.desc())
+        .all()
+    )
+    all_versions = db.query(models.RegulatoryVersion).all()
+
+    return [
+        schemas.AssessmentHistoryItem(
+            id=a.id,
+            regulatory_version_id=a.regulatory_version_id,
+            regulatory_version_name=a.regulatory_version.name if a.regulatory_version else None,
+            assessment_type=(
+                services.derive_assessment_type(a.regulatory_version, all_versions)
+                if a.regulatory_version else "historisch"
+            ),
+            status=a.status,
+            created_at=a.created_at,
+            regulatory_coverage=a.score_result.regulatory_coverage if a.score_result else None,
+            quality_grade=a.score_result.quality_grade if a.score_result else None,
+        )
+        for a in assessments
+    ]
+
+
+@customer_router.post("/{customer_id}/assessments", response_model=schemas.AssessmentOut)
+def create_assessment_for_customer(
+    customer_id: int,
+    payload: schemas.AssessmentForCustomerCreate,
+    db: Session = Depends(get_db),
+):
+    """Weiteres Assessment fuer einen bestehenden Kunden (Abschnitt 12.3) -- fragt nur
+    die Version ab, Marktrolle und Segmente kommen vom letzten Assessment des Kunden."""
+    customer = db.query(models.Customer).filter(models.Customer.id == customer_id).first()
+    if not customer:
+        raise HTTPException(status_code=404, detail="Kunde nicht gefunden")
+
+    reg_version = db.query(models.RegulatoryVersion).filter(
+        models.RegulatoryVersion.id == payload.regulatory_version_id
+    ).first()
+    if not reg_version:
+        raise HTTPException(status_code=404, detail="RegulatoryVersion nicht gefunden")
+
+    # Segmente vom juengsten Assessment uebernehmen -- der Nutzer soll die Kundendaten
+    # nicht erneut angeben muessen. Mehrere Assessments gegen dieselbe Version sind
+    # bewusst erlaubt (z.B. erneute Bewertung zu einem spaeteren Zeitpunkt).
+    latest = (
+        db.query(models.Assessment)
+        .filter(models.Assessment.customer_id == customer_id)
+        .order_by(models.Assessment.created_at.desc())
+        .first()
+    )
+    segments_csv = latest.customer_segments if latest else "slp,rlm"
+    segments = {s.strip() for s in segments_csv.split(",") if s.strip()}
+
+    assessment = _create_assessment_for(db, customer, reg_version, segments_csv, segments)
+    db.commit()
+    db.refresh(assessment)
+    assessment.customer = customer
+    return _to_assessment_out(assessment, db)
 
 
 @router.get("")
@@ -113,7 +212,7 @@ def get_assessment(assessment_id: int, db: Session = Depends(get_db)):
         .all()
     )
     return schemas.AssessmentDetailOut(
-        assessment=_to_assessment_out(assessment),
+        assessment=_to_assessment_out(assessment, db),
         requirement_statuses=assessment.requirement_statuses,
         score=assessment.score_result,
         findings=assessment.findings,

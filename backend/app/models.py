@@ -107,6 +107,7 @@ class Assessment(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
     customer = relationship("Customer", back_populates="assessments")
+    regulatory_version = relationship("RegulatoryVersion")
     requirement_statuses = relationship("AssessmentRequirement", back_populates="assessment")
     score_result = relationship("ScoreResult", back_populates="assessment", uselist=False)
     findings = relationship("Finding", back_populates="assessment")
