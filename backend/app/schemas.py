@@ -311,6 +311,13 @@ class RegulatoryImpactChange(BaseModel):
 
 class RegulatoryImpactOut(BaseModel):
     has_upcoming_version: bool
+    # Kontext zur Version des Assessments SELBST -- noetig, um bei fehlender
+    # Folgeversion zwei Faelle zu unterscheiden: "es ist nichts Neues bekannt" vs.
+    # "ihr messt bereits gegen den neuesten bekannten Stand".
+    current_version_name: Optional[str] = None
+    current_version_valid_from: Optional[datetime] = None
+    is_latest_known_version: bool = False
+    known_version_count: int = 0
     upcoming_version_id: Optional[int] = None
     upcoming_version_name: Optional[str] = None
     upcoming_version_valid_from: Optional[datetime] = None

@@ -85,14 +85,43 @@ export function RegulatoryImpactView({ assessmentId }: Props) {
   if (!impact) return null;
 
   if (!impact.has_upcoming_version) {
+    // Ohne Folgeversion gibt es zwei sehr verschiedene Lagen. Beide mit derselben
+    // Meldung abzufrühstücken hat suggeriert, es gäbe generell keine Umstellungen --
+    // auch dann, wenn bereits gegen den neuesten bekannten Stand gemessen wird.
+    const alreadyOnLatest = impact.is_latest_known_version;
+    const validFromDate = impact.current_version_valid_from
+      ? new Date(impact.current_version_valid_from)
+      : null;
+    // Versionsbezeichnungen tragen den Stichtag oft schon im Namen ("… / gültig ab
+    // 01.10.2026"). Dann waere ein zweites "gültig ab …" nur Doppelung -- also nur
+    // anhaengen, wenn das Datum im Namen noch nicht vorkommt.
+    const nameHasDate =
+      !!validFromDate &&
+      !!impact.current_version_name &&
+      [
+        validFromDate.toLocaleDateString("de-DE"),
+        validFromDate.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" }),
+      ].some((d) => impact.current_version_name!.includes(d));
+    const validFrom = validFromDate && !nameHasDate ? validFromDate.toLocaleDateString("de-DE") : null;
+
     return (
       <div>
         <div className="section-title" style={{ marginTop: 0 }}>Formatumstellungs-Impact</div>
-        <p style={{ color: "var(--text-muted)", fontSize: 13, maxWidth: 520 }}>
-          Aktuell ist keine bevorstehende Formatumstellung für euren regulatorischen
-          Stand bekannt. Sobald eine neue Version kuratiert wird, seht ihr hier den
-          Impact auf euren Abdeckungsgrad.
-        </p>
+        {alreadyOnLatest ? (
+          <p style={{ color: "var(--text-muted)", fontSize: 13, maxWidth: 560 }}>
+            Ihr testet bereits gegen den neuesten bekannten Stand
+            {impact.current_version_name ? ` (${impact.current_version_name}` : ""}
+            {impact.current_version_name && validFrom ? `, gültig ab ${validFrom}` : ""}
+            {impact.current_version_name ? ")" : ""}. Es ist aktuell keine weitere
+            Formatumstellung danach bekannt.
+          </p>
+        ) : (
+          <p style={{ color: "var(--text-muted)", fontSize: 13, maxWidth: 560 }}>
+            Aktuell ist keine bevorstehende Formatumstellung für euren regulatorischen
+            Stand bekannt. Sobald eine neue Version kuratiert wird, seht ihr hier den
+            Impact auf euren Abdeckungsgrad.
+          </p>
+        )}
       </div>
     );
   }

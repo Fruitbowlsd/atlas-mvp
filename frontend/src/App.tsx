@@ -11,7 +11,9 @@ import { ScoreCard } from "./components/ScoreCard";
 import { Heatmap } from "./components/Heatmap";
 import { FindingsList } from "./components/FindingsList";
 import { ProcessGroupAccordion } from "./components/ProcessGroupAccordion";
-import { ProfileForm } from "./components/ProfileForm";
+import { ProfileForm, type ProfileDraft } from "./components/ProfileForm";
+import { AssessmentStartStep } from "./components/AssessmentStartStep";
+import { AssessmentContextBar } from "./components/AssessmentContextBar";
 import { ProfileSummary } from "./components/ProfileSummary";
 import { Sidebar, type Step } from "./components/Sidebar";
 import { Login } from "./components/Login";
@@ -19,6 +21,17 @@ import { MarketCommunicationTriangle } from "./components/MarketCommunicationTri
 import { Import } from "./components/Import";
 import { Roadmap } from "./components/Roadmap";
 import { RegulatoryChanges } from "./components/RegulatoryChanges";
+
+// Seiten, die Zahlen eines konkreten Assessments zeigen -- nur dort steht die
+// Kontextzeile. Bewusst NICHT im Kundenprofil (dort waehlt man das Assessment ja
+// gerade aus) und nicht im internen Formatänderungen-Bereich.
+const ASSESSMENT_SCOPED_STEPS: Step[] = [
+  "uebersicht",
+  "marktkommunikation",
+  "assessment",
+  "import",
+  "ergebnisse",
+];
 
 export default function App() {
   const [authChecked, setAuthChecked] = useState(false);
@@ -35,6 +48,10 @@ export default function App() {
   // Ein Kunde kann mehrere Assessments haben (Abschnitt 12.3). Gehalten wird bewusst
   // nur das GERADE geladene plus die Liste -- kein Cache mehrerer Details, weil
   // Nachladen billig ist und ein Cache veraltete Staende riskieren wuerde.
+  // Zwischenstand aus dem Profil-Schritt: der Kunde wird erst zusammen mit der
+  // Versionswahl angelegt, damit ein Abbruch im zweiten Schritt keine kundenlosen
+  // Datensaetze hinterlaesst.
+  const [profileDraft, setProfileDraft] = useState<ProfileDraft | null>(null);
   const [customerId, setCustomerId] = useState<number | null>(null);
   const [assessments, setAssessments] = useState<AssessmentHistoryItem[]>([]);
   const [versions, setVersions] = useState<RegulatoryVersion[]>([]);
@@ -87,11 +104,20 @@ export default function App() {
       .catch((e) => setError((e as Error).message));
   }, [authenticated]);
 
-  const handleCreateAssessment = async (payload: AssessmentCreate) => {
+  const handleStartFromDraft = async (regulatoryVersionId: number) => {
+    if (!profileDraft) return;
+    const payload: AssessmentCreate = {
+      customer_name: profileDraft.customer_name,
+      market_role: profileDraft.market_role,
+      customer_segments: "slp", // im MVP fest
+      business_scenario: "lieferantenwechsel",
+      regulatory_version_id: regulatoryVersionId,
+    };
     setCreating(true);
     setCreateError(null);
     try {
       const created = await api.createAssessment(payload);
+      setProfileDraft(null);
       setCustomerId(created.customer_id);
       setAssessmentId(created.id);
       await loadHistory(created.customer_id);
@@ -120,6 +146,7 @@ export default function App() {
   };
 
   const resetToWizard = () => {
+    setProfileDraft(null);
     setCustomerId(null);
     setAssessments([]);
     setAssessmentId(null);
@@ -178,7 +205,20 @@ export default function App() {
           />
         );
       }
-      return <ProfileForm onSubmit={handleCreateAssessment} submitting={creating} error={createError} />;
+      // Zwei Schritte: erst Kundendaten, dann die Version des Assessments.
+      if (profileDraft) {
+        return (
+          <AssessmentStartStep
+            customerName={profileDraft.customer_name}
+            versions={versions}
+            onStart={handleStartFromDraft}
+            onBack={() => { setProfileDraft(null); setCreateError(null); }}
+            submitting={creating}
+            error={createError}
+          />
+        );
+      }
+      return <ProfileForm onSubmit={setProfileDraft} submitting={false} error={createError} />;
     }
 
     if (loading) return <div className="loading">Lade Assessment …</div>;
@@ -314,7 +354,12 @@ export default function App() {
   return (
     <div className="app-shell">
       <Sidebar active={step} onSelect={setStep} hasAssessment={detail !== null} />
-      <div className="app-content">{renderContent()}</div>
+      <div className="app-content">
+        {detail && ASSESSMENT_SCOPED_STEPS.includes(step) && (
+          <AssessmentContextBar assessment={detail.assessment} />
+        )}
+        {renderContent()}
+      </div>
     </div>
   );
 }
