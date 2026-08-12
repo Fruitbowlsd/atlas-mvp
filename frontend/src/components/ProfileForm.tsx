@@ -1,5 +1,7 @@
-import { useState } from "react";
-import type { AssessmentCreate, MarketRole } from "../types";
+import { useEffect, useState } from "react";
+import { api } from "../api/client";
+import type { AssessmentCreate, MarketRole, RegulatoryVersion } from "../types";
+import { RegulatoryVersionPicker } from "./RegulatoryVersionPicker";
 
 interface Props {
   onSubmit: (payload: AssessmentCreate) => void;
@@ -16,12 +18,28 @@ const ROLE_OPTIONS: { value: MarketRole; label: string }[] = [
 export function ProfileForm({ onSubmit, submitting, error }: Props) {
   const [customerName, setCustomerName] = useState("");
   const [marketRole, setMarketRole] = useState<MarketRole>("lieferant");
+  const [versions, setVersions] = useState<RegulatoryVersion[]>([]);
+  const [versionId, setVersionId] = useState<number | null>(null);
   const [validationError, setValidationError] = useState<string | null>(null);
+
+  useEffect(() => {
+    api.listRegulatoryVersions().then((vs) => {
+      setVersions(vs);
+      // Vorbelegt ist der heute geltende Stand -- der haeufigste Fall. Wer sich auf
+      // eine kommende Umstellung vorbereitet, waehlt bewusst eine andere Version.
+      const current = vs.find((v) => v.is_active) ?? vs[0];
+      if (current) setVersionId(current.id);
+    });
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!customerName.trim()) {
       setValidationError("Bitte einen Unternehmensnamen angeben.");
+      return;
+    }
+    if (versionId === null) {
+      setValidationError("Bitte einen regulatorischen Stand auswählen.");
       return;
     }
     setValidationError(null);
@@ -30,6 +48,7 @@ export function ProfileForm({ onSubmit, submitting, error }: Props) {
       market_role: marketRole,
       customer_segments: "slp", // im MVP fest
       business_scenario: "lieferantenwechsel",
+      regulatory_version_id: versionId,
     });
   };
 
@@ -74,6 +93,11 @@ export function ProfileForm({ onSubmit, submitting, error }: Props) {
               </label>
             ))}
           </div>
+        </div>
+
+        <div className="form-field">
+          <label className="form-label">Gegen welchen Stand soll Atlas Ihre Qualität messen?</label>
+          <RegulatoryVersionPicker versions={versions} selectedId={versionId} onSelect={setVersionId} />
         </div>
 
         <div className="form-field">

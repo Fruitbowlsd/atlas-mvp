@@ -97,6 +97,16 @@ class AssessmentCreate(BaseModel):
     market_role: str  # "lieferant" | "grund_ersatzversorger" | "beides"
     customer_segments: str  # CSV, z.B. "slp" | "rlm" | "slp,rlm"
     business_scenario: str = "lieferantenwechsel"  # im MVP fest
+    # Gegen welchen regulatorischen Stand gemessen wird -- vorher implizit immer die
+    # aktive Version, jetzt explizite Auswahl im Wizard (Abschnitt 12.4).
+    regulatory_version_id: int
+
+
+class AssessmentForCustomerCreate(BaseModel):
+    """Weiteres Assessment fuer einen BESTEHENDEN Kunden (Abschnitt 12.3) -- Marktrolle
+    und Segmente werden vom Kunden bzw. seinem letzten Assessment uebernommen, es wird
+    nur noch die Version abgefragt."""
+    regulatory_version_id: int
 
 
 class AssessmentOut(BaseModel):
@@ -108,9 +118,25 @@ class AssessmentOut(BaseModel):
     customer_segments: str
     status: str
     created_at: datetime
+    regulatory_version_id: Optional[int] = None
+    regulatory_version_name: Optional[str] = None
+    # Live aus dem Stichtag der Version abgeleitet, NICHT gespeichert (Abschnitt 12.5)
+    assessment_type: Optional[str] = None  # readiness | compliance | historisch
 
     class Config:
         from_attributes = True
+
+
+class AssessmentHistoryItem(BaseModel):
+    """Ein Eintrag der Assessment-Historie eines Kunden (Abschnitt 12.3)."""
+    id: int
+    regulatory_version_id: Optional[int]
+    regulatory_version_name: Optional[str]
+    assessment_type: str  # readiness | compliance | historisch
+    status: str
+    created_at: datetime
+    regulatory_coverage: Optional[float] = None
+    quality_grade: Optional[float] = None
 
 
 class AssessmentDetailOut(BaseModel):

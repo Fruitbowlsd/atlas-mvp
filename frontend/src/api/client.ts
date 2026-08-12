@@ -1,6 +1,7 @@
 import type {
   AssessmentCreate,
   AssessmentDetail,
+  AssessmentHistoryItem,
   AssessmentOut,
   AssessmentSummary,
   CalculateResult,
@@ -93,6 +94,15 @@ export const api = {
     request<{ updated: number }>(`/assessments/${assessmentId}/import/confirm`, {
       method: "POST",
       body: JSON.stringify({ source_name: sourceName, items }),
+    }),
+
+  listCustomerAssessments: (customerId: number) =>
+    request<AssessmentHistoryItem[]>(`/customers/${customerId}/assessments`),
+
+  createAssessmentForCustomer: (customerId: number, regulatoryVersionId: number) =>
+    request<AssessmentOut>(`/customers/${customerId}/assessments`, {
+      method: "POST",
+      body: JSON.stringify({ regulatory_version_id: regulatoryVersionId }),
     }),
 
   listProcessGroups: () => request<ProcessGroup[]>("/process-groups"),
