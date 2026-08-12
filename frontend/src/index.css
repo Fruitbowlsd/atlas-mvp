@@ -1329,3 +1329,25 @@ select.status-select {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.assessment-context {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-bottom: 22px;
+}
+
+.assessment-context strong {
+  color: var(--text);
+}
+
+.context-sep {
+  color: var(--border);
+}

@@ -1,10 +1,16 @@
-import { useEffect, useState } from "react";
-import { api } from "../api/client";
-import type { AssessmentCreate, MarketRole, RegulatoryVersion } from "../types";
-import { RegulatoryVersionPicker } from "./RegulatoryVersionPicker";
+import { useState } from "react";
+import type { MarketRole } from "../types";
+
+/** Reine Kundendaten -- die regulatorische Version gehoert bewusst NICHT hierher:
+ *  Unternehmen/Marktrolle sind Eigenschaften des Kunden, die Version dagegen eine
+ *  Eigenschaft des einzelnen Assessments. Sie wird im Folgeschritt abgefragt. */
+export interface ProfileDraft {
+  customer_name: string;
+  market_role: MarketRole;
+}
 
 interface Props {
-  onSubmit: (payload: AssessmentCreate) => void;
+  onSubmit: (draft: ProfileDraft) => void;
   submitting: boolean;
   error: string | null;
 }
@@ -18,19 +24,7 @@ const ROLE_OPTIONS: { value: MarketRole; label: string }[] = [
 export function ProfileForm({ onSubmit, submitting, error }: Props) {
   const [customerName, setCustomerName] = useState("");
   const [marketRole, setMarketRole] = useState<MarketRole>("lieferant");
-  const [versions, setVersions] = useState<RegulatoryVersion[]>([]);
-  const [versionId, setVersionId] = useState<number | null>(null);
   const [validationError, setValidationError] = useState<string | null>(null);
-
-  useEffect(() => {
-    api.listRegulatoryVersions().then((vs) => {
-      setVersions(vs);
-      // Vorbelegt ist der heute geltende Stand -- der haeufigste Fall. Wer sich auf
-      // eine kommende Umstellung vorbereitet, waehlt bewusst eine andere Version.
-      const current = vs.find((v) => v.is_active) ?? vs[0];
-      if (current) setVersionId(current.id);
-    });
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,18 +32,8 @@ export function ProfileForm({ onSubmit, submitting, error }: Props) {
       setValidationError("Bitte einen Unternehmensnamen angeben.");
       return;
     }
-    if (versionId === null) {
-      setValidationError("Bitte einen regulatorischen Stand auswählen.");
-      return;
-    }
     setValidationError(null);
-    onSubmit({
-      customer_name: customerName.trim(),
-      market_role: marketRole,
-      customer_segments: "slp", // im MVP fest
-      business_scenario: "lieferantenwechsel",
-      regulatory_version_id: versionId,
-    });
+    onSubmit({ customer_name: customerName.trim(), market_role: marketRole });
   };
 
   return (
@@ -62,8 +46,8 @@ export function ProfileForm({ onSubmit, submitting, error }: Props) {
         </div>
       </div>
       <p style={{ color: "var(--text-muted)", fontSize: 13.5, marginBottom: 28 }}>
-        Neues Assessment anlegen — die Angaben bestimmen, welche regulatorischen
-        Anforderungen für dieses Unternehmen relevant sind.
+        Zuerst das Unternehmen erfassen — im nächsten Schritt wählt ihr, gegen
+        welchen regulatorischen Stand bewertet werden soll.
       </p>
 
       <form onSubmit={handleSubmit}>
@@ -96,11 +80,6 @@ export function ProfileForm({ onSubmit, submitting, error }: Props) {
         </div>
 
         <div className="form-field">
-          <label className="form-label">Gegen welchen Stand soll Atlas Ihre Qualität messen?</label>
-          <RegulatoryVersionPicker versions={versions} selectedId={versionId} onSelect={setVersionId} />
-        </div>
-
-        <div className="form-field">
           <label className="form-label">Sparte</label>
           <div className="fixed-value">
             Gas
@@ -129,7 +108,7 @@ export function ProfileForm({ onSubmit, submitting, error }: Props) {
         )}
 
         <button type="submit" className="recalc-button" disabled={submitting} style={{ marginTop: 8 }}>
-          {submitting ? "Wird angelegt …" : "Relevante Marktkommunikation ermitteln"}
+          {submitting ? "Weiter …" : "Weiter zur Auswahl des Stands"}
         </button>
       </form>
     </div>

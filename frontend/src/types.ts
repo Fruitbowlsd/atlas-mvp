@@ -239,6 +239,10 @@ export interface RegulatoryImpactChange {
 
 export interface RegulatoryImpact {
   has_upcoming_version: boolean;
+  current_version_name: string | null;
+  current_version_valid_from: string | null;
+  is_latest_known_version: boolean;
+  known_version_count: number;
   upcoming_version_id: number | null;
   upcoming_version_name: string | null;
   upcoming_version_valid_from: string | null;

@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session, joinedload
 
@@ -227,6 +229,30 @@ def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
     if not assessment:
         raise HTTPException(status_code=404, detail="Assessment nicht gefunden")
 
+    # Kontext zur Version des Assessments selbst -- damit die Kunden-Ansicht bei
+    # fehlender Folgeversion unterscheiden kann, ob schlicht nichts Neues bekannt ist
+    # oder ob bereits gegen den neuesten bekannten Stand gemessen wird.
+    current_version = assessment.regulatory_version
+    all_versions = db.query(models.RegulatoryVersion).all()
+
+    def effective_start(v: models.RegulatoryVersion) -> datetime:
+        return v.valid_from or datetime.min  # ohne Stichtag = "gilt seit jeher"
+
+    latest_version = max(all_versions, key=lambda v: (effective_start(v), v.id)) if all_versions else None
+    # Nur aussagekraeftig, wenn es ueberhaupt mehrere Staende gibt -- bei genau einer
+    # Version waere "ihr messt gegen den neuesten Stand" eine inhaltsleere Aussage.
+    is_latest = bool(
+        current_version and latest_version
+        and latest_version.id == current_version.id
+        and len(all_versions) > 1
+    )
+    version_context = dict(
+        current_version_name=current_version.name if current_version else None,
+        current_version_valid_from=current_version.valid_from if current_version else None,
+        is_latest_known_version=is_latest,
+        known_version_count=len(all_versions),
+    )
+
     upcoming = (
         db.query(models.RegulatoryVersion)
         .filter(
@@ -237,7 +263,7 @@ def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
         .first()
     )
     if not upcoming:
-        return schemas.RegulatoryImpactOut(has_upcoming_version=False)
+        return schemas.RegulatoryImpactOut(has_upcoming_version=False, **version_context)
 
     segments = set(assessment.customer_segments.split(","))
 
@@ -337,6 +363,7 @@ def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
 
     return schemas.RegulatoryImpactOut(
         has_upcoming_version=True,
+        **version_context,
         upcoming_version_id=upcoming.id,
         upcoming_version_name=upcoming.name,
         upcoming_version_valid_from=upcoming.valid_from,
