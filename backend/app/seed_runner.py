@@ -63,7 +63,21 @@ def run_seed(db: Session):
     nie zurueck. Jetzt wird jeder Block einzeln nachgezogen, ohne vorhandene
     Daten zu duplizieren."""
     if not _version_by_name(db, sd.REGULATORY_VERSION["name"]):
-        _seed_base(db)
+        # Die Basisversion wird am Namen erkannt. Wurde sie umbenannt (z.B. weil der
+        # Stand auf eine neuere Formatumstellung aktualisiert wurde), faende der
+        # Namensabgleich sie nicht mehr und legte einen ZWEITEN Basiskatalog samt
+        # Demo-Kunde an. Deshalb zuerst die vorhandene aktive Version nachziehen.
+        existing_base = (
+            db.query(models.RegulatoryVersion)
+            .filter(models.RegulatoryVersion.is_active == True)  # noqa: E712
+            .first()
+        )
+        if existing_base:
+            for field, value in sd.REGULATORY_VERSION.items():
+                setattr(existing_base, field, value)
+            db.commit()
+        else:
+            _seed_base(db)
 
     if not _version_by_name(db, sd.REGULATORY_VERSION_2["name"]):
         _seed_upcoming_version(db)

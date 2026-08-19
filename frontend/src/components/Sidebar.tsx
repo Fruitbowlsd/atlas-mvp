@@ -1,3 +1,6 @@
+import type { RegulatoryVersion } from "../types";
+import { validityLabel } from "../utils/versionLabel";
+
 export type Step =
   | "uebersicht"
   | "kundenprofil"
@@ -18,9 +21,19 @@ interface Props {
   active: Step;
   onSelect: (step: Step) => void;
   hasAssessment: boolean;
+  /** Der aktuell geltende regulatorische Stand. Kommt aus der Datenbank statt aus
+   *  einem festen Text -- sonst gaebe es zwei Quellen fuer dieselbe Angabe, die
+   *  auseinanderlaufen, sobald sich der Stand aendert. */
+  activeVersion: RegulatoryVersion | null;
 }
 
-export function Sidebar({ active, onSelect, hasAssessment }: Props) {
+const VERSION_STATUS_LABEL: Record<string, string> = {
+  konsultation: "Konsultationsfassung",
+  final: "Finale Fassung",
+  verbindlich: "Verbindlich",
+};
+
+export function Sidebar({ active, onSelect, hasAssessment, activeVersion }: Props) {
   // Kundenbezogene Eintraege -- sichtbar/relevant fuer die Kunden-Sicht des MVP.
   const customerSteps: StepDef[] = [
     { key: "uebersicht", label: "Übersicht", enabled: hasAssessment },
@@ -68,13 +81,19 @@ export function Sidebar({ active, onSelect, hasAssessment }: Props) {
       <div className="sidebar-footer">
         <div className="sidebar-footer-title">Regulatorischer Stand</div>
         <div className="sidebar-footer-text">
-          GeLi Gas 2.0
-          <br />
-          UTILMD Gas G1.1
-          <br />
-          Konsultationsfassung
-          <br />
-          01.08.2025
+          {activeVersion ? (
+            <>
+              {activeVersion.name}
+              <br />
+              {VERSION_STATUS_LABEL[activeVersion.status] ?? activeVersion.status}
+              {(() => {
+                const validity = validityLabel(activeVersion.name, activeVersion.valid_from);
+                return validity ? (<><br />{validity}</>) : null;
+              })()}
+            </>
+          ) : (
+            "wird geladen …"
+          )}
         </div>
       </div>
     </div>
