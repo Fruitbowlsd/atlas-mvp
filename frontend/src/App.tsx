@@ -353,7 +353,12 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <Sidebar active={step} onSelect={setStep} hasAssessment={detail !== null} />
+      <Sidebar
+        active={step}
+        onSelect={setStep}
+        hasAssessment={detail !== null}
+        activeVersion={versions.find((v) => v.is_active) ?? null}
+      />
       <div className="app-content">
         {detail && ASSESSMENT_SCOPED_STEPS.includes(step) && (
           <AssessmentContextBar assessment={detail.assessment} />

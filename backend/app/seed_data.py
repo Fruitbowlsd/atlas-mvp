@@ -10,10 +10,15 @@ from datetime import datetime
 # Nachrichtenvalidierungskatalog und bewusst nicht Teil dieses MVP.
 
 REGULATORY_VERSION = {
-    "name": "GeLi Gas 2.0 / UTILMD Gas G1.1 (Konsultationsstand 01.08.2025)",
+    "name": "GeLi Gas 2.0 / UTILMD Gas G1.1 (gültig ab 01.04.2026)",
     "sector": "gas",
-    "status": "konsultation",
-    "source_reference": "BDEW/EDI@Energy Konsultationsfassung 01.08.2025",
+    "status": "verbindlich",
+    "source_reference": "BDEW/EDI@Energy, Formatumstellung zum 01.04.2026",
+    # Stichtag der letzten Formatumstellung. Vorher stand hier gar kein Datum und der
+    # Katalog war als Konsultationsstand 01.08.2025 gefuehrt -- also als Entwurf,
+    # obwohl es der geltende Stand ist. Mit gesetztem valid_from leitet sich der
+    # Assessment-Typ direkt aus dem Datum ab statt aus dem "gilt seit jeher"-Fallback.
+    "valid_from": datetime(2026, 4, 1),
     "is_active": True,  # Default-Referenzkatalog fuer neue Assessments (Abschnitt 11.7)
 }
 

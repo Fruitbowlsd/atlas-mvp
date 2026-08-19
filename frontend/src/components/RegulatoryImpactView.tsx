@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/client";
 import type { RegulatoryImpact, RegulatoryImpactRequirementRef, RiskLevel } from "../types";
+import { redundantFreeValidFrom } from "../utils/versionLabel";
 
 interface Props {
   assessmentId: number;
@@ -89,20 +90,10 @@ export function RegulatoryImpactView({ assessmentId }: Props) {
     // Meldung abzufrühstücken hat suggeriert, es gäbe generell keine Umstellungen --
     // auch dann, wenn bereits gegen den neuesten bekannten Stand gemessen wird.
     const alreadyOnLatest = impact.is_latest_known_version;
-    const validFromDate = impact.current_version_valid_from
-      ? new Date(impact.current_version_valid_from)
-      : null;
-    // Versionsbezeichnungen tragen den Stichtag oft schon im Namen ("… / gültig ab
-    // 01.10.2026"). Dann waere ein zweites "gültig ab …" nur Doppelung -- also nur
-    // anhaengen, wenn das Datum im Namen noch nicht vorkommt.
-    const nameHasDate =
-      !!validFromDate &&
-      !!impact.current_version_name &&
-      [
-        validFromDate.toLocaleDateString("de-DE"),
-        validFromDate.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" }),
-      ].some((d) => impact.current_version_name!.includes(d));
-    const validFrom = validFromDate && !nameHasDate ? validFromDate.toLocaleDateString("de-DE") : null;
+    const validFrom = redundantFreeValidFrom(
+      impact.current_version_name,
+      impact.current_version_valid_from,
+    );
 
     return (
       <div>
