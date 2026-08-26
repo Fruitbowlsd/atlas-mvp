@@ -35,6 +35,11 @@ _PENDING_COLUMNS = {
         ("message_type", "VARCHAR"),
         ("updated_at", "TIMESTAMP"),
     ],
+    # Multi-Tenancy (Abschnitt 13.2). Auf Railway wird die DB je Deploy neu
+    # aufgebaut, hier geht es nur darum, dass lokale Entwicklungsdatenbanken
+    # nicht kaputtgehen -- kein neuer Mechanismus, nur zwei weitere Spalten.
+    "customers": [("tenant_id", "INTEGER")],
+    "assessments": [("tenant_id", "INTEGER")],
 }
 
 # Neu hinzugekommene updated_at-Spalten waeren fuer Bestandszeilen NULL -- die

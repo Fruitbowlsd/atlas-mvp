@@ -62,6 +62,8 @@ def run_seed(db: Session):
     da war: eine geloeschte Folgeversion kam dadurch auch nach einem Neustart
     nie zurueck. Jetzt wird jeder Block einzeln nachgezogen, ohne vorhandene
     Daten zu duplizieren."""
+    _seed_tenant(db)
+
     if not _version_by_name(db, sd.REGULATORY_VERSION["name"]):
         # Die Basisversion wird am Namen erkannt. Wurde sie umbenannt (z.B. weil der
         # Stand auf eine neuere Formatumstellung aktualisiert wurde), faende der
@@ -81,6 +83,26 @@ def run_seed(db: Session):
 
     if not _version_by_name(db, sd.REGULATORY_VERSION_2["name"]):
         _seed_upcoming_version(db)
+
+
+def _seed_tenant(db: Session) -> models.Tenant:
+    """Default-Tenant anlegen und bestehende Kundendaten ihm zuordnen (Abschnitt 13.2).
+    Idempotent wie alle anderen Seed-Bloecke -- und ordnet zusaetzlich Datensaetze
+    ohne tenant_id nach, die vor der Multi-Tenancy-Einfuehrung entstanden sind."""
+    tenant = db.query(models.Tenant).filter(models.Tenant.slug == sd.DEMO_TENANT["slug"]).first()
+    if not tenant:
+        tenant = models.Tenant(**sd.DEMO_TENANT)
+        db.add(tenant)
+        db.flush()
+
+    db.query(models.Customer).filter(models.Customer.tenant_id.is_(None)).update(
+        {"tenant_id": tenant.id}
+    )
+    db.query(models.Assessment).filter(models.Assessment.tenant_id.is_(None)).update(
+        {"tenant_id": tenant.id}
+    )
+    db.commit()
+    return tenant
 
 
 def _seed_base(db: Session):
@@ -133,12 +155,19 @@ def _seed_base(db: Session):
         db.flush()
         requirements.append((req, pi_number))
 
-    customer = models.Customer(name=sd.DEMO_CUSTOMER_NAME, market_role="lieferant", sector="gas")
+    tenant = db.query(models.Tenant).filter(models.Tenant.slug == sd.DEMO_TENANT["slug"]).first()
+    customer = models.Customer(
+        name=sd.DEMO_CUSTOMER_NAME,
+        market_role="lieferant",
+        sector="gas",
+        tenant_id=tenant.id if tenant else None,
+    )
     db.add(customer)
     db.flush()
 
     assessment = models.Assessment(
         customer_id=customer.id,
+        tenant_id=customer.tenant_id,
         regulatory_version_id=reg_version.id,
         business_scenario="lieferantenwechsel",
         customer_segments="slp,rlm",

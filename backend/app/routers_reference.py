@@ -8,6 +8,10 @@ from .auth import require_auth
 router = APIRouter(prefix="/api", tags=["reference"], dependencies=[Depends(require_auth)])
 
 
+# Bewusst NICHT hinter require_internal: der Kunden-Wizard braucht diese Liste, um
+# den Stand auszuwaehlen, gegen den gemessen wird. RegulatoryVersion ist laut
+# Abschnitt 13.1 geteiltes Plattform-Wissen, kein Kundengeheimnis -- intern ist nur
+# das KURATIEREN (anlegen/aendern), nicht das Lesen.
 @router.get("/regulatory-versions", response_model=list[schemas.RegulatoryVersionOut])
 def list_regulatory_versions(db: Session = Depends(get_db)):
     return db.query(models.RegulatoryVersion).order_by(models.RegulatoryVersion.id).all()

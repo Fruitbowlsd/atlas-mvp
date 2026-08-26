@@ -5,12 +5,19 @@ from sqlalchemy.orm import Session, joinedload
 
 from .database import get_db
 from . import models, schemas, diff, ai_analysis, services
-from .auth import require_auth
+from .auth import require_auth, require_internal, get_current_tenant_id
 
-# Endpunkte fuer die interne Kuratoren-Oberflaeche (Planungsdokument Abschnitt 11.4).
-# Rein intern -- nicht Teil der Kunden-Ansicht -- laeuft aber unter derselben
-# Demo-Anmeldung wie der Rest des MVP (kein separates Rollenmodell im MVP).
-router = APIRouter(prefix="/api", tags=["regulatory-intelligence"], dependencies=[Depends(require_auth)])
+# Zwei Router, weil hier zwei Berechtigungsstufen zusammentreffen (Abschnitt 13.2, Punkt 4):
+#
+# internal_router -- die Kuration selbst (Versionen anlegen/aendern, Aenderungen
+#   pflegen, Atlas-Analyse). Geteiltes Atlas-Wissen, kein Kundengeheimnis, daher
+#   BEWUSST ohne Tenant-Filterung -- dafuer hinter der eigenen Stufe require_internal.
+# router -- der kundenseitige Formatumstellungs-Impact. Der liest Kundendaten und
+#   ist deshalb tenant-gefiltert.
+internal_router = APIRouter(
+    prefix="/api", tags=["regulatory-intelligence"], dependencies=[Depends(require_internal)]
+)
+router = APIRouter(prefix="/api", tags=["regulatory-impact"], dependencies=[Depends(require_auth)])
 
 CATEGORIES = {"neuer_prozess", "neues_pflichtfeld", "neuer_code", "neue_qualitaetsregel", "neuer_testfall"}
 RISK_EFFORT_LEVELS = {"hoch", "mittel", "niedrig"}
@@ -59,7 +66,7 @@ def _to_change_out(change: models.RegulatoryChange) -> schemas.RegulatoryChangeO
 
 # --- RegulatoryVersion: Anlegen kommt hier dazu, Auflisten bleibt in routers_reference.py ---
 
-@router.patch("/regulatory-versions/{version_id}", response_model=schemas.RegulatoryVersionOut)
+@internal_router.patch("/regulatory-versions/{version_id}", response_model=schemas.RegulatoryVersionOut)
 def update_regulatory_version(version_id: int, payload: schemas.RegulatoryVersionUpdate, db: Session = Depends(get_db)):
     """Nachpflegen der Versions-Metadaten -- im MVP vor allem die kuratierte
     Zusammenfassung, die in der Kunden-Vorschau angezeigt wird."""
@@ -80,7 +87,7 @@ def update_regulatory_version(version_id: int, payload: schemas.RegulatoryVersio
     return version
 
 
-@router.post("/regulatory-versions", response_model=schemas.RegulatoryVersionOut)
+@internal_router.post("/regulatory-versions", response_model=schemas.RegulatoryVersionOut)
 def create_regulatory_version(payload: schemas.RegulatoryVersionCreate, db: Session = Depends(get_db)):
     if payload.predecessor_version_id is not None:
         predecessor = db.query(models.RegulatoryVersion).filter(
@@ -113,7 +120,7 @@ def create_regulatory_version(payload: schemas.RegulatoryVersionCreate, db: Sess
 # fehlende Demo-Versionen beim Start ohnehin wieder an (siehe seed_runner.py).
 
 
-@router.get("/regulatory-versions/{version_id}/diff", response_model=schemas.RegulatoryDiffSummary)
+@internal_router.get("/regulatory-versions/{version_id}/diff", response_model=schemas.RegulatoryDiffSummary)
 def get_regulatory_diff(version_id: int, against: int | None = None, db: Session = Depends(get_db)):
     """Klassischer Requirement-Diff (Pipeline-Schritt 3, Abschnitt 11.2) zwischen
     `version_id` und einer Vergleichsversion. `against` ist optional -- ohne
@@ -153,7 +160,7 @@ def get_regulatory_diff(version_id: int, against: int | None = None, db: Session
     )
 
 
-@router.post("/regulatory-versions/{version_id}/analyze-diff", response_model=list[schemas.RegulatoryChangeOut])
+@internal_router.post("/regulatory-versions/{version_id}/analyze-diff", response_model=list[schemas.RegulatoryChangeOut])
 def analyze_regulatory_diff(version_id: int, against: int | None = None, db: Session = Depends(get_db)):
     """Pipeline-Schritt 4 (Abschnitt 11.2): holt den klassischen Diff (Schritt 3,
     siehe get_regulatory_diff), schickt NUR die neuen/geaenderten Zeilen an die
@@ -213,7 +220,11 @@ def analyze_regulatory_diff(version_id: int, against: int | None = None, db: Ses
 
 
 @router.get("/assessments/{assessment_id}/regulatory-impact", response_model=schemas.RegulatoryImpactOut)
-def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
+def get_regulatory_impact(
+    assessment_id: int,
+    db: Session = Depends(get_db),
+    tenant_id: int = Depends(get_current_tenant_id),
+):
     """Kunden-Ansicht 'Formatumstellungs-Impact' (Abschnitt 11.5). Nimmt automatisch
     die naechste nicht-aktive Version, deren predecessor_version_id auf die
     RegulatoryVersion des Assessments zeigt (siehe Rueckfrage Schritt 2e) -- kein
@@ -223,7 +234,7 @@ def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
     assessment = (
         db.query(models.Assessment)
         .options(joinedload(models.Assessment.requirement_statuses).joinedload(models.AssessmentRequirement.requirement))
-        .filter(models.Assessment.id == assessment_id)
+        .filter(models.Assessment.id == assessment_id, models.Assessment.tenant_id == tenant_id)
         .first()
     )
     if not assessment:
@@ -409,7 +420,7 @@ def get_regulatory_impact(assessment_id: int, db: Session = Depends(get_db)):
 
 # --- RegulatoryChange: Kuratoren-CRUD ---
 
-@router.get("/regulatory-changes", response_model=list[schemas.RegulatoryChangeOut])
+@internal_router.get("/regulatory-changes", response_model=list[schemas.RegulatoryChangeOut])
 def list_regulatory_changes(regulatory_version_id: int | None = None, db: Session = Depends(get_db)):
     query = db.query(models.RegulatoryChange).options(
         joinedload(models.RegulatoryChange.process_group),
@@ -421,7 +432,7 @@ def list_regulatory_changes(regulatory_version_id: int | None = None, db: Sessio
     return [_to_change_out(c) for c in changes]
 
 
-@router.post("/regulatory-changes", response_model=schemas.RegulatoryChangeOut)
+@internal_router.post("/regulatory-changes", response_model=schemas.RegulatoryChangeOut)
 def create_regulatory_change(payload: schemas.RegulatoryChangeCreate, db: Session = Depends(get_db)):
     _validate_change_fields(payload.category, payload.risk, payload.effort, None)
 
@@ -453,7 +464,7 @@ def create_regulatory_change(payload: schemas.RegulatoryChangeCreate, db: Sessio
     return _to_change_out(change)
 
 
-@router.patch("/regulatory-changes/{change_id}", response_model=schemas.RegulatoryChangeOut)
+@internal_router.patch("/regulatory-changes/{change_id}", response_model=schemas.RegulatoryChangeOut)
 def update_regulatory_change(change_id: int, payload: schemas.RegulatoryChangeUpdate, db: Session = Depends(get_db)):
     change = db.query(models.RegulatoryChange).filter(models.RegulatoryChange.id == change_id).first()
     if not change:
@@ -470,7 +481,7 @@ def update_regulatory_change(change_id: int, payload: schemas.RegulatoryChangeUp
     return _to_change_out(change)
 
 
-@router.delete("/regulatory-changes/{change_id}")
+@internal_router.delete("/regulatory-changes/{change_id}")
 def delete_regulatory_change(change_id: int, db: Session = Depends(get_db)):
     change = db.query(models.RegulatoryChange).filter(models.RegulatoryChange.id == change_id).first()
     if not change:
