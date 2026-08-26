@@ -294,6 +294,13 @@ REQUIREMENTS_V2_NEW = [
 
 DEMO_CUSTOMER_NAME = "Demo Gaslieferant GmbH"
 
+# Tenant, dem die Demo-Kundendaten gehoeren (Abschnitt 13.2). Solange es genau ein
+# Login-Passwort gibt, ist das der einzige Tenant -- der SSO-Schritt fuegt weitere hinzu.
+DEMO_TENANT = {
+    "name": "Demo Gaslieferant GmbH",
+    "slug": "demo-gaslieferant",
+}
+
 IMPLEMENTIERT = "implementiert"
 NICHT_IMPLEMENTIERT = "nicht_implementiert"
 GETESTET = "getestet"

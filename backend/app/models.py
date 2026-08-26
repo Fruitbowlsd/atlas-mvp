@@ -84,6 +84,20 @@ class Requirement(Base):
     regulatory_version = relationship("RegulatoryVersion", back_populates="requirements")
 
 
+class Tenant(Base):
+    """Organisation, die Atlas nutzt (Abschnitt 13.2). Die Grenze, an der Kundendaten
+    getrennt werden -- geteilte Plattformdaten (Requirement-Katalog, RegulatoryVersion,
+    RegulatoryChange) haengen bewusst NICHT am Tenant (13.1)."""
+    __tablename__ = "tenants"
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)                 # z.B. "Demo Gaslieferant GmbH"
+    slug = Column(String, unique=True, nullable=False)    # z.B. "demo-gaslieferant"
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    customers = relationship("Customer", back_populates="tenant")
+
+
 class Customer(Base):
     __tablename__ = "customers"
 
@@ -91,7 +105,9 @@ class Customer(Base):
     name = Column(String, nullable=False)
     market_role = Column(String, default="lieferant")
     sector = Column(String, default="gas")
+    tenant_id = Column(Integer, ForeignKey("tenants.id"), nullable=True)
 
+    tenant = relationship("Tenant", back_populates="customers")
     assessments = relationship("Assessment", back_populates="customer")
 
 
@@ -100,6 +116,12 @@ class Assessment(Base):
 
     id = Column(Integer, primary_key=True)
     customer_id = Column(Integer, ForeignKey("customers.id"))
+    # Bewusst zusaetzlich zu Customer.tenant_id: Assessments werden an mehreren
+    # Stellen ueber die nackte ID geladen (Import, Impact, calculate). Mit eigener
+    # Spalte ist der Tenant-Filter dort eine sichtbare Einzeile statt eines leicht
+    # vergessenen Joins. Wird beim Anlegen aus dem Customer uebernommen und nie
+    # unabhaengig davon geaendert.
+    tenant_id = Column(Integer, ForeignKey("tenants.id"), nullable=True)
     regulatory_version_id = Column(Integer, ForeignKey("regulatory_versions.id"))
     business_scenario = Column(String, default="lieferantenwechsel")
     customer_segments = Column(String, default="slp,rlm")   # einfache CSV-Liste im MVP

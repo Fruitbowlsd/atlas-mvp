@@ -3,14 +3,16 @@ from sqlalchemy.orm import Session, joinedload
 
 from .database import get_db
 from . import models, schemas, services
-from .auth import require_auth
+from .auth import require_auth, get_current_tenant_id
 
 router = APIRouter(prefix="/api/assessments", tags=["assessments"], dependencies=[Depends(require_auth)])
 # Kundenbezogene Endpunkte -- ein Kunde kann mehrere Assessments haben (Abschnitt 12.3)
 customer_router = APIRouter(prefix="/api/customers", tags=["customers"], dependencies=[Depends(require_auth)])
 
 
-def _get_assessment_or_404(db: Session, assessment_id: int) -> models.Assessment:
+def _get_assessment_or_404(db: Session, assessment_id: int, tenant_id: int) -> models.Assessment:
+    """tenant_id ist bewusst ein Pflichtparameter -- so faellt beim Hinzufuegen eines
+    neuen Endpunkts sofort auf, dass der Tenant mitgegeben werden muss."""
     assessment = (
         db.query(models.Assessment)
         .options(
@@ -19,12 +21,28 @@ def _get_assessment_or_404(db: Session, assessment_id: int) -> models.Assessment
             joinedload(models.Assessment.score_result),
             joinedload(models.Assessment.findings),
         )
-        .filter(models.Assessment.id == assessment_id)
+        .filter(
+            models.Assessment.id == assessment_id,
+            models.Assessment.tenant_id == tenant_id,
+        )
         .first()
     )
     if not assessment:
         raise HTTPException(status_code=404, detail="Assessment nicht gefunden")
     return assessment
+
+
+def _get_customer_or_404(db: Session, customer_id: int, tenant_id: int) -> models.Customer:
+    """Kunden nur innerhalb des eigenen Tenants auffindbar -- ein fremder Kunde
+    liefert bewusst 404 (nicht 403), damit die Existenz nicht verraten wird."""
+    customer = (
+        db.query(models.Customer)
+        .filter(models.Customer.id == customer_id, models.Customer.tenant_id == tenant_id)
+        .first()
+    )
+    if not customer:
+        raise HTTPException(status_code=404, detail="Kunde nicht gefunden")
+    return customer
 
 
 def _to_assessment_out(assessment: models.Assessment, db: Session) -> schemas.AssessmentOut:
@@ -61,6 +79,7 @@ def _create_assessment_for(
     fuer einen bestehenden Kunden (Abschnitt 12.3)."""
     assessment = models.Assessment(
         customer_id=customer.id,
+        tenant_id=customer.tenant_id,  # nie unabhaengig setzen -- immer vom Kunden
         regulatory_version_id=reg_version.id,
         business_scenario="lieferantenwechsel",  # im MVP fest
         customer_segments=segments_csv,
@@ -85,7 +104,11 @@ def _create_assessment_for(
 
 
 @router.post("", response_model=schemas.AssessmentOut)
-def create_assessment(payload: schemas.AssessmentCreate, db: Session = Depends(get_db)):
+def create_assessment(
+    payload: schemas.AssessmentCreate,
+    db: Session = Depends(get_db),
+    tenant_id: int = Depends(get_current_tenant_id),
+):
     valid_roles = {"lieferant", "grund_ersatzversorger", "beides"}
     if payload.market_role not in valid_roles:
         raise HTTPException(status_code=400, detail=f"market_role muss einer von {valid_roles} sein")
@@ -103,7 +126,12 @@ def create_assessment(payload: schemas.AssessmentCreate, db: Session = Depends(g
     if not reg_version:
         raise HTTPException(status_code=404, detail="RegulatoryVersion nicht gefunden")
 
-    customer = models.Customer(name=payload.customer_name, market_role=payload.market_role, sector="gas")
+    customer = models.Customer(
+        name=payload.customer_name,
+        market_role=payload.market_role,
+        sector="gas",
+        tenant_id=tenant_id,
+    )
     db.add(customer)
     db.flush()
 
@@ -116,17 +144,22 @@ def create_assessment(payload: schemas.AssessmentCreate, db: Session = Depends(g
 
 
 @customer_router.get("/{customer_id}/assessments", response_model=list[schemas.AssessmentHistoryItem])
-def list_customer_assessments(customer_id: int, db: Session = Depends(get_db)):
+def list_customer_assessments(
+    customer_id: int,
+    db: Session = Depends(get_db),
+    tenant_id: int = Depends(get_current_tenant_id),
+):
     """Assessment-Historie eines Kunden (Abschnitt 12.3). Der Typ je Eintrag wird
     live abgeleitet, damit er sich mit dem Zeitablauf mitbewegt."""
-    customer = db.query(models.Customer).filter(models.Customer.id == customer_id).first()
-    if not customer:
-        raise HTTPException(status_code=404, detail="Kunde nicht gefunden")
+    _get_customer_or_404(db, customer_id, tenant_id)
 
     assessments = (
         db.query(models.Assessment)
         .options(joinedload(models.Assessment.regulatory_version), joinedload(models.Assessment.score_result))
-        .filter(models.Assessment.customer_id == customer_id)
+        .filter(
+            models.Assessment.customer_id == customer_id,
+            models.Assessment.tenant_id == tenant_id,
+        )
         .order_by(models.Assessment.created_at.desc())
         .all()
     )
@@ -155,12 +188,11 @@ def create_assessment_for_customer(
     customer_id: int,
     payload: schemas.AssessmentForCustomerCreate,
     db: Session = Depends(get_db),
+    tenant_id: int = Depends(get_current_tenant_id),
 ):
     """Weiteres Assessment fuer einen bestehenden Kunden (Abschnitt 12.3) -- fragt nur
     die Version ab, Marktrolle und Segmente kommen vom letzten Assessment des Kunden."""
-    customer = db.query(models.Customer).filter(models.Customer.id == customer_id).first()
-    if not customer:
-        raise HTTPException(status_code=404, detail="Kunde nicht gefunden")
+    customer = _get_customer_or_404(db, customer_id, tenant_id)
 
     reg_version = db.query(models.RegulatoryVersion).filter(
         models.RegulatoryVersion.id == payload.regulatory_version_id
@@ -173,7 +205,10 @@ def create_assessment_for_customer(
     # bewusst erlaubt (z.B. erneute Bewertung zu einem spaeteren Zeitpunkt).
     latest = (
         db.query(models.Assessment)
-        .filter(models.Assessment.customer_id == customer_id)
+        .filter(
+            models.Assessment.customer_id == customer_id,
+            models.Assessment.tenant_id == tenant_id,
+        )
         .order_by(models.Assessment.created_at.desc())
         .first()
     )
@@ -188,8 +223,16 @@ def create_assessment_for_customer(
 
 
 @router.get("")
-def list_assessments(db: Session = Depends(get_db)):
-    assessments = db.query(models.Assessment).options(joinedload(models.Assessment.customer)).all()
+def list_assessments(
+    db: Session = Depends(get_db),
+    tenant_id: int = Depends(get_current_tenant_id),
+):
+    assessments = (
+        db.query(models.Assessment)
+        .options(joinedload(models.Assessment.customer))
+        .filter(models.Assessment.tenant_id == tenant_id)
+        .all()
+    )
     return [
         {
             "id": a.id,
@@ -203,8 +246,8 @@ def list_assessments(db: Session = Depends(get_db)):
 
 
 @router.get("/{assessment_id}", response_model=schemas.AssessmentDetailOut)
-def get_assessment(assessment_id: int, db: Session = Depends(get_db)):
-    assessment = _get_assessment_or_404(db, assessment_id)
+def get_assessment(assessment_id: int, db: Session = Depends(get_db), tenant_id: int = Depends(get_current_tenant_id)):
+    assessment = _get_assessment_or_404(db, assessment_id, tenant_id)
     groups = (
         db.query(models.ProcessGroup)
         .options(joinedload(models.ProcessGroup.pis))
@@ -225,10 +268,21 @@ def update_requirement_status(
     assessment_requirement_id: int,
     payload: schemas.AssessmentRequirementUpdate,
     db: Session = Depends(get_db),
+    tenant_id: int = Depends(get_current_tenant_id),
 ):
-    ar = db.query(models.AssessmentRequirement).filter(
-        models.AssessmentRequirement.id == assessment_requirement_id
-    ).first()
+    # AssessmentRequirement traegt bewusst KEINE eigene tenant_id (waere
+    # Denormalisierung mit Drift-Risiko). Der Bezug kommt ueber den Join auf das
+    # Assessment -- ohne den waere hier der Status eines fremden Tenants aenderbar,
+    # weil der Endpunkt nur eine AR-ID entgegennimmt.
+    ar = (
+        db.query(models.AssessmentRequirement)
+        .join(models.Assessment, models.AssessmentRequirement.assessment_id == models.Assessment.id)
+        .filter(
+            models.AssessmentRequirement.id == assessment_requirement_id,
+            models.Assessment.tenant_id == tenant_id,
+        )
+        .first()
+    )
     if not ar:
         raise HTTPException(status_code=404, detail="Requirement-Status nicht gefunden")
 
@@ -241,8 +295,8 @@ def update_requirement_status(
 
 
 @router.post("/{assessment_id}/calculate")
-def calculate(assessment_id: int, db: Session = Depends(get_db)):
-    assessment = _get_assessment_or_404(db, assessment_id)
+def calculate(assessment_id: int, db: Session = Depends(get_db), tenant_id: int = Depends(get_current_tenant_id)):
+    assessment = _get_assessment_or_404(db, assessment_id, tenant_id)
     score = services.calculate_score(db, assessment)
     findings = services.generate_findings(db, assessment)
     heatmap = services.process_group_heatmap(db, assessment)
@@ -255,8 +309,8 @@ def calculate(assessment_id: int, db: Session = Depends(get_db)):
 
 
 @router.get("/{assessment_id}/results")
-def results(assessment_id: int, db: Session = Depends(get_db)):
-    assessment = _get_assessment_or_404(db, assessment_id)
+def results(assessment_id: int, db: Session = Depends(get_db), tenant_id: int = Depends(get_current_tenant_id)):
+    assessment = _get_assessment_or_404(db, assessment_id, tenant_id)
     if not assessment.score_result:
         raise HTTPException(status_code=400, detail="Bewertung wurde noch nicht berechnet")
     heatmap = services.process_group_heatmap(db, assessment)

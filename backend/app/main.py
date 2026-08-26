@@ -13,7 +13,7 @@ from .routers_auth import router as auth_router
 from .routers_reference import router as reference_router
 from .routers_assessments import router as assessments_router, customer_router
 from .routers_import import router as import_router
-from .routers_regulatory import router as regulatory_router
+from .routers_regulatory import router as regulatory_router, internal_router as regulatory_internal_router
 
 app = FastAPI(title="Atlas MVP - Energy Quality Assessment", version="0.1.0")
 
@@ -53,6 +53,7 @@ app.include_router(assessments_router)
 app.include_router(customer_router)
 app.include_router(import_router)
 app.include_router(regulatory_router)
+app.include_router(regulatory_internal_router)
 
 # Gebautes Frontend (falls vorhanden) unter "/" ausliefern -- so laesst sich
 # das Projekt als EIN Service deployen (z.B. auf Railway), ohne separates

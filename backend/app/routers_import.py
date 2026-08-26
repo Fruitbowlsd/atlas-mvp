@@ -7,13 +7,17 @@ from sqlalchemy.orm import Session, joinedload
 
 from .database import get_db
 from . import models, schemas, matching, sap_cloud_alm
-from .auth import require_auth
+from .auth import require_auth, get_current_tenant_id
 
 router = APIRouter(prefix="/api/assessments", tags=["import"], dependencies=[Depends(require_auth)])
 
 
-def _get_assessment(db: Session, assessment_id: int) -> models.Assessment:
-    assessment = db.query(models.Assessment).filter(models.Assessment.id == assessment_id).first()
+def _get_assessment(db: Session, assessment_id: int, tenant_id: int) -> models.Assessment:
+    assessment = (
+        db.query(models.Assessment)
+        .filter(models.Assessment.id == assessment_id, models.Assessment.tenant_id == tenant_id)
+        .first()
+    )
     if not assessment:
         raise HTTPException(status_code=404, detail="Assessment nicht gefunden")
     return assessment
@@ -41,8 +45,13 @@ def _build_suggestions(rows: list[tuple[str, str]], db: Session, assessment: mod
 
 
 @router.post("/{assessment_id}/import/csv", response_model=schemas.ImportPreviewOut)
-async def import_csv_preview(assessment_id: int, file: UploadFile = File(...), db: Session = Depends(get_db)):
-    assessment = _get_assessment(db, assessment_id)
+async def import_csv_preview(
+    assessment_id: int,
+    file: UploadFile = File(...),
+    db: Session = Depends(get_db),
+    tenant_id: int = Depends(get_current_tenant_id),
+):
+    assessment = _get_assessment(db, assessment_id, tenant_id)
     raw = (await file.read()).decode("utf-8-sig", errors="ignore")
 
     # Erkennt Semikolon oder Komma als Trenner (deutsche Excel-Exporte nutzen oft ";")
@@ -69,8 +78,13 @@ async def import_csv_preview(assessment_id: int, file: UploadFile = File(...), d
 
 
 @router.post("/{assessment_id}/import/sap-cloud-alm", response_model=schemas.ImportPreviewOut)
-async def import_sap_cloud_alm_preview(assessment_id: int, payload: schemas.SapCloudAlmImportRequest, db: Session = Depends(get_db)):
-    assessment = _get_assessment(db, assessment_id)
+async def import_sap_cloud_alm_preview(
+    assessment_id: int,
+    payload: schemas.SapCloudAlmImportRequest,
+    db: Session = Depends(get_db),
+    tenant_id: int = Depends(get_current_tenant_id),
+):
+    assessment = _get_assessment(db, assessment_id, tenant_id)
     try:
         token = await sap_cloud_alm.get_access_token(payload.token_url, payload.client_id, payload.client_secret)
         items = await sap_cloud_alm.fetch_test_cases(payload.base_url, payload.api_path, token)
@@ -83,8 +97,13 @@ async def import_sap_cloud_alm_preview(assessment_id: int, payload: schemas.SapC
 
 
 @router.post("/{assessment_id}/import/confirm")
-def import_confirm(assessment_id: int, payload: schemas.ImportConfirmRequest, db: Session = Depends(get_db)):
-    assessment = _get_assessment(db, assessment_id)
+def import_confirm(
+    assessment_id: int,
+    payload: schemas.ImportConfirmRequest,
+    db: Session = Depends(get_db),
+    tenant_id: int = Depends(get_current_tenant_id),
+):
+    assessment = _get_assessment(db, assessment_id, tenant_id)
     now = datetime.utcnow()
     updated = 0
 
