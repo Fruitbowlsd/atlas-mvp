@@ -281,3 +281,18 @@ export interface RegulatoryChangeCreate {
   source_url?: string | null;
   regulatory_version_id: number;
 }
+
+export type LoginMode = "password" | "sso" | "sso_unavailable";
+
+export interface EmailCheckResult {
+  mode: LoginMode;
+  provider?: string;
+  tenant_name?: string | null;
+}
+
+export interface CurrentUser {
+  authenticated: boolean;
+  email?: string;
+  tenant_name?: string | null;
+  is_sso_user?: boolean;
+}

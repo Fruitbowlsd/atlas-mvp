@@ -1,5 +1,7 @@
 import type {
   AssessmentCreate,
+  CurrentUser,
+  EmailCheckResult,
   AssessmentDetail,
   AssessmentHistoryItem,
   AssessmentOut,
@@ -32,13 +34,21 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 }
 
 export const api = {
-  login: (password: string) =>
-    request<{ status: string }>("/login", {
+  checkEmail: (email: string) =>
+    request<EmailCheckResult>("/login/check-email", {
       method: "POST",
-      body: JSON.stringify({ password }),
+      body: JSON.stringify({ email }),
     }),
 
-  checkAuth: () => request<{ authenticated: boolean }>("/login/check"),
+  login: (email: string, password: string) =>
+    request<{ status: string; email: string }>("/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+    }),
+
+  logout: () => request<{ status: string; sso_logout_url: string | null }>("/logout", { method: "POST" }),
+
+  me: () => request<CurrentUser>("/me"),
   listAssessments: () => request<AssessmentSummary[]>("/assessments"),
 
   createAssessment: (payload: AssessmentCreate) =>

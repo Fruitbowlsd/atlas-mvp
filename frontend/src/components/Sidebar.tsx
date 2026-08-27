@@ -1,4 +1,4 @@
-import type { RegulatoryVersion } from "../types";
+import type { CurrentUser, RegulatoryVersion } from "../types";
 import { validityLabel } from "../utils/versionLabel";
 
 export type Step =
@@ -25,6 +25,8 @@ interface Props {
    *  einem festen Text -- sonst gaebe es zwei Quellen fuer dieselbe Angabe, die
    *  auseinanderlaufen, sobald sich der Stand aendert. */
   activeVersion: RegulatoryVersion | null;
+  currentUser: CurrentUser | null;
+  onLogout: () => void;
 }
 
 const VERSION_STATUS_LABEL: Record<string, string> = {
@@ -33,7 +35,7 @@ const VERSION_STATUS_LABEL: Record<string, string> = {
   verbindlich: "Verbindlich",
 };
 
-export function Sidebar({ active, onSelect, hasAssessment, activeVersion }: Props) {
+export function Sidebar({ active, onSelect, hasAssessment, activeVersion, currentUser, onLogout }: Props) {
   // Kundenbezogene Eintraege -- sichtbar/relevant fuer die Kunden-Sicht des MVP.
   const customerSteps: StepDef[] = [
     { key: "uebersicht", label: "Übersicht", enabled: hasAssessment },
@@ -96,6 +98,13 @@ export function Sidebar({ active, onSelect, hasAssessment, activeVersion }: Prop
           )}
         </div>
       </div>
+
+      {currentUser?.authenticated && (
+        <div className="sidebar-user">
+          <div className="sidebar-user-email" title={currentUser.email}>{currentUser.email}</div>
+          <button className="sidebar-logout" onClick={onLogout}>Abmelden</button>
+        </div>
+      )}
     </div>
   );
 }
