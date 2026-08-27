@@ -355,3 +355,83 @@ class SapCloudAlmImportRequest(BaseModel):
     client_secret: str
     base_url: str
     api_path: str = "/api/test-management/v1/test-cases"
+
+
+# --- Admin-Bereich (Issue #13) ---------------------------------------------
+
+class TenantOut(BaseModel):
+    id: int
+    name: str
+    slug: str
+    email_domain: Optional[str] = None
+    sso_provider: Optional[str] = None
+    sso_tenant_id: Optional[str] = None
+    is_active: bool = True
+    user_count: int = 0
+    customer_count: int = 0
+    created_at: Optional[datetime] = None
+
+
+class TenantCreate(BaseModel):
+    name: str
+    slug: str
+    email_domain: Optional[str] = None
+    sso_provider: Optional[str] = None
+    sso_tenant_id: Optional[str] = None
+
+
+class TenantUpdate(BaseModel):
+    name: Optional[str] = None
+    slug: Optional[str] = None
+    email_domain: Optional[str] = None
+    sso_provider: Optional[str] = None
+    sso_tenant_id: Optional[str] = None
+    is_active: Optional[bool] = None
+
+
+class AdminUserOut(BaseModel):
+    id: int
+    email: str
+    tenant_id: int
+    tenant_name: Optional[str] = None
+    is_active: bool
+    is_atlas_admin: bool
+    is_sso_user: bool
+    created_at: Optional[datetime] = None
+    last_login_at: Optional[datetime] = None
+
+
+class AdminUserCreate(BaseModel):
+    email: str
+    password: str
+    tenant_id: int
+    is_atlas_admin: bool = False
+
+
+class AdminUserUpdate(BaseModel):
+    is_active: Optional[bool] = None
+    is_atlas_admin: Optional[bool] = None
+
+
+class AdminAssessmentRow(BaseModel):
+    id: int
+    tenant_id: Optional[int]
+    tenant_name: Optional[str]
+    customer_name: Optional[str]
+    regulatory_version_name: Optional[str]
+    assessment_type: str
+    status: str
+    regulatory_coverage: Optional[float] = None
+    quality_grade: Optional[float] = None
+    created_at: datetime
+
+
+class SystemHealthOut(BaseModel):
+    api_ok: bool
+    database_ok: bool
+    database_error: Optional[str] = None
+    tenant_count: int
+    user_count: int
+    assessment_count: int
+    customer_count: int
+    regulatory_version_count: int

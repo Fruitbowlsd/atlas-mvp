@@ -93,6 +93,7 @@ class Tenant(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)                 # z.B. "Demo Gaslieferant GmbH"
     slug = Column(String, unique=True, nullable=False)    # z.B. "demo-gaslieferant"
+    is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
     # --- SSO (Abschnitt 13.4) ---
@@ -122,6 +123,10 @@ class User(Base):
     password_hash = Column(String, nullable=True)
     tenant_id = Column(Integer, ForeignKey("tenants.id"), nullable=False)
     is_active = Column(Boolean, default=True)
+    # Atlas-internes Personal (Issue #13). Bewusst ein Nutzer-Flag und nicht nur ein
+    # Umgebungs-Token: der Admin-Bereich zeigt tenant-uebergreifende Daten, der
+    # Zugang darf deshalb nicht davon abhaengen, ob eine Variable gesetzt ist.
+    is_atlas_admin = Column(Boolean, default=False)
     created_at = Column(DateTime, default=datetime.utcnow)
     last_login_at = Column(DateTime, nullable=True)
 

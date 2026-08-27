@@ -128,6 +128,17 @@ def get_current_tenant_id(user: models.User = Depends(get_current_user)) -> int:
     return user.tenant_id
 
 
+def require_atlas_admin(user: models.User = Depends(get_current_user)) -> models.User:
+    """Zugang zum Admin-Bereich (Issue #13). Dort liegen tenant-uebergreifende Daten
+    -- alle Organisationen, Nutzer und Assessments. Deshalb haengt der Zugang an
+    einem Nutzer-Flag und NICHT daran, ob ATLAS_INTERNAL_TOKEN gesetzt ist: waere es
+    nur der Token, kaeme ohne gesetzte Variable jeder eingeloggte Kunde hinein.
+    """
+    if not user.is_atlas_admin:
+        raise HTTPException(status_code=403, detail="Kein Zugriff auf den Admin-Bereich")
+    return user
+
+
 def require_internal(
     user: models.User = Depends(get_current_user),
     x_atlas_internal: str | None = Header(default=None),
@@ -136,8 +147,12 @@ def require_internal(
     Atlas-Wissen, kein Kundengeheimnis -- daher keine Tenant-Filterung, sondern
     eine eigene Stufe neben dem Nutzer-Login.
 
-    Ist ATLAS_INTERNAL_TOKEN nicht gesetzt, genuegt ein normaler Login wie bisher.
+    Setzt zunaechst den Atlas-Admin voraus; ATLAS_INTERNAL_TOKEN wirkt darueber
+    hinaus als zusaetzliche Huerde, sofern gesetzt.
     """
+    if not user.is_atlas_admin:
+        raise HTTPException(status_code=403, detail="Kein Zugriff auf den internen Bereich")
+
     expected = os.getenv("ATLAS_INTERNAL_TOKEN")
     if not expected:
         return

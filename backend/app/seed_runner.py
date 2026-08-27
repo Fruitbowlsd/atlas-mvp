@@ -110,7 +110,13 @@ def _seed_tenant(db: Session) -> models.Tenant:
 def _seed_demo_user(db: Session, tenant: models.Tenant) -> None:
     """Zugang zur Demo (Abschnitt 13.4). Idempotent wie die uebrigen Bloecke.
     Ersetzt das frueher gemeinsame Passwort -- es gibt jetzt ein echtes Konto."""
-    if db.query(models.User).filter(models.User.email == sd.DEMO_USER_EMAIL).first():
+    existing = db.query(models.User).filter(models.User.email == sd.DEMO_USER_EMAIL).first()
+    if existing:
+        # Bestandsnutzer aus der Zeit vor dem Admin-Flag nachziehen -- sonst waere der
+        # Demo-Zugang nach dem Update aus dem Admin-Bereich ausgesperrt.
+        if not existing.is_atlas_admin:
+            existing.is_atlas_admin = True
+            db.commit()
         return
 
     password = os.getenv("ATLAS_DEMO_PASSWORD", "atlas-demo")
@@ -119,6 +125,7 @@ def _seed_demo_user(db: Session, tenant: models.Tenant) -> None:
         password_hash=auth.hash_password(password),
         tenant_id=tenant.id,
         is_active=True,
+        is_atlas_admin=True,   # Demo-Zugang ist zugleich der Atlas-Admin
     ))
     db.commit()
 

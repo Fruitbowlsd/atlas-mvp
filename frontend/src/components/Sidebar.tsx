@@ -8,8 +8,7 @@ export type Step =
   | "assessment"
   | "import"
   | "ergebnisse"
-  | "roadmap"
-  | "formataenderungen";
+  | "roadmap";
 
 interface StepDef {
   key: Step;
@@ -47,11 +46,6 @@ export function Sidebar({ active, onSelect, hasAssessment, activeVersion, curren
     { key: "roadmap", label: "Roadmap", enabled: true },
   ];
 
-  // Rein interne Bereiche -- optisch abgesetzt, nicht Teil der Kunden-Sicht.
-  const internalSteps: StepDef[] = [
-    { key: "formataenderungen", label: "Formatänderungen", enabled: true },
-  ];
-
   const renderItem = (s: StepDef) => (
     <button
       key={s.key}
@@ -75,9 +69,6 @@ export function Sidebar({ active, onSelect, hasAssessment, activeVersion, curren
 
       <nav className="sidebar-nav">
         {customerSteps.map(renderItem)}
-        <div className="sidebar-divider" />
-        <div className="sidebar-section-label">Intern</div>
-        {internalSteps.map(renderItem)}
       </nav>
 
       <div className="sidebar-footer">

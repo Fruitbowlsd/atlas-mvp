@@ -1410,3 +1410,51 @@ select.status-select {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
 }
+
+/* --- Admin-Bereich (Issue #13) --- */
+
+.admin-sidebar {
+  background: #141a14;
+}
+
+.admin-mark {
+  background: var(--accent-dark);
+}
+
+.admin-content {
+  max-width: 1180px;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.admin-back-link {
+  color: #8a90a0;
+  text-decoration: none;
+  font-size: 11.5px;
+}
+
+.admin-back-link:hover {
+  color: #fff;
+}
+
+.admin-row-clickable {
+  cursor: pointer;
+}
+
+.admin-row-clickable:hover {
+  background: var(--accent-light);
+}
+
+.admin-status-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
