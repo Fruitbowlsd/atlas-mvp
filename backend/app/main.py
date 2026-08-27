@@ -3,13 +3,14 @@ from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.sessions import SessionMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from .database import Base, engine, SessionLocal
 from . import models  # noqa: F401  (stellt sicher, dass alle Modelle registriert sind)
 from .migrations import run_light_migrations
 from .seed_runner import run_seed
-from .routers_auth import router as auth_router
+from .routers_auth import router as auth_router, oidc_router
 from .routers_reference import router as reference_router
 from .routers_assessments import router as assessments_router, customer_router
 from .routers_import import router as import_router
@@ -21,6 +22,15 @@ app = FastAPI(title="Atlas MVP - Energy Quality Assessment", version="0.1.0")
 # (z.B. lokal via `npm run dev` auf Port 5173). Bei kombiniertem Deploy
 # (Backend liefert das gebaute Frontend selbst aus) greift das ohnehin nicht.
 ALLOWED_ORIGINS = os.getenv("ATLAS_ALLOWED_ORIGINS", "http://localhost:5173").split(",")
+
+# Von Authlib fuer state/nonce des OIDC-Flows benoetigt -- kurzlebig und getrennt
+# vom eigentlichen Anmelde-Cookie (siehe auth.py).
+app.add_middleware(
+    SessionMiddleware,
+    secret_key=os.getenv("ATLAS_SESSION_SECRET", "atlas-dev-secret-change-me"),
+    same_site="lax",
+    https_only=os.getenv("ATLAS_COOKIE_SECURE", "false").lower() == "true",
+)
 
 app.add_middleware(
     CORSMiddleware,
@@ -48,6 +58,7 @@ def health():
 
 
 app.include_router(auth_router)
+app.include_router(oidc_router)
 app.include_router(reference_router)
 app.include_router(assessments_router)
 app.include_router(customer_router)

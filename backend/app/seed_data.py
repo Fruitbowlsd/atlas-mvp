@@ -299,7 +299,17 @@ DEMO_CUSTOMER_NAME = "Demo Gaslieferant GmbH"
 DEMO_TENANT = {
     "name": "Demo Gaslieferant GmbH",
     "slug": "demo-gaslieferant",
+    # Domain steuert die Tenant-Zuordnung beim Login (Abschnitt 13.4). Der Demo-Tenant
+    # nutzt bewusst KEIN SSO -- sonst waere die Demo ohne Entra-Konfiguration nicht
+    # mehr erreichbar.
+    "email_domain": "atlas-demo.de",
+    "sso_provider": None,
+    "sso_tenant_id": None,
 }
+
+# Zugang zur Demo. Das Passwort kommt aus der Umgebung, damit es im Betrieb gesetzt
+# werden kann -- der Fallback dient nur der lokalen Entwicklung.
+DEMO_USER_EMAIL = "demo@atlas-demo.de"
 
 IMPLEMENTIERT = "implementiert"
 NICHT_IMPLEMENTIERT = "nicht_implementiert"

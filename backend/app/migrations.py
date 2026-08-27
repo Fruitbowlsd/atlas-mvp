@@ -40,6 +40,12 @@ _PENDING_COLUMNS = {
     # nicht kaputtgehen -- kein neuer Mechanismus, nur zwei weitere Spalten.
     "customers": [("tenant_id", "INTEGER")],
     "assessments": [("tenant_id", "INTEGER")],
+    # SSO-Konfiguration je Tenant (Abschnitt 13.4)
+    "tenants": [
+        ("email_domain", "VARCHAR"),
+        ("sso_provider", "VARCHAR"),
+        ("sso_tenant_id", "VARCHAR"),
+    ],
 }
 
 # Neu hinzugekommene updated_at-Spalten waeren fuer Bestandszeilen NULL -- die

@@ -1351,3 +1351,62 @@ select.status-select {
 .context-sep {
   color: var(--border);
 }
+
+.login-hint {
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.login-hint strong { color: var(--text); }
+
+.login-button {
+  width: 100%;
+  margin-top: 14px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.login-back {
+  display: block;
+  margin: 16px auto 0;
+  font-size: 12.5px;
+}
+
+.sidebar-user {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sidebar-user-email {
+  font-size: 11.5px;
+  color: #8a90a0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-logout {
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #b9bdc8;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.sidebar-logout:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}

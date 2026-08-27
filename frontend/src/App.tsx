@@ -4,6 +4,7 @@ import type {
   AssessmentCreate,
   AssessmentDetail,
   AssessmentHistoryItem,
+  CurrentUser,
   HeatmapRow,
   RegulatoryVersion,
 } from "./types";
@@ -35,15 +36,38 @@ const ASSESSMENT_SCOPED_STEPS: Step[] = [
 
 export default function App() {
   const [authChecked, setAuthChecked] = useState(false);
-  const [authenticated, setAuthenticated] = useState(false);
+  const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
+  const authenticated = currentUser?.authenticated === true;
+
+  const loadCurrentUser = useCallback(async () => {
+    try {
+      setCurrentUser(await api.me());
+    } catch {
+      setCurrentUser({ authenticated: false });
+    } finally {
+      setAuthChecked(true);
+    }
+  }, []);
 
   useEffect(() => {
-    api
-      .checkAuth()
-      .then((r) => setAuthenticated(r.authenticated))
-      .catch(() => setAuthenticated(false))
-      .finally(() => setAuthChecked(true));
-  }, []);
+    loadCurrentUser();
+  }, [loadCurrentUser]);
+
+  const handleLogout = async () => {
+    try {
+      const res = await api.logout();
+      // Bei SSO-Nutzern zusaetzlich die Sitzung beim Anbieter beenden -- sonst waere
+      // der naechste Login-Versuch sofort wieder automatisch angemeldet.
+      if (res.sso_logout_url) {
+        window.location.href = res.sso_logout_url;
+        return;
+      }
+    } catch {
+      // Auch bei einem Fehler lokal abmelden -- der Cookie kann serverseitig
+      // bereits abgelaufen sein.
+    }
+    window.location.reload();
+  };
 
   // Ein Kunde kann mehrere Assessments haben (Abschnitt 12.3). Gehalten wird bewusst
   // nur das GERADE geladene plus die Liste -- kein Cache mehrerer Details, weil
@@ -349,7 +373,7 @@ export default function App() {
   };
 
   if (!authChecked) return <div className="loading">Lade …</div>;
-  if (!authenticated) return <Login onSuccess={() => setAuthenticated(true)} />;
+  if (!authenticated) return <Login onSuccess={loadCurrentUser} />;
 
   return (
     <div className="app-shell">
@@ -358,6 +382,8 @@ export default function App() {
         onSelect={setStep}
         hasAssessment={detail !== null}
         activeVersion={versions.find((v) => v.is_active) ?? null}
+        currentUser={currentUser}
+        onLogout={handleLogout}
       />
       <div className="app-content">
         {detail && ASSESSMENT_SCOPED_STEPS.includes(step) && (

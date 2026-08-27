@@ -95,7 +95,37 @@ class Tenant(Base):
     slug = Column(String, unique=True, nullable=False)    # z.B. "demo-gaslieferant"
     created_at = Column(DateTime, default=datetime.utcnow)
 
+    # --- SSO (Abschnitt 13.4) ---
+    # Domain der Firmen-Mailadressen, z.B. "stadtwerke-x.de". Steuert zweierlei:
+    # welcher Login-Weg im zweiten Schritt angeboten wird, UND welchem Tenant ein
+    # per SSO neu auftauchender Nutzer zugeordnet wird.
+    email_domain = Column(String, nullable=True)
+    sso_provider = Column(String, nullable=True)   # None | "entra"
+    # Verzeichnis-ID beim Anbieter (bei Entra der "tid"-Claim). Wird beim Login
+    # gegen das ID-Token geprueft -- ohne diese Pruefung koennte sich sonst jeder
+    # beliebige Microsoft-Account anmelden, nicht nur die eigene Organisation.
+    sso_tenant_id = Column(String, nullable=True)
+
     customers = relationship("Customer", back_populates="tenant")
+    users = relationship("User", back_populates="tenant")
+
+
+class User(Base):
+    """Individuelles Nutzerkonto (Abschnitt 13.4) -- loest das eine gemeinsame
+    Passwort ab. Jeder Nutzer gehoert zu genau einem Tenant; daraus leitet sich ab,
+    welche Kundendaten er sieht (siehe auth.get_current_tenant_id)."""
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True)
+    email = Column(String, unique=True, nullable=False)
+    # Leer bei SSO-Nutzern -- die haben bei uns bewusst kein lokales Passwort.
+    password_hash = Column(String, nullable=True)
+    tenant_id = Column(Integer, ForeignKey("tenants.id"), nullable=False)
+    is_active = Column(Boolean, default=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    last_login_at = Column(DateTime, nullable=True)
+
+    tenant = relationship("Tenant", back_populates="users")
 
 
 class Customer(Base):

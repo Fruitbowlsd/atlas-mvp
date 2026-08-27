@@ -1,8 +1,9 @@
+import os
 import random
 
 from sqlalchemy.orm import Session
 
-from . import models, seed_data as sd
+from . import auth, models, seed_data as sd
 
 # Deterministische Demo-Statusvergabe: die Basisraten je Prozessgruppe spiegeln
 # die im Auftrag beschriebene Luecken-Story wider (Abschnitt 29):
@@ -102,7 +103,24 @@ def _seed_tenant(db: Session) -> models.Tenant:
         {"tenant_id": tenant.id}
     )
     db.commit()
+    _seed_demo_user(db, tenant)
     return tenant
+
+
+def _seed_demo_user(db: Session, tenant: models.Tenant) -> None:
+    """Zugang zur Demo (Abschnitt 13.4). Idempotent wie die uebrigen Bloecke.
+    Ersetzt das frueher gemeinsame Passwort -- es gibt jetzt ein echtes Konto."""
+    if db.query(models.User).filter(models.User.email == sd.DEMO_USER_EMAIL).first():
+        return
+
+    password = os.getenv("ATLAS_DEMO_PASSWORD", "atlas-demo")
+    db.add(models.User(
+        email=sd.DEMO_USER_EMAIL,
+        password_hash=auth.hash_password(password),
+        tenant_id=tenant.id,
+        is_active=True,
+    ))
+    db.commit()
 
 
 def _seed_base(db: Session):
