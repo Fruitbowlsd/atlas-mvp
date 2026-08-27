@@ -21,7 +21,6 @@ import { Login } from "./components/Login";
 import { MarketCommunicationTriangle } from "./components/MarketCommunicationTriangle";
 import { Import } from "./components/Import";
 import { Roadmap } from "./components/Roadmap";
-import { RegulatoryChanges } from "./components/RegulatoryChanges";
 
 // Seiten, die Zahlen eines konkreten Assessments zeigen -- nur dort steht die
 // Kontextzeile. Bewusst NICHT im Kundenprofil (dort waehlt man das Assessment ja
@@ -208,10 +207,6 @@ export default function App() {
   const renderContent = () => {
     if (step === "roadmap") {
       return <Roadmap />;
-    }
-
-    if (step === "formataenderungen") {
-      return <RegulatoryChanges assessmentId={assessmentId} />;
     }
 
     if (step === "kundenprofil") {

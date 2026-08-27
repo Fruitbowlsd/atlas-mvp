@@ -66,6 +66,9 @@ def me(user: models.User | None = Depends(auth.get_optional_user)):
         "email": user.email,
         "tenant_name": user.tenant.name if user.tenant else None,
         "is_sso_user": user.password_hash is None,
+        # Steuert, ob die Verwaltungsoberflaeche ueberhaupt gerendert wird -- ein
+        # Tenant-Nutzer soll sie nicht einmal sehen (Issue #13).
+        "is_atlas_admin": bool(user.is_atlas_admin),
     }
 
 

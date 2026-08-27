@@ -16,6 +16,14 @@ import type {
   RegulatoryVersionCreate,
   RegulatoryVersionUpdate,
   SapCloudAlmForm,
+  AdminAssessmentRow,
+  AdminUser,
+  AdminUserCreate,
+  AssessmentDetail as AdminAssessmentDetail,
+  SystemHealth,
+  Tenant,
+  TenantCreate,
+  TenantUpdate,
 } from "../types";
 
 const BASE = "/api";
@@ -154,4 +162,30 @@ export const api = {
 
   getRegulatoryImpact: (assessmentId: number) =>
     request<RegulatoryImpact>(`/assessments/${assessmentId}/regulatory-impact`),
+
+  // --- Admin (Issue #13) ---
+  adminListTenants: () => request<Tenant[]>("/admin/tenants"),
+
+  adminCreateTenant: (payload: TenantCreate) =>
+    request<Tenant>("/admin/tenants", { method: "POST", body: JSON.stringify(payload) }),
+
+  adminUpdateTenant: (id: number, payload: TenantUpdate) =>
+    request<Tenant>(`/admin/tenants/${id}`, { method: "PATCH", body: JSON.stringify(payload) }),
+
+  adminListUsers: () => request<AdminUser[]>("/admin/users"),
+
+  adminCreateUser: (payload: AdminUserCreate) =>
+    request<AdminUser>("/admin/users", { method: "POST", body: JSON.stringify(payload) }),
+
+  adminUpdateUser: (id: number, payload: { is_active?: boolean; is_atlas_admin?: boolean }) =>
+    request<AdminUser>(`/admin/users/${id}`, { method: "PATCH", body: JSON.stringify(payload) }),
+
+  adminListAssessments: (tenantId?: number) =>
+    request<AdminAssessmentRow[]>(`/admin/assessments${tenantId ? `?tenant_id=${tenantId}` : ""}`),
+
+  adminGetAssessment: (id: number) => request<AdminAssessmentDetail>(`/admin/assessments/${id}`),
+
+  adminSystemHealth: () => request<SystemHealth>("/admin/system/health"),
+
+  adminReseed: () => request<{ status: string }>("/admin/system/reseed", { method: "POST" }),
 };

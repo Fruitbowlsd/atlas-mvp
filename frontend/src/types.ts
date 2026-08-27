@@ -295,4 +295,80 @@ export interface CurrentUser {
   email?: string;
   tenant_name?: string | null;
   is_sso_user?: boolean;
+  is_atlas_admin?: boolean;
+}
+
+// --- Admin-Bereich (Issue #13) ---
+
+export interface Tenant {
+  id: number;
+  name: string;
+  slug: string;
+  email_domain: string | null;
+  sso_provider: string | null;
+  sso_tenant_id: string | null;
+  is_active: boolean;
+  user_count: number;
+  customer_count: number;
+  created_at: string | null;
+}
+
+export interface TenantCreate {
+  name: string;
+  slug: string;
+  email_domain?: string | null;
+  sso_provider?: string | null;
+  sso_tenant_id?: string | null;
+}
+
+export interface TenantUpdate {
+  name?: string;
+  slug?: string;
+  email_domain?: string | null;
+  sso_provider?: string | null;
+  sso_tenant_id?: string | null;
+  is_active?: boolean;
+}
+
+export interface AdminUser {
+  id: number;
+  email: string;
+  tenant_id: number;
+  tenant_name: string | null;
+  is_active: boolean;
+  is_atlas_admin: boolean;
+  is_sso_user: boolean;
+  created_at: string | null;
+  last_login_at: string | null;
+}
+
+export interface AdminUserCreate {
+  email: string;
+  password: string;
+  tenant_id: number;
+  is_atlas_admin?: boolean;
+}
+
+export interface AdminAssessmentRow {
+  id: number;
+  tenant_id: number | null;
+  tenant_name: string | null;
+  customer_name: string | null;
+  regulatory_version_name: string | null;
+  assessment_type: AssessmentType;
+  status: string;
+  regulatory_coverage: number | null;
+  quality_grade: number | null;
+  created_at: string;
+}
+
+export interface SystemHealth {
+  api_ok: boolean;
+  database_ok: boolean;
+  database_error: string | null;
+  tenant_count: number;
+  user_count: number;
+  assessment_count: number;
+  customer_count: number;
+  regulatory_version_count: number;
 }
