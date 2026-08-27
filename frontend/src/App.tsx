@@ -21,6 +21,7 @@ import { Login } from "./components/Login";
 import { MarketCommunicationTriangle } from "./components/MarketCommunicationTriangle";
 import { Import } from "./components/Import";
 import { Roadmap } from "./components/Roadmap";
+import { RegulatoryImpactView } from "./components/RegulatoryImpactView";
 
 // Seiten, die Zahlen eines konkreten Assessments zeigen -- nur dort steht die
 // Kontextzeile. Bewusst NICHT im Kundenprofil (dort waehlt man das Assessment ja
@@ -31,6 +32,7 @@ const ASSESSMENT_SCOPED_STEPS: Step[] = [
   "assessment",
   "import",
   "ergebnisse",
+  "regulatorischerstand",
 ];
 
 export default function App() {
@@ -295,6 +297,13 @@ export default function App() {
           ))}
         </div>
       );
+    }
+
+    // Kundensicht auf die bevorstehende Formatumstellung (Abschnitt 11.5). Das
+    // Kanban-Board bleibt bewusst im Admin-Bereich -- hier nur, was den Kunden
+    // betrifft: Stichtag, betroffene Anforderungen, Empfehlungen, Score-Delta.
+    if (step === "regulatorischerstand") {
+      return <RegulatoryImpactView assessmentId={detail.assessment.id} />;
     }
 
     if (step === "ergebnisse") {
