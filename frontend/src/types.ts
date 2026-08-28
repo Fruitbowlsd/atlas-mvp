@@ -287,7 +287,6 @@ export type LoginMode = "password" | "sso" | "sso_unavailable";
 export interface EmailCheckResult {
   mode: LoginMode;
   provider?: string;
-  tenant_name?: string | null;
 }
 
 export interface CurrentUser {
