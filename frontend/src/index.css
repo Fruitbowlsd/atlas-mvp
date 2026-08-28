@@ -1370,6 +1370,20 @@ select.status-select {
   box-sizing: border-box;
 }
 
+/* Der SSO-Weg steht gleichberechtigt neben dem Passwort-Weg, ist aber nicht der
+   Regelfall -- gleiche Form wie der Hauptbutton, nur zurueckhaltender gefaerbt,
+   damit beide Wege nebeneinander nicht um Aufmerksamkeit konkurrieren. */
+.login-button-secondary {
+  background: transparent;
+  color: var(--accent-dark);
+  border: 1px solid var(--border);
+}
+
+.login-button-secondary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
 .login-back {
   display: block;
   margin: 16px auto 0;

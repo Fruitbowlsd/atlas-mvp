@@ -30,14 +30,19 @@ def check_email(payload: EmailCheckRequest, db: Session = Depends(get_db)):
     Gibt bewusst KEINE Auskunft darueber, ob die Adresse existiert -- sonst waere der
     Endpunkt eine Liste gueltiger Nutzerkonten. Unbekannte Adressen bekommen den
     Passwort-Weg angeboten und scheitern dann am Passwort.
+
+    Aus demselben Grund steht hier auch kein Tenant-Name mehr in der Antwort: der
+    Endpunkt ist oeffentlich und wird beim Tippen aufgerufen: mit dem Namen liesse
+    sich sonst unangemeldet Domain fuer Domain abfragen, welche Organisationen
+    Atlas nutzen. Zurueck geht nur, welcher Weg im zweiten Schritt angeboten wird.
     """
     tenant = auth.tenant_for_email(db, payload.email)
 
     if tenant and tenant.sso_provider == "entra" and oidc.is_configured():
-        return {"mode": "sso", "provider": "entra", "tenant_name": tenant.name}
+        return {"mode": "sso", "provider": "entra"}
     if tenant and tenant.sso_provider == "entra":
         # Fuer den Tenant ist SSO hinterlegt, die Anwendung aber nicht konfiguriert.
-        return {"mode": "sso_unavailable", "provider": "entra", "tenant_name": tenant.name}
+        return {"mode": "sso_unavailable", "provider": "entra"}
     return {"mode": "password"}
 
 
