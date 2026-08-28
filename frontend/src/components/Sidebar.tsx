@@ -8,6 +8,7 @@ export type Step =
   | "assessment"
   | "import"
   | "ergebnisse"
+  | "regulatorischerstand"
   | "roadmap";
 
 interface StepDef {
@@ -43,6 +44,7 @@ export function Sidebar({ active, onSelect, hasAssessment, activeVersion, curren
     { key: "assessment", label: "Assessment", enabled: hasAssessment },
     { key: "import", label: "Import", enabled: hasAssessment },
     { key: "ergebnisse", label: "Ergebnisse", enabled: hasAssessment },
+    { key: "regulatorischerstand", label: "Regulatorischer Stand", enabled: hasAssessment },
     { key: "roadmap", label: "Roadmap", enabled: true },
   ];
 
