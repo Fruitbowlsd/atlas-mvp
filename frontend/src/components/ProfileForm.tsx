@@ -13,6 +13,8 @@ interface Props {
   onSubmit: (draft: ProfileDraft) => void;
   submitting: boolean;
   error: string | null;
+  /** Organisation des angemeldeten Nutzers. Belegt das Unternehmensfeld vor. */
+  tenantName: string | null;
 }
 
 const ROLE_OPTIONS: { value: MarketRole; label: string }[] = [
@@ -21,8 +23,12 @@ const ROLE_OPTIONS: { value: MarketRole; label: string }[] = [
   { value: "beides", label: "Lieferant sowie Grund- und Ersatzversorger" },
 ];
 
-export function ProfileForm({ onSubmit, submitting, error }: Props) {
-  const [customerName, setCustomerName] = useState("");
+export function ProfileForm({ onSubmit, submitting, error, tenantName }: Props) {
+  // Bewusst nur als Startwert, nicht als laufende Kopplung an tenantName: sobald der
+  // Nutzer den Namen angepasst hat -- etwa fuer eine Tochtergesellschaft -- darf ein
+  // spaeteres Neuladen der Sitzung seine Eingabe nicht wieder ueberschreiben.
+  // Der Wizard wird erst nach der Anmeldung gerendert, der Name steht hier also bereits.
+  const [customerName, setCustomerName] = useState(tenantName ?? "");
   const [marketRole, setMarketRole] = useState<MarketRole>("lieferant");
   const [validationError, setValidationError] = useState<string | null>(null);
 
@@ -60,6 +66,13 @@ export function ProfileForm({ onSubmit, submitting, error }: Props) {
             value={customerName}
             onChange={(e) => setCustomerName(e.target.value)}
           />
+          {/* Nur solange der vorbelegte Wert unveraendert ist: hat der Nutzer einen
+              anderen Namen eingetragen, erklaert der Hinweis nichts mehr. */}
+          {tenantName && customerName === tenantName && (
+            <p className="form-hint">
+              Vorbelegt aus deiner Organisation. Du kannst den Namen anpassen.
+            </p>
+          )}
         </div>
 
         <div className="form-field">

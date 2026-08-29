@@ -239,7 +239,12 @@ export default function App() {
           />
         );
       }
-      return <ProfileForm onSubmit={setProfileDraft} submitting={false} error={createError} />;
+      return <ProfileForm
+          onSubmit={setProfileDraft}
+          submitting={false}
+          error={createError}
+          tenantName={currentUser?.tenant_name ?? null}
+        />;
     }
 
     if (loading) return <div className="loading">Lade Assessment …</div>;

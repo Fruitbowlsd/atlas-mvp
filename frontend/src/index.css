@@ -708,6 +708,14 @@ select.status-select {
   color: var(--text-muted);
 }
 
+/* Erklaerender Zusatz unter einem Eingabefeld -- im Gegensatz zu .fixed-hint
+   gehoert er zu einem Feld, das der Nutzer sehr wohl aendern kann. */
+.form-hint {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin: 6px 0 0;
+}
+
 .form-error {
   background: var(--danger-light);
   color: var(--danger);
