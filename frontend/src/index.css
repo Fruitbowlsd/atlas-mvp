@@ -741,66 +741,79 @@ select.status-select {
   width: 320px;
 }
 
-/* --- Login: Formular mittig, Referenz-Ticker darunter (Issue #31) ---------- */
+/* --- Login: Formular mittig, Referenz-Ticker darunter (Issue #33) ----------
+   Umsetzung nach Atlas_Login_Preview.html. Uebernommen sind Aufbau, Masse und
+   Farben der Vorlage; die Breite folgt unserer bestehenden Login-Karte (320px)
+   statt der 420px der Vorlage, damit Karte und Ticker fluchten. */
 
 .login-layout {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
   width: 100%;
   padding: 32px 0;
   box-sizing: border-box;
 }
 
-/* Volle Breite: der Ticker soll ueber den ganzen Schirm laufen, nicht in einer
-   Spalte stecken. Deshalb steht der Bereich hier bewusst ohne max-width. */
 .login-reference {
   width: 100%;
+  /* Gleiche Breite wie .login-card -- der Ticker soll unter der Karte sitzen,
+     nicht ueber den ganzen Schirm laufen. */
+  max-width: 320px;
   text-align: center;
 }
 
+/* Trennlinie mit Label: die beiden Striche sind Pseudo-Elemente, die sich den
+   Rest der Zeile teilen. */
 .login-reference-heading {
-  margin: 0 0 18px;
-  font-size: 11px;
-  letter-spacing: 1.2px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: #aaa;
 }
 
-.login-ticker {
+.login-reference-heading::before,
+.login-reference-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.ticker-outer {
+  width: 100%;
   overflow: hidden;
-  /* Weiche Kanten: ohne sie tauchen die Logos an den Raendern hart auf und
-     verschwinden ebenso -- mit dem Verlauf gleiten sie hinein und hinaus. */
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  /* Weiche Kanten statt harter Schnitte an den Raendern. */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
 }
 
 .ticker-track {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   width: max-content;
-  animation: ticker 20s linear infinite;
+  animation: ticker 18s linear infinite;
 }
 
-/* Die Kopie soll KEIN eigener Flex-Kasten sein, sonst waeren die Abstaende
-   zwischen den beiden Reihen andere als innerhalb einer Reihe. Mit
-   display:contents haengen ihre Logos direkt im Track. */
+/* Die Kopie ist kein eigener Flex-Kasten, sonst waeren die Abstaende zwischen
+   den beiden Reihen andere als innerhalb einer Reihe. */
 .ticker-copy {
   display: contents;
 }
 
-/* Der Abstand liegt bewusst als margin-right auf JEDEM Logo statt als gap auf
-   dem Track. Mit gap gaebe es hinter dem letzten Logo keinen Abstand, die
-   Track-Breite waere damit nicht genau das Doppelte einer Reihe und
-   translateX(-50%) traefe daneben -- der Loop wuerde bei jedem Durchlauf
-   sichtbar springen. */
-/* Nachfahren-Selektor, NICHT ">": die Kopien liegen im display:contents-Wrapper
-   und sind damit keine direkten Kinder des Tracks. Mit ">" bekaemen nur die
-   Originale den Abstand, die Spur waere schmaler als zwei volle Reihen und
-   translateX(-50%) traefe mitten in die zweite Reihe -- der Loop springt. */
-.ticker-track .ref-logo {
-  margin-right: 60px;
+/* Der Abstand liegt bewusst als margin-right auf JEDEM Logo, nicht als gap auf
+   dem Track (so steht es in der Vorlage). Mit gap fehlt der Abstand hinter dem
+   letzten Logo: die Spur waere dann nicht genau doppelt so breit wie eine Reihe
+   und translateX(-50%) traefe um einen halben Abstand daneben -- der Loop
+   wuerde bei jedem Durchlauf sichtbar springen. */
+.ticker-track .logo-item {
+  margin-right: 40px;
   flex-shrink: 0;
 }
 
@@ -809,9 +822,7 @@ select.status-select {
   100% { transform: translateX(-50%); }
 }
 
-/* Anhalten, solange der Zeiger darauf liegt -- damit man ein Logo in Ruhe
-   ansehen kann, statt ihm hinterherzuschauen. */
-.login-ticker:hover .ticker-track {
+.ticker-track:hover {
   animation-play-state: paused;
 }
 
@@ -822,51 +833,56 @@ select.status-select {
   }
 }
 
-.ref-logo {
+.logo-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 8px;
-  min-width: 0;
-}
-
-.ref-logo-icon {
-  width: 44px;
-  height: 44px;
+  gap: 10px;
+  padding: 8px 16px;
+  background: var(--surface);
+  border: 1px solid #f0f0f0;
   border-radius: 10px;
-  overflow: hidden;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
-.ref-logo-icon svg {
+.logo-icon svg {
   display: block;
-  width: 100%;
-  height: 100%;
 }
 
-.ref-logo-name {
+.logo-text {
+  text-align: left;
+}
+
+.logo-name {
   font-family: Arial, sans-serif;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 11px;
   line-height: 1.3;
   white-space: nowrap;
-  color: var(--text);
 }
 
-.ref-logo-tagline {
+.logo-tagline {
   font-family: Arial, sans-serif;
-  font-size: 6.5px;
-  letter-spacing: 0.4px;
+  font-size: 9px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: #999;
-  line-height: 1.4;
+  color: #aaa;
+  margin-top: 1px;
   white-space: nowrap;
 }
 
+/* Groesse wie in der Vorlage, Farbe aber aus unseren Tokens: die Vorlage setzt
+   #ccc, was auf unserem Hintergrund rund 1,5:1 Kontrast ergibt. Gerade dieser
+   Hinweis haelt die erfundenen Logos ehrlich und muss lesbar bleiben. */
 .login-reference-disclaimer {
-  margin: 20px 0 0;
-  font-size: 11px;
+  margin: 16px 0 0;
+  font-size: 10px;
   color: var(--text-muted);
 }
 
