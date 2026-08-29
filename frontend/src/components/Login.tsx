@@ -20,50 +20,59 @@ function hasDomain(email: string): boolean {
 // TODO: Echte Kundenlogos und Zitate einsetzen, sobald Pilotkunden
 // ihr Einverständnis gegeben haben. Fiktive Logos bis dahin.
 //
-// Die drei Unternehmen sind frei erfunden; die SVG-Strukturen stammen aus
-// Atlas_Beispiellogos.html im Projektordner und sind unveraendert uebernommen.
+// Die drei Unternehmen sind frei erfunden; Aufbau, Masse und SVGs stammen aus
+// Atlas_Login_Preview.html im Projektordner. Die SVGs sind dort auf viewBox
+// 0 0 36 36 neu gezeichnet -- nicht die alten 52er skaliert.
 function LogoSet() {
   return (
     <>
       {/* Stadtwerke Nordlicht */}
-      <div className="ref-logo">
-        <div className="ref-logo-icon" style={{ background: "#003366" }}>
-          <svg viewBox="0 0 52 52" aria-hidden="true">
-            <text x="26" y="34" textAnchor="middle" fontSize="20" fontWeight="700" fill="white" fontFamily="Arial">N</text>
-            <polygon points="32,8 24,26 30,26 22,44 38,22 30,22" fill="#00AAFF" opacity="0.9" />
+      <div className="logo-item">
+        <div className="logo-icon" style={{ background: "#003366" }}>
+          <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+            <text x="18" y="24" textAnchor="middle" fontSize="14" fontWeight="700" fill="white" fontFamily="Arial">N</text>
+            <polygon points="22,6 17,18 21,18 15,30 26,15 21,15" fill="#00AAFF" opacity="0.9" />
           </svg>
         </div>
-        <span className="ref-logo-name" style={{ color: "#003366" }}>Stadtwerke Nordlicht</span>
-        <span className="ref-logo-tagline">Energie · Wärme · Wasser</span>
+        <div className="logo-text">
+          <div className="logo-name" style={{ color: "#003366" }}>Stadtwerke<br />Nordlicht</div>
+          <div className="logo-tagline">Energie · Wärme · Wasser</div>
+        </div>
       </div>
 
       {/* EnerTec */}
-      <div className="ref-logo">
-        <div className="ref-logo-icon" style={{ background: "#1a8a3c" }}>
-          <svg viewBox="0 0 52 52" aria-hidden="true">
-            <text x="26" y="36" textAnchor="middle" fontSize="28" fontWeight="900" fill="white" fontFamily="Arial">E</text>
-            <rect x="8" y="44" width="36" height="3" rx="1.5" fill="#7fdc9f" />
+      <div className="logo-item">
+        <div className="logo-icon" style={{ background: "#1a8a3c" }}>
+          <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+            <text x="18" y="25" textAnchor="middle" fontSize="20" fontWeight="900" fill="white" fontFamily="Arial">E</text>
+            <rect x="6" y="30" width="24" height="2" rx="1" fill="#7fdc9f" />
           </svg>
         </div>
-        <span className="ref-logo-name">
-          <span style={{ color: "#1a8a3c" }}>Ener</span>
-          <span style={{ color: "#333" }}>Tec</span>
-        </span>
-        <span className="ref-logo-tagline">Regional · Digital · Grün</span>
+        <div className="logo-text">
+          <div className="logo-name">
+            <span style={{ color: "#1a8a3c" }}>Ener</span>
+            <span style={{ color: "#333" }}>Tec</span>
+          </div>
+          <div className="logo-tagline">Regional · Digital · Grün</div>
+        </div>
       </div>
 
       {/* Rheingas & Wärme */}
-      <div className="ref-logo">
-        <div className="ref-logo-icon" style={{ background: "#c0392b" }}>
-          <svg viewBox="0 0 52 52" aria-hidden="true">
-            <path d="M26 6 C16 18 13 28 18 37 C20 32 22 30 26 32 C30 30 32 32 34 37 C39 28 36 18 26 6Z" fill="white" opacity="0.95" />
-            <ellipse cx="26" cy="35" rx="7" ry="9" fill="#f39c12" opacity="0.8" />
+      <div className="logo-item">
+        <div className="logo-icon" style={{ background: "#c0392b" }}>
+          <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+            <path d="M18 4 C11 13 9 20 13 26 C14 22 16 20 18 22 C20 20 22 22 23 26 C27 20 25 13 18 4Z" fill="white" opacity="0.95" />
+            <ellipse cx="18" cy="25" rx="5" ry="6" fill="#f39c12" opacity="0.85" />
           </svg>
         </div>
-        <span className="ref-logo-name" style={{ color: "#c0392b" }}>
-          Rheingas <span style={{ color: "#555" }}>&amp; Wärme</span>
-        </span>
-        <span className="ref-logo-tagline">Seit 1952 · Verlässlich</span>
+        <div className="logo-text">
+          <div className="logo-name">
+            <span style={{ color: "#c0392b" }}>Rheingas</span>
+            <br />
+            <span style={{ color: "#555" }}>&amp; Wärme</span>
+          </div>
+          <div className="logo-tagline">Seit 1952 · Verlässlich</div>
+        </div>
       </div>
     </>
   );
@@ -72,15 +81,17 @@ function LogoSet() {
 function ReferencePanel() {
   return (
     <aside className="login-reference">
-      <p className="login-reference-heading">Vertraut von führenden EVUs in Deutschland</p>
+      {/* Bewusst ohne "in Deutschland": das vollstaendige Label fuellte die 320px
+          fast allein, die Trennstriche links und rechts blieben 6px kurz.
+          So bleiben je 50px Strich und die Zeile wirkt als Trennlinie. */}
+      <div className="login-reference-heading">Vertraut von führenden EVUs</div>
 
-      <div className="login-ticker">
+      <div className="ticker-outer">
         <div className="ticker-track">
           <LogoSet />
-          {/* Zweite, identische Reihe: die Animation laeuft genau um die Breite
-              einer Reihe weiter und beginnt dann von vorn. In dem Moment steht
-              die Kopie exakt dort, wo das Original stand -- der Sprung ist
-              dadurch unsichtbar. Fuer Screenreader ist sie eine Dublette. */}
+          {/* Zweite, identische Reihe: nach genau einer Reihenbreite steht die
+              Kopie dort, wo das Original stand -- der Ruecksprung ist dadurch
+              unsichtbar. Fuer Screenreader ist sie eine Dublette. */}
           <div className="ticker-copy" aria-hidden="true">
             <LogoSet />
           </div>
