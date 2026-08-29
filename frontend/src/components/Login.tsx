@@ -25,16 +25,6 @@ function hasDomain(email: string): boolean {
 function ReferencePanel() {
   return (
     <aside className="login-reference">
-      <blockquote className="login-quote">
-        „Atlas hat uns geholfen, die Vorbereitung auf die Oktober-Umstellung
-        strukturiert anzugehen."
-        <footer className="login-quote-author">
-          — Max Müller, Projektleiter Marktkommunikation
-        </footer>
-      </blockquote>
-
-      <hr className="login-reference-divider" />
-
       <p className="login-reference-heading">Vertraut von führenden EVUs in Deutschland</p>
 
       <div className="login-logos">

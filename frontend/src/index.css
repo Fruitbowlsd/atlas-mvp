@@ -768,26 +768,6 @@ select.status-select {
   padding-left: 32px;
 }
 
-.login-quote {
-  margin: 0;
-  font-size: 14.5px;
-  line-height: 1.55;
-  color: var(--text);
-}
-
-.login-quote-author {
-  display: block;
-  margin-top: 10px;
-  font-size: 12.5px;
-  color: var(--text-muted);
-}
-
-.login-reference-divider {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 22px 0;
-}
-
 .login-reference-heading {
   margin: 0 0 18px;
   font-size: 11px;
