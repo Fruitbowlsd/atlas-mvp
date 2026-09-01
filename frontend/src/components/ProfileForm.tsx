@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { MarketRole } from "../types";
+import type { MarketRole, Sector, Segment } from "../types";
 
 /** Reine Kundendaten -- die regulatorische Version gehoert bewusst NICHT hierher:
  *  Unternehmen/Marktrolle sind Eigenschaften des Kunden, die Version dagegen eine
@@ -7,6 +7,9 @@ import type { MarketRole } from "../types";
 export interface ProfileDraft {
   customer_name: string;
   market_role: MarketRole;
+  sector: Sector;
+  /** Mehrfachauswahl, wird als CSV-Menge uebertragen (Abschnitt 14.2). */
+  segments: Segment[];
 }
 
 interface Props {
@@ -21,6 +24,29 @@ const ROLE_OPTIONS: { value: MarketRole; label: string }[] = [
   { value: "lieferant", label: "Lieferant" },
   { value: "grund_ersatzversorger", label: "Grund- und Ersatzversorger" },
   { value: "beides", label: "Lieferant sowie Grund- und Ersatzversorger" },
+  { value: "netzbetreiber", label: "Netzbetreiber" },
+  { value: "messstellenbetreiber", label: "Messstellenbetreiber" },
+  { value: "bilanzkreisverantwortlicher", label: "Bilanzkreisverantwortlicher" },
+];
+
+const WAERME_HINWEIS =
+  "Für Wärmeversorgung gibt es keine regulierten Marktkommunikationsprozesse " +
+  "im Sinne der BNetzA-Mitteilungen. Atlas unterstützt aktuell Gas und Strom.";
+
+const SECTOR_OPTIONS: { value: Sector; label: string }[] = [
+  { value: "gas", label: "Gas" },
+  { value: "strom", label: "Strom" },
+];
+
+const SEGMENT_OPTIONS: { value: Segment; label: string; hint?: string }[] = [
+  { value: "slp", label: "SLP – Standardlastprofil (Kleinverbraucher)" },
+  { value: "rlm", label: "RLM – Registrierende Leistungsmessung (Großverbraucher)" },
+  {
+    value: "imsys",
+    label: "iMSys – Intelligentes Messsystem / Smart Meter",
+    hint: "Smart-Meter-Rollout — relevant für Strom, zunehmend auch für Gas ab 2025.",
+  },
+  { value: "tlp", label: "TLP – Tagesband-Lastprofil (Sonderfall)" },
 ];
 
 export function ProfileForm({ onSubmit, submitting, error, tenantName }: Props) {
@@ -30,7 +56,14 @@ export function ProfileForm({ onSubmit, submitting, error, tenantName }: Props) 
   // Der Wizard wird erst nach der Anmeldung gerendert, der Name steht hier also bereits.
   const [customerName, setCustomerName] = useState(tenantName ?? "");
   const [marketRole, setMarketRole] = useState<MarketRole>("lieferant");
+  const [sector, setSector] = useState<Sector>("gas");
+  const [segments, setSegments] = useState<Segment[]>(["slp"]);
   const [validationError, setValidationError] = useState<string | null>(null);
+
+  const toggleSegment = (value: Segment) =>
+    setSegments((prev) =>
+      prev.includes(value) ? prev.filter((s) => s !== value) : [...prev, value]
+    );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,8 +71,17 @@ export function ProfileForm({ onSubmit, submitting, error, tenantName }: Props) 
       setValidationError("Bitte einen Unternehmensnamen angeben.");
       return;
     }
+    if (segments.length === 0) {
+      setValidationError("Bitte mindestens ein Kundensegment auswählen.");
+      return;
+    }
     setValidationError(null);
-    onSubmit({ customer_name: customerName.trim(), market_role: marketRole });
+    onSubmit({
+      customer_name: customerName.trim(),
+      market_role: marketRole,
+      sector,
+      segments,
+    });
   };
 
   return (
@@ -93,19 +135,49 @@ export function ProfileForm({ onSubmit, submitting, error, tenantName }: Props) 
         </div>
 
         <div className="form-field">
-          <label className="form-label">Sparte</label>
-          <div className="fixed-value">
-            Gas
-            <span className="fixed-hint">im MVP fest vorgegeben</span>
+          <label className="form-label">Welche Sparte betreiben Sie?</label>
+          <div className="radio-group">
+            {SECTOR_OPTIONS.map((opt) => (
+              <label key={opt.value} className="radio-option">
+                <input
+                  type="radio"
+                  name="sector"
+                  checked={sector === opt.value}
+                  onChange={() => setSector(opt.value)}
+                />
+                {opt.label}
+              </label>
+            ))}
+            {/* Waerme steht bewusst da, aber deaktiviert: die Frage kommt
+                verlaesslich, und eine sichtbare Begruendung ist hilfreicher als
+                eine fehlende Option. Auswaehlbar waere sie irrefuehrend -- das
+                Datenmodell kennt nur Gas und Strom. */}
+            <label className="radio-option radio-option-disabled" title={WAERME_HINWEIS}>
+              <input type="radio" name="sector" disabled />
+              Wärme
+              <span className="option-note">nicht reguliert</span>
+            </label>
           </div>
+          <p className="form-hint">{WAERME_HINWEIS}</p>
         </div>
 
         <div className="form-field">
-          <label className="form-label">Kundensegment</label>
-          <div className="fixed-value">
-            SLP (Standardlastprofil)
-            <span className="fixed-hint">im MVP fest vorgegeben</span>
+          <label className="form-label">Welche Kundensegmente beliefern/betreiben Sie?</label>
+          <div className="checkbox-group">
+            {SEGMENT_OPTIONS.map((opt) => (
+              <label key={opt.value} className="checkbox-option">
+                <input
+                  type="checkbox"
+                  checked={segments.includes(opt.value)}
+                  onChange={() => toggleSegment(opt.value)}
+                />
+                {opt.label}
+              </label>
+            ))}
           </div>
+          <p className="form-hint">
+            Mehrfachauswahl möglich. {SEGMENT_OPTIONS.find((o) => o.value === "imsys")?.hint}
+          </p>
         </div>
 
         <div className="form-field">

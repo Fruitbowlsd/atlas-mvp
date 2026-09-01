@@ -39,6 +39,10 @@ class RequirementOut(BaseModel):
     weight: float
     applies_to_slp: bool
     applies_to_rlm: bool
+    applies_to_imsys: bool = False
+    applies_to_tlp: bool = False
+    applies_to_gas: bool = True
+    applies_to_strom: bool = False
 
     class Config:
         from_attributes = True
@@ -94,8 +98,12 @@ class FindingOut(BaseModel):
 
 class AssessmentCreate(BaseModel):
     customer_name: str
-    market_role: str  # "lieferant" | "grund_ersatzversorger" | "beides"
-    customer_segments: str  # CSV, z.B. "slp" | "rlm" | "slp,rlm"
+    # Ausgeschrieben, siehe services.VALID_MARKET_ROLES -- neben "lieferant",
+    # "grund_ersatzversorger" und "beides" jetzt auch Netzbetreiber, MSB und BKV.
+    market_role: str
+    # "gas" | "strom". Waerme fehlt bewusst (Abschnitt 14.2).
+    sector: str = "gas"
+    customer_segments: str  # CSV-Menge aus slp | rlm | imsys | tlp
     business_scenario: str = "lieferantenwechsel"  # im MVP fest
     # Gegen welchen regulatorischen Stand gemessen wird -- vorher implizit immer die
     # aktive Version, jetzt explizite Auswahl im Wizard (Abschnitt 12.4).
@@ -114,6 +122,7 @@ class AssessmentOut(BaseModel):
     customer_id: int
     customer_name: Optional[str] = None
     market_role: Optional[str] = None
+    sector: Optional[str] = None
     business_scenario: str
     customer_segments: str
     status: str

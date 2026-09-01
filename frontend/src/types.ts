@@ -28,6 +28,10 @@ export interface Requirement {
   weight: number;
   applies_to_slp: boolean;
   applies_to_rlm: boolean;
+  applies_to_imsys: boolean;
+  applies_to_tlp: boolean;
+  applies_to_gas: boolean;
+  applies_to_strom: boolean;
 }
 
 export interface AssessmentRequirement {
@@ -75,7 +79,19 @@ export interface AssessmentSummary {
   status: string;
 }
 
-export type MarketRole = "lieferant" | "grund_ersatzversorger" | "beides";
+export type MarketRole =
+  | "lieferant"
+  | "grund_ersatzversorger"
+  | "beides"
+  | "netzbetreiber"
+  | "messstellenbetreiber"
+  | "bilanzkreisverantwortlicher";
+
+/** Waerme fehlt bewusst: dafuer gibt es keine regulierten Marktkommunikations-
+ *  prozesse im Sinne der BNetzA-Mitteilungen (Abschnitt 14.2). */
+export type Sector = "gas" | "strom";
+
+export type Segment = "slp" | "rlm" | "imsys" | "tlp";
 
 export type AssessmentType = "readiness" | "compliance" | "historisch";
 
@@ -84,6 +100,7 @@ export interface AssessmentOut {
   customer_id: number;
   customer_name: string | null;
   market_role: MarketRole | null;
+  sector: Sector | null;
   business_scenario: string;
   customer_segments: string;
   status: string;
@@ -107,6 +124,7 @@ export interface AssessmentHistoryItem {
 export interface AssessmentCreate {
   customer_name: string;
   market_role: MarketRole;
+  sector: Sector;
   customer_segments: string;
   business_scenario?: string;
   regulatory_version_id: number;

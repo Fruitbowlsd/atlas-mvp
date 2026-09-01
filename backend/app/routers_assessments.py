@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session, joinedload
 from .database import get_db
 from . import models, schemas, services
 from .auth import require_auth, get_current_tenant_id
+from .services import VALID_MARKET_ROLES, VALID_SECTORS, VALID_SEGMENTS
 
 router = APIRouter(prefix="/api/assessments", tags=["assessments"], dependencies=[Depends(require_auth)])
 # Kundenbezogene Endpunkte -- ein Kunde kann mehrere Assessments haben (Abschnitt 12.3)
@@ -57,6 +58,7 @@ def _to_assessment_out(assessment: models.Assessment, db: Session) -> schemas.As
         customer_id=assessment.customer_id,
         customer_name=assessment.customer.name if assessment.customer else None,
         market_role=assessment.customer.market_role if assessment.customer else None,
+        sector=assessment.sector,
         business_scenario=assessment.business_scenario,
         customer_segments=assessment.customer_segments,
         status=assessment.status,
@@ -82,6 +84,7 @@ def _create_assessment_for(
         tenant_id=customer.tenant_id,  # nie unabhaengig setzen -- immer vom Kunden
         regulatory_version_id=reg_version.id,
         business_scenario="lieferantenwechsel",  # im MVP fest
+        sector=customer.sector,   # nie unabhaengig setzen -- immer vom Kunden
         customer_segments=segments_csv,
         status="in_bearbeitung",
     )
@@ -92,8 +95,7 @@ def _create_assessment_for(
         models.Requirement.regulatory_version_id == reg_version.id
     ).all()
     for req in requirements:
-        applies = (("slp" in segments and req.applies_to_slp) or ("rlm" in segments and req.applies_to_rlm))
-        if not applies:
+        if not services.requirement_matches_profile(req, segments, customer.sector):
             continue
         db.add(models.AssessmentRequirement(
             assessment_id=assessment.id,
@@ -109,13 +111,24 @@ def create_assessment(
     db: Session = Depends(get_db),
     tenant_id: int = Depends(get_current_tenant_id),
 ):
-    valid_roles = {"lieferant", "grund_ersatzversorger", "beides"}
-    if payload.market_role not in valid_roles:
-        raise HTTPException(status_code=400, detail=f"market_role muss einer von {valid_roles} sein")
+    if payload.market_role not in VALID_MARKET_ROLES:
+        raise HTTPException(
+            status_code=400, detail=f"market_role muss einer von {sorted(VALID_MARKET_ROLES)} sein"
+        )
+
+    # Waerme fehlt hier bewusst: fuer Waermeversorgung gibt es keine regulierten
+    # Marktkommunikationsprozesse im Sinne der BNetzA-Mitteilungen (Abschnitt 14.2).
+    if payload.sector not in VALID_SECTORS:
+        raise HTTPException(
+            status_code=400, detail=f"sector muss einer von {sorted(VALID_SECTORS)} sein"
+        )
 
     segments = {s.strip() for s in payload.customer_segments.split(",") if s.strip()}
-    if not segments or not segments.issubset({"slp", "rlm"}):
-        raise HTTPException(status_code=400, detail="customer_segments muss 'slp', 'rlm' oder 'slp,rlm' sein")
+    if not segments or not segments.issubset(VALID_SEGMENTS):
+        raise HTTPException(
+            status_code=400,
+            detail=f"customer_segments duerfen nur {sorted(VALID_SEGMENTS)} enthalten",
+        )
 
     # Gegen welchen regulatorischen Stand gemessen wird, waehlt der Nutzer jetzt
     # explizit im Wizard (Abschnitt 12.4) -- vorher war das implizit immer die
@@ -129,7 +142,7 @@ def create_assessment(
     customer = models.Customer(
         name=payload.customer_name,
         market_role=payload.market_role,
-        sector="gas",
+        sector=payload.sector,
         tenant_id=tenant_id,
     )
     db.add(customer)
