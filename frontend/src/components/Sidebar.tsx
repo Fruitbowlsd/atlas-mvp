@@ -50,22 +50,26 @@ const SIDEBAR_ROLE_LABEL: Record<string, string> = {
   bilanzkreisverantwortlicher: "Bilanzkreisverantwortlicher",
 };
 
-const csvLabels = (csv: string | null, labels?: Record<string, string>) =>
-  (csv ?? "")
-    .split(",")
-    .filter(Boolean)
-    .map((v) => labels?.[v] ?? v.toUpperCase())
-    .join(" & ");
+const csvList = (csv: string | null) => (csv ?? "").split(",").filter(Boolean);
 
-/** "Gas & Strom · SLP & RLM · Lieferant" -- kompakt genug fuer die schmale
- *  Sidebar. Die Segmente stehen hier bewusst als Vereinigung: die Aufschluesselung
- *  je Sparte steht im Kundenprofil, hier waere sie zu lang. */
+/** "Gas: SLP, RLM · Strom: SLP, RLM, iMSys · Lieferant"
+ *
+ *  Vorher standen Sparten und Segmente als zwei getrennte Aufzaehlungen
+ *  nebeneinander ("Gas & Strom · SLP & RLM & iMSys"). Daraus liess sich nicht
+ *  ablesen, welches Segment zu welcher Sparte gehoert -- bei zwei Sparten mit
+ *  unterschiedlichen Segmenten war die Zeile schlicht mehrdeutig. */
 function profileLine(a: AssessmentOut): string {
-  const parts = [
-    csvLabels(a.sector, SECTOR_LABEL),
-    csvLabels(a.customer_segments, SEGMENT_LABEL),
-    a.market_role ? SIDEBAR_ROLE_LABEL[a.market_role] ?? a.market_role : "",
-  ].filter(Boolean);
+  const parts = csvList(a.sector)
+    .map((sector) => {
+      const segments = csvList(sector === "gas" ? a.segments_gas : a.segments_strom)
+        .map((seg) => SEGMENT_LABEL[seg] ?? seg.toUpperCase())
+        .join(", ");
+      // Eine Sparte ohne Segmente waere nur ein Doppelpunkt ohne Inhalt.
+      return segments ? `${SECTOR_LABEL[sector] ?? sector}: ${segments}` : "";
+    })
+    .filter(Boolean);
+
+  if (a.market_role) parts.push(SIDEBAR_ROLE_LABEL[a.market_role] ?? a.market_role);
   return parts.join(" · ");
 }
 

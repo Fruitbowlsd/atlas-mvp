@@ -41,25 +41,40 @@ const ROLE_OPTIONS: { value: MarketRole; label: string; disabled?: boolean; note
 // Wert gueltig, damit bestehende Kunden mit dieser Angabe weiter korrekt
 // angezeigt werden.
 
-const SECTOR_OPTIONS: { value: Sector; label: string }[] = [
+/** "Gas und Strom" ist eine eigene, exklusive Auswahl und keine Kombination aus
+ *  zwei Haken. Vorher waren beim Klick darauf alle drei Kaestchen markiert, was
+ *  aussah, als waere dreimal dasselbe gewaehlt. Gespeichert wird weiterhin die
+ *  Spartenmenge -- "gas_und_strom" existiert nur in der Oberflaeche und loest
+ *  sich beim Absenden in beide Sparten auf. Ein eigener gespeicherter Wert waere
+ *  eine zweite Schreibweise fuer denselben Zustand. */
+type SectorChoice = "gas" | "strom" | "gas_und_strom";
+
+const SECTOR_CHOICES: { value: SectorChoice; label: string }[] = [
   { value: "gas", label: "Gas" },
   { value: "strom", label: "Strom" },
+  { value: "gas_und_strom", label: "Gas und Strom" },
 ];
 
-/** Segmente je Sparte -- iMSys fehlt bei Gas, weil es dort noch kein eigenes
- *  Segment ist. */
-const SEGMENTS_BY_SECTOR: Record<Sector, { value: Segment; label: string }[]> = {
-  gas: [
-    { value: "slp", label: "SLP – Standardlastprofil (Kleinverbraucher)" },
-    { value: "rlm", label: "RLM – Registrierende Leistungsmessung (Großverbraucher)" },
-    { value: "tlp", label: "TLP – Tagesband-Lastprofil (Sonderfall, selten)" },
-  ],
-  strom: [
-    { value: "slp", label: "SLP – Standardlastprofil (Kleinverbraucher)" },
-    { value: "rlm", label: "RLM – Registrierende Leistungsmessung (Großverbraucher)" },
-    { value: "imsys", label: "iMSys – Intelligentes Messsystem / Smart Meter (Rollout seit 2023 verpflichtend)" },
-    { value: "tlp", label: "TLP – Tagesband-Lastprofil (Sonderfall, selten)" },
-  ],
+const SECTORS_OF: Record<SectorChoice, Sector[]> = {
+  gas: ["gas"],
+  strom: ["strom"],
+  gas_und_strom: ["gas", "strom"],
+};
+
+/** Die Beschriftungen stehen an einer Stelle. Vorher waren SLP, RLM und TLP in
+ *  beiden Sparten getrennt notiert -- die falsche TLP-Bezeichnung musste
+ *  entsprechend auch zweimal korrigiert werden. */
+const SEGMENT_LABELS: Record<Segment, string> = {
+  slp: "SLP – Standardlastprofil (Kleinverbraucher)",
+  rlm: "RLM – Registrierende Leistungsmessung (Großverbraucher)",
+  imsys: "iMSys – Intelligentes Messsystem / Smart Meter (Rollout seit 2023 verpflichtend)",
+  tlp: "TLP – Tagesparameterabhängiges Lastprofil (Sonderfall)",
+};
+
+/** iMSys fehlt bei Gas, weil es dort noch kein eigenes Segment ist. */
+const SEGMENTS_BY_SECTOR: Record<Sector, Segment[]> = {
+  gas: ["slp", "rlm", "tlp"],
+  strom: ["slp", "rlm", "imsys", "tlp"],
 };
 
 const SECTOR_HEADING: Record<Sector, string> = {
@@ -74,22 +89,19 @@ export function ProfileForm({ onSubmit, submitting, error, tenantName }: Props) 
   // Der Wizard wird erst nach der Anmeldung gerendert, der Name steht hier also bereits.
   const [customerName, setCustomerName] = useState(tenantName ?? "");
   const [marketRole, setMarketRole] = useState<MarketRole>("lieferant");
-  const [sectors, setSectors] = useState<Sector[]>(["gas"]);
+  const [sectorChoice, setSectorChoice] = useState<SectorChoice | null>("gas");
   const [segmentsGas, setSegmentsGas] = useState<Segment[]>(["slp"]);
   const [segmentsStrom, setSegmentsStrom] = useState<Segment[]>(["slp"]);
   const [validationError, setValidationError] = useState<string | null>(null);
 
-  const bothSectors = sectors.includes("gas") && sectors.includes("strom");
+  const sectors = sectorChoice ? SECTORS_OF[sectorChoice] : [];
 
-  const toggleSector = (value: Sector) =>
-    setSectors((prev) =>
-      prev.includes(value) ? prev.filter((s) => s !== value) : [...prev, value]
-    );
-
-  /* Bequemlichkeit fuer Stadtwerke, die beides betreiben. Bewusst kein eigener
-     gespeicherter Wert -- der Haken setzt nur die beiden echten Sparten und
-     erscheint mitangehakt, sobald beide gewaehlt sind. */
-  const toggleBoth = () => setSectors(bothSectors ? [] : ["gas", "strom"]);
+  /* Exklusiv: ein Klick auf eine andere Sparte waehlt diese und hebt die
+     bisherige auf, ein Klick auf die bereits gewaehlte hebt sie auf. Bewusst
+     Kaestchen und keine Radios -- Radios liessen sich nicht mehr abwaehlen, und
+     "noch nichts gewaehlt" ist ein Zustand, den die Validierung abfaengt. */
+  const chooseSector = (value: SectorChoice) =>
+    setSectorChoice((prev) => (prev === value ? null : value));
 
   const toggleSegment = (sector: Sector, value: Segment) => {
     const [list, set] =
@@ -105,8 +117,8 @@ export function ProfileForm({ onSubmit, submitting, error, tenantName }: Props) 
       setValidationError("Bitte einen Unternehmensnamen angeben.");
       return;
     }
-    if (sectors.length === 0) {
-      setValidationError("Bitte mindestens eine Sparte auswählen.");
+    if (!sectorChoice) {
+      setValidationError("Bitte eine Sparte auswählen.");
       return;
     }
     const ohneSegment = sectors.find((sec) => segmentsFor(sec).length === 0);
@@ -185,20 +197,16 @@ export function ProfileForm({ onSubmit, submitting, error, tenantName }: Props) 
         <div className="form-field">
           <label className="form-label">Welche Sparte betreiben Sie?</label>
           <div className="checkbox-group">
-            {SECTOR_OPTIONS.map((opt) => (
+            {SECTOR_CHOICES.map((opt) => (
               <label key={opt.value} className="checkbox-option">
                 <input
                   type="checkbox"
-                  checked={sectors.includes(opt.value)}
-                  onChange={() => toggleSector(opt.value)}
+                  checked={sectorChoice === opt.value}
+                  onChange={() => chooseSector(opt.value)}
                 />
                 {opt.label}
               </label>
             ))}
-            <label className="checkbox-option">
-              <input type="checkbox" checked={bothSectors} onChange={toggleBoth} />
-              Gas und Strom
-            </label>
           </div>
         </div>
 
@@ -214,14 +222,14 @@ export function ProfileForm({ onSubmit, submitting, error, tenantName }: Props) 
                   : `Welche Kundensegmente (${sec === "gas" ? "Gas" : "Strom"}) beliefern/betreiben Sie?`}
               </label>
               <div className="checkbox-group">
-                {SEGMENTS_BY_SECTOR[sec].map((opt) => (
-                  <label key={opt.value} className="checkbox-option">
+                {SEGMENTS_BY_SECTOR[sec].map((seg) => (
+                  <label key={seg} className="checkbox-option">
                     <input
                       type="checkbox"
-                      checked={segmentsFor(sec).includes(opt.value)}
-                      onChange={() => toggleSegment(sec, opt.value)}
+                      checked={segmentsFor(sec).includes(seg)}
+                      onChange={() => toggleSegment(sec, seg)}
                     />
-                    {opt.label}
+                    {SEGMENT_LABELS[seg]}
                   </label>
                 ))}
               </div>
