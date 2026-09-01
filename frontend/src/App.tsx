@@ -134,7 +134,11 @@ export default function App() {
     const payload: AssessmentCreate = {
       customer_name: profileDraft.customer_name,
       market_role: profileDraft.market_role,
-      customer_segments: "slp", // im MVP fest
+      sector: profileDraft.sector,
+      // CSV-Menge, so wie das Backend sie liest (Abschnitt 14.2). Frueher stand
+      // hier fest "slp" -- die Mehrfachauswahl gab es im Datenmodell schon lange,
+      // nur der Wizard hat sie nie gefuellt.
+      customer_segments: profileDraft.segments.join(","),
       business_scenario: "lieferantenwechsel",
       regulatory_version_id: regulatoryVersionId,
     };
@@ -291,15 +295,29 @@ export default function App() {
               {recalculating ? "Berechne …" : "Bewertung neu berechnen"}
             </button>
           </div>
-          {process_groups.map((group, i) => (
-            <ProcessGroupAccordion
-              key={group.id}
-              group={group}
-              requirementStatuses={requirement_statuses}
-              onChange={handleRequirementChange}
-              defaultOpen={i === 0}
-            />
-          ))}
+          {/* Der Katalog ist heute ein reiner Gas-Katalog. Wer Strom gewaehlt hat,
+              bekommt deshalb null Anforderungen -- ohne Erklaerung saehe das wie
+              ein Fehler aus statt wie der ehrliche Stand (Abschnitt 14.2). */}
+          {requirement_statuses.length === 0 ? (
+            <div className="profile-empty-state">
+              <strong>Für dieses Profil liegen noch keine Anforderungen vor.</strong>
+              <p>
+                {detail.assessment.sector === "strom"
+                  ? "Der Anforderungskatalog umfasst derzeit ausschließlich Gas. Die Strom-Anforderungen folgen aus der regulatorischen Grundanalyse."
+                  : "Für die gewählte Kombination aus Sparte und Kundensegmenten ist im aktuellen Katalog noch nichts hinterlegt."}
+              </p>
+            </div>
+          ) : (
+            process_groups.map((group, i) => (
+              <ProcessGroupAccordion
+                key={group.id}
+                group={group}
+                requirementStatuses={requirement_statuses}
+                onChange={handleRequirementChange}
+                defaultOpen={i === 0}
+              />
+            ))
+          )}
         </div>
       );
     }
@@ -393,6 +411,7 @@ export default function App() {
         activeVersion={versions.find((v) => v.is_active) ?? null}
         currentUser={currentUser}
         onLogout={handleLogout}
+        profile={detail?.assessment ?? null}
       />
       <div className="app-content">
         {detail && ASSESSMENT_SCOPED_STEPS.includes(step) && (

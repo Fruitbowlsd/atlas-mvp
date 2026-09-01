@@ -39,8 +39,18 @@ _PENDING_COLUMNS = {
     # aufgebaut, hier geht es nur darum, dass lokale Entwicklungsdatenbanken
     # nicht kaputtgehen -- kein neuer Mechanismus, nur zwei weitere Spalten.
     "customers": [("tenant_id", "INTEGER")],
-    "assessments": [("tenant_id", "INTEGER")],
+    "assessments": [("tenant_id", "INTEGER"), ("sector", "VARCHAR DEFAULT 'gas'")],
     "users": [("is_atlas_admin", "BOOLEAN DEFAULT FALSE")],
+    # EVU-Profil (Abschnitt 14.2): Relevanz von einer Dimension (SLP/RLM) auf
+    # drei erweitert. Die Defaults bilden den Ist-Stand ab -- der Katalog ist
+    # heute reiner Gas-Katalog fuer SLP/RLM, deshalb strom/imsys/tlp auf FALSE.
+    # Bestandszeilen bekommen damit genau die Werte, die inhaltlich stimmen.
+    "requirements": [
+        ("applies_to_imsys", "BOOLEAN DEFAULT FALSE"),
+        ("applies_to_tlp", "BOOLEAN DEFAULT FALSE"),
+        ("applies_to_gas", "BOOLEAN DEFAULT TRUE"),
+        ("applies_to_strom", "BOOLEAN DEFAULT FALSE"),
+    ],
     # SSO-Konfiguration je Tenant (Abschnitt 13.4)
     "tenants": [
         ("email_domain", "VARCHAR"),

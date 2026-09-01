@@ -259,6 +259,13 @@ def _seed_upcoming_version(db: Session):
             weight=req.weight,
             applies_to_slp=req.applies_to_slp,
             applies_to_rlm=req.applies_to_rlm,
+            # Mitkopieren, sonst faelt eine spaeter gesetzte Sparten-Relevanz beim
+            # Uebernehmen in die Folgeversion auf den Default zurueck und der Diff
+            # meldete eine Aenderung, die niemand vorgenommen hat.
+            applies_to_imsys=req.applies_to_imsys,
+            applies_to_tlp=req.applies_to_tlp,
+            applies_to_gas=req.applies_to_gas,
+            applies_to_strom=req.applies_to_strom,
             is_conditional=req.is_conditional,
             regulatory_version_id=reg_version_2.id,
         ))

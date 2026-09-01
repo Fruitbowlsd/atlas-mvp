@@ -245,6 +245,7 @@ def get_any_assessment(assessment_id: int, db: Session = Depends(get_db)):
             customer_id=assessment.customer_id,
             customer_name=assessment.customer.name if assessment.customer else None,
             market_role=assessment.customer.market_role if assessment.customer else None,
+            sector=assessment.sector,
             business_scenario=assessment.business_scenario,
             customer_segments=assessment.customer_segments,
             status=assessment.status,

@@ -138,6 +138,12 @@ body {
   margin-bottom: 6px;
 }
 
+/* Zweite Ueberschrift im selben Kasten ("Ihr Profil") -- braucht Abstand nach
+   oben, den die erste als Kastenanfang nicht hat. */
+.sidebar-footer-title-second {
+  margin-top: 12px;
+}
+
 .sidebar-footer-text {
   font-size: 11.5px;
   color: #8a90a0;
@@ -689,6 +695,24 @@ select.status-select {
 .radio-option:has(input:checked), .checkbox-option:has(input:checked) {
   border-color: var(--accent);
   background: var(--accent-light);
+}
+
+/* Waerme im Sparte-Schritt: sichtbar, aber nicht waehlbar. Die Begruendung steht
+   als Hinweis darunter -- eine fehlende Option wuerde die Frage offen lassen. */
+.radio-option-disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.radio-option-disabled:has(input:disabled) {
+  border-color: var(--border);
+  background: var(--surface-sunken);
+}
+
+.option-note {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--text-muted);
 }
 
 .fixed-value {
@@ -1624,4 +1648,26 @@ select.status-select {
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 8px;
+}
+
+/* Leerzustand, wenn das gewaehlte Profil (noch) keine Anforderungen trifft --
+   z.B. Strom, solange der Katalog reiner Gas-Katalog ist (Abschnitt 14.2). */
+.profile-empty-state {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.profile-empty-state strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.profile-empty-state p {
+  margin: 0;
 }

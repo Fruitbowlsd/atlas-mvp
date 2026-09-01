@@ -53,28 +53,78 @@ def derive_assessment_type(
     return "compliance" if newest.id == version.id else "historisch"
 
 
-def requirement_matches_segments(req: models.Requirement, segments: set[str]) -> bool:
-    """Prueft, ob ein Requirement fuer die uebergebenen Kundensegmente (slp/rlm)
-    relevant ist. Von _is_relevant() UND der Regulatory-Impact-Berechnung
-    (Schritt 2e, siehe routers_regulatory.py) gemeinsam genutzt -- dort gibt es
-    fuer die kommende Version noch keine AssessmentRequirement-Zeilen, nur die
-    rohen Requirements."""
-    if "slp" in segments and req.applies_to_slp:
-        return True
-    if "rlm" in segments and req.applies_to_rlm:
-        return True
-    return False
+# Segment-Kuerzel -> Flag auf dem Requirement. An einer Stelle, damit ein
+# spaeter dazukommendes Segment nicht in mehreren if-Ketten nachgezogen werden
+# muss (Abschnitt 14.2).
+_SEGMENT_FLAGS = {
+    "slp": "applies_to_slp",
+    "rlm": "applies_to_rlm",
+    "imsys": "applies_to_imsys",
+    "tlp": "applies_to_tlp",
+}
+
+_SECTOR_FLAGS = {
+    "gas": "applies_to_gas",
+    "strom": "applies_to_strom",
+}
+
+# Zulaessiges Profil-Vokabular an einer Stelle (Abschnitt 14.2), damit
+# Validierung, Filterung und Seed nicht auseinanderlaufen.
+VALID_SEGMENTS = set(_SEGMENT_FLAGS)
+VALID_SECTORS = set(_SECTOR_FLAGS)
+# Ausgeschrieben und nicht als Kuerzel, passend zum bestehenden Bestand --
+# "grund_ersatzversorger" und "beides" gibt es bereits und bleiben gueltig.
+VALID_MARKET_ROLES = {
+    "lieferant",
+    "grund_ersatzversorger",
+    "beides",
+    "netzbetreiber",
+    "messstellenbetreiber",
+    "bilanzkreisverantwortlicher",
+}
 
 
-def _is_relevant(ar: models.AssessmentRequirement, segments: set[str]) -> bool:
-    return requirement_matches_segments(ar.requirement, segments)
+def requirement_matches_profile(
+    req: models.Requirement, segments: set[str], sector: str | None = None
+) -> bool:
+    """Prueft, ob ein Requirement zum EVU-Profil passt (Abschnitt 14.2).
+
+    ODER innerhalb der Segmente, UND zwischen den Dimensionen: wer SLP und RLM
+    beliefert, sieht die Anforderungen beider Segmente -- aber nur die seiner
+    Sparte. Genau so war die Regel schon fuer SLP/RLM gemeint, hier nur um die
+    Sparte erweitert.
+
+    sector=None laesst die Sparte bewusst offen. Das brauchen die Aufrufer, die
+    noch kein Assessment in der Hand haben, sondern nur rohe Requirements.
+    """
+    if sector is not None:
+        flag = _SECTOR_FLAGS.get(sector)
+        # Unbekannte Sparte: nichts durchlassen. Lieber ein sichtbar leeres
+        # Ergebnis als stillschweigend der falsche Katalog.
+        if flag is None or not getattr(req, flag, False):
+            return False
+
+    return any(getattr(req, _SEGMENT_FLAGS[s], False) for s in segments if s in _SEGMENT_FLAGS)
+
+
+def _is_relevant(
+    ar: models.AssessmentRequirement, segments: set[str], sector: str | None = None
+) -> bool:
+    return requirement_matches_profile(ar.requirement, segments, sector)
+
+
+def profile_of(assessment: models.Assessment) -> tuple[set[str], str | None]:
+    """Segmente und Sparte eines Assessments -- an einer Stelle gelesen, damit die
+    Relevanzfilterung in Score, Findings und Heatmap nicht auseinanderlaufen kann."""
+    segments = {s.strip() for s in (assessment.customer_segments or "").split(",") if s.strip()}
+    return segments, assessment.sector
 
 
 def calculate_score(db: Session, assessment: models.Assessment) -> models.ScoreResult:
-    segments = set(assessment.customer_segments.split(","))
+    segments, sector = profile_of(assessment)
     statuses = assessment.requirement_statuses
 
-    relevant = [ar for ar in statuses if _is_relevant(ar, segments)]
+    relevant = [ar for ar in statuses if _is_relevant(ar, segments, sector)]
 
     # --- Regulatorischer Abdeckungsgrad ---
     total_weight = sum(ar.requirement.weight for ar in relevant) or 1.0
@@ -133,11 +183,11 @@ def generate_findings(db: Session, assessment: models.Assessment) -> list[models
     # Alte Findings ersetzen, damit Neuberechnung konsistent bleibt.
     db.query(models.Finding).filter(models.Finding.assessment_id == assessment.id).delete()
 
-    segments = set(assessment.customer_segments.split(","))
+    segments, sector = profile_of(assessment)
     findings = []
 
     for ar in assessment.requirement_statuses:
-        if not _is_relevant(ar, segments):
+        if not _is_relevant(ar, segments, sector):
             continue
         req = ar.requirement
 
@@ -178,7 +228,7 @@ def generate_findings(db: Session, assessment: models.Assessment) -> list[models
 
 
 def process_group_heatmap(db: Session, assessment: models.Assessment):
-    segments = set(assessment.customer_segments.split(","))
+    segments, sector = profile_of(assessment)
     groups = db.query(models.ProcessGroup).order_by(models.ProcessGroup.sequence).all()
     status_by_req_id = {ar.requirement_id: ar for ar in assessment.requirement_statuses}
 
@@ -187,10 +237,10 @@ def process_group_heatmap(db: Session, assessment: models.Assessment):
         pi_ids = [pi.id for pi in group.pis]
         reqs = db.query(models.Requirement).filter(models.Requirement.pi_id.in_(pi_ids)).all()
 
-        relevant_reqs = []
-        for r in reqs:
-            if ("slp" in segments and r.applies_to_slp) or ("rlm" in segments and r.applies_to_rlm):
-                relevant_reqs.append(r)
+        # Frueher stand die Regel hier als eigene if-Kette und musste bei jeder
+        # neuen Dimension doppelt gepflegt werden -- jetzt dieselbe Funktion wie
+        # ueberall sonst.
+        relevant_reqs = [r for r in reqs if requirement_matches_profile(r, segments, sector)]
 
         if not relevant_reqs:
             continue

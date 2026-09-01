@@ -1,4 +1,4 @@
-import type { CurrentUser, RegulatoryVersion } from "../types";
+import type { AssessmentOut, CurrentUser, RegulatoryVersion } from "../types";
 import { validityLabel } from "../utils/versionLabel";
 
 export type Step =
@@ -27,6 +27,32 @@ interface Props {
   activeVersion: RegulatoryVersion | null;
   currentUser: CurrentUser | null;
   onLogout: () => void;
+  /** Profil des laufenden Assessments (Abschnitt 14.2). null, solange keines
+   *  geladen ist -- dann bleibt der Block aus, statt Platzhalter zu zeigen. */
+  profile: AssessmentOut | null;
+}
+
+const SECTOR_LABEL: Record<string, string> = { gas: "Gas", strom: "Strom" };
+
+const SIDEBAR_ROLE_LABEL: Record<string, string> = {
+  lieferant: "Lieferant",
+  grund_ersatzversorger: "Grund- und Ersatzversorger",
+  beides: "Lieferant / Grund- und Ersatzversorger",
+  netzbetreiber: "Netzbetreiber",
+  messstellenbetreiber: "Messstellenbetreiber",
+  bilanzkreisverantwortlicher: "Bilanzkreisverantwortlicher",
+};
+
+/** "Gas · SLP & RLM · Lieferant" -- kompakt genug fuer die schmale Sidebar. */
+function profileLine(a: AssessmentOut): string {
+  const parts = [
+    a.sector ? SECTOR_LABEL[a.sector] ?? a.sector : null,
+    a.customer_segments
+      ? a.customer_segments.split(",").filter(Boolean).map((s) => s.toUpperCase()).join(" & ")
+      : null,
+    a.market_role ? SIDEBAR_ROLE_LABEL[a.market_role] ?? a.market_role : null,
+  ].filter(Boolean);
+  return parts.join(" · ");
 }
 
 const VERSION_STATUS_LABEL: Record<string, string> = {
@@ -35,7 +61,7 @@ const VERSION_STATUS_LABEL: Record<string, string> = {
   verbindlich: "Verbindlich",
 };
 
-export function Sidebar({ active, onSelect, hasAssessment, activeVersion, currentUser, onLogout }: Props) {
+export function Sidebar({ active, onSelect, hasAssessment, activeVersion, currentUser, onLogout, profile }: Props) {
   // Kundenbezogene Eintraege -- sichtbar/relevant fuer die Kunden-Sicht des MVP.
   const customerSteps: StepDef[] = [
     { key: "uebersicht", label: "Übersicht", enabled: hasAssessment },
@@ -90,6 +116,13 @@ export function Sidebar({ active, onSelect, hasAssessment, activeVersion, curren
             "wird geladen …"
           )}
         </div>
+
+        {profile && (
+          <>
+            <div className="sidebar-footer-title sidebar-footer-title-second">Ihr Profil</div>
+            <div className="sidebar-footer-text">{profileLine(profile)}</div>
+          </>
+        )}
       </div>
 
       {currentUser?.authenticated && (

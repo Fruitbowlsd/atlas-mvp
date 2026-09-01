@@ -18,6 +18,12 @@ from . import models
 _COMPARED_FIELDS = [
     "title", "description", "pi_id", "transaction_reason", "response_code",
     "criticality", "weight", "applies_to_slp", "applies_to_rlm", "is_conditional",
+    # Die Sparten- und Segment-Flags aus Abschnitt 14.2 gehoeren mitverglichen:
+    # wenn eine neue Fassung eine Anforderung erstmals auch fuer Strom oder iMSys
+    # gelten laesst, ist das eine echte Aenderung fuer den Kunden. Bestandszeilen
+    # bekommen die Spalten per Migration mit gleichem Default in beiden
+    # Versionen, erzeugen hier also kein Rauschen.
+    "applies_to_imsys", "applies_to_tlp", "applies_to_gas", "applies_to_strom",
 ]
 
 

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey, DateTime, Text, UniqueConstraint
+from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey, DateTime, Date, Text, UniqueConstraint
 from sqlalchemy.orm import relationship
 from datetime import datetime
 
@@ -75,8 +75,20 @@ class Requirement(Base):
     response_code = Column(String)          # z.B. "E15", "ZC5"
     criticality = Column(String, default="mittel")
     weight = Column(Float, default=1.0)
+    # Relevanz-Dimensionen (Abschnitt 14.2). Die beiden Segment-Flags gab es
+    # zuerst; sie bleiben unveraendert bestehen, weil diff.py sie als
+    # vergleichsrelevante Spalten fuehrt -- ein Umbenennen liesse beim naechsten
+    # Versionsvergleich JEDES Requirement als geaendert erscheinen.
     applies_to_slp = Column(Boolean, default=True)
     applies_to_rlm = Column(Boolean, default=True)
+    applies_to_imsys = Column(Boolean, default=False)
+    applies_to_tlp = Column(Boolean, default=False)
+    # Sparte. Der Katalog ist heute reiner Gas-Katalog, deshalb strom=False:
+    # lieber ein ehrlicher Leerzustand als Gas-Anforderungen, die faelschlich
+    # als fuer Strom geprueft erscheinen. Strom-Requirements folgen aus der
+    # Grundanalyse.
+    applies_to_gas = Column(Boolean, default=True)
+    applies_to_strom = Column(Boolean, default=False)
     is_conditional = Column(Boolean, default=False)
     regulatory_version_id = Column(Integer, ForeignKey("regulatory_versions.id"))
 
@@ -159,7 +171,15 @@ class Assessment(Base):
     tenant_id = Column(Integer, ForeignKey("tenants.id"), nullable=True)
     regulatory_version_id = Column(Integer, ForeignKey("regulatory_versions.id"))
     business_scenario = Column(String, default="lieferantenwechsel")
-    customer_segments = Column(String, default="slp,rlm")   # einfache CSV-Liste im MVP
+    # Sparte auf dem Assessment, obwohl sie auch am Customer haengt -- gleiche
+    # Begruendung wie bei tenant_id: die Relevanzfilterung laeuft ueber das
+    # Assessment und soll dafuer keinen Join brauchen. Beim Anlegen aus dem
+    # Customer uebernommen.
+    sector = Column(String, default="gas")                  # "gas" | "strom"
+    # Mehrfachauswahl als CSV-Menge: slp,rlm,imsys,tlp. Bewusst keine eigene
+    # Tabelle -- die Werte werden ausnahmslos als Ganzes gelesen und wieder
+    # geschrieben, ein Join brächte hier nichts.
+    customer_segments = Column(String, default="slp,rlm")
     status = Column(String, default="in_bearbeitung")
     created_at = Column(DateTime, default=datetime.utcnow)
 
@@ -313,3 +333,151 @@ class RegulatoryChangeTechnologyMapping(Base):
 
     regulatory_change = relationship("RegulatoryChange", back_populates="technology_mappings")
     technology_release_note = relationship("TechnologyReleaseNote")
+
+
+# --- Regulatorische Wissensbasis (Abschnitt 14.2) ---------------------------
+#
+# Diese sieben Tabellen sind das Fundament fuer EDIFACT-Generator,
+# Nachrichtensimulation und abgeleitete Testfaelle. Sie werden hier bewusst nur
+# als Struktur angelegt: befuellt werden sie aus der Grundanalyse, die ein
+# eigener Schritt ist.
+#
+# Sie haengen an regulatory_version_id und NICHT am Tenant: es ist geteiltes
+# Atlas-Wissen wie der Requirement-Katalog, kein Kundengeheimnis (Abschnitt 13.1).
+
+
+class MessageDefinition(Base):
+    """Ein Nachrichtentyp in einer konkreten regulatorischen Fassung -- z.B.
+    UTILMD in D:11A:UN:G1.1 fuer Gas."""
+    __tablename__ = "message_definitions"
+
+    id = Column(Integer, primary_key=True)
+    regulatory_version_id = Column(Integer, ForeignKey("regulatory_versions.id"), nullable=False)
+    nachrichtentyp = Column(String, nullable=False)   # UTILMD | MSCONS | APERAK | ...
+    version = Column(String)                          # z.B. "D:11A:UN:G1.1"
+    sparte = Column(String, default="gas")            # "gas" | "strom"
+    beschreibung = Column(Text)
+
+    regulatory_version = relationship("RegulatoryVersion")
+    segments = relationship(
+        "MessageSegment", back_populates="message_definition", order_by="MessageSegment.position"
+    )
+
+
+class MessageSegment(Base):
+    """Ein Segment innerhalb einer Nachricht (BGM, DTM, LOC, NAD, ...).
+    position haelt die Reihenfolge fest, in der das Segment in der Nachricht
+    steht -- fuer den Generator ist das die Bauanleitung."""
+    __tablename__ = "message_segments"
+
+    id = Column(Integer, primary_key=True)
+    message_definition_id = Column(Integer, ForeignKey("message_definitions.id"), nullable=False)
+    segment_code = Column(String, nullable=False)     # BGM | DTM | LOC | NAD | ...
+    position = Column(Integer, default=0)
+    bezeichnung = Column(String)
+    pflicht = Column(Boolean, default=False)
+    kardinalitaet = Column(String)                    # "1" | "0..1" | "1..9"
+    wiederholbar = Column(Boolean, default=False)
+
+    message_definition = relationship("MessageDefinition", back_populates="segments")
+    fields = relationship("MessageField", back_populates="segment")
+
+
+class MessageField(Base):
+    """Ein Datenelement innerhalb eines Segments. position ist die EDIFACT-
+    Notation ("1001", "C507.2380"), deshalb String und nicht Integer."""
+    __tablename__ = "message_fields"
+
+    id = Column(Integer, primary_key=True)
+    segment_id = Column(Integer, ForeignKey("message_segments.id"), nullable=False)
+    position = Column(String, nullable=False)         # "1001" | "C507.2380"
+    bezeichnung = Column(String)
+    datentyp = Column(String)                         # "an" | "n" | "a"
+    laenge = Column(Integer)
+    pflicht = Column(Boolean, default=False)
+    # Wenn gesetzt, sind nur Werte aus dieser Codeliste zulaessig -- Grundlage
+    # sowohl fuer die Generierung als auch fuer die spaetere Validierung.
+    codelist_id = Column(Integer, ForeignKey("code_lists.id"), nullable=True)
+    beispielwert = Column(String)
+    # Freitext fuer Wenn-Dann-Regeln, die sich nicht in Spalten abbilden lassen
+    # ("nur bei Transaktionsgrund E03"). Bewusst Text und keine Regelsprache --
+    # welche Formen wirklich vorkommen, weiss erst die Grundanalyse.
+    bedingung = Column(Text)
+
+    segment = relationship("MessageSegment", back_populates="fields")
+    codelist = relationship("CodeList")
+
+
+class CodeList(Base):
+    """Eine Codeliste in einer regulatorischen Fassung (z.B. "ZC", "E01")."""
+    __tablename__ = "code_lists"
+
+    id = Column(Integer, primary_key=True)
+    regulatory_version_id = Column(Integer, ForeignKey("regulatory_versions.id"), nullable=False)
+    name = Column(String, nullable=False)
+    nachrichtentyp = Column(String)
+    beschreibung = Column(Text)
+
+    regulatory_version = relationship("RegulatoryVersion")
+    entries = relationship("CodeListEntry", back_populates="codelist")
+
+
+class CodeListEntry(Base):
+    """Ein einzelner Code. gueltig_bis = NULL bedeutet 'noch gueltig' -- damit
+    laesst sich zu jedem Stichtag bestimmen, welche Codes zulaessig waren, ohne
+    Zeilen zu loeschen."""
+    __tablename__ = "code_list_entries"
+
+    id = Column(Integer, primary_key=True)
+    codelist_id = Column(Integer, ForeignKey("code_lists.id"), nullable=False)
+    code = Column(String, nullable=False)             # z.B. "ZC9"
+    bedeutung = Column(String)
+    gueltig_ab = Column(Date)
+    gueltig_bis = Column(Date, nullable=True)
+
+    codelist = relationship("CodeList", back_populates="entries")
+
+
+class Testkonstellation(Base):
+    """Ein Testfall, abgeleitet aus Profil (Sparte/Segment/Marktrolle) und
+    Prozess. ist_negativfall trennt die Faelle, in denen ein Ablehnen das
+    RICHTIGE Ergebnis ist -- sonst wuerde ein bestandener Negativtest wie ein
+    Fehler aussehen."""
+    __tablename__ = "testkonstellationen"
+
+    id = Column(Integer, primary_key=True)
+    regulatory_version_id = Column(Integer, ForeignKey("regulatory_versions.id"), nullable=False)
+    titel = Column(String, nullable=False)
+    sparte = Column(String)
+    segment = Column(String)
+    marktrolle = Column(String)
+    prozess_pi_id = Column(Integer, ForeignKey("process_identifiers.id"), nullable=True)
+    ist_negativfall = Column(Boolean, default=False)
+    beschreibung = Column(Text)
+    erwartetes_ergebnis = Column(Text)
+
+    regulatory_version = relationship("RegulatoryVersion")
+    prozess_pi = relationship("ProcessIdentifier")
+    schritte = relationship(
+        "TestkonstellationSchritt",
+        back_populates="konstellation",
+        order_by="TestkonstellationSchritt.reihenfolge",
+    )
+
+
+class TestkonstellationSchritt(Base):
+    """Ein Nachrichtenaustausch innerhalb eines Testfalls. reihenfolge haelt den
+    Ablauf fest, sender_rolle/empfaenger_rolle die Richtung."""
+    __tablename__ = "testkonstellation_schritte"
+
+    id = Column(Integer, primary_key=True)
+    konstellation_id = Column(Integer, ForeignKey("testkonstellationen.id"), nullable=False)
+    reihenfolge = Column(Integer, default=0)
+    nachrichtentyp = Column(String)
+    sender_rolle = Column(String)
+    empfaenger_rolle = Column(String)
+    pi_nummer = Column(String, nullable=True)
+    beschreibung = Column(Text)
+    edifact_beispiel = Column(Text, nullable=True)
+
+    konstellation = relationship("Testkonstellation", back_populates="schritte")
