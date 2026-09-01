@@ -384,7 +384,7 @@ export function RegulatoryChanges({ assessmentId }: Props) {
                 />
                 <div className="field-hint">
                   Wird dem Kunden in der Vorschau prominent angezeigt. Bewusst manuell
-                  kuratiert — im MVP erzeugt Atlas diesen Text nicht automatisch.
+                  kuratiert.
                 </div>
               </div>
               <button type="button" className="recalc-button" onClick={handleSaveSummary} disabled={loading}>

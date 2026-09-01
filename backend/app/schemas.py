@@ -101,9 +101,12 @@ class AssessmentCreate(BaseModel):
     # Ausgeschrieben, siehe services.VALID_MARKET_ROLES -- neben "lieferant",
     # "grund_ersatzversorger" und "beides" jetzt auch Netzbetreiber, MSB und BKV.
     market_role: str
-    # "gas" | "strom". Waerme fehlt bewusst (Abschnitt 14.2).
+    # CSV-Menge der Sparten: "gas" | "strom" | "gas,strom". Waerme fehlt bewusst
+    # (Abschnitt 14.2).
     sector: str = "gas"
-    customer_segments: str  # CSV-Menge aus slp | rlm | imsys | tlp
+    # Segmente je Sparte, jeweils CSV. Nur die Sparten aus `sector` werden gelesen.
+    segments_gas: str = ""      # slp | rlm | tlp
+    segments_strom: str = ""    # slp | rlm | imsys | tlp
     business_scenario: str = "lieferantenwechsel"  # im MVP fest
     # Gegen welchen regulatorischen Stand gemessen wird -- vorher implizit immer die
     # aktive Version, jetzt explizite Auswahl im Wizard (Abschnitt 12.4).
@@ -123,7 +126,10 @@ class AssessmentOut(BaseModel):
     customer_name: Optional[str] = None
     market_role: Optional[str] = None
     sector: Optional[str] = None
+    segments_gas: Optional[str] = None
+    segments_strom: Optional[str] = None
     business_scenario: str
+    # Vereinigung beider Segmentmengen -- reine Anzeige (Issue #16).
     customer_segments: str
     status: str
     created_at: datetime

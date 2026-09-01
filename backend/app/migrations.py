@@ -39,7 +39,14 @@ _PENDING_COLUMNS = {
     # aufgebaut, hier geht es nur darum, dass lokale Entwicklungsdatenbanken
     # nicht kaputtgehen -- kein neuer Mechanismus, nur zwei weitere Spalten.
     "customers": [("tenant_id", "INTEGER")],
-    "assessments": [("tenant_id", "INTEGER"), ("sector", "VARCHAR DEFAULT 'gas'")],
+    "assessments": [
+        ("tenant_id", "INTEGER"),
+        ("sector", "VARCHAR DEFAULT 'gas'"),
+        # Segmente je Sparte (Issue #16). Bestandszeilen werden unten aus
+        # customer_segments nachgezogen.
+        ("segments_gas", "VARCHAR DEFAULT ''"),
+        ("segments_strom", "VARCHAR DEFAULT ''"),
+    ],
     "users": [("is_atlas_admin", "BOOLEAN DEFAULT FALSE")],
     # EVU-Profil (Abschnitt 14.2): Relevanz von einer Dimension (SLP/RLM) auf
     # drei erweitert. Die Defaults bilden den Ist-Stand ab -- der Katalog ist
@@ -86,6 +93,22 @@ def run_light_migrations(engine: Engine) -> None:
             if table in _UPDATED_AT_BACKFILL and any(n == "updated_at" for n, _ in missing):
                 conn.execute(text(
                     f"UPDATE {table} SET updated_at = created_at WHERE updated_at IS NULL"
+                ))
+
+            # Segmente je Sparte (Issue #16): Bestandszeilen tragen ihre Segmente
+            # noch in der gemeinsamen Spalte. Ohne dieses Nachziehen stuenden sie
+            # nach der Migration mit leeren Segmentmengen da -- und ein bestehendes
+            # Assessment zeigte auf einmal gar keine Anforderungen mehr an.
+            if table == "assessments" and any(n == "segments_gas" for n, _ in missing):
+                conn.execute(text(
+                    "UPDATE assessments SET segments_gas = COALESCE(customer_segments, '') "
+                    "WHERE (segments_gas IS NULL OR segments_gas = '') "
+                    "AND COALESCE(sector, 'gas') LIKE '%gas%'"
+                ))
+                conn.execute(text(
+                    "UPDATE assessments SET segments_strom = COALESCE(customer_segments, '') "
+                    "WHERE (segments_strom IS NULL OR segments_strom = '') "
+                    "AND COALESCE(sector, '') LIKE '%strom%'"
                 ))
 
     if "regulatory_versions" in existing_tables:

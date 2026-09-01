@@ -134,11 +134,12 @@ export default function App() {
     const payload: AssessmentCreate = {
       customer_name: profileDraft.customer_name,
       market_role: profileDraft.market_role,
-      sector: profileDraft.sector,
-      // CSV-Menge, so wie das Backend sie liest (Abschnitt 14.2). Frueher stand
-      // hier fest "slp" -- die Mehrfachauswahl gab es im Datenmodell schon lange,
-      // nur der Wizard hat sie nie gefuellt.
-      customer_segments: profileDraft.segments.join(","),
+      // CSV-Mengen, so wie das Backend sie liest (Issue #16). Die Segmente sind
+      // je Sparte getrennt: eine gemeinsame Menge liesse offen, welches Segment
+      // zu welcher Sparte gehoert.
+      sector: profileDraft.sectors.join(","),
+      segments_gas: profileDraft.segmentsGas.join(","),
+      segments_strom: profileDraft.segmentsStrom.join(","),
       business_scenario: "lieferantenwechsel",
       regulatory_version_id: regulatoryVersionId,
     };

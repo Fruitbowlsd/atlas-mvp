@@ -157,7 +157,7 @@ export function MarketCommunicationTriangle({ processGroups, requirementStatuses
 
         {!selectedMsg.piNumber && (
           <div style={{ fontSize: 12.5, color: "var(--text-muted)" }}>
-            Kein Bestandteil dieses MVP-Assessments (Kündigungsprozess zwischen Lieferanten,
+            Kein Bestandteil dieses Assessments (Kündigungsprozess zwischen Lieferanten,
             nur als E2E-Kontext dargestellt).
           </div>
         )}

@@ -11,6 +11,24 @@ const ROLE_LABEL: Record<string, string> = {
   bilanzkreisverantwortlicher: "Bilanzkreisverantwortlicher",
 };
 
+const SECTOR_LABEL: Record<string, string> = { gas: "Gas", strom: "Strom" };
+
+/* Eigene Labels statt toUpperCase(): daraus wuerde sonst "IMSYS". */
+const SEGMENT_LABEL: Record<string, string> = {
+  slp: "SLP",
+  rlm: "RLM",
+  imsys: "iMSys",
+  tlp: "TLP",
+};
+
+const sectors = (csv: string | null) => (csv ?? "").split(",").filter(Boolean);
+
+const sectorLabel = (csv: string | null) =>
+  sectors(csv).map((s) => SECTOR_LABEL[s] ?? s).join(" & ") || "—";
+
+const segmentLabel = (csv: string | null) =>
+  (csv ?? "").split(",").filter(Boolean).map((s) => SEGMENT_LABEL[s] ?? s.toUpperCase()).join(" & ") || "—";
+
 const TYPE_LABEL: Record<AssessmentType, string> = {
   readiness: "Readiness",
   compliance: "Compliance",
@@ -54,8 +72,15 @@ export function ProfileSummary({
       <div className="profile-summary-card">
         <div className="profile-summary-row"><span>Unternehmen</span><strong>{assessment.customer_name}</strong></div>
         <div className="profile-summary-row"><span>Marktrolle</span><strong>{assessment.market_role ? ROLE_LABEL[assessment.market_role] : "—"}</strong></div>
-        <div className="profile-summary-row"><span>Sparte</span><strong>{assessment.sector === "strom" ? "Strom" : "Gas"}</strong></div>
-        <div className="profile-summary-row"><span>Kundensegment</span><strong>{assessment.customer_segments.split(",").map((s) => s.toUpperCase()).join(" & ")}</strong></div>
+        <div className="profile-summary-row"><span>Sparte</span><strong>{sectorLabel(assessment.sector)}</strong></div>
+        {/* Je Sparte aufgeschluesselt, sobald beide betrieben werden -- die
+            blosse Vereinigung liesse offen, welches Segment wozu gehoert. */}
+        {sectors(assessment.sector).map((sec) => (
+          <div key={sec} className="profile-summary-row">
+            <span>{sectors(assessment.sector).length > 1 ? `Kundensegmente ${SECTOR_LABEL[sec] ?? sec}` : "Kundensegment"}</span>
+            <strong>{segmentLabel(sec === "gas" ? assessment.segments_gas : assessment.segments_strom)}</strong>
+          </div>
+        ))}
         <div className="profile-summary-row"><span>Geschäftsprozess</span><strong>Lieferantenwechsel</strong></div>
       </div>
       <button className="text-button" onClick={onEdit} style={{ marginTop: 14 }}>

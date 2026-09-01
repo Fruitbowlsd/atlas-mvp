@@ -715,6 +715,12 @@ select.status-select {
   color: var(--text-muted);
 }
 
+/* Ein Segmentblock je gewaehlter Sparte. Der Abstand trennt die Bloecke
+   voneinander, ohne dass jeder ein eigenes form-field braeuchte. */
+.segment-block + .segment-block {
+  margin-top: 18px;
+}
+
 .fixed-value {
   font-size: 13.5px;
   background: var(--surface-sunken);
@@ -725,11 +731,6 @@ select.status-select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.fixed-hint {
-  font-size: 11px;
-  color: var(--text-muted);
 }
 
 /* Erklaerender Zusatz unter einem Eingabefeld -- im Gegensatz zu .fixed-hint

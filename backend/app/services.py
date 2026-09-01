@@ -71,7 +71,15 @@ _SECTOR_FLAGS = {
 # Zulaessiges Profil-Vokabular an einer Stelle (Abschnitt 14.2), damit
 # Validierung, Filterung und Seed nicht auseinanderlaufen.
 VALID_SEGMENTS = set(_SEGMENT_FLAGS)
+# Fachliche Lesereihenfolge, nicht alphabetisch.
+SEGMENT_ORDER = list(_SEGMENT_FLAGS)
 VALID_SECTORS = set(_SECTOR_FLAGS)
+# Nicht jedes Segment ergibt in jeder Sparte Sinn: intelligente Messsysteme sind
+# im Gas-Markt noch kein eigenes Segment, deshalb dort nicht angeboten (Issue #16).
+SEGMENTS_BY_SECTOR = {
+    "gas": {"slp", "rlm", "tlp"},
+    "strom": {"slp", "rlm", "imsys", "tlp"},
+}
 # Ausgeschrieben und nicht als Kuerzel, passend zum bestehenden Bestand --
 # "grund_ersatzversorger" und "beides" gibt es bereits und bleiben gueltig.
 VALID_MARKET_ROLES = {
@@ -84,47 +92,71 @@ VALID_MARKET_ROLES = {
 }
 
 
-def requirement_matches_profile(
-    req: models.Requirement, segments: set[str], sector: str | None = None
-) -> bool:
-    """Prueft, ob ein Requirement zum EVU-Profil passt (Abschnitt 14.2).
+# Ein EVU-Profil ist eine Zuordnung Sparte -> Segmente, z.B.
+# {"gas": {"slp", "rlm"}, "strom": {"imsys"}}.
+Profile = dict[str, set[str]]
 
-    ODER innerhalb der Segmente, UND zwischen den Dimensionen: wer SLP und RLM
-    beliefert, sieht die Anforderungen beider Segmente -- aber nur die seiner
-    Sparte. Genau so war die Regel schon fuer SLP/RLM gemeint, hier nur um die
-    Sparte erweitert.
 
-    sector=None laesst die Sparte bewusst offen. Das brauchen die Aufrufer, die
-    noch kein Assessment in der Hand haben, sondern nur rohe Requirements.
+def requirement_matches_profile(req: models.Requirement, profile: Profile) -> bool:
+    """Prueft, ob ein Requirement zum EVU-Profil passt (Abschnitt 14.2, Issue #16).
+
+    Die Pruefung laeuft JE SPARTE und nicht ueber die Vereinigung aller Segmente.
+    Der Unterschied ist nicht kosmetisch: bei "Gas(SLP) + Strom(iMSys)" wuerde
+    eine gemeinsame Menge {slp, imsys} eine Anforderung durchlassen, die nur fuer
+    Gas und nur fuer iMSys gilt -- eine Kombination, die dieser Kunde gar nicht
+    betreibt.
+
+    Innerhalb einer Sparte gilt ODER ueber die Segmente, zwischen Sparte und
+    Segment UND, ueber die Sparten wieder ODER.
     """
-    if sector is not None:
-        flag = _SECTOR_FLAGS.get(sector)
-        # Unbekannte Sparte: nichts durchlassen. Lieber ein sichtbar leeres
-        # Ergebnis als stillschweigend der falsche Katalog.
-        if flag is None or not getattr(req, flag, False):
-            return False
-
-    return any(getattr(req, _SEGMENT_FLAGS[s], False) for s in segments if s in _SEGMENT_FLAGS)
-
-
-def _is_relevant(
-    ar: models.AssessmentRequirement, segments: set[str], sector: str | None = None
-) -> bool:
-    return requirement_matches_profile(ar.requirement, segments, sector)
+    for sector, segments in profile.items():
+        sector_flag = _SECTOR_FLAGS.get(sector)
+        # Unbekannte Sparte: ueberspringen. Lieber ein sichtbar leeres Ergebnis
+        # als stillschweigend der falsche Katalog.
+        if sector_flag is None or not getattr(req, sector_flag, False):
+            continue
+        if any(getattr(req, _SEGMENT_FLAGS[s], False) for s in segments if s in _SEGMENT_FLAGS):
+            return True
+    return False
 
 
-def profile_of(assessment: models.Assessment) -> tuple[set[str], str | None]:
-    """Segmente und Sparte eines Assessments -- an einer Stelle gelesen, damit die
-    Relevanzfilterung in Score, Findings und Heatmap nicht auseinanderlaufen kann."""
-    segments = {s.strip() for s in (assessment.customer_segments or "").split(",") if s.strip()}
-    return segments, assessment.sector
+def _is_relevant(ar: models.AssessmentRequirement, profile: Profile) -> bool:
+    return requirement_matches_profile(ar.requirement, profile)
+
+
+def csv_set(value: str | None) -> set[str]:
+    return {s.strip() for s in (value or "").split(",") if s.strip()}
+
+
+def profile_of(assessment: models.Assessment) -> Profile:
+    """Das EVU-Profil eines Assessments -- an einer Stelle gelesen, damit die
+    Relevanzfilterung in Score, Findings, Heatmap und Impact-Vorschau nicht
+    auseinanderlaufen kann."""
+    per_sector = {
+        "gas": csv_set(assessment.segments_gas),
+        "strom": csv_set(assessment.segments_strom),
+    }
+    return {sector: per_sector.get(sector, set()) for sector in csv_set(assessment.sector)}
+
+
+def ordered_csv(values: set[str], order: list[str]) -> str:
+    """CSV in fachlicher statt alphabetischer Reihenfolge. sorted() lieferte
+    "rlm,slp" -- gelesen wird aber immer "SLP, RLM, TLP, iMSys"."""
+    return ",".join(v for v in order if v in values)
+
+
+def union_segments(profile: Profile) -> str:
+    """Vereinigung aller Segmente als CSV -- ausschliesslich fuer die Anzeige
+    (Kundenprofil, Admin-Tabelle, Sidebar). Nie Grundlage einer Filterung."""
+    seen = set().union(*profile.values()) if profile else set()
+    return ordered_csv(seen, list(_SEGMENT_FLAGS))
 
 
 def calculate_score(db: Session, assessment: models.Assessment) -> models.ScoreResult:
-    segments, sector = profile_of(assessment)
+    profile = profile_of(assessment)
     statuses = assessment.requirement_statuses
 
-    relevant = [ar for ar in statuses if _is_relevant(ar, segments, sector)]
+    relevant = [ar for ar in statuses if _is_relevant(ar, profile)]
 
     # --- Regulatorischer Abdeckungsgrad ---
     total_weight = sum(ar.requirement.weight for ar in relevant) or 1.0
@@ -183,11 +215,11 @@ def generate_findings(db: Session, assessment: models.Assessment) -> list[models
     # Alte Findings ersetzen, damit Neuberechnung konsistent bleibt.
     db.query(models.Finding).filter(models.Finding.assessment_id == assessment.id).delete()
 
-    segments, sector = profile_of(assessment)
+    profile = profile_of(assessment)
     findings = []
 
     for ar in assessment.requirement_statuses:
-        if not _is_relevant(ar, segments, sector):
+        if not _is_relevant(ar, profile):
             continue
         req = ar.requirement
 
@@ -228,7 +260,7 @@ def generate_findings(db: Session, assessment: models.Assessment) -> list[models
 
 
 def process_group_heatmap(db: Session, assessment: models.Assessment):
-    segments, sector = profile_of(assessment)
+    profile = profile_of(assessment)
     groups = db.query(models.ProcessGroup).order_by(models.ProcessGroup.sequence).all()
     status_by_req_id = {ar.requirement_id: ar for ar in assessment.requirement_statuses}
 
@@ -240,7 +272,7 @@ def process_group_heatmap(db: Session, assessment: models.Assessment):
         # Frueher stand die Regel hier als eigene if-Kette und musste bei jeder
         # neuen Dimension doppelt gepflegt werden -- jetzt dieselbe Funktion wie
         # ueberall sonst.
-        relevant_reqs = [r for r in reqs if requirement_matches_profile(r, segments, sector)]
+        relevant_reqs = [r for r in reqs if requirement_matches_profile(r, profile)]
 
         if not relevant_reqs:
             continue

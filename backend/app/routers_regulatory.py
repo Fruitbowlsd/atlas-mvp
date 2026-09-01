@@ -276,7 +276,7 @@ def get_regulatory_impact(
     if not upcoming:
         return schemas.RegulatoryImpactOut(has_upcoming_version=False, **version_context)
 
-    segments, sector = services.profile_of(assessment)
+    profile = services.profile_of(assessment)
 
     old_reqs_by_code = {
         r.code: r for r in db.query(models.Requirement).filter(
@@ -311,7 +311,7 @@ def get_regulatory_impact(
     newly_required = [
         schemas.RegulatoryImpactRequirementRef(requirement_code=e.requirement_code, title=e.title, pi_number=e.pi_number)
         for e in diff_entries
-        if e.change_type == "neu" and services.requirement_matches_profile(new_reqs_by_code[e.requirement_code], segments, sector)
+        if e.change_type == "neu" and services.requirement_matches_profile(new_reqs_by_code[e.requirement_code], profile)
     ]
 
     # Z: entfallen -- war implementiert, existiert im neuen Katalog nicht mehr.
@@ -326,12 +326,12 @@ def get_regulatory_impact(
     # fuer den heutigen Stand (identisch zum gespeicherten ScoreResult) und einmal
     # projiziert auf den neuen Katalog (implementiert bleibt implementiert, neue
     # Codes gelten als noch nicht implementiert).
-    relevant_old = [ar for ar in assessment.requirement_statuses if services.requirement_matches_profile(ar.requirement, segments, sector)]
+    relevant_old = [ar for ar in assessment.requirement_statuses if services.requirement_matches_profile(ar.requirement, profile)]
     total_old_weight = sum(ar.requirement.weight for ar in relevant_old) or 1.0
     covered_old_weight = sum(ar.requirement.weight for ar in relevant_old if ar.implementation_status == "implementiert")
     current_coverage = round(100 * covered_old_weight / total_old_weight, 1)
 
-    relevant_new = [r for r in new_reqs_by_code.values() if services.requirement_matches_profile(r, segments, sector)]
+    relevant_new = [r for r in new_reqs_by_code.values() if services.requirement_matches_profile(r, profile)]
     total_new_weight = sum(r.weight for r in relevant_new) or 1.0
     covered_new_weight = sum(
         r.weight for r in relevant_new
