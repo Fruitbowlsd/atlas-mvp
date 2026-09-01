@@ -175,10 +175,19 @@ class Assessment(Base):
     # Begruendung wie bei tenant_id: die Relevanzfilterung laeuft ueber das
     # Assessment und soll dafuer keinen Join brauchen. Beim Anlegen aus dem
     # Customer uebernommen.
-    sector = Column(String, default="gas")                  # "gas" | "strom"
-    # Mehrfachauswahl als CSV-Menge: slp,rlm,imsys,tlp. Bewusst keine eigene
-    # Tabelle -- die Werte werden ausnahmslos als Ganzes gelesen und wieder
-    # geschrieben, ein Join brächte hier nichts.
+    # Sparten als CSV-Menge: "gas" | "strom" | "gas,strom". Stadtwerke betreiben
+    # oft beides; der bisherige Einzelwert bleibt als einelementige Menge gueltig,
+    # deshalb dieselbe Spalte statt einer neuen.
+    sector = Column(String, default="gas")
+    # Segmente je Sparte, bewusst getrennt statt einer gemeinsamen Menge: bei
+    # "Gas(SLP) + Strom(iMSys)" wuerde eine gemeinsame Menge {slp,imsys} eine
+    # Anforderung durchlassen, die nur fuer Gas UND nur fuer iMSys gilt -- eine
+    # Kombination, die dieser Kunde gar nicht hat.
+    segments_gas = Column(String, default="")      # slp,rlm,tlp
+    segments_strom = Column(String, default="")    # slp,rlm,imsys,tlp
+    # Vereinigung beider Mengen, NUR zur Anzeige (Kundenprofil, Admin-Tabelle,
+    # Sidebar). Wird an genau einer Stelle beim Speichern mitgeschrieben und ist
+    # nie Grundlage einer Filterung -- dafuer sind die beiden Felder oben da.
     customer_segments = Column(String, default="slp,rlm")
     status = Column(String, default="in_bearbeitung")
     created_at = Column(DateTime, default=datetime.utcnow)

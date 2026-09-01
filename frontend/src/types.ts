@@ -100,7 +100,10 @@ export interface AssessmentOut {
   customer_id: number;
   customer_name: string | null;
   market_role: MarketRole | null;
-  sector: Sector | null;
+  /** CSV-Menge der Sparten: "gas" | "strom" | "gas,strom". */
+  sector: string | null;
+  segments_gas: string | null;
+  segments_strom: string | null;
   business_scenario: string;
   customer_segments: string;
   status: string;
@@ -124,8 +127,10 @@ export interface AssessmentHistoryItem {
 export interface AssessmentCreate {
   customer_name: string;
   market_role: MarketRole;
-  sector: Sector;
-  customer_segments: string;
+  /** CSV-Menge der Sparten. */
+  sector: string;
+  segments_gas: string;
+  segments_strom: string;
   business_scenario?: string;
   regulatory_version_id: number;
 }

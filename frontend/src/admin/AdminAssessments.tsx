@@ -2,6 +2,14 @@ import { useEffect, useState } from "react";
 import { api } from "../api/client";
 import type { AdminAssessmentRow, AssessmentDetail, AssessmentType, Tenant } from "../types";
 
+const SECTOR_LABEL: Record<string, string> = { gas: "Gas", strom: "Strom" };
+
+/* Eigene Labels statt toUpperCase(): daraus wuerde sonst "IMSYS". */
+const SEGMENT_LABEL: Record<string, string> = { slp: "SLP", rlm: "RLM", imsys: "iMSys", tlp: "TLP" };
+
+const csvLabels = (csv: string | null, labels: Record<string, string>) =>
+  (csv ?? "").split(",").filter(Boolean).map((v) => labels[v] ?? v.toUpperCase()).join(" & ") || "—";
+
 const TYPE_LABEL: Record<AssessmentType, string> = {
   readiness: "Readiness",
   compliance: "Compliance",
@@ -111,8 +119,12 @@ export function AdminAssessments() {
                 <strong>{detail.assessment.assessment_type ? TYPE_LABEL[detail.assessment.assessment_type] : "—"}</strong>
               </div>
               <div className="profile-summary-row">
+                <span>Sparte</span>
+                <strong>{csvLabels(detail.assessment.sector, SECTOR_LABEL)}</strong>
+              </div>
+              <div className="profile-summary-row">
                 <span>Kundensegment</span>
-                <strong>{detail.assessment.customer_segments.split(",").map((s) => s.toUpperCase()).join(" & ")}</strong>
+                <strong>{csvLabels(detail.assessment.customer_segments, SEGMENT_LABEL)}</strong>
               </div>
               <div className="profile-summary-row">
                 <span>Abdeckungsgrad</span><strong>{pct(detail.score?.regulatory_coverage ?? null)}</strong>

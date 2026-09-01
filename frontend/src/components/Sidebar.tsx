@@ -34,6 +34,13 @@ interface Props {
 
 const SECTOR_LABEL: Record<string, string> = { gas: "Gas", strom: "Strom" };
 
+const SEGMENT_LABEL: Record<string, string> = {
+  slp: "SLP",
+  rlm: "RLM",
+  imsys: "iMSys",
+  tlp: "TLP",
+};
+
 const SIDEBAR_ROLE_LABEL: Record<string, string> = {
   lieferant: "Lieferant",
   grund_ersatzversorger: "Grund- und Ersatzversorger",
@@ -43,14 +50,21 @@ const SIDEBAR_ROLE_LABEL: Record<string, string> = {
   bilanzkreisverantwortlicher: "Bilanzkreisverantwortlicher",
 };
 
-/** "Gas · SLP & RLM · Lieferant" -- kompakt genug fuer die schmale Sidebar. */
+const csvLabels = (csv: string | null, labels?: Record<string, string>) =>
+  (csv ?? "")
+    .split(",")
+    .filter(Boolean)
+    .map((v) => labels?.[v] ?? v.toUpperCase())
+    .join(" & ");
+
+/** "Gas & Strom · SLP & RLM · Lieferant" -- kompakt genug fuer die schmale
+ *  Sidebar. Die Segmente stehen hier bewusst als Vereinigung: die Aufschluesselung
+ *  je Sparte steht im Kundenprofil, hier waere sie zu lang. */
 function profileLine(a: AssessmentOut): string {
   const parts = [
-    a.sector ? SECTOR_LABEL[a.sector] ?? a.sector : null,
-    a.customer_segments
-      ? a.customer_segments.split(",").filter(Boolean).map((s) => s.toUpperCase()).join(" & ")
-      : null,
-    a.market_role ? SIDEBAR_ROLE_LABEL[a.market_role] ?? a.market_role : null,
+    csvLabels(a.sector, SECTOR_LABEL),
+    csvLabels(a.customer_segments, SEGMENT_LABEL),
+    a.market_role ? SIDEBAR_ROLE_LABEL[a.market_role] ?? a.market_role : "",
   ].filter(Boolean);
   return parts.join(" · ");
 }

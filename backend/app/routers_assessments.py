@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session, joinedload
 from .database import get_db
 from . import models, schemas, services
 from .auth import require_auth, get_current_tenant_id
-from .services import VALID_MARKET_ROLES, VALID_SECTORS, VALID_SEGMENTS
+from .services import SEGMENT_ORDER, SEGMENTS_BY_SECTOR, VALID_MARKET_ROLES, VALID_SECTORS
 
 router = APIRouter(prefix="/api/assessments", tags=["assessments"], dependencies=[Depends(require_auth)])
 # Kundenbezogene Endpunkte -- ein Kunde kann mehrere Assessments haben (Abschnitt 12.3)
@@ -59,6 +59,8 @@ def _to_assessment_out(assessment: models.Assessment, db: Session) -> schemas.As
         customer_name=assessment.customer.name if assessment.customer else None,
         market_role=assessment.customer.market_role if assessment.customer else None,
         sector=assessment.sector,
+        segments_gas=assessment.segments_gas,
+        segments_strom=assessment.segments_strom,
         business_scenario=assessment.business_scenario,
         customer_segments=assessment.customer_segments,
         status=assessment.status,
@@ -69,12 +71,45 @@ def _to_assessment_out(assessment: models.Assessment, db: Session) -> schemas.As
     )
 
 
+def _profile_from_payload(payload: schemas.AssessmentCreate) -> services.Profile:
+    """Baut das EVU-Profil aus der Anfrage und validiert es (Issue #16).
+
+    Waerme fehlt bewusst in VALID_SECTORS: fuer Waermeversorgung gibt es keine
+    regulierten Marktkommunikationsprozesse im Sinne der BNetzA-Mitteilungen.
+    """
+    sectors = services.csv_set(payload.sector)
+    if not sectors or not sectors.issubset(VALID_SECTORS):
+        raise HTTPException(
+            status_code=400,
+            detail=f"sector muss mindestens eine Sparte aus {sorted(VALID_SECTORS)} enthalten",
+        )
+
+    per_sector = {
+        "gas": services.csv_set(payload.segments_gas),
+        "strom": services.csv_set(payload.segments_strom),
+    }
+    profile = {sector: per_sector[sector] for sector in sectors}
+
+    for sector, segments in profile.items():
+        allowed = SEGMENTS_BY_SECTOR[sector]
+        if not segments:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Fuer die Sparte '{sector}' muss mindestens ein Kundensegment gewaehlt sein",
+            )
+        if not segments.issubset(allowed):
+            raise HTTPException(
+                status_code=400,
+                detail=f"Segmente fuer '{sector}' duerfen nur {sorted(allowed)} enthalten",
+            )
+    return profile
+
+
 def _create_assessment_for(
     db: Session,
     customer: models.Customer,
     reg_version: models.RegulatoryVersion,
-    segments_csv: str,
-    segments: set[str],
+    profile: services.Profile,
 ) -> models.Assessment:
     """Legt ein Assessment samt seiner AssessmentRequirement-Zeilen an. Gemeinsam
     genutzt vom Wizard (neuer Kunde) und vom Anlegen eines weiteren Assessments
@@ -83,9 +118,12 @@ def _create_assessment_for(
         customer_id=customer.id,
         tenant_id=customer.tenant_id,  # nie unabhaengig setzen -- immer vom Kunden
         regulatory_version_id=reg_version.id,
-        business_scenario="lieferantenwechsel",  # im MVP fest
-        sector=customer.sector,   # nie unabhaengig setzen -- immer vom Kunden
-        customer_segments=segments_csv,
+        business_scenario="lieferantenwechsel",
+        sector=services.ordered_csv(set(profile), ["gas", "strom"]),
+        segments_gas=services.ordered_csv(profile.get("gas", set()), SEGMENT_ORDER),
+        segments_strom=services.ordered_csv(profile.get("strom", set()), SEGMENT_ORDER),
+        # Die einzige Stelle, an der die Anzeige-Vereinigung geschrieben wird.
+        customer_segments=services.union_segments(profile),
         status="in_bearbeitung",
     )
     db.add(assessment)
@@ -95,7 +133,7 @@ def _create_assessment_for(
         models.Requirement.regulatory_version_id == reg_version.id
     ).all()
     for req in requirements:
-        if not services.requirement_matches_profile(req, segments, customer.sector):
+        if not services.requirement_matches_profile(req, profile):
             continue
         db.add(models.AssessmentRequirement(
             assessment_id=assessment.id,
@@ -116,19 +154,7 @@ def create_assessment(
             status_code=400, detail=f"market_role muss einer von {sorted(VALID_MARKET_ROLES)} sein"
         )
 
-    # Waerme fehlt hier bewusst: fuer Waermeversorgung gibt es keine regulierten
-    # Marktkommunikationsprozesse im Sinne der BNetzA-Mitteilungen (Abschnitt 14.2).
-    if payload.sector not in VALID_SECTORS:
-        raise HTTPException(
-            status_code=400, detail=f"sector muss einer von {sorted(VALID_SECTORS)} sein"
-        )
-
-    segments = {s.strip() for s in payload.customer_segments.split(",") if s.strip()}
-    if not segments or not segments.issubset(VALID_SEGMENTS):
-        raise HTTPException(
-            status_code=400,
-            detail=f"customer_segments duerfen nur {sorted(VALID_SEGMENTS)} enthalten",
-        )
+    profile = _profile_from_payload(payload)
 
     # Gegen welchen regulatorischen Stand gemessen wird, waehlt der Nutzer jetzt
     # explizit im Wizard (Abschnitt 12.4) -- vorher war das implizit immer die
@@ -142,13 +168,13 @@ def create_assessment(
     customer = models.Customer(
         name=payload.customer_name,
         market_role=payload.market_role,
-        sector=payload.sector,
+        sector=services.ordered_csv(set(profile), ["gas", "strom"]),
         tenant_id=tenant_id,
     )
     db.add(customer)
     db.flush()
 
-    assessment = _create_assessment_for(db, customer, reg_version, payload.customer_segments, segments)
+    assessment = _create_assessment_for(db, customer, reg_version, profile)
 
     db.commit()
     db.refresh(assessment)
@@ -225,10 +251,17 @@ def create_assessment_for_customer(
         .order_by(models.Assessment.created_at.desc())
         .first()
     )
-    segments_csv = latest.customer_segments if latest else "slp,rlm"
-    segments = {s.strip() for s in segments_csv.split(",") if s.strip()}
+    # Profil vom juengsten Assessment uebernehmen. Ohne ein solches faellt der
+    # Kunde auf seine Sparte mit den Standardsegmenten zurueck.
+    if latest:
+        profile = services.profile_of(latest)
+    else:
+        profile = {
+            sector: SEGMENTS_BY_SECTOR[sector] & {"slp", "rlm"}
+            for sector in services.csv_set(customer.sector) or {"gas"}
+        }
 
-    assessment = _create_assessment_for(db, customer, reg_version, segments_csv, segments)
+    assessment = _create_assessment_for(db, customer, reg_version, profile)
     db.commit()
     db.refresh(assessment)
     assessment.customer = customer
