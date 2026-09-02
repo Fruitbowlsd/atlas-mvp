@@ -357,8 +357,26 @@ class RegulatoryChangeTechnologyMapping(Base):
 
 class MessageDefinition(Base):
     """Ein Nachrichtentyp in einer konkreten regulatorischen Fassung -- z.B.
-    UTILMD in D:11A:UN:G1.1 fuer Gas."""
+    UTILMD in D:11A:UN:G1.1 fuer Gas.
+
+    Granularitaet ist bewusst EIN Eintrag je Pruefidentifikator, nicht je
+    Anwendungsuebersicht: eine AHB-Tabelle wie "Anmeldung" fuehrt 44001, 44002
+    und 44003 nebeneinander und vergibt fuer dasselbe Feld je PI
+    unterschiedliche Muss/Soll/Kann-Auspraegungen. Eine MessageDefinition je
+    Tabelle wuerde genau diese Unterscheidung einebnen.
+    """
     __tablename__ = "message_definitions"
+    # Regulatorische Identitaet (Abschnitt 7 des Auftrags): derselbe PI in einer
+    # anderen Fassung ist fachlich NICHT dasselbe Objekt, deshalb gehoert die
+    # Version in den Schluessel. quelle_kapitel ist mit drin, weil ein PI in
+    # mehreren Anwendungsuebersichten auftauchen kann (z.B. 44111 in 5.11.3 und
+    # 5.12.4) und beide Vorkommen eigenstaendige Auspraegungen sind.
+    __table_args__ = (
+        UniqueConstraint(
+            "regulatory_version_id", "nachrichtentyp", "pi_nummer", "quelle_kapitel",
+            name="uq_message_definition_per_version_pi_chapter",
+        ),
+    )
 
     id = Column(Integer, primary_key=True)
     regulatory_version_id = Column(Integer, ForeignKey("regulatory_versions.id"), nullable=False)
@@ -366,8 +384,24 @@ class MessageDefinition(Base):
     version = Column(String)                          # z.B. "D:11A:UN:G1.1"
     sparte = Column(String, default="gas")            # "gas" | "strom"
     beschreibung = Column(Text)
+    # Pruefidentifikator. pi_nummer ist die im Dokument gedruckte Nummer und wird
+    # IMMER gefuellt; pi_id bleibt NULL, solange der PI nicht im kuratierten
+    # ProcessIdentifier-Katalog steht. Bewusst so herum: der Katalog wird nicht
+    # automatisch aus dem PDF erweitert (das waere geraten), die Information aus
+    # dem Dokument geht aber trotzdem nicht verloren.
+    pi_nummer = Column(String)
+    pi_id = Column(Integer, ForeignKey("process_identifiers.id"), nullable=True)
+    # Provenance (Abschnitt 6.2). quelle_hash ist der SHA-256 der Originaldatei
+    # und traegt zugleich die Re-Import-Erkennung (Abschnitt 15).
+    quelle_dokument = Column(String)
+    quelle_hash = Column(String)
+    quelle_kapitel = Column(String)
+    quelle_kapitel_titel = Column(String)
+    quelle_seite_von = Column(Integer)
+    quelle_seite_bis = Column(Integer)
 
     regulatory_version = relationship("RegulatoryVersion")
+    pi = relationship("ProcessIdentifier")
     segments = relationship(
         "MessageSegment", back_populates="message_definition", order_by="MessageSegment.position"
     )
@@ -387,6 +421,20 @@ class MessageSegment(Base):
     pflicht = Column(Boolean, default=False)
     kardinalitaet = Column(String)                    # "1" | "0..1" | "1..9"
     wiederholbar = Column(Boolean, default=False)
+    # Segmentgruppe und AHB-Zeilennummer stehen im Dokument in eigenen Spalten
+    # ("SG4" / "00022") und sind die Adresse, unter der ein Mensch die Zeile im
+    # PDF wiederfindet -- deshalb erhalten, nicht in segment_code mischen.
+    segmentgruppe = Column(String)                    # "SG4"
+    ahb_zeile = Column(String)                        # "00022"
+    # pflicht (Boolean) kann Muss/Soll/Kann nicht unterscheiden. Die Spalte
+    # bleibt fuer bestehende Leser erhalten (Muss -> True), die volle
+    # Auspraegung steht in pflichtigkeit -- Abschnitt 12 verlangt, dass die
+    # Pflichtigkeit fuer den spaeteren Validator nicht verlorengeht.
+    pflichtigkeit = Column(String)                    # "Muss" | "Soll" | "Kann"
+    bedingung = Column(Text)                          # aufgeloeste Fussnoten
+    bedingung_raw = Column(Text)                      # Zellinhalt, z.B. "Muss [28] ∧ [64]"
+    bedingung_referenzen = Column(String)             # "28,64"
+    quelle_seite = Column(Integer)
 
     message_definition = relationship("MessageDefinition", back_populates="segments")
     fields = relationship("MessageField", back_populates="segment")
@@ -412,6 +460,15 @@ class MessageField(Base):
     # ("nur bei Transaktionsgrund E03"). Bewusst Text und keine Regelsprache --
     # welche Formen wirklich vorkommen, weiss erst die Grundanalyse.
     bedingung = Column(Text)
+    # bedingung_raw ist der unveraenderte Zellinhalt ("X [931] [494]") und darf
+    # laut Abschnitt 6.2/8 NIE verworfen werden: die Aufloesung in bedingung ist
+    # eine Interpretation, der Rohwert bleibt die pruefbare Quelle.
+    bedingung_raw = Column(Text)
+    bedingung_referenzen = Column(String)             # "931,494"
+    segmentgruppe = Column(String)                    # "SG4"
+    code = Column(String)                             # Qualifier, z.B. "92", "E01", "Z36"
+    pflichtigkeit = Column(String)                    # "X" wenn im PI genutzt, sonst leer
+    quelle_seite = Column(Integer)
 
     segment = relationship("MessageSegment", back_populates="fields")
     codelist = relationship("CodeList")

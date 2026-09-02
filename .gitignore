@@ -9,3 +9,7 @@ backend/app/static/
 
 .env
 .DS_Store
+
+# Regulatorische Quelldokumente (mehrere MB, aus offiziellen Quellen beziehbar --
+# siehe backend/data/regulatory/README.md). Der SHA-256 steht in der Wissensbasis.
+backend/data/regulatory/*.pdf
