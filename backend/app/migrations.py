@@ -65,6 +65,37 @@ _PENDING_COLUMNS = {
         ("sso_tenant_id", "VARCHAR"),
         ("is_active", "BOOLEAN DEFAULT TRUE"),
     ],
+    # Regulatory-Extraction-Pipeline (Issue #40): Pruefidentifikator-Bezug und
+    # Provenance an der Wissensbasis. Die drei Tabellen waren bisher leer, die
+    # Spalten sind trotzdem als ALTER TABLE formuliert -- lokale Entwicklungs-
+    # datenbanken haben die (leeren) Tabellen bereits im alten Schema angelegt.
+    "message_definitions": [
+        ("pi_nummer", "VARCHAR"),
+        ("pi_id", "INTEGER"),
+        ("quelle_dokument", "VARCHAR"),
+        ("quelle_hash", "VARCHAR"),
+        ("quelle_kapitel", "VARCHAR"),
+        ("quelle_kapitel_titel", "VARCHAR"),
+        ("quelle_seite_von", "INTEGER"),
+        ("quelle_seite_bis", "INTEGER"),
+    ],
+    "message_segments": [
+        ("segmentgruppe", "VARCHAR"),
+        ("ahb_zeile", "VARCHAR"),
+        ("pflichtigkeit", "VARCHAR"),
+        ("bedingung", "TEXT"),
+        ("bedingung_raw", "TEXT"),
+        ("bedingung_referenzen", "VARCHAR"),
+        ("quelle_seite", "INTEGER"),
+    ],
+    "message_fields": [
+        ("bedingung_raw", "TEXT"),
+        ("bedingung_referenzen", "VARCHAR"),
+        ("segmentgruppe", "VARCHAR"),
+        ("code", "VARCHAR"),
+        ("pflichtigkeit", "VARCHAR"),
+        ("quelle_seite", "INTEGER"),
+    ],
 }
 
 # Neu hinzugekommene updated_at-Spalten waeren fuer Bestandszeilen NULL -- die
@@ -126,6 +157,29 @@ def run_light_migrations(engine: Engine) -> None:
                 ))
 
     _migrate_requirement_code_uniqueness(engine)
+    _ensure_message_definition_uniqueness(engine)
+
+
+def _ensure_message_definition_uniqueness(engine: Engine) -> None:
+    """Doppelte MessageDefinition je (Version, Nachrichtentyp, PI, Kapitel)
+    verhindern -- Abschnitt 15/19 des Auftrags: ein erneuter Import derselben
+    Datei darf keine unkontrollierten Duplikate erzeugen.
+
+    Bewusst als UNIQUE INDEX und nicht als Tabellen-Constraint: SQLite kann
+    einer bestehenden Tabelle per ALTER TABLE keinen Constraint hinzufuegen,
+    ein Tabellen-Rebuild waere fuer diesen Zweck unverhaeltnismaessig. Der
+    Index wirkt in SQLite wie in Postgres identisch; das __table_args__ im
+    Modell greift zusaetzlich fuer frisch angelegte Datenbanken.
+    """
+    inspector = inspect(engine)
+    if "message_definitions" not in inspector.get_table_names():
+        return  # create_all() legt die Tabelle gleich mit dem Constraint an
+
+    with engine.begin() as conn:
+        conn.execute(text(
+            "CREATE UNIQUE INDEX IF NOT EXISTS uq_message_definition_per_version_pi_chapter "
+            "ON message_definitions (regulatory_version_id, nachrichtentyp, pi_nummer, quelle_kapitel)"
+        ))
 
 
 def _migrate_requirement_code_uniqueness(engine: Engine) -> None:
