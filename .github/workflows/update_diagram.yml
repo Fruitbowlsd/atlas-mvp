@@ -1,0 +1,59 @@
+name: Klassendiagramm aktualisieren
+
+on:
+  push:
+    branches: [main]
+
+# Der Repo-Default fuer GITHUB_TOKEN steht auf "read" -- hier explizit auf
+# Schreibrechte anheben, damit der Bot den aktualisierten Diagramm-Commit
+# nach main pushen kann. Ein zusaetzliches Secret ist dafuer nicht noetig.
+permissions:
+  contents: write
+
+# Zwei kurz aufeinanderfolgende Merges wuerden sonst gegeneinander pushen.
+concurrency:
+  group: update-diagram-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update-diagram:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # scripts/generate_diagram.py parst backend/app/models.py rein statisch
+      # per ast und braucht daher keine Abhaengigkeiten aus
+      # backend/requirements.txt -- kein pip install noetig.
+      - name: Klassendiagramm generieren
+        run: python scripts/generate_diagram.py
+
+      - name: Auf Aenderungen pruefen
+        id: diff
+        run: |
+          if git diff --quiet docs/class_diagram.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Diagramm ist unveraendert -- nichts zu committen."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Diagramm hat sich geaendert:"
+            git --no-pager diff --stat docs/class_diagram.md
+          fi
+
+      # [skip ci] verhindert, dass dieser Push den Workflow erneut ausloest.
+      - name: Aenderung committen
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/class_diagram.md
+          git commit -m "chore: update class diagram [skip ci]"
+          git push

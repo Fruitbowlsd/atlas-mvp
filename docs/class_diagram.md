@@ -109,6 +109,15 @@ classDiagram
 
 Alle Felder mit Datentypen, gruppiert nach fachlicher Ebene.
 
+> **Automatisch generiert — nicht von Hand bearbeiten.**
+> Der folgende Block wird von [`scripts/generate_diagram.py`](../scripts/generate_diagram.py)
+> aus `backend/app/models.py` erzeugt und bei jedem Merge auf `main` von der GitHub Action
+> [`update_diagram.yml`](../.github/workflows/update_diagram.yml) aktualisiert. Änderungen
+> innerhalb der Marker gehen beim nächsten Lauf verloren — stattdessen das Modell oder das
+> Script anpassen. Alles ausserhalb der Marker ist handgepflegt und bleibt unangetastet.
+
+<!-- BEGIN GENERATED: class-diagram -->
+
 ```mermaid
 classDiagram
     direction TB
@@ -242,7 +251,6 @@ classDiagram
             +int regulatory_version_id
             +datetime created_at
             +datetime updated_at
-            +effective_message_type() str
         }
 
         class Requirement {
@@ -286,7 +294,7 @@ classDiagram
     }
 
     %% =====================================================================
-    %% Gruppe 3b — Technology Intelligence / Ebene 2 (Tabellen leer)
+    %% Gruppe 3b — Technology Intelligence / Ebene 2
     %% =====================================================================
     namespace G3b_Technology_Intelligence {
         class TechnologySystem {
@@ -311,7 +319,7 @@ classDiagram
     }
 
     %% =====================================================================
-    %% Gruppe 4 — Wissensbasis EDIFACT (Abschnitt 14.2, Tabellen noch leer)
+    %% Gruppe 4 — Wissensbasis EDIFACT (Abschnitt 14.2)
     %% =====================================================================
     namespace G4_Wissensbasis_EDIFACT {
         class MessageDefinition {
@@ -387,7 +395,7 @@ classDiagram
     }
 
     %% =====================================================================
-    %% Gruppe 5 — Testkonstellationen (Abschnitt 14.2, Tabellen noch leer)
+    %% Gruppe 5 — Testkonstellationen (Abschnitt 14.2)
     %% =====================================================================
     namespace G5_Testkonstellationen {
         class Testkonstellation {
@@ -417,12 +425,58 @@ classDiagram
     }
 
     %% =====================================================================
-    %% Gruppe 6 — Monitoring
-    %% GEPLANT: existiert noch nicht in models.py. Pipeline-Schritt 1 aus
-    %% Abschnitt 11.2 ("Datei-Hash vs. letzter bekannter Stand"), im Backlog
-    %% als Punkt 24 mit Auslöser "erster Pilotkunde" (Abschnitt 15.4).
+    %% Beziehungen — aus den ForeignKey-Spalten abgeleitet
     %% =====================================================================
-    namespace G6_Monitoring {
+    RegulatoryVersion "0..*" --> "0..1" RegulatoryVersion : predecessor_version_id
+    ProcessIdentifier "0..*" --> "0..1" ProcessGroup : process_group_id
+    Requirement "0..*" --> "0..1" ProcessIdentifier : pi_id
+    Requirement "0..*" --> "0..1" RegulatoryVersion : regulatory_version_id
+    User "0..*" --> "1" Tenant : tenant_id
+    Customer "0..*" --> "0..1" Tenant : tenant_id
+    Assessment "0..*" --> "0..1" Customer : customer_id
+    Assessment "0..*" --> "0..1" Tenant : tenant_id
+    Assessment "0..*" --> "0..1" RegulatoryVersion : regulatory_version_id
+    AssessmentRequirement "0..*" --> "0..1" Assessment : assessment_id
+    AssessmentRequirement "0..*" --> "0..1" Requirement : requirement_id
+    ScoreResult "0..*" --> "0..1" Assessment : assessment_id
+    Finding "0..*" --> "0..1" Assessment : assessment_id
+    Finding "0..*" --> "0..1" Requirement : requirement_id
+    RegulatoryChange "0..*" --> "0..1" ProcessGroup : process_group_id
+    RegulatoryChange "0..*" --> "0..1" ProcessIdentifier : pi_id
+    RegulatoryChange "0..*" --> "1" RegulatoryVersion : regulatory_version_id
+    TechnologyReleaseNote "0..*" --> "1" TechnologySystem : technology_system_id
+    RegulatoryChangeTechnologyMapping "0..*" --> "1" RegulatoryChange : regulatory_change_id
+    RegulatoryChangeTechnologyMapping "0..*" --> "1" TechnologyReleaseNote : technology_release_note_id
+    MessageDefinition "0..*" --> "1" RegulatoryVersion : regulatory_version_id
+    MessageDefinition "0..*" --> "0..1" ProcessIdentifier : pi_id
+    MessageSegment "0..*" --> "1" MessageDefinition : message_definition_id
+    MessageField "0..*" --> "1" MessageSegment : segment_id
+    MessageField "0..*" --> "0..1" CodeList : codelist_id
+    CodeList "0..*" --> "1" RegulatoryVersion : regulatory_version_id
+    CodeListEntry "0..*" --> "1" CodeList : codelist_id
+    Testkonstellation "0..*" --> "1" RegulatoryVersion : regulatory_version_id
+    Testkonstellation "0..*" --> "0..1" ProcessIdentifier : prozess_pi_id
+    TestkonstellationSchritt "0..*" --> "1" Testkonstellation : konstellation_id
+```
+
+<!-- END GENERATED: class-diagram -->
+
+---
+
+## 2b. Geplante Entitäten (handgepflegt)
+
+Konzeptioneller Vorgriff: Diese Entitäten existieren noch **nicht** in `models.py` und
+können daher nicht generiert werden. Sie stehen bewusst ausserhalb der Marker.
+
+### Gruppe 6 — Monitoring
+
+Pipeline-Schritt 1 aus Abschnitt 11.2 ("Datei-Hash vs. letzter bekannter Stand"), im
+Backlog als Punkt 24 mit Auslöser "erster Pilotkunde" (Abschnitt 15.4).
+
+```mermaid
+classDiagram
+    direction TB
+
         class AnnouncedRelease {
             <<GEPLANT>>
             +int id
@@ -440,67 +494,6 @@ classDiagram
         }
     }
 
-    %% ---------------------------------------------------------------------
-    %% Beziehungen Gruppe 1 -> Gruppe 2
-    %% ---------------------------------------------------------------------
-    Tenant "1" --> "0..*" User : hat Nutzer
-    Tenant "1" --> "0..*" Customer : hat Kunden
-    Tenant "1" --> "0..*" Assessment : denormalisiert
-
-    %% ---------------------------------------------------------------------
-    %% Beziehungen innerhalb Gruppe 2
-    %% ---------------------------------------------------------------------
-    Customer "1" --> "0..*" Assessment : mehrere Testläufe
-    Assessment "1" *-- "0..*" AssessmentRequirement : Status je Anforderung
-    Assessment "1" *-- "0..1" ScoreResult : genau ein Ergebnis
-    Assessment "1" *-- "0..*" Finding
-
-    %% ---------------------------------------------------------------------
-    %% Beziehungen Gruppe 2 -> Gruppe 3
-    %% ---------------------------------------------------------------------
-    Assessment "0..*" --> "1" RegulatoryVersion : geprüft gegen
-    AssessmentRequirement "0..*" --> "1" Requirement
-    Finding "0..*" --> "1" Requirement
-
-    %% ---------------------------------------------------------------------
-    %% Beziehungen innerhalb Gruppe 3
-    %% ---------------------------------------------------------------------
-    ProcessGroup "1" --> "0..*" ProcessIdentifier
-    ProcessIdentifier "1" --> "0..*" Requirement
-    RegulatoryVersion "1" --> "0..*" Requirement : unique code je Version
-    RegulatoryVersion "1" --> "0..*" RegulatoryChange
-    RegulatoryVersion "0..1" --> "0..*" RegulatoryVersion : Vorgängerversion
-    RegulatoryChange "0..*" --> "0..1" ProcessGroup
-    RegulatoryChange "0..*" --> "0..1" ProcessIdentifier
-
-    %% ---------------------------------------------------------------------
-    %% Beziehungen Gruppe 3b (N:M über Mapping-Tabelle)
-    %% ---------------------------------------------------------------------
-    TechnologySystem "1" --> "0..*" TechnologyReleaseNote
-    RegulatoryChange "1" --> "0..*" RegulatoryChangeTechnologyMapping : n-zu-m
-    TechnologyReleaseNote "1" --> "0..*" RegulatoryChangeTechnologyMapping : n-zu-m
-
-    %% ---------------------------------------------------------------------
-    %% Beziehungen Gruppe 4
-    %% ---------------------------------------------------------------------
-    RegulatoryVersion "1" --> "0..*" MessageDefinition
-    MessageDefinition "0..*" --> "0..1" ProcessIdentifier : pi_id optional
-    MessageDefinition "1" *-- "0..*" MessageSegment : geordnet
-    MessageSegment "1" *-- "0..*" MessageField
-    MessageField "0..*" --> "0..1" CodeList : erlaubte Werte
-    RegulatoryVersion "1" --> "0..*" CodeList
-    CodeList "1" *-- "0..*" CodeListEntry
-
-    %% ---------------------------------------------------------------------
-    %% Beziehungen Gruppe 5
-    %% ---------------------------------------------------------------------
-    RegulatoryVersion "1" --> "0..*" Testkonstellation
-    Testkonstellation "0..*" --> "0..1" ProcessIdentifier
-    Testkonstellation "1" *-- "0..*" TestkonstellationSchritt : geordnet
-
-    %% ---------------------------------------------------------------------
-    %% Beziehungen Gruppe 6 (GEPLANT)
-    %% ---------------------------------------------------------------------
     AnnouncedRelease "0..*" --> "0..1" RegulatoryVersion : erzeugt bei Kuration
 ```
 
