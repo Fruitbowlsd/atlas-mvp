@@ -399,6 +399,12 @@ class MessageDefinition(Base):
     quelle_kapitel_titel = Column(String)
     quelle_seite_von = Column(Integer)
     quelle_seite_bis = Column(Integer)
+    # Herkunft der Grammatik (ADR-001). "MIG" kennzeichnet eine generische, NICHT
+    # an einen Pruefidentifikator gebundene Nachrichtenstruktur; NULL heisst
+    # "nicht aus der MIG" und gilt damit fuer den gesamten AHB-Bestand. Der wird
+    # bewusst nicht nachtraeglich umgeschrieben -- die Herkunft bereits
+    # importierter Daten wird nicht rueckwirkend umgedeutet.
+    grammatik_quelle = Column(String)                 # "MIG" | NULL
 
     regulatory_version = relationship("RegulatoryVersion")
     pi = relationship("ProcessIdentifier")
@@ -435,6 +441,42 @@ class MessageSegment(Base):
     bedingung_raw = Column(Text)                      # Zellinhalt, z.B. "Muss [28] ∧ [64]"
     bedingung_referenzen = Column(String)             # "28,64"
     quelle_seite = Column(Integer)
+    # --- Ab hier: generische Nachrichtengrammatik aus der MIG (ADR-001).
+    # Von der AHB-Extraktion nicht befuellt, von der MIG-Extraktion immer.
+    #
+    # mig_nr ist die Spalte "Nr" ("Laufende Segmentnummer im Guide"). Sie ist
+    # innerhalb EINES Dokuments eindeutig (148/148 in G1.1) und damit der einzige
+    # brauchbare Positionsschluessel -- kein inhaltsbasierter Kandidat kommt an
+    # Eindeutigkeit heran, weil sich SG8 vierzehnmal mit gleichlautenden
+    # Positionen wiederholt.
+    #
+    # ACHTUNG (ADR-001, Leitsatz 2): mig_nr ist KEINE versionsuebergreifende
+    # Identitaet. Die Nummerierung laeuft lueckenlos, und die Aenderungshistorie
+    # der G1.1 belegt ein eingefuegtes Segment -- jede nachfolgende Nummer hat
+    # sich dadurch verschoben. Ein Delta darf ein Segment deshalb NIE allein
+    # anhand einer geaenderten mig_nr als geaendert werten; verglichen wird der
+    # strukturelle Inhalt (segment_code, Pfad, Ebene, Zaehler, Name, Status,
+    # Format, MaxWdh).
+    mig_nr = Column(String)                           # "00038"
+    mig_zaehler = Column(String)                      # "0360" -- Position im UN/CEFACT-Standard
+    # Vollstaendiger Segmentgruppenpfad. segmentgruppe (oben) haelt nur die
+    # innerste Gruppe; erst der Pfad unterscheidet SG4/SG6 von SG4/SG8.
+    segmentgruppen_pfad = Column(String)              # "SG4/SG6"
+    ebene = Column(Integer)                           # 0..4
+    # Zwei Status-, zwei MaxWdh-Spalten: die MIG fuehrt den allgemeinen
+    # EDIFACT-Standard und die BDEW-Festlegung nebeneinander, und sie weichen
+    # regelmaessig voneinander ab. pflicht/kardinalitaet/wiederholbar koennen das
+    # nicht tragen -- siehe Klassendoc von MessageField.status_bdew_raw.
+    status_standard_raw = Column(String)              # "M" | "C"
+    status_bdew_raw = Column(String)                  # "M" | "R" | "D" | "N" | "O"
+    max_wdh_standard = Column(String)                 # "9", "99999"
+    max_wdh_bdew = Column(String)                     # "1", "5"
+    # Block "Bemerkung:" bzw. "Beispiel:" unter der Datenelementtabelle. Bewusst
+    # eigene Felder: bedingung traegt AHB-Fussnotensemantik, und das
+    # EDIFACT-Beispiel ist ein Segment-, kein Feldattribut. 131 von 148 Segmenten
+    # tragen eine Bemerkung, 148 von 148 ein Beispiel -- das sind keine Randnotizen.
+    anwendungshinweis = Column(Text)
+    beispiel_edifact = Column(Text)                   # "DTM+137:199904081315?+00:303'"
 
     message_definition = relationship("MessageDefinition", back_populates="segments")
     fields = relationship("MessageField", back_populates="segment")
@@ -469,8 +511,69 @@ class MessageField(Base):
     code = Column(String)                             # Qualifier, z.B. "92", "E01", "Z36"
     pflichtigkeit = Column(String)                    # "X" wenn im PI genutzt, sonst leer
     quelle_seite = Column(Integer)
+    # --- Ab hier: Rohwerte der MIG (ADR-001, Leitsatz "Raw Regulatory Data
+    # zuerst, Atlas-Semantik danach"). Von der AHB-Extraktion nicht befuellt.
+    #
+    # Die MIG fuehrt je Datenelement ZWEI Status- und ZWEI Formatangaben: den
+    # allgemeinen EDIFACT-Standard und die BDEW-Festlegung. In 536 von 755
+    # Datenelementen der G1.1 weichen die Statuswerte voneinander ab.
+    #
+    # pflicht (Boolean) kann das nicht abbilden und ist deshalb NICHT die
+    # regulatorische Wahrheit, sondern eine abgeleitete Kompatibilitaetsspalte
+    # (Ableitungsregel: siehe pflicht_aus_status in
+    # regulatory_extraction_mig_layout.py). Konkret gehen dort zwei fachlich
+    # GEGENSAETZLICHE Zustaende auf denselben Wert:
+    #   D = "Abhaengig von/Dependent" -> bedingt erlaubt   -> pflicht = False
+    #   N = "Nicht benutzt/Not used"  -> verboten          -> pflicht = False
+    # Ein Validator MUSS status_bdew_raw lesen, nicht pflicht.
+    status_standard_raw = Column(String)              # "M" | "C"
+    status_bdew_raw = Column(String)                  # "M" | "R" | "D" | "N" | "O"
+    # Format als unveraenderter String, NICHT zerlegt in datentyp/laenge: die
+    # Zerlegung verloere die Unterscheidung fest/variabel -- "n5" (genau 5) und
+    # "n..6" (bis zu 6) waeren danach nicht mehr auseinanderzuhalten.
+    format_standard_raw = Column(String)              # "an..70"
+    format_bdew_raw = Column(String)                  # "n5"
+    # Zusammengefuehrte Zelle "Anwendung / Bemerkung". Kann sehr lang sein -- die
+    # groesste Zelle der G1.1 umfasst 144 Zeilen (die Pruefidentifikator-Liste).
+    anwendung_raw = Column(Text)
 
     segment = relationship("MessageSegment", back_populates="fields")
+    codelist = relationship("CodeList")
+    codelist_referenzen = relationship(
+        "MessageFieldCodeList", back_populates="message_field", cascade="all, delete-orphan"
+    )
+
+
+class MessageFieldCodeList(Base):
+    """Verweis eines Datenelements auf eine Codeliste -- n:m (ADR-001).
+
+    MessageField.codelist_id ist eine 1:1-Beziehung und bildet die Realitaet
+    nicht ab: DE1131 des STS-Segments referenziert in EINER Zelle 50 Codelisten
+    ("G_0002 Codeliste Gas Nr. G_0002", "GS_001 Codeliste Gas und Strom ...").
+    Eine davon auszuwaehlen waere geraten, alle zu verwerfen waere Verlust.
+
+    referenz_raw haelt den unveraenderten Zellinhalt, referenz_id die daraus
+    gelesene Kennung. codelist_id bleibt NULL, solange die referenzierte
+    Codeliste nicht importiert ist -- die Referenz geht dadurch nicht verloren
+    und wird nachtraeglich aufloesbar, ohne den Parser anzufassen.
+    """
+    __tablename__ = "message_field_code_lists"
+    __table_args__ = (
+        UniqueConstraint(
+            "message_field_id", "referenz_id",
+            name="uq_message_field_codelist_referenz",
+        ),
+    )
+
+    id = Column(Integer, primary_key=True)
+    message_field_id = Column(Integer, ForeignKey("message_fields.id"), nullable=False)
+    # NULL = Referenz im Dokument vorhanden, Codeliste (noch) nicht importiert.
+    codelist_id = Column(Integer, ForeignKey("code_lists.id"), nullable=True)
+    referenz_id = Column(String, nullable=False)      # "G_0002"
+    referenz_raw = Column(String)                     # "G_0002 Codeliste Gas Nr. G_0002"
+    quelle_seite = Column(Integer)
+
+    message_field = relationship("MessageField", back_populates="codelist_referenzen")
     codelist = relationship("CodeList")
 
 

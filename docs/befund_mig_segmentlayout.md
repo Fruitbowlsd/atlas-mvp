@@ -413,6 +413,15 @@ Das Präfix vor dem ersten `_` nach der ID ist deterministisch abgleichbar.
 | davon gegen importierte `CodeList` auflösbar | **45** |
 | **nicht auflösbar** | **5**: `G_0018`, `G_0032`, `G_0033`, `G_0042`, `G_0045` |
 
+> **Nachtrag nach dem echten Import (Issue #52).** Diese Zahl war zu optimistisch.
+> Sie wurde gegen eine *entduplizierte* Präfixmenge gemessen. Tatsächlich existieren
+> mehrere `CodeList`-Zeilen mit derselben Kennung — `G_0016` viermal, weil das
+> EBD-Dokument denselben Entscheidungsbaum in mehreren Kapiteln führt (13.10.1.1,
+> 13.10.2.1, 13.13.2.1, 13.13.3.2) und der Import aus Prompt 3 je Vorkommen eine Zeile
+> anlegt. Das reale Ergebnis lautet daher: **37 eindeutig auflösbar, 9 mehrdeutig,
+> 5 nicht vorhanden.** Die 9 mehrdeutigen werden nach ADR-001 nicht geraten, sondern
+> mit `codelist_id = NULL` und erhaltenem `referenz_raw` gespeichert.
+
 Beispiel: `GS_001` → `CodeList 'GS_001_Ablehnung auf Stammdaten zur verbrauchenden Marktlokation'`.
 
 > **Modelllücke 4:** `MessageField.codelist_id` ist ein **einzelner** Fremdschlüssel.

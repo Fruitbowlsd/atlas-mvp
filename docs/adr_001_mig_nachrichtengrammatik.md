@@ -1,14 +1,23 @@
 # ADR-001 — Datenmodell für die generische MIG-Nachrichtengrammatik
 
-**Status:** Entwurf zur Freigabe. **Keine Implementierung, kein Schema geändert, kein Import.**
+**Status:** **Freigegeben** (Entscheidung vom 2026-09-04). Umgesetzt in Issue #52.
 **Kontext:** Issue #52, Grundlage ist [`befund_mig_segmentlayout.md`](befund_mig_segmentlayout.md).
 **Betrifft:** `MessageDefinition`, `MessageSegment`, `MessageField`, Codelisten-Verknüpfung.
 
 ---
 
-## Leitsatz dieser Entscheidung
+## Leitsätze dieser Entscheidung
 
-> **Raw Regulatory Data zuerst. Atlas-Semantik danach.**
+> **1. Raw Regulatory Data zuerst. Atlas-Semantik danach.**
+
+> **2. `Nr` ist ein dokumentgebundener Positionsschlüssel, keine versionsübergreifende
+> fachliche Identität.**
+
+Der zweite Leitsatz ist bindend für die spätere Delta-Engine: Eine MIG-Änderung darf
+**nicht** allein deshalb als „geändertes Segment" gelten, weil eine Einfügung die
+nachfolgenden Nummern verschoben hat. Verglichen wird der fachlich-strukturelle Inhalt
+— Segmentcode, Pfad, Ebene, Zähler, Name, Status, Format, MaxWdh, Anwendungshinweis,
+Beispiel. Genau dafür werden diese Merkmale alle einzeln gespeichert.
 
 Was die MIG als eigene Information führt, erhält in Atlas einen eigenen Platz. Abgeleitete
 Bequemlichkeitsfelder (`pflicht`) bleiben erhalten, sind aber **nicht** die regulatorische
@@ -313,19 +322,35 @@ sämtlicher Code der AHB-, MIG-PI-, OBIS- und EBD-Extraktion.
 
 ---
 
-## Offene Punkte für die Freigabe
+## Entschiedene Punkte (zuvor offen)
 
-1. **Feldnamen** — `*_raw`-Suffix für die Rohwerte: bewusst gewählt, um „Raw Regulatory
-   Data zuerst" im Schema sichtbar zu machen. Falls eine andere Namenskonvention gewünscht
-   ist, jetzt festlegen.
-2. **`grammatik_quelle`** — ob Bestandszeilen der AHB nachträglich auf `"AHB"` gesetzt
-   werden sollen. Vorschlag: **nein** (§21, keine unnötige Änderung am Bestand); `NULL`
-   bedeutet „nicht aus der MIG".
-3. **`message_field_code_lists`** — Bestätigung, dass eine Relationstabelle als Erweiterung
-   des bestehenden Modells gilt und nicht als paralleles Modell nach §10.
-4. **`ebene` als INTEGER** — im Dokument `0`…`4`. Falls die Rohwert-Doktrin auch hier
-   strikt gelten soll, wäre `VARCHAR` konsequenter.
+| Punkt | Entscheidung | Begründung |
+|---|---|---|
+| Feldnamen | **`*_raw` beibehalten** | Klare Trennung zwischen regulatorischem Originalwert und späterer Atlas-Ableitung; macht Leitsatz 1 im Schema sichtbar. |
+| `grammatik_quelle` | **AHB-Bestand nicht nachträglich setzen** | Die Herkunft bereits importierter Daten wird nicht nachträglich umgedeutet. Nur der MIG-Extraktor setzt seine Herkunft explizit. |
+| `message_field_code_lists` | **Ja, additive Relationstabelle** | Kein paralleles Modell, sondern die notwendige n:m-Erweiterung. Die 5 nicht auflösbaren Referenzen bleiben als `referenz_raw` erhalten. |
+| `ebene` | **`INTEGER`** | Numerische Hierarchieebene 0…4; kein erkennbarer Informationsverlust durch die Normalisierung. |
 
-Nach Bestätigung dieser vier Punkte ist die Entscheidung implementierungsreif. Reihenfolge
-dann: Schema-Erweiterung → Formprüfung → Extraktor → Regressions- und Idempotenztest →
-echter Import → Ergebnisreport.
+## Abgrenzung
+
+Diese Entscheidung deckt die **Persistenz der regulatorischen Rohdaten** ab. Ausdrücklich
+**nicht** Teil davon und in diesem Schritt **nicht** zu bauen:
+
+* Delta-Engine (Versionsvergleich)
+* Requirement-Mapping
+* Testfallkatalog
+* EDIFACT-Validator und -Generator
+
+Die saubere Trennung, auf der diese späteren Schritte aufsetzen:
+
+| Regulatorische Wahrheit | Atlas-Semantik |
+|---|---|
+| `status_standard_raw`, `status_bdew_raw` | `pflicht` |
+| `format_standard_raw`, `format_bdew_raw` | später: zulässig / verboten / bedingt / prüfrelevant |
+| `max_wdh_standard`, `max_wdh_bdew` | `Requirement` |
+| `ebene`, `segmentgruppen_pfad`, `mig_nr`, `mig_zaehler` | `Testkonstellation` |
+| `anwendungshinweis`, `beispiel_edifact`, `anwendung_raw` | `Assessment` |
+| `referenz_raw` | |
+
+Atlas verliert keine regulatorische Information, nur weil das heutige Datenmodell sie noch
+nicht fachlich interpretiert.
