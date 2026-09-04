@@ -880,6 +880,7 @@ def import_mig_segment_layout(
     sparte: str = "gas",
     message_version: str | None = None,
     beschreibung: str | None = None,
+    extraction: LayoutExtraction | None = None,
 ) -> LayoutImportReport:
     """Das Segmentlayout einer MIG als generische Nachrichtengrammatik uebernehmen.
 
@@ -893,6 +894,13 @@ def import_mig_segment_layout(
     Zeilen der AHB-Extraktion bleiben unberuehrt -- sie sind ueber
     ``pi_nummer IS NOT NULL`` von der Loeschung ausgeschlossen und werden zur
     Kontrolle vor und nach dem Schreiben gezaehlt.
+
+    ``extraction`` erlaubt es, einen bereits gelesenen Stand wiederzuverwenden,
+    statt die Datei erneut zu oeffnen. Ein Durchlauf ueber 168 Seiten dauert
+    rund 40 Sekunden; wer erst pruefen und dann importieren will -- oder wie die
+    Testsuite mehrfach importiert -- soll dafuer nicht mehrfach zahlen. Der
+    Hash wird trotzdem immer frisch aus der Datei berechnet, damit die
+    Provenienz nicht aus einem mitgereichten Objekt stammt.
     """
     file_hash = compute_file_hash(pdf_path)
     document_name = pdf_path.rsplit("/", 1)[-1]
@@ -917,7 +925,7 @@ def import_mig_segment_layout(
         .count()
     )
 
-    report.extraction = extract_segment_layout(pdf_path)
+    report.extraction = extraction if extraction is not None else extract_segment_layout(pdf_path)
     if not report.extraction.form_recognized:
         report.warnings.append(
             "Erwartete Dokumentform nicht erkannt -- kein Import (Auftrag §7)"

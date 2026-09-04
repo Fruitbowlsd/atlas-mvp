@@ -90,6 +90,15 @@ def db():
         session.close()
 
 
+def _import(db, extraction, **kwargs):
+    """Import mit dem bereits gelesenen Stand -- spart je Aufruf einen
+    kompletten Durchlauf ueber 168 Seiten."""
+    kwargs.setdefault("message_version", "D:11A:UN:G1.1")
+    return import_mig_segment_layout(
+        db, str(_PDF), 1, extraction=extraction, **kwargs
+    )
+
+
 def _segment(extraction, nr):
     found = [s for s in extraction.segments if s.nr == nr]
     assert found, f"Segment Nr {nr} nicht gefunden"
@@ -303,6 +312,12 @@ def test_format_is_kept_verbatim(extraction):
 # ---------------------------------------------------------------------------
 
 def test_import_writes_one_generic_definition(db):
+    """Einziger Importtest OHNE vorgelesenen Stand.
+
+    Die uebrigen Importtests reichen den Modul-Fixture-Durchlauf herein, um
+    nicht je 40 s erneut zu parsen. Dieser eine geht bewusst den vollen
+    Produktionsweg -- sonst waere genau der ungetestet.
+    """
     report = import_mig_segment_layout(
         db, str(_PDF), 1, message_version="D:11A:UN:G1.1", sparte="gas"
     )
@@ -322,8 +337,8 @@ def test_import_writes_one_generic_definition(db):
     assert definition.quelle_dokument == _PDF.name
 
 
-def test_import_preserves_position_and_path(db):
-    import_mig_segment_layout(db, str(_PDF), 1, message_version="D:11A:UN:G1.1")
+def test_import_preserves_position_and_path(db, extraction):
+    _import(db, extraction)
     segment = (
         db.query(models.MessageSegment)
         .filter(models.MessageSegment.mig_nr == _RFF_PI_NR)
@@ -339,8 +354,8 @@ def test_import_preserves_position_and_path(db):
     assert segment.quelle_seite == 51
 
 
-def test_import_keeps_raw_values_on_fields(db):
-    import_mig_segment_layout(db, str(_PDF), 1, message_version="D:11A:UN:G1.1")
+def test_import_keeps_raw_values_on_fields(db, extraction):
+    _import(db, extraction)
     segment = (
         db.query(models.MessageSegment)
         .filter(models.MessageSegment.mig_nr == "00027")
@@ -357,8 +372,8 @@ def test_import_keeps_raw_values_on_fields(db):
     assert feld.codelist_id is None
 
 
-def test_import_records_remark_and_example(db):
-    import_mig_segment_layout(db, str(_PDF), 1, message_version="D:11A:UN:G1.1")
+def test_import_records_remark_and_example(db, extraction):
+    _import(db, extraction)
     segmente = db.query(models.MessageSegment).all()
     assert sum(1 for s in segmente if s.anwendungshinweis) == 131
     assert sum(1 for s in segmente if s.beispiel_edifact) == _EXPECTED_SEGMENTS
@@ -367,14 +382,14 @@ def test_import_records_remark_and_example(db):
     assert dtm.beispiel_edifact == "DTM+137:199904081315?+00:303'"
 
 
-def test_import_links_codelists_when_present(db):
+def test_import_links_codelists_when_present(db, extraction):
     """Aufloesbare Referenz wird verknuepft, unaufloesbare bleibt erhalten."""
     db.add(models.CodeList(
         regulatory_version_id=1, name="G_0002_Antwort auf Änderungsmeldung",
     ))
     db.commit()
 
-    report = import_mig_segment_layout(db, str(_PDF), 1, message_version="D:11A:UN:G1.1")
+    report = _import(db, extraction)
     verweise = db.query(models.MessageFieldCodeList).all()
     assert len(verweise) >= 50
 
@@ -388,9 +403,9 @@ def test_import_links_codelists_when_present(db):
     assert offen[0].referenz_raw.startswith("G_0018 Codeliste")
 
 
-def test_import_is_idempotent(db):
+def test_import_is_idempotent(db, extraction):
     """Zweiter Lauf ersetzt, ergaenzt nicht (Auftrag §19)."""
-    first = import_mig_segment_layout(db, str(_PDF), 1, message_version="D:11A:UN:G1.1")
+    first = _import(db, extraction)
     counts_first = (
         db.query(models.MessageDefinition).count(),
         db.query(models.MessageSegment).count(),
@@ -398,7 +413,7 @@ def test_import_is_idempotent(db):
         db.query(models.MessageFieldCodeList).count(),
     )
 
-    second = import_mig_segment_layout(db, str(_PDF), 1, message_version="D:11A:UN:G1.1")
+    second = _import(db, extraction)
     counts_second = (
         db.query(models.MessageDefinition).count(),
         db.query(models.MessageSegment).count(),
@@ -412,7 +427,7 @@ def test_import_is_idempotent(db):
     assert second.errors == []
 
 
-def test_import_leaves_ahb_rows_untouched(db):
+def test_import_leaves_ahb_rows_untouched(db, extraction):
     """PI-spezifische Zeilen sind von der generischen Sicht unterscheidbar."""
     ahb = models.MessageDefinition(
         regulatory_version_id=1, nachrichtentyp="UTILMD", sparte="gas",
@@ -423,8 +438,8 @@ def test_import_leaves_ahb_rows_untouched(db):
     db.commit()
     ahb_id = ahb.id
 
-    import_mig_segment_layout(db, str(_PDF), 1, message_version="D:11A:UN:G1.1")
-    import_mig_segment_layout(db, str(_PDF), 1, message_version="D:11A:UN:G1.1")
+    _import(db, extraction)
+    _import(db, extraction)
 
     unveraendert = db.get(models.MessageDefinition, ahb_id)
     assert unveraendert is not None
