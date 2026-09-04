@@ -483,6 +483,14 @@ class CodeList(Base):
     name = Column(String, nullable=False)
     nachrichtentyp = Column(String)
     beschreibung = Column(Text)
+    # Provenienz, analog zu MessageDefinition (Issue #48). Erst mit der ersten
+    # echten Codelisten-Extraktion noetig geworden -- vorher war die Tabelle leer.
+    # quelle_hash ist zugleich der Schluessel fuer den idempotenten Re-Import.
+    quelle_dokument = Column(String)
+    quelle_hash = Column(String)
+    # Kapitelnummer des Quelldokuments ("4.5"). Macht nachvollziehbar, aus
+    # welchem Abschnitt die Liste stammt, ohne den Namen parsen zu muessen.
+    quelle_kapitel = Column(String)
 
     regulatory_version = relationship("RegulatoryVersion")
     entries = relationship("CodeListEntry", back_populates="codelist")
@@ -496,10 +504,27 @@ class CodeListEntry(Base):
 
     id = Column(Integer, primary_key=True)
     codelist_id = Column(Integer, ForeignKey("code_lists.id"), nullable=False)
-    code = Column(String, nullable=False)             # z.B. "ZC9"
+    code = Column(String, nullable=False)             # z.B. "ZC9" oder "7-b:3.0.0"
     bedeutung = Column(String)
     gueltig_ab = Column(Date)
     gueltig_bis = Column(Date, nullable=True)
+    # --- Ab hier: strukturierte Zusatzattribute der OBIS-Codelisten (Issue #48).
+    # Die Codeliste der OBIS-Kennzahlen fuehrt je Code mehrere eigenstaendige
+    # Merkmale in eigenen Tabellenspalten. Sie werden bewusst NICHT zu einem
+    # String in `bedeutung` verkettet -- das wuerde strukturierte Information in
+    # eine Zeichenkette aufloesen, die spaeter niemand mehr sauber trennen kann.
+    # Jedes Feld traegt den unveraenderten Zellwert der jeweiligen Quellspalte.
+    werteart = Column(String)      # "Zählerstand", "Profilwert (stündlich)"
+    status = Column(String)        # "Vorläufig"/"Endgültig", "ungestört"/"gestört"
+    richtung = Column(String)      # "Ausspeisung"/"Einspeisung", "Bezug (+)"
+    hinweise = Column(Text)        # Inhalt der Spalte "Hinweise"
+    # Prüfidentifikatoren als ROHWERT der Quellspalte, bewusst ohne FK auf
+    # ProcessIdentifier: die hier referenzierten PIs sind MSCONS-PIs (13xxx),
+    # der Bestand kennt bisher nur UTILMD (44xxx). Eine FK liefe zu 100% ins
+    # Leere. Sobald die MSCONS-PIs importiert sind, laesst sich daraus eine
+    # echte Beziehung ableiten, ohne den Parser anzufassen.
+    pruefidentifikatoren = Column(String)
+    quelle_seite = Column(Integer)
 
     codelist = relationship("CodeList", back_populates="entries")
 

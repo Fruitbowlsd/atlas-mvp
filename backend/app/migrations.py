@@ -48,6 +48,22 @@ _PENDING_COLUMNS = {
         ("segments_strom", "VARCHAR DEFAULT ''"),
     ],
     "users": [("is_atlas_admin", "BOOLEAN DEFAULT FALSE")],
+    # Erste echte Codelisten-Extraktion (Issue #48). Beide Tabellen waren bis
+    # dahin leer -- die Spalten sind rein additiv und nullable, ein Backfill
+    # bestehender Zeilen ist deshalb nicht noetig.
+    "code_lists": [
+        ("quelle_dokument", "VARCHAR"),
+        ("quelle_hash", "VARCHAR"),
+        ("quelle_kapitel", "VARCHAR"),
+    ],
+    "code_list_entries": [
+        ("werteart", "VARCHAR"),
+        ("status", "VARCHAR"),
+        ("richtung", "VARCHAR"),
+        ("hinweise", "TEXT"),
+        ("pruefidentifikatoren", "VARCHAR"),
+        ("quelle_seite", "INTEGER"),
+    ],
     # EVU-Profil (Abschnitt 14.2): Relevanz von einer Dimension (SLP/RLM) auf
     # drei erweitert. Die Defaults bilden den Ist-Stand ab -- der Katalog ist
     # heute reiner Gas-Katalog fuer SLP/RLM, deshalb strom/imsys/tlp auf FALSE.
