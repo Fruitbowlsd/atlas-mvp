@@ -382,6 +382,9 @@ classDiagram
             +str name
             +str nachrichtentyp
             +text beschreibung
+            +str quelle_dokument
+            +str quelle_hash
+            +str quelle_kapitel
         }
 
         class CodeListEntry {
@@ -391,6 +394,12 @@ classDiagram
             +str bedeutung
             +date gueltig_ab
             +date gueltig_bis
+            +str werteart
+            +str status
+            +str richtung
+            +text hinweise
+            +str pruefidentifikatoren
+            +int quelle_seite
         }
     }
 
