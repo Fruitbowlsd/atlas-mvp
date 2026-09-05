@@ -173,6 +173,52 @@ Bewusst NICHT importiert:
 
 Strukturbefund, Formspezifikationen und Wiederverwendungsbilanz siehe Issue #50.
 
+## Anwendungsuebersicht der Pruefidentifikatoren (PID)
+
+| | |
+|---|---|
+| Dateiname | `PID_3_3_Konsultationsfassung_20250801.pdf` |
+| Version | 3.3 (Konsultationsfassung) |
+| Publikationsdatum | 01.08.2025 |
+| Anzuwenden ab | 01.04.2026 |
+| Quelle | Bundesnetzagentur, Mitteilung Nr. 54 (Datei liegt als Anlage unter Mitteilung Nr. 52; Autor laut PDF-Metadaten: BDEW) |
+| Seiten | 82 |
+| SHA-256 | `6b4f5e362703d481a4e362f19abd43c197dc5d1b1643750b4a59cb92d9c7139a` |
+
+Bezug:
+
+```bash
+curl -L -o backend/data/regulatory/PID_3_3_Konsultationsfassung_20250801.pdf \
+  "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_52/Anlagen/PID_3_3_Konsultationsfassung_20250801.pdf?__blob=publicationFile&v=1"
+```
+
+> Wie beim AHB Gas 1.1 und der MIG Gas G1.1 traegt die Datei den Vermerk
+> "Konsultationsfassung". Die Uebersichtsseite der Mitteilung Nr. 54 fuehrt
+> "Anwendungsuebersicht der Pruefidentifikatoren 3.3" unter den EDIFACT-Dokumenten
+> und weist die Fassung als ab 01.04.2026 anzuwenden aus. Version und Datum sind
+> im Dokument selbst doppelt belegt: Deckblatt (S. 1) und Fusszeile aller 82 Seiten.
+
+Das Dokument besteht laut eigenem Inhaltsverzeichnis aus **fuenf** Tabellen; die
+empirische Pruefung bestaetigt genau diese fuenf:
+
+| # | Tabellenkonzept | Seiten | Spalten | Datenzeilen |
+|---|---|---|---|---|
+| 1 | Pruefidentifikator zu Prozessschritt / API Webservice zu Prozessschritt | 7-77 | 21 | 1370 |
+| 2 | Tupel-Uebersicht | 78-79 | 5 | 68 |
+| 3 | Objekteigenschaften | 80 | 4 | 11 |
+| 4 | Erweiterte Zuordnungslogik | 81 | 3 | 9 |
+| 5 | Aenderungshistorie | 82 | 6 | 5 |
+
+Tabelle 1 enthaelt 486 verschiedene Pruefidentifikatoren -- 88 davon kennt Atlas
+bereits aus der MIG (Prompt 1), 398 waeren neu. Anders als MIG und AHB liefert
+`extract_tables()` hier saubere Zellen: alle 1370 Zeilen haben exakt 21 Zellen,
+mehrzeilige Inhalte kommen als `\n` **innerhalb** der Zelle an, und keine Zeile
+laeuft ueber einen Seitenumbruch.
+
+Strukturbefund, Beziehungsketten, nicht aufloesbare Verweise und Scoping-Vorschlag
+siehe `docs/befund_pid_uebersicht.md` und Issue #54. **Noch nicht importiert** --
+der Auftrag sieht einen STOP-Punkt nach der Strukturanalyse vor.
+
 ## Import
 
 ```bash
