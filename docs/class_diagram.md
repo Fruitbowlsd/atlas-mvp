@@ -337,6 +337,7 @@ classDiagram
             +str quelle_kapitel_titel
             +int quelle_seite_von
             +int quelle_seite_bis
+            +str grammatik_quelle
         }
 
         class MessageSegment {
@@ -355,6 +356,16 @@ classDiagram
             +text bedingung_raw
             +str bedingung_referenzen
             +int quelle_seite
+            +str mig_nr
+            +str mig_zaehler
+            +str segmentgruppen_pfad
+            +int ebene
+            +str status_standard_raw
+            +str status_bdew_raw
+            +str max_wdh_standard
+            +str max_wdh_bdew
+            +text anwendungshinweis
+            +text beispiel_edifact
         }
 
         class MessageField {
@@ -373,6 +384,20 @@ classDiagram
             +str segmentgruppe
             +str code
             +str pflichtigkeit
+            +int quelle_seite
+            +str status_standard_raw
+            +str status_bdew_raw
+            +str format_standard_raw
+            +str format_bdew_raw
+            +text anwendung_raw
+        }
+
+        class MessageFieldCodeList {
+            +int id
+            +int message_field_id
+            +int codelist_id
+            +str referenz_id
+            +str referenz_raw
             +int quelle_seite
         }
 
@@ -461,6 +486,8 @@ classDiagram
     MessageSegment "0..*" --> "1" MessageDefinition : message_definition_id
     MessageField "0..*" --> "1" MessageSegment : segment_id
     MessageField "0..*" --> "0..1" CodeList : codelist_id
+    MessageFieldCodeList "0..*" --> "1" MessageField : message_field_id
+    MessageFieldCodeList "0..*" --> "0..1" CodeList : codelist_id
     CodeList "0..*" --> "1" RegulatoryVersion : regulatory_version_id
     CodeListEntry "0..*" --> "1" CodeList : codelist_id
     Testkonstellation "0..*" --> "1" RegulatoryVersion : regulatory_version_id

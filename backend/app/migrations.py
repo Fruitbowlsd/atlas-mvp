@@ -85,6 +85,9 @@ _PENDING_COLUMNS = {
     # Provenance an der Wissensbasis. Die drei Tabellen waren bisher leer, die
     # Spalten sind trotzdem als ALTER TABLE formuliert -- lokale Entwicklungs-
     # datenbanken haben die (leeren) Tabellen bereits im alten Schema angelegt.
+    # Die Spalten ab grammatik_quelle bzw. mig_nr stammen aus der generischen
+    # MIG-Nachrichtengrammatik (Issue #52, ADR-001). Rein additiv und nullable:
+    # die AHB-Extraktion befuellt sie nicht und wird dafuer auch nicht angefasst.
     "message_definitions": [
         ("pi_nummer", "VARCHAR"),
         ("pi_id", "INTEGER"),
@@ -94,6 +97,7 @@ _PENDING_COLUMNS = {
         ("quelle_kapitel_titel", "VARCHAR"),
         ("quelle_seite_von", "INTEGER"),
         ("quelle_seite_bis", "INTEGER"),
+        ("grammatik_quelle", "VARCHAR"),
     ],
     "message_segments": [
         ("segmentgruppe", "VARCHAR"),
@@ -103,6 +107,16 @@ _PENDING_COLUMNS = {
         ("bedingung_raw", "TEXT"),
         ("bedingung_referenzen", "VARCHAR"),
         ("quelle_seite", "INTEGER"),
+        ("mig_nr", "VARCHAR"),
+        ("mig_zaehler", "VARCHAR"),
+        ("segmentgruppen_pfad", "VARCHAR"),
+        ("ebene", "INTEGER"),
+        ("status_standard_raw", "VARCHAR"),
+        ("status_bdew_raw", "VARCHAR"),
+        ("max_wdh_standard", "VARCHAR"),
+        ("max_wdh_bdew", "VARCHAR"),
+        ("anwendungshinweis", "TEXT"),
+        ("beispiel_edifact", "TEXT"),
     ],
     "message_fields": [
         ("bedingung_raw", "TEXT"),
@@ -111,6 +125,11 @@ _PENDING_COLUMNS = {
         ("code", "VARCHAR"),
         ("pflichtigkeit", "VARCHAR"),
         ("quelle_seite", "INTEGER"),
+        ("status_standard_raw", "VARCHAR"),
+        ("status_bdew_raw", "VARCHAR"),
+        ("format_standard_raw", "VARCHAR"),
+        ("format_bdew_raw", "VARCHAR"),
+        ("anwendung_raw", "TEXT"),
     ],
 }
 
@@ -174,6 +193,7 @@ def run_light_migrations(engine: Engine) -> None:
 
     _migrate_requirement_code_uniqueness(engine)
     _ensure_message_definition_uniqueness(engine)
+    _ensure_generic_message_definition_uniqueness(engine)
 
 
 def _ensure_message_definition_uniqueness(engine: Engine) -> None:
@@ -195,6 +215,38 @@ def _ensure_message_definition_uniqueness(engine: Engine) -> None:
         conn.execute(text(
             "CREATE UNIQUE INDEX IF NOT EXISTS uq_message_definition_per_version_pi_chapter "
             "ON message_definitions (regulatory_version_id, nachrichtentyp, pi_nummer, quelle_kapitel)"
+        ))
+
+
+def _ensure_generic_message_definition_uniqueness(engine: Engine) -> None:
+    """Doppelte GENERISCHE MessageDefinition verhindern (Issue #52, ADR-001).
+
+    Der bestehende Index ueber (regulatory_version_id, nachrichtentyp, pi_nummer,
+    quelle_kapitel) greift fuer generische MIG-Definitionen nicht: die tragen
+    pi_nummer = NULL und quelle_kapitel = NULL, und NULL ist in SQL zu nichts
+    gleich -- zwei voellig identische generische Zeilen wuerden anstandslos
+    angelegt. Das ist gegen die echte Datenbank nachgemessen, nicht vermutet.
+
+    Ein Ersatzwert in pi_nummer ("(generisch)") wuerde den Index zwar greifen
+    lassen, aber ein Provenienzfeld mit einem erfundenen Wert fuellen. Stattdessen
+    ein PARTIELLER Index, der genau die generischen Zeilen adressiert:
+
+        UTILMD/gas/G1.1 zweimal generisch   -> abgewiesen
+        UTILMD/gas/G1.1 + UTILMD/strom/S2.2 -> beide erlaubt
+        die PI-spezifischen AHB-Zeilen      -> durch WHERE ausgeschlossen
+
+    Partielle Indizes koennen SQLite (>= 3.8) und Postgres gleichermassen; die
+    WHERE-Klausel ist Standard-SQL und braucht keine Dialektunterscheidung.
+    """
+    inspector = inspect(engine)
+    if "message_definitions" not in inspector.get_table_names():
+        return
+
+    with engine.begin() as conn:
+        conn.execute(text(
+            "CREATE UNIQUE INDEX IF NOT EXISTS uq_message_definition_generisch "
+            "ON message_definitions (regulatory_version_id, nachrichtentyp, sparte, version) "
+            "WHERE pi_nummer IS NULL"
         ))
 
 

@@ -88,6 +88,7 @@ GROUPS: list[tuple[str, str, list[str]]] = [
             "MessageDefinition",
             "MessageSegment",
             "MessageField",
+            "MessageFieldCodeList",
             "CodeList",
             "CodeListEntry",
         ],
