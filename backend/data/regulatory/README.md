@@ -215,9 +215,74 @@ bereits aus der MIG (Prompt 1), 398 waeren neu. Anders als MIG und AHB liefert
 mehrzeilige Inhalte kommen als `\n` **innerhalb** der Zelle an, und keine Zeile
 laeuft ueber einen Seitenumbruch.
 
-Strukturbefund, Beziehungsketten, nicht aufloesbare Verweise und Scoping-Vorschlag
-siehe `docs/befund_pid_uebersicht.md` und Issue #54. **Noch nicht importiert** --
-der Auftrag sieht einen STOP-Punkt nach der Strukturanalyse vor.
+### Was importiert wird (Freigabe Scoping A)
+
+Uebernommen wird **ausschliesslich** das Paar Pruefidentifikator -> Bezeichnung aus
+Tabelle 1: 397 neue `ProcessIdentifier` (486 verschiedene PIs, davon 88 bereits aus
+der MIG bekannt und unveraendert gelassen, 1 wegen zweier Schreibweisen in derselben
+Quelle nicht importiert). Bestand danach: 91 -> 488.
+
+Neue PIs bekommen, was die PID je PI eindeutig belegt: Nummer, Bezeichnung und
+**Nachrichtentyp**. `sender_role`/`receiver_role` bleiben leer, obwohl die PID
+"Kommunikation von/an" fuehrt -- diese Angaben haengen am Prozessschritt und nicht
+am PI (113 bzw. 142 von 486 PIs haben mehrere verschiedene Werte).
+
+### Nachrichtentyp: alle Formate, nicht nur UTILMD
+
+Der Modell-Default von `ProcessIdentifier.message_type` ist "UTILMD" und waere fuer
+die meisten der 397 neuen PIs falsch. Die PID fuehrt **16 verschiedene
+Nachrichtentypen**:
+
+| Typ | PI | Typ | PI | Typ | PI | Typ | PI |
+|---|---|---|---|---|---|---|---|
+| UTILMD | 277 | IFTSTA | 35 | INSRPT | 8 | REMADV | 4 |
+| ORDERS | 46 | MSCONS | 25 | UTILTS | 8 | PRICAT | 3 |
+| ORDRSP | 40 | PARTIN | 14 | QUOTES | 5 | ORDCHG | 3 |
+| | | INVOIC | 11 | REQOTE | 5 | COMDIS | 2 |
+| | | | | | | SSQNOT | 2 |
+
+Der Typ wird aus der AHB-Spalte entnommen: sie nennt das Anwendungshandbuch, dessen
+Name mit dem EDIFACT-Nachrichtentyp beginnt ("MSCONS AHB", "UTILMD AHB Strom",
+"SSQNOT zur Uebermittlung von Mehr-/Mindermengen"). Das ist eine strukturelle
+Entnahme der fuehrenden sechs Grossbuchstaben, keine Interpretation, und je PI
+widerspruchsfrei (0 von 486 PIs mit mehreren AHB-Werten). Gegen die 88 bereits
+bekannten PIs gibt es **0 Widersprueche** -- die PID bestaetigt, was Atlas fuehrt.
+Bewusst ohne Positivliste der Typen, damit ein in einer kuenftigen Version neu
+hinzukommendes Format uebernommen wird, ohne den Parser zu pflegen; der Importreport
+fuehrt jeden abgeleiteten Typ mit Anzahl auf, ein neuer faellt dort auf. Laesst sich
+kein Typ entnehmen, bleibt das Feld leer statt geraten (im Stand 3.3: kein Fall).
+
+Die **Sparte** aus "UTILMD AHB Strom"/"... Gas" wandert NICHT mit -- sie steht in
+eigenen Spalten und gehoert zum zurueckgestellten Prozessschritt-Konzept.
+
+**Die PID-Bezeichnung ueberschreibt nie einen bestehenden Namen.** Sie ist ohne ihre
+Nachbarspalten nicht eindeutig: 44147 und 44148 tragen beide "Anfrage an MSB mit
+Abhaengigkeiten" und werden erst durch "Kommunikation von/an" unterschieden, waehrend
+die MIG die Rollenrichtung in den Namen einbaut. Alle 88 gemeinsamen PIs weichen im
+String ab (43 nur durch das Prozessfamilien-Praefix der MIG, 45 im Wortlaut); die
+Abweichungen stehen im Importreport, nicht in der Datenbank.
+
+### Bewusst NICHT importiert (zurueckgestellt, eigene Modelle noetig)
+
+* **Prozessschritt-Zuordnung** (Spalten 5-11) und **Reaktionsbeziehung** (Spalte 4)
+* **Tupel-Uebersicht** (Tabelle 2) -- nicht verlustfrei in `CodeList`/`CodeListEntry`
+  abbildbar, die Segmentangabe (`ZO-T1 = SG5 LOC DE3225`) haette dort kein Feld
+* **Objekteigenschaften** (Tabelle 3) und **Erweiterte Zuordnungslogik** (Tabelle 4)
+* **Zuordnungslogik** (Spalten 12-15), **Uebertragungsweg**/**API-Kennung**,
+  **Sparte**, **API-Webservices** (27 Zeilen ohne PI)
+* **Aenderungshistorie** (Tabelle 5) -- Delta-Engine, eigene Aufgabe
+
+Der Importreport fuehrt dafuer eine **Verlustbilanz je Spalte**: was gelesen wurde,
+was uebernommen wurde und was fuer eine spaetere Modellierung vorgemerkt ist. Kein
+PID-Feld geht stillschweigend verloren.
+
+Zwei Verweise sind im Dokument selbst nicht aufloesbar und werden ausgewiesen statt
+geraten: `ZG-T33` (neunmal verwendet, in der Tupel-Uebersicht nicht definiert) und
+PI `44108` als Reaktionsziel ohne eigenen Anwendungsfall. Dazu 42 Zuordnungszellen
+mit Bedingungsfreitext statt eines Codes.
+
+Strukturbefund, Beziehungsketten und Modellvorschlaege siehe
+`docs/befund_pid_uebersicht.md` und Issue #54.
 
 ## Import
 
@@ -226,18 +291,23 @@ cd backend && ./venv/bin/python -m app.import_ahb --help
 cd backend && ./venv/bin/python -m app.import_mig --help
 cd backend && ./venv/bin/python -m app.import_obis --help
 cd backend && ./venv/bin/python -m app.import_ebd --help
+cd backend && ./venv/bin/python -m app.import_pid --help
 ```
 
-Alle drei Importe sind idempotent. Beim AHB wird derselbe Dateihash beim zweiten Lauf
+Alle fuenf Importe sind idempotent. Beim AHB wird derselbe Dateihash beim zweiten Lauf
 erkannt und sauber uebersprungen (`--reimport` erzwingt einen kontrollierten
 Neuaufbau). Der MIG-Import veraendert einen bestehenden `ProcessIdentifier`
 grundsaetzlich nicht und braucht deshalb keinen Schalter. Der OBIS-Import
 erkennt denselben Dateihash und ueberspringt ihn; `--reimport` erzwingt einen
-kontrollierten Neuaufbau. Der EBD-Import verhaelt sich wie der OBIS-Import.
+kontrollierten Neuaufbau. Der EBD-Import verhaelt sich wie der OBIS-Import. Der PID-Import veraendert -- wie
+der MIG-Import -- einen bestehenden `ProcessIdentifier` grundsaetzlich nicht und
+braucht deshalb keinen Schalter. Sein optionaler Schalter `--mig` schaltet den
+Konsistenzabgleich mit den MIG-PI-Namen aus Prompt 1 zu (Default: an).
 
 ## Tests
 
 Die Tests in `backend/tests/` ueberspringen sich selbst, wenn die jeweilige
 PDF-Datei nicht vorliegt. Abweichende Ablageorte lassen sich ueber die
 Umgebungsvariablen `ATLAS_AHB_GAS_11_PDF`, `ATLAS_MIG_GAS_G11_PDF`,
-`ATLAS_OBIS_CODELISTE_PDF` und `ATLAS_EBD_CODELISTEN_PDF` setzen.
+`ATLAS_OBIS_CODELISTE_PDF`, `ATLAS_EBD_CODELISTEN_PDF` und
+`ATLAS_PID_UEBERSICHT_PDF` setzen.

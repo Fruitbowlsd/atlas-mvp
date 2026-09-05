@@ -1,8 +1,10 @@
 # Technischer Befund — Anwendungsübersicht der Prüfidentifikatoren 3.3 (Issue #54)
 
-**Status: STOP-Punkt nach §5 des Auftrags.** Es wurde nichts implementiert, kein Schema
-geändert, nichts importiert, kein LLM beteiligt. Dieser Befund ist Grundlage für die
-Scoping- und Architekturentscheidung; erst nach expliziter Freigabe folgt Code.
+**Status: umgesetzt für Scoping A.** Der Befund entstand am STOP-Punkt nach §5 des
+Auftrags — ohne Implementierung, Schemaänderung, Import oder LLM. Er ist unverändert
+dokumentiert; die anschließende Freigabe lautete **„PID → `ProcessIdentifier`, sonst
+nichts"**. Was daraus umgesetzt wurde und was ausdrücklich zurückgestellt bleibt, steht
+in Abschnitt H am Ende dieses Dokuments.
 
 Alle Zahlen stammen aus einem rein lesenden Durchlauf über **alle 82 Seiten** des
 Dokuments, nicht aus einer Stichprobe.
@@ -447,6 +449,13 @@ Kein neues Modell eingeführt. Zur Entscheidung vorgelegt:
    Default und kein gepflegter Wert ist und ein stiller Wechsel der Semantik
    („EDIFACT-Nachrichtentyp" → „AHB-Dokument") Verwirrung stiftet.
 
+   > **Nachtrag zur Umsetzung.** Diese Empfehlung war zu weit gefasst. Sie trennt nicht
+   > zwischen dem *AHB-Dokumentbezug* (`"UTILMD AHB Strom"`, inklusive Sparte) und dem
+   > darin enthaltenen *EDIFACT-Nachrichtentyp* (`UTILMD`). Nur Ersteres wäre eine
+   > Umwidmung von `message_type`; Letzteres ist genau die Bedeutung des Feldes. Umgesetzt
+   > wurde deshalb der Nachrichtentyp (siehe Abschnitt H); der vollständige
+   > AHB-Dokumentbezug samt Sparte bleibt zurückgestellt.
+
 ---
 
 ## G. Was dieser Schritt bewusst NICHT getan hat
@@ -460,3 +469,78 @@ Kein neues Modell eingeführt. Zur Entscheidung vorgelegt:
 * keine der bestehenden Extraktionen (AHB, MIG-PI, OBIS, EBD, MIG-Segmentlayout) berührt
 
 **Nächster Schritt: Freigabe mit Scoping-Entscheidung (§5).**
+
+
+---
+
+## H. Umsetzung (nach Freigabe Scoping A)
+
+Freigegeben und umgesetzt wurde **ausschließlich Vorschlag A**: Prüfidentifikator und
+Bezeichnung aus Tabelle 1 nach `ProcessIdentifier`, ohne jeden Schemaeingriff.
+
+| | |
+|---|---|
+| Modul | `backend/app/regulatory_extraction_pid.py` |
+| CLI | `backend/app/import_pid.py` |
+| Tests | `backend/tests/test_regulatory_extraction_pid.py` (37) |
+| `ProcessIdentifier` vorher/nachher | **91 → 488** |
+| neu angelegt | 397 (mit Nachrichtentyp, 16 verschiedene) |
+| bestehend, unverändert | 88 |
+| Konflikt, nicht importiert | 1 (`55672`, zwei Schreibweisen in derselben Quelle) |
+
+### Zusätzliche Regel der Freigabe: kein PID-Feld geht stillschweigend verloren
+
+Der Importreport führt eine **Verlustbilanz je Spalte** — alle 21 Spalten mit ihrer
+Belegung und dem Vermerk, ob sie ins Modell wandern oder für eine spätere Modellierung
+vorgemerkt sind. `PidRow` hält jede Zeile vollständig im Rohwert, nicht nur die beiden
+übernommenen Spalten. Die vier zurückgestellten Tabellenkonzepte werden gelesen und
+gezählt, damit ihr Umfang belegt bleibt.
+
+### Zwei Entscheidungen, die der Befund erzwungen hat
+
+**`message_type` wird aus der AHB-Spalte gefüllt — alle 16 Formate, nicht nur UTILMD.**
+Der Modell-Default wäre `"UTILMD"` und für die meisten der 397 neuen PIs falsch. Ein
+erster Stand dieser Umsetzung ließ das Feld deshalb leer; auf den Hinweis, dass Atlas
+*alle* Formate braucht, wurde nachgemessen — und der Befund trägt die Ableitung klar:
+
+| | |
+|---|---|
+| PIs mit mehreren AHB-Werten | **0 von 486** |
+| PIs mit Muster `<TYP> AHB[ Sparte]` | 484 |
+| Rest (`SSQNOT zur Übermittlung von Mehr-/Mindermengen`) | 2 — führende sechs Zeichen ebenfalls der Typ |
+| Widersprüche gegen die 88 bereits bekannten PIs | **0** |
+| verschiedene Nachrichtentypen | **16** |
+
+UTILMD 277 · ORDERS 46 · ORDRSP 40 · IFTSTA 35 · MSCONS 25 · PARTIN 14 · INVOIC 11 ·
+INSRPT 8 · UTILTS 8 · QUOTES 5 · REQOTE 5 · REMADV 4 · PRICAT 3 · ORDCHG 3 ·
+COMDIS 2 · SSQNOT 2
+
+Die AHB-Spalte nennt das Anwendungshandbuch, dessen Name mit dem EDIFACT-Nachrichtentyp
+beginnt. Die führenden sechs Großbuchstaben zu entnehmen ist strukturell, nicht
+interpretiert — und es füllt das Feld mit **genau seiner Bedeutung**, statt es zum
+AHB-Dokumentbezug umzuwidmen. Damit ist die Sorge aus Abschnitt F.6 gegenstandslos: dort
+ging es um den Dokumentbezug samt Sparte, hier um den Nachrichtentyp allein. Die Sparte
+aus „UTILMD AHB Strom" wandert nicht mit; sie gehört zum zurückgestellten
+Prozessschritt-Konzept.
+
+Bewusst **ohne Positivliste** der Typen (§16): ein in einer künftigen Version neu
+hinzukommendes Format wird übernommen, ohne den Parser zu pflegen — der Importreport
+führt jeden abgeleiteten Typ mit Anzahl auf, ein neuer fällt dort auf. Bestehende PIs
+werden auch hier nicht überschrieben; ein Widerspruch zwischen Atlas-Bestand und PID
+würde als Konflikt gemeldet (im Stand 3.3: keiner).
+
+**Rollen bleiben leer.** „Kommunikation von/an" steht in der PID, hängt aber am
+Prozessschritt: 113 bzw. 142 von 486 PIs führen mehrere verschiedene Werte. Einen davon
+zu setzen hieße raten.
+
+### Weiterhin zurückgestellt
+
+Prozessschritt-Modell, Reaktionsbeziehung, Tupel-Übersicht, Zuordnungslogik, Erweiterte
+Zuordnung, Objekteigenschaften, Übertragungsweg, API-Webservices, Änderungshistorie.
+Die Modellvorschläge in Abschnitt F stehen unverändert zur Entscheidung.
+
+**Die vier Bruchstellen der Beziehungskette wurden bewusst nicht repariert.** Fehlender
+AHB-Kapitelverweis, undefiniertes `ZG-T33`, PI `44108` nur als Reaktionsziel und 42
+Freitext-Zuordnungen sind regulatorische Realität, kein Extraktionsfehler. Sie stehen im
+Importreport und legen nahe, dass ein künftiges Beziehungsmodell einen Status wie
+*eindeutig / mehrdeutig / nicht auflösbar / nur indirekt ableitbar* führen sollte.
