@@ -1,7 +1,8 @@
 # Migration SQLite → PostgreSQL (Issue #60)
 
-Persistenz für die Atlas-Produktionsdatenbank. PostgreSQL ist ab dem Cutover das
-alleinige produktive System of Record; SQLite dient nur noch als historische
+Persistenz für die Atlas-Produktionsdatenbank. **Seit dem Cutover am 09.09.2026,
+20:09 UTC ist PostgreSQL das alleinige produktive System of Record**; SQLite wird
+nicht mehr als Produktionsdatenbank betrieben und dient nur noch als historische
 Quelle der Sicherung.
 
 ## 1. Ausgangsbefund
@@ -111,7 +112,58 @@ und anschließend die Fingerabdruck-Verifikation wiederholt. Alle 23 Werte
 unverändert: `run_seed` ist gegen den migrierten Bestand idempotent und legt
 nichts doppelt an.
 
-## 7. Backup-Lage der neuen Instanz
+## 7. Cutover (09.09.2026, 20:09 UTC)
+
+`DATABASE_URL` wurde im App-Service **neu angelegt** — vorher existierte die
+Variable nicht, die Anwendung lief auf dem Default. Gesetzt als Referenz
+`${{Postgres.DATABASE_URL}}`, damit kein Passwort im Klartext in der
+Service-Konfiguration steht; sie löst auf
+`postgresql://…@postgres.railway.internal:5432/railway` auf.
+
+Reihenfolge: Der PR wurde **vor** dem Cutover gemergt. Railway deployt bei einer
+Variablenänderung den aktuellen `main`-Stand; ohne `psycopg2-binary` dort wäre die
+Anwendung mit `ModuleNotFoundError` nicht gestartet. Der Merge-Deploy änderte am
+Verhalten nichts, weil `DATABASE_URL` zu dem Zeitpunkt noch ungesetzt war.
+
+### Beobachtung während des Starts
+
+Unmittelbar nach dem Cutover-Deploy antwortete die Anwendung kurzzeitig mit `502`
+und das Log stand auf `Waiting for application startup`. Das war kein Fehler,
+sondern der längere erste Start: `create_all()`, `run_light_migrations()` und
+`run_seed()` laufen über eine frisch aufgebaute Netzwerkverbindung statt gegen
+eine lokale Datei. Gegenprobe aus dem Container während dieser Phase — TCP über
+IPv6 und IPv4 je 0,1 s, `psycopg2.connect` 1,1 s, `process_identifiers` = 488 —
+danach `Application startup complete`.
+
+### Bestätigung nach dem Cutover
+
+| Prüfung | Ergebnis |
+|---|---|
+| `/api/health` | 200, `{"status":"ok"}` |
+| `/api/regulatory-versions` | 401 `{"detail":"Nicht angemeldet"}` — Auth-Fehler, kein Serverfehler |
+| `/` (Frontend) | 200 |
+| Verbindung der Anwendung | über IPv6 mit `postgres.railway.internal` |
+| Bestand in Postgres | 488 PIDs, 287 MessageDefinitions, 11.765 Segmente, 15.523 Felder |
+| Fingerabdrücke | 23 von 23 unverändert |
+| `/app/atlas.db` | **existiert nicht mehr** |
+
+Der letzte Punkt ist der Beleg, dass SQLite nicht mehr als Produktionsdatenbank
+betrieben wird. Die Fingerabdruck-Verifikation lief insgesamt viermal mit
+identischem Ergebnis: nach der Übertragung, nach der Startup-Probe, nach dem
+Merge-Deploy und nach dem Cutover.
+
+Der Merge-Deploy führte das ursprüngliche Problem ein letztes Mal vor: Die
+SQLite-Datei trug danach den Zeitstempel des Deploys statt des vorherigen Standes
+und enthielt wieder genau 16 `ProcessIdentifier`.
+
+### Rückweg
+
+`DATABASE_URL` entfernen; die Anwendung läuft beim nächsten Deploy wieder auf
+SQLite mit Seed-Zustand. Die beiden Sicherungen liegen unverändert außerhalb des
+Repositorys und werden vorerst aufbewahrt — als Rückfallebene, nicht als parallel
+genutzte Datenquelle.
+
+## 8. Backup-Lage der neuen Instanz
 
 Der Postgres-Service bringt ein eigenes Volume mit (`RAILWAY_VOLUME_*`); das
 Persistenzproblem aus Abschnitt 1 ist damit strukturell gelöst. Davon unabhängig
@@ -126,5 +178,7 @@ festgehalten**:
 - Wiederherstellung erzeugt ein neues Volume und muss bewusst deployed werden;
   das alte bleibt unmountiert erhalten.
 
-Stand nach dem Anlegen: **PITR `disabled`, kein Backup-Zeitplan konfiguriert.**
-Beides ist eine eigene Entscheidung und wurde hier nicht verändert.
+Stand: **PITR `disabled`, kein Backup-Zeitplan konfiguriert** — unverändert auch
+nach dem Cutover. Beides ist eine eigene Entscheidung, die dieser Auftrag laut
+Aufgabenstellung nur recherchieren und nicht implementieren sollte. Es ist damit
+der offene Punkt, der nach dieser Migration als nächstes ansteht.
