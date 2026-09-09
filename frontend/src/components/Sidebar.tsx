@@ -109,7 +109,7 @@ export function Sidebar({ active, onSelect, hasAssessment, activeVersion, curren
         <div className="brand-mark">A</div>
         <div>
           <div className="sidebar-brand-name">Atlas</div>
-          <div className="sidebar-brand-sub">Marktprozesse Gas</div>
+          <div className="sidebar-brand-sub">Ihr Kompass für die Marktkommunikation</div>
         </div>
       </div>
 
