@@ -1,6 +1,10 @@
 # Rollen einer Fassung — „ersetzt“ ist nicht „verworfen“
 
-**Ticket:** #64 · gilt ab Schema v0.1 (`provenienz_schema.json`, Feld `fassungen[].rolle`); Erweiterung um außerordentliche Veröffentlichungen in v0.2 (Etappe 2, **zur Bestätigung**)
+**Ticket:** #64 · gilt ab Schema v0.1 (`provenienz_schema.json`, Feld `fassungen[].rolle`), erweitert in v0.2/v0.3 um Fassungen ohne Mitteilungsbezug (Etappe 2, **O-11 zur Bestätigung**)
+
+> Hinweis zur Herkunft: Der Auftrag hat keinen Abschnitt 11a. Diese Definition geht auf deine
+> Ergänzung vom 17.09.2026 zurück und ist seit Commit 4617854 schriftlich festgelegt; hier
+> kommt die Anwendung auf den O-11-Fall dazu.
 
 ## Grundsatz
 
@@ -47,27 +51,62 @@ Diesen Fall löst das Schema nicht über eine Rolle:
 7. Fassungstyp, den diese Regeln nicht kennen → **keine stille Einordnung**: im
    Etappenbericht als Fall ausweisen und die Regel ausdrücklich ergänzen
 
-## Erweiterung v0.2 — außerordentliche Veröffentlichung (Etappe 2, zur Bestätigung)
+## Erweiterung v0.2 / v0.3 — Fassungen ohne Mitteilungsbezug (O-11, zur Bestätigung)
 
-In Etappe 2 aufgetreten bei CONTRL AHB 1.0, CONTRL MIG 2.0b, INSRPT AHB 1.1g und INSRPT MIG
-1.1a. Befund am Dokument:
+O-11 (außerordentliche Veröffentlichung) und O-12 (Fehlerkorrekturfassungen ohne Mitteilung)
+sind **dasselbe Muster** und werden hier als ein Punkt geführt: **BDEW veröffentlicht
+Fassungen, die in keiner BNetzA-Mitteilung stehen.** Das Schema macht das ab v0.3 an jeder
+Fassung sichtbar, statt es im Fließtext zu lassen:
 
-* Deckblatt: „Außerordentliche Veröffentlichung [wegen Layoutanpassung]“, eigenes
-  **Stand**-Datum, gleiche **Version**, „Ursprüngliches Publikationsdatum“. Es ist also eine
-  weitere Fassung derselben Version, keine neue Version.
-* Die Änderungshistorie ist **kumuliert** wie bei der konsolidierten Fassung: frühere
-  Fehlerkorrekturen („Fehler (30.03.2023)“) plus Anpassungen („Anpassung (26.07.2024)“ Layout,
-  „Anpassung (11.12.2025)“ Segmentzähler/Tabellenlayout; für CONTRL Änd-ID 26091 ausdrücklich
-  „kein Implementierungsaufwand“) und vereinzelt neue Fehlerkorrekturen („Fehler (11.12.2025)“
-  bei INSRPT AHB, Deckblattdatum).
-* Sie ist in keiner BNetzA-Mitteilung angekündigt, genau wie konsolidierte
-  Fehlerkorrekturfassungen.
+```json
+"mitteilungsbezug": { "art": "kein_mitteilungsbezug", "mitteilung_nummer": null,
+                      "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt" }
+```
 
-**Regel (vorläufig angewandt):** Außerordentliche Veröffentlichungen und konsolidierte
-Fehlerkorrekturfassungen bilden **eine** Stand-Reihe je Version. Schritte 3 und 4 gelten für
-beide Typen gemeinsam: Der neueste Stand (PDF) ist `massgeblich`, ältere Stände sind
-`ersetzt`. Eine Fassung ohne Stand-Datum im Titel (einzelne XML-Dateien) lässt sich nicht
-einordnen und wird `informativ`, mit Hinweis.
+`art` kennt vier Werte: `anlage_der_mitteilung_bytegleich` (per SHA-256 geprüft),
+`anlage_der_mitteilung`, `konsultationsanlage`, `kein_mitteilungsbezug`.
 
-Die UTILMD-Datensätze aus Etappe 1 folgen dieser Reihenfolge bereits. Mit v0.1 kommt dort
-nur `ersetzt_durch` hinzu.
+Stand heute (Etappen 1 und 2, 36 Dokumente, 209 Fassungen): 61 Fassungen sind Anlagen einer
+Mitteilung und bytegleich, 32 sind Konsultationsanlagen, **116 haben keinen
+Mitteilungsbezug**. Darunter sind **11 der 36 maßgeblichen Fassungen** — die amtliche Quelle
+kennt in knapp einem Drittel der Fälle die Fassung nicht, die am Stichtag gilt.
+
+### Zwei getrennte Typen, eine gemeinsame Stand-Reihe
+
+Beide Typen bleiben **eigenständig benannt und getrennt datiert** (ab v0.3 erzwungen):
+
+| | `konsolidiert_fehlerkorrektur` | `ausserordentliche_veroeffentlichung` |
+|---|---|---|
+| Datumsfeld | `fehlerkorrekturstand` | `stand_ausserordentlich` |
+| Deckblatt | „Konsolidierte Lesefassung mit Fehlerkorrekturen, Stand …“ | „Außerordentliche Veröffentlichung [wegen Layoutanpassung], Stand …“ |
+| Anlass | inhaltliche Fehlerkorrekturen (Status „Fehler (Datum)“) | überwiegend redaktionell: Layout, Segmentzähler, Kapitelstruktur (Status „Anpassung (Datum)“), teils zusätzlich Fehlerkorrekturen |
+| Historie | kumuliert | kumuliert, inklusive der früheren Fehlerkorrekturen |
+| Mitteilungsbezug | keiner | keiner |
+
+Gemeinsam ist nur die **Sortierung**: `stand_reihe_datum` (abgeleitet aus dem jeweils
+gefüllten Feld) ordnet beide Typen in eine Reihe je Version. Der neueste Stand als PDF ist
+`massgeblich`, ältere Stände sind `ersetzt`. Fassungen ohne Stand-Datum (drei XML-Dateien)
+lassen sich nicht einordnen und bleiben `informativ`, mit Hinweis.
+
+### Angewandt auf den O-11-Fall: CONTRL MIG 2.0b
+
+| Fassung | Typ | Stand | Rolle | warum |
+|---|---|---|---|---|
+| bdew:6776 (PDF) | basis | — | `ergaenzend` | Anlage der Mitteilung 24, bytegleich; einzige Quelle der Änderungshistorie gegenüber der Vorversion |
+| bdew:6777 (PDF) | konsolidiert | 06.12.2021 | `ersetzt` → bdew:7422 | war einmal der richtige Stand |
+| bdew:7422 (PDF) | außerordentlich | 26.07.2024 | `ersetzt` → bdew:8195 | dito |
+| bdew:8195 (PDF) | außerordentlich | 11.12.2025 | **`massgeblich`** | neuester Stand der Reihe |
+| bdew:7561 (XML) | außerordentlich | — | `informativ` | kein Stand-Datum, nicht einzuordnen |
+| bdew:8196, 7423 (Word) | informatorische Lesefassung | — | `informativ` | Typ |
+
+**Kein Eintrag ist „verworfen“**, obwohl es zwei naheliegende Kandidaten gäbe: die
+XML-Datei ohne Stand-Datum und die konsolidierte Fassung von 2021. Beide bleiben mit Hash,
+URL und Begründung erhalten. Die Frage „Welche Fassung galt am 01.08.2024?“ lässt sich damit
+weiterhin beantworten (bdew:7422).
+
+**Zu bestätigen:** dass der neueste Stand der gemeinsamen Reihe maßgeblich ist. Das
+entscheidet über CONTRL AHB/MIG und INSRPT AHB/MIG. Die Alternative wäre, außerordentliche
+Veröffentlichungen nur als `ergaenzend` zu führen und die ältere Fassung maßgeblich zu
+lassen.
+
+Die UTILMD-Datensätze aus Etappe 1 folgen dieser Reihenfolge bereits.

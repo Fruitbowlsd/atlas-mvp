@@ -8,8 +8,8 @@ Nachrichtentypen skaliert wird.
 Artefakte:
 
 * [`etappe1_utilmd_provenienz.json`](etappe1_utilmd_provenienz.json): 4 Datensätze, validiert gegen das Schema
-* [`provenienz_schema.json`](provenienz_schema.json): JSON Schema (Draft 2020-12), **zur Bestätigung**
-* [`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md): Abschnitt 9a, **zur Bestätigung**
+* [`provenienz_schema.json`](provenienz_schema.json): JSON Schema (Draft 2020-12), bestätigt; seither v0.1–v0.3 ergänzt (siehe [`rollendefinition.md`](rollendefinition.md))
+* [`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md): Abschnitt 9a, bestätigt am 17.09.2026
 
 ---
 

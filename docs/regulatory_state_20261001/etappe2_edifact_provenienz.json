@@ -3,11 +3,11 @@
   "etappe": 2,
   "ticket": "#64",
   "schema": "provenienz_schema.json",
-  "schema_version": "0.2",
+  "schema_version": "0.3",
   "anzahl": 32,
   "datensaetze": [
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "APERAK-AHB",
@@ -165,7 +165,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8321",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8321"
+          }
         },
         {
           "fassung_id": "bdew:8237",
@@ -195,7 +202,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8321",
@@ -248,7 +262,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:APERAK_AHB_1_1_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8322",
@@ -278,7 +299,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8323",
@@ -308,7 +336,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         }
       ],
       "auswahl": {
@@ -460,7 +495,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "APERAK-MIG",
@@ -609,7 +644,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8328",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8328"
+          }
         },
         {
           "fassung_id": "bdew:8238",
@@ -639,7 +681,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8326",
@@ -669,7 +718,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8327",
@@ -699,7 +755,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8328",
@@ -749,7 +812,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:APERAK_MIG_2_2_20260401.pdf)"
+          }
         }
       ],
       "auswahl": {
@@ -875,7 +945,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "IFTSTA-AHB",
@@ -1031,7 +1101,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8336",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8336"
+          }
         },
         {
           "fassung_id": "bdew:8239",
@@ -1061,7 +1138,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8335",
@@ -1091,7 +1175,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8336",
@@ -1142,7 +1233,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:IFTSTA_AHB_2_1_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8337",
@@ -1172,7 +1270,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         }
       ],
       "auswahl": {
@@ -1311,7 +1416,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "IFTSTA-MIG",
@@ -1460,7 +1565,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8339",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8339"
+          }
         },
         {
           "fassung_id": "bdew:8240",
@@ -1490,7 +1602,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8338",
@@ -1520,7 +1639,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8339",
@@ -1570,7 +1696,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:IFTSTA_MIG_2_1_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8340",
@@ -1600,7 +1733,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -1726,7 +1866,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INVOIC-AHB",
@@ -1860,7 +2000,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8342",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8342"
+          }
         },
         {
           "fassung_id": "bdew:8241",
@@ -1890,7 +2037,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8341",
@@ -1920,7 +2074,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8342",
@@ -1973,7 +2134,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:INVOIC_AHB_1_0b_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8343",
@@ -2003,7 +2171,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         }
       ],
       "auswahl": {
@@ -2153,7 +2328,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "MSCONS-AHB",
@@ -2293,7 +2468,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8345",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8345"
+          }
         },
         {
           "fassung_id": "bdew:8242",
@@ -2323,7 +2505,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8344",
@@ -2353,7 +2542,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8345",
@@ -2406,7 +2602,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:MSCONS_AHB_3_2_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8346",
@@ -2436,7 +2639,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -2586,7 +2796,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "MSCONS-MIG",
@@ -2723,7 +2933,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8348",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8348"
+          }
         },
         {
           "fassung_id": "bdew:8243",
@@ -2753,7 +2970,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8347",
@@ -2783,7 +3007,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8348",
@@ -2833,7 +3064,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:MSCONS_MIG_2_5_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8349",
@@ -2863,7 +3101,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         }
       ],
       "auswahl": {
@@ -2989,7 +3234,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDCHG-AHB",
@@ -3122,7 +3367,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8351",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8351"
+          }
         },
         {
           "fassung_id": "bdew:8244",
@@ -3152,7 +3404,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8350",
@@ -3182,7 +3441,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8351",
@@ -3234,7 +3500,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:ORDCHG_AHB_1_1_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8352",
@@ -3264,7 +3537,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -3414,7 +3694,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDCHG-MIG",
@@ -3551,7 +3831,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8355",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8355"
+          }
         },
         {
           "fassung_id": "bdew:8245",
@@ -3581,7 +3868,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8354",
@@ -3611,7 +3905,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8355",
@@ -3661,7 +3962,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:ORDCHG_MIG_1_2_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8356",
@@ -3691,7 +3999,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -3828,7 +4143,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDERS-AHB",
@@ -3979,7 +4294,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Inhalt durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8358"
+          }
         },
         {
           "fassung_id": "bdew:8246",
@@ -4009,7 +4331,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8357",
@@ -4039,7 +4368,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8358",
@@ -4091,7 +4427,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Inhalt durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:ORDERS_AHB_1_1b_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8359",
@@ -4121,7 +4464,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8409",
@@ -4151,7 +4501,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Neuester Stand in Nicht-PDF-Format; PDF ist Referenz (Abschnitt 7)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2026-06-29",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8419",
@@ -4201,7 +4558,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Neuester Stand der Stand-Reihe (konsolidierte Fehlerkorrektur / außerordentliche Veröffentlichung), PDF",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2026-06-29",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8420",
@@ -4231,7 +4595,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung einer konsolidierten Fassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -4403,7 +4774,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDERS-MIG",
@@ -4534,7 +4905,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8362",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8362"
+          }
         },
         {
           "fassung_id": "bdew:8247",
@@ -4564,7 +4942,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8360",
@@ -4594,7 +4979,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8361",
@@ -4624,7 +5016,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8362",
@@ -4674,7 +5073,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:ORDERS_MIG_1_4c_20260401.pdf)"
+          }
         }
       ],
       "auswahl": {
@@ -4800,7 +5206,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDRSP-AHB",
@@ -4958,7 +5364,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8363",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8363"
+          }
         },
         {
           "fassung_id": "bdew:8248",
@@ -4988,7 +5401,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8363",
@@ -5041,7 +5461,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:ORDRSP_AHB_1_1b_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8364",
@@ -5071,7 +5498,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8365",
@@ -5101,7 +5535,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         }
       ],
       "auswahl": {
@@ -5251,7 +5692,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDRSP-MIG",
@@ -5382,7 +5823,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8367",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8367"
+          }
         },
         {
           "fassung_id": "bdew:8249",
@@ -5412,7 +5860,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8366",
@@ -5442,7 +5897,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8367",
@@ -5492,7 +5954,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:ORDRSP_MIG_1_4c_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8368",
@@ -5522,7 +5991,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -5648,7 +6124,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PARTIN-AHB",
@@ -5789,7 +6265,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8370",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8370"
+          }
         },
         {
           "fassung_id": "bdew:8250",
@@ -5819,7 +6302,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8369",
@@ -5849,7 +6339,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8370",
@@ -5903,7 +6400,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:PARTIN_AHB_1_1_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8371",
@@ -5933,7 +6437,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         }
       ],
       "auswahl": {
@@ -6083,7 +6594,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PARTIN-MIG",
@@ -6214,7 +6725,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8373",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8373"
+          }
         },
         {
           "fassung_id": "bdew:8262",
@@ -6244,7 +6762,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8372",
@@ -6274,7 +6799,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8373",
@@ -6324,7 +6856,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:PARTIN_MIG_1_1_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8374",
@@ -6354,7 +6893,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -6480,7 +7026,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PRICAT-AHB",
@@ -6620,7 +7166,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8376",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8376"
+          }
         },
         {
           "fassung_id": "bdew:8251",
@@ -6650,7 +7203,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8375",
@@ -6680,7 +7240,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8376",
@@ -6733,7 +7300,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:PRICAT_AHB_2_1_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8377",
@@ -6763,7 +7337,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         }
       ],
       "auswahl": {
@@ -6902,7 +7483,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PRICAT-MIG",
@@ -7040,7 +7621,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8379",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8379"
+          }
         },
         {
           "fassung_id": "bdew:8252",
@@ -7070,7 +7658,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8378",
@@ -7100,7 +7695,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8379",
@@ -7151,7 +7753,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:PRICAT_MIG_2_1_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8380",
@@ -7181,7 +7790,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -7307,7 +7923,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "QUOTES-AHB",
@@ -7458,7 +8074,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8382",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8382"
+          }
         },
         {
           "fassung_id": "bdew:8253",
@@ -7488,7 +8111,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8381",
@@ -7518,7 +8148,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8382",
@@ -7570,7 +8207,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:QUOTES_AHB_1_1a_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8383",
@@ -7600,7 +8244,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         }
       ],
       "auswahl": {
@@ -7762,7 +8413,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "QUOTES-MIG",
@@ -7918,7 +8569,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8385",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8385"
+          }
         },
         {
           "fassung_id": "bdew:8254",
@@ -7948,7 +8606,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8384",
@@ -7978,7 +8643,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8385",
@@ -8029,7 +8701,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:QUOTES_MIG_1_3c_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8386",
@@ -8059,7 +8738,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -8185,7 +8871,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REQOTE-AHB",
@@ -8318,7 +9004,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Inhalt durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8388"
+          }
         },
         {
           "fassung_id": "bdew:8255",
@@ -8348,7 +9041,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8387",
@@ -8378,7 +9078,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8388",
@@ -8430,7 +9137,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Inhalt durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:REQOTE_AHB_1_2_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8389",
@@ -8460,7 +9174,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8410",
@@ -8490,7 +9211,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Neuester Stand in Nicht-PDF-Format; PDF ist Referenz (Abschnitt 7)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2026-06-29",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8425",
@@ -8540,7 +9268,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Neuester Stand der Stand-Reihe (konsolidierte Fehlerkorrektur / außerordentliche Veröffentlichung), PDF",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2026-06-29",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8426",
@@ -8570,7 +9305,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung einer konsolidierten Fassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -8754,7 +9496,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILTS-AHB",
@@ -8898,7 +9640,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8403",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T17:13:00Z"
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56; bytegleich mit bdew:8403"
+          }
         },
         {
           "fassung_id": "bdew:8261",
@@ -8928,7 +9677,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 55,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2026-02-02 (Mitteilung 55)"
+          }
         },
         {
           "fassung_id": "bdew:8402",
@@ -8958,7 +9714,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8403",
@@ -9015,7 +9778,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (bnetza:UTILTS_AHB_1_1_20260401.pdf)"
+          }
         },
         {
           "fassung_id": "bdew:8404",
@@ -9045,7 +9815,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -9207,7 +9984,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "COMDIS-AHB",
@@ -9305,7 +10082,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 52,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2025-08-01 (Mitteilung 52)"
+          }
         },
         {
           "fassung_id": "bdew:8125",
@@ -9356,7 +10140,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 54,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 54: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Anlagen/COMDIS_AHB_1_0h_20251001.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:8126",
@@ -9386,7 +10177,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8127",
@@ -9416,7 +10214,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -9550,6 +10355,18 @@
               "seite": 1
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8125",
+              "sha256": "5c72326a5d70b4e330bb792550661d692ed92d6de21ed34240b88da837146dac",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 54: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Anlagen/COMDIS_AHB_1_0h_20251001.pdf (SHA-256 am 17.09.2026 geprüft)"
+            }
+          ]
         }
       ],
       "analyse": {
@@ -9561,7 +10378,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "COMDIS-MIG",
@@ -9659,7 +10476,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 52,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2025-08-01 (Mitteilung 52)"
+          }
         },
         {
           "fassung_id": "bdew:8128",
@@ -9707,7 +10531,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 54,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 54: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Anlagen/COMDIS_MIG_1_0g_20251001.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:8129",
@@ -9737,7 +10568,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8130",
@@ -9767,7 +10605,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -9878,7 +10723,20 @@
           "beleg": []
         }
       },
-      "hinweise": [],
+      "hinweise": [
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8128",
+              "sha256": "674a8c42546231e55dba25b34413ddce1228738a7fe0a979dee475156b4e8037",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 54: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Anlagen/COMDIS_MIG_1_0g_20251001.pdf (SHA-256 am 17.09.2026 geprüft)"
+            }
+          ]
+        }
+      ],
       "analyse": {
         "analysezeitpunkt_utc": "2026-09-17T18:45:00Z",
         "etappe": 2,
@@ -9888,7 +10746,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REMADV-AHB",
@@ -9986,7 +10844,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 52,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2025-08-01 (Mitteilung 52)"
+          }
         },
         {
           "fassung_id": "bdew:8154",
@@ -10036,7 +10901,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 54,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 54: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Anlagen/REMADV_AHB_1_0a_20251001.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:8155",
@@ -10066,7 +10938,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8156",
@@ -10096,7 +10975,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -10230,6 +11116,18 @@
               "seite": 1
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8154",
+              "sha256": "a0e23c0a6af6d48c308511fa5c6be65b227e7cb98409c9bc341915de99f7cd64",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 54: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Anlagen/REMADV_AHB_1_0a_20251001.pdf (SHA-256 am 17.09.2026 geprüft)"
+            }
+          ]
         }
       ],
       "analyse": {
@@ -10241,7 +11139,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REMADV-MIG",
@@ -10339,7 +11237,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 52,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2025-08-01 (Mitteilung 52)"
+          }
         },
         {
           "fassung_id": "bdew:8157",
@@ -10387,7 +11292,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 54,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 54: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Anlagen/REMADV_MIG_2_9e_20251001.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:8158",
@@ -10417,7 +11329,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:8159",
@@ -10447,7 +11366,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -10558,7 +11484,20 @@
           "beleg": []
         }
       },
-      "hinweise": [],
+      "hinweise": [
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8157",
+              "sha256": "0076cc6de841f705f82463a0a96b546a4487c7a9cc78c87b877b295b0a72e964",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 54: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Anlagen/REMADV_MIG_2_9e_20251001.pdf (SHA-256 am 17.09.2026 geprüft)"
+            }
+          ]
+        }
+      ],
       "analyse": {
         "analysezeitpunkt_utc": "2026-09-17T18:45:00Z",
         "etappe": 2,
@@ -10568,7 +11507,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INVOIC-MIG",
@@ -10666,7 +11605,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 48,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2025-02-03 (Mitteilung 48)"
+          }
         },
         {
           "fassung_id": "bdew:7872",
@@ -10696,7 +11642,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:7873",
@@ -10745,7 +11698,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 51,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 51: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_51/Anlagen/INVOIC_MIG_2.8e.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:7874",
@@ -10775,7 +11735,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -10886,7 +11853,20 @@
           "beleg": []
         }
       },
-      "hinweise": [],
+      "hinweise": [
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:7873",
+              "sha256": "ffb74414f77257582133a61f51b943274b5022b65f75efb8ef6cf8511efad8a9",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 51: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_51/Anlagen/INVOIC_MIG_2.8e.pdf (SHA-256 am 17.09.2026 geprüft)"
+            }
+          ]
+        }
+      ],
       "analyse": {
         "analysezeitpunkt_utc": "2026-09-17T18:45:00Z",
         "etappe": 2,
@@ -10896,7 +11876,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REQOTE-MIG",
@@ -10994,7 +11974,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 48,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2025-02-03 (Mitteilung 48)"
+          }
         },
         {
           "fassung_id": "bdew:7906",
@@ -11042,7 +12029,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Einzige verbindliche PDF-Fassung dieser Version; keine konsolidierte oder außerordentliche Fassung vorhanden",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 51,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 51: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_51/Anlagen/REQOTE_MIG_1_3c.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:7907",
@@ -11072,7 +12066,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:7908",
@@ -11102,7 +12103,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -11228,6 +12236,18 @@
               "fundstelle": "kein REQOTE MIG"
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:7906",
+              "sha256": "6447176dbec93c80a750de98c81cd0d6168c345119c39d8054ad85d66279c631",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 51: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_51/Anlagen/REQOTE_MIG_1_3c.pdf (SHA-256 am 17.09.2026 geprüft)"
+            }
+          ]
         }
       ],
       "analyse": {
@@ -11239,7 +12259,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CONTRL-AHB",
@@ -11355,7 +12375,14 @@
           "rolle": "nicht_verbindlich",
           "rolle_begruendung": "Konsultationsfassung, Konsultationszeitraum laut BDEW",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "konsultationsanlage",
+            "mitteilung_nummer": 48,
+            "vermerk": "Konsultationsfassung, Konsultationszeitraum ab 2025-02-03 (Mitteilung 48)"
+          }
         },
         {
           "fassung_id": "bdew:7861",
@@ -11385,7 +12412,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Basis in Nicht-PDF-Format (Formatnebenfassung)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Formatfassung (XML/Word) der Basisversion; nur bei BDEW veröffentlicht, in der Mitteilung nicht als Anlage geführt"
+          }
         },
         {
           "fassung_id": "bdew:7862",
@@ -11435,7 +12469,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Inhalt durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 51,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 51: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_51/Anlagen/CONTRL_AHB_1_0.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:7863",
@@ -11465,14 +12506,21 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8193",
           "titel_in_quelle": "CONTRL AHB 1.0 - außerordentliche Veröffentlichung Stand: 11.12.2025",
           "fassungstyp": "ausserordentliche_veroeffentlichung",
           "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
-          "fehlerkorrekturstand": "2025-12-11",
+          "fehlerkorrekturstand": null,
           "quelle": "BDEW-MaKo",
           "quelle_ref": {
             "bdew_id": 8193,
@@ -11515,7 +12563,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Neuester Stand der Stand-Reihe (konsolidierte Fehlerkorrektur / außerordentliche Veröffentlichung), PDF",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": "2025-12-11",
+          "stand_reihe_datum": "2025-12-11",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8194",
@@ -11545,14 +12600,21 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung einer außerordentlichen Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8217",
           "titel_in_quelle": "CONTRL AHB 1.0 - außerordentliche Veröffentlichung Stand: 11.12.2025",
           "fassungstyp": "ausserordentliche_veroeffentlichung",
           "fassungstyp_beleg": "BDEW-Titel",
-          "fehlerkorrekturstand": "2025-12-11",
+          "fehlerkorrekturstand": null,
           "quelle": "BDEW-MaKo",
           "quelle_ref": {
             "bdew_id": 8217,
@@ -11575,7 +12637,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Neuester Stand in Nicht-PDF-Format; PDF ist Referenz (Abschnitt 7)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": "2025-12-11",
+          "stand_reihe_datum": "2025-12-11",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -11743,6 +12812,18 @@
               "seite": 30
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:7862",
+              "sha256": "d872374385dfa1e3784dcfab0dbfa91a847fceebfb56fb4f69011e8d8ee25f48",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 51: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_51/Anlagen/CONTRL_AHB_1_0.pdf (SHA-256 am 17.09.2026 geprüft)"
+            }
+          ]
         }
       ],
       "analyse": {
@@ -11754,7 +12835,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILTS-MIG",
@@ -11875,7 +12956,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Inhalt durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 46,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 46: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_46/Anlagen/UTILTS_MIG_1_1e_20241001.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:7439",
@@ -11905,7 +12993,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7548",
@@ -11955,7 +13050,14 @@
           "rolle": "ersetzt",
           "rolle_begruendung": "Älterer Stand 2024-10-17; abgelöst durch Stand 2024-12-13",
           "ersetzt_durch": "bdew:7707",
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2024-10-17",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7549",
@@ -11985,7 +13087,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung einer konsolidierten Fassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7611",
@@ -12015,7 +13124,14 @@
           "rolle": "ersetzt",
           "rolle_begruendung": "Älterer Stand 2024-10-17; abgelöst durch Stand 2024-12-13",
           "ersetzt_durch": "bdew:7709",
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2024-10-17",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7707",
@@ -12066,7 +13182,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Neuester Stand der Stand-Reihe (konsolidierte Fehlerkorrektur / außerordentliche Veröffentlichung), PDF",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2024-12-13",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7708",
@@ -12096,7 +13219,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung einer konsolidierten Fassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7709",
@@ -12126,7 +13256,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Neuester Stand in Nicht-PDF-Format; PDF ist Referenz (Abschnitt 7)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2024-12-13",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -12288,6 +13425,18 @@
               "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:7438",
+              "sha256": "e570d6ff22ff412a6de92363f17274b07aa88d808841d0b18a28353ea70a57a0",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 46: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_46/Anlagen/UTILTS_MIG_1_1e_20241001.pdf (SHA-256 am 17.09.2026 geprüft)"
+            }
+          ]
         }
       ],
       "analyse": {
@@ -12299,7 +13448,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CONTRL-MIG",
@@ -12438,7 +13587,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Inhalt durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 24,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 24: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_24/2_EDIFACT-Konsultationsdokumente/CONTRL%20MIG%202.0b.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:6777",
@@ -12488,14 +13644,21 @@
           "rolle": "ersetzt",
           "rolle_begruendung": "Älterer Stand 2021-12-06; abgelöst durch Stand 2024-07-26",
           "ersetzt_durch": "bdew:7422",
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2021-12-06",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7422",
           "titel_in_quelle": "CONTRL MIG 2.0b - außerordentliche Veröffentlichung Stand: 26.07.2024",
           "fassungstyp": "ausserordentliche_veroeffentlichung",
           "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
-          "fehlerkorrekturstand": "2024-07-26",
+          "fehlerkorrekturstand": null,
           "quelle": "BDEW-MaKo",
           "quelle_ref": {
             "bdew_id": 7422,
@@ -12539,7 +13702,14 @@
           "rolle": "ersetzt",
           "rolle_begruendung": "Älterer Stand 2024-07-26; abgelöst durch Stand 2025-12-11",
           "ersetzt_durch": "bdew:8195",
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": "2024-07-26",
+          "stand_reihe_datum": "2024-07-26",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7423",
@@ -12569,7 +13739,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung einer außerordentlichen Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7561",
@@ -12599,14 +13776,21 @@
           "rolle": "informativ",
           "rolle_begruendung": "Fassung ohne Stand-Datum im Titel; zeitlich nicht einordenbar (Rollendefinition v0.2)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8195",
           "titel_in_quelle": "CONTRL MIG 2.0b - außerordentliche Veröffentlichung Stand: 11.12.2025",
           "fassungstyp": "ausserordentliche_veroeffentlichung",
           "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
-          "fehlerkorrekturstand": "2025-12-11",
+          "fehlerkorrekturstand": null,
           "quelle": "BDEW-MaKo",
           "quelle_ref": {
             "bdew_id": 8195,
@@ -12651,7 +13835,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Neuester Stand der Stand-Reihe (konsolidierte Fehlerkorrektur / außerordentliche Veröffentlichung), PDF",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": "2025-12-11",
+          "stand_reihe_datum": "2025-12-11",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8196",
@@ -12681,14 +13872,21 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung einer außerordentlichen Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8218",
           "titel_in_quelle": "CONTRL MIG 2.0b - außerordentliche Veröffentlichung Stand: 11.12.2025",
           "fassungstyp": "ausserordentliche_veroeffentlichung",
           "fassungstyp_beleg": "BDEW-Titel",
-          "fehlerkorrekturstand": "2025-12-11",
+          "fehlerkorrekturstand": null,
           "quelle": "BDEW-MaKo",
           "quelle_ref": {
             "bdew_id": 8218,
@@ -12711,7 +13909,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Neuester Stand in Nicht-PDF-Format; PDF ist Referenz (Abschnitt 7)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": "2025-12-11",
+          "stand_reihe_datum": "2025-12-11",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -12877,16 +14082,29 @@
         },
         {
           "art": "quellenauffaelligkeit",
-          "text": "Befund 01.04.2026 'UNGEKLÄRT' gelöst: veröffentlicht als Anlage 'CONTRL 2.0b' (ohne 'MIG') der Mitteilung 24 (01.10.2021), durch Mitteilung 27 auf den 01.10.2022 verschoben; Deckblatt 'Publikationsdatum 01.10.2021'. Stand-Reihe: konsolidiert 06.12.2021 → außerordentlich 26.07.2024 (Layout) → außerordentlich 11.12.2025; keine davon durch eine Mitteilung angekündigt.",
+          "text": "Befund 01.04.2026 'UNGEKLÄRT' gelöst: veröffentlicht mit Mitteilung 24 (01.10.2021). Der Linktext der Mitteilung lautet 'CONTRL 2.0b', die Anlage selbst heißt 'CONTRL MIG 2.0b.pdf' und ist bytegleich mit der BDEW-Basisfassung (SHA-256 am 17.09.2026 geprüft). Durch Mitteilung 27 auf den 01.10.2022 verschoben. Stand-Reihe: konsolidiert 06.12.2021 → außerordentlich 26.07.2024 (Layout) → außerordentlich 11.12.2025; keine davon durch eine Mitteilung angekündigt.",
           "auswirkung_auf_auswahl": false,
           "beleg": [
             {
               "quelle": "BNetzA Mitteilung 24",
-              "fundstelle": "CONTRL 2.0b (pdf / 528 KB)"
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_24/2_EDIFACT-Konsultationsdokumente/CONTRL%20MIG%202.0b.pdf",
+              "fundstelle": "Anlage 'CONTRL MIG 2.0b.pdf', Linktext 'CONTRL 2.0b'"
             },
             {
               "quelle": "bdew:8195",
               "seite": 17
+            }
+          ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:6776",
+              "sha256": "30a80e46763ad76a33fd3f79a884fb7f80ab635b60211e05969bf1702ef10a4c",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 24: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_24/2_EDIFACT-Konsultationsdokumente/CONTRL%20MIG%202.0b.pdf (SHA-256 am 17.09.2026 geprüft)"
             }
           ]
         }
@@ -12900,7 +14118,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INSRPT-AHB",
@@ -13025,7 +14243,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Inhalt durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 24,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 24: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_24/2_EDIFACT-Konsultationsdokumente/INSRPT%20AHB%201.1g.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:5564",
@@ -13076,14 +14301,21 @@
           "rolle": "ersetzt",
           "rolle_begruendung": "Älterer Stand 2023-03-30; abgelöst durch Stand 2024-07-26",
           "ersetzt_durch": "bdew:7321",
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2023-03-30",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7321",
           "titel_in_quelle": "INSRPT AHB 1.1g - außerordentliche Veröffentlichung Stand: 26.07.2024",
           "fassungstyp": "ausserordentliche_veroeffentlichung",
           "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
-          "fehlerkorrekturstand": "2024-07-26",
+          "fehlerkorrekturstand": null,
           "quelle": "BDEW-MaKo",
           "quelle_ref": {
             "bdew_id": 7321,
@@ -13128,7 +14360,14 @@
           "rolle": "ersetzt",
           "rolle_begruendung": "Älterer Stand 2024-07-26; abgelöst durch Stand 2025-12-11",
           "ersetzt_durch": "bdew:8197",
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": "2024-07-26",
+          "stand_reihe_datum": "2024-07-26",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7322",
@@ -13158,7 +14397,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung einer außerordentlichen Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7570",
@@ -13188,14 +14434,21 @@
           "rolle": "informativ",
           "rolle_begruendung": "Fassung ohne Stand-Datum im Titel; zeitlich nicht einordenbar (Rollendefinition v0.2)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8197",
           "titel_in_quelle": "INSRPT AHB 1.1g - außerordentliche Veröffentlichung Stand: 11.12.2025",
           "fassungstyp": "ausserordentliche_veroeffentlichung",
           "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
-          "fehlerkorrekturstand": "2025-12-11",
+          "fehlerkorrekturstand": null,
           "quelle": "BDEW-MaKo",
           "quelle_ref": {
             "bdew_id": 8197,
@@ -13242,7 +14495,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Neuester Stand der Stand-Reihe (konsolidierte Fehlerkorrektur / außerordentliche Veröffentlichung), PDF",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": "2025-12-11",
+          "stand_reihe_datum": "2025-12-11",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8198",
@@ -13272,14 +14532,21 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung einer außerordentlichen Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:8219",
           "titel_in_quelle": "INSRPT AHB 1.1g - außerordentliche Veröffentlichung Stand: 11.12.2025",
           "fassungstyp": "ausserordentliche_veroeffentlichung",
           "fassungstyp_beleg": "BDEW-Titel",
-          "fehlerkorrekturstand": "2025-12-11",
+          "fehlerkorrekturstand": null,
           "quelle": "BDEW-MaKo",
           "quelle_ref": {
             "bdew_id": 8219,
@@ -13302,7 +14569,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Neuester Stand in Nicht-PDF-Format; PDF ist Referenz (Abschnitt 7)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": "2025-12-11",
+          "stand_reihe_datum": "2025-12-11",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -13503,6 +14777,18 @@
               "seite": "23–24"
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:5563",
+              "sha256": "1063b3e22974e19ac2682e6847bb0af9e68eae7eec32a14ed02b9cc69737fa6a",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 24: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_24/2_EDIFACT-Konsultationsdokumente/INSRPT%20AHB%201.1g.pdf (SHA-256 am 17.09.2026 geprüft)"
+            }
+          ]
         }
       ],
       "analyse": {
@@ -13514,7 +14800,7 @@
       }
     },
     {
-      "schema_version": "0.2",
+      "schema_version": "0.3",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INSRPT-MIG",
@@ -13635,7 +14921,14 @@
           "rolle": "ergaenzend",
           "rolle_begruendung": "Inhalt durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 24,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 24: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_24/2_EDIFACT-Konsultationsdokumente/INSRPT%20MIG%201.1a.pdf (SHA-256 am 17.09.2026 geprüft)"
+          }
         },
         {
           "fassung_id": "bdew:5551",
@@ -13686,14 +14979,21 @@
           "rolle": "ersetzt",
           "rolle_begruendung": "Älterer Stand 2023-03-30; abgelöst durch Stand 2024-07-26",
           "ersetzt_durch": "bdew:7319",
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2023-03-30",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7319",
           "titel_in_quelle": "INSRPT MIG 1.1a - außerordentliche Veröffentlichung Stand: 26.07.2024",
           "fassungstyp": "ausserordentliche_veroeffentlichung",
           "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
-          "fehlerkorrekturstand": "2024-07-26",
+          "fehlerkorrekturstand": null,
           "quelle": "BDEW-MaKo",
           "quelle_ref": {
             "bdew_id": 7319,
@@ -13738,7 +15038,14 @@
           "rolle": "massgeblich",
           "rolle_begruendung": "Neuester Stand der Stand-Reihe (konsolidierte Fehlerkorrektur / außerordentliche Veröffentlichung), PDF",
           "ersetzt_durch": null,
-          "abruf_utc": "2026-09-17T18:20:00Z"
+          "abruf_utc": "2026-09-17T18:20:00Z",
+          "stand_ausserordentlich": "2024-07-26",
+          "stand_reihe_datum": "2024-07-26",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7320",
@@ -13768,7 +15075,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Informatorische Lesefassung einer außerordentlichen Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         },
         {
           "fassung_id": "bdew:7567",
@@ -13798,7 +15112,14 @@
           "rolle": "informativ",
           "rolle_begruendung": "Fassung ohne Stand-Datum im Titel; zeitlich nicht einordenbar (Rollendefinition v0.2)",
           "ersetzt_durch": null,
-          "abruf_utc": null
+          "abruf_utc": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Außerordentliche Veröffentlichung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
         }
       ],
       "auswahl": {
@@ -13970,6 +15291,18 @@
             {
               "quelle": "bdew:7319",
               "seite": 31
+            }
+          ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Die Basisfassung bei BDEW ist bytegleich mit der Anlage der veröffentlichenden Mitteilung (SHA-256, geprüft am 17.09.2026). Damit ist auch für die fortgeltenden Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:5550",
+              "sha256": "53ca81ce2d62a12c527b09c62c832db6e6f1baf263e7bb6e856fc01264a48f31",
+              "fundstelle": "bytegleich mit der Anlage der Mitteilung 24: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_24/2_EDIFACT-Konsultationsdokumente/INSRPT%20MIG%201.1a.pdf (SHA-256 am 17.09.2026 geprüft)"
             }
           ]
         }

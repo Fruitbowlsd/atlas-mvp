@@ -6,8 +6,8 @@
 
 Artefakte:
 
-* [`etappe2_edifact_provenienz.json`](etappe2_edifact_provenienz.json): 32 Datensätze, validiert gegen [`provenienz_schema.json`](provenienz_schema.json) v0.2
-* [`rollendefinition.md`](rollendefinition.md): ergänzt um die außerordentliche Veröffentlichung (v0.2)
+* [`etappe2_edifact_provenienz.json`](etappe2_edifact_provenienz.json): 32 Datensätze, validiert gegen [`provenienz_schema.json`](provenienz_schema.json) **v0.3**
+* [`rollendefinition.md`](rollendefinition.md): außerordentliche Veröffentlichung als eigener Typ; O-11 und O-12 zu einem Punkt zusammengeführt
 
 ---
 
@@ -34,7 +34,7 @@ Umfang: 21 Dokumente aus Mitteilung 56 und **11 fortgeltende Dokumente**, die in
 | erfasste Fassungen | **171**: 32 maßgeblich, 28 ergänzend, 7 ersetzt, 76 informativ, 28 nicht verbindlich |
 | PDF geladen und gehasht | 45 (alle freien PDF-Fassungen der Stichtagsversionen) |
 | offene Fälle **gelöst** | O-1 (gewertet), O-2, O-3, dazu 3× „UNGEKLÄRT“ aus dem Befund 01.04.2026 (CONTRL MIG, INSRPT AHB, INSRPT MIG) und der Vorgänger von ORDCHG MIG |
-| offene Fälle **neu** | 2 (O-11 Regelerweiterung, O-12 Fassungen ohne Mitteilung); dazu 1 Rest aus O-3 ohne Einfluss |
+| offene Fälle **neu** | **1** (O-11: Fassungen ohne Mitteilungsbezug, umfasst das frühere O-12); dazu 1 Rest aus O-3 ohne Einfluss |
 | Widersprüche BNetzA ↔ BDEW | **0** |
 
 ## 3. Ergebnis: Welche Fassung gilt am 01.10.2026?
@@ -91,6 +91,12 @@ die Funktionsweise des Änderungsmanagements (Befund 01.04.2026).
 
 ## 4. Neuer Fassungstyp: außerordentliche Veröffentlichung (O-11, zur Bestätigung)
 
+> **Stand nach deiner Rückmeldung vom 17.09.2026:** Der Typ ist ab Schema v0.3 eigenständig
+> geführt (`ausserordentliche_veroeffentlichung` mit eigenem Feld `stand_ausserordentlich`,
+> getrennt von `fehlerkorrekturstand`), jede Fassung trägt ein Pflichtfeld
+> `mitteilungsbezug`, und das frühere O-12 ist in O-11 aufgegangen. Einzelheiten und ein
+> durchgerechnetes Beispiel stehen in [`rollendefinition.md`](rollendefinition.md).
+
 Aufgetreten bei CONTRL AHB 1.0, CONTRL MIG 2.0b, INSRPT AHB 1.1g und INSRPT MIG 1.1a. Nach
 Regel 7 der Rollendefinition habe ich den Typ **nicht still eingeordnet**, sondern am
 Dokument geprüft:
@@ -138,7 +144,7 @@ CONTRL 2.0b, INSRPT 1.1a) zu den AHB am Stichtag gehören.
 | **O-1** APERAK AHB 1.1 als „Informatorische Lesefassung“ gekennzeichnet | Das BNetzA-PDF ist **bytegleich** mit dem BDEW-Basis-PDF. Eine Fassung ohne Vermerk gibt es nicht, die informatorische Lesefassung ist eine eigene Word-Datei. **Wertung:** Beschriftungsfehler des Dokuments; die Datei bleibt maßgeblich, weil sie die amtlich veröffentlichte Anlage ist. Als `dokumentauffaelligkeit` dokumentiert, nichts umgedeutet. |
 | **O-2** QUOTES/REQOTE AHB: Stand MIG mehrdeutig | UNH DE0057 = 1.3c in allen Anwendungsfall-Tabellen (Abschnitt 5) |
 | **O-3** REQOTE MIG 1.3d nicht veröffentlicht | REQOTE MIG **1.3c** (Mitteilung 51) gilt fort, REQOTE AHB 1.2 referenziert 1.3c. Warum 1.3d fehlt, steht in keiner Quelle; ohne Einfluss auf die Auswahl. |
-| CONTRL MIG „UNGEKLÄRT“ (Befund 01.04.2026) | Anlage **„CONTRL 2.0b“** (ohne „MIG“) der **Mitteilung 24** (01.10.2021), verschoben durch **Mitteilung 27** auf 01.10.2022. Der alte Befund suchte nur in M40–57 und nach „CONTRL MIG“. |
+| CONTRL MIG „UNGEKLÄRT“ (Befund 01.04.2026) | **Mitteilung 24** (01.10.2021): Linktext „CONTRL 2.0b“, Anlage `CONTRL MIG 2.0b.pdf`, bytegleich mit der BDEW-Basisfassung. Verschoben durch **Mitteilung 27** auf 01.10.2022. Der alte Befund suchte nur in M40–57 und nach „CONTRL MIG“. |
 | INSRPT AHB/MIG „UNGEKLÄRT“ | ebenfalls Mitteilung 24, verschoben durch 27 → gültig ab 01.10.2022 |
 | ORDCHG MIG Vorgänger „ungeklärt“ | BDEW führt 1.1 mit `validTo 2026-09-30` im selben Thema; als Vorgänger übernommen (abgeleitet, ohne Mitteilungsbeleg für 1.1) |
 
@@ -150,7 +156,7 @@ Die gezielte Suche nach CONTRL MIG und INSRPT las die Mitteilungen 8, 11, 13, 14
 | ID | Fall | Bearbeitung |
 |---|---|---|
 | **O-11** | Regelerweiterung „außerordentliche Veröffentlichung“ (Abschnitt 4), bestimmt die maßgebliche Fassung bei 4 Dokumenten | **Bestätigung durch dich** |
-| **O-12** | BDEW veröffentlicht Fassungen ohne BNetzA-Mitteilung: Fehlerkorrekturen (bekannt aus Etappe 1) **und** außerordentliche Veröffentlichungen mit redaktionellen Anpassungen (11.12.2025, 26.07.2024). Das ist kein Widerspruch, aber die amtliche Quelle kennt diese Fassungen nicht. | in Etappe 7 als Quellenbefund |
+| ~~O-12~~ | **In O-11 aufgegangen.** Fehlerkorrekturfassungen und außerordentliche Veröffentlichungen sind dasselbe Muster: BDEW veröffentlicht, BNetzA nicht. Ab v0.3 an jeder Fassung als `mitteilungsbezug` erfasst. Zahlen über Etappe 1 und 2: 61 Fassungen sind bytegleiche Mitteilungsanlagen, 32 Konsultationsanlagen, **116 ohne Mitteilungsbezug — darunter 11 der 36 maßgeblichen Fassungen.** | Zahlenbefund in Etappe 7 |
 
 **Kleinere Befunde ohne Einfluss** (als `hinweise` in der JSON):
 
@@ -161,7 +167,7 @@ Die gezielte Suche nach CONTRL MIG und INSRPT las die Mitteilungen 8, 11, 13, 14
 
 ## 8. Bestätigte Methodik aus Etappe 1, hier erneut belegt
 
-* Das BNetzA-PDF ist bytegleich mit dem BDEW-Basis-PDF: **21 / 21** Dokumente aus Mitteilung 56.
+* Das BNetzA-PDF ist bytegleich mit dem BDEW-Basis-PDF: **21 / 21** Dokumente aus Mitteilung 56 — und zusätzlich **11 / 11** fortgeltende Dokumente gegen ihre Anlage aus Mitteilung 54, 51, 46 bzw. 24 (auch die von 2021). Damit ist für alle 32 Dokumente belegt, dass BDEW dieselbe Datei führt wie die BNetzA.
 * Die maßgebliche Fassung weicht von der amtlich verlinkten ab, sobald es spätere Stände
   gibt: ORDERS AHB, REQOTE AHB (Mitteilung 56) sowie UTILTS MIG, CONTRL AHB/MIG und INSRPT
   AHB/MIG (fortgeltend).
