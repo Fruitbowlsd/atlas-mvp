@@ -1,0 +1,119 @@
+ 
+Da­ten­for­ma­te zur Ab­wick­lung der Markt­kom­mu­ni­ka­ti­on
+Beschlusskammer 6 / Beschlusskammer 7 
+ Prozesse zur Marktkommunikation: Lieferantenwechsel (Strom) ( GPKE ) Lieferantenwechsel (Gas) ( GeLi Gas ) Bilanzkreisabrechnung ( MaBiS ) Wechselprozesse im Messwesen ( WiM ) Wechselprozesse für Erzeuger ( MPES ) 
+ Eine Übersicht der EDI@Energy-Dokumente zu den Datenaustauschformaten finden Sie im Forum Datenformate des BDEW ( www.bdew-mako.de ) 
+ Mitteilungen zu den Datenformaten zur Abwicklung der Marktkommunikation 
+ Nr. * Betreff veröffentlicht: 
+ 57 Konsultation überarbeiteter Nachrichtentypversionen zum 01.04.2027 31.07.2026 
+ 56 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2026 01.04.2026 
+ 55 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.10.2026 02.02.2026 
+ 54 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2026 01.10.2025 
+ 53 Konsultation des Konzepts zur Nutzung und Veröffentlichung von API-Webdiensten 01.09.2025 
+ 52 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2026 01.08.2025 
+ 51 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2025 01.04.2025 
+ 50 Gas: Aussetzung der vorgesehenen verpflichtenden Inhaltsverschlüsselung (Content encryption) mit AES-128 GCM für S/MIME 26.03.2025 
+ 49 Verschiebung des Formatwechsels der XML-Datenformate 13.03.2025 
+ 48 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.10.2025 03.02.2025 
+ 47 Verlängerte Implementations- und Testphase Lieferantenwechsel 24 / Auswirkungen auf veröffentlichte Datenformate 16.12.2024 
+ 46 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 04.04.2025 01.10.2024 
+ 45 Gas: Aussetzung der zum 01.10.2024 vorgesehenen verpflichtenden Inhaltsverschlüsselung (Content encryption) mit AES-128 GCM für S/MIME 17.09.2024 
+ 44 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 04.04.2025 01.08.2024 
+ 43 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 04.04.2025 (Teil 2) 03.07.2024 
+ 42 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 04.04.2025 (Teil 1) 19.06.2024 
+ 41 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2024 03.04.2024 
+ 40 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2025 02.04.2024 
+ 39 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.10.2024 01.02.2024 
+ 38 Ergebnis der außerplanmäßigen Konsultation / Inkrafttreten von Nachrichtentypversionen und Dokumenten zum 03.04.2024 (!) 25.01.2024 
+ 37 Außerplanmäßige Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2024 12.12.2023 
+ 36 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2024 (Teil 2) 24.10.2023 
+ 35 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2024 (Teil 1) 04.10.2023 
+ 34 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2024 31.07.2023 
+ 33 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2023 31.03.2023 
+ 32 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.10.2023 01.02.2023 
+ 31 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2023 30.09.2022 
+ 30 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2023 01.08.2022 
+ 29 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2022 (Teil 2) 29.04.2022 
+ 28 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2022 (Teil 1) 01.04.2022 
+ 27 Verschiebung der Umsetzung der Datenformate einschließlich der Marktkommunikation 2022 auf den 01.10.2022 02.02.2022 
+ 26 Konsultation von Nachrichtentypen für den Umsetzungstermin 01.10.2022 01.02.2022 
+ 25 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2022 (Teil 2) 15.10.2021 
+ 24 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2022 (Teil 1) 01.10.2021 
+ 23 Veröffentlichung der Umsetzungsfrage Redispatch_13 im der BDEW -Anwendungshilfe „Umsetzungsfragenkatalog zum Redispatch 2.0“ 21.09.2021 
+ 22 Weiternutzung von Kombizertifikaten im Rahmen der Absicherung der elektronischen Marktkommunikation Strom 16.09.2021 
+ 21 Konsultation von Nachrichtentypenversionen für den Umsetzungstermin 01.04.2022 30.07.2021 
+ 20 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2021 (Teil 2) 30.04.2021 
+ 19 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2021 01.04.2021 
+ 18 Mitteilung Nr. 17 zu „coronabedingtem Ruhetag“ gegenstandslos 24.03.2021 
+ 17 Umgang mit dem coronabedingten „Ruhetag“ am 01.04.2021 im Rahmen der elektronischen Marktkommunikation 24.03.2021 
+ 16 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.10.2021 29.01.2021 
+ 15 1. Durchgängiger Versand der Berechnungsformel vom NB an MSB und LF 
+ 2. Einführungsszenario für den durchgängigen Versand der Berechnungsformel 28.10.2020 
+ 14 1. Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2021 (Teil 2) 
+ 2. EBD Lieferbeginn: Prüfung der Identität des Anschlussnutzers bei Transaktionsgrund "Ein-/Auszug" 16.10.2020 
+ 13 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2021 01.10.2020 
+ 12 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2021 03.08.2020 
+ 11 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2020 und 01.04.2021 01.04.2020 
+ 10 Coronavirus-Pandemie, hier: Einhaltung von Fristigkeiten im Rahmen der Marktkommunikation 17.03.2020 
+ 9 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.10.2020 03.02.2020 
+ 8 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2020 31.01.2020 
+ 7 Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2020 08.01.2020 
+ 6 Entscheidungsbaumdiagramme zur Umsetzung der MaKo 2020: Ablehnungsgrund „Sonstiges“ 27.09.2019 
+ 5 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.12.2019 (Teil 3) 07.06.2019 
+ 4 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.12.2019 (Teil 2) 06.05.2019 
+ 3 Verwendung von Zertifikaten zur Signierung bzw. Verschlüsselung der Marktkommunikation 03.04.2019 
+ 2 Veröffentlichung des Dokumentes „Regelungen zum sicheren Austausch im Fahrplanprozess“ für den Umsetzungstermin 01.10.2019 02.04.2019 
+ 1 Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.12.2019 (Teil 1) 01.04.2019 
+ * neue Nummerierung ab 01.04.2019 
+ **Die bisherigen Listen "Mitteilungen zur GPKE " bzw. "Mitteilungen zum Messwesen Energie" wurden aufgeteilt. In der nachfolgenden Liste sind nur Mitteilungen enthalten die sich inhaltlich auf die elektronische Marktkommunikation beziehen. Die ursprüngliche Nummerierung wurde beibehalten. 
+ Nr. ** Betreff veröffentlicht: 
+ 63 ( GPKE ) Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.12.2019 01.02.2019 
+ 62 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2019; Übermittlung von OBIS -Kennzahlen beim Stammdatenaustausch 01.10.2018 
+ 60 ( GPKE ) Hinweis auf die BDEW -Anwendungshilfe „Standards zur Modellierung von Marktprozessen im Energiemarkt“ 18.06.2018 
+ 8 ( WiM ) Verpflichtung zur Unterstützung von RSASSA-PSS-signierter Zertifikate 13.04.2018 
+ 7 ( WiM ) Veröffentlichung einer konsolidierten fehlerbereinigten Lesefassung des EDI@Energy-Dokumentes „Regelungen zum Übertragungsweg“ 
+ - Verwendung von Signatur und Verschlüsselung im Zeitraum ab dem 01.01.2018 12.12.2017 
+ 6 ( WiM ) Einführung von Marktlokations-Identifikationsnummern im deutschen Energiemarkt 
+ Start der marktweiten Codeverteilung 01.12.2017 
+ 5 ( WiM ) Außerturnusmäßige Veröffentlichung von EDI@Energy-Dokumenten für die Einführung von Marktlokations-Identifikationsnummern / Inkrafttreten zum 01.10.2017 26.06.2017 
+ 4 ( WiM ) 1. Geschäftsprozessbeschreibung und Stammdatenformular für die erleichterte Abwicklung von Lieferantenwechsel innerhalb von Kundenanlagen
+ 2. EDI@Energy Anwendungshilfe zu den Datenformaten des Interimsmodells 08.06.2017 
+ 3 ( WiM ) 1. Außerturnusmäßige Konsultation von EDI@Energy-Dokumenten  für die Einführung von Marktlokations-Identifikationsnummern 
+ 2. Konsolidierte fehlerbereinigte Lesefassung des EDI@Energy-Dokumentes „Regelungen zum Übertragungsweg“ 16.05.2017 
+ 2 ( WiM ) Geschäftsprozesse für die Einführung von Marktlokations-Identifikationsnummern 02.05.2017 
+ 58 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2017 03.04.2017 
+ 56 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2017 30.09.2016 
+ 55 ( GPKE ) Einrichtung einer Codevergabestelle durch BDEW und DVGW 23.09.2016 
+ 53 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2016 01.04.2016 
+ 51 ( GPKE ) Elektronisches Preisblatt Strom und Gas; Veröffentlichung von Dokumenten zur öffentlichen Diskussion 09.10.2015 
+ 50 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2016 01.10.2015 
+ 48 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2015 01.04.2015 
+ 45 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2015 01.10.2014 
+ 42 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2014 01.04.2014 
+ 40 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2014 01.10.2013 
+ 38 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2013 02.04.2013 
+ 36 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2013 01.10.2012 
+ 33 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2012 02.04.2012 
+ 31 ( GPKE ) Erläuterung zum Zeitpunkt des Bilanzkreiswechsels bei SLP -Kunden sowie zum Verhältnis zwischen der Zuordnungs- bzw. Bestandsliste und den Einzelmeldungen; Veröffentlichung konsolidierter Lesefassungen; Inkrafttreten der neuen Artikelnummernliste 23.12.2011 
+ 30 ( GPKE ) Veröffentlichung angepasster Nachrichtentypversionen für den Umsetzungstermin 01.04.2012 18.11.2011 
+ 29 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2012 01.10.2011 
+ 27 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2011 01.04.2011 
+ 25 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.04.2011 01.10.2010 
+ 22 ( GPKE ) Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2010 01.04.2010 
+ 20 ( GPKE ) Neue Verbindliche Nachrichtentypbeschreibungen gültig zum 01.04.2010; Absendeadresse im Rahmen der 1:1-Kommunikation; Fehlende Mitwirkung von Lieferanten bei Umstellung auf elektronische Netznutzungsabrechnung 01.10.2009 
+ 17 ( GPKE ) Neue Verbindliche Nachrichtentypbeschreibungen gültig zum 01.04.2009 01.10.2008 
+ 14 ( GPKE ) Erneute Fehlerkorrekturen UTILMD 4.1a und APERAK 2.0a 20.05.2008 
+ 13 ( GPKE ) Fehlerkorrekturen UTILMD und APERAK 15.05.2008 
+ 12 ( GPKE ) Neue Verbindliche Nachrichtentypbeschreibungen gültig zum 01.08.2008 31.03.2008 
+ 11 ( GPKE ) UTILMD 4.0b; Berichtigung eines redaktionellen Fehlers 17.03.2008 
+ 10 ( GPKE ) Mitteilung zur Einführung der EDIFACT -Nachrichtentypen gemäß GeLi Gas 12.03.2008 
+ 8 ( GPKE ) UTILMD Version 4.0b MIG und AHB - verbindlich ab 01.04.2008 08.02.2008 
+ 6 ( GPKE ) Verwendung von CONTRL , Einheitl. Codenummern, Elektronische Netznutzungsabrechnung ggü. Letztverbrauchern 28.11.2007 
+ 5 ( GPKE ) Zulässigkeit Größenbegrenzung E-Mails, Elektronische Signatur und Verschlüsselung 28.11.2007 
+ 4 ( GPKE ) Einführung Änderungsmanagement, Umsetzung INVOIC / REMADV , GPKE -Auslegungsgrundsätze 28.11.2007 
+ 3 ( GPKE ) Adressierung von EDIFACT -Nachrichten, Umsetzungsprobleme zum 01.08.2007 24.07.2007 
+ 2 ( GPKE ) Neue Versionen REQDOC , UTILMD sowie MSCONS , INVOICE, REMADV , Adressierung 06.06.2007 
+ 1 ( GPKE ) Aktuelle Nachrichtentypversionen, Umsetzung CONTRL und APERAK , Auslegungsfragen, Behandlung von Zahlungsablehnungen 03.05.2007 
+ Archiv 
+ Bisherige Liste - Gemeinsame Mitteilungen zur Umsetzung der Festlegung GPKE 
+ 
