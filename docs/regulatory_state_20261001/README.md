@@ -7,7 +7,7 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 | Etappe | Inhalt | Status | Artefakte |
 |---|---|---|---|
 | 0 | Fundament: Mitteilung 56 erfassen, BK6/BK7, Aktualität | **abgeschlossen** | [`etappe0_fundament.md`](etappe0_fundament.md), [`etappe0_rohliste_mitteilung56.json`](etappe0_rohliste_mitteilung56.json) |
-| 1 | Pilot UTILMD (AHB/MIG Strom + Gas) | offen | — |
+| 1 | Pilot UTILMD (AHB/MIG Strom + Gas) | **abgeschlossen**, Schema und 9a-Vorschlag zur Bestätigung | [`etappe1_utilmd.md`](etappe1_utilmd.md), [`etappe1_utilmd_provenienz.json`](etappe1_utilmd_provenienz.json), [`provenienz_schema_v0.json`](provenienz_schema_v0.json), [`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md) |
 | 2 | Übrige EDIFACT-Nachrichtentypen Strom | offen | — |
 | 3 | Übrige EDIFACT-Nachrichtentypen Gas | offen | — |
 | 4 | PID, Codelisten, Allgemeine Festlegungen | offen | — |

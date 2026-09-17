@@ -1,0 +1,2669 @@
+{
+  "stichtag": "2026-10-01",
+  "etappe": 1,
+  "ticket": "#64",
+  "schema": "provenienz_schema_v0.json",
+  "anzahl": 4,
+  "datensaetze": [
+    {
+      "schema_version": "0",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "UTILMD-AHB-STROM",
+        "dokumentname": "UTILMD AHB Strom",
+        "dokumenttyp": "AHB",
+        "kategorie": "AHB",
+        "nachrichtentyp": "UTILMD",
+        "sparte": "Strom",
+        "sparte_beleg": "Spartenangabe im Dokumenttitel der Mitteilung 56 und auf dem Deckblatt",
+        "bdew_topic_id": 211
+      },
+      "dokumentversion": {
+        "version": "2.2",
+        "veroeffentlicht_am": {
+          "datum": "2026-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "Datum der Mitteilung 01.04.2026"
+            },
+            {
+              "quelle": "bnetza:UTILMD_AHB_Strom_2_2_20260401.pdf",
+              "sha256": "8ab521f836e6382bf17559a916b5a8ce94d03cdc58c29aa372ffbce06168efc8",
+              "seite": 1,
+              "fundstelle": "Publikationsdatum: 01.04.2026"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2026-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "verbindlich ab dem 01.10.2026"
+            },
+            {
+              "quelle": "BDEW-API id 8440",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"UTILMD AHB Strom 2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56 (Stand 17.09.2026)"
+            },
+            {
+              "quelle": "BDEW-API id 8440",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo leer: title=\"UTILMD AHB Strom 2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 56,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2026-04-01",
+          "zusammenhang": "als Anlage (PDF) veröffentlicht, verbindlich ab 01.10.2026; Fehlerkorrekturstände nur auf BDEW-MaKo"
+        },
+        "dokumentstatus": "verbindlich",
+        "vorgaenger": {
+          "version": "2.1",
+          "gueltig_bis": {
+            "datum": "2026-09-30",
+            "art": "abgeleitet",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 56",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+                "fundstelle": "Nachfolger 2.2 verbindlich ab dem 01.10.2026"
+              },
+              {
+                "quelle": "BDEW-API id 7436",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW validTo Vorgänger-Basis: title=\"UTILMD AHB Strom 2.1\", validFrom=2025-06-06, validTo=2026-09-30"
+              },
+              {
+                "quelle": "BDEW-API id 8441",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW validTo letzte Vorgänger-Fassung: title=\"UTILMD AHB Strom 2.1 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-06-29, validTo=2026-09-30"
+              }
+            ]
+          },
+          "letzte_fassung": "konsolidierte Lesefassung mit Fehlerkorrekturen Stand 29.06.2026"
+        },
+        "nachfolger": [
+          {
+            "version": "2.3",
+            "status": "konsultation",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 57",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+                "fundstelle": "UTILMD AHB Strom 2.3, Konsultationsfassung 31.07.2026, Umsetzungstermin 01.04.2027"
+              },
+              {
+                "quelle": "BDEW-API id 8453",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW Konsultationsfassung: title=\"UTILMD AHB Strom 2.3 - Konsultationsfassung\", validFrom=2026-07-31, validTo=2026-08-31"
+              }
+            ]
+          }
+        ]
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bnetza:UTILMD_AHB_Strom_2_2_20260401.pdf",
+          "titel_in_quelle": "UTILMD AHB Strom 2.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "Anlage der Mitteilung 56 ohne Fassungszusatz; Deckblatt ohne sichtbaren Vermerk",
+          "fehlerkorrekturstand": null,
+          "quelle": "BNetzA",
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/UTILMD_AHB_Strom_2_2_20260401.pdf?__blob=publicationFile&v=1",
+          "dateiname": "UTILMD_AHB_Strom_2_2_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 14574989,
+          "sha256": "8ab521f836e6382bf17559a916b5a8ce94d03cdc58c29aa372ffbce06168efc8",
+          "bytegleich_mit": [
+            "bdew:8394"
+          ],
+          "seiten": 1397,
+          "deckblatt": {
+            "version": "2.2",
+            "stand_mig": "S2.2",
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "Konsultationsfassung",
+              "11.12.2025"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 1296,
+            "seite_bis": 1397,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (02.03.2026)": 6,
+              "Fehler (07.04.2025)": 2,
+              "Fehler (10.02.2025)": 6,
+              "Fehler (11.12.2025)": 30,
+              "Fehler (13.12.2024)": 41,
+              "Fehler (17.04.2025)": 31,
+              "Fehler (18.02.2025)": 16,
+              "Fehler (18.08.2025)": 5,
+              "Fehler (20.03.2025)": 5,
+              "Fehler (23.06.2025)": 2,
+              "Fehler (24.10.2025)": 2,
+              "Fehler (25.02.2025)": 4,
+              "Fehler (26.05.2025)": 4,
+              "Fehler (27.03.2026)": 2,
+              "Fehler (30.04.2025)": 3,
+              "Fehler (30.07.2025)": 8,
+              "Fehler (30.09.2025)": 8,
+              "Fehler (31.01.2025)": 5,
+              "Genehmigt": 218
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Inhalt durch konsolidierte Fassung überholt; einzige Quelle der Änderungshistorie gegenüber der Vorversion 2.1 und die amtlich verlinkte Fassung",
+          "abruf_utc": "2026-09-17T17:13:00Z"
+        },
+        {
+          "fassung_id": "bdew:8258",
+          "titel_in_quelle": "UTILMD AHB Strom 2.2 - Konsultationsfassung",
+          "fassungstyp": "konsultationsfassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8258,
+            "bdew_file_id": 12075,
+            "bdew_valid_from": "2026-02-02",
+            "bdew_valid_to": "2026-02-27",
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12075",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "nicht_verbindlich",
+          "rolle_begruendung": "Konsultationsfassung aus Mitteilung 55, Konsultationszeitraum",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8393",
+          "titel_in_quelle": "UTILMD AHB Strom 2.2 - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8393,
+            "bdew_file_id": 12220,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12220",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Word-Fassung nach Abschnitt 6/7 nicht maßgeblich, in Etappe 1 nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8394",
+          "titel_in_quelle": "UTILMD AHB Strom 2.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8394,
+            "bdew_file_id": 12221,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12221",
+          "dateiname": "UTILMD_AHB_Strom_2_2_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 14574989,
+          "sha256": "8ab521f836e6382bf17559a916b5a8ce94d03cdc58c29aa372ffbce06168efc8",
+          "bytegleich_mit": [
+            "bnetza:UTILMD_AHB_Strom_2_2_20260401.pdf"
+          ],
+          "seiten": 1397,
+          "deckblatt": {
+            "version": "2.2",
+            "stand_mig": "S2.2",
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "Konsultationsfassung",
+              "11.12.2025"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 1296,
+            "seite_bis": 1397,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (02.03.2026)": 6,
+              "Fehler (07.04.2025)": 2,
+              "Fehler (10.02.2025)": 6,
+              "Fehler (11.12.2025)": 30,
+              "Fehler (13.12.2024)": 41,
+              "Fehler (17.04.2025)": 31,
+              "Fehler (18.02.2025)": 16,
+              "Fehler (18.08.2025)": 5,
+              "Fehler (20.03.2025)": 5,
+              "Fehler (23.06.2025)": 2,
+              "Fehler (24.10.2025)": 2,
+              "Fehler (25.02.2025)": 4,
+              "Fehler (26.05.2025)": 4,
+              "Fehler (27.03.2026)": 2,
+              "Fehler (30.04.2025)": 3,
+              "Fehler (30.07.2025)": 8,
+              "Fehler (30.09.2025)": 8,
+              "Fehler (31.01.2025)": 5,
+              "Genehmigt": 218
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Inhalt durch konsolidierte Fassung überholt; einzige Quelle der Änderungshistorie gegenüber der Vorversion 2.1 und die amtlich verlinkte Fassung",
+          "abruf_utc": "2026-09-17T17:36:00Z"
+        },
+        {
+          "fassung_id": "bdew:8395",
+          "titel_in_quelle": "UTILMD AHB Strom 2.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8395,
+            "bdew_file_id": 12222,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-06-28",
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12222",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "XML-Basisdatei; BDEW-validTo liegt vor validFrom (Rohwert, ungedeutet)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8412",
+          "titel_in_quelle": "UTILMD AHB Strom 2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8412,
+            "bdew_file_id": 12248,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12248",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "XML-Fassung (kostenpflichtig); PDF ist Referenz (Abschnitt 7)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8435",
+          "titel_in_quelle": "UTILMD AHB Strom 2.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8435,
+            "bdew_file_id": 12273,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12273",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Word-Fassung nach Abschnitt 6/7 nicht maßgeblich, in Etappe 1 nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8440",
+          "titel_in_quelle": "UTILMD AHB Strom 2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8440,
+            "bdew_file_id": 12279,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12279",
+          "dateiname": "UTILMD_AHB_Strom_2_2_Fehlerkorrektur_20260629.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 9767771,
+          "sha256": "7a175760d48730fb3858d72716d771b18b157b2be51405f131d6cf1c8eda3fe4",
+          "bytegleich_mit": [],
+          "seiten": 944,
+          "deckblatt": {
+            "version": "2.2",
+            "stand_mig": "S2.2",
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2026",
+            "stand_fehlerkorrektur": "29.06.2026",
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 936,
+            "seite_bis": 944,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (29.06.2026)": 11
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Konsolidierte Fassung mit Fehlerkorrekturen, neuester Stand, PDF",
+          "abruf_utc": "2026-09-17T17:36:00Z"
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8440",
+        "massgebliche_fassung_pdf_sha256": "7a175760d48730fb3858d72716d771b18b157b2be51405f131d6cf1c8eda3fe4",
+        "regelschritte": [
+          {
+            "regel": "Version am Stichtag bestimmen (verbindliche Mitteilung mit Gültig-ab ≤ Stichtag, kein späterer verbindlicher Nachfolger)",
+            "ergebnis": "2.2 aus Mitteilung 56, gültig ab 01.10.2026"
+          },
+          {
+            "regel": "Alle Fassungen dieser Version aus BNetzA und BDEW sammeln, Fassungstyp aus Titel und Deckblatt (nicht aus BDEW-Kennzeichen)",
+            "ergebnis": "8 Fassungen: basis×3, konsultationsfassung×1, informatorische_lesefassung×1, konsolidiert_fehlerkorrektur×2, informatorische_lesefassung_konsolidiert×1"
+          },
+          {
+            "regel": "Priorität 1: konsolidierte Fassung mit Fehlerkorrekturen vor Basis und Lesefassung",
+            "ergebnis": "vorhanden: Stand 2026-06-29"
+          },
+          {
+            "regel": "Priorität 2: bei mehreren konsolidierten Fassungen der neueste Stand; Gegenprobe Deckblatt und Änderungshistorie",
+            "ergebnis": "Stand 2026-06-29; Deckblatt 'Konsolidierte Lesefassung mit Fehlerkorrekturen 29.06.2026'; Historie-Statusvermerke {'Fehler (29.06.2026)': 11}"
+          },
+          {
+            "regel": "Priorität 3: informatorische Lesefassungen ignorieren",
+            "ergebnis": "2 Word-Fassungen als informativ erfasst"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "PDF bdew:8440, SHA-256 7a175760d48730fb3858d72716d771b18b157b2be51405f131d6cf1c8eda3fe4"
+          },
+          {
+            "regel": "Vollständigkeit der maßgeblichen Fassung gegen Basis prüfen (Seitenzahl, Inhaltsverzeichnis, Prüfidentifikatoren)",
+            "ergebnis": "Basis 1397 S. (Historie S. 1296–1397) → konsolidiert 944 S. (Historie S. 936–944); Prüfidentifikatoren 189 = 189, keiner entfallen; Inhaltsverzeichnis +4 Zeilen (AAÜZ); Textumfang ohne Historie 1,55 → 1,67 Mio. Zeichen. Seitenreduktion erklärt sich durch Layout und die auf Fehlerkorrekturen verkürzte Historie."
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:8394",
+            "zweck": "Änderungshistorie 2.1 → 2.2 (S. 1296–1397); in der konsolidierten Fassung nicht enthalten"
+          },
+          {
+            "fassung_id": "bnetza:UTILMD_AHB_Strom_2_2_20260401.pdf",
+            "zweck": "amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8394"
+          }
+        ],
+        "begruendung": "UTILMD AHB Strom 2.2 gilt ab 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und bis zum Stichtag keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Lesefassung mit Fehlerkorrekturen Stand 29.06.2026 (BDEW-MaKo), weil sie den neuesten Fehlerkorrekturstand dieser Version enthält."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "ja",
+          "erlaeuterung": "Neue Version 2.2 (Vorgänger 2.1) als Anlage der Mitteilung 56",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "UTILMD AHB Strom 2.2"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "nicht_anwendbar",
+          "erlaeuterung": "Dokument durch Mitteilung 56 geändert; Vorgänger 2.1 endet mit Ablauf des 30.09.2026",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7436",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Vorgänger: title=\"UTILMD AHB Strom 2.1\", validFrom=2025-06-06, validTo=2026-09-30"
+            }
+          ]
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 2.2 mit validFrom 01.10.2026; Basis-PDF bytegleich mit BNetzA-Anlage",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8394",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Basis-PDF: title=\"UTILMD AHB Strom 2.2\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Fehlerkorrekturstände: 2026-06-29",
+          "beleg": [
+            {
+              "quelle": "bdew:8440",
+              "sha256": "7a175760d48730fb3858d72716d771b18b157b2be51405f131d6cf1c8eda3fe4",
+              "seite": "936–944",
+              "fundstelle": "Statusvermerke {'Fehler (29.06.2026)': 11}"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2026-06-29",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8440",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "konsolidierte Fassung: title=\"UTILMD AHB Strom 2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "0 Einträge mit validFrom > 2026-10-01"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "ja",
+          "erlaeuterung": "Nachfolger 2.3 in Konsultation (Mitteilung 57, Umsetzungstermin 01.04.2027), nicht verbindlich; die eigene Konsultationsfassung 2.2 (Mitteilung 55) ist durch Mitteilung 56 abgeschlossen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API id 8258",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Konsultationsfassung: title=\"UTILMD AHB Strom 2.2 - Konsultationsfassung\", validFrom=2026-02-02, validTo=2026-02-27"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version, Gültig-ab und Basis-PDF (SHA-256) stimmen überein. Nur BDEW-intern: XML-Basisdatei mit validTo vor validFrom (Plattform-Rohwert, kein Widerspruch zur BNetzA)",
+          "beleg": [
+            {
+              "quelle": "bnetza:UTILMD_AHB_Strom_2_2_20260401.pdf",
+              "sha256": "8ab521f836e6382bf17559a916b5a8ce94d03cdc58c29aa372ffbce06168efc8"
+            }
+          ]
+        }
+      },
+      "hinweise": [
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Die Änderungshistorie der konsolidierten Fassung enthält nur die Fehlerkorrekturen dieser Version (Status 'Fehler (Datum)'). Die Änderungen gegenüber der Vorversion (Status 'Genehmigt') stehen nur in der Basisfassung. Für die fachliche Analyse 'Änderungshistorie' (Abschnitt 12) wird deshalb die Basisfassung ergänzend benötigt.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8394",
+              "sha256": "8ab521f836e6382bf17559a916b5a8ce94d03cdc58c29aa372ffbce06168efc8",
+              "seite": "1296–1397"
+            }
+          ]
+        },
+        {
+          "art": "einfuehrungsszenario",
+          "text": "Mitteilung 56 enthält einen Sonderhinweis zu UTILMD Strom / § 10b EEG (Status Fernsteuerbarkeit Z24, Codes ZW5/ZW6). BDEW-Anwendungshilfe 'Einführungsszenario … zum 1. Oktober 2026 in der UTILMD' Version 1.1 (gültig ab 18.08.2026, ersetzt 1.0 vom 29.06.2026) regelt die Migration nur für Strom: u. a. NB-Frist 18.09.2026 (Verbrauchsarten/TR), Übermittlung Fernsteuerbarkeit ab 01.10.2026 (PID 55693/55694), empfohlen bis 03.10.2026, Vergütungsverpflichtung per PID 55617. Keine abweichende Gültigkeit der Formatversion.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "UTILMD Strom im Zusammenhang mit §10b EEG (Fernsteuerbarkeit)"
+            },
+            {
+              "quelle": "BDEW-API id 8465",
+              "url": "https://www.bdew-mako.de/api/downloadFile/12313",
+              "sha256": "de168bf067a2a3a0edf9f19e06ddb887c041e515819f06f47e969a646461cbaa",
+              "seite": "3–7"
+            }
+          ]
+        },
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Die Fehlerkorrekturen der Vorversion 2.1 vom 29.06.2026 (Änd-IDs 27368, 27376) stehen auch in der Fehlerkorrektur-Historie von 2.2 Stand 29.06.2026, sind also nachgezogen.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8441",
+              "sha256": "13676ed8d255a8bb3d078ce546bfcc425621e01b7f23d86f1ddc6ad1d6a4e5c3",
+              "seite": "1034–1035"
+            },
+            {
+              "quelle": "bdew:8440",
+              "sha256": "7a175760d48730fb3858d72716d771b18b157b2be51405f131d6cf1c8eda3fe4",
+              "seite": "936–944"
+            }
+          ]
+        },
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Deckblatt der Basisfassung enthält weißen, unsichtbaren Resttext 'Konsultationsfassung' und '11.12.2025'.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bnetza:UTILMD_AHB_Strom_2_2_20260401.pdf",
+              "seite": 1
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-17T18:00:00Z",
+        "etappe": 1,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug, Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber, Farbwert je Wort), Volltext (pdfminer) für Änderungshistorie, Inhaltsverzeichnis und Prüfidentifikatoren. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "UTILMD-MIG-STROM",
+        "dokumentname": "UTILMD MIG Strom",
+        "dokumenttyp": "MIG",
+        "kategorie": "MIG",
+        "nachrichtentyp": "UTILMD",
+        "sparte": "Strom",
+        "sparte_beleg": "Spartenangabe im Dokumenttitel der Mitteilung 56 und auf dem Deckblatt",
+        "bdew_topic_id": 215
+      },
+      "dokumentversion": {
+        "version": "S2.2",
+        "veroeffentlicht_am": {
+          "datum": "2026-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "Datum der Mitteilung 01.04.2026"
+            },
+            {
+              "quelle": "bnetza:UTILMD_MIG_Strom_S2_2_20260401.pdf",
+              "sha256": "fcade5ecb0caac9e2847d3cb1bfdd9ca94c3598fcfebc139d7fe9c6cbd243069",
+              "seite": 1,
+              "fundstelle": "Publikationsdatum: 01.04.2026"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2026-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "verbindlich ab dem 01.10.2026"
+            },
+            {
+              "quelle": "BDEW-API id 8458",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56 (Stand 17.09.2026)"
+            },
+            {
+              "quelle": "BDEW-API id 8458",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo leer: title=\"UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 56,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2026-04-01",
+          "zusammenhang": "als Anlage (PDF) veröffentlicht, verbindlich ab 01.10.2026; Fehlerkorrekturstände nur auf BDEW-MaKo"
+        },
+        "dokumentstatus": "verbindlich",
+        "vorgaenger": {
+          "version": "S2.1",
+          "gueltig_bis": {
+            "datum": "2026-09-30",
+            "art": "abgeleitet",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 56",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+                "fundstelle": "Nachfolger S2.2 verbindlich ab dem 01.10.2026"
+              },
+              {
+                "quelle": "BDEW-API id 7434",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW validTo Vorgänger-Basis: title=\"UTILMD MIG Strom S2.1\", validFrom=2025-06-06, validTo=2026-09-30"
+              },
+              {
+                "quelle": "BDEW-API id 8290",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW validTo letzte Vorgänger-Fassung: title=\"UTILMD MIG Strom S2.1 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 02.03.2026\", validFrom=2026-03-02, validTo=2026-09-30"
+              }
+            ]
+          },
+          "letzte_fassung": "konsolidierte Lesefassung mit Fehlerkorrekturen Stand 02.03.2026"
+        },
+        "nachfolger": [
+          {
+            "version": "S2.3",
+            "status": "konsultation",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 57",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+                "fundstelle": "UTILMD MIG, Strom Version 2.3, Konsultationsfassung 31.07.2026, Umsetzungstermin 01.04.2027"
+              },
+              {
+                "quelle": "BDEW-API id 8454",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW Konsultationsfassung: title=\"UTILMD MIG Strom S2.3 - Konsultationsfassung\", validFrom=2026-07-31, validTo=2026-08-31"
+              }
+            ]
+          }
+        ]
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bnetza:UTILMD_MIG_Strom_S2_2_20260401.pdf",
+          "titel_in_quelle": "UTILMD MIG Strom S2.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "Anlage der Mitteilung 56 ohne Fassungszusatz; Deckblatt ohne sichtbaren Vermerk",
+          "fehlerkorrekturstand": null,
+          "quelle": "BNetzA",
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/UTILMD_MIG_Strom_S2_2_20260401.pdf?__blob=publicationFile&v=1",
+          "dateiname": "UTILMD_MIG_Strom_S2_2_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 7165248,
+          "sha256": "fcade5ecb0caac9e2847d3cb1bfdd9ca94c3598fcfebc139d7fe9c6cbd243069",
+          "bytegleich_mit": [
+            "bdew:8400"
+          ],
+          "seiten": 559,
+          "deckblatt": {
+            "version": "S2.2",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 546,
+            "seite_bis": 559,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (02.03.2026)": 1,
+              "Fehler (11.12.2025)": 2,
+              "Fehler (13.12.2024)": 13,
+              "Fehler (18.02.2025)": 1,
+              "Fehler (20.03.2025)": 1,
+              "Fehler (25.02.2025)": 1,
+              "Fehler (31.01.2025)": 1,
+              "Genehmigt": 41
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Inhalt durch konsolidierte Fassung überholt; einzige Quelle der Änderungshistorie gegenüber der Vorversion S2.1 und die amtlich verlinkte Fassung",
+          "abruf_utc": "2026-09-17T17:13:00Z"
+        },
+        {
+          "fassung_id": "bdew:8260",
+          "titel_in_quelle": "UTILMD MIG Strom 2.2 - Konsultationsfassung",
+          "fassungstyp": "konsultationsfassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8260,
+            "bdew_file_id": 12077,
+            "bdew_valid_from": "2026-02-02",
+            "bdew_valid_to": "2026-02-27",
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12077",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "nicht_verbindlich",
+          "rolle_begruendung": "Konsultationsfassung aus Mitteilung 55, Konsultationszeitraum",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8399",
+          "titel_in_quelle": "UTILMD MIG Strom S2.2 - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8399,
+            "bdew_file_id": 12226,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12226",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Word-Fassung nach Abschnitt 6/7 nicht maßgeblich, in Etappe 1 nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8400",
+          "titel_in_quelle": "UTILMD MIG Strom S2.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8400,
+            "bdew_file_id": 12227,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12227",
+          "dateiname": "UTILMD_MIG_Strom_S2_2_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 7165248,
+          "sha256": "fcade5ecb0caac9e2847d3cb1bfdd9ca94c3598fcfebc139d7fe9c6cbd243069",
+          "bytegleich_mit": [
+            "bnetza:UTILMD_MIG_Strom_S2_2_20260401.pdf"
+          ],
+          "seiten": 559,
+          "deckblatt": {
+            "version": "S2.2",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 546,
+            "seite_bis": 559,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (02.03.2026)": 1,
+              "Fehler (11.12.2025)": 2,
+              "Fehler (13.12.2024)": 13,
+              "Fehler (18.02.2025)": 1,
+              "Fehler (20.03.2025)": 1,
+              "Fehler (25.02.2025)": 1,
+              "Fehler (31.01.2025)": 1,
+              "Genehmigt": 41
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Inhalt durch konsolidierte Fassung überholt; einzige Quelle der Änderungshistorie gegenüber der Vorversion S2.1 und die amtlich verlinkte Fassung",
+          "abruf_utc": "2026-09-17T17:36:00Z"
+        },
+        {
+          "fassung_id": "bdew:8401",
+          "titel_in_quelle": "UTILMD MIG Strom S2.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8401,
+            "bdew_file_id": 12228,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-06-28",
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12228",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "XML-Basisdatei; BDEW-validTo liegt vor validFrom (Rohwert, ungedeutet)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8414",
+          "titel_in_quelle": "UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8414,
+            "bdew_file_id": 12250,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-08-05",
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12250",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "ersetzt",
+          "rolle_begruendung": "XML-Fassung eines älteren Fehlerkorrekturstands",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8432",
+          "titel_in_quelle": "UTILMD MIG Strom S2.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8432,
+            "bdew_file_id": 12270,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-08-05",
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12270",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Word-Fassung nach Abschnitt 6/7 nicht maßgeblich, in Etappe 1 nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8442",
+          "titel_in_quelle": "UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8442,
+            "bdew_file_id": 12281,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-08-05",
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12281",
+          "dateiname": "UTILMD_MIG_Strom_S2_2_Fehlerkorrektur_20260629.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 6979383,
+          "sha256": "36d6be60843298cbaede2a8d3cd9fcfb8675b56e38cebf2ffb0f7ec40f03f696",
+          "bytegleich_mit": [],
+          "seiten": 535,
+          "deckblatt": {
+            "version": "S2.2",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2026",
+            "stand_fehlerkorrektur": "29.06.2026",
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 534,
+            "seite_bis": 535,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (29.06.2026)": 5
+            }
+          },
+          "rolle": "ersetzt",
+          "rolle_begruendung": "Älterer Fehlerkorrekturstand; durch neueren Stand ersetzt (Prioritätsregel 2)",
+          "abruf_utc": "2026-09-17T17:36:00Z"
+        },
+        {
+          "fassung_id": "bdew:8458",
+          "titel_in_quelle": "UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2026-08-06",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8458,
+            "bdew_file_id": 12305,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12305",
+          "dateiname": "UTILMD_MIG_Strom_S2_2_Fehlerkorrektur_20260806.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 4375808,
+          "sha256": "9f6dcf92e84f26bad9d183cc875c86093745d54efdd31862e9425663af514305",
+          "bytegleich_mit": [],
+          "seiten": 536,
+          "deckblatt": {
+            "version": "S2.2",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2026",
+            "stand_fehlerkorrektur": "06.08.2026",
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 534,
+            "seite_bis": 536,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (06.08.2026)": 5,
+              "Fehler (29.06.2026)": 5
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Konsolidierte Fassung mit Fehlerkorrekturen, neuester Stand, PDF",
+          "abruf_utc": "2026-09-17T17:36:00Z"
+        },
+        {
+          "fassung_id": "bdew:8459",
+          "titel_in_quelle": "UTILMD MIG Strom S2.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-08-06",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8459,
+            "bdew_file_id": 12306,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12306",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Word-Fassung nach Abschnitt 6/7 nicht maßgeblich, in Etappe 1 nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8460",
+          "titel_in_quelle": "UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-08-06",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8460,
+            "bdew_file_id": 12307,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12307",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "XML-Fassung (kostenpflichtig); PDF ist Referenz (Abschnitt 7)",
+          "abruf_utc": null
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8458",
+        "massgebliche_fassung_pdf_sha256": "9f6dcf92e84f26bad9d183cc875c86093745d54efdd31862e9425663af514305",
+        "regelschritte": [
+          {
+            "regel": "Version am Stichtag bestimmen (verbindliche Mitteilung mit Gültig-ab ≤ Stichtag, kein späterer verbindlicher Nachfolger)",
+            "ergebnis": "S2.2 aus Mitteilung 56, gültig ab 01.10.2026"
+          },
+          {
+            "regel": "Alle Fassungen dieser Version aus BNetzA und BDEW sammeln, Fassungstyp aus Titel und Deckblatt (nicht aus BDEW-Kennzeichen)",
+            "ergebnis": "11 Fassungen: basis×3, konsultationsfassung×1, informatorische_lesefassung×1, konsolidiert_fehlerkorrektur×4, informatorische_lesefassung_konsolidiert×2"
+          },
+          {
+            "regel": "Priorität 1: konsolidierte Fassung mit Fehlerkorrekturen vor Basis und Lesefassung",
+            "ergebnis": "vorhanden: Stand 2026-06-29, Stand 2026-08-06"
+          },
+          {
+            "regel": "Priorität 2: bei mehreren konsolidierten Fassungen der neueste Stand; Gegenprobe Deckblatt und Änderungshistorie",
+            "ergebnis": "Stand 2026-08-06; Deckblatt 'Konsolidierte Lesefassung mit Fehlerkorrekturen 06.08.2026'; Historie-Statusvermerke {'Fehler (06.08.2026)': 5, 'Fehler (29.06.2026)': 5}"
+          },
+          {
+            "regel": "Priorität 3: informatorische Lesefassungen ignorieren",
+            "ergebnis": "3 Word-Fassungen als informativ erfasst"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "PDF bdew:8458, SHA-256 9f6dcf92e84f26bad9d183cc875c86093745d54efdd31862e9425663af514305"
+          },
+          {
+            "regel": "Vollständigkeit der maßgeblichen Fassung gegen Basis prüfen (Seitenzahl, Inhaltsverzeichnis, Prüfidentifikatoren)",
+            "ergebnis": "Basis 559 S. → konsolidiert 536 S. (Stand 06.08.2026); Prüfidentifikatoren 189 = 189; Inhaltsverzeichnis identisch; Historie 14 → 3 S."
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:8400",
+            "zweck": "Änderungshistorie S2.1 → S2.2 (S. 546–559); in der konsolidierten Fassung nicht enthalten"
+          },
+          {
+            "fassung_id": "bnetza:UTILMD_MIG_Strom_S2_2_20260401.pdf",
+            "zweck": "amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8400"
+          }
+        ],
+        "begruendung": "UTILMD MIG Strom S2.2 gilt ab 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und bis zum Stichtag keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Lesefassung mit Fehlerkorrekturen Stand 06.08.2026 (BDEW-MaKo), weil sie den neuesten Fehlerkorrekturstand dieser Version enthält."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "ja",
+          "erlaeuterung": "Neue Version S2.2 (Vorgänger S2.1) als Anlage der Mitteilung 56",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "UTILMD MIG Strom S2.2"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "nicht_anwendbar",
+          "erlaeuterung": "Dokument durch Mitteilung 56 geändert; Vorgänger S2.1 endet mit Ablauf des 30.09.2026",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7434",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Vorgänger: title=\"UTILMD MIG Strom S2.1\", validFrom=2025-06-06, validTo=2026-09-30"
+            }
+          ]
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt S2.2 mit validFrom 01.10.2026; Basis-PDF bytegleich mit BNetzA-Anlage",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8400",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Basis-PDF: title=\"UTILMD MIG Strom S2.2\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Fehlerkorrekturstände: 2026-06-29, 2026-08-06",
+          "beleg": [
+            {
+              "quelle": "bdew:8458",
+              "sha256": "9f6dcf92e84f26bad9d183cc875c86093745d54efdd31862e9425663af514305",
+              "seite": "534–536",
+              "fundstelle": "Statusvermerke {'Fehler (06.08.2026)': 5, 'Fehler (29.06.2026)': 5}"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2026-08-06",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8458",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "konsolidierte Fassung: title=\"UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "0 Einträge mit validFrom > 2026-10-01"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "ja",
+          "erlaeuterung": "Nachfolger S2.3 in Konsultation (Mitteilung 57, Umsetzungstermin 01.04.2027), nicht verbindlich; die eigene Konsultationsfassung S2.2 (Mitteilung 55) ist durch Mitteilung 56 abgeschlossen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API id 8260",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Konsultationsfassung: title=\"UTILMD MIG Strom 2.2 - Konsultationsfassung\", validFrom=2026-02-02, validTo=2026-02-27"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version, Gültig-ab und Basis-PDF (SHA-256) stimmen überein. Nur BDEW-intern: XML-Basisdatei mit validTo vor validFrom (Plattform-Rohwert, kein Widerspruch zur BNetzA)",
+          "beleg": [
+            {
+              "quelle": "bnetza:UTILMD_MIG_Strom_S2_2_20260401.pdf",
+              "sha256": "fcade5ecb0caac9e2847d3cb1bfdd9ca94c3598fcfebc139d7fe9c6cbd243069"
+            }
+          ]
+        }
+      },
+      "hinweise": [
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Die Änderungshistorie der konsolidierten Fassung enthält nur die Fehlerkorrekturen dieser Version (Status 'Fehler (Datum)'). Die Änderungen gegenüber der Vorversion (Status 'Genehmigt') stehen nur in der Basisfassung. Für die fachliche Analyse 'Änderungshistorie' (Abschnitt 12) wird deshalb die Basisfassung ergänzend benötigt.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8400",
+              "sha256": "fcade5ecb0caac9e2847d3cb1bfdd9ca94c3598fcfebc139d7fe9c6cbd243069",
+              "seite": "546–559"
+            }
+          ]
+        },
+        {
+          "art": "einfuehrungsszenario",
+          "text": "Einführungsszenario UTILMD 01.10.2026 (BDEW-Anwendungshilfe 1.1) betrifft die in MIG S2.2 neuen SG10 'Vergütungsverpflichtung nach EEG bzw. KWKG' (Z68/ZH2/ZH3) und 'Status Fernsteuerbarkeit' (Z24/ZW5/ZW6) sowie SG8 SEQ+ZH6; nur Strom; keine abweichende Gültigkeit der Formatversion.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8465",
+              "url": "https://www.bdew-mako.de/api/downloadFile/12313",
+              "sha256": "de168bf067a2a3a0edf9f19e06ddb887c041e515819f06f47e969a646461cbaa",
+              "seite": "4–6"
+            }
+          ]
+        },
+        {
+          "art": "quellenauffaelligkeit",
+          "text": "BDEW-validTo des ersetzten Stands 29.06.2026 (PDF bdew:8442, XML bdew:8414) = 2026-08-05, also der Tag vor dem Stand 06.08.2026. Das bestätigt die Deutung 'Fassung auf der Plattform abgelöst' (Befund Etappe 0, O-8).",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8442",
+              "fundstelle": "validTo 2026-08-05"
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-17T18:00:00Z",
+        "etappe": 1,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug, Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber, Farbwert je Wort), Volltext (pdfminer) für Änderungshistorie, Inhaltsverzeichnis und Prüfidentifikatoren. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "UTILMD-AHB-GAS",
+        "dokumentname": "UTILMD AHB Gas",
+        "dokumenttyp": "AHB",
+        "kategorie": "AHB",
+        "nachrichtentyp": "UTILMD",
+        "sparte": "Gas",
+        "sparte_beleg": "Spartenangabe im Dokumenttitel der Mitteilung 56 und auf dem Deckblatt",
+        "bdew_topic_id": 206
+      },
+      "dokumentversion": {
+        "version": "1.2",
+        "veroeffentlicht_am": {
+          "datum": "2026-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "Datum der Mitteilung 01.04.2026"
+            },
+            {
+              "quelle": "bnetza:UTILMD_AHB_Gas_1_2_20260401.pdf",
+              "sha256": "88a4cf9d82d699b048e1f34a5336d80d6613065ae8476c1571dccdd2d7e40cf9",
+              "seite": 1,
+              "fundstelle": "Publikationsdatum: 01.04.2026"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2026-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "verbindlich ab dem 01.10.2026"
+            },
+            {
+              "quelle": "BDEW-API id 8455",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56 (Stand 17.09.2026)"
+            },
+            {
+              "quelle": "BDEW-API id 8455",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo leer: title=\"UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 56,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2026-04-01",
+          "zusammenhang": "als Anlage (PDF) veröffentlicht, verbindlich ab 01.10.2026; Fehlerkorrekturstände nur auf BDEW-MaKo"
+        },
+        "dokumentstatus": "verbindlich",
+        "vorgaenger": {
+          "version": "1.1",
+          "gueltig_bis": {
+            "datum": "2026-09-30",
+            "art": "abgeleitet",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 56",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+                "fundstelle": "Nachfolger 1.2 verbindlich ab dem 01.10.2026"
+              },
+              {
+                "quelle": "BDEW-API id 8160",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW validTo Vorgänger-Basis: title=\"UTILMD AHB Gas 1.1\", validFrom=2026-04-01, validTo=2026-09-30"
+              },
+              {
+                "quelle": "BDEW-API id 8296",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW validTo letzte Vorgänger-Fassung: title=\"UTILMD AHB Gas 1.1 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 27.03.2026\", validFrom=2026-04-01, validTo=2026-09-30"
+              }
+            ]
+          },
+          "letzte_fassung": "konsolidierte Lesefassung mit Fehlerkorrekturen Stand 27.03.2026"
+        },
+        "nachfolger": []
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bnetza:UTILMD_AHB_Gas_1_2_20260401.pdf",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "Anlage der Mitteilung 56 ohne Fassungszusatz; Deckblatt ohne sichtbaren Vermerk",
+          "fehlerkorrekturstand": null,
+          "quelle": "BNetzA",
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/UTILMD_AHB_Gas_1_2_20260401.pdf?__blob=publicationFile&v=1",
+          "dateiname": "UTILMD_AHB_Gas_1_2_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 10716762,
+          "sha256": "88a4cf9d82d699b048e1f34a5336d80d6613065ae8476c1571dccdd2d7e40cf9",
+          "bytegleich_mit": [
+            "bdew:8391"
+          ],
+          "seiten": 307,
+          "deckblatt": {
+            "version": "1.2",
+            "stand_mig": "G1.2",
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "Konsultationsfassung",
+              "01.02.2026"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 303,
+            "seite_bis": 307,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (27.03.2026)": 1,
+              "Genehmigt": 7
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Inhalt durch konsolidierte Fassung überholt; einzige Quelle der Änderungshistorie gegenüber der Vorversion 1.1 und die amtlich verlinkte Fassung",
+          "abruf_utc": "2026-09-17T17:13:00Z"
+        },
+        {
+          "fassung_id": "bdew:8257",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2 - Konsultationsfassung",
+          "fassungstyp": "konsultationsfassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8257,
+            "bdew_file_id": 12074,
+            "bdew_valid_from": "2026-02-02",
+            "bdew_valid_to": "2026-02-27",
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12074",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "nicht_verbindlich",
+          "rolle_begruendung": "Konsultationsfassung aus Mitteilung 55, Konsultationszeitraum",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8390",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8390,
+            "bdew_file_id": 12217,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-06-28",
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12217",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "XML-Basisdatei; BDEW-validTo liegt vor validFrom (Rohwert, ungedeutet)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8391",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8391,
+            "bdew_file_id": 12218,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12218",
+          "dateiname": "UTILMD_AHB_Gas_1_2_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 10716762,
+          "sha256": "88a4cf9d82d699b048e1f34a5336d80d6613065ae8476c1571dccdd2d7e40cf9",
+          "bytegleich_mit": [
+            "bnetza:UTILMD_AHB_Gas_1_2_20260401.pdf"
+          ],
+          "seiten": 307,
+          "deckblatt": {
+            "version": "1.2",
+            "stand_mig": "G1.2",
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "Konsultationsfassung",
+              "01.02.2026"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 303,
+            "seite_bis": 307,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (27.03.2026)": 1,
+              "Genehmigt": 7
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Inhalt durch konsolidierte Fassung überholt; einzige Quelle der Änderungshistorie gegenüber der Vorversion 1.1 und die amtlich verlinkte Fassung",
+          "abruf_utc": "2026-09-17T17:36:00Z"
+        },
+        {
+          "fassung_id": "bdew:8392",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2 - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8392,
+            "bdew_file_id": 12219,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12219",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Word-Fassung nach Abschnitt 6/7 nicht maßgeblich, in Etappe 1 nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8416",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8416,
+            "bdew_file_id": 12252,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-08-05",
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12252",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "ersetzt",
+          "rolle_begruendung": "XML-Fassung eines älteren Fehlerkorrekturstands",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8427",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8427,
+            "bdew_file_id": 12263,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-08-05",
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12263",
+          "dateiname": "UTILMD_AHB_Gas_1_2_Fehlerkorrektur_20260629.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 10846557,
+          "sha256": "e9f442f26df195e5dee84788480a7568de946ed28323f00c25d38b364ff17706",
+          "bytegleich_mit": [],
+          "seiten": 293,
+          "deckblatt": {
+            "version": "1.2",
+            "stand_mig": "G1.2",
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2026",
+            "stand_fehlerkorrektur": "29.06.2026",
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 293,
+            "seite_bis": 293,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (29.06.2026)": 1
+            }
+          },
+          "rolle": "ersetzt",
+          "rolle_begruendung": "Älterer Fehlerkorrekturstand; durch neueren Stand ersetzt (Prioritätsregel 2)",
+          "abruf_utc": "2026-09-17T17:36:00Z"
+        },
+        {
+          "fassung_id": "bdew:8428",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8428,
+            "bdew_file_id": 12264,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-08-05",
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12264",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Word-Fassung nach Abschnitt 6/7 nicht maßgeblich, in Etappe 1 nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8455",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2026-08-06",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8455,
+            "bdew_file_id": 12302,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12302",
+          "dateiname": "UTILMD_AHB_Gas_1_2_Fehlerkorrektur_20260806.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 3698320,
+          "sha256": "7562e2fd2fb24cbd04242d5820c4bab86f697c0c50f604ceb65652ff72c9e802",
+          "bytegleich_mit": [],
+          "seiten": 293,
+          "deckblatt": {
+            "version": "1.2",
+            "stand_mig": "G1.2",
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2026",
+            "stand_fehlerkorrektur": "06.08.2026",
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 293,
+            "seite_bis": 293,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (06.08.2026)": 1,
+              "Fehler (29.06.2026)": 1
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Konsolidierte Fassung mit Fehlerkorrekturen, neuester Stand, PDF",
+          "abruf_utc": "2026-09-17T17:36:00Z"
+        },
+        {
+          "fassung_id": "bdew:8456",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-08-06",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8456,
+            "bdew_file_id": 12303,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12303",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Word-Fassung nach Abschnitt 6/7 nicht maßgeblich, in Etappe 1 nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8457",
+          "titel_in_quelle": "UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-08-06",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8457,
+            "bdew_file_id": 12304,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12304",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "XML-Fassung (kostenpflichtig); PDF ist Referenz (Abschnitt 7)",
+          "abruf_utc": null
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8455",
+        "massgebliche_fassung_pdf_sha256": "7562e2fd2fb24cbd04242d5820c4bab86f697c0c50f604ceb65652ff72c9e802",
+        "regelschritte": [
+          {
+            "regel": "Version am Stichtag bestimmen (verbindliche Mitteilung mit Gültig-ab ≤ Stichtag, kein späterer verbindlicher Nachfolger)",
+            "ergebnis": "1.2 aus Mitteilung 56, gültig ab 01.10.2026"
+          },
+          {
+            "regel": "Alle Fassungen dieser Version aus BNetzA und BDEW sammeln, Fassungstyp aus Titel und Deckblatt (nicht aus BDEW-Kennzeichen)",
+            "ergebnis": "11 Fassungen: basis×3, konsultationsfassung×1, informatorische_lesefassung×1, konsolidiert_fehlerkorrektur×4, informatorische_lesefassung_konsolidiert×2"
+          },
+          {
+            "regel": "Priorität 1: konsolidierte Fassung mit Fehlerkorrekturen vor Basis und Lesefassung",
+            "ergebnis": "vorhanden: Stand 2026-06-29, Stand 2026-08-06"
+          },
+          {
+            "regel": "Priorität 2: bei mehreren konsolidierten Fassungen der neueste Stand; Gegenprobe Deckblatt und Änderungshistorie",
+            "ergebnis": "Stand 2026-08-06; Deckblatt 'Konsolidierte Lesefassung mit Fehlerkorrekturen 06.08.2026'; Historie-Statusvermerke {'Fehler (06.08.2026)': 1, 'Fehler (29.06.2026)': 1}"
+          },
+          {
+            "regel": "Priorität 3: informatorische Lesefassungen ignorieren",
+            "ergebnis": "3 Word-Fassungen als informativ erfasst"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "PDF bdew:8455, SHA-256 7562e2fd2fb24cbd04242d5820c4bab86f697c0c50f604ceb65652ff72c9e802"
+          },
+          {
+            "regel": "Vollständigkeit der maßgeblichen Fassung gegen Basis prüfen (Seitenzahl, Inhaltsverzeichnis, Prüfidentifikatoren)",
+            "ergebnis": "Basis 307 S. → konsolidiert 293 S.; Prüfidentifikatoren 88 → 89 (+44170 durch Fehlerkorrektur 29.06.2026, Änd-ID 27360); Inhaltsverzeichnis: Kapitel 5.13.x der Basis heißen in der konsolidierten Fassung 5.12.x."
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:8391",
+            "zweck": "Änderungshistorie 1.1 → 1.2 (S. 303–307); in der konsolidierten Fassung nicht enthalten"
+          },
+          {
+            "fassung_id": "bnetza:UTILMD_AHB_Gas_1_2_20260401.pdf",
+            "zweck": "amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8391"
+          }
+        ],
+        "begruendung": "UTILMD AHB Gas 1.2 gilt ab 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und bis zum Stichtag keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Lesefassung mit Fehlerkorrekturen Stand 06.08.2026 (BDEW-MaKo), weil sie den neuesten Fehlerkorrekturstand dieser Version enthält."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "ja",
+          "erlaeuterung": "Neue Version 1.2 (Vorgänger 1.1) als Anlage der Mitteilung 56",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "UTILMD AHB Gas 1.2"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "nicht_anwendbar",
+          "erlaeuterung": "Dokument durch Mitteilung 56 geändert; Vorgänger 1.1 endet mit Ablauf des 30.09.2026",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8160",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Vorgänger: title=\"UTILMD AHB Gas 1.1\", validFrom=2026-04-01, validTo=2026-09-30"
+            }
+          ]
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 1.2 mit validFrom 01.10.2026; Basis-PDF bytegleich mit BNetzA-Anlage",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8391",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Basis-PDF: title=\"UTILMD AHB Gas 1.2\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Fehlerkorrekturstände: 2026-06-29, 2026-08-06",
+          "beleg": [
+            {
+              "quelle": "bdew:8455",
+              "sha256": "7562e2fd2fb24cbd04242d5820c4bab86f697c0c50f604ceb65652ff72c9e802",
+              "seite": "293–293",
+              "fundstelle": "Statusvermerke {'Fehler (06.08.2026)': 1, 'Fehler (29.06.2026)': 1}"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2026-08-06",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8455",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "konsolidierte Fassung: title=\"UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "0 Einträge mit validFrom > 2026-10-01"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein Nachfolger in Konsultation (Mitteilung 57 enthält kein UTILMD-Gas-Dokument); die eigene Konsultationsfassung 1.2 (Mitteilung 55) ist durch Mitteilung 56 abgeschlossen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API id 8257",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Konsultationsfassung: title=\"UTILMD AHB Gas 1.2 - Konsultationsfassung\", validFrom=2026-02-02, validTo=2026-02-27"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version, Gültig-ab und Basis-PDF (SHA-256) stimmen überein. Nur BDEW-intern: XML-Basisdatei mit validTo vor validFrom (Plattform-Rohwert, kein Widerspruch zur BNetzA)",
+          "beleg": [
+            {
+              "quelle": "bnetza:UTILMD_AHB_Gas_1_2_20260401.pdf",
+              "sha256": "88a4cf9d82d699b048e1f34a5336d80d6613065ae8476c1571dccdd2d7e40cf9"
+            }
+          ]
+        }
+      },
+      "hinweise": [
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Die Änderungshistorie der konsolidierten Fassung enthält nur die Fehlerkorrekturen dieser Version (Status 'Fehler (Datum)'). Die Änderungen gegenüber der Vorversion (Status 'Genehmigt') stehen nur in der Basisfassung. Für die fachliche Analyse 'Änderungshistorie' (Abschnitt 12) wird deshalb die Basisfassung ergänzend benötigt.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8391",
+              "sha256": "88a4cf9d82d699b048e1f34a5336d80d6613065ae8476c1571dccdd2d7e40cf9",
+              "seite": "303–307"
+            }
+          ]
+        },
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Die konsolidierte Fassung nummeriert Kapitel um (Basis 5.13.2–5.15 → konsolidiert 5.12.3–5.14). Kapitel- und Seitenangaben einer Provenienz gelten nur zusammen mit dem SHA-256 der Fassung; sie lassen sich nicht zwischen Fassungen übertragen.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8391",
+              "seite": "2–4"
+            },
+            {
+              "quelle": "bdew:8455",
+              "seite": "2–4"
+            }
+          ]
+        },
+        {
+          "art": "quellenauffaelligkeit",
+          "text": "BDEW-validTo des ersetzten Stands 29.06.2026 (PDF bdew:8427) = 2026-08-05, der Tag vor dem Stand 06.08.2026. Die Datei ist 3,7 MB groß (Stand 29.06.: 10,8 MB), hat aber dieselbe Seitenzahl (293).",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8427",
+              "fundstelle": "validTo 2026-08-05"
+            }
+          ]
+        },
+        {
+          "art": "einfuehrungsszenario",
+          "text": "Das Einführungsszenario UTILMD 01.10.2026 gilt laut Vorwort ausschließlich für die Sparte Strom; für Gas gibt es keines.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8465",
+              "url": "https://www.bdew-mako.de/api/downloadFile/12313",
+              "sha256": "de168bf067a2a3a0edf9f19e06ddb887c041e515819f06f47e969a646461cbaa",
+              "seite": 3,
+              "fundstelle": "Vom Einführungsszenario ist ausschließlich die Sparte Strom betroffen."
+            }
+          ]
+        },
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Deckblatt der Basisfassung enthält weißen, unsichtbaren Resttext 'Konsultationsfassung' und '01.02.2026'.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bnetza:UTILMD_AHB_Gas_1_2_20260401.pdf",
+              "seite": 1
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-17T18:00:00Z",
+        "etappe": 1,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug, Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber, Farbwert je Wort), Volltext (pdfminer) für Änderungshistorie, Inhaltsverzeichnis und Prüfidentifikatoren. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "UTILMD-MIG-GAS",
+        "dokumentname": "UTILMD MIG Gas",
+        "dokumenttyp": "MIG",
+        "kategorie": "MIG",
+        "nachrichtentyp": "UTILMD",
+        "sparte": "Gas",
+        "sparte_beleg": "Spartenangabe im Dokumenttitel der Mitteilung 56 und auf dem Deckblatt",
+        "bdew_topic_id": 214
+      },
+      "dokumentversion": {
+        "version": "G1.2",
+        "veroeffentlicht_am": {
+          "datum": "2026-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "Datum der Mitteilung 01.04.2026"
+            },
+            {
+              "quelle": "bnetza:UTILMD_MIG_Gas_G1_2_20260401.pdf",
+              "sha256": "b45a5ea72b5c107391c85e0fcfb02adf910e5ba20010864e17d06c3413301d6e",
+              "seite": 1,
+              "fundstelle": "Publikationsdatum: 01.04.2026"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2026-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "verbindlich ab dem 01.10.2026"
+            },
+            {
+              "quelle": "BDEW-API id 8437",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"UTILMD MIG Gas G1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56 (Stand 17.09.2026)"
+            },
+            {
+              "quelle": "BDEW-API id 8437",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo leer: title=\"UTILMD MIG Gas G1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 56,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2026-04-01",
+          "zusammenhang": "als Anlage (PDF) veröffentlicht, verbindlich ab 01.10.2026; Fehlerkorrekturstände nur auf BDEW-MaKo"
+        },
+        "dokumentstatus": "verbindlich",
+        "vorgaenger": {
+          "version": "G1.1",
+          "gueltig_bis": {
+            "datum": "2026-09-30",
+            "art": "abgeleitet",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 56",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+                "fundstelle": "Nachfolger G1.2 verbindlich ab dem 01.10.2026"
+              },
+              {
+                "quelle": "BDEW-API id 8163",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW validTo Vorgänger-Basis: title=\"UTILMD MIG Gas G1.1\", validFrom=2026-04-01, validTo=2026-09-30"
+              },
+              {
+                "quelle": "BDEW-API id 8211",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW validTo letzte Vorgänger-Fassung: title=\"UTILMD MIG Gas 1.1 -  außerordentliche Veröffentlichung Stand: 11.12.2025\", validFrom=2026-04-01, validTo=2026-09-30"
+              }
+            ]
+          },
+          "letzte_fassung": "außerordentliche Veröffentlichung Stand 11.12.2025 (keine konsolidierte Fehlerkorrekturfassung auf BDEW)"
+        },
+        "nachfolger": []
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bnetza:UTILMD_MIG_Gas_G1_2_20260401.pdf",
+          "titel_in_quelle": "UTILMD MIG Gas G1.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "Anlage der Mitteilung 56 ohne Fassungszusatz; Deckblatt ohne sichtbaren Vermerk",
+          "fehlerkorrekturstand": null,
+          "quelle": "BNetzA",
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/UTILMD_MIG_Gas_G1_2_20260401.pdf?__blob=publicationFile&v=1",
+          "dateiname": "UTILMD_MIG_Gas_G1_2_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 2417983,
+          "sha256": "b45a5ea72b5c107391c85e0fcfb02adf910e5ba20010864e17d06c3413301d6e",
+          "bytegleich_mit": [
+            "bdew:8397"
+          ],
+          "seiten": 169,
+          "deckblatt": {
+            "version": "G1.2",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 168,
+            "seite_bis": 169,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Genehmigt": 6
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Inhalt durch konsolidierte Fassung überholt; einzige Quelle der Änderungshistorie gegenüber der Vorversion G1.1 und die amtlich verlinkte Fassung",
+          "abruf_utc": "2026-09-17T17:13:00Z"
+        },
+        {
+          "fassung_id": "bdew:8259",
+          "titel_in_quelle": "UTILMD MIG Gas 1.2 - Konsultationsfassung",
+          "fassungstyp": "konsultationsfassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8259,
+            "bdew_file_id": 12076,
+            "bdew_valid_from": "2026-02-02",
+            "bdew_valid_to": "2026-02-27",
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12076",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "nicht_verbindlich",
+          "rolle_begruendung": "Konsultationsfassung aus Mitteilung 55, Konsultationszeitraum",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8396",
+          "titel_in_quelle": "UTILMD MIG Gas G1.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8396,
+            "bdew_file_id": 12223,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-06-28",
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12223",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "XML-Basisdatei; BDEW-validTo liegt vor validFrom (Rohwert, ungedeutet)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8397",
+          "titel_in_quelle": "UTILMD MIG Gas G1.2",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8397,
+            "bdew_file_id": 12224,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12224",
+          "dateiname": "UTILMD_MIG_Gas_G1_2_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 2417983,
+          "sha256": "b45a5ea72b5c107391c85e0fcfb02adf910e5ba20010864e17d06c3413301d6e",
+          "bytegleich_mit": [
+            "bnetza:UTILMD_MIG_Gas_G1_2_20260401.pdf"
+          ],
+          "seiten": 169,
+          "deckblatt": {
+            "version": "G1.2",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 168,
+            "seite_bis": 169,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Genehmigt": 6
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Inhalt durch konsolidierte Fassung überholt; einzige Quelle der Änderungshistorie gegenüber der Vorversion G1.1 und die amtlich verlinkte Fassung",
+          "abruf_utc": "2026-09-17T17:36:00Z"
+        },
+        {
+          "fassung_id": "bdew:8398",
+          "titel_in_quelle": "UTILMD MIG Gas G1.2 - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8398,
+            "bdew_file_id": 12225,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12225",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Word-Fassung nach Abschnitt 6/7 nicht maßgeblich, in Etappe 1 nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8413",
+          "titel_in_quelle": "UTILMD MIG Gas G1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8413,
+            "bdew_file_id": 12249,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": false
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12249",
+          "dateiname": null,
+          "dateityp": "text/xml",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kostenpflichtig (Abonnement), nicht abgerufen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "XML-Fassung (kostenpflichtig); PDF ist Referenz (Abschnitt 7)",
+          "abruf_utc": null
+        },
+        {
+          "fassung_id": "bdew:8437",
+          "titel_in_quelle": "UTILMD MIG Gas G1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8437,
+            "bdew_file_id": 12276,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12276",
+          "dateiname": "UTILMD_MIG_Gas_G1_2_Fehlerkorrektur_20260629.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 2488912,
+          "sha256": "8105c2bfca76550428d21c71b2fe3f0628d19b1ccd10a18e42b6ff874f2acfb5",
+          "bytegleich_mit": [],
+          "seiten": 165,
+          "deckblatt": {
+            "version": "G1.2",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2026",
+            "stand_fehlerkorrektur": "29.06.2026",
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 165,
+            "seite_bis": 165,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (29.06.2026)": 1
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Konsolidierte Fassung mit Fehlerkorrekturen, neuester Stand, PDF",
+          "abruf_utc": "2026-09-17T17:36:00Z"
+        },
+        {
+          "fassung_id": "bdew:8438",
+          "titel_in_quelle": "UTILMD MIG Gas G1.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8438,
+            "bdew_file_id": 12277,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12277",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Word-Fassung nach Abschnitt 6/7 nicht maßgeblich, in Etappe 1 nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); nicht maßgeblich (Abschnitt 6)",
+          "abruf_utc": null
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8437",
+        "massgebliche_fassung_pdf_sha256": "8105c2bfca76550428d21c71b2fe3f0628d19b1ccd10a18e42b6ff874f2acfb5",
+        "regelschritte": [
+          {
+            "regel": "Version am Stichtag bestimmen (verbindliche Mitteilung mit Gültig-ab ≤ Stichtag, kein späterer verbindlicher Nachfolger)",
+            "ergebnis": "G1.2 aus Mitteilung 56, gültig ab 01.10.2026"
+          },
+          {
+            "regel": "Alle Fassungen dieser Version aus BNetzA und BDEW sammeln, Fassungstyp aus Titel und Deckblatt (nicht aus BDEW-Kennzeichen)",
+            "ergebnis": "8 Fassungen: basis×3, konsultationsfassung×1, informatorische_lesefassung×1, konsolidiert_fehlerkorrektur×2, informatorische_lesefassung_konsolidiert×1"
+          },
+          {
+            "regel": "Priorität 1: konsolidierte Fassung mit Fehlerkorrekturen vor Basis und Lesefassung",
+            "ergebnis": "vorhanden: Stand 2026-06-29"
+          },
+          {
+            "regel": "Priorität 2: bei mehreren konsolidierten Fassungen der neueste Stand; Gegenprobe Deckblatt und Änderungshistorie",
+            "ergebnis": "Stand 2026-06-29; Deckblatt 'Konsolidierte Lesefassung mit Fehlerkorrekturen 29.06.2026'; Historie-Statusvermerke {'Fehler (29.06.2026)': 1}"
+          },
+          {
+            "regel": "Priorität 3: informatorische Lesefassungen ignorieren",
+            "ergebnis": "2 Word-Fassungen als informativ erfasst"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "PDF bdew:8437, SHA-256 8105c2bfca76550428d21c71b2fe3f0628d19b1ccd10a18e42b6ff874f2acfb5"
+          },
+          {
+            "regel": "Vollständigkeit der maßgeblichen Fassung gegen Basis prüfen (Seitenzahl, Inhaltsverzeichnis, Prüfidentifikatoren)",
+            "ergebnis": "Basis 169 S. → konsolidiert 165 S.; Prüfidentifikatoren 91 → 92 (+44170 durch Fehlerkorrektur 29.06.2026); Inhaltsverzeichnis identisch."
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:8397",
+            "zweck": "Änderungshistorie G1.1 → G1.2 (S. 168–169); in der konsolidierten Fassung nicht enthalten"
+          },
+          {
+            "fassung_id": "bnetza:UTILMD_MIG_Gas_G1_2_20260401.pdf",
+            "zweck": "amtlich bei der BNetzA verlinkte Fassung; bytegleich mit bdew:8397"
+          }
+        ],
+        "begruendung": "UTILMD MIG Gas G1.2 gilt ab 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und bis zum Stichtag keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Lesefassung mit Fehlerkorrekturen Stand 29.06.2026 (BDEW-MaKo), weil sie den neuesten Fehlerkorrekturstand dieser Version enthält."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "ja",
+          "erlaeuterung": "Neue Version G1.2 (Vorgänger G1.1) als Anlage der Mitteilung 56",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "UTILMD MIG Gas G1.2"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "nicht_anwendbar",
+          "erlaeuterung": "Dokument durch Mitteilung 56 geändert; Vorgänger G1.1 endet mit Ablauf des 30.09.2026",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8163",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Vorgänger: title=\"UTILMD MIG Gas G1.1\", validFrom=2026-04-01, validTo=2026-09-30"
+            }
+          ]
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt G1.2 mit validFrom 01.10.2026; Basis-PDF bytegleich mit BNetzA-Anlage",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8397",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Basis-PDF: title=\"UTILMD MIG Gas G1.2\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Fehlerkorrekturstände: 2026-06-29",
+          "beleg": [
+            {
+              "quelle": "bdew:8437",
+              "sha256": "8105c2bfca76550428d21c71b2fe3f0628d19b1ccd10a18e42b6ff874f2acfb5",
+              "seite": "165–165",
+              "fundstelle": "Statusvermerke {'Fehler (29.06.2026)': 1}"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2026-06-29",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8437",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "konsolidierte Fassung: title=\"UTILMD MIG Gas G1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "0 Einträge mit validFrom > 2026-10-01"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein Nachfolger in Konsultation (Mitteilung 57 enthält kein UTILMD-Gas-Dokument); die eigene Konsultationsfassung G1.2 (Mitteilung 55) ist durch Mitteilung 56 abgeschlossen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API id 8259",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Konsultationsfassung: title=\"UTILMD MIG Gas 1.2 - Konsultationsfassung\", validFrom=2026-02-02, validTo=2026-02-27"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version, Gültig-ab und Basis-PDF (SHA-256) stimmen überein. Nur BDEW-intern: XML-Basisdatei mit validTo vor validFrom (Plattform-Rohwert, kein Widerspruch zur BNetzA)",
+          "beleg": [
+            {
+              "quelle": "bnetza:UTILMD_MIG_Gas_G1_2_20260401.pdf",
+              "sha256": "b45a5ea72b5c107391c85e0fcfb02adf910e5ba20010864e17d06c3413301d6e"
+            }
+          ]
+        }
+      },
+      "hinweise": [
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Die Änderungshistorie der konsolidierten Fassung enthält nur die Fehlerkorrekturen dieser Version (Status 'Fehler (Datum)'). Die Änderungen gegenüber der Vorversion (Status 'Genehmigt') stehen nur in der Basisfassung. Für die fachliche Analyse 'Änderungshistorie' (Abschnitt 12) wird deshalb die Basisfassung ergänzend benötigt.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8397",
+              "sha256": "b45a5ea72b5c107391c85e0fcfb02adf910e5ba20010864e17d06c3413301d6e",
+              "seite": "168–169"
+            }
+          ]
+        },
+        {
+          "art": "offene_frage",
+          "text": "Die Änderungshistorie der Basis G1.2 (S. 168) enthält den Vermerk, eine Anpassung zu Übergangsversorgung (§ 38a EnWG, ZZD) finde erst zum 1.4.2026 Anwendung. Das Datum liegt vor dem Stichtag, der Vermerk ist vermutlich aus G1.1 übernommen. Die Zuordnung zur Änd-ID ist wegen des Spaltenlayouts nicht sicher belegt (vermutlich 27016). Kein Einfluss auf die Versionsauswahl, in der fachlichen Analyse zu prüfen.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8397",
+              "sha256": "b45a5ea72b5c107391c85e0fcfb02adf910e5ba20010864e17d06c3413301d6e",
+              "seite": 168
+            }
+          ]
+        },
+        {
+          "art": "einfuehrungsszenario",
+          "text": "Das Einführungsszenario UTILMD 01.10.2026 gilt ausschließlich für Strom.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8465",
+              "url": "https://www.bdew-mako.de/api/downloadFile/12313",
+              "sha256": "de168bf067a2a3a0edf9f19e06ddb887c041e515819f06f47e969a646461cbaa",
+              "seite": 3
+            }
+          ]
+        },
+        {
+          "art": "quellenauffaelligkeit",
+          "text": "Die Vorversion G1.1 hat keine konsolidierte Fehlerkorrekturfassung; die letzte Fassung ist die 'außerordentliche Veröffentlichung Stand 11.12.2025' (BDEW validTo 2026-09-30).",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8211"
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-17T18:00:00Z",
+        "etappe": 1,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug, Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber, Farbwert je Wort), Volltext (pdfminer) für Änderungshistorie, Inhaltsverzeichnis und Prüfidentifikatoren. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    }
+  ]
+}
