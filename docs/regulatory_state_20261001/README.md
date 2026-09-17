@@ -8,8 +8,8 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 |---|---|---|---|
 | 0 | Fundament: Mitteilung 56 erfassen, BK6/BK7, Aktualität | **abgeschlossen** | [`etappe0_fundament.md`](etappe0_fundament.md), [`etappe0_rohliste_mitteilung56.json`](etappe0_rohliste_mitteilung56.json) |
 | 1 | Pilot UTILMD (AHB/MIG Strom + Gas) | **abgeschlossen**, Schema und 9a-Vorschlag zur Bestätigung | [`etappe1_utilmd.md`](etappe1_utilmd.md), [`etappe1_utilmd_provenienz.json`](etappe1_utilmd_provenienz.json), [`provenienz_schema.json`](provenienz_schema.json), [`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md) |
-| 2 | Übrige EDIFACT-Nachrichtentypen Strom | offen | — |
-| 3 | Übrige EDIFACT-Nachrichtentypen Gas | offen | — |
+| 2 | Übrige EDIFACT-Nachrichtentypen (alle spartenübergreifenden, einmalig) | **abgeschlossen**; Regelerweiterung O-11 zur Bestätigung | [`etappe2_edifact.md`](etappe2_edifact.md), [`etappe2_edifact_provenienz.json`](etappe2_edifact_provenienz.json) |
+| 3 | Gasspezifika: SSQNOT, GeLi Gas 3.0, Gas-Anwendbarkeit der spartenübergreifenden Dokumente | offen | — |
 | 4 | PID, Codelisten, Allgemeine Festlegungen | offen | — |
 | 5 | Entscheidungsbaum-Diagramme | offen | — |
 | 6 | Übertragungsweg / AS4 / API / XML | offen | — |
@@ -18,7 +18,7 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 
 ## Bestätigte Grundlagen
 
-* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`); Rollen: [`rollendefinition.md`](rollendefinition.md)
+* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`; v0.2 ergänzt außerordentliche Veröffentlichung und Hinweisart `querpruefung`, **zur Bestätigung**); Rollen: [`rollendefinition.md`](rollendefinition.md)
 * Modell: Regulatory State als Ebene oberhalb von `RegulatoryVersion`, 1:n ([`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md)), bestätigt am 17.09.2026, **noch nicht umgesetzt**
 
 ## Offene Produktentscheidungen

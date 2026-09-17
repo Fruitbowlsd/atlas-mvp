@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "atlas/regulatory_state/provenienz_schema_v0.json",
-  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.1, bestätigt 17.09.2026 + Rollendefinition)",
+  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.2)",
   "description": "Ein Datensatz je regulatorischer Dokumentversion am Stichtag. Drei Ebenen wie in Abschnitt 10 des Auftrags: Dokument → Dokumentversion → Fassungen (Dateien). Die Auswahl der maßgeblichen Fassung ist eine eigene, begründete Entscheidung und überschreibt keine Fassung. Nur Rechercheartefakt, kein Datenbankschema.",
   "type": "object",
   "required": [
@@ -19,7 +19,8 @@
     "schema_version": {
       "enum": [
         "0",
-        "0.1"
+        "0.1",
+        "0.2"
       ]
     },
     "stichtag": {
@@ -261,7 +262,8 @@
               "string",
               "null"
             ],
-            "format": "date"
+            "format": "date",
+            "description": "Stand-Datum einer konsolidierten Fehlerkorrekturfassung oder einer außerordentlichen Veröffentlichung (ab v0.2); ordnet die Fassungen derselben Version zeitlich"
           },
           "quelle": {
             "enum": [
@@ -403,6 +405,18 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "stand_ausserordentlich": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "ausserordentlich_grund": {
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             }
           },
@@ -442,7 +456,7 @@
               "informativ",
               "nicht_verbindlich"
             ],
-            "description": "Siehe rollendefinition.md. Es gibt bewusst KEINE Rolle 'verworfen': keine Fassung wird aus dem Datensatz entfernt oder als ungültig markiert. 'ersetzt' = Fassung eines älteren Fehlerkorrekturstands derselben Version, zeitlich abgelöst durch die in 'ersetzt_durch' genannte Fassung; zu ihrem Zeitpunkt war sie Kandidat für maßgeblich. 'informativ'/'nicht_verbindlich' = aus Typgründen nie maßgeblich (Lesefassung, Formatnebenfassung, Konsultation)."
+            "description": "Siehe rollendefinition.md. Es gibt bewusst KEINE Rolle 'verworfen': keine Fassung wird aus dem Datensatz entfernt oder als ungültig markiert. 'ersetzt' = Fassung eines älteren Stands (konsolidierte Fehlerkorrektur oder außerordentliche Veröffentlichung) derselben Version, zeitlich abgelöst durch die in 'ersetzt_durch' genannte Fassung; zu ihrem Zeitpunkt war sie Kandidat für maßgeblich. 'informativ'/'nicht_verbindlich' = aus Typgründen nie maßgeblich (Lesefassung, Formatnebenfassung, Konsultation)."
           },
           "rolle_begruendung": {
             "type": "string"
@@ -616,8 +630,10 @@
               "einfuehrungsszenario",
               "dokumentauffaelligkeit",
               "quellenauffaelligkeit",
-              "offene_frage"
-            ]
+              "offene_frage",
+              "querpruefung"
+            ],
+            "description": "querpruefung (ab v0.2) = bestandene oder fehlgeschlagene Konsistenzprüfung zwischen zusammengehörigen Dokumenten, z. B. AHB ↔ MIG"
           },
           "text": {
             "type": "string"

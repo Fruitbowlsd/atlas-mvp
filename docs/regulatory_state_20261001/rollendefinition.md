@@ -1,6 +1,6 @@
 # Rollen einer Fassung — „ersetzt“ ist nicht „verworfen“
 
-**Ticket:** #64 · gilt ab Schema v0.1 (`provenienz_schema.json`, Feld `fassungen[].rolle`)
+**Ticket:** #64 · gilt ab Schema v0.1 (`provenienz_schema.json`, Feld `fassungen[].rolle`); Erweiterung um außerordentliche Veröffentlichungen in v0.2 (Etappe 2, **zur Bestätigung**)
 
 ## Grundsatz
 
@@ -39,14 +39,35 @@ Diesen Fall löst das Schema nicht über eine Rolle:
 
 1. `konsultationsfassung` → `nicht_verbindlich`
 2. informatorische Lesefassung (jeder Stand) → `informativ`
-3. neueste konsolidierte Fassung, PDF → `massgeblich`; dieselbe als XML → `informativ`
+3. neueste konsolidierte Fassung (ab v0.2: oder außerordentliche Veröffentlichung), PDF → `massgeblich`; dieselbe als XML → `informativ`
 4. ältere konsolidierte Fassung (PDF oder XML) → `ersetzt`, `ersetzt_durch` = gleichformatige
    Fassung des nächstneueren Stands
 5. Basis-PDF → `ergaenzend`, wenn Schritt 3 griff, sonst `massgeblich`
 6. Basis in anderem Format → `informativ`
-7. Fassungstyp, den diese Regeln nicht kennen (z. B. „außerordentliche Veröffentlichung“)
-   → **keine stille Einordnung**: im Etappenbericht als Fall ausweisen und die Regel
-   ausdrücklich ergänzen
+7. Fassungstyp, den diese Regeln nicht kennen → **keine stille Einordnung**: im
+   Etappenbericht als Fall ausweisen und die Regel ausdrücklich ergänzen
+
+## Erweiterung v0.2 — außerordentliche Veröffentlichung (Etappe 2, zur Bestätigung)
+
+In Etappe 2 aufgetreten bei CONTRL AHB 1.0, CONTRL MIG 2.0b, INSRPT AHB 1.1g und INSRPT MIG
+1.1a. Befund am Dokument:
+
+* Deckblatt: „Außerordentliche Veröffentlichung [wegen Layoutanpassung]“, eigenes
+  **Stand**-Datum, gleiche **Version**, „Ursprüngliches Publikationsdatum“. Es ist also eine
+  weitere Fassung derselben Version, keine neue Version.
+* Die Änderungshistorie ist **kumuliert** wie bei der konsolidierten Fassung: frühere
+  Fehlerkorrekturen („Fehler (30.03.2023)“) plus Anpassungen („Anpassung (26.07.2024)“ Layout,
+  „Anpassung (11.12.2025)“ Segmentzähler/Tabellenlayout; für CONTRL Änd-ID 26091 ausdrücklich
+  „kein Implementierungsaufwand“) und vereinzelt neue Fehlerkorrekturen („Fehler (11.12.2025)“
+  bei INSRPT AHB, Deckblattdatum).
+* Sie ist in keiner BNetzA-Mitteilung angekündigt, genau wie konsolidierte
+  Fehlerkorrekturfassungen.
+
+**Regel (vorläufig angewandt):** Außerordentliche Veröffentlichungen und konsolidierte
+Fehlerkorrekturfassungen bilden **eine** Stand-Reihe je Version. Schritte 3 und 4 gelten für
+beide Typen gemeinsam: Der neueste Stand (PDF) ist `massgeblich`, ältere Stände sind
+`ersetzt`. Eine Fassung ohne Stand-Datum im Titel (einzelne XML-Dateien) lässt sich nicht
+einordnen und wird `informativ`, mit Hinweis.
 
 Die UTILMD-Datensätze aus Etappe 1 folgen dieser Reihenfolge bereits. Mit v0.1 kommt dort
 nur `ersetzt_durch` hinzu.
