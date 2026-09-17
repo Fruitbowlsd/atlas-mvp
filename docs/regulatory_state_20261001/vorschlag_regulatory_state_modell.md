@@ -1,6 +1,6 @@
 # Vorschlag — Verhältnis `Regulatory State` ↔ `RegulatoryVersion` (Abschnitt 9a)
 
-**Ticket:** #64 · **Status:** Vorschlag zur Bestätigung. **Keine Schemaänderung durchgeführt.**
+**Ticket:** #64 · **Status:** vom Nutzer **bestätigt am 17.09.2026**. **Noch keine Schemaänderung durchgeführt.**
 
 ---
 
@@ -77,7 +77,7 @@ Grundsätze:
 | 1 | GeLi Gas 2.0 / UTILMD Gas G1.1, ab 01.04.2026, aktiv | NULL (State 01.04.2026 wird nach Abschnitt 13 nicht aufgebaut) |
 | 2 | Mitteilung 56 / ab 01.10.2026, Gas, inaktiv | → State „Marktkommunikation 01.10.2026“ |
 | 3 | UTILMD Strom 2.1, ab 06.06.2025 | NULL |
-| — | **fehlt:** Strom-RV für 01.10.2026 | offene Produktentscheidung, nicht Teil dieses Auftrags |
+| — | **fehlt:** Strom-RV für 01.10.2026 | **offene Produktentscheidung P-1** (Ticket #64), wird in Etappe 7/8 ausdrücklich aufgeführt |
 
 ## 5. Zu bestätigen
 

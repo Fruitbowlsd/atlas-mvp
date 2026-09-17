@@ -1,0 +1,757 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "atlas/regulatory_state/provenienz_schema_v0.json",
+  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.1, bestätigt 17.09.2026 + Rollendefinition)",
+  "description": "Ein Datensatz je regulatorischer Dokumentversion am Stichtag. Drei Ebenen wie in Abschnitt 10 des Auftrags: Dokument → Dokumentversion → Fassungen (Dateien). Die Auswahl der maßgeblichen Fassung ist eine eigene, begründete Entscheidung und überschreibt keine Fassung. Nur Rechercheartefakt, kein Datenbankschema.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "stichtag",
+    "dokument",
+    "dokumentversion",
+    "fassungen",
+    "auswahl",
+    "fragenkatalog",
+    "analyse"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "0",
+        "0.1"
+      ]
+    },
+    "stichtag": {
+      "type": "string",
+      "format": "date",
+      "description": "Stichtag des Regulatory State, z. B. 2026-10-01"
+    },
+    "dokument": {
+      "description": "Versionsunabhängige Identität (Abschnitt 4A: Dokumenttyp, Nachrichtentyp, Sparte).",
+      "type": "object",
+      "required": [
+        "dokument_schluessel",
+        "dokumentname",
+        "dokumenttyp",
+        "kategorie",
+        "nachrichtentyp",
+        "sparte"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "dokument_schluessel": {
+          "type": "string",
+          "description": "Stabiler Schlüssel über Versionen hinweg, z. B. UTILMD-AHB-GAS"
+        },
+        "dokumentname": {
+          "type": "string",
+          "description": "Name wie in der Mitteilung, ohne Version"
+        },
+        "dokumenttyp": {
+          "type": "string",
+          "description": "AHB, MIG, Allgemeine Festlegungen, Anwendungsübersicht PID, EBD, Codeliste, RzÜ, AS4-Profil, API-Guideline, AWT, FB, XSD …"
+        },
+        "kategorie": {
+          "enum": [
+            "AHB",
+            "MIG",
+            "PID",
+            "EBD",
+            "Codeliste",
+            "Übertragungsweg",
+            "AS4",
+            "API",
+            "XML",
+            "Sonstiges"
+          ]
+        },
+        "nachrichtentyp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sparte": {
+          "enum": [
+            "Strom",
+            "Gas",
+            "beide"
+          ]
+        },
+        "sparte_beleg": {
+          "type": "string"
+        },
+        "bdew_topic_id": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Themen-ID der BDEW-MaKo-API; bündelt alle Versionen und Fassungen eines Dokuments"
+        }
+      }
+    },
+    "dokumentversion": {
+      "description": "Abschnitt 11: Dokumentversion, Veröffentlichungsdatum, Gültig ab, Gültig bis, Mitteilung. Abschnitt 4A: Dokumentstatus, Vorgängerversion.",
+      "type": "object",
+      "required": [
+        "version",
+        "veroeffentlicht_am",
+        "gueltig_ab",
+        "gueltig_bis",
+        "mitteilung",
+        "dokumentstatus",
+        "vorgaenger",
+        "nachfolger"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "veroeffentlicht_am": {
+          "$ref": "#/$defs/belegtes_datum"
+        },
+        "gueltig_ab": {
+          "$ref": "#/$defs/belegtes_datum"
+        },
+        "gueltig_bis": {
+          "$ref": "#/$defs/belegtes_datum",
+          "description": "datum = null bedeutet unbefristet (kein verbindlicher Nachfolger veröffentlicht)"
+        },
+        "mitteilung": {
+          "type": "object",
+          "required": [
+            "nummer",
+            "url",
+            "typ",
+            "veroeffentlicht_am"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "nummer": {
+              "type": "integer"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "typ": {
+              "enum": [
+                "Veröffentlichung",
+                "Konsultation",
+                "Verschiebung",
+                "Aussetzung",
+                "Sonstiges"
+              ]
+            },
+            "veroeffentlicht_am": {
+              "type": "string",
+              "format": "date"
+            },
+            "zusammenhang": {
+              "type": "string",
+              "description": "Wie die Mitteilung das Dokument betrifft, z. B. 'als Anlage veröffentlicht, verbindlich ab …' oder 'nicht genannt, fortgeltend aus Mitteilung …'"
+            }
+          }
+        },
+        "dokumentstatus": {
+          "enum": [
+            "verbindlich",
+            "verbindlich_fortgeltend",
+            "konsultation",
+            "ersetzt",
+            "entfallen",
+            "relevanz_unklar"
+          ]
+        },
+        "vorgaenger": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "version": {
+              "type": "string"
+            },
+            "gueltig_bis": {
+              "$ref": "#/$defs/belegtes_datum"
+            },
+            "letzte_fassung": {
+              "type": "string",
+              "description": "z. B. 'konsolidierte Lesefassung mit Fehlerkorrekturen Stand 27.03.2026'"
+            }
+          }
+        },
+        "nachfolger": {
+          "type": "array",
+          "description": "Bekannte Nachfolger, auch nicht verbindliche (Fragen 6 und 7)",
+          "items": {
+            "type": "object",
+            "required": [
+              "version",
+              "status",
+              "beleg"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "version": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "konsultation",
+                  "veroeffentlicht_noch_nicht_gueltig"
+                ]
+              },
+              "beleg": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/beleg"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "fassungen": {
+      "description": "Jede auffindbare Datei dieser Version aus jeder Quelle (Abschnitt 6, 7, 11: Quelle, URL, PDF-Datei, Hash, Fehlerkorrekturstand). Auch nicht maßgebliche Fassungen bleiben erfasst.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "fassung_id",
+          "fassungstyp",
+          "fehlerkorrekturstand",
+          "quelle",
+          "url",
+          "dateityp",
+          "abgerufen",
+          "rolle"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "fassung_id": {
+            "type": "string",
+            "description": "z. B. bdew:8455 oder bnetza:UTILMD_AHB_Gas_1_2_20260401.pdf"
+          },
+          "titel_in_quelle": {
+            "type": "string"
+          },
+          "fassungstyp": {
+            "enum": [
+              "basis",
+              "konsolidiert_fehlerkorrektur",
+              "informatorische_lesefassung",
+              "informatorische_lesefassung_konsolidiert",
+              "ausserordentliche_veroeffentlichung",
+              "informatorische_lesefassung_ausserordentlich",
+              "konsultationsfassung"
+            ]
+          },
+          "fassungstyp_beleg": {
+            "type": "string",
+            "description": "Titel in der Quelle und/oder sichtbarer Deckblattvermerk; BDEW-Kennzeichenfelder sind nicht gepflegt und gelten nicht als Beleg"
+          },
+          "fehlerkorrekturstand": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "quelle": {
+            "enum": [
+              "BNetzA",
+              "BDEW-MaKo"
+            ]
+          },
+          "quelle_ref": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "bdew_id": {
+                "type": "integer"
+              },
+              "bdew_file_id": {
+                "type": "integer"
+              },
+              "bdew_valid_from": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Rohwert, ungedeutet"
+              },
+              "bdew_valid_to": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Rohwert, ungedeutet (Plattformgültigkeit, nicht regulatorische Gültigkeit)"
+              },
+              "bdew_frei": {
+                "type": "boolean"
+              }
+            }
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "dateiname": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "dateityp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "abgerufen": {
+            "type": "boolean"
+          },
+          "nicht_abgerufen_grund": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "groesse_bytes": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bytegleich_mit": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "fassung_ids mit identischem SHA-256 aus anderer Quelle"
+          },
+          "seiten": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "deckblatt": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "version": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stand_mig": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "publikationsdatum": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "urspruengliches_publikationsdatum": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stand_fehlerkorrektur": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "anzuwenden_ab": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "sichtbare_vermerke": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "unsichtbarer_resttext": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "aenderungshistorie": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Was die Änderungshistorie dieser Fassung dokumentiert — unterscheidet sich zwischen Basis und konsolidierter Fassung",
+            "additionalProperties": false,
+            "properties": {
+              "seite_von": {
+                "type": "integer"
+              },
+              "seite_bis": {
+                "type": "integer"
+              },
+              "inhalt": {
+                "enum": [
+                  "aenderungen_gegenueber_vorgaenger",
+                  "nur_fehlerkorrekturen_dieser_version"
+                ]
+              },
+              "statusvermerke": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "rolle": {
+            "enum": [
+              "massgeblich",
+              "ergaenzend",
+              "ersetzt",
+              "informativ",
+              "nicht_verbindlich"
+            ],
+            "description": "Siehe rollendefinition.md. Es gibt bewusst KEINE Rolle 'verworfen': keine Fassung wird aus dem Datensatz entfernt oder als ungültig markiert. 'ersetzt' = Fassung eines älteren Fehlerkorrekturstands derselben Version, zeitlich abgelöst durch die in 'ersetzt_durch' genannte Fassung; zu ihrem Zeitpunkt war sie Kandidat für maßgeblich. 'informativ'/'nicht_verbindlich' = aus Typgründen nie maßgeblich (Lesefassung, Formatnebenfassung, Konsultation)."
+          },
+          "rolle_begruendung": {
+            "type": "string"
+          },
+          "abruf_utc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "ersetzt_durch": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "fassung_id der ablösenden Fassung; Pflicht bei rolle = ersetzt, sonst null"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "rolle": {
+                  "const": "ersetzt"
+                }
+              },
+              "required": [
+                "rolle"
+              ]
+            },
+            "then": {
+              "required": [
+                "ersetzt_durch"
+              ],
+              "properties": {
+                "ersetzt_durch": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "auswahl": {
+      "description": "Abschnitt 11: Prioritätsentscheidung, Begründung. Abschnitt 14: Maßgebliche Fassung, Auswahlbegründung.",
+      "type": "object",
+      "required": [
+        "massgebliche_fassung_id",
+        "regelschritte",
+        "begruendung"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "massgebliche_fassung_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "null nur bei relevanz_unklar"
+        },
+        "massgebliche_fassung_pdf_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "regelschritte": {
+          "type": "array",
+          "description": "Angewandte Prioritätsregeln in Reihenfolge, je mit Ergebnis",
+          "items": {
+            "type": "object",
+            "required": [
+              "regel",
+              "ergebnis"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "regel": {
+                "type": "string"
+              },
+              "ergebnis": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ergaenzende_fassungen": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "fassung_id",
+              "zweck"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "fassung_id": {
+                "type": "string"
+              },
+              "zweck": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "begruendung": {
+          "type": "string",
+          "description": "Ein Satz: 'Diese Version gilt ab …, weil …'"
+        }
+      }
+    },
+    "fragenkatalog": {
+      "description": "Abschnitt 8, Fragen 1–8, je mit Antwort und Beleg",
+      "type": "object",
+      "required": [
+        "f1_durch_mitteilung_geaendert",
+        "f2_fortgeltende_vorversion",
+        "f3_bdew_gueltige_version",
+        "f4_fehlerkorrekturen",
+        "f5_konsolidierte_fassung",
+        "f6_neuere_noch_nicht_gueltige_version",
+        "f7_konsultationsfassung",
+        "f8_widerspruch_bnetza_bdew"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {},
+      "properties": {
+        "f1_durch_mitteilung_geaendert": {
+          "$ref": "#/$defs/antwort"
+        },
+        "f2_fortgeltende_vorversion": {
+          "$ref": "#/$defs/antwort"
+        },
+        "f3_bdew_gueltige_version": {
+          "$ref": "#/$defs/antwort"
+        },
+        "f4_fehlerkorrekturen": {
+          "$ref": "#/$defs/antwort"
+        },
+        "f5_konsolidierte_fassung": {
+          "$ref": "#/$defs/antwort"
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "$ref": "#/$defs/antwort"
+        },
+        "f7_konsultationsfassung": {
+          "$ref": "#/$defs/antwort"
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "$ref": "#/$defs/antwort"
+        }
+      }
+    },
+    "hinweise": {
+      "type": "array",
+      "description": "Beobachtungen ohne Einfluss auf die Auswahl (abweichende Termine, Einführungsszenarien, Dokumentauffälligkeiten)",
+      "items": {
+        "type": "object",
+        "required": [
+          "art",
+          "text",
+          "beleg"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "art": {
+            "enum": [
+              "abweichender_termin",
+              "einfuehrungsszenario",
+              "dokumentauffaelligkeit",
+              "quellenauffaelligkeit",
+              "offene_frage"
+            ]
+          },
+          "text": {
+            "type": "string"
+          },
+          "auswirkung_auf_auswahl": {
+            "type": "boolean"
+          },
+          "beleg": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/beleg"
+            }
+          }
+        }
+      }
+    },
+    "analyse": {
+      "description": "Abschnitt 11: Analysezeitpunkt",
+      "type": "object",
+      "required": [
+        "analysezeitpunkt_utc",
+        "etappe",
+        "ticket",
+        "methode"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "analysezeitpunkt_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "etappe": {
+          "type": "integer"
+        },
+        "ticket": {
+          "type": "string"
+        },
+        "methode": {
+          "type": "string"
+        },
+        "bdew_api_abzug_sha256": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "beleg": {
+      "type": "object",
+      "required": [
+        "quelle"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "quelle": {
+          "type": "string",
+          "description": "fassung_id, 'BNetzA Mitteilung 56' oder 'BDEW-API id …'"
+        },
+        "url": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string"
+        },
+        "seite": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        },
+        "fundstelle": {
+          "type": "string",
+          "description": "Kurzes Zitat oder Feldangabe"
+        }
+      }
+    },
+    "belegtes_datum": {
+      "type": "object",
+      "required": [
+        "datum",
+        "art",
+        "beleg"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "datum": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "art": {
+          "enum": [
+            "ausdruecklich",
+            "abgeleitet",
+            "offen"
+          ],
+          "description": "ausdruecklich = wörtlich in einer Quelle; abgeleitet = aus Nachfolger-Gültigkeit geschlossen; offen = kein Ende bekannt"
+        },
+        "beleg": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/beleg"
+          }
+        }
+      }
+    },
+    "antwort": {
+      "type": "object",
+      "required": [
+        "antwort",
+        "beleg"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "antwort": {
+          "enum": [
+            "ja",
+            "nein",
+            "nicht_anwendbar",
+            "unklar"
+          ]
+        },
+        "erlaeuterung": {
+          "type": "string"
+        },
+        "beleg": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/beleg"
+          }
+        }
+      }
+    }
+  }
+}

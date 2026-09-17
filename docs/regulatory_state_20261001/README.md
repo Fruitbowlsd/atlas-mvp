@@ -7,7 +7,7 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 | Etappe | Inhalt | Status | Artefakte |
 |---|---|---|---|
 | 0 | Fundament: Mitteilung 56 erfassen, BK6/BK7, Aktualität | **abgeschlossen** | [`etappe0_fundament.md`](etappe0_fundament.md), [`etappe0_rohliste_mitteilung56.json`](etappe0_rohliste_mitteilung56.json) |
-| 1 | Pilot UTILMD (AHB/MIG Strom + Gas) | **abgeschlossen**, Schema und 9a-Vorschlag zur Bestätigung | [`etappe1_utilmd.md`](etappe1_utilmd.md), [`etappe1_utilmd_provenienz.json`](etappe1_utilmd_provenienz.json), [`provenienz_schema_v0.json`](provenienz_schema_v0.json), [`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md) |
+| 1 | Pilot UTILMD (AHB/MIG Strom + Gas) | **abgeschlossen**, Schema und 9a-Vorschlag zur Bestätigung | [`etappe1_utilmd.md`](etappe1_utilmd.md), [`etappe1_utilmd_provenienz.json`](etappe1_utilmd_provenienz.json), [`provenienz_schema.json`](provenienz_schema.json), [`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md) |
 | 2 | Übrige EDIFACT-Nachrichtentypen Strom | offen | — |
 | 3 | Übrige EDIFACT-Nachrichtentypen Gas | offen | — |
 | 4 | PID, Codelisten, Allgemeine Festlegungen | offen | — |
@@ -15,6 +15,15 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 | 6 | Übertragungsweg / AS4 / API / XML | offen | — |
 | 7 | Konsolidierung, Widersprüche, Regulatory-State-Objekt, Vorschlag `RegulatoryVersion` | offen | — |
 | 8 | Übergabebericht | offen | — |
+
+## Bestätigte Grundlagen
+
+* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`); Rollen: [`rollendefinition.md`](rollendefinition.md)
+* Modell: Regulatory State als Ebene oberhalb von `RegulatoryVersion`, 1:n ([`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md)), bestätigt am 17.09.2026, **noch nicht umgesetzt**
+
+## Offene Produktentscheidungen
+
+* **P-1:** Für den 01.10.2026 gibt es keine Strom-`RegulatoryVersion` (siehe #64). Wird in Etappe 7 und 8 ausdrücklich aufgeführt.
 
 ## Quellenabzüge (`quellen/`)
 
