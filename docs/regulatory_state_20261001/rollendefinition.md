@@ -1,6 +1,6 @@
 # Rollen einer Fassung — „ersetzt“ ist nicht „verworfen“
 
-**Ticket:** #64 · gilt ab Schema v0.1 (`provenienz_schema.json`, Feld `fassungen[].rolle`), erweitert in v0.2/v0.3 um Fassungen ohne Mitteilungsbezug (Etappe 2, **O-11 zur Bestätigung**)
+**Ticket:** #64 · gilt ab Schema v0.1 (`provenienz_schema.json`, Feld `fassungen[].rolle`), erweitert in v0.2/v0.3 um Fassungen ohne Mitteilungsbezug (O-11, **vom Nutzer bestätigt am 17.09.2026**)
 
 > Hinweis zur Herkunft: Der Auftrag hat keinen Abschnitt 11a. Diese Definition geht auf deine
 > Ergänzung vom 17.09.2026 zurück und ist seit Commit 4617854 schriftlich festgelegt; hier
@@ -51,7 +51,7 @@ Diesen Fall löst das Schema nicht über eine Rolle:
 7. Fassungstyp, den diese Regeln nicht kennen → **keine stille Einordnung**: im
    Etappenbericht als Fall ausweisen und die Regel ausdrücklich ergänzen
 
-## Erweiterung v0.2 / v0.3 — Fassungen ohne Mitteilungsbezug (O-11, zur Bestätigung)
+## Erweiterung v0.2 / v0.3 — Fassungen ohne Mitteilungsbezug (O-11, bestätigt)
 
 O-11 (außerordentliche Veröffentlichung) und O-12 (Fehlerkorrekturfassungen ohne Mitteilung)
 sind **dasselbe Muster** und werden hier als ein Punkt geführt: **BDEW veröffentlicht
@@ -104,9 +104,9 @@ XML-Datei ohne Stand-Datum und die konsolidierte Fassung von 2021. Beide bleiben
 URL und Begründung erhalten. Die Frage „Welche Fassung galt am 01.08.2024?“ lässt sich damit
 weiterhin beantworten (bdew:7422).
 
-**Zu bestätigen:** dass der neueste Stand der gemeinsamen Reihe maßgeblich ist. Das
-entscheidet über CONTRL AHB/MIG und INSRPT AHB/MIG. Die Alternative wäre, außerordentliche
-Veröffentlichungen nur als `ergaenzend` zu führen und die ältere Fassung maßgeblich zu
-lassen.
+**Bestätigt am 17.09.2026:** Der neueste Stand der gemeinsamen Reihe ist maßgeblich, für
+CONTRL AHB/MIG und INSRPT AHB/MIG wie vorgeschlagen. Die Regel ist damit verbindlich für
+alle weiteren Etappen; die Hinweise `offene_frage` in den vier Datensätzen sind auf
+`quellenauffaelligkeit` zurückgestuft.
 
 Die UTILMD-Datensätze aus Etappe 1 folgen dieser Reihenfolge bereits.

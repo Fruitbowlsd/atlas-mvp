@@ -1,0 +1,330 @@
+{
+  "stichtag": "2026-10-01",
+  "etappe": 3,
+  "ticket": "#64",
+  "schema": "provenienz_schema.json",
+  "schema_version": "0.4",
+  "anzahl": 1,
+  "datensaetze": [
+    {
+      "schema_version": "0.4",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "SSQNOT",
+        "dokumentname": "SSQNOT (Nachrichtenbeschreibung, Mehr-/Mindermengenmeldung)",
+        "dokumenttyp": "Nachrichtenbeschreibung (MIG-Äquivalent, mit Anwendungsfall-Tabelle)",
+        "kategorie": "MIG",
+        "nachrichtentyp": "SSQNOT",
+        "sparte": "Gas",
+        "sparte_beleg": "Anwendungsübersicht der Prüfidentifikatoren 4.0, S. 27: 2 Zeilen (Lfd. Nr. 12170/12180), Spalte Sparte Gas = X, Spalte Sparte Strom = '--'; SSQNOT ist laut Einführung eine DVGW-Nachricht 'für den Elektronischen Datenaustausch (EDI) in der Gaswirtschaft'",
+        "bdew_topic_id": null
+      },
+      "dokumentversion": {
+        "version": "5.7",
+        "veroeffentlicht_am": {
+          "datum": "2019-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "dvgw:SSQNOT_5.7_Stand_2021-10-31",
+              "seite": 1,
+              "fundstelle": "Ursprüngliches Publikationsdatum: 01.04.2019"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2019-12-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "DVGW GABi Gastransport",
+              "url": "https://www.dvgw-sc.de/leistungen/it-dienstleistungen/datenaustausch-gas/gabi-gastransport",
+              "fundstelle": "Tabelle: 'SSQNOT 5.7 Fehlerkorrektur Stand 31.10.2021' — gültig ab 01.12.2019"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "DVGW GABi Gastransport",
+              "url": "https://www.dvgw-sc.de/leistungen/it-dienstleistungen/datenaustausch-gas/gabi-gastransport",
+              "fundstelle": "keine Nachfolgeversion gelistet (Abruf 17.09.2026)"
+            }
+          ]
+        },
+        "mitteilung": null,
+        "quelle_ausserhalb_mitteilungsreihe": "DVGW Service & Consult GmbH, Reihe 'GABi Gastransport' (Edig@s-Nachrichtentypen). Grundlage der Anwendung ist die Kooperationsvereinbarung Gas bzw. GABi Gas; die Anwendungsfall-Tabelle des Dokuments nennt als Prozessbeschreibung 'KoV'. Die BNetzA-Mitteilungsreihe zu den Datenformaten führt SSQNOT nicht.",
+        "dokumentstatus": "verbindlich_fortgeltend",
+        "vorgaenger": null,
+        "nachfolger": []
+      },
+      "fassungen": [
+        {
+          "fassung_id": "dvgw:SSQNOT_5.7_Stand_2021-10-31",
+          "titel_in_quelle": "SSQNOT 5.7 Fehlerkorrektur Stand 31.10.2021",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "Deckblatt: 'Konsolidierte Lesefassung mit Fehlerkorrekturen, Stand: 31.10.2021'; Übersichtstabelle der DVGW-Seite",
+          "fehlerkorrekturstand": "2021-10-31",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2021-10-31",
+          "quelle": "DVGW",
+          "url": "https://www.dvgw-sc.de/medien/Dokumente_Datenaustausch/Nachrichtentypen/SSQNOT_5.7_Stand_2021-10-31_Fehlerkorrektur.pdf",
+          "dateiname": "SSQNOT_5.7_Stand_2021-10-31_Fehlerkorrektur.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 483128,
+          "sha256": "3b499f4afa85ea6c14230a37835dcc0f28b115816203ab890ac318a556e8c60a",
+          "bytegleich_mit": [],
+          "seiten": 27,
+          "deckblatt": {
+            "version": "5.7",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2019",
+            "stand_fehlerkorrektur": "31.10.2021",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen",
+              "Stand: 31.10.2021",
+              "Autor: DVGW"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 27,
+            "seite_bis": 27,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehlerkorrektur": 1
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Neuester Stand der Version 5.7; einzige PDF-Fassung, die die DVGW-Seite als gültig ab 01.12.2019 führt",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-17T18:21:00Z",
+          "mitteilungsbezug": {
+            "art": "keine_mitteilungsreihe",
+            "mitteilung_nummer": null,
+            "vermerk": "Veröffentlicht von der DVGW Service & Consult GmbH (GABi Gastransport). In keiner der 95 Mitteilungen der BK6/BK7-Reihe genannt (Volltextsuche 17.09.2026: 0 Treffer)."
+          }
+        },
+        {
+          "fassung_id": "dvgw:SSQNOT_5.7_Stand_2020-03-31",
+          "titel_in_quelle": "SSQNOT 5.7 Fehlerkorrektur Stand 31.03.2020",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "Deckblatt: 'Konsolidierte Lesefassung mit Fehlerkorrekturen, Stand: 31.10.2021'; Übersichtstabelle der DVGW-Seite",
+          "fehlerkorrekturstand": "2020-03-31",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2020-03-31",
+          "quelle": "DVGW",
+          "url": "https://www.dvgw-sc.de/medien/Dokumente_Datenaustausch/Nachrichtentypen/SSQNOT_5.7_Stand_2020-03-31_Fehlerkorrektur.pdf",
+          "dateiname": "SSQNOT_5.7_Stand_2020-03-31_Fehlerkorrektur.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 825915,
+          "sha256": "6a9485d4cda97d754a90435c65bb7aad7718538937d13e5242d3e4eaee1917c1",
+          "bytegleich_mit": [],
+          "seiten": 28,
+          "deckblatt": {
+            "version": "5.7",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2019",
+            "stand_fehlerkorrektur": "31.03.2020",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen",
+              "Stand: 31.03.2020",
+              "Autor: DVGW"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": null,
+          "rolle": "ersetzt",
+          "rolle_begruendung": "Älterer Stand 31.03.2020; abgelöst durch Stand 31.10.2021",
+          "ersetzt_durch": "dvgw:SSQNOT_5.7_Stand_2021-10-31",
+          "abruf_utc": "2026-09-17T18:21:00Z",
+          "mitteilungsbezug": {
+            "art": "keine_mitteilungsreihe",
+            "mitteilung_nummer": null,
+            "vermerk": "Veröffentlicht von der DVGW Service & Consult GmbH (GABi Gastransport). In keiner der 95 Mitteilungen der BK6/BK7-Reihe genannt (Volltextsuche 17.09.2026: 0 Treffer)."
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "dvgw:SSQNOT_5.7_Stand_2021-10-31",
+        "massgebliche_fassung_pdf_sha256": "3b499f4afa85ea6c14230a37835dcc0f28b115816203ab890ac318a556e8c60a",
+        "regelschritte": [
+          {
+            "regel": "Relevanz am Stichtag prüfen",
+            "ergebnis": "PID 4.0 (gültig ab 01.10.2026) führt SSQNOT mit den Prüfidentifikatoren 70095 und 70096, Sparte Gas; INVOIC AHB 1.0b (S. 36, Bedingung [507]) und INVOIC MIG 2.8e (S. 27) verweisen auf die 'Dokumentennummer der SSQNOT'"
+          },
+          {
+            "regel": "Quelle bestimmen",
+            "ergebnis": "Weder Mitteilung 56 noch eine der 95 Mitteilungen der BK6/BK7-Reihe (0 Treffer) noch die 1.752 Einträge der BDEW-MaKo-API (0 Treffer) führen SSQNOT; veröffentlicht wird es von der DVGW Service & Consult GmbH"
+          },
+          {
+            "regel": "Stand-Reihe der Version bilden",
+            "ergebnis": "5.7 Stand 31.03.2020 → 5.7 Stand 31.10.2021"
+          },
+          {
+            "regel": "Neuester Stand als PDF ist maßgeblich",
+            "ergebnis": "Stand 31.10.2021, 27 Seiten, SHA-256 3b499f4afa85ea6c14230a37835dcc0f28b115816203ab890ac318a556e8c60a"
+          },
+          {
+            "regel": "Inhaltliche Gegenprobe der maßgeblichen Fassung",
+            "ergebnis": "S. 12 führt im RFF+Z13 die Prüfidentifikatoren 70095/70096; S. 23 enthält die Anwendungsfall-Tabelle (Prozessschritt, Prüfidentifikator, Kommunikation von/an, Zuordnung) — das Dokument deckt MIG- und AHB-Inhalte in einer Datei ab"
+          }
+        ],
+        "ergaenzende_fassungen": [],
+        "begruendung": "SSQNOT 5.7 in der konsolidierten Lesefassung mit Fehlerkorrekturen Stand 31.10.2021 gilt am 01.10.2026, weil die DVGW-Übersicht sie als gültig ab 01.12.2019 führt, keine Nachfolgeversion existiert und die am Stichtag gültige PID 4.0 die Prüfidentifikatoren 70095/70096 weiterhin ausweist."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "nein",
+          "erlaeuterung": "Mitteilung 56 nennt SSQNOT nicht",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "fundstelle": "kein SSQNOT-Eintrag"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "ja",
+          "erlaeuterung": "Version 5.7 (DVGW) gilt unverändert seit 01.12.2019 fort",
+          "beleg": [
+            {
+              "quelle": "DVGW GABi Gastransport",
+              "url": "https://www.dvgw-sc.de/leistungen/it-dienstleistungen/datenaustausch-gas/gabi-gastransport"
+            }
+          ]
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "BDEW-MaKo führt SSQNOT nicht (0 von 1.752 Einträgen); die Dokumentation liegt ausschließlich bei DVGW",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "0 Treffer für SSQNOT"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Stände 31.03.2020 und 31.10.2021",
+          "beleg": [
+            {
+              "quelle": "DVGW GABi Gastransport",
+              "url": "https://www.dvgw-sc.de/leistungen/it-dienstleistungen/datenaustausch-gas/gabi-gastransport"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "Stand 31.10.2021 ist die konsolidierte Lesefassung mit Fehlerkorrekturen",
+          "beleg": [
+            {
+              "quelle": "dvgw:SSQNOT_5.7_Stand_2021-10-31",
+              "seite": 1
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Die DVGW-Übersicht listet keine neuere SSQNOT-Version",
+          "beleg": [
+            {
+              "quelle": "DVGW GABi Gastransport",
+              "url": "https://www.dvgw-sc.de/leistungen/it-dienstleistungen/datenaustausch-gas/gabi-gastransport"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine Konsultationsfassung auf der DVGW-Übersicht; Mitteilung 57 nennt SSQNOT nicht",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "ja",
+          "erlaeuterung": "Bezeichnung des Prüfidentifikators 70096: PID 4.0 (BNetzA/BDEW) schreibt 'Mehr-/Mindermengenmeldung RLP', die SSQNOT 5.7 (DVGW) schreibt 'Mehr-/Mindermengenmeldung RLM'. Betrifft nicht die Versionsauswahl, aber die Bezeichnung desselben Prüfidentifikators in zwei Quellen.",
+          "beleg": [
+            {
+              "quelle": "m56:PID_4_0_20260401.pdf",
+              "seite": 27,
+              "fundstelle": "12180 SSQNOT … Mehr-/Mindermengenmeldung RLP 70096"
+            },
+            {
+              "quelle": "dvgw:SSQNOT_5.7_Stand_2021-10-31",
+              "seite": 12,
+              "fundstelle": "70096 Mehr-/Mindermengenmeldung RLM"
+            }
+          ]
+        }
+      },
+      "hinweise": [
+        {
+          "art": "offene_frage",
+          "text": "O-5 beantwortet, mit einem Rest: Ein Dokument mit dem in PID 4.0 genannten Namen 'SSQNOT zur Übermittlung von Mehr-/Mindermengen' (AHB-Spalte) ist nicht auffindbar. Gefunden wurde die DVGW-Nachrichtenbeschreibung SSQNOT 5.7, die die Anwendungsfälle mitführt. Ob PID 4.0 damit dieses Dokument meint, ist nicht ausdrücklich belegt.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "m56:PID_4_0_20260401.pdf",
+              "seite": 27
+            },
+            {
+              "quelle": "dvgw:SSQNOT_5.7_Stand_2021-10-31",
+              "seite": 23
+            }
+          ]
+        },
+        {
+          "art": "quellenauffaelligkeit",
+          "text": "Dritte Quelle neben BNetzA und BDEW-MaKo: Die DVGW Service & Consult GmbH veröffentlicht Gas-Nachrichtentypen (GABi Gastransport). Für den Regulatory State heißt das, dass die Quellenliste des Auftrags (BNetzA + BDEW) für Gas nicht vollständig ist.",
+          "auswirkung_auf_auswahl": true,
+          "beleg": [
+            {
+              "quelle": "DVGW GABi Gastransport",
+              "url": "https://www.dvgw-sc.de/leistungen/it-dienstleistungen/datenaustausch-gas/gabi-gastransport"
+            }
+          ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Die maßgebliche Fassung nennt in der Anwendungsfall-Tabelle als Prozessbeschreibung 'KoV' (Kooperationsvereinbarung Gas) und den Kommunikationsweg 'NB an MGV' — dieselbe Rollenbeziehung wie die BDEW-Anwendungshilfe 'Prozesse zur Ermittlung und Abrechnung von Mehr-/Mindermengen Strom und Gas' (Version 2.1, Stand 18.03.2025).",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "dvgw:SSQNOT_5.7_Stand_2021-10-31",
+              "seite": 23
+            },
+            {
+              "quelle": "BDEW-Marktprozesse id 20",
+              "fundstelle": "AWH Mehr-/Mindermengen, gültig ab 06.06.2025"
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-17T18:30:00Z",
+        "etappe": 3,
+        "ticket": "#64",
+        "methode": "Deterministisch: Volltextsuche über 95 BNetzA-Mitteilungsseiten und den BDEW-API-Abzug, Auswertung der PID 4.0 (Spaltenpositionen je Zeile), Download und Deckblatt-/Volltextprüfung der DVGW-PDFs. Websuche nur zur Auffindung der Quelle, jede Aussage danach an der Quelle selbst geprüft.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    }
+  ]
+}

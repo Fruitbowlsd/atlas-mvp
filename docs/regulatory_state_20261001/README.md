@@ -1,5 +1,7 @@
 # Regulatory State 01.10.2026 — Rechercheartefakte
 
+Referenzfassung des Auftrags: [`auftrag.md`](auftrag.md) (Projektdokument vom 17.09.2026).
+
 Ticket: #64. Recherche zum vollständigen regulatorischen Stand der Marktkommunikation zum
 Stichtag **01.10.2026**. Es sind ausschließlich Rechercheartefakte zur menschlichen Prüfung:
 keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
@@ -8,8 +10,8 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 |---|---|---|---|
 | 0 | Fundament: Mitteilung 56 erfassen, BK6/BK7, Aktualität | **abgeschlossen** | [`etappe0_fundament.md`](etappe0_fundament.md), [`etappe0_rohliste_mitteilung56.json`](etappe0_rohliste_mitteilung56.json) |
 | 1 | Pilot UTILMD (AHB/MIG Strom + Gas) | **abgeschlossen**, Schema und 9a-Vorschlag zur Bestätigung | [`etappe1_utilmd.md`](etappe1_utilmd.md), [`etappe1_utilmd_provenienz.json`](etappe1_utilmd_provenienz.json), [`provenienz_schema.json`](provenienz_schema.json), [`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md) |
-| 2 | Übrige EDIFACT-Nachrichtentypen (alle spartenübergreifenden, einmalig) | **abgeschlossen**; Regelerweiterung O-11 zur Bestätigung | [`etappe2_edifact.md`](etappe2_edifact.md), [`etappe2_edifact_provenienz.json`](etappe2_edifact_provenienz.json) |
-| 3 | Gasspezifika: SSQNOT, GeLi Gas 3.0, Gas-Anwendbarkeit der spartenübergreifenden Dokumente | offen | — |
+| 2 | Übrige EDIFACT-Nachrichtentypen (alle spartenübergreifenden, einmalig) | **abgeschlossen**, O-11 bestätigt | [`etappe2_edifact.md`](etappe2_edifact.md), [`etappe2_edifact_provenienz.json`](etappe2_edifact_provenienz.json) |
+| 3 | Gasspezifika: SSQNOT, GeLi Gas 3.0, Gas-Anwendbarkeit der spartenübergreifenden Dokumente | **abgeschlossen** | [`etappe3_gas.md`](etappe3_gas.md), [`etappe3_gas_provenienz.json`](etappe3_gas_provenienz.json) |
 | 4 | PID, Codelisten, Allgemeine Festlegungen | offen | — |
 | 5 | Entscheidungsbaum-Diagramme | offen | — |
 | 6 | Übertragungsweg / AS4 / API / XML | offen | — |
@@ -18,8 +20,14 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 
 ## Bestätigte Grundlagen
 
-* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`; v0.2/v0.3 ergänzen die außerordentliche Veröffentlichung als eigenen Typ, das Pflichtfeld `mitteilungsbezug` und die Hinweisart `querpruefung`; die Auswahlregel dazu (O-11) ist **zur Bestätigung**); Rollen: [`rollendefinition.md`](rollendefinition.md)
+* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`; v0.2/v0.3 ergänzen die außerordentliche Veröffentlichung als eigenen Typ, das Pflichtfeld `mitteilungsbezug` und die Hinweisart `querpruefung`; die Auswahlregel dazu (O-11) ist am 17.09.2026 **bestätigt**); Rollen: [`rollendefinition.md`](rollendefinition.md)
 * Modell: Regulatory State als Ebene oberhalb von `RegulatoryVersion`, 1:n ([`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md)), bestätigt am 17.09.2026, **noch nicht umgesetzt**
+
+## Kernbefunde für den Übergabebericht (Etappe 8)
+
+* **K-1 — Die amtliche Quelle kennt die maßgebliche Fassung oft nicht.** Über Etappe 1 und 2 (36 Dokumente, 209 Fassungen): 61 Fassungen sind bytegleiche Anlagen einer BNetzA-Mitteilung, 32 Konsultationsanlagen, **116 haben keinen Mitteilungsbezug — darunter 11 der 36 maßgeblichen Fassungen**. Wird in Etappe 8 hervorgehoben, nicht nur in Etappe 7 belegt.
+
+* **K-2 — Für Gas reichen BNetzA und BDEW nicht.** SSQNOT (Prüfidentifikatoren 70095/70096, in PID 4.0 und INVOIC referenziert) wird von der DVGW Service & Consult veröffentlicht und steht in keiner der 95 Mitteilungen und in keinem der 1.752 BDEW-Einträge.
 
 ## Offene Produktentscheidungen
 

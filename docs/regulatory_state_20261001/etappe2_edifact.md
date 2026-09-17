@@ -1,8 +1,7 @@
 # Etappe 2 — Übrige EDIFACT-Nachrichtentypen
 
 **Ticket:** #64 · **Stichtag:** 01.10.2026 · **Erhebung:** 17.09.2026
-**Status:** Etappe 2 abgeschlossen. Eine Regelerweiterung ist **zur Bestätigung** offen
-(Abschnitt 4).
+**Status:** Etappe 2 abgeschlossen. Die Regelerweiterung O-11 ist am 17.09.2026 **bestätigt**.
 
 Artefakte:
 
@@ -34,7 +33,7 @@ Umfang: 21 Dokumente aus Mitteilung 56 und **11 fortgeltende Dokumente**, die in
 | erfasste Fassungen | **171**: 32 maßgeblich, 28 ergänzend, 7 ersetzt, 76 informativ, 28 nicht verbindlich |
 | PDF geladen und gehasht | 45 (alle freien PDF-Fassungen der Stichtagsversionen) |
 | offene Fälle **gelöst** | O-1 (gewertet), O-2, O-3, dazu 3× „UNGEKLÄRT“ aus dem Befund 01.04.2026 (CONTRL MIG, INSRPT AHB, INSRPT MIG) und der Vorgänger von ORDCHG MIG |
-| offene Fälle **neu** | **1** (O-11: Fassungen ohne Mitteilungsbezug, umfasst das frühere O-12); dazu 1 Rest aus O-3 ohne Einfluss |
+| offene Fälle **neu** | **0** (O-11 am 17.09.2026 bestätigt, umfasst das frühere O-12); 1 Rest aus O-3 ohne Einfluss |
 | Widersprüche BNetzA ↔ BDEW | **0** |
 
 ## 3. Ergebnis: Welche Fassung gilt am 01.10.2026?
@@ -89,9 +88,9 @@ dem jeweiligen AHB passt (Abschnitt 5). Für die fortgeltenden Dokumente gibt es
 Mitteilung, die den 01.10.2026 ausdrücklich bestätigt. Gültigkeit durch Fortschreibung ist
 die Funktionsweise des Änderungsmanagements (Befund 01.04.2026).
 
-## 4. Neuer Fassungstyp: außerordentliche Veröffentlichung (O-11, zur Bestätigung)
+## 4. Neuer Fassungstyp: außerordentliche Veröffentlichung (O-11, bestätigt)
 
-> **Stand nach deiner Rückmeldung vom 17.09.2026:** Der Typ ist ab Schema v0.3 eigenständig
+> **Stand nach den Rückmeldungen vom 17.09.2026:** Regel bestätigt. Der Typ ist ab Schema v0.3 eigenständig
 > geführt (`ausserordentliche_veroeffentlichung` mit eigenem Feld `stand_ausserordentlich`,
 > getrennt von `fehlerkorrekturstand`), jede Fassung trägt ein Pflichtfeld
 > `mitteilungsbezug`, und das frühere O-12 ist in O-11 aufgegangen. Einzelheiten und ein
@@ -116,11 +115,9 @@ Fehlerkorrekturfassungen bilden eine gemeinsame Stand-Reihe je Version. Der neue
 als PDF ist maßgeblich, ältere Stände sind `ersetzt`. Die Datensätze tragen dazu einen
 Hinweis `offene_frage` mit `auswirkung_auf_auswahl = true`.
 
-**Alternative, falls du das anders siehst:** außerordentliche Veröffentlichungen nur als
-`ergaenzend` führen und die ältere Basis bzw. den konsolidierten Stand maßgeblich lassen.
-Das würde die Auswahl in 4 Dokumenten ändern. Inhaltlich halte ich die Regel v0.2 für
-richtig, weil die außerordentliche Fassung alle früheren Korrekturen enthält und der ältere
-Stand bei BDEW beendet ist (`validTo` gesetzt).
+**Bestätigt am 17.09.2026.** Die zunächst erwogene Alternative (außerordentliche
+Veröffentlichungen nur als `ergaenzend`) ist damit verworfen; sie hätte die Auswahl in
+4 Dokumenten geändert.
 
 ## 5. Querprüfung AHB ↔ MIG (welche Dokumente zusammengehören)
 
@@ -155,7 +152,7 @@ Die gezielte Suche nach CONTRL MIG und INSRPT las die Mitteilungen 8, 11, 13, 14
 
 | ID | Fall | Bearbeitung |
 |---|---|---|
-| **O-11** | Regelerweiterung „außerordentliche Veröffentlichung“ (Abschnitt 4), bestimmt die maßgebliche Fassung bei 4 Dokumenten | **Bestätigung durch dich** |
+| ~~O-11~~ | Regelerweiterung „außerordentliche Veröffentlichung“ (Abschnitt 4): **bestätigt am 17.09.2026**. Gilt für CONTRL AHB/MIG und INSRPT AHB/MIG und für alle weiteren Etappen. | erledigt |
 | ~~O-12~~ | **In O-11 aufgegangen.** Fehlerkorrekturfassungen und außerordentliche Veröffentlichungen sind dasselbe Muster: BDEW veröffentlicht, BNetzA nicht. Ab v0.3 an jeder Fassung als `mitteilungsbezug` erfasst. Zahlen über Etappe 1 und 2: 61 Fassungen sind bytegleiche Mitteilungsanlagen, 32 Konsultationsanlagen, **116 ohne Mitteilungsbezug — darunter 11 der 36 maßgeblichen Fassungen.** | Zahlenbefund in Etappe 7 |
 
 **Kleinere Befunde ohne Einfluss** (als `hinweise` in der JSON):

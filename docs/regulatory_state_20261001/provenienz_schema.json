@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "atlas/regulatory_state/provenienz_schema_v0.json",
-  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.3)",
+  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.4)",
   "description": "Ein Datensatz je regulatorischer Dokumentversion am Stichtag. Drei Ebenen wie in Abschnitt 10 des Auftrags: Dokument → Dokumentversion → Fassungen (Dateien). Die Auswahl der maßgeblichen Fassung ist eine eigene, begründete Entscheidung und überschreibt keine Fassung. Nur Rechercheartefakt, kein Datenbankschema.",
   "type": "object",
   "required": [
@@ -21,7 +21,8 @@
         "0",
         "0.1",
         "0.2",
-        "0.3"
+        "0.3",
+        "0.4"
       ]
     },
     "stichtag": {
@@ -122,7 +123,10 @@
           "description": "datum = null bedeutet unbefristet (kein verbindlicher Nachfolger veröffentlicht)"
         },
         "mitteilung": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "required": [
             "nummer",
             "url",
@@ -130,6 +134,7 @@
             "veroeffentlicht_am"
           ],
           "additionalProperties": false,
+          "description": "null (ab v0.4), wenn die Version in keiner Mitteilung der BK6/BK7-Reihe veröffentlicht wurde; die Herkunft steht dann in quelle_ausserhalb_mitteilungsreihe.",
           "properties": {
             "nummer": {
               "type": "integer"
@@ -215,8 +220,39 @@
               }
             }
           }
+        },
+        "quelle_ausserhalb_mitteilungsreihe": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Pflichtangabe, wenn mitteilung null ist: welche Stelle das Dokument veröffentlicht und auf welcher Grundlage es gilt."
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mitteilung": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "mitteilung"
+            ]
+          },
+          "then": {
+            "required": [
+              "quelle_ausserhalb_mitteilungsreihe"
+            ],
+            "properties": {
+              "quelle_ausserhalb_mitteilungsreihe": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
     },
     "fassungen": {
       "description": "Jede auffindbare Datei dieser Version aus jeder Quelle (Abschnitt 6, 7, 11: Quelle, URL, PDF-Datei, Hash, Fehlerkorrekturstand). Auch nicht maßgebliche Fassungen bleiben erfasst.",
@@ -272,8 +308,10 @@
           "quelle": {
             "enum": [
               "BNetzA",
-              "BDEW-MaKo"
-            ]
+              "BDEW-MaKo",
+              "DVGW"
+            ],
+            "description": "Veröffentlichende Stelle. 'DVGW' (ab v0.4) ist die DVGW Service & Consult GmbH (Edig@s/GABi Gastransport); sie veröffentlicht Gas-Nachrichtentypen, die weder bei der BNetzA noch auf BDEW-MaKo geführt werden."
           },
           "quelle_ref": {
             "type": "object",
@@ -509,9 +547,10 @@
                   "anlage_der_mitteilung",
                   "anlage_der_mitteilung_bytegleich",
                   "kein_mitteilungsbezug",
-                  "konsultationsanlage"
+                  "konsultationsanlage",
+                  "keine_mitteilungsreihe"
                 ],
-                "description": "anlage_der_mitteilung(_bytegleich) = Datei ist Anlage der verbindlichen Mitteilung (bytegleich = per SHA-256 geprüft); konsultationsanlage = Anlage einer Konsultationsmitteilung; kein_mitteilungsbezug = nur bei BDEW veröffentlicht, in keiner Mitteilung genannt"
+                "description": "anlage_der_mitteilung(_bytegleich) = Datei ist Anlage der verbindlichen Mitteilung (bytegleich = per SHA-256 geprüft); konsultationsanlage = Anlage einer Konsultationsmitteilung; kein_mitteilungsbezug = nur bei BDEW veröffentlicht, in keiner Mitteilung genannt; keine_mitteilungsreihe (ab v0.4) = Dokument stammt aus einer anderen Veröffentlichungsreihe (DVGW), für die es die BK6/BK7-Mitteilungsreihe nicht gibt"
               },
               "mitteilung_nummer": {
                 "type": [
@@ -567,7 +606,10 @@
                 "mitteilungsbezug": {
                   "properties": {
                     "art": {
-                      "const": "kein_mitteilungsbezug"
+                      "enum": [
+                        "kein_mitteilungsbezug",
+                        "keine_mitteilungsreihe"
+                      ]
                     }
                   }
                 }
@@ -593,7 +635,10 @@
                 "mitteilungsbezug": {
                   "properties": {
                     "art": {
-                      "const": "kein_mitteilungsbezug"
+                      "enum": [
+                        "kein_mitteilungsbezug",
+                        "keine_mitteilungsreihe"
+                      ]
                     }
                   }
                 }

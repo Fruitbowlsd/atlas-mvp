@@ -16,7 +16,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "APERAK",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Keine Spartenangabe im Titel und keine Zeile in PID 4.0 (Servicenachricht ohne eigene Prüfidentifikatoren in der Anwendungsübersicht); Sparte bleibt 'beide' ohne positiven Einzelnachweis.",
         "bdew_topic_id": 229
       },
       "dokumentversion": {
@@ -504,7 +504,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "APERAK",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Keine Spartenangabe im Titel und keine Zeile in PID 4.0 (Servicenachricht ohne eigene Prüfidentifikatoren in der Anwendungsübersicht); Sparte bleibt 'beide' ohne positiven Einzelnachweis.",
         "bdew_topic_id": 200
       },
       "dokumentversion": {
@@ -954,7 +954,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "IFTSTA",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 154 Zeilen für 'IFTSTA AHB', davon 136 mit Sparte Strom = X und 18 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 115
       },
       "dokumentversion": {
@@ -1425,7 +1425,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "IFTSTA",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 154 Zeilen für 'IFTSTA AHB', davon 136 mit Sparte Strom = X und 18 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 116
       },
       "dokumentversion": {
@@ -1875,7 +1875,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "INVOIC",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 42 Zeilen für 'INVOIC AHB', davon 24 mit Sparte Strom = X und 18 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 231
       },
       "dokumentversion": {
@@ -2337,7 +2337,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "MSCONS",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 157 Zeilen für 'MSCONS AHB', davon 95 mit Sparte Strom = X und 62 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 129
       },
       "dokumentversion": {
@@ -2805,7 +2805,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "MSCONS",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 157 Zeilen für 'MSCONS AHB', davon 95 mit Sparte Strom = X und 62 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 130
       },
       "dokumentversion": {
@@ -3243,7 +3243,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "ORDCHG",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 5 Zeilen für 'ORDCHG AHB', davon 3 mit Sparte Strom = X und 2 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 223
       },
       "dokumentversion": {
@@ -3703,7 +3703,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "ORDCHG",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 5 Zeilen für 'ORDCHG AHB', davon 3 mit Sparte Strom = X und 2 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 119
       },
       "dokumentversion": {
@@ -4152,7 +4152,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "ORDERS",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 111 Zeilen für 'ORDERS AHB', davon 98 mit Sparte Strom = X und 13 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 224
       },
       "dokumentversion": {
@@ -4783,7 +4783,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "ORDERS",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 111 Zeilen für 'ORDERS AHB', davon 98 mit Sparte Strom = X und 13 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 123
       },
       "dokumentversion": {
@@ -5215,7 +5215,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "ORDRSP",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 116 Zeilen für 'ORDRSP AHB', davon 96 mit Sparte Strom = X und 20 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 225
       },
       "dokumentversion": {
@@ -5701,7 +5701,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "ORDRSP",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 116 Zeilen für 'ORDRSP AHB', davon 96 mit Sparte Strom = X und 20 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 124
       },
       "dokumentversion": {
@@ -6133,7 +6133,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "PARTIN",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 42 Zeilen für 'PARTIN AHB', davon 27 mit Sparte Strom = X und 15 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 203
       },
       "dokumentversion": {
@@ -6603,7 +6603,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "PARTIN",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 42 Zeilen für 'PARTIN AHB', davon 27 mit Sparte Strom = X und 15 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 204
       },
       "dokumentversion": {
@@ -7035,7 +7035,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "PRICAT",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 9 Zeilen für 'PRICAT AHB', davon 8 mit Sparte Strom = X und 1 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 164
       },
       "dokumentversion": {
@@ -7492,7 +7492,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "PRICAT",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 9 Zeilen für 'PRICAT AHB', davon 8 mit Sparte Strom = X und 1 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 165
       },
       "dokumentversion": {
@@ -7932,7 +7932,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "QUOTES",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 9 Zeilen für 'QUOTES AHB', davon 8 mit Sparte Strom = X und 1 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 226
       },
       "dokumentversion": {
@@ -8422,7 +8422,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "QUOTES",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 9 Zeilen für 'QUOTES AHB', davon 8 mit Sparte Strom = X und 1 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 125
       },
       "dokumentversion": {
@@ -8880,7 +8880,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "REQOTE",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 8 Zeilen für 'REQOTE AHB', davon 7 mit Sparte Strom = X und 1 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 227
       },
       "dokumentversion": {
@@ -9504,8 +9504,8 @@
         "dokumenttyp": "AHB",
         "kategorie": "AHB",
         "nachrichtentyp": "UTILTS",
-        "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte": "Strom",
+        "sparte_beleg": "Belegt aus PID 4.0: 26 Zeilen für 'UTILTS AHB', davon 26 mit Sparte Strom = X und **0** mit Sparte Gas = X. Kein Gas-Anwendungsfall gefunden; der Titel trägt keine Spartenangabe, die Einordnung stützt sich auf das Fehlen von Gas-Zeilen.",
         "bdew_topic_id": 221
       },
       "dokumentversion": {
@@ -9973,6 +9973,17 @@
               "fundstelle": "Die UTILTS wird vollständig durch API-Webdienste ersetzt."
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Trotz fehlender Spartenangabe im Titel weist PID 4.0 für UTILTS keinen einzigen Gas-Anwendungsfall aus (0 von 26 Zeilen). Sparte deshalb als 'Strom' geführt; das ist ein Negativbefund aus einer Quelle, kein ausdrücklicher Ausschluss für Gas.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "m56:PID_4_0_20260401.pdf",
+              "fundstelle": "Spalten Sparte Strom/Gas, alle Zeilen mit AHB = 'UTILTS AHB'"
+            }
+          ]
         }
       ],
       "analyse": {
@@ -9993,7 +10004,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "COMDIS",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 11 Zeilen für 'COMDIS AHB', davon 9 mit Sparte Strom = X und 2 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 160
       },
       "dokumentversion": {
@@ -10387,7 +10398,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "COMDIS",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 11 Zeilen für 'COMDIS AHB', davon 9 mit Sparte Strom = X und 2 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 161
       },
       "dokumentversion": {
@@ -10755,7 +10766,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "REMADV",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 111 Zeilen für 'REMADV AHB', davon 77 mit Sparte Strom = X und 34 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 232
       },
       "dokumentversion": {
@@ -11148,7 +11159,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "REMADV",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 111 Zeilen für 'REMADV AHB', davon 77 mit Sparte Strom = X und 34 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 166
       },
       "dokumentversion": {
@@ -11516,7 +11527,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "INVOIC",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 42 Zeilen für 'INVOIC AHB', davon 24 mit Sparte Strom = X und 18 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 163
       },
       "dokumentversion": {
@@ -11885,7 +11896,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "REQOTE",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 8 Zeilen für 'REQOTE AHB', davon 7 mit Sparte Strom = X und 1 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 128
       },
       "dokumentversion": {
@@ -12268,7 +12279,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "CONTRL",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Keine Spartenangabe im Titel und keine Zeile in PID 4.0 (Servicenachricht ohne eigene Prüfidentifikatoren in der Anwendungsübersicht); Sparte bleibt 'beide' ohne positiven Einzelnachweis.",
         "bdew_topic_id": 230
       },
       "dokumentversion": {
@@ -12792,8 +12803,8 @@
           ]
         },
         {
-          "art": "offene_frage",
-          "text": "Maßgebliche Fassung ist eine außerordentliche Veröffentlichung. Angewandt wurde die in Etappe 2 vorgeschlagene Regelerweiterung v0.2 (rollendefinition.md): außerordentliche Veröffentlichungen und konsolidierte Fehlerkorrekturen bilden eine gemeinsame Stand-Reihe. Die Erweiterung ist vorläufig und muss noch bestätigt werden.",
+          "art": "quellenauffaelligkeit",
+          "text": "Maßgebliche Fassung ist eine außerordentliche Veröffentlichung. Angewandt wird die Regel v0.2/v0.3 (rollendefinition.md): außerordentliche Veröffentlichungen und konsolidierte Fehlerkorrekturen bilden eine gemeinsame Stand-Reihe, der neueste Stand ist maßgeblich. Vom Nutzer am 17.09.2026 bestätigt.",
           "auswirkung_auf_auswahl": true,
           "beleg": [
             {
@@ -12843,8 +12854,8 @@
         "dokumenttyp": "MIG",
         "kategorie": "MIG",
         "nachrichtentyp": "UTILTS",
-        "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte": "Strom",
+        "sparte_beleg": "Belegt aus PID 4.0: 26 Zeilen für 'UTILTS AHB', davon 26 mit Sparte Strom = X und **0** mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Kein Gas-Anwendungsfall gefunden; der Titel trägt keine Spartenangabe, die Einordnung stützt sich auf das Fehlen von Gas-Zeilen.",
         "bdew_topic_id": 219
       },
       "dokumentversion": {
@@ -13437,6 +13448,17 @@
               "fundstelle": "bytegleich mit der Anlage der Mitteilung 46: https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_46/Anlagen/UTILTS_MIG_1_1e_20241001.pdf (SHA-256 am 17.09.2026 geprüft)"
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Trotz fehlender Spartenangabe im Titel weist PID 4.0 für UTILTS keinen einzigen Gas-Anwendungsfall aus (0 von 26 Zeilen). Sparte deshalb als 'Strom' geführt; das ist ein Negativbefund aus einer Quelle, kein ausdrücklicher Ausschluss für Gas.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "m56:PID_4_0_20260401.pdf",
+              "fundstelle": "Spalten Sparte Strom/Gas, alle Zeilen mit AHB = 'UTILTS AHB'"
+            }
+          ]
         }
       ],
       "analyse": {
@@ -13457,7 +13479,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "CONTRL",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Keine Spartenangabe im Titel und keine Zeile in PID 4.0 (Servicenachricht ohne eigene Prüfidentifikatoren in der Anwendungsübersicht); Sparte bleibt 'beide' ohne positiven Einzelnachweis.",
         "bdew_topic_id": 201
       },
       "dokumentversion": {
@@ -14070,8 +14092,8 @@
           ]
         },
         {
-          "art": "offene_frage",
-          "text": "Maßgebliche Fassung ist eine außerordentliche Veröffentlichung. Angewandt wurde die in Etappe 2 vorgeschlagene Regelerweiterung v0.2 (rollendefinition.md): außerordentliche Veröffentlichungen und konsolidierte Fehlerkorrekturen bilden eine gemeinsame Stand-Reihe. Die Erweiterung ist vorläufig und muss noch bestätigt werden.",
+          "art": "quellenauffaelligkeit",
+          "text": "Maßgebliche Fassung ist eine außerordentliche Veröffentlichung. Angewandt wird die Regel v0.2/v0.3 (rollendefinition.md): außerordentliche Veröffentlichungen und konsolidierte Fehlerkorrekturen bilden eine gemeinsame Stand-Reihe, der neueste Stand ist maßgeblich. Vom Nutzer am 17.09.2026 bestätigt.",
           "auswirkung_auf_auswahl": true,
           "beleg": [
             {
@@ -14127,7 +14149,7 @@
         "kategorie": "AHB",
         "nachrichtentyp": "INSRPT",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 22 Zeilen für 'INSRPT AHB', davon 12 mit Sparte Strom = X und 10 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
         "bdew_topic_id": 117
       },
       "dokumentversion": {
@@ -14753,8 +14775,8 @@
           ]
         },
         {
-          "art": "offene_frage",
-          "text": "Maßgebliche Fassung ist eine außerordentliche Veröffentlichung. Angewandt wurde die in Etappe 2 vorgeschlagene Regelerweiterung v0.2 (rollendefinition.md): außerordentliche Veröffentlichungen und konsolidierte Fehlerkorrekturen bilden eine gemeinsame Stand-Reihe. Die Erweiterung ist vorläufig und muss noch bestätigt werden.",
+          "art": "quellenauffaelligkeit",
+          "text": "Maßgebliche Fassung ist eine außerordentliche Veröffentlichung. Angewandt wird die Regel v0.2/v0.3 (rollendefinition.md): außerordentliche Veröffentlichungen und konsolidierte Fehlerkorrekturen bilden eine gemeinsame Stand-Reihe, der neueste Stand ist maßgeblich. Vom Nutzer am 17.09.2026 bestätigt.",
           "auswirkung_auf_auswahl": true,
           "beleg": [
             {
@@ -14809,7 +14831,7 @@
         "kategorie": "MIG",
         "nachrichtentyp": "INSRPT",
         "sparte": "beide",
-        "sparte_beleg": "keine Spartenangabe im Dokumenttitel (Mitteilung und BDEW); spartenbezogene Anwendbarkeit wird in Etappe 3 für Gas geprüft",
+        "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 22 Zeilen für 'INSRPT AHB', davon 12 mit Sparte Strom = X und 10 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
         "bdew_topic_id": 118
       },
       "dokumentversion": {
@@ -15273,8 +15295,8 @@
           ]
         },
         {
-          "art": "offene_frage",
-          "text": "Maßgebliche Fassung ist eine außerordentliche Veröffentlichung. Angewandt wurde die in Etappe 2 vorgeschlagene Regelerweiterung v0.2 (rollendefinition.md): außerordentliche Veröffentlichungen und konsolidierte Fehlerkorrekturen bilden eine gemeinsame Stand-Reihe. Die Erweiterung ist vorläufig und muss noch bestätigt werden.",
+          "art": "quellenauffaelligkeit",
+          "text": "Maßgebliche Fassung ist eine außerordentliche Veröffentlichung. Angewandt wird die Regel v0.2/v0.3 (rollendefinition.md): außerordentliche Veröffentlichungen und konsolidierte Fehlerkorrekturen bilden eine gemeinsame Stand-Reihe, der neueste Stand ist maßgeblich. Vom Nutzer am 17.09.2026 bestätigt.",
           "auswirkung_auf_auswahl": true,
           "beleg": [
             {
