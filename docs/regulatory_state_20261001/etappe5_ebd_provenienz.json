@@ -1,0 +1,547 @@
+{
+  "stichtag": "2026-10-01",
+  "etappe": 5,
+  "ticket": "#64",
+  "schema": "provenienz_schema.json",
+  "schema_version": "0.6",
+  "anzahl": 1,
+  "datensaetze": [
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "EBD",
+        "dokumentname": "Entscheidungsbaum-Diagramme und Codelisten für die Antwortnachrichten",
+        "dokumenttyp": "Entscheidungsbaum-Diagramme und Codelisten",
+        "kategorie": "EBD",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Kein Spartenzusatz im Titel; die referenzierenden PID-Zeilen tragen sowohl Sparte Strom als auch Gas",
+        "bdew_topic_id": 142,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56 ('Entscheidungsbaum-Diagramme und Codelisten (Version 4.3)'); Basisfassung bytegleich"
+          },
+          {
+            "kriterium": "C",
+            "beleg": "Die maßgebliche PID-Fassung (Stand 12.08.2026) referenziert in der Spalte 'EBD-Code / Code Codeliste' 285 EBD-Kennungen; AHB Strom 2.2 nennt EBD-Nummern je Prüfidentifikator"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "4.3",
+        "veroeffentlicht_am": {
+          "datum": "2026-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            },
+            {
+              "quelle": "bdew:8314",
+              "seite": 1,
+              "fundstelle": "Version: 4.3, Publikationsdatum 01.04.2026"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2026-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "verbindlich ab dem 01.10.2026"
+            },
+            {
+              "quelle": "BDEW-API id 8408",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Entscheidungsbaum-Diagramme und Codelisten 4.3 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 23.06.2026\", validFrom=2026-10-01, validTo=offen"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56"
+            },
+            {
+              "quelle": "BDEW-API id 8408",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Entscheidungsbaum-Diagramme und Codelisten 4.3 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 23.06.2026\", validFrom=2026-10-01, validTo=offen"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 56,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2026-04-01",
+          "zusammenhang": "als eigene Kategorie 'Entscheidungsbaum-Diagramme' der Mitteilung 56 veröffentlicht, verbindlich ab 01.10.2026"
+        },
+        "dokumentstatus": "verbindlich",
+        "vorgaenger": {
+          "version": "4.2",
+          "gueltig_bis": {
+            "datum": "2026-09-30",
+            "art": "abgeleitet",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 56",
+                "fundstelle": "Nachfolger 4.3 verbindlich ab 01.10.2026"
+              },
+              {
+                "quelle": "BDEW-API id 8119",
+                "url": "https://www.bdew-mako.de/api/documents",
+                "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+                "fundstelle": "BDEW validTo Vorgänger-Basis: title=\"Entscheidungsbaum-Diagramme und Codelisten 4.2\", validFrom=2026-04-01, validTo=2026-09-30"
+              }
+            ]
+          },
+          "letzte_fassung": "4.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 23.06.2026 (bdew:8406)"
+        },
+        "nachfolger": [
+          {
+            "version": "4.4",
+            "status": "konsultation",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 57",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+                "fundstelle": "EBD und Codelisten 4.4 (pdf / 4 MB), Konsultation für 01.04.2027"
+              }
+            ]
+          }
+        ]
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bnetza:EBD_und_Codelisten_4_3_20260401.pdf",
+          "titel_in_quelle": "Entscheidungsbaum-Diagramme und Codelisten (Version 4.3)",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "Anlage der Mitteilung 56",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BNetzA",
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/EBD_und_Codelisten_4_3_20260401.pdf?__blob=publicationFile&v=1",
+          "dateiname": "EBD_und_Codelisten_4_3_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 8622762,
+          "sha256": "2099003fafbe7372780c2e6abe50dc4d24483ed42ed57a39804b47af1c6a3f32",
+          "bytegleich_mit": [
+            "bdew:8314"
+          ],
+          "seiten": 832,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Amtlich verlinkte Fassung; bytegleich mit bdew:8314",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56, bytegleich mit bdew:8314"
+          }
+        },
+        {
+          "fassung_id": "bdew:8314",
+          "titel_in_quelle": "Entscheidungsbaum-Diagramme und Codelisten 4.3",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8314,
+            "bdew_file_id": 12140,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12140",
+          "dateiname": "EBD_und_Codelisten_4_3_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 8622762,
+          "sha256": "2099003fafbe7372780c2e6abe50dc4d24483ed42ed57a39804b47af1c6a3f32",
+          "bytegleich_mit": [],
+          "seiten": 832,
+          "deckblatt": {
+            "version": "4.3",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 825,
+            "seite_bis": 831,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Genehmigt": 24,
+              "Fehler (11.12.2025)": 5,
+              "Fehler (31.03.2026)": 6,
+              "Fehler (23.06.2026)": 1
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Inhalt durch den Stand 23.06.2026 überholt; einzige Quelle der Änderungshistorie gegenüber Version 4.2 (24 Einträge 'Genehmigt')",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T09:10:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56"
+          }
+        },
+        {
+          "fassung_id": "bdew:8315",
+          "titel_in_quelle": "Entscheidungsbaum-Diagramme und Codelisten 4.3 - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8315,
+            "bdew_file_id": 12141,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12141",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Lesefassung, nach Abschnitt 6/7 nicht maßgeblich",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung (Word); laut Disclaimer im Dokument selbst: 'Die PDF-Datei ist das gültige Dokument'",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T09:10:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Word-Fassung, nur auf BDEW-MaKo"
+          }
+        },
+        {
+          "fassung_id": "bdew:8408",
+          "titel_in_quelle": "Entscheidungsbaum-Diagramme und Codelisten 4.3 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 23.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2026-06-23",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2026-06-23",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8408,
+            "bdew_file_id": 12242,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12242",
+          "dateiname": "EBD_und_Codelisten_4_3_Fehlerkorrektur_20260623.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 8718504,
+          "sha256": "bf589a7a3a083f6f4c5283ec768e38be0b9c99a7d2083bc19c829fdaaf048730",
+          "bytegleich_mit": [],
+          "seiten": 831,
+          "deckblatt": {
+            "version": "4.3",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2026",
+            "stand_fehlerkorrektur": "23.06.2026",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen",
+              "Stand: 23.06.2026"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 825,
+            "seite_bis": 831,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Genehmigt": 24,
+              "Fehler (11.12.2025)": 5,
+              "Fehler (31.03.2026)": 6,
+              "Fehler (23.06.2026)": 1
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Neuester Stand der Stand-Reihe der Version 4.3, PDF",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T09:10:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Konsolidierte Fehlerkorrekturfassung; ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:8407",
+          "titel_in_quelle": "Entscheidungsbaum-Diagramme und Codelisten 4.3 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 23.06.2026",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2026-06-23",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8407,
+            "bdew_file_id": 12241,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12241",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; informatorische Lesefassung, nach Abschnitt 6/7 nicht maßgeblich",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung der konsolidierten Fassung (Word)",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T09:10:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Word-Fassung, nur auf BDEW-MaKo"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8408",
+        "massgebliche_fassung_pdf_sha256": "bf589a7a3a083f6f4c5283ec768e38be0b9c99a7d2083bc19c829fdaaf048730",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "A (Anlage Mitteilung 56) und C (285 EBD-Kennungen in der maßgeblichen PID-Fassung referenziert)"
+          },
+          {
+            "regel": "Version am Stichtag",
+            "ergebnis": "4.3 aus Mitteilung 56, gültig ab 01.10.2026; Vorgänger 4.2 endet 30.09.2026"
+          },
+          {
+            "regel": "Fassungen sammeln",
+            "ergebnis": "5 Fassungen: BNetzA-Anlage, BDEW-Basis (bytegleich), BDEW konsolidiert Stand 23.06.2026, dazu 2 informatorische Word-Fassungen"
+          },
+          {
+            "regel": "Stand-Reihe, neuester Stand als PDF",
+            "ergebnis": "konsolidiert Stand 23.06.2026 (bdew:8408), 831 Seiten"
+          },
+          {
+            "regel": "Vollständigkeit gegen die Basis",
+            "ergebnis": "832 → 831 Seiten; EBD-Kennungen 363 → 364 (neu: E_0265); Codelisten-Kennungen unverändert 103; Historie der konsolidierten Fassung: 24× 'Genehmigt' (Änderungen gegenüber 4.2) plus 12 Fehlerkorrektur-Einträge (11.12.2025, 31.03.2026, 23.06.2026)"
+          },
+          {
+            "regel": "Querprüfung gegen die maßgebliche PID-Fassung (Stand 12.08.2026)",
+            "ergebnis": "285 von 285 referenzierten EBD-Kennungen in 4.3 vorhanden (100 %); 10 von 11 referenzierten Codelisten-Kennungen vorhanden; 79 EBD-Kennungen des Dokuments werden von keiner PID-Zeile referenziert"
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:8314",
+            "zweck": "Änderungshistorie gegenüber Version 4.2"
+          },
+          {
+            "fassung_id": "bnetza:EBD_und_Codelisten_4_3_20260401.pdf",
+            "zweck": "amtlich verlinkte Fassung, bytegleich"
+          }
+        ],
+        "begruendung": "EBD und Codelisten 4.3 gilt ab 01.10.2026, weil Mitteilung 56 das Dokument verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Lesefassung mit Fehlerkorrekturen Stand 23.06.2026 als neuester Stand dieser Version."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "ja",
+          "erlaeuterung": "Version 4.3 löst 4.2 ab; eigene Kategorie 'Entscheidungsbaum-Diagramme' in Mitteilung 56",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "nicht_anwendbar",
+          "erlaeuterung": "durch Mitteilung 56 geändert; 4.2 endet mit Ablauf des 30.09.2026",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8119",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Vorgänger 4.2: title=\"Entscheidungsbaum-Diagramme und Codelisten 4.2\", validFrom=2026-04-01, validTo=2026-09-30"
+            }
+          ]
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 4.3 ab 01.10.2026; Basis bytegleich mit der BNetzA-Anlage",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8314",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Basis: title=\"Entscheidungsbaum-Diagramme und Codelisten 4.3\", validFrom=2026-10-01, validTo=offen"
+            },
+            {
+              "quelle": "BDEW-API id 8408",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "konsolidiert: title=\"Entscheidungsbaum-Diagramme und Codelisten 4.3 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 23.06.2026\", validFrom=2026-10-01, validTo=offen"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "ein Stand: 23.06.2026; die Historie nennt zusätzlich ältere Korrekturen aus 4.2 (11.12.2025, 31.03.2026)",
+          "beleg": [
+            {
+              "quelle": "bdew:8408",
+              "seite": "825–831"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "Stand 23.06.2026",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8408",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "konsolidierte Fassung: title=\"Entscheidungsbaum-Diagramme und Codelisten 4.3 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 23.06.2026\", validFrom=2026-10-01, validTo=offen"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (EBD 4.4), siehe Frage 7.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "ja",
+          "erlaeuterung": "EBD und Codelisten 4.4 in Konsultation (Mitteilung 57, für 01.04.2027); laut Mitteilung 57 wurde dabei der Antwortcode A99 in einzelnen EBD entfernt und die Prüflogik des EBD E_0622 überarbeitet",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein; Basisfassung bytegleich",
+          "beleg": []
+        }
+      },
+      "hinweise": [
+        {
+          "art": "offene_frage",
+          "text": "O-17: Die maßgebliche PID-Fassung referenziert für den Prüfidentifikator 55024 (UTILMD AHB Strom, Lfd. Nr. 26100) die Codelisten-Kennung S_0088. Diese Kennung kommt in EBD und Codelisten 4.3 nicht vor (103 Codelisten-Kennungen, S_0054 bis S_0087 u. a.) und in keinem anderen am Stichtag maßgeblichen Dokument. Verweis bleibt unaufgelöst; nicht korrigiert.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8461",
+              "seite": 56,
+              "fundstelle": "Lfd. Nr. 26100, UTILMD AHB Strom, PI 55024, EBD-Code/Codeliste S_0088"
+            },
+            {
+              "quelle": "bdew:8408",
+              "fundstelle": "kein Treffer für S_0088"
+            }
+          ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Vollständigkeitsprüfung PID → EBD: Alle 285 von der PID referenzierten EBD-Kennungen sind in 4.3 vorhanden (100 %). Umgekehrt enthält 4.3 79 EBD-Kennungen, die keine PID-Zeile referenziert — sie sind damit nicht über einen Prüfidentifikator erreichbar. Beides ohne Einfluss auf die Versionsauswahl.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8461"
+            },
+            {
+              "quelle": "bdew:8408"
+            }
+          ]
+        },
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Die konsolidierte Fassung enthält eine EBD-Kennung mehr als die Basis (E_0265). Die Änderungshistorie der konsolidierten Fassung führt beides zusammen: 24 Einträge 'Genehmigt' (Änderungen gegenüber 4.2) und 12 Fehlerkorrektur-Einträge. Anders als bei AHB und MIG ist die Änderungshistorie hier also nicht auf die Fehlerkorrekturen verkürzt.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8408",
+              "seite": "825–831"
+            },
+            {
+              "quelle": "bdew:8314",
+              "seite": "826–832"
+            }
+          ]
+        },
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Der Disclaimer auf Seite 2 stellt ausdrücklich klar: 'Die zusätzlich veröffentlichte Word-Datei dient als informatorische Lesefassung und entspricht inhaltlich der PDF-Datei. Die PDF-Datei ist das gültige Dokument.' Das stützt die Regel aus Abschnitt 7 im Dokument selbst.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8408",
+              "seite": 2
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T09:20:00Z",
+        "etappe": 5,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug, Download beider PDF-Fassungen, SHA-256, Volltext (pdfminer, 832 bzw. 831 Seiten), Kennungsabgleich per Regex gegen die maßgebliche PID-Fassung (Spalte 'EBD-Code / Code Codeliste', ausgelesen über Spaltenpositionen). Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    }
+  ]
+}

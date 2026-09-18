@@ -13,7 +13,7 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 | 2 | Übrige EDIFACT-Nachrichtentypen (alle spartenübergreifenden, einmalig) | **abgeschlossen**, O-11 bestätigt | [`etappe2_edifact.md`](etappe2_edifact.md), [`etappe2_edifact_provenienz.json`](etappe2_edifact_provenienz.json) |
 | 3 | Gasspezifika: SSQNOT, GeLi Gas 3.0, Gas-Anwendbarkeit der spartenübergreifenden Dokumente | **abgeschlossen** | [`etappe3_gas.md`](etappe3_gas.md), [`etappe3_gas_provenienz.json`](etappe3_gas_provenienz.json) |
 | 4 | PID, Codelisten, Allgemeine Festlegungen | **abgeschlossen** | [`etappe4_querschnitt.md`](etappe4_querschnitt.md), [`etappe4_querschnitt_provenienz.json`](etappe4_querschnitt_provenienz.json) |
-| 5 | Entscheidungsbaum-Diagramme | offen | — |
+| 5 | Entscheidungsbaum-Diagramme | **abgeschlossen** | [`etappe5_ebd.md`](etappe5_ebd.md), [`etappe5_ebd_provenienz.json`](etappe5_ebd_provenienz.json) |
 | 6 | Übertragungsweg / AS4 / API / XML | offen | — |
 | 7 | Konsolidierung, Widersprüche, Regulatory-State-Objekt, Vorschlag `RegulatoryVersion` | offen | — |
 | 8 | Übergabebericht | offen | — |

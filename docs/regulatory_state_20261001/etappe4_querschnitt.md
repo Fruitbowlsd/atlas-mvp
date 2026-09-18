@@ -43,9 +43,14 @@ umzusetzen" (MsbG-Anpassungen, neue Artikel-ID ab 01.01.2026).
 **Gültig bis** ist bei allen 10 offen. **6 von 10** sind nur mit einer konsolidierten Fassung
 maßgeblich abgedeckt — bei der PID sogar erst im zweiten Korrekturstand.
 
-**Bytegleichheit BNetzA ↔ BDEW:** geprüft für 9 Dokumente, **8 bytegleich** (4 aus Mitteilung
-56, dazu OBIS/M54, Artikelnummern/M51, Zeitreihentypen/M19, Ländercodes/M58). Der neunte Fall
-ist die Lokationsbündel-Codeliste (Abschnitt 4).
+**Bytegleichheit BNetzA ↔ BDEW:** geprüft für 9 der 10 Dokumente, **8 davon bytegleich** —
+Allgemeine Festlegungen, PID, Konfigurationen und Verwendungszwecke gegen Mitteilung 56,
+dazu OBIS gegen Mitteilung 54, Artikelnummern gegen 51, Zeitreihentypen gegen 19 und
+Ländercodes gegen 58. **Die einzige Abweichung ist die Lokationsbündel-Codeliste** und damit
+kein eigener Fall, sondern genau O-15 (Abschnitt 4): Die verglichene Datei aus Mitteilung 32
+war die Konsultationsfassung, die verbindliche Fassung steht in Mitteilung 33 und ist dort
+nicht mehr abrufbar. Das zehnte Dokument (Standardlastprofile TU München 1.1) hat keine
+BNetzA-Anlage, für die ein Vergleich möglich wäre.
 
 ## 3. Geprüft und nicht aufgenommen (Negativbeleg nach Aufnahmeregel)
 
