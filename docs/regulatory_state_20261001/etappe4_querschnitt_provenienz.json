@@ -1,0 +1,4024 @@
+{
+  "stichtag": "2026-10-01",
+  "etappe": 4,
+  "ticket": "#64",
+  "schema": "provenienz_schema.json",
+  "schema_version": "0.6",
+  "anzahl": 10,
+  "datensaetze": [
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "ALLGEMEINE-FESTLEGUNGEN",
+        "dokumentname": "Allgemeine Festlegungen",
+        "dokumenttyp": "Allgemeine Festlegungen",
+        "kategorie": "Sonstiges",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "bdew_topic_id": 144,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich"
+          },
+          {
+            "kriterium": "C",
+            "beleg": "In 5 maßgeblichen AHB referenziert (APERAK, CONTRL, INSRPT, INVOIC, REMADV)"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "6.1d",
+        "veroeffentlicht_am": {
+          "datum": "2026-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2026-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "verbindlich ab 01.10.2026"
+            },
+            {
+              "quelle": "BDEW-API id 8319",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Allgemeine Festlegungen 6.1d\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56, die diese Version ablöst"
+            },
+            {
+              "quelle": "BDEW-API id 8319",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Allgemeine Festlegungen 6.1d\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 56,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2026-04-01",
+          "zusammenhang": "als Anlage veröffentlicht, verbindlich ab 01.10.2026"
+        },
+        "dokumentstatus": "verbindlich",
+        "vorgaenger": null,
+        "nachfolger": [
+          {
+            "version": "6.1e",
+            "status": "konsultation",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 57",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+                "fundstelle": "Mitteilung 57, Konsultation für 01.04.2027"
+              }
+            ]
+          }
+        ]
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bnetza:Allgemeine_Festlegungen_6_1d_20260401.pdf",
+          "titel_in_quelle": "Allgemeine Festlegungen 6.1d",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "Anlage der Mitteilung 56",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BNetzA",
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/Allgemeine_Festlegungen_6_1d_20260401.pdf?__blob=publicationFile&v=1",
+          "dateiname": "Allgemeine_Festlegungen_6_1d_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 2619000,
+          "sha256": "a9aa7fd0806dfdf52800302e9db564b5c145e6eaf930e68045f6c6fb16b7125b",
+          "bytegleich_mit": [
+            "bdew:8319"
+          ],
+          "seiten": 118,
+          "deckblatt": {
+            "version": "6.1d",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "01.08.2025"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 11,
+            "seite_bis": 118,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Genehmigt": 10
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Amtlich verlinkte Fassung",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56"
+          }
+        },
+        {
+          "fassung_id": "bdew:8319",
+          "titel_in_quelle": "Allgemeine Festlegungen 6.1d",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8319,
+            "bdew_file_id": 12145,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12145",
+          "dateiname": "Allgemeine_Festlegungen_6_1d_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 2619000,
+          "sha256": "a9aa7fd0806dfdf52800302e9db564b5c145e6eaf930e68045f6c6fb16b7125b",
+          "bytegleich_mit": [
+            "bnetza:Allgemeine_Festlegungen_6_1d_20260401.pdf"
+          ],
+          "seiten": 118,
+          "deckblatt": {
+            "version": "6.1d",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "01.08.2025"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 11,
+            "seite_bis": 118,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Genehmigt": 10
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Einzige PDF-Fassung dieser Version; keine konsolidierte Fassung vorhanden",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (SHA-256 am 17./18.09.2026 geprüft)"
+          }
+        },
+        {
+          "fassung_id": "bdew:8320",
+          "titel_in_quelle": "Allgemeine Festlegungen 6.1d - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8320,
+            "bdew_file_id": 12146,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12146",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8319",
+        "massgebliche_fassung_pdf_sha256": "a9aa7fd0806dfdf52800302e9db564b5c145e6eaf930e68045f6c6fb16b7125b",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "A: Anlage der Mitteilung 56; Basisfassung bytegleich; C: In 5 maßgeblichen AHB referenziert (APERAK, CONTRL, INSRPT, INVOIC, REMADV)"
+          },
+          {
+            "regel": "Version am Stichtag bestimmen",
+            "ergebnis": "6.1d, veröffentlicht mit Mitteilung 56, gültig ab 2026-10-01"
+          },
+          {
+            "regel": "Fassungen sammeln, Typ aus Titel und Deckblatt",
+            "ergebnis": "3 Fassungen: basis×2, informatorische_lesefassung×1"
+          },
+          {
+            "regel": "Stand-Reihe bilden, neuester Stand als PDF (Abschnitt 6/6a)",
+            "ergebnis": "keine konsolidierte oder außerordentliche Fassung"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "bdew:8319, SHA-256 a9aa7fd0806dfdf52800302e9db564b5c145e6eaf930e68045f6c6fb16b7125b"
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bnetza:Allgemeine_Festlegungen_6_1d_20260401.pdf",
+            "zweck": "Amtlich verlinkte Fassung"
+          }
+        ],
+        "begruendung": "Allgemeine Festlegungen 6.1d gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte Fassung existiert."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "ja",
+          "erlaeuterung": "Neue Version als Anlage der Mitteilung 56",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "nicht_anwendbar",
+          "erlaeuterung": "durch Mitteilung 56 geändert",
+          "beleg": []
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 6.1d am Stichtag als gültig",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8319",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "maßgebliche Fassung: title=\"Allgemeine Festlegungen 6.1d\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "nein",
+          "erlaeuterung": "Stände: keine",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "nein",
+          "erlaeuterung": "keine",
+          "beleg": []
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (siehe Frage 7). Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "ja",
+          "erlaeuterung": "Nachfolger 6.1e in Konsultation (Mitteilung 57, Konsultation für 01.04.2027)",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein",
+          "beleg": []
+        }
+      },
+      "hinweise": [],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T08:00:00Z",
+        "etappe": 4,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug (unverändert seit 17.09.), Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber), Volltext (pdfminer); Referenzprüfung für Kriterium C durch Volltextsuche in den maßgeblichen Fassungen der Etappen 1–3. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "PID",
+        "dokumentname": "Anwendungsübersicht der Prüfidentifikatoren",
+        "dokumenttyp": "Anwendungsübersicht (PID)",
+        "kategorie": "PID",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "bdew_topic_id": 146,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich"
+          },
+          {
+            "kriterium": "B",
+            "beleg": "Die Anwendungsübersicht ist selbst das Kriterium-B-Dokument des Stichtags"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "4.0",
+        "veroeffentlicht_am": {
+          "datum": "2026-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2026-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "verbindlich ab 01.10.2026"
+            },
+            {
+              "quelle": "BDEW-API id 8461",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Anwendungsübersicht der Prüfidentifikatoren 4.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.08.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56, die diese Version ablöst"
+            },
+            {
+              "quelle": "BDEW-API id 8461",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Anwendungsübersicht der Prüfidentifikatoren 4.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.08.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 56,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2026-04-01",
+          "zusammenhang": "als Anlage veröffentlicht, verbindlich ab 01.10.2026"
+        },
+        "dokumentstatus": "verbindlich",
+        "vorgaenger": null,
+        "nachfolger": [
+          {
+            "version": "4.1",
+            "status": "konsultation",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 57",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+                "fundstelle": "Mitteilung 57, Konsultation für 01.04.2027"
+              }
+            ]
+          }
+        ]
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bnetza:PID_4_0_20260401.pdf",
+          "titel_in_quelle": "Anwendungsübersicht der Prüfidentifikatoren 4.0",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "Anlage der Mitteilung 56",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BNetzA",
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/PID_4_0_20260401.pdf?__blob=publicationFile&v=1",
+          "dateiname": "PID_4_0_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 3255401,
+          "sha256": "99be6b4b7dae232d5a4edf5eed06c183d10763fc38d45b8b8f5254ab398abdf7",
+          "bytegleich_mit": [
+            "bdew:8324"
+          ],
+          "seiten": 86,
+          "deckblatt": {
+            "version": "Publikationsdatum:",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "---------"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 2,
+            "seite_bis": 86,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (11.12.2025)": 7,
+              "Fehler (27.03.2026)": 1,
+              "Genehmigt": 21
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Amtlich verlinkte Fassung",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56"
+          }
+        },
+        {
+          "fassung_id": "bdew:8324",
+          "titel_in_quelle": "Anwendungsübersicht der Prüfidentifikatoren 4.0",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8324,
+            "bdew_file_id": 12150,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12150",
+          "dateiname": "PID_4_0_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 3255401,
+          "sha256": "99be6b4b7dae232d5a4edf5eed06c183d10763fc38d45b8b8f5254ab398abdf7",
+          "bytegleich_mit": [
+            "bnetza:PID_4_0_20260401.pdf"
+          ],
+          "seiten": 86,
+          "deckblatt": {
+            "version": "Publikationsdatum:",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "---------"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 2,
+            "seite_bis": 86,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (11.12.2025)": 7,
+              "Fehler (27.03.2026)": 1,
+              "Genehmigt": 21
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (SHA-256 am 17./18.09.2026 geprüft)"
+          }
+        },
+        {
+          "fassung_id": "bdew:8325",
+          "titel_in_quelle": "Anwendungsübersicht der Prüfidentifikatoren 4.0 - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8325,
+            "bdew_file_id": 12151,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12151",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:8423",
+          "titel_in_quelle": "Anwendungsübersicht der Prüfidentifikatoren 4.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2026-06-29",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8423,
+            "bdew_file_id": 12259,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-08-11",
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12259",
+          "dateiname": "PID_4_0_Fehlerkorrektur_20260629.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 3324689,
+          "sha256": "ae20d76b25b3dff7f37872dcc1fe9cf6c24c1027c00e15fb6298b470340b23d9",
+          "bytegleich_mit": [],
+          "seiten": 83,
+          "deckblatt": {
+            "version": "Publikationsdatum:",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": "29.06.2026",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": [
+              "---------"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 2,
+            "seite_bis": 83,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (29.06.2026)": 4
+            }
+          },
+          "rolle": "ersetzt",
+          "rolle_begruendung": "Älterer Stand 2026-06-29",
+          "ersetzt_durch": "bdew:8461",
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:8424",
+          "titel_in_quelle": "Anwendungsübersicht der Prüfidentifikatoren 4.0 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8424,
+            "bdew_file_id": 12260,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": "2026-08-11",
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12260",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:8461",
+          "titel_in_quelle": "Anwendungsübersicht der Prüfidentifikatoren 4.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.08.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2026-08-12",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2026-08-12",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8461,
+            "bdew_file_id": 12308,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12308",
+          "dateiname": "PID_4_0_Fehlerkorrektur_20260812.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 3333300,
+          "sha256": "599bf735792208effbe141f77a72bb8f8ff91d6be6227f7efcb9fb41256b6290",
+          "bytegleich_mit": [],
+          "seiten": 83,
+          "deckblatt": {
+            "version": "Publikationsdatum:",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": "12.08.2026",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": [
+              "---------"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 2,
+            "seite_bis": 83,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (12.08.2026)": 1,
+              "Fehler (29.06.2026)": 4
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Neuester Stand der Stand-Reihe, PDF",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:8462",
+          "titel_in_quelle": "Anwendungsübersicht der Prüfidentifikatoren 4.0 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.08.2026",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8462,
+            "bdew_file_id": 12309,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12309",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8461",
+        "massgebliche_fassung_pdf_sha256": "599bf735792208effbe141f77a72bb8f8ff91d6be6227f7efcb9fb41256b6290",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "A: Anlage der Mitteilung 56; Basisfassung bytegleich; B: Die Anwendungsübersicht ist selbst das Kriterium-B-Dokument des Stichtags"
+          },
+          {
+            "regel": "Version am Stichtag bestimmen",
+            "ergebnis": "4.0, veröffentlicht mit Mitteilung 56, gültig ab 2026-10-01"
+          },
+          {
+            "regel": "Fassungen sammeln, Typ aus Titel und Deckblatt",
+            "ergebnis": "7 Fassungen: basis×2, informatorische_lesefassung×1, konsolidiert_fehlerkorrektur×2, informatorische_lesefassung_konsolidiert×2"
+          },
+          {
+            "regel": "Stand-Reihe bilden, neuester Stand als PDF (Abschnitt 6/6a)",
+            "ergebnis": "konsolidiert_fehlerkorrektur 2026-06-29, konsolidiert_fehlerkorrektur 2026-08-12"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "bdew:8461, SHA-256 599bf735792208effbe141f77a72bb8f8ff91d6be6227f7efcb9fb41256b6290"
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bnetza:PID_4_0_20260401.pdf",
+            "zweck": "Amtlich verlinkte Fassung"
+          },
+          {
+            "fassung_id": "bdew:8324",
+            "zweck": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion"
+          }
+        ],
+        "begruendung": "Anwendungsübersicht der Prüfidentifikatoren 4.0 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2026-08-12."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "ja",
+          "erlaeuterung": "Neue Version als Anlage der Mitteilung 56",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "nicht_anwendbar",
+          "erlaeuterung": "durch Mitteilung 56 geändert",
+          "beleg": []
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 4.0 am Stichtag als gültig",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8461",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "maßgebliche Fassung: title=\"Anwendungsübersicht der Prüfidentifikatoren 4.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.08.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Stände: 2026-06-29, 2026-08-12",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2026-08-12",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8461",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "neuester Stand: title=\"Anwendungsübersicht der Prüfidentifikatoren 4.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.08.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (siehe Frage 7). Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "ja",
+          "erlaeuterung": "Nachfolger 4.1 in Konsultation (Mitteilung 57, Konsultation für 01.04.2027)",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein",
+          "beleg": []
+        }
+      },
+      "hinweise": [
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Das Deckblatt liegt im Querformat und lässt sich nicht mit demselben Feldschema lesen wie die übrigen Dokumente (die Standardextraktion liest im Feld 'Version' den Text 'Publikationsdatum:'). Version und Stand wurden deshalb aus Titel und sichtbarem Deckblattvermerk gelesen, die Tabellenauswertung erfolgt über Spaltenpositionen.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8461",
+              "seite": 1
+            }
+          ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Die PID ist zugleich das Dokument, an dem Kriterium B der Aufnahmeregel gemessen wird. Ihre eigene Aufnahme stützt sich deshalb auf Kriterium A (Anlage der Mitteilung 56) — kein Zirkelschluss.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "aufnahmeregel.md"
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T08:00:00Z",
+        "etappe": 4,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug (unverändert seit 17.09.), Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber), Volltext (pdfminer); Referenzprüfung für Kriterium C durch Volltextsuche in den maßgeblichen Fassungen der Etappen 1–3. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "CL-KONFIGURATIONEN",
+        "dokumentname": "Codeliste der Konfigurationen",
+        "dokumenttyp": "Codeliste",
+        "kategorie": "Codeliste",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "bdew_topic_id": 134,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich"
+          },
+          {
+            "kriterium": "C",
+            "beleg": "In 9 maßgeblichen Fassungen referenziert, u. a. UTILMD AHB Strom (73 Fundstellen), ORDERS AHB (49)"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "1.4",
+        "veroeffentlicht_am": {
+          "datum": "2026-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2026-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "verbindlich ab 01.10.2026"
+            },
+            {
+              "quelle": "BDEW-API id 8332",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Codeliste der Konfigurationen 1.4\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56, die diese Version ablöst"
+            },
+            {
+              "quelle": "BDEW-API id 8332",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Codeliste der Konfigurationen 1.4\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 56,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2026-04-01",
+          "zusammenhang": "als Anlage veröffentlicht, verbindlich ab 01.10.2026"
+        },
+        "dokumentstatus": "verbindlich",
+        "vorgaenger": null,
+        "nachfolger": [
+          {
+            "version": "1.4a",
+            "status": "konsultation",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 57",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+                "fundstelle": "Mitteilung 57, Konsultation für 01.04.2027"
+              }
+            ]
+          }
+        ]
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bnetza:Codeliste-Konfigurationen_1_4_20260401.pdf",
+          "titel_in_quelle": "Codeliste der Konfigurationen 1.4",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "Anlage der Mitteilung 56",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BNetzA",
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/Codeliste-Konfigurationen_1_4_20260401.pdf?__blob=publicationFile&v=2",
+          "dateiname": "Codeliste-Konfigurationen_1_4_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 875370,
+          "sha256": "2b20b9cb8c2e68ef8f95e126356936d02609adb36f86856a07d319da40a91edc",
+          "bytegleich_mit": [
+            "bdew:8332"
+          ],
+          "seiten": 64,
+          "deckblatt": {
+            "version": "1.4",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "02.02.2026"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 59,
+            "seite_bis": 64,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (11.12.2025)": 2,
+              "Fehler (17.04.2025)": 1,
+              "Genehmigt": 14
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Amtlich verlinkte Fassung",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56"
+          }
+        },
+        {
+          "fassung_id": "bdew:8331",
+          "titel_in_quelle": "Codeliste der Konfigurationen 1.4 - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8331,
+            "bdew_file_id": 12157,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12157",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:8332",
+          "titel_in_quelle": "Codeliste der Konfigurationen 1.4",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8332,
+            "bdew_file_id": 12158,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12158",
+          "dateiname": "Codeliste-Konfigurationen_1_4_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 875370,
+          "sha256": "2b20b9cb8c2e68ef8f95e126356936d02609adb36f86856a07d319da40a91edc",
+          "bytegleich_mit": [
+            "bnetza:Codeliste-Konfigurationen_1_4_20260401.pdf"
+          ],
+          "seiten": 64,
+          "deckblatt": {
+            "version": "1.4",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "02.02.2026"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 59,
+            "seite_bis": 64,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (11.12.2025)": 2,
+              "Fehler (17.04.2025)": 1,
+              "Genehmigt": 14
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Einzige PDF-Fassung dieser Version; keine konsolidierte Fassung vorhanden",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (SHA-256 am 17./18.09.2026 geprüft)"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8332",
+        "massgebliche_fassung_pdf_sha256": "2b20b9cb8c2e68ef8f95e126356936d02609adb36f86856a07d319da40a91edc",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "A: Anlage der Mitteilung 56; Basisfassung bytegleich; C: In 9 maßgeblichen Fassungen referenziert, u. a. UTILMD AHB Strom (73 Fundstellen), ORDERS AHB (49)"
+          },
+          {
+            "regel": "Version am Stichtag bestimmen",
+            "ergebnis": "1.4, veröffentlicht mit Mitteilung 56, gültig ab 2026-10-01"
+          },
+          {
+            "regel": "Fassungen sammeln, Typ aus Titel und Deckblatt",
+            "ergebnis": "3 Fassungen: basis×2, informatorische_lesefassung×1"
+          },
+          {
+            "regel": "Stand-Reihe bilden, neuester Stand als PDF (Abschnitt 6/6a)",
+            "ergebnis": "keine konsolidierte oder außerordentliche Fassung"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "bdew:8332, SHA-256 2b20b9cb8c2e68ef8f95e126356936d02609adb36f86856a07d319da40a91edc"
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bnetza:Codeliste-Konfigurationen_1_4_20260401.pdf",
+            "zweck": "Amtlich verlinkte Fassung"
+          }
+        ],
+        "begruendung": "Codeliste der Konfigurationen 1.4 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte Fassung existiert."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "ja",
+          "erlaeuterung": "Neue Version als Anlage der Mitteilung 56",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "nicht_anwendbar",
+          "erlaeuterung": "durch Mitteilung 56 geändert",
+          "beleg": []
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 1.4 am Stichtag als gültig",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8332",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "maßgebliche Fassung: title=\"Codeliste der Konfigurationen 1.4\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "nein",
+          "erlaeuterung": "Stände: keine",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "nein",
+          "erlaeuterung": "keine",
+          "beleg": []
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (siehe Frage 7). Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "ja",
+          "erlaeuterung": "Nachfolger 1.4a in Konsultation (Mitteilung 57, Konsultation für 01.04.2027)",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein",
+          "beleg": []
+        }
+      },
+      "hinweise": [],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T08:00:00Z",
+        "etappe": 4,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug (unverändert seit 17.09.), Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber), Volltext (pdfminer); Referenzprüfung für Kriterium C durch Volltextsuche in den maßgeblichen Fassungen der Etappen 1–3. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "CL-VERWENDUNGSZWECKE",
+        "dokumentname": "Codeliste der Verwendungszwecke",
+        "dokumenttyp": "Codeliste",
+        "kategorie": "Codeliste",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "bdew_topic_id": 249,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich"
+          },
+          {
+            "kriterium": "C",
+            "beleg": "In 4 maßgeblichen Fassungen referenziert, u. a. UTILMD AHB Strom (92 Fundstellen)"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "1.0",
+        "veroeffentlicht_am": {
+          "datum": "2026-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2026-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+              "fundstelle": "verbindlich ab 01.10.2026"
+            },
+            {
+              "quelle": "BDEW-API id 8417",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Codeliste der Verwendungszwecke 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56, die diese Version ablöst"
+            },
+            {
+              "quelle": "BDEW-API id 8417",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Codeliste der Verwendungszwecke 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 56,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2026-04-01",
+          "zusammenhang": "als Anlage veröffentlicht, verbindlich ab 01.10.2026"
+        },
+        "dokumentstatus": "verbindlich",
+        "vorgaenger": null,
+        "nachfolger": [
+          {
+            "version": "1.0a",
+            "status": "konsultation",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 57",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+                "fundstelle": "Mitteilung 57, Konsultation für 01.04.2027"
+              }
+            ]
+          }
+        ]
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bnetza:Codeliste-Verwendungszwecke_1_0_20260401.pdf",
+          "titel_in_quelle": "Codeliste der Verwendungszwecke 1.0",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "Anlage der Mitteilung 56",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BNetzA",
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/Codeliste-Verwendungszwecke_1_0_20260401.pdf?__blob=publicationFile&v=1",
+          "dateiname": "Codeliste-Verwendungszwecke_1_0_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 190237,
+          "sha256": "113442f66f0db20236e4e1cbc125edd498fc78f7c81b326f023a1fb640fb7f41",
+          "bytegleich_mit": [
+            "bdew:8333"
+          ],
+          "seiten": 7,
+          "deckblatt": {
+            "version": "1.0",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "02.02.2026"
+            ]
+          },
+          "aenderungshistorie": null,
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Amtlich verlinkte Fassung",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-17T17:13:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "Anlage der Mitteilung 56"
+          }
+        },
+        {
+          "fassung_id": "bdew:8333",
+          "titel_in_quelle": "Codeliste der Verwendungszwecke 1.0",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8333,
+            "bdew_file_id": 12160,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12160",
+          "dateiname": "Codeliste-Verwendungszwecke_1_0_20260401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 190237,
+          "sha256": "113442f66f0db20236e4e1cbc125edd498fc78f7c81b326f023a1fb640fb7f41",
+          "bytegleich_mit": [
+            "bnetza:Codeliste-Verwendungszwecke_1_0_20260401.pdf"
+          ],
+          "seiten": 7,
+          "deckblatt": {
+            "version": "1.0",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2026",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "02.02.2026"
+            ]
+          },
+          "aenderungshistorie": null,
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 56,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 56 (SHA-256 am 17./18.09.2026 geprüft)"
+          }
+        },
+        {
+          "fassung_id": "bdew:8334",
+          "titel_in_quelle": "Codeliste der Verwendungszwecke 1.0 - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8334,
+            "bdew_file_id": 12161,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12161",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:8417",
+          "titel_in_quelle": "Codeliste der Verwendungszwecke 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2026-06-29",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2026-06-29",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8417,
+            "bdew_file_id": 12253,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12253",
+          "dateiname": "Codeliste-Verwendungszwecke_1_0_Fehlerkorrektur_20260629.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 305718,
+          "sha256": "1571a878c66a514a6e2cf369724d01daf8e9979fe1e5f57ac7cf1e1d167dae0d",
+          "bytegleich_mit": [],
+          "seiten": 9,
+          "deckblatt": {
+            "version": "1.0",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2026",
+            "stand_fehlerkorrektur": "29.06.2026",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 8,
+            "seite_bis": 9,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (29.06.2026)": 4
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Neuester Stand der Stand-Reihe, PDF",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:8418",
+          "titel_in_quelle": "Codeliste der Verwendungszwecke 1.0 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8418,
+            "bdew_file_id": 12254,
+            "bdew_valid_from": "2026-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/12254",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8417",
+        "massgebliche_fassung_pdf_sha256": "1571a878c66a514a6e2cf369724d01daf8e9979fe1e5f57ac7cf1e1d167dae0d",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "A: Anlage der Mitteilung 56; Basisfassung bytegleich; C: In 4 maßgeblichen Fassungen referenziert, u. a. UTILMD AHB Strom (92 Fundstellen)"
+          },
+          {
+            "regel": "Version am Stichtag bestimmen",
+            "ergebnis": "1.0, veröffentlicht mit Mitteilung 56, gültig ab 2026-10-01"
+          },
+          {
+            "regel": "Fassungen sammeln, Typ aus Titel und Deckblatt",
+            "ergebnis": "5 Fassungen: basis×2, informatorische_lesefassung×1, konsolidiert_fehlerkorrektur×1, informatorische_lesefassung_konsolidiert×1"
+          },
+          {
+            "regel": "Stand-Reihe bilden, neuester Stand als PDF (Abschnitt 6/6a)",
+            "ergebnis": "konsolidiert_fehlerkorrektur 2026-06-29"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "bdew:8417, SHA-256 1571a878c66a514a6e2cf369724d01daf8e9979fe1e5f57ac7cf1e1d167dae0d"
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bnetza:Codeliste-Verwendungszwecke_1_0_20260401.pdf",
+            "zweck": "Amtlich verlinkte Fassung"
+          },
+          {
+            "fassung_id": "bdew:8333",
+            "zweck": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion"
+          }
+        ],
+        "begruendung": "Codeliste der Verwendungszwecke 1.0 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2026-06-29."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "ja",
+          "erlaeuterung": "Neue Version als Anlage der Mitteilung 56",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "nicht_anwendbar",
+          "erlaeuterung": "durch Mitteilung 56 geändert",
+          "beleg": []
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 1.0 am Stichtag als gültig",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8417",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "maßgebliche Fassung: title=\"Codeliste der Verwendungszwecke 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Stände: 2026-06-29",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2026-06-29",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8417",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "neuester Stand: title=\"Codeliste der Verwendungszwecke 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026\", validFrom=2026-10-01, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (siehe Frage 7). Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "ja",
+          "erlaeuterung": "Nachfolger 1.0a in Konsultation (Mitteilung 57, Konsultation für 01.04.2027)",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein",
+          "beleg": []
+        }
+      },
+      "hinweise": [],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T08:00:00Z",
+        "etappe": 4,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug (unverändert seit 17.09.), Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber), Volltext (pdfminer); Referenzprüfung für Kriterium C durch Volltextsuche in den maßgeblichen Fassungen der Etappen 1–3. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "CL-OBIS",
+        "dokumentname": "Codeliste der OBIS-Kennzahlen und Medien",
+        "dokumenttyp": "Codeliste",
+        "kategorie": "Codeliste",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "bdew_topic_id": 137,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 54; BDEW-Basis bytegleich mit der Anlage (SHA-256 geprüft)"
+          },
+          {
+            "kriterium": "C",
+            "beleg": "In 7 maßgeblichen Fassungen referenziert, u. a. MSCONS AHB (28), UTILMD AHB Strom (16)"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "2.5c",
+        "veroeffentlicht_am": {
+          "datum": "2025-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 54",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Mitteilung_Nr_54.html"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2026-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 54",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Mitteilung_Nr_54.html",
+              "fundstelle": "verbindlich ab 01.04.2026"
+            },
+            {
+              "quelle": "BDEW-API id 8123",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Codeliste der OBIS-Kennzahlen und Medien 2.5c\", validFrom=2026-04-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56, die diese Version ablöst"
+            },
+            {
+              "quelle": "BDEW-API id 8123",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Codeliste der OBIS-Kennzahlen und Medien 2.5c\", validFrom=2026-04-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 54,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_54/Mitteilung_Nr_54.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2025-10-01",
+          "zusammenhang": "als Anlage der Mitteilung 54 veröffentlicht; in Mitteilung 56 nicht genannt, daher fortgeltend"
+        },
+        "dokumentstatus": "verbindlich_fortgeltend",
+        "vorgaenger": null,
+        "nachfolger": []
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bdew:8123",
+          "titel_in_quelle": "Codeliste der OBIS-Kennzahlen und Medien 2.5c",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8123,
+            "bdew_file_id": 11918,
+            "bdew_valid_from": "2026-04-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/11918",
+          "dateiname": "Codeliste-OBIS-Kennzahlen_Medien_2_5c_20251001.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 830751,
+          "sha256": "bc43ff890fde3d02203e72b67e10bfeb966c53791d85246067c54c45a67c8aef",
+          "bytegleich_mit": [],
+          "seiten": 46,
+          "deckblatt": {
+            "version": "2.5c",
+            "stand_mig": null,
+            "publikationsdatum": "01.10.2025",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "01.08.2025"
+            ]
+          },
+          "aenderungshistorie": {
+            "seite_von": 39,
+            "seite_bis": 39,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (30.09.2025)": 2,
+              "Genehmigt": 3
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Einzige PDF-Fassung dieser Version; keine konsolidierte Fassung vorhanden",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 54,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 54 (SHA-256 am 17./18.09.2026 geprüft)"
+          }
+        },
+        {
+          "fassung_id": "bdew:8124",
+          "titel_in_quelle": "Codeliste der OBIS-Kennzahlen und Medien 2.5c - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8124,
+            "bdew_file_id": 11919,
+            "bdew_valid_from": "2026-04-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/11919",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8123",
+        "massgebliche_fassung_pdf_sha256": "bc43ff890fde3d02203e72b67e10bfeb966c53791d85246067c54c45a67c8aef",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "A: Anlage der Mitteilung 54; BDEW-Basis bytegleich mit der Anlage (SHA-256 geprüft); C: In 7 maßgeblichen Fassungen referenziert, u. a. MSCONS AHB (28), UTILMD AHB Strom (16)"
+          },
+          {
+            "regel": "Version am Stichtag bestimmen",
+            "ergebnis": "2.5c, veröffentlicht mit Mitteilung 54, gültig ab 2026-04-01"
+          },
+          {
+            "regel": "Fassungen sammeln, Typ aus Titel und Deckblatt",
+            "ergebnis": "2 Fassungen: basis×1, informatorische_lesefassung×1"
+          },
+          {
+            "regel": "Stand-Reihe bilden, neuester Stand als PDF (Abschnitt 6/6a)",
+            "ergebnis": "keine konsolidierte oder außerordentliche Fassung"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "bdew:8123, SHA-256 bc43ff890fde3d02203e72b67e10bfeb966c53791d85246067c54c45a67c8aef"
+          }
+        ],
+        "ergaenzende_fassungen": [],
+        "begruendung": "Codeliste der OBIS-Kennzahlen und Medien 2.5c gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte Fassung existiert."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "nein",
+          "erlaeuterung": "In Mitteilung 56 nicht genannt",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "ja",
+          "erlaeuterung": "Version 2.5c gilt seit 2026-04-01 fort",
+          "beleg": []
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 2.5c am Stichtag als gültig",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8123",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "maßgebliche Fassung: title=\"Codeliste der OBIS-Kennzahlen und Medien 2.5c\", validFrom=2026-04-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "nein",
+          "erlaeuterung": "Stände: keine",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "nein",
+          "erlaeuterung": "keine",
+          "beleg": []
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (siehe Frage 7). Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein Nachfolger in Mitteilung 57",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein",
+          "beleg": []
+        }
+      },
+      "hinweise": [
+        {
+          "art": "querpruefung",
+          "text": "Keine konsolidierte Fassung und keine außerordentliche Veröffentlichung; maßgeblich ist die Basisfassung, bytegleich mit der Anlage der Mitteilung 54.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:8123"
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T08:00:00Z",
+        "etappe": 4,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug (unverändert seit 17.09.), Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber), Volltext (pdfminer); Referenzprüfung für Kriterium C durch Volltextsuche in den maßgeblichen Fassungen der Etappen 1–3. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "CL-ARTIKELNUMMERN",
+        "dokumentname": "Codeliste der Artikelnummern und Artikel-ID",
+        "dokumenttyp": "Codeliste",
+        "kategorie": "Codeliste",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "bdew_topic_id": 132,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 51; BDEW-Basis bytegleich"
+          },
+          {
+            "kriterium": "C",
+            "beleg": "In 5 maßgeblichen Fassungen referenziert, u. a. PRICAT AHB (11), INVOIC AHB (10)"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "5.6",
+        "veroeffentlicht_am": {
+          "datum": "2025-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 51",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_51/Mitteilung_Nr_51.html"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2025-09-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 51",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_51/Mitteilung_Nr_51.html",
+              "fundstelle": "Mitteilung 51: 'wurde festgelegt, dass die Codeliste der Artikelnummern und Artikel-ID bereits zum 1. September 2025 umzusetzen ist' — abweichender Umsetzungstermin"
+            },
+            {
+              "quelle": "BDEW-API id 8113",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Codeliste der Artikelnummern und Artikel-ID 5.6 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.09.2025\", validFrom=2025-09-30, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56, die diese Version ablöst"
+            },
+            {
+              "quelle": "BDEW-API id 8113",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Codeliste der Artikelnummern und Artikel-ID 5.6 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.09.2025\", validFrom=2025-09-30, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 51,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_51/Mitteilung_Nr_51.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2025-04-01",
+          "zusammenhang": "als Anlage der Mitteilung 51 veröffentlicht; in Mitteilung 56 nicht genannt, daher fortgeltend"
+        },
+        "dokumentstatus": "verbindlich_fortgeltend",
+        "vorgaenger": null,
+        "nachfolger": [
+          {
+            "version": "5.7",
+            "status": "konsultation",
+            "beleg": [
+              {
+                "quelle": "BNetzA Mitteilung 57",
+                "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+                "fundstelle": "Mitteilung 57, Konsultation für 01.04.2027"
+              }
+            ]
+          }
+        ]
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bdew:7851",
+          "titel_in_quelle": "Codeliste der Artikelnummern und Artikel-ID 5.6",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7851,
+            "bdew_file_id": 11568,
+            "bdew_valid_from": "2025-09-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/11568",
+          "dateiname": "Codeliste_Artikelnummern und Artikel-ID_5_6_20250401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 1155658,
+          "sha256": "e07d161c48a281205ed2dc37faf1c51633387a24200fa2e623d0ce8e3bb4ed67",
+          "bytegleich_mit": [],
+          "seiten": 76,
+          "deckblatt": {
+            "version": "5.6",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2025",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 56,
+            "seite_bis": 76,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Anpassung (03.12.2024)": 5,
+              "Anpassung (20.03.2025)": 38,
+              "Fehler (11.03.2024)": 6,
+              "Genehmigt": 61
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 51,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 51 (SHA-256 am 17./18.09.2026 geprüft)"
+          }
+        },
+        {
+          "fassung_id": "bdew:7852",
+          "titel_in_quelle": "Codeliste der Artikelnummern und Artikel-ID 5.6 - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7852,
+            "bdew_file_id": 11569,
+            "bdew_valid_from": "2025-09-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/11569",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:8113",
+          "titel_in_quelle": "Codeliste der Artikelnummern und Artikel-ID 5.6 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.09.2025",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2025-09-30",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2025-09-30",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8113,
+            "bdew_file_id": 11908,
+            "bdew_valid_from": "2025-09-30",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/11908",
+          "dateiname": "Codeliste_Artikelnummern und Artikel-ID_5_6_Fehlerkorrektur_20250930.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 939903,
+          "sha256": "65595b40fb6f31543b4be838b60e819bd98d983bddaf54376c85639e13b28948",
+          "bytegleich_mit": [],
+          "seiten": 60,
+          "deckblatt": {
+            "version": "5.6",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2025",
+            "stand_fehlerkorrektur": "30.09.2025",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 57,
+            "seite_bis": 60,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (30.09.2025)": 2
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Neuester Stand der Stand-Reihe, PDF",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:8114",
+          "titel_in_quelle": "Codeliste der Artikelnummern und Artikel-ID 5.6 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.09.2025",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 8114,
+            "bdew_file_id": 11909,
+            "bdew_valid_from": "2025-09-30",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/11909",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:8113",
+        "massgebliche_fassung_pdf_sha256": "65595b40fb6f31543b4be838b60e819bd98d983bddaf54376c85639e13b28948",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "A: Anlage der Mitteilung 51; BDEW-Basis bytegleich; C: In 5 maßgeblichen Fassungen referenziert, u. a. PRICAT AHB (11), INVOIC AHB (10)"
+          },
+          {
+            "regel": "Version am Stichtag bestimmen",
+            "ergebnis": "5.6, veröffentlicht mit Mitteilung 51, gültig ab 2025-09-01"
+          },
+          {
+            "regel": "Fassungen sammeln, Typ aus Titel und Deckblatt",
+            "ergebnis": "4 Fassungen: basis×1, informatorische_lesefassung×1, konsolidiert_fehlerkorrektur×1, informatorische_lesefassung_konsolidiert×1"
+          },
+          {
+            "regel": "Stand-Reihe bilden, neuester Stand als PDF (Abschnitt 6/6a)",
+            "ergebnis": "konsolidiert_fehlerkorrektur 2025-09-30"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "bdew:8113, SHA-256 65595b40fb6f31543b4be838b60e819bd98d983bddaf54376c85639e13b28948"
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:7851",
+            "zweck": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion"
+          }
+        ],
+        "begruendung": "Codeliste der Artikelnummern und Artikel-ID 5.6 gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.09.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2025-09-30."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "nein",
+          "erlaeuterung": "In Mitteilung 56 nicht genannt",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "ja",
+          "erlaeuterung": "Version 5.6 gilt seit 2025-09-01 fort",
+          "beleg": []
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 5.6 am Stichtag als gültig",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8113",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "maßgebliche Fassung: title=\"Codeliste der Artikelnummern und Artikel-ID 5.6 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.09.2025\", validFrom=2025-09-30, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Stände: 2025-09-30",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2025-09-30",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 8113",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "neuester Stand: title=\"Codeliste der Artikelnummern und Artikel-ID 5.6 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.09.2025\", validFrom=2025-09-30, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (siehe Frage 7). Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "ja",
+          "erlaeuterung": "Nachfolger 5.7 in Konsultation (Mitteilung 57, Konsultation für 01.04.2027)",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein",
+          "beleg": []
+        }
+      },
+      "hinweise": [
+        {
+          "art": "abweichender_termin",
+          "text": "Abweichender Umsetzungstermin: Mitteilung 51 legt fest, dass diese Codeliste 'bereits zum 1. September 2025 umzusetzen ist' — Begründung: MsbG-Anpassungen, neue Artikel-ID mit Gültigkeit zum 01.01.2026. Der reguläre Termin der Mitteilung 51 wäre der 01.10.2025 gewesen.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 51",
+              "fundstelle": "bereits zum 1. September 2025 umzusetzen"
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T08:00:00Z",
+        "etappe": 4,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug (unverändert seit 17.09.), Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber), Volltext (pdfminer); Referenzprüfung für Kriterium C durch Volltextsuche in den maßgeblichen Fassungen der Etappen 1–3. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "CL-ZEITREIHENTYPEN",
+        "dokumentname": "Codeliste der Zeitreihentypen",
+        "dokumenttyp": "Codeliste",
+        "kategorie": "Codeliste",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "bdew_topic_id": 141,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 19 (Inkrafttreten 01.10.2021); BDEW-Basis bytegleich"
+          },
+          {
+            "kriterium": "C",
+            "beleg": "UTILMD MIG Strom S2.2, 9 Fundstellen"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "1.1d",
+        "veroeffentlicht_am": {
+          "datum": "2021-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 19",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_19/Mitteilung_Nr_19.html"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2021-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 19",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_19/Mitteilung_Nr_19.html",
+              "fundstelle": "verbindlich ab 01.10.2021"
+            },
+            {
+              "quelle": "BDEW-API id 7356",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Codeliste der Zeitreihentypen 1.1d - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 16.07.2021\", validFrom=2021-10-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56, die diese Version ablöst"
+            },
+            {
+              "quelle": "BDEW-API id 7356",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Codeliste der Zeitreihentypen 1.1d - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 16.07.2021\", validFrom=2021-10-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 19,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_19/Mitteilung_Nr_19.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2021-04-01",
+          "zusammenhang": "als Anlage der Mitteilung 19 veröffentlicht; in Mitteilung 56 nicht genannt, daher fortgeltend"
+        },
+        "dokumentstatus": "verbindlich_fortgeltend",
+        "vorgaenger": null,
+        "nachfolger": []
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bdew:7355",
+          "titel_in_quelle": "Codeliste der Zeitreihentypen 1.1d",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7355,
+            "bdew_file_id": 8852,
+            "bdew_valid_from": "2021-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/8852",
+          "dateiname": "Codeliste_der_Zeitreihentypen_1_1d_20210401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 218713,
+          "sha256": "64aa045322c386d07d580400abe0398112a3a5c8c03797f10eeeac515ce4650b",
+          "bytegleich_mit": [],
+          "seiten": 13,
+          "deckblatt": {
+            "version": "1.1d",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2021",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 12,
+            "seite_bis": 12,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {
+              "Fehler (03.04.2020)": 1,
+              "Genehmigt": 4
+            }
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 19,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 19 (SHA-256 am 17./18.09.2026 geprüft)"
+          }
+        },
+        {
+          "fassung_id": "bdew:7356",
+          "titel_in_quelle": "Codeliste der Zeitreihentypen 1.1d - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 16.07.2021",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2021-07-16",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2021-07-16",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7356,
+            "bdew_file_id": 8854,
+            "bdew_valid_from": "2021-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/8854",
+          "dateiname": "Codeliste_der_Zeitreihentypen_1_1d_Lesefassung_20210716.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 206794,
+          "sha256": "c4c5a21911ca3dbf86e255b0dab277eeb6ab98f12e6041d46fcdb1c814a88483",
+          "bytegleich_mit": [],
+          "seiten": 12,
+          "deckblatt": {
+            "version": "1.1d",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2021",
+            "stand_fehlerkorrektur": "16.07.2021",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 12,
+            "seite_bis": 12,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {}
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Neuester Stand der Stand-Reihe, PDF",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:7356",
+        "massgebliche_fassung_pdf_sha256": "c4c5a21911ca3dbf86e255b0dab277eeb6ab98f12e6041d46fcdb1c814a88483",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "A: Anlage der Mitteilung 19 (Inkrafttreten 01.10.2021); BDEW-Basis bytegleich; C: UTILMD MIG Strom S2.2, 9 Fundstellen"
+          },
+          {
+            "regel": "Version am Stichtag bestimmen",
+            "ergebnis": "1.1d, veröffentlicht mit Mitteilung 19, gültig ab 2021-10-01"
+          },
+          {
+            "regel": "Fassungen sammeln, Typ aus Titel und Deckblatt",
+            "ergebnis": "2 Fassungen: basis×1, konsolidiert_fehlerkorrektur×1"
+          },
+          {
+            "regel": "Stand-Reihe bilden, neuester Stand als PDF (Abschnitt 6/6a)",
+            "ergebnis": "konsolidiert_fehlerkorrektur 2021-07-16"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "bdew:7356, SHA-256 c4c5a21911ca3dbf86e255b0dab277eeb6ab98f12e6041d46fcdb1c814a88483"
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:7355",
+            "zweck": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion"
+          }
+        ],
+        "begruendung": "Codeliste der Zeitreihentypen 1.1d gilt am 01.10.2026, weil Mitteilung 19 sie verbindlich ab 01.10.2021 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2021-07-16."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "nein",
+          "erlaeuterung": "In Mitteilung 56 nicht genannt",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "ja",
+          "erlaeuterung": "Version 1.1d gilt seit 2021-10-01 fort",
+          "beleg": []
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 1.1d am Stichtag als gültig",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7356",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "maßgebliche Fassung: title=\"Codeliste der Zeitreihentypen 1.1d - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 16.07.2021\", validFrom=2021-10-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Stände: 2021-07-16",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2021-07-16",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7356",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "neuester Stand: title=\"Codeliste der Zeitreihentypen 1.1d - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 16.07.2021\", validFrom=2021-10-01, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (siehe Frage 7). Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein Nachfolger in Mitteilung 57",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein",
+          "beleg": []
+        }
+      },
+      "hinweise": [
+        {
+          "art": "quellenauffaelligkeit",
+          "text": "Der Fehlerkorrekturstand (16.07.2021) liegt vor dem Gültigkeitsbeginn der Version (01.10.2021): die Korrektur erfolgte zwischen Veröffentlichung (01.04.2021) und Inkrafttreten. Die Stand-Reihe ordnet trotzdem eindeutig.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:7356",
+              "seite": 1
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T08:00:00Z",
+        "etappe": 4,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug (unverändert seit 17.09.), Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber), Volltext (pdfminer); Referenzprüfung für Kriterium C durch Volltextsuche in den maßgeblichen Fassungen der Etappen 1–3. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "CL-LAENDERCODES",
+        "dokumentname": "Codeliste der europäischen Ländercodes",
+        "dokumenttyp": "Codeliste",
+        "kategorie": "Codeliste",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "bdew_topic_id": 133,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung Nr. 58 der älteren GPKE/GeLi-Gas-Reihe; BDEW-Basis bytegleich"
+          },
+          {
+            "kriterium": "C",
+            "beleg": "In 5 maßgeblichen Fassungen referenziert, u. a. PARTIN AHB (48), UTILMD AHB Gas/Strom (je 24)"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "1.0",
+        "veroeffentlicht_am": {
+          "datum": "2017-04-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 58",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_81_GPKE_GeLi/Mitteilung_Nr_58/Mitteilung_Nr58_GPKE_GeLi_Gas_Inhalt.html"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2017-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 58",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_81_GPKE_GeLi/Mitteilung_Nr_58/Mitteilung_Nr58_GPKE_GeLi_Gas_Inhalt.html",
+              "fundstelle": "verbindlich ab 01.10.2017"
+            },
+            {
+              "quelle": "BDEW-API id 7342",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Codeliste der europäischen Ländercodes 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.03.2023\", validFrom=2023-03-30, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56, die diese Version ablöst"
+            },
+            {
+              "quelle": "BDEW-API id 7342",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Codeliste der europäischen Ländercodes 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.03.2023\", validFrom=2023-03-30, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 58,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_81_GPKE_GeLi/Mitteilung_Nr_58/Mitteilung_Nr58_GPKE_GeLi_Gas_Inhalt.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2017-04-01",
+          "zusammenhang": "als Anlage der Mitteilung 58 veröffentlicht; in Mitteilung 56 nicht genannt, daher fortgeltend"
+        },
+        "dokumentstatus": "verbindlich_fortgeltend",
+        "vorgaenger": null,
+        "nachfolger": []
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bdew:7341",
+          "titel_in_quelle": "Codeliste der europäischen Ländercodes 1.0",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7341,
+            "bdew_file_id": 8742,
+            "bdew_valid_from": "2017-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/8742",
+          "dateiname": "Codeliste europaeischer Laendercodes_1_0_20170401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 96524,
+          "sha256": "52ef49ae21d9d0ea92073970daa7b30cbe491f92c7a6e109de3598a716b7cac9",
+          "bytegleich_mit": [],
+          "seiten": 4,
+          "deckblatt": {
+            "version": "1.0",
+            "stand_mig": null,
+            "publikationsdatum": "01.04.2017",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": null,
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung_bytegleich",
+            "mitteilung_nummer": 58,
+            "vermerk": "bytegleich mit der Anlage der Mitteilung 58 (SHA-256 am 17./18.09.2026 geprüft)"
+          }
+        },
+        {
+          "fassung_id": "bdew:7342",
+          "titel_in_quelle": "Codeliste der europäischen Ländercodes 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.03.2023",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2023-03-30",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2023-03-30",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7342,
+            "bdew_file_id": 8856,
+            "bdew_valid_from": "2023-03-30",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/8856",
+          "dateiname": "Codeliste_europ_ischer_L_ndercode_1.0_Fehlerkorrektur_20230330.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 162815,
+          "sha256": "eaf6e278077ee5b5dbc866dc5adff4f184d5bc99f43994086b11becdb69d388a",
+          "bytegleich_mit": [],
+          "seiten": 5,
+          "deckblatt": {
+            "version": "1.0",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "01.04.2017",
+            "stand_fehlerkorrektur": "30.03.2023",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 5,
+            "seite_bis": 5,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (30.01.2019)": 1,
+              "Fehler (30.03.2023)": 1
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Neuester Stand der Stand-Reihe, PDF",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:7342",
+        "massgebliche_fassung_pdf_sha256": "eaf6e278077ee5b5dbc866dc5adff4f184d5bc99f43994086b11becdb69d388a",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "A: Anlage der Mitteilung Nr. 58 der älteren GPKE/GeLi-Gas-Reihe; BDEW-Basis bytegleich; C: In 5 maßgeblichen Fassungen referenziert, u. a. PARTIN AHB (48), UTILMD AHB Gas/Strom (je 24)"
+          },
+          {
+            "regel": "Version am Stichtag bestimmen",
+            "ergebnis": "1.0, veröffentlicht mit Mitteilung 58, gültig ab 2017-10-01"
+          },
+          {
+            "regel": "Fassungen sammeln, Typ aus Titel und Deckblatt",
+            "ergebnis": "2 Fassungen: basis×1, konsolidiert_fehlerkorrektur×1"
+          },
+          {
+            "regel": "Stand-Reihe bilden, neuester Stand als PDF (Abschnitt 6/6a)",
+            "ergebnis": "konsolidiert_fehlerkorrektur 2023-03-30"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "bdew:7342, SHA-256 eaf6e278077ee5b5dbc866dc5adff4f184d5bc99f43994086b11becdb69d388a"
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:7341",
+            "zweck": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion"
+          }
+        ],
+        "begruendung": "Codeliste der europäischen Ländercodes 1.0 gilt am 01.10.2026, weil Mitteilung 58 sie verbindlich ab 01.10.2017 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2023-03-30."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "nein",
+          "erlaeuterung": "In Mitteilung 56 nicht genannt",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "ja",
+          "erlaeuterung": "Version 1.0 gilt seit 2017-10-01 fort",
+          "beleg": []
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 1.0 am Stichtag als gültig",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7342",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "maßgebliche Fassung: title=\"Codeliste der europäischen Ländercodes 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.03.2023\", validFrom=2023-03-30, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Stände: 2023-03-30",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2023-03-30",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7342",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "neuester Stand: title=\"Codeliste der europäischen Ländercodes 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 30.03.2023\", validFrom=2023-03-30, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (siehe Frage 7). Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein Nachfolger in Mitteilung 57",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein",
+          "beleg": []
+        }
+      },
+      "hinweise": [
+        {
+          "art": "quellenauffaelligkeit",
+          "text": "Veröffentlicht in der älteren Mitteilungsreihe (Mitteilung Nr. 58 der Reihe GPKE/GeLi Gas, nicht der Reihe 'Datenformate'); Publikationsdatum laut Deckblatt 01.04.2017, Gültigkeit ab 01.10.2017. Die Basisfassung ist bytegleich mit der dortigen Anlage.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung Nr. 58 (GPKE/GeLi Gas)"
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T08:00:00Z",
+        "etappe": 4,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug (unverändert seit 17.09.), Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber), Volltext (pdfminer); Referenzprüfung für Kriterium C durch Volltextsuche in den maßgeblichen Fassungen der Etappen 1–3. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "CL-LOKATIONSBUENDEL",
+        "dokumentname": "Codeliste der Lokationsbündelstrukturen",
+        "dokumenttyp": "Codeliste",
+        "kategorie": "Codeliste",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "bdew_topic_id": 135,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 33 (Inkrafttreten 01.10.2023): 'Codeliste der Lokationsbündelstrukturen 1.0 (PDF / 6 MB)'"
+          },
+          {
+            "kriterium": "B",
+            "beleg": "PID 4.0 nennt Lokationsbündel 35-mal"
+          },
+          {
+            "kriterium": "C",
+            "beleg": "UTILMD AHB Strom (114 Fundstellen), UTILMD MIG Strom (33)"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "1.0",
+        "veroeffentlicht_am": {
+          "datum": "2023-04-03",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 33",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_33/Mitteilung_Nr33.html"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2023-10-01",
+          "art": "ausdruecklich",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 33",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_33/Mitteilung_Nr33.html",
+              "fundstelle": "verbindlich ab 01.10.2023"
+            },
+            {
+              "quelle": "BDEW-API id 7713",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Codeliste der Lokationsbündelstrukturen 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 13.12.2024\", validFrom=2024-12-13, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56, die diese Version ablöst"
+            },
+            {
+              "quelle": "BDEW-API id 7713",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Codeliste der Lokationsbündelstrukturen 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 13.12.2024\", validFrom=2024-12-13, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": {
+          "nummer": 33,
+          "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_33/Mitteilung_Nr33.html",
+          "typ": "Veröffentlichung",
+          "veroeffentlicht_am": "2023-04-03",
+          "zusammenhang": "als Anlage der Mitteilung 33 veröffentlicht; in Mitteilung 56 nicht genannt, daher fortgeltend"
+        },
+        "dokumentstatus": "verbindlich_fortgeltend",
+        "vorgaenger": null,
+        "nachfolger": []
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bdew:5925",
+          "titel_in_quelle": "Codeliste der Lokationsbündelstrukturen 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.12.2023",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2023-12-12",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2023-12-12",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 5925,
+            "bdew_file_id": 8763,
+            "bdew_valid_from": "2024-10-01",
+            "bdew_valid_to": "2024-09-22",
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/8763",
+          "dateiname": "Codeliste-Lokationsbu_ndelstrukturen_1_0_Fehlerkorrektur_20231212.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 802322,
+          "sha256": "0d894483ce2ae2ed310eda0bc73f408a74d14ed38cf799ff6ba7d483efe0e362",
+          "bytegleich_mit": [],
+          "seiten": 50,
+          "deckblatt": {
+            "version": "1.0",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "31.03.2023",
+            "stand_fehlerkorrektur": "12.12.2023",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": "01.10.2024",
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 49,
+            "seite_bis": 50,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (12.12.2023)": 2
+            }
+          },
+          "rolle": "ersetzt",
+          "rolle_begruendung": "Älterer Stand 2023-12-12",
+          "ersetzt_durch": "bdew:7663",
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:5926",
+          "titel_in_quelle": "Codeliste der Lokationsbündelstrukturen 1.0 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.12.2023",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 5926,
+            "bdew_file_id": 8767,
+            "bdew_valid_from": "2024-10-01",
+            "bdew_valid_to": "2024-09-22",
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/8767",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:7345",
+          "titel_in_quelle": "Codeliste der Lokationsbündelstrukturen 1.0",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7345,
+            "bdew_file_id": 8761,
+            "bdew_valid_from": "2024-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/8761",
+          "dateiname": "Codeliste-Lokationsbuendelstrukturen_1_0_20230331.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 5806428,
+          "sha256": "d07151871556e74f66834a3693b21e660eef60fd6a4b33fac6baca6311e9fc36",
+          "bytegleich_mit": [],
+          "seiten": 44,
+          "deckblatt": {
+            "version": "1.0",
+            "stand_mig": null,
+            "publikationsdatum": "31.03.2023",
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": "01.10.2024",
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": [
+              "31.03.2023"
+            ]
+          },
+          "aenderungshistorie": null,
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "anlage_der_mitteilung",
+            "mitteilung_nummer": 33,
+            "vermerk": "Basisfassung der in Mitteilung 33 veröffentlichten Version; Bytegleichheit nicht belegt"
+          }
+        },
+        {
+          "fassung_id": "bdew:7346",
+          "titel_in_quelle": "Codeliste der Lokationsbündelstrukturen 1.0 - informatorische Lesefassung",
+          "fassungstyp": "informatorische_lesefassung",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7346,
+            "bdew_file_id": 8765,
+            "bdew_valid_from": "2024-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/8765",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:7663",
+          "titel_in_quelle": "Codeliste der Lokationsbündelstrukturen 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.12.2024",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2024-12-12",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2024-12-12",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7663,
+            "bdew_file_id": 11125,
+            "bdew_valid_from": "2024-12-13",
+            "bdew_valid_to": "2024-12-31",
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/11125",
+          "dateiname": "Codeliste-Lokationsbu_ndelstrukturen_1_0_Fehlerkorrektur_20241213.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 959797,
+          "sha256": "abd8d72276cc6c04fb2a42383e4c862b0c2a6ea5176a81ba3a4583b0188a7ff4",
+          "bytegleich_mit": [],
+          "seiten": 52,
+          "deckblatt": {
+            "version": "1.0",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "31.03.2023",
+            "stand_fehlerkorrektur": "13.12.2024",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": "01.10.2024",
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 49,
+            "seite_bis": 52,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (12.12.2023)": 2,
+              "Fehler (13.12.2024)": 1,
+              "Fehler (23.09.2024)": 5
+            }
+          },
+          "rolle": "ersetzt",
+          "rolle_begruendung": "Älterer Stand 2024-12-12",
+          "ersetzt_durch": "bdew:7713",
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:7664",
+          "titel_in_quelle": "Codeliste der Lokationsbündelstrukturen 1.0 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 13.12.2024",
+          "fassungstyp": "informatorische_lesefassung_konsolidiert",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7664,
+            "bdew_file_id": 11126,
+            "bdew_valid_from": "2024-12-13",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/11126",
+          "dateiname": null,
+          "dateityp": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "abgerufen": false,
+          "nicht_abgerufen_grund": "kein PDF; nach Abschnitt 6/7 nicht maßgeblich, nicht geladen",
+          "groesse_bytes": null,
+          "sha256": null,
+          "bytegleich_mit": [],
+          "seiten": null,
+          "deckblatt": null,
+          "aenderungshistorie": null,
+          "rolle": "informativ",
+          "rolle_begruendung": "Informatorische Lesefassung; nicht maßgeblich (Abschnitt 6)",
+          "ersetzt_durch": null,
+          "abruf_utc": null,
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        },
+        {
+          "fassung_id": "bdew:7713",
+          "titel_in_quelle": "Codeliste der Lokationsbündelstrukturen 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 13.12.2024",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2024-12-13",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2024-12-13",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7713,
+            "bdew_file_id": 11418,
+            "bdew_valid_from": "2024-12-13",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/11418",
+          "dateiname": "Codeliste-Lokationsbu_ndelstrukturen_1_0_Fehlerkorrektur_20241213.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 6727336,
+          "sha256": "0ae47f79bb719c48920fed9019657eec84659a7f7edbc11805444499dc11ac96",
+          "bytegleich_mit": [],
+          "seiten": 52,
+          "deckblatt": {
+            "version": "1.0",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": "31.03.2023",
+            "stand_fehlerkorrektur": "13.12.2024",
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": "01.10.2024",
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 49,
+            "seite_bis": 52,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (12.12.2023)": 2,
+              "Fehler (13.12.2024)": 1,
+              "Fehler (23.09.2024)": 5
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Neuester Stand der Stand-Reihe, PDF",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:7713",
+        "massgebliche_fassung_pdf_sha256": "0ae47f79bb719c48920fed9019657eec84659a7f7edbc11805444499dc11ac96",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "A: Anlage der Mitteilung 33 (Inkrafttreten 01.10.2023): 'Codeliste der Lokationsbündelstrukturen 1.0 (PDF / 6 MB)'; B: PID 4.0 nennt Lokationsbündel 35-mal; C: UTILMD AHB Strom (114 Fundstellen), UTILMD MIG Strom (33)"
+          },
+          {
+            "regel": "Version am Stichtag bestimmen",
+            "ergebnis": "1.0, veröffentlicht mit Mitteilung 33, gültig ab 2023-10-01"
+          },
+          {
+            "regel": "Fassungen sammeln, Typ aus Titel und Deckblatt",
+            "ergebnis": "7 Fassungen: konsolidiert_fehlerkorrektur×3, informatorische_lesefassung_konsolidiert×2, basis×1, informatorische_lesefassung×1"
+          },
+          {
+            "regel": "Stand-Reihe bilden, neuester Stand als PDF (Abschnitt 6/6a)",
+            "ergebnis": "konsolidiert_fehlerkorrektur 2023-12-12, konsolidiert_fehlerkorrektur 2024-12-12, konsolidiert_fehlerkorrektur 2024-12-13"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "bdew:7713, SHA-256 0ae47f79bb719c48920fed9019657eec84659a7f7edbc11805444499dc11ac96"
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:7345",
+            "zweck": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion"
+          }
+        ],
+        "begruendung": "Codeliste der Lokationsbündelstrukturen 1.0 gilt am 01.10.2026, weil Mitteilung 33 sie verbindlich ab 01.10.2023 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2024-12-13."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "nein",
+          "erlaeuterung": "In Mitteilung 56 nicht genannt",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "ja",
+          "erlaeuterung": "Version 1.0 gilt seit 2023-10-01 fort",
+          "beleg": []
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 1.0 am Stichtag als gültig",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7713",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "maßgebliche Fassung: title=\"Codeliste der Lokationsbündelstrukturen 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 13.12.2024\", validFrom=2024-12-13, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Stände: 2023-12-12, 2024-12-12, 2024-12-13",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2024-12-13",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7713",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "neuester Stand: title=\"Codeliste der Lokationsbündelstrukturen 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 13.12.2024\", validFrom=2024-12-13, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (siehe Frage 7). Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein Nachfolger in Mitteilung 57",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein",
+          "beleg": []
+        }
+      },
+      "hinweise": [
+        {
+          "art": "quellenauffaelligkeit",
+          "text": "Die BNetzA-Anlage aus Mitteilung 32 (892 KB) ist NICHT bytegleich mit der BDEW-Basisfassung (5,8 MB). Mitteilung 32 war die Konsultation; die verbindliche Fassung steht in Mitteilung 33 ('Codeliste der Lokationsbündelstrukturen 1.0 (PDF / 6 MB)'), deren Anlagen-Link auf data.bundesnetzagentur.de heute HTTP 404 liefert. Die Größenangabe der Mitteilung 33 passt zur BDEW-Datei; ein Byte-Beleg ist derzeit nicht möglich.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 33",
+              "fundstelle": "Codeliste der Lokationsbündelstrukturen 1.0 (PDF / 6 MB)"
+            },
+            {
+              "quelle": "bdew:7345",
+              "fundstelle": "5.806.428 Bytes"
+            }
+          ]
+        },
+        {
+          "art": "quellenauffaelligkeit",
+          "text": "Drei Fehlerkorrekturstände dicht beieinander: 12.12.2023 (bdew:5925), 12.12.2024 (bdew:7663, validTo 31.12.2024) und 13.12.2024 (bdew:7713, offen). Die beiden Dezember-2024-Stände unterscheiden sich um einen Tag und in der Dateigröße (0,96 MB gegen 6,7 MB).",
+          "auswirkung_auf_auswahl": true,
+          "beleg": [
+            {
+              "quelle": "bdew:7663"
+            },
+            {
+              "quelle": "bdew:7713"
+            }
+          ]
+        },
+        {
+          "art": "abweichender_termin",
+          "text": "Mitteilung 57 (Konsultation für 01.04.2027) kündigt an, die Lokationsbündelstruktur aus der UTILMD auszubauen: 'Dadurch wird die bisherige Codeliste der Lokationsbündelstruktur obsolet.' Für den Stichtag 01.10.2026 ohne Wirkung.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T08:00:00Z",
+        "etappe": 4,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug (unverändert seit 17.09.), Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber), Volltext (pdfminer); Referenzprüfung für Kriterium C durch Volltextsuche in den maßgeblichen Fassungen der Etappen 1–3. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    },
+    {
+      "schema_version": "0.6",
+      "stichtag": "2026-10-01",
+      "dokument": {
+        "dokument_schluessel": "CL-SLP-TUM",
+        "dokumentname": "Codeliste der Standardlastprofile nach TU München-Verfahren",
+        "dokumenttyp": "Codeliste",
+        "kategorie": "Codeliste",
+        "nachrichtentyp": null,
+        "sparte": "beide",
+        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "bdew_topic_id": 138,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "C",
+            "beleg": "UTILMD AHB Gas 1.2 (7 Fundstellen), UTILMD MIG Gas G1.2 (2)"
+          }
+        ]
+      },
+      "dokumentversion": {
+        "version": "1.1",
+        "veroeffentlicht_am": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BDEW-API",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "kein Veröffentlichungsdatum in der Quelle"
+            }
+          ]
+        },
+        "gueltig_ab": {
+          "datum": "2015-10-01",
+          "art": "abgeleitet",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7352",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validFrom: title=\"Codeliste der Standardlastprofile nach TU München-Verfahren 1.1 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 22.05.2015\", validFrom=2015-10-01, validTo=None"
+            }
+          ]
+        },
+        "gueltig_bis": {
+          "datum": null,
+          "art": "offen",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "keine verbindliche Mitteilung nach Nr. 56, die diese Version ablöst"
+            },
+            {
+              "quelle": "BDEW-API id 7352",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "BDEW validTo: title=\"Codeliste der Standardlastprofile nach TU München-Verfahren 1.1 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 22.05.2015\", validFrom=2015-10-01, validTo=None"
+            }
+          ]
+        },
+        "mitteilung": null,
+        "quelle_ausserhalb_mitteilungsreihe": "Ausschließlich auf BDEW-MaKo veröffentlicht; in keiner der 95 Mitteilungen der BK6/BK7-Reihe genannt. Aufnahme über Kriterium C (Referenz aus UTILMD Gas).",
+        "dokumentstatus": "verbindlich_fortgeltend",
+        "vorgaenger": null,
+        "nachfolger": []
+      },
+      "fassungen": [
+        {
+          "fassung_id": "bdew:7351",
+          "titel_in_quelle": "Codeliste der Standardlastprofile nach TU München-Verfahren 1.1",
+          "fassungstyp": "basis",
+          "fassungstyp_beleg": "BDEW-Titel",
+          "fehlerkorrekturstand": null,
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": null,
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7351,
+            "bdew_file_id": 9092,
+            "bdew_valid_from": "2015-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/9092",
+          "dateiname": "EDI@Energy_Codeliste_TUM-_und_BDEW-SLP_Gas_20150401.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 280622,
+          "sha256": "ccbc510d9ebe89c3c8c1a46d0635e8a26560006f03c92d2baf010553b5ad87b3",
+          "bytegleich_mit": [],
+          "seiten": 10,
+          "deckblatt": {
+            "version": "1.1",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 9,
+            "seite_bis": 9,
+            "inhalt": "aenderungen_gegenueber_vorgaenger",
+            "statusvermerke": {}
+          },
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "In keiner der 95 Mitteilungen der BK6/BK7-Reihe genannt (Volltextsuche 17.09.2026)"
+          }
+        },
+        {
+          "fassung_id": "bdew:7352",
+          "titel_in_quelle": "Codeliste der Standardlastprofile nach TU München-Verfahren 1.1 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 22.05.2015",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "fassungstyp_beleg": "BDEW-Titel + sichtbarer Deckblattvermerk",
+          "fehlerkorrekturstand": "2015-05-22",
+          "stand_ausserordentlich": null,
+          "stand_reihe_datum": "2015-05-22",
+          "quelle": "BDEW-MaKo",
+          "quelle_ref": {
+            "bdew_id": 7352,
+            "bdew_file_id": 9089,
+            "bdew_valid_from": "2015-10-01",
+            "bdew_valid_to": null,
+            "bdew_frei": true
+          },
+          "url": "https://www.bdew-mako.de/api/downloadFile/9089",
+          "dateiname": "EDI@Energy_Codeliste_SLP_nach_TUM-Verfahren_Lesefassung_20150522.pdf",
+          "dateityp": "application/pdf",
+          "abgerufen": true,
+          "nicht_abgerufen_grund": null,
+          "groesse_bytes": 278253,
+          "sha256": "c57fcad76b92285810a4f6ac2bb1d901fd0a318270edf00263dfd920f0edf9c0",
+          "bytegleich_mit": [],
+          "seiten": 10,
+          "deckblatt": {
+            "version": "1.1",
+            "stand_mig": null,
+            "publikationsdatum": null,
+            "urspruengliches_publikationsdatum": null,
+            "stand_fehlerkorrektur": null,
+            "stand_ausserordentlich": null,
+            "ausserordentlich_grund": null,
+            "anzuwenden_ab": null,
+            "sichtbare_vermerke": [
+              "Konsolidierte Lesefassung mit Fehlerkorrekturen"
+            ],
+            "unsichtbarer_resttext": []
+          },
+          "aenderungshistorie": {
+            "seite_von": 9,
+            "seite_bis": 9,
+            "inhalt": "nur_fehlerkorrekturen_dieser_version",
+            "statusvermerke": {
+              "Fehler (22.05.2015)": 2
+            }
+          },
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Neuester Stand der Stand-Reihe, PDF",
+          "ersetzt_durch": null,
+          "abruf_utc": "2026-09-18T07:40:00Z",
+          "mitteilungsbezug": {
+            "art": "kein_mitteilungsbezug",
+            "mitteilung_nummer": null,
+            "vermerk": "Fassung ausschließlich auf BDEW-MaKo veröffentlicht, in keiner BNetzA-Mitteilung genannt"
+          }
+        }
+      ],
+      "auswahl": {
+        "massgebliche_fassung_id": "bdew:7352",
+        "massgebliche_fassung_pdf_sha256": "c57fcad76b92285810a4f6ac2bb1d901fd0a318270edf00263dfd920f0edf9c0",
+        "regelschritte": [
+          {
+            "regel": "Aufnahme prüfen (aufnahmeregel.md)",
+            "ergebnis": "C: UTILMD AHB Gas 1.2 (7 Fundstellen), UTILMD MIG Gas G1.2 (2)"
+          },
+          {
+            "regel": "Version am Stichtag bestimmen",
+            "ergebnis": "1.1, gültig ab 2015-10-01 laut BDEW; keine Mitteilung"
+          },
+          {
+            "regel": "Fassungen sammeln, Typ aus Titel und Deckblatt",
+            "ergebnis": "2 Fassungen: basis×1, konsolidiert_fehlerkorrektur×1"
+          },
+          {
+            "regel": "Stand-Reihe bilden, neuester Stand als PDF (Abschnitt 6/6a)",
+            "ergebnis": "konsolidiert_fehlerkorrektur 2015-05-22"
+          },
+          {
+            "regel": "PDF als Referenz (Abschnitt 7)",
+            "ergebnis": "bdew:7352, SHA-256 c57fcad76b92285810a4f6ac2bb1d901fd0a318270edf00263dfd920f0edf9c0"
+          }
+        ],
+        "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:7351",
+            "zweck": "Durch neueren Stand überholt; Quelle der Änderungshistorie gegenüber der Vorversion"
+          }
+        ],
+        "begruendung": "Codeliste der Standardlastprofile nach TU München-Verfahren 1.1 gilt am 01.10.2026, weil BDEW sie seit 2015-10-01 ohne Endedatum führt und die maßgeblichen UTILMD-Gas-Dokumente sie referenzieren; maßgeblich ist die konsolidierte Fassung Stand 2015-05-22."
+      },
+      "fragenkatalog": {
+        "f1_durch_mitteilung_geaendert": {
+          "antwort": "nein",
+          "erlaeuterung": "In Mitteilung 56 nicht genannt",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 56",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+            }
+          ]
+        },
+        "f2_fortgeltende_vorversion": {
+          "antwort": "ja",
+          "erlaeuterung": "Version 1.1 gilt seit 2015-10-01 fort",
+          "beleg": []
+        },
+        "f3_bdew_gueltige_version": {
+          "antwort": "ja",
+          "erlaeuterung": "BDEW führt 1.1 am Stichtag als gültig",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7352",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "maßgebliche Fassung: title=\"Codeliste der Standardlastprofile nach TU München-Verfahren 1.1 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 22.05.2015\", validFrom=2015-10-01, validTo=None"
+            }
+          ]
+        },
+        "f4_fehlerkorrekturen": {
+          "antwort": "ja",
+          "erlaeuterung": "Stände: 2015-05-22",
+          "beleg": [
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f5_konsolidierte_fassung": {
+          "antwort": "ja",
+          "erlaeuterung": "neuester Stand 2015-05-22",
+          "beleg": [
+            {
+              "quelle": "BDEW-API id 7352",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "neuester Stand: title=\"Codeliste der Standardlastprofile nach TU München-Verfahren 1.1 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 22.05.2015\", validFrom=2015-10-01, validTo=None"
+            }
+          ]
+        },
+        "f6_neuere_noch_nicht_gueltige_version": {
+          "antwort": "nein",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Mitteilung 57 ist am 31.07.2026 veröffentlicht, enthält aber ausschließlich Konsultationsfassungen für den 01.04.2027 (siehe Frage 7). Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026.",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+            }
+          ]
+        },
+        "f7_konsultationsfassung": {
+          "antwort": "nein",
+          "erlaeuterung": "Kein Nachfolger in Mitteilung 57",
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
+            }
+          ]
+        },
+        "f8_widerspruch_bnetza_bdew": {
+          "antwort": "nein",
+          "erlaeuterung": "Version und Gültigkeit stimmen überein",
+          "beleg": []
+        }
+      },
+      "hinweise": [
+        {
+          "art": "quellenauffaelligkeit",
+          "text": "Kein Treffer in den 95 Mitteilungen der BK6/BK7-Reihe: Die Codeliste ist ausschließlich auf BDEW-MaKo veröffentlicht (Fall K-1). Die Aufnahme stützt sich allein auf Kriterium C — UTILMD AHB Gas 1.2 (7 Fundstellen) und UTILMD MIG Gas G1.2 (2).",
+          "auswirkung_auf_auswahl": true,
+          "beleg": [
+            {
+              "quelle": "BNetzA Mitteilungsliste",
+              "fundstelle": "0 Treffer für 'TU München' / 'Standardlastprofile nach'"
+            }
+          ]
+        },
+        {
+          "art": "quellenauffaelligkeit",
+          "text": "Deckblatt ohne Publikationsdatum; das Gültig-ab (01.10.2015) stammt aus dem BDEW-Feld validFrom und ist deshalb als 'abgeleitet' geführt.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "bdew:7351",
+              "seite": 1
+            }
+          ]
+        }
+      ],
+      "analyse": {
+        "analysezeitpunkt_utc": "2026-09-18T08:00:00Z",
+        "etappe": 4,
+        "ticket": "#64",
+        "methode": "Deterministisch: BDEW-API-Abzug (unverändert seit 17.09.), Download aller freien PDF-Fassungen, SHA-256, Deckblatt (pdfplumber), Volltext (pdfminer); Referenzprüfung für Kriterium C durch Volltextsuche in den maßgeblichen Fassungen der Etappen 1–3. Kein LLM.",
+        "bdew_api_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f"
+      }
+    }
+  ]
+}

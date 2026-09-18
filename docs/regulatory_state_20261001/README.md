@@ -12,7 +12,7 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 | 1 | Pilot UTILMD (AHB/MIG Strom + Gas) | **abgeschlossen**, Schema und 9a-Vorschlag zur Bestätigung | [`etappe1_utilmd.md`](etappe1_utilmd.md), [`etappe1_utilmd_provenienz.json`](etappe1_utilmd_provenienz.json), [`provenienz_schema.json`](provenienz_schema.json), [`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md) |
 | 2 | Übrige EDIFACT-Nachrichtentypen (alle spartenübergreifenden, einmalig) | **abgeschlossen**, O-11 bestätigt | [`etappe2_edifact.md`](etappe2_edifact.md), [`etappe2_edifact_provenienz.json`](etappe2_edifact_provenienz.json) |
 | 3 | Gasspezifika: SSQNOT, GeLi Gas 3.0, Gas-Anwendbarkeit der spartenübergreifenden Dokumente | **abgeschlossen** | [`etappe3_gas.md`](etappe3_gas.md), [`etappe3_gas_provenienz.json`](etappe3_gas_provenienz.json) |
-| 4 | PID, Codelisten, Allgemeine Festlegungen | offen | — |
+| 4 | PID, Codelisten, Allgemeine Festlegungen | **abgeschlossen** | [`etappe4_querschnitt.md`](etappe4_querschnitt.md), [`etappe4_querschnitt_provenienz.json`](etappe4_querschnitt_provenienz.json) |
 | 5 | Entscheidungsbaum-Diagramme | offen | — |
 | 6 | Übertragungsweg / AS4 / API / XML | offen | — |
 | 7 | Konsolidierung, Widersprüche, Regulatory-State-Objekt, Vorschlag `RegulatoryVersion` | offen | — |
