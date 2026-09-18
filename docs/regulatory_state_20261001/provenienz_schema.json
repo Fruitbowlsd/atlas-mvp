@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "atlas/regulatory_state/provenienz_schema_v0.json",
-  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.8)",
+  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.9)",
   "description": "Ein Datensatz je regulatorischer Dokumentversion am Stichtag. Drei Ebenen wie in Abschnitt 10 des Auftrags: Dokument → Dokumentversion → Fassungen (Dateien). Die Auswahl der maßgeblichen Fassung ist eine eigene, begründete Entscheidung und überschreibt keine Fassung. Nur Rechercheartefakt, kein Datenbankschema.",
   "type": "object",
   "required": [
@@ -26,7 +26,8 @@
         "0.5",
         "0.6",
         "0.7",
-        "0.8"
+        "0.8",
+        "0.9"
       ]
     },
     "stichtag": {
@@ -638,6 +639,20 @@
                 "type": "string"
               }
             }
+          },
+          "bestandteil_gruppe": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Ab v0.9 (Auftrag 11g, O-19a): gemeinsame Kennung für Fassungen einer Dokumentversion, die zusammen die vollständige normative Dokumentversion bilden (z. B. ein Release aus mehreren gleichrangigen Spezifikationsdateien). Normalfall null. Nur zulässig, wenn die Quellen die Teile selbst als eine Einheit führen."
+          },
+          "bestandteil": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Ab v0.9: Name des Bestandteils innerhalb der bestandteil_gruppe, z. B. 'Web-API (OpenAPI)'. Je bestandteil ist höchstens eine Fassung massgeblich; ohne bestandteil_gruppe gilt weiter genau eine massgebliche Fassung je Dokumentversion (geprüft außerhalb des JSON-Schemas, im Etappen-Validator)."
           }
         },
         "allOf": [
@@ -720,6 +735,28 @@
                 }
               }
             }
+          },
+          {
+            "if": {
+              "properties": {
+                "bestandteil_gruppe": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "bestandteil_gruppe"
+              ]
+            },
+            "then": {
+              "required": [
+                "bestandteil"
+              ],
+              "properties": {
+                "bestandteil": {
+                  "type": "string"
+                }
+              }
+            }
           }
         ]
       }
@@ -789,6 +826,32 @@
         "begruendung": {
           "type": "string",
           "description": "Ein Satz: 'Diese Version gilt ab …, weil …'"
+        },
+        "massgebliche_bestandteile": {
+          "type": "array",
+          "description": "Ab v0.9: nur bei bestandteil_gruppe — je Bestandteil die massgebliche Fassung. massgebliche_fassung_id nennt dann die erste Fassung dieser Liste.",
+          "items": {
+            "type": "object",
+            "required": [
+              "bestandteil",
+              "fassung_id"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "bestandteil": {
+                "type": "string"
+              },
+              "fassung_id": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
         }
       }
     },

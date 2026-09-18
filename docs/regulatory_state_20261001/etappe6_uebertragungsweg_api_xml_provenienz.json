@@ -3,11 +3,11 @@
   "etappe": 6,
   "ticket": "#64",
   "schema": "provenienz_schema.json",
-  "schema_version": "0.8",
+  "schema_version": "0.9",
   "anzahl": 37,
   "datensaetze": [
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-ACKNOWLEDGEMENT-AWT",
@@ -226,7 +226,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8166 (application/pdf), SHA-256 ac4f54d2ff8e3b7d032b5251cacbcc955eac3f72cec3d11061fc96b0c497c243"
           }
         ],
@@ -353,7 +353,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-ACKNOWLEDGEMENT-FB",
@@ -535,7 +535,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8180 (application/pdf), SHA-256 eb203a46e03ceedcad45210d22b28b10c85ca7f21a8fd1d6fd2f93d1c0ee5ad9"
           }
         ],
@@ -662,7 +662,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-ACKNOWLEDGEMENT-XSD",
@@ -830,7 +830,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8171 (XSD), SHA-256 8ed085d90dcf16c4dce3e8f451a838975da64a8b0a7b7ff62c0ef0074b7d7c51"
           }
         ],
@@ -958,7 +958,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-ACTIVATION-AWT",
@@ -1189,7 +1189,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8168 (application/pdf), SHA-256 a9aaf8b4926bdd3ecad422d5b86021e5c5b8e8d39ff9040355090aff22675bbc"
           }
         ],
@@ -1316,7 +1316,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-ACTIVATION-FB",
@@ -1544,7 +1544,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2026-02-19"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8267 (application/pdf), SHA-256 30c7253bc9ba9f0de79a59a13e5fd4aa56f73cbd56b4d35fc0c5656fe689c41b"
           }
         ],
@@ -1682,7 +1682,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-ACTIVATION-XSD",
@@ -1887,7 +1887,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2026-02-19"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8266 (XSD), SHA-256 8da378e73c276c588cf0afefe2f563784476db960bd307d491547cc2bda5b7a0"
           }
         ],
@@ -2026,7 +2026,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-KOSTENBLATT-AWT",
@@ -2332,7 +2332,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2025-09-05"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8087 (application/pdf), SHA-256 aefd08d37b329941d44fa35a8a47139059d562b33b08916eaa96d081816c6b18"
           }
         ],
@@ -2443,7 +2443,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-KOSTENBLATT-FB",
@@ -2675,7 +2675,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2025-04-16"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7959 (application/pdf), SHA-256 fcc1555f40024ec950d4b85c4caa48ba04d28fe3db5ca283abeb3c1e437eb38a"
           }
         ],
@@ -2786,7 +2786,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-KOSTENBLATT-XSD",
@@ -2991,7 +2991,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2025-04-16"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7960 (XSD), SHA-256 e577eff9f0af927e6c70b5d59c5ed5df17bd60d5bfce68e4efeb98b35ef2c198"
           }
         ],
@@ -3115,7 +3115,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-NETWORKCONSTRAINT-AWT",
@@ -3338,7 +3338,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7923 (application/pdf), SHA-256 5720f8ff78a8af7e5e23b7ecb88bcb79b223b8f24aa448406e859307d7da1860"
           }
         ],
@@ -3438,7 +3438,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-NETWORKCONSTRAINT-FB",
@@ -3624,7 +3624,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7921 (application/pdf), SHA-256 11e49c8b7142de0ff7052a2b24b922da89d69e7cf2c6e6150bfba65447308b2a"
           }
         ],
@@ -3724,7 +3724,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-NETWORKCONSTRAINT-XSD",
@@ -3892,7 +3892,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7934 (XSD), SHA-256 59f6b8f126d19c6074794519ca8e8b616d8072e036f267be9cfb3357923d287d"
           }
         ],
@@ -4005,7 +4005,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-PLANNEDRESOURCESCHEDULE-AWT",
@@ -4228,7 +4228,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7935 (application/pdf), SHA-256 dbff4b7c6d5c2826145d3084c74d24e575b18b2953537e532b5d301ba6b24149"
           }
         ],
@@ -4328,7 +4328,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-PLANNEDRESOURCESCHEDULE-FB",
@@ -4606,7 +4606,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2025-04-16, konsolidiert_fehlerkorrektur 2026-02-19"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8272 (application/pdf), SHA-256 39ff864976b786c7f185deae3fd87e70e8b5eb60e4515cdc2963389ab7da2950"
           }
         ],
@@ -4717,7 +4717,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-PLANNEDRESOURCESCHEDULE-XSD",
@@ -4959,7 +4959,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2025-04-16, konsolidiert_fehlerkorrektur 2026-02-19"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8273 (XSD), SHA-256 759a59a4a982e54d5fd14b838131069d07d42f82526ea5277c991089e516cea0"
           }
         ],
@@ -5083,7 +5083,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-STAMMDATEN-AWT",
@@ -5306,7 +5306,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7939 (application/pdf), SHA-256 daa54b3627d7d3a6c71fb772961c0c2833505709a6d71ba87228ae3bdfc59d8c"
           }
         ],
@@ -5406,7 +5406,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-STAMMDATEN-FB",
@@ -5684,7 +5684,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2025-04-16, konsolidiert_fehlerkorrektur 2026-02-19"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8274 (application/pdf), SHA-256 13577d24c50088cc367a5557c3482d870f618a3775fb1648fd7364d9e72a8471"
           }
         ],
@@ -5815,7 +5815,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-STAMMDATEN-XSD",
@@ -6057,7 +6057,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2025-04-16, konsolidiert_fehlerkorrektur 2026-02-19"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8275 (XSD), SHA-256 f721c883a512a85a1f272093e27d6616369f777de912067f2fff5da3b8331483"
           }
         ],
@@ -6181,7 +6181,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-STATUSREQUEST-AWT",
@@ -6404,7 +6404,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7920 (application/pdf), SHA-256 c410c7ba272a8a3a7d68ec992b148892962f5b41ea42b70303dce05763f5b8d6"
           }
         ],
@@ -6504,7 +6504,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-STATUSREQUEST-FB",
@@ -6690,7 +6690,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7918 (application/pdf), SHA-256 f8e0f1e888d90b8377de3c5cadb1b45a4ab1af5084971a94b6c8c6b1cf9b87a0"
           }
         ],
@@ -6802,7 +6802,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-STATUSREQUEST-XSD",
@@ -6970,7 +6970,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7943 (XSD), SHA-256 d99f779007b86c3fc2a52b0956cd7029f9b15cd7e48b637335d139d7f995e2ce"
           }
         ],
@@ -7083,7 +7083,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-UNAVAILABILITY-AWT",
@@ -7306,7 +7306,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7917 (application/pdf), SHA-256 00a3f0a69cb960b6099bda1bc9e475012a52ef46f2897cb0192ad3031e3fcde9"
           }
         ],
@@ -7406,7 +7406,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-UNAVAILABILITY-FB",
@@ -7638,7 +7638,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2025-04-16"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7965 (application/pdf), SHA-256 fdc1a9611fcbb1da20a41a92dfe76831263aa9e4bb8dccb3ea5203bc6acaade6"
           }
         ],
@@ -7749,7 +7749,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-UNAVAILABILITY-XSD",
@@ -7954,7 +7954,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2025-04-16"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7966 (XSD), SHA-256 dc40e628efd42f03d0c3dc33c22dac3c73aba7d46f27bdfd26d83abae8ceb589"
           }
         ],
@@ -8078,7 +8078,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-KASKADE-AWT",
@@ -8297,7 +8297,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8173 (application/pdf), SHA-256 0876a15f9c2ecca5a4a2a68a0a2b95bf820dd066f661a15585d38ddb508e9af7"
           }
         ],
@@ -8409,7 +8409,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-KASKADE-FB",
@@ -8637,7 +8637,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2026-02-19"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8270 (application/pdf), SHA-256 d2c177e6ed65246b9457eba09c5f27a1a9f10cfba8a464d7251b751bde0d60df"
           }
         ],
@@ -8760,7 +8760,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-KASKADE-XSD",
@@ -8965,7 +8965,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2026-02-19"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8271 (XSD), SHA-256 49f06021679f0bbe735dd9dac163d2d915cd6fd18273ce6cc7f3bd408e3149b8"
           }
         ],
@@ -9101,7 +9101,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RD-AENDERUNGSHISTORIE",
@@ -10683,7 +10683,7 @@
             "ergebnis": "nach Publikationsdatum: 02.04.2024, 01.04.2025, 16.04.2025, 07.07.2025, 27.08.2025, 05.09.2025, 01.10.2025, 19.02.2026"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8268 (application/pdf), SHA-256 a68097bfd0e3ec223ffd115f0eee2ee320cd6d760e6fb576fab21da0ce09b074"
           }
         ],
@@ -10820,7 +10820,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RZUE",
@@ -11009,7 +11009,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8317 (application/pdf), SHA-256 6d980f76add25b06df69a89a2def099e9f8ed546ad93b745df7ea5e627fb91c5"
           }
         ],
@@ -11109,7 +11109,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "AS4-PROFIL",
@@ -11286,7 +11286,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8316 (application/pdf), SHA-256 979a4d0f6a0666e1d1198433eff8047fd139806313a43a5643ab8b10b71542c1"
           }
         ],
@@ -11386,7 +11386,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RZUE-AS4",
@@ -11563,7 +11563,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8318 (application/pdf), SHA-256 507d8b6e1879434ec33d44cdb04e2823d41039001803ca8d43328d83879c4d09"
           }
         ],
@@ -11663,7 +11663,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "API-GUIDELINE",
@@ -11889,7 +11889,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8329 (application/pdf), SHA-256 bb233b0262c9bf2aea4876ea3b27fac1c66de791d661408f9cbb97661d945f55"
           }
         ],
@@ -11989,7 +11989,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RZV",
@@ -12175,7 +12175,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:7846 (application/pdf), SHA-256 b47542b633deb672a728347f36b215308ed01f73abfa0ed008ff3f5dfc72c42e"
           }
         ],
@@ -12275,7 +12275,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "RZUE-API",
@@ -12611,7 +12611,7 @@
             "ergebnis": "konsolidiert_fehlerkorrektur 2025-05-28, konsolidiert_fehlerkorrektur 2025-06-27, konsolidiert_fehlerkorrektur 2025-07-18"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "bdew:8053 (application/pdf), SHA-256 0c64c7560f88422b604cd47f9d59da0749c8abd6e8c9409af48817f207a22a1a"
           }
         ],
@@ -12722,7 +12722,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "API-STEUERUNGSHANDLUNGEN",
@@ -12931,7 +12931,7 @@
           },
           "aenderungshistorie": null,
           "rolle": "ersetzt",
-          "rolle_begruendung": "Fassung aus der Swagger-Zeit derselben Version; BDEW-Plattformgültigkeit endete am 28.01.2026, Nachfolgeeintrag ab 29.01.2026 ist der GitHub-Release; Release-Notiz: 'Überführung … von Swagger auf GitHub ohne inhaltliche Änderungen' (Regelergänzung R-6b)",
+          "rolle_begruendung": "Fassung aus der Swagger-Zeit derselben Version; BDEW-Plattformgültigkeit endete am 28.01.2026, Nachfolgeeintrag ab 29.01.2026 ist der GitHub-Release; Release-Notiz: 'Überführung … von Swagger auf GitHub ohne inhaltliche Änderungen' (Regelergänzung R-6b); Beleg 'Inhalt unverändert' nur indirekt, Direktvergleich mit SwaggerHub nicht mehr möglich (O-20)",
           "ersetzt_durch": "github:EDI-Energy/api-electricity@1.0.0/api/controlMeasures/controlMeasuresV1.yaml",
           "abruf_utc": "2026-09-18T09:30:00Z",
           "mitteilungsbezug": {
@@ -13010,7 +13010,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "github:EDI-Energy/api-electricity@1.0.0/api/controlMeasures/controlMeasuresV1.yaml (application/yaml (OpenAPI)), SHA-256 f95feab0eaf74e9c9d37abcf73cea28c5b9bcaec46caa7c7929bce017fa77d46"
           }
         ],
@@ -13139,6 +13139,22 @@
           ]
         },
         {
+          "art": "offene_frage",
+          "text": "O-20 (für den Übergabebericht): Kanalwechsel-Regel R-6b verlangt zwei Belege. (2) 'neuer Weg geregelt' ist erfüllt (API-Guideline 1.0b Kap. 4, Anlage M56). (1) 'Inhalt nachweislich unverändert' ist nur indirekt erfüllt: Die alten PDFs enthalten nur Links auf SwaggerHub; die dort hinterlegten Spezifikationen sind gelöscht (api.swaggerhub.com: HTTP 404, geprüft 18.09.2026), das Internet Archive hat nur HTTP-302-Weiterleitungen gespeichert. Ein Direktvergleich ist damit nicht möglich. Tragend sind: Release-Notiz 'ohne inhaltliche Änderungen' (Herausgebererklärung), die OpenAPI-Datei wurde in einem einzigen Commit angelegt und bis zum Tag 1.0.0 nicht verändert (10.12.2025); die servers-Angabe nennt noch die SwaggerHub-Kennung der Mitteilungsfassung. Die PDF-Fassung bleibt 'ersetzt' (keine andere Rolle passt); Beleglage im Übergabebericht als offene Beobachtung.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "SwaggerHub-API",
+              "url": "https://api.swaggerhub.com/apis/",
+              "fundstelle": "HTTP 404 für die in den Mitteilungs-PDFs verlinkten Spezifikationen"
+            },
+            {
+              "quelle": "GitHub Commit-Historie",
+              "url": "https://github.com/EDI-Energy/api-electricity/commits/1.0.0"
+            }
+          ]
+        },
+        {
           "art": "abweichender_termin",
           "text": "Release 2.0.0 (GitHub, veröffentlicht 24.07.2026, nicht als Vorabversion markiert, Ziel-Branch '2026-07-31-consultation'): Release-Notiz 'anzuwenden ab dem 01.10.2027'. Mitteilung 57 stellt ihn zur Konsultation und nennt als Regeltermin 01.04.2027, zugleich den Vorschlag der PG EDI@Energy, die produktive Anwendung zum 01.10.2027 sicherzustellen. Am Stichtag nicht gültig.",
           "auswirkung_auf_auswahl": false,
@@ -13163,7 +13179,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "API-MALO-ID",
@@ -13372,7 +13388,7 @@
           },
           "aenderungshistorie": null,
           "rolle": "ersetzt",
-          "rolle_begruendung": "Fassung aus der Swagger-Zeit derselben Version; BDEW-Plattformgültigkeit endete am 28.01.2026, Nachfolgeeintrag ab 29.01.2026 ist der GitHub-Release; Release-Notiz: 'Überführung … von Swagger auf GitHub ohne inhaltliche Änderungen' (Regelergänzung R-6b)",
+          "rolle_begruendung": "Fassung aus der Swagger-Zeit derselben Version; BDEW-Plattformgültigkeit endete am 28.01.2026, Nachfolgeeintrag ab 29.01.2026 ist der GitHub-Release; Release-Notiz: 'Überführung … von Swagger auf GitHub ohne inhaltliche Änderungen' (Regelergänzung R-6b); Beleg 'Inhalt unverändert' nur indirekt, Direktvergleich mit SwaggerHub nicht mehr möglich (O-20)",
           "ersetzt_durch": "github:EDI-Energy/api-electricity@1.0.0/api/identificationId/maloIdentV1.yaml",
           "abruf_utc": "2026-09-18T09:30:00Z",
           "mitteilungsbezug": {
@@ -13451,7 +13467,7 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
             "ergebnis": "github:EDI-Energy/api-electricity@1.0.0/api/identificationId/maloIdentV1.yaml (application/yaml (OpenAPI)), SHA-256 077a53e42b8086b908ffc8b77c418961398e53ed515536b920713efe07ffc236"
           }
         ],
@@ -13580,6 +13596,22 @@
           ]
         },
         {
+          "art": "offene_frage",
+          "text": "O-20 (für den Übergabebericht): Kanalwechsel-Regel R-6b verlangt zwei Belege. (2) 'neuer Weg geregelt' ist erfüllt (API-Guideline 1.0b Kap. 4, Anlage M56). (1) 'Inhalt nachweislich unverändert' ist nur indirekt erfüllt: Die alten PDFs enthalten nur Links auf SwaggerHub; die dort hinterlegten Spezifikationen sind gelöscht (api.swaggerhub.com: HTTP 404, geprüft 18.09.2026), das Internet Archive hat nur HTTP-302-Weiterleitungen gespeichert. Ein Direktvergleich ist damit nicht möglich. Tragend sind: Release-Notiz 'ohne inhaltliche Änderungen' (Herausgebererklärung), die OpenAPI-Datei wurde in einem einzigen Commit angelegt und bis zum Tag 1.0.0 nicht verändert (10.12.2025); die servers-Angabe nennt noch die SwaggerHub-Kennung der Mitteilungsfassung. Die PDF-Fassung bleibt 'ersetzt' (keine andere Rolle passt); Beleglage im Übergabebericht als offene Beobachtung.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "SwaggerHub-API",
+              "url": "https://api.swaggerhub.com/apis/",
+              "fundstelle": "HTTP 404 für die in den Mitteilungs-PDFs verlinkten Spezifikationen"
+            },
+            {
+              "quelle": "GitHub Commit-Historie",
+              "url": "https://github.com/EDI-Energy/api-electricity/commits/1.0.0"
+            }
+          ]
+        },
+        {
           "art": "abweichender_termin",
           "text": "Release 2.0.0 (GitHub, veröffentlicht 24.07.2026, nicht als Vorabversion markiert, Ziel-Branch '2026-07-31-consultation'): Release-Notiz 'anzuwenden ab dem 01.10.2027'. Mitteilung 57 stellt ihn zur Konsultation und nennt als Regeltermin 01.04.2027, zugleich den Vorschlag der PG EDI@Energy, die produktive Anwendung zum 01.10.2027 sicherzustellen. Am Stichtag nicht gültig.",
           "auswirkung_auf_auswahl": false,
@@ -13604,7 +13636,7 @@
       }
     },
     {
-      "schema_version": "0.8",
+      "schema_version": "0.9",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "API-VERZEICHNISDIENST",
@@ -13715,7 +13747,7 @@
           },
           "aenderungshistorie": null,
           "rolle": "massgeblich",
-          "rolle_begruendung": "OpenAPI-Datei des am Stichtag einzigen gültigen Releases 1.0.0; kein PDF vorhanden, die Fachdatei ist das Dokument (Regelergänzung R-6a)",
+          "rolle_begruendung": "OpenAPI-Datei des am Stichtag einzigen gültigen Releases 1.0.0; kein PDF vorhanden, die Fachdatei ist das Dokument (Regelergänzung R-6a); Bestandteil 'Web-API (OpenAPI)' nach Schema v0.9",
           "ersetzt_durch": null,
           "abruf_utc": "2026-09-18T09:30:00Z",
           "mitteilungsbezug": {
@@ -13733,7 +13765,9 @@
             "github_commit": "74a01c6be19041e944665d860c90d3c27921d822",
             "github_pfad": "api/directoryServiceV1.yaml",
             "github_release_veroeffentlicht": "2026-01-28T09:30:56Z"
-          }
+          },
+          "bestandteil_gruppe": "github:EDI-Energy/api-directory-service@1.0.0",
+          "bestandteil": "Web-API (OpenAPI)"
         },
         {
           "fassung_id": "github:EDI-Energy/api-directory-service@1.0.0/api/webSocketV1.yaml",
@@ -13764,8 +13798,8 @@
             "ausserordentlich_grund": null
           },
           "aenderungshistorie": null,
-          "rolle": "ergaenzend",
-          "rolle_begruendung": "Kapitel 'WebSocket-API' desselben Releases 1.0.0 (Regelungen zum Verzeichnisdienst 1.1, S. 14, Quelle [4]); normativ gleichrangig und untrennbar (beide Spezifikationen verlangen die Umsetzung der jeweils anderen), das Schema kennt aber nur eine maßgebliche Fassung je Dokumentversion — offener Punkt O-19(a)",
+          "rolle": "massgeblich",
+          "rolle_begruendung": "Bestandteil 'WebSocket-API (AsyncAPI)' des Releases 1.0.0 (Regelungen zum Verzeichnisdienst 1.1, S. 14, Quelle [4]); normativ gleichrangig und untrennbar mit der Web-API; maßgeblich je Bestandteil nach Schema v0.9 (O-19(a) gelöst, bestätigt 18.09.2026)",
           "ersetzt_durch": null,
           "abruf_utc": "2026-09-18T09:30:00Z",
           "mitteilungsbezug": {
@@ -13783,7 +13817,9 @@
             "github_commit": "74a01c6be19041e944665d860c90d3c27921d822",
             "github_pfad": "api/webSocketV1.yaml",
             "github_release_veroeffentlicht": "2026-01-28T09:30:56Z"
-          }
+          },
+          "bestandteil_gruppe": "github:EDI-Energy/api-directory-service@1.0.0",
+          "bestandteil": "WebSocket-API (AsyncAPI)"
         },
         {
           "fassung_id": "bdew:8233",
@@ -13851,7 +13887,7 @@
           },
           "aenderungshistorie": null,
           "rolle": "ersetzt",
-          "rolle_begruendung": "Fassung aus der Swagger-Zeit derselben Version; BDEW-Plattformgültigkeit endete am 28.01.2026, Nachfolgeeintrag ab 29.01.2026 ist der GitHub-Release; Release-Notiz: 'Überführung … von Swagger auf GitHub ohne inhaltliche Änderungen' (Regelergänzung R-6b)",
+          "rolle_begruendung": "Fassung aus der Swagger-Zeit derselben Version; BDEW-Plattformgültigkeit endete am 28.01.2026, Nachfolgeeintrag ab 29.01.2026 ist der GitHub-Release; Release-Notiz: 'Überführung … von Swagger auf GitHub ohne inhaltliche Änderungen' (Regelergänzung R-6b); Beleg 'Inhalt unverändert' nur indirekt, Direktvergleich mit SwaggerHub nicht mehr möglich (O-20)",
           "ersetzt_durch": "github:EDI-Energy/api-directory-service@1.0.0/api/directoryServiceV1.yaml",
           "abruf_utc": "2026-09-18T09:30:00Z",
           "mitteilungsbezug": {
@@ -13947,6 +13983,18 @@
         }
       ],
       "auswahl": {
+        "massgebliche_bestandteile": [
+          {
+            "bestandteil": "Web-API (OpenAPI)",
+            "fassung_id": "github:EDI-Energy/api-directory-service@1.0.0/api/directoryServiceV1.yaml",
+            "sha256": "9fa66da1abbf29663c11d55fb2de6b9d0f123b03cbb5dc5f5cff5a124c58231b"
+          },
+          {
+            "bestandteil": "WebSocket-API (AsyncAPI)",
+            "fassung_id": "github:EDI-Energy/api-directory-service@1.0.0/api/webSocketV1.yaml",
+            "sha256": "fa2c1a010818cfcaf3da654bb8480ce70f7be6f368dbb46a2625435fa0a2fe1a"
+          }
+        ],
         "massgebliche_fassung_id": "github:EDI-Energy/api-directory-service@1.0.0/api/directoryServiceV1.yaml",
         "massgebliche_fassung_pdf_sha256": null,
         "regelschritte": [
@@ -13967,15 +14015,11 @@
             "ergebnis": "keine konsolidierte Fassung"
           },
           {
-            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF)",
-            "ergebnis": "github:EDI-Energy/api-directory-service@1.0.0/api/directoryServiceV1.yaml (application/yaml (OpenAPI)), SHA-256 9fa66da1abbf29663c11d55fb2de6b9d0f123b03cbb5dc5f5cff5a124c58231b"
+            "regel": "Referenzformat (Abschnitt 7; R-6a ohne PDF; v0.9 je Bestandteil)",
+            "ergebnis": "github:EDI-Energy/api-directory-service@1.0.0/api/directoryServiceV1.yaml (application/yaml (OpenAPI)), SHA-256 9fa66da1abbf29663c11d55fb2de6b9d0f123b03cbb5dc5f5cff5a124c58231b; github:EDI-Energy/api-directory-service@1.0.0/api/webSocketV1.yaml (application/yaml (OpenAPI)), SHA-256 fa2c1a010818cfcaf3da654bb8480ce70f7be6f368dbb46a2625435fa0a2fe1a"
           }
         ],
         "ergaenzende_fassungen": [
-          {
-            "fassung_id": "github:EDI-Energy/api-directory-service@1.0.0/api/webSocketV1.yaml",
-            "zweck": "Kapitel 'WebSocket-API' desselben Releases 1.0.0 (Regelungen zum Verzeichnisdienst 1.1, S. 14, Quelle [4]); normativ gleichrangig und untrennbar (beide Spezifikationen verlangen die Umsetzung der jeweils anderen), das Schema kennt aber nur eine maßgebliche Fassung je Dokumentversion — offener Punkt O-19(a)"
-          },
           {
             "fassung_id": "bnetza:M46/Verzeichnisdienst_API_v03.pdf",
             "zweck": "Amtliche Anlage der Mitteilung 46: einziger Mitteilungsbeleg der Version (PDF mit Verweis auf die damalige Swagger-Veröffentlichung)"
@@ -14101,7 +14145,23 @@
         },
         {
           "art": "offene_frage",
-          "text": "O-19: (a) Der Release 1.0.0 besteht aus zwei Spezifikationen: Web-API (OpenAPI 3.0.1, synchrone Suche, RzV 1.1 Kap. 3.3) und WebSocket-API (AsyncAPI 3.0.0, Abonnements und Benachrichtigungen, RzV 1.1 Kap. 3.4). Technisch verschieden, normativ untrennbar: Jede Datei schreibt vor, dass die andere 'ebenfalls umgesetzt werden' muss; der Verbindungsaufbau zur WebSocket-API ist als Pfad /ws/subscriptions/v1 in der Web-API spezifiziert; beide Dateien bezeichnen sich als Schnittstellen eines Dokuments 'Verzeichnisdienst API'; RzV 1.1 zitiert beide als Kapitel dieses Dokuments; ein Release, ein Tag, ein BDEW-Eintrag. Eine Aufteilung in zwei Dokumente wie bei Steuerungshandlungen/MaLo-ID ist deshalb nicht begründbar. Das Schema erlaubt je Dokumentversion genau eine maßgebliche Fassung; die WebSocket-API steht vorläufig als 'ergaenzend' — Schemafrage offen. (b) Version 1.1 wurde mit Mitteilung 48 (03.02.2025) für den 01.10.2025 konsultiert, von Mitteilung 51 aber nicht übernommen; ob RzV 1.1 inhaltlich die API 1.0/1.0.0 voraussetzt, ist nicht geprüft (niedrige Priorität).",
+          "text": "O-20 (für den Übergabebericht): Kanalwechsel-Regel R-6b verlangt zwei Belege. (2) 'neuer Weg geregelt' ist erfüllt (API-Guideline 1.0b Kap. 4, Anlage M56). (1) 'Inhalt nachweislich unverändert' ist nur indirekt erfüllt: Die alten PDFs enthalten nur Links auf SwaggerHub; die dort hinterlegten Spezifikationen sind gelöscht (api.swaggerhub.com: HTTP 404, geprüft 18.09.2026), das Internet Archive hat nur HTTP-302-Weiterleitungen gespeichert. Ein Direktvergleich ist damit nicht möglich. Tragend sind: Release-Notiz 'ohne inhaltliche Änderungen' (Herausgebererklärung), die OpenAPI-Datei wurde in einem einzigen Commit angelegt und bis zum Tag 1.0.0 nicht verändert (11.12.2025), sie entspricht nachweislich Version 1.0 und nicht der konsultierten 1.1 (keine Felder status/activeUntil, Beispieldatum 2024-10-01); in der Web-API-Datei steht zudem noch der Platzhalter 'TODO: Referenz auf AsyncAPI-Spec hinzufügen', und beide Dateien verweisen für die gültige Fassung auf das PDF, das BDEW seit 28.01.2026 nicht mehr führt. Die PDF-Fassung bleibt 'ersetzt' (keine andere Rolle passt); Beleglage im Übergabebericht als offene Beobachtung.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "SwaggerHub-API",
+              "url": "https://api.swaggerhub.com/apis/",
+              "fundstelle": "HTTP 404 für die in den Mitteilungs-PDFs verlinkten Spezifikationen"
+            },
+            {
+              "quelle": "GitHub Commit-Historie",
+              "url": "https://github.com/EDI-Energy/api-directory-service/commits/1.0.0"
+            }
+          ]
+        },
+        {
+          "art": "offene_frage",
+          "text": "O-19: (a) gelöst (bestätigt 18.09.2026): Web-API (OpenAPI 3.0.1) und WebSocket-API (AsyncAPI 3.0.0) sind normativ untrennbar — jede Datei verlangt die Umsetzung der anderen, der Verbindungsaufbau /ws/subscriptions/v1 steht in der Web-API, das Protokoll in der AsyncAPI-Datei, beide nennen sich Schnittstellen eines Dokuments, RzV 1.1 zitiert sie als Kapitel; ein Release, ein BDEW-Eintrag, eine Mitteilungsanlage (M46). Ein Dokument, zwei maßgebliche Bestandteile nach Schema v0.9. (b) Teilantwort, zur Bestätigung: Der einzige inhaltliche Unterschied der nie übernommenen Version 1.1 (M48, Änderungshistorie Änd-ID 15052/15053) sind die optionalen ServiceInfo-Felder 'status' und 'activeUntil' für RzV Kap. 4.6 'Einstellung Betrieb'. RzV 1.1 Kap. 4.6 (S. 12) verlangt nur eine Ankündigung 'mit ausreichendem Vorlauf', ohne technischen Weg; RzV 1.1 setzt die API 1.1 also nicht voraus. Die Regel gilt, hat aber in der gültigen API 1.0.0 kein Schnittstellenfeld (ServiceInfo mit additionalProperties: false).",
           "auswirkung_auf_auswahl": false,
           "beleg": [
             {

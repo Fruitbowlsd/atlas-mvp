@@ -5,7 +5,8 @@
 [`aufnahmeregel.md`](aufnahmeregel.md); Rollen nach [`rollendefinition.md`](rollendefinition.md)
 mit der neuen Ergänzung R-6a bis R-6c.
 **Status:** Etappe 6 abgeschlossen. Schema v0.8, die Regelergänzungen R-6a–c und der Zuschnitt
-der API-Dokumente sind am 18.09.2026 bestätigt. Offen ist nur die Schemafrage O-19(a).
+der API-Dokumente sind am 18.09.2026 bestätigt; O-19(a) ist mit Schema v0.9 gelöst (Nachtrag in
+Etappe 7, Abschnitt 8). Die Datensätze stehen jetzt auf **v0.9**.
 
 Artefakt: [`etappe6_uebertragungsweg_api_xml_provenienz.json`](etappe6_uebertragungsweg_api_xml_provenienz.json)
 (37 Datensätze, 149 Fassungen, Schema **v0.8**). Alle 85 Datensätze der Etappen 1–6 sind
@@ -222,15 +223,29 @@ Benachrichtigungen (Kap. 3.4). Normativ gehören sie untrennbar zusammen:
 * Ein Release, ein Tag, ein BDEW-Eintrag, eine Mitteilungsanlage (M46).
 
 Eine Aufteilung in zwei Dokumente wie bei Steuerungshandlungen/MaLo-ID ist damit nicht
-begründbar. Die Schemafrage bleibt offen; vorläufig ist die WebSocket-API `ergaenzend`.
+begründbar. **Gelöst mit Schema v0.9 (bestätigt 18.09.2026):** Beide Fassungen tragen die
+`bestandteil_gruppe` `github:EDI-Energy/api-directory-service@1.0.0` und sind je Bestandteil
+`massgeblich` („Web-API (OpenAPI)“, „WebSocket-API (AsyncAPI)“). In Etappe 6 gibt es damit
+38 maßgebliche Fassungen für 37 Dokumente; ohne Mitteilungsbezug sind 18 Dokumente
+(19 Fassungen).
 Nebenbefund: Die maßgebliche Web-API-Datei enthält am Pfad `/ws/subscriptions/v1` noch den
 Platzhalter „TODO: Referenz auf AsyncAPI-Spec hinzufügen“, und beide Dateien verweisen für
 die gültige Fassung auf das PDF „Verzeichnisdienst API“, das BDEW seit 28.01.2026 nicht mehr
 führt.
 
-(b) Version 1.1 wurde konsultiert (M48), aber nicht übernommen. Ob die Regelungen zum
-Verzeichnisdienst 1.1 inhaltlich die API 1.0 voraussetzen, ist nicht geprüft. Niedrige
-Priorität, bleibt offen.
+(b) Version 1.1 wurde konsultiert (M48), aber nicht übernommen. **Teilantwort (zur
+Bestätigung):** Ihr einziger inhaltlicher Unterschied zu 1.0 sind die optionalen
+`ServiceInfo`-Felder `status` und `activeUntil` für RzV Kap. 4.6 „Einstellung Betrieb“. RzV 1.1
+Kap. 4.6 verlangt nur eine Ankündigung „mit ausreichendem Vorlauf“, ohne technischen Weg — setzt
+die API 1.1 also nicht voraus. Die gültige API 1.0.0 hat für diese Pflicht kein Schnittstellenfeld.
+
+**O-20 (neu, Etappe 7):** Kanalwechsel-Regel R-6b bei den drei API-Dokumenten. Beleg (2) „neuer
+Weg geregelt“ ist erfüllt. Beleg (1) „Inhalt unverändert“ ist nur indirekt erfüllt: Die alten
+PDFs verlinken nur auf SwaggerHub, dort sind die Spezifikationen gelöscht (HTTP 404), das
+Internet Archive hat keinen Inhalt gespeichert. Tragend bleiben die Release-Notiz, die seit dem
+Import unveränderten Dateien und — beim Verzeichnisdienst — die Merkmale der Version 1.0 (keine
+1.1-Felder, Beispieldatum 2024-10-01). Die alten PDFs bleiben `ersetzt`; die Beleglage geht als
+offene Beobachtung in den Übergabebericht.
 
 ## 9. Nächste Schritte
 

@@ -24,7 +24,7 @@ beschreibt, und behält Hash, URL und Belege.
 
 | Rolle | Bedeutung | Kriterium | Zeitbezug |
 |---|---|---|---|
-| `massgeblich` | Die Fassung, die am Stichtag gilt | genau eine je Dokumentversion; PDF | — |
+| `massgeblich` | Die Fassung, die am Stichtag gilt | genau eine je Dokumentversion; PDF (ohne PDF: die Fachdatei, R-6a). **Ausnahme ab v0.9:** Bilden mehrere Fassungen über dieselbe `bestandteil_gruppe` gemeinsam die Dokumentversion, ist je `bestandteil` genau eine maßgeblich | — |
 | `ergaenzend` | Nicht maßgeblich, aber fachlich **nötig**, weil sie Information enthält, die der maßgeblichen Fassung fehlt | Basis-PDF, sobald eine konsolidierte Fassung existiert (einzige Quelle der Änderungshistorie gegenüber der Vorversion); ohne konsolidierte Fassung ist die Basis selbst maßgeblich | — |
 | **`ersetzt`** | **Zeitlich abgelöst.** Fassung eines **älteren Fehlerkorrekturstands derselben Version**. Zu ihrem Zeitpunkt war sie der richtige Stand, inzwischen gibt es einen neueren. | Fassungstyp `konsolidiert_fehlerkorrektur` (PDF oder XML), Stand älter als der neueste; **`ersetzt_durch` ist Pflicht** | ja: galt, bis der neuere Stand erschien |
 | `informativ` | **Aus Typgründen nie maßgeblich**, unabhängig vom Zeitpunkt | informatorische Lesefassungen (Word), Formatnebenfassungen (XML-Basis, XML des neuesten Stands neben dem PDF) | nein |
@@ -145,10 +145,16 @@ Einzelfall entschieden.
 | **R-6b** | **Wechsel des Veröffentlichungswegs** bei gleicher Version (Swagger/PDF-Verweis → GitHub-Release) | Die Fassung des abgelösten Wegs wird `ersetzt`, `ersetzt_durch` = Fassung des neuen Wegs. Voraussetzung ist ein Beleg, dass der Inhalt unverändert ist (hier: Release-Notiz „ohne inhaltliche Änderungen“) und dass der neue Weg geregelt ist (hier: API-Guideline 1.0b Kap. 4, Anlage der Mitteilung 56). Die amtliche Anlage der ursprünglichen Mitteilung bleibt `ergaenzend`, weil nur sie die Version mit der Mitteilung verbindet. | bdew:7313, 7314, 7650 |
 | **R-6c** | **Versionsloses Dokument**, das nur mit Publikationsdatum erscheint (Änderungshistorie XML) | Stand-Reihe nach Publikationsdatum des Deckblatts statt nach Fehlerkorrekturstand. Jüngste Veröffentlichung (PDF) → `massgeblich`, ältere PDF → `ersetzt` mit `ersetzt_durch` = nächstjüngere (BDEW bevorzugt, sonst BNetzA). | Änderungshistorie zu den XML-Datenformaten |
 
-**Offen (O-19a):** Ein Release mit **mehreren gleichrangigen Dateien** (Verzeichnisdienst API:
-Web-API und WebSocket-API) passt nicht in „genau eine maßgebliche Fassung je
-Dokumentversion“. Vorläufig ist die Web-API `massgeblich` und die WebSocket-API `ergaenzend`
-— das stimmt mit der Definition von `ergaenzend` („enthält Information, die der maßgeblichen
-Fassung fehlt“) überein, unterschlägt aber die Gleichrangigkeit. Geprüft am 18.09.2026: Die
-beiden Dateien sind normativ untrennbar (siehe Etappe 6, Abschnitt 8), eine Aufteilung in zwei
-Dokumente scheidet aus. Die Modellentscheidung liegt beim Auftraggeber.
+**O-19(a) gelöst (bestätigt 18.09.2026, Schema v0.9):** Ein Release aus mehreren gleichrangigen,
+normativ untrennbaren Dateien (Verzeichnisdienst API: Web-API und WebSocket-API) bleibt **ein**
+Dokument. Die Fassungen tragen dieselbe `bestandteil_gruppe` und je einen `bestandteil`; je
+Bestandteil ist genau eine Fassung `massgeblich`, die Auswahl nennt alle in
+`auswahl.massgebliche_bestandteile`. Voraussetzung: Die Quellen führen die Teile selbst als eine
+Einheit (eine Mitteilungsanlage, ein Release, ein Eintrag). Trennen die Quellen selbst — wie bei
+Steuerungshandlungen/MaLo-ID (Mitteilungen 36/43) —, bleiben es getrennte Dokumente.
+
+**O-20 (zu R-6b):** Bei allen drei API-Dokumenten ist Beleg (1) „Inhalt unverändert“ nur indirekt
+erbracht (Herausgebererklärung in der Release-Notiz, unveränderte Datei seit dem Import, beim
+Verzeichnisdienst zusätzlich Inhaltsmerkmale der Version 1.0). Ein Direktvergleich ist nicht
+möglich, weil SwaggerHub die Spezifikationen gelöscht hat. Die alten PDFs bleiben `ersetzt`; die
+Beleglage wird im Übergabebericht als offene Beobachtung geführt.
