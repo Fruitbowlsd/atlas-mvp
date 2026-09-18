@@ -1,6 +1,6 @@
 # Regulatory State 01.10.2026 — Rechercheartefakte
 
-Referenzfassung des Auftrags: [`auftrag.md`](auftrag.md) (Projektdokument vom **18.09.2026**, Stand nach O-18).
+Referenzfassung des Auftrags: [`auftrag.md`](auftrag.md) (Projektdokument vom **18.09.2026**, Stand O-20-Entscheidung und Etappe-8-Start).
 
 Ticket: #64. Recherche zum vollständigen regulatorischen Stand der Marktkommunikation zum
 Stichtag **01.10.2026**. Es sind ausschließlich Rechercheartefakte zur menschlichen Prüfung:
@@ -16,7 +16,7 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 | 5 | Entscheidungsbaum-Diagramme | **abgeschlossen** | [`etappe5_ebd.md`](etappe5_ebd.md), [`etappe5_ebd_provenienz.json`](etappe5_ebd_provenienz.json) |
 | 6 | Übertragungsweg / AS4 / API / XML (Redispatch 2.0) | **abgeschlossen**, Schema v0.8/v0.9 und R-6a–c bestätigt; O-19 gelöst, O-20 entschieden (R-6b nicht erfüllt) | [`etappe6_uebertragungsweg_api_xml.md`](etappe6_uebertragungsweg_api_xml.md), [`etappe6_uebertragungsweg_api_xml_provenienz.json`](etappe6_uebertragungsweg_api_xml_provenienz.json) |
 | 7 | Konsolidierung, Widersprüche, Regulatory-State-Objekt, Verhältnis zu `RegulatoryVersion` | **abgeschlossen und bestätigt**; Datenbasis eingefroren | [`etappe7_konsolidierung.md`](etappe7_konsolidierung.md), [`etappe7_regulatory_state.json`](etappe7_regulatory_state.json) |
-| 8 | Übergabebericht | offen | — |
+| 8 | Übergabebericht | **abgeschlossen und bestätigt**; State `VALID` | [`etappe8_uebergabebericht.md`](etappe8_uebergabebericht.md) |
 
 ## Bestätigte Grundlagen
 
