@@ -6,7 +6,7 @@
   "anzahl": 4,
   "datensaetze": [
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILMD-AHB-STROM",
@@ -16,7 +16,13 @@
         "nachrichtentyp": "UTILMD",
         "sparte": "Strom",
         "sparte_beleg": "Spartenangabe im Dokumenttitel der Mitteilung 56 und auf dem Deckblatt",
-        "bdew_topic_id": 211
+        "bdew_topic_id": 211,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "2.2",
@@ -619,8 +625,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -724,7 +735,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILMD-MIG-STROM",
@@ -734,7 +745,13 @@
         "nachrichtentyp": "UTILMD",
         "sparte": "Strom",
         "sparte_beleg": "Spartenangabe im Dokumenttitel der Mitteilung 56 und auf dem Deckblatt",
-        "bdew_topic_id": 215
+        "bdew_topic_id": 215,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "S2.2",
@@ -1439,8 +1456,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -1522,7 +1544,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILMD-AHB-GAS",
@@ -1532,7 +1554,13 @@
         "nachrichtentyp": "UTILMD",
         "sparte": "Gas",
         "sparte_beleg": "Spartenangabe im Dokumenttitel der Mitteilung 56 und auf dem Deckblatt",
-        "bdew_topic_id": 206
+        "bdew_topic_id": 206,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.2",
@@ -2213,8 +2241,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -2323,7 +2356,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILMD-MIG-GAS",
@@ -2333,7 +2366,13 @@
         "nachrichtentyp": "UTILMD",
         "sparte": "Gas",
         "sparte_beleg": "Spartenangabe im Dokumenttitel der Mitteilung 56 und auf dem Deckblatt",
-        "bdew_topic_id": 214
+        "bdew_topic_id": 214,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "G1.2",
@@ -2876,8 +2915,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -2970,5 +3014,5 @@
       }
     }
   ],
-  "schema_version": "0.3"
+  "schema_version": "0.5"
 }

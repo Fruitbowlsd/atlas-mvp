@@ -21,6 +21,7 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 ## Bestätigte Grundlagen
 
 * Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`; v0.2/v0.3 ergänzen die außerordentliche Veröffentlichung als eigenen Typ, das Pflichtfeld `mitteilungsbezug` und die Hinweisart `querpruefung`; die Auswahlregel dazu (O-11) ist am 17.09.2026 **bestätigt**); Rollen: [`rollendefinition.md`](rollendefinition.md)
+* Aufnahmeregel (was gehört in den State): [`aufnahmeregel.md`](aufnahmeregel.md), seit 18.09.2026
 * Modell: Regulatory State als Ebene oberhalb von `RegulatoryVersion`, 1:n ([`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md)), bestätigt am 17.09.2026, **noch nicht umgesetzt**
 
 ## Kernbefunde für den Übergabebericht (Etappe 8)

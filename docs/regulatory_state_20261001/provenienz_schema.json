@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "atlas/regulatory_state/provenienz_schema_v0.json",
-  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.4)",
+  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.5)",
   "description": "Ein Datensatz je regulatorischer Dokumentversion am Stichtag. Drei Ebenen wie in Abschnitt 10 des Auftrags: Dokument → Dokumentversion → Fassungen (Dateien). Die Auswahl der maßgeblichen Fassung ist eine eigene, begründete Entscheidung und überschreibt keine Fassung. Nur Rechercheartefakt, kein Datenbankschema.",
   "type": "object",
   "required": [
@@ -22,7 +22,8 @@
         "0.1",
         "0.2",
         "0.3",
-        "0.4"
+        "0.4",
+        "0.5"
       ]
     },
     "stichtag": {
@@ -34,6 +35,7 @@
       "description": "Versionsunabhängige Identität (Abschnitt 4A: Dokumenttyp, Nachrichtentyp, Sparte).",
       "type": "object",
       "required": [
+        "aufnahmekriterium",
         "dokument_schluessel",
         "dokumentname",
         "dokumenttyp",
@@ -91,6 +93,31 @@
             "null"
           ],
           "description": "Themen-ID der BDEW-MaKo-API; bündelt alle Versionen und Fassungen eines Dokuments"
+        },
+        "aufnahmekriterium": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Ab v0.5: welches Kriterium der Aufnahmeregel (aufnahmeregel.md) die Aufnahme in den Regulatory State trägt. A = Anlage einer verbindlichen Mitteilung, B = in PID 4.0 geführt, C = von einem Dokument aus A/B verbindlich referenziert.",
+          "items": {
+            "type": "object",
+            "required": [
+              "kriterium",
+              "beleg"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "kriterium": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C"
+                ]
+              },
+              "beleg": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     },

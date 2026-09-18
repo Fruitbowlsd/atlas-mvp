@@ -3,11 +3,11 @@
   "etappe": 2,
   "ticket": "#64",
   "schema": "provenienz_schema.json",
-  "schema_version": "0.3",
+  "schema_version": "0.5",
   "anzahl": 32,
   "datensaetze": [
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "APERAK-AHB",
@@ -17,7 +17,13 @@
         "nachrichtentyp": "APERAK",
         "sparte": "beide",
         "sparte_beleg": "Keine Spartenangabe im Titel und keine Zeile in PID 4.0 (Servicenachricht ohne eigene Prüfidentifikatoren in der Anwendungsübersicht); Sparte bleibt 'beide' ohne positiven Einzelnachweis.",
-        "bdew_topic_id": 229
+        "bdew_topic_id": 229,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1",
@@ -434,8 +440,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -495,7 +506,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "APERAK-MIG",
@@ -505,7 +516,13 @@
         "nachrichtentyp": "APERAK",
         "sparte": "beide",
         "sparte_beleg": "Keine Spartenangabe im Titel und keine Zeile in PID 4.0 (Servicenachricht ohne eigene Prüfidentifikatoren in der Anwendungsübersicht); Sparte bleibt 'beide' ohne positiven Einzelnachweis.",
-        "bdew_topic_id": 200
+        "bdew_topic_id": 200,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "2.2",
@@ -910,8 +927,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -945,7 +967,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "IFTSTA-AHB",
@@ -955,7 +977,13 @@
         "nachrichtentyp": "IFTSTA",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 154 Zeilen für 'IFTSTA AHB', davon 136 mit Sparte Strom = X und 18 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 115
+        "bdew_topic_id": 115,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "2.1",
@@ -1368,8 +1396,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -1416,7 +1449,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "IFTSTA-MIG",
@@ -1426,7 +1459,13 @@
         "nachrichtentyp": "IFTSTA",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 154 Zeilen für 'IFTSTA AHB', davon 136 mit Sparte Strom = X und 18 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 116
+        "bdew_topic_id": 116,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "2.1",
@@ -1831,8 +1870,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -1866,7 +1910,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INVOIC-AHB",
@@ -1876,7 +1920,13 @@
         "nachrichtentyp": "INVOIC",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 42 Zeilen für 'INVOIC AHB', davon 24 mit Sparte Strom = X und 18 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 231
+        "bdew_topic_id": 231,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.0b",
@@ -2269,8 +2319,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -2328,7 +2383,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "MSCONS-AHB",
@@ -2338,7 +2393,13 @@
         "nachrichtentyp": "MSCONS",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 157 Zeilen für 'MSCONS AHB', davon 95 mit Sparte Strom = X und 62 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 129
+        "bdew_topic_id": 129,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "3.2",
@@ -2737,8 +2798,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -2796,7 +2862,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "MSCONS-MIG",
@@ -2806,7 +2872,13 @@
         "nachrichtentyp": "MSCONS",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 157 Zeilen für 'MSCONS AHB', davon 95 mit Sparte Strom = X und 62 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 130
+        "bdew_topic_id": 130,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "2.5",
@@ -3199,8 +3271,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -3234,7 +3311,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDCHG-AHB",
@@ -3244,7 +3321,13 @@
         "nachrichtentyp": "ORDCHG",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 5 Zeilen für 'ORDCHG AHB', davon 3 mit Sparte Strom = X und 2 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 223
+        "bdew_topic_id": 223,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1",
@@ -3635,8 +3718,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -3694,7 +3782,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDCHG-MIG",
@@ -3704,7 +3792,13 @@
         "nachrichtentyp": "ORDCHG",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 5 Zeilen für 'ORDCHG AHB', davon 3 mit Sparte Strom = X und 2 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 119
+        "bdew_topic_id": 119,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.2",
@@ -4097,8 +4191,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -4143,7 +4242,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDERS-AHB",
@@ -4153,7 +4252,13 @@
         "nachrichtentyp": "ORDERS",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 111 Zeilen für 'ORDERS AHB', davon 98 mit Sparte Strom = X und 13 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 224
+        "bdew_topic_id": 224,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1b",
@@ -4704,8 +4809,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -4774,7 +4884,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDERS-MIG",
@@ -4784,7 +4894,13 @@
         "nachrichtentyp": "ORDERS",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 111 Zeilen für 'ORDERS AHB', davon 98 mit Sparte Strom = X und 13 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 123
+        "bdew_topic_id": 123,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.4c",
@@ -5171,8 +5287,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -5206,7 +5327,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDRSP-AHB",
@@ -5216,7 +5337,13 @@
         "nachrichtentyp": "ORDRSP",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 116 Zeilen für 'ORDRSP AHB', davon 96 mit Sparte Strom = X und 20 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 225
+        "bdew_topic_id": 225,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1b",
@@ -5633,8 +5760,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -5692,7 +5824,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDRSP-MIG",
@@ -5702,7 +5834,13 @@
         "nachrichtentyp": "ORDRSP",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 116 Zeilen für 'ORDRSP AHB', davon 96 mit Sparte Strom = X und 20 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 124
+        "bdew_topic_id": 124,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.4c",
@@ -6089,8 +6227,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -6124,7 +6267,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PARTIN-AHB",
@@ -6134,7 +6277,13 @@
         "nachrichtentyp": "PARTIN",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 42 Zeilen für 'PARTIN AHB', davon 27 mit Sparte Strom = X und 15 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 203
+        "bdew_topic_id": 203,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1",
@@ -6535,8 +6684,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -6594,7 +6748,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PARTIN-MIG",
@@ -6604,7 +6758,13 @@
         "nachrichtentyp": "PARTIN",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 42 Zeilen für 'PARTIN AHB', davon 27 mit Sparte Strom = X und 15 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 204
+        "bdew_topic_id": 204,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1",
@@ -6991,8 +7151,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -7026,7 +7191,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PRICAT-AHB",
@@ -7036,7 +7201,13 @@
         "nachrichtentyp": "PRICAT",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 9 Zeilen für 'PRICAT AHB', davon 8 mit Sparte Strom = X und 1 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 164
+        "bdew_topic_id": 164,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "2.1",
@@ -7435,8 +7606,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -7483,7 +7659,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PRICAT-MIG",
@@ -7493,7 +7669,13 @@
         "nachrichtentyp": "PRICAT",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 9 Zeilen für 'PRICAT AHB', davon 8 mit Sparte Strom = X und 1 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 165
+        "bdew_topic_id": 165,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "2.1",
@@ -7888,8 +8070,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -7923,7 +8110,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "QUOTES-AHB",
@@ -7933,7 +8120,13 @@
         "nachrichtentyp": "QUOTES",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 9 Zeilen für 'QUOTES AHB', davon 8 mit Sparte Strom = X und 1 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 226
+        "bdew_topic_id": 226,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1a",
@@ -8342,8 +8535,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -8413,7 +8611,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "QUOTES-MIG",
@@ -8423,7 +8621,13 @@
         "nachrichtentyp": "QUOTES",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 9 Zeilen für 'QUOTES AHB', davon 8 mit Sparte Strom = X und 1 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 125
+        "bdew_topic_id": 125,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.3c",
@@ -8836,8 +9040,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -8871,7 +9080,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REQOTE-AHB",
@@ -8881,7 +9090,13 @@
         "nachrichtentyp": "REQOTE",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 8 Zeilen für 'REQOTE AHB', davon 7 mit Sparte Strom = X und 1 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 227
+        "bdew_topic_id": 227,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.2",
@@ -9414,8 +9629,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -9496,7 +9716,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILTS-AHB",
@@ -9506,7 +9726,13 @@
         "nachrichtentyp": "UTILTS",
         "sparte": "Strom",
         "sparte_beleg": "Belegt aus PID 4.0: 26 Zeilen für 'UTILTS AHB', davon 26 mit Sparte Strom = X und **0** mit Sparte Gas = X. Kein Gas-Anwendungsfall gefunden; der Titel trägt keine Spartenangabe, die Einordnung stützt sich auf das Fehlen von Gas-Zeilen.",
-        "bdew_topic_id": 221
+        "bdew_topic_id": 221,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 56; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1",
@@ -9913,8 +10139,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -9995,7 +10226,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "COMDIS-AHB",
@@ -10005,7 +10236,13 @@
         "nachrichtentyp": "COMDIS",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 11 Zeilen für 'COMDIS AHB', davon 9 mit Sparte Strom = X und 2 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 160
+        "bdew_topic_id": 160,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 54; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.0h",
@@ -10318,8 +10555,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -10389,7 +10631,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "COMDIS-MIG",
@@ -10399,7 +10641,13 @@
         "nachrichtentyp": "COMDIS",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 11 Zeilen für 'COMDIS AHB', davon 9 mit Sparte Strom = X und 2 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 161
+        "bdew_topic_id": 161,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 54; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.0g",
@@ -10709,8 +10957,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -10757,7 +11010,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REMADV-AHB",
@@ -10767,7 +11020,13 @@
         "nachrichtentyp": "REMADV",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 111 Zeilen für 'REMADV AHB', davon 77 mit Sparte Strom = X und 34 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 232
+        "bdew_topic_id": 232,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 54; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.0a",
@@ -11079,8 +11338,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -11150,7 +11414,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REMADV-MIG",
@@ -11160,7 +11424,13 @@
         "nachrichtentyp": "REMADV",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 111 Zeilen für 'REMADV AHB', davon 77 mit Sparte Strom = X und 34 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 166
+        "bdew_topic_id": 166,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 54; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "2.9e",
@@ -11470,8 +11740,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -11518,7 +11793,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INVOIC-MIG",
@@ -11528,7 +11803,13 @@
         "nachrichtentyp": "INVOIC",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 42 Zeilen für 'INVOIC AHB', davon 24 mit Sparte Strom = X und 18 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 163
+        "bdew_topic_id": 163,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 51; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "2.8e",
@@ -11839,8 +12120,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -11887,7 +12173,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REQOTE-MIG",
@@ -11897,7 +12183,13 @@
         "nachrichtentyp": "REQOTE",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 8 Zeilen für 'REQOTE AHB', davon 7 mit Sparte Strom = X und 1 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 128
+        "bdew_topic_id": 128,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 51; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.3c",
@@ -12207,8 +12499,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -12270,7 +12567,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CONTRL-AHB",
@@ -12280,7 +12577,13 @@
         "nachrichtentyp": "CONTRL",
         "sparte": "beide",
         "sparte_beleg": "Keine Spartenangabe im Titel und keine Zeile in PID 4.0 (Servicenachricht ohne eigene Prüfidentifikatoren in der Anwendungsübersicht); Sparte bleibt 'beide' ohne positiven Einzelnachweis.",
-        "bdew_topic_id": 230
+        "bdew_topic_id": 230,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 51; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.0",
@@ -12753,8 +13056,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -12846,7 +13154,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILTS-MIG",
@@ -12856,7 +13164,13 @@
         "nachrichtentyp": "UTILTS",
         "sparte": "Strom",
         "sparte_beleg": "Belegt aus PID 4.0: 26 Zeilen für 'UTILTS AHB', davon 26 mit Sparte Strom = X und **0** mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Kein Gas-Anwendungsfall gefunden; der Titel trägt keine Spartenangabe, die Einordnung stützt sich auf das Fehlen von Gas-Zeilen.",
-        "bdew_topic_id": 219
+        "bdew_topic_id": 219,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 46; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1e",
@@ -13377,8 +13691,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -13470,7 +13789,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CONTRL-MIG",
@@ -13480,7 +13799,13 @@
         "nachrichtentyp": "CONTRL",
         "sparte": "beide",
         "sparte_beleg": "Keine Spartenangabe im Titel und keine Zeile in PID 4.0 (Servicenachricht ohne eigene Prüfidentifikatoren in der Anwendungsübersicht); Sparte bleibt 'beide' ohne positiven Einzelnachweis.",
-        "bdew_topic_id": 201
+        "bdew_topic_id": 201,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 24; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "2.0b",
@@ -14041,8 +14366,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -14140,7 +14470,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INSRPT-AHB",
@@ -14150,7 +14480,13 @@
         "nachrichtentyp": "INSRPT",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 22 Zeilen für 'INSRPT AHB', davon 12 mit Sparte Strom = X und 10 mit Sparte Gas = X. Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 117
+        "bdew_topic_id": 117,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 24; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1g",
@@ -14701,8 +15037,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
@@ -14822,7 +15163,7 @@
       }
     },
     {
-      "schema_version": "0.3",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INSRPT-MIG",
@@ -14832,7 +15173,13 @@
         "nachrichtentyp": "INSRPT",
         "sparte": "beide",
         "sparte_beleg": "Belegt aus der Anwendungsübersicht der Prüfidentifikatoren 4.0 (gültig ab 01.10.2026): 22 Zeilen für 'INSRPT AHB', davon 12 mit Sparte Strom = X und 10 mit Sparte Gas = X (über den zugehörigen AHB; MIG-Dokumente haben keine eigenen PID-Zeilen). Positiver Nachweis je Sparte.",
-        "bdew_topic_id": 118
+        "bdew_topic_id": 118,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "A",
+            "beleg": "Anlage der Mitteilung 24; Basisfassung bytegleich mit der Anlage (SHA-256 geprüft)"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "1.1a",
@@ -15244,8 +15591,13 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Kein BDEW-Eintrag mit validFrom nach dem 01.10.2026; keine verbindliche Mitteilung nach Nr. 56",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
+            {
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
             {
               "quelle": "BDEW-API Abzug",
               "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",

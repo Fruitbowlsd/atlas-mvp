@@ -17,7 +17,7 @@ Die Sparten-Belege der 32 Dokumente aus Etappe 2 sind in
 | neue Dokumente belegt | **1** (SSQNOT 5.7, Gas) |
 | Sparten-Zuordnung nachbelegt | **32** Dokumente aus Etappe 2, aus PID 4.0 |
 | offene Fälle **gelöst** | O-5 (SSQNOT, mit Rest), O-6 (GeLi Gas 3.0) |
-| offene Fälle **neu** | **1** (O-13: dritte Quelle DVGW) |
+| offene Fälle **neu** | **2**: O-13 (dritte Quelle DVGW) — inzwischen durch die Aufnahmeregel entschieden; **O-14** (Bezeichnung des PI 70096: RLP ↔ RLM), bleibt bewusst offen |
 | Widersprüche zwischen Quellen | **1** (Bezeichnung des Prüfidentifikators 70096: „RLP" gegen „RLM") |
 
 ## 2. O-5 SSQNOT — keine Lücke im Bestand, aber eine Lücke in der Quellenliste
@@ -63,10 +63,12 @@ Prozessbeschreibung.
 („SSQNOT zur Übermittlung von Mehr-/Mindermengen"), gibt es nicht. Dass PID 4.0 damit die
 DVGW-Nachrichtenbeschreibung meint, ist naheliegend, aber nicht ausdrücklich belegt.
 
-**Widerspruch zwischen den Quellen:** PID 4.0 nennt den Prüfidentifikator **70096**
-„Mehr-/Mindermengenmeldung **RLP**", die SSQNOT 5.7 nennt ihn „Mehr-/Mindermengenmeldung
-**RLM**". Die Auswahl der Version ändert das nicht, wohl aber die Bezeichnung desselben
-Prüfidentifikators in zwei Quellen.
+**O-14 — Widerspruch zwischen den Quellen, bleibt offen.** Derselbe Prüfidentifikator
+**70096** heißt in PID 4.0 (S. 27) „Mehr-/Mindermengenmeldung **RLP**" und in SSQNOT 5.7
+(S. 12) „Mehr-/Mindermengenmeldung **RLM**". **Beide Bezeichnungen werden unverändert
+festgehalten und nicht aufgelöst**; welche fachlich richtig ist, lässt sich aus den Quellen
+nicht belegen. Für 70095 stimmen beide Quellen überein („SLP"). Die Auswahl der Version
+berührt das nicht.
 
 ## 3. O-13 (neu) — Die Quellenliste des Auftrags ist für Gas nicht vollständig
 
@@ -78,10 +80,12 @@ NOMINT 4.6, TRANOT 5.8b, CHACAP/SCHEDL/DELRES/NOMRES (Fehlerkorrekturen 01.02.20
 
 Diese Nachrichtentypen betreffen den Gastransport (Nominierung, Allokation, Kapazität) und
 gehören zur Kooperationsvereinbarung Gas, nicht zur Marktkommunikation im Sinne der
-BK6-Mitteilungen. **Zu entscheiden ist, ob der Regulatory State 01.10.2026 sie umfasst.**
-Meine Empfehlung: nein für den Gastransport-Teil, **ja für SSQNOT**, weil SSQNOT über PID 4.0
-und die INVOIC direkt in der Marktkommunikation referenziert wird. Der Datensatz ist
-entsprechend angelegt; die Abgrenzung gehört in Etappe 7.
+BK6-Mitteilungen. **Entschieden durch die Aufnahmeregel** ([`aufnahmeregel.md`](aufnahmeregel.md), seit
+18.09.2026): Aufgenommen wird, was Anlage einer verbindlichen Mitteilung ist (A), in PID 4.0
+geführt wird (B) oder von einem solchen Dokument verbindlich referenziert wird (C). Von den
+elf DVGW-Nachrichtentypen erfüllt **nur SSQNOT** ein Kriterium (B und C); die übrigen zehn
+haben **null** Treffer in PID 4.0 und bleiben draußen. Keine Einzelfallentscheidung mehr in
+Etappe 7, sondern ein Negativbeleg je Reihe.
 
 ## 4. O-6 GeLi Gas 3.0 — kein Einfluss auf die Formatversionen
 
@@ -146,7 +150,7 @@ kommt nicht vor" ist es ein Indiz, kein Beweis.
 
 ## 6. Was Etappe 3 nicht behandelt
 
-* Die übrigen DVGW-Nachrichtentypen (Gastransport) — Abgrenzung in Etappe 7 (O-13).
+* Die übrigen DVGW-Nachrichtentypen (Gastransport) — durch die Aufnahmeregel ausgeschlossen, Negativbeleg in Etappe 7.
 * Gas-Prozessdokumente (GeLi Gas 2.0, WiM Gas 2.0, KoV) als eigene Artefakte des Regulatory
   State. Sie sind Prozess-, keine Formatdokumente; im Auftrag nicht als Kategorie geführt.
   Zur Kenntnis: Die BDEW-Plattform führt sie in einem zweiten Bereich („Marktprozesse",

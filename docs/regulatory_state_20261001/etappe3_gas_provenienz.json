@@ -3,11 +3,11 @@
   "etappe": 3,
   "ticket": "#64",
   "schema": "provenienz_schema.json",
-  "schema_version": "0.4",
+  "schema_version": "0.5",
   "anzahl": 1,
   "datensaetze": [
     {
-      "schema_version": "0.4",
+      "schema_version": "0.5",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "SSQNOT",
@@ -17,7 +17,17 @@
         "nachrichtentyp": "SSQNOT",
         "sparte": "Gas",
         "sparte_beleg": "Anwendungsübersicht der Prüfidentifikatoren 4.0, S. 27: 2 Zeilen (Lfd. Nr. 12170/12180), Spalte Sparte Gas = X, Spalte Sparte Strom = '--'; SSQNOT ist laut Einführung eine DVGW-Nachricht 'für den Elektronischen Datenaustausch (EDI) in der Gaswirtschaft'",
-        "bdew_topic_id": null
+        "bdew_topic_id": null,
+        "aufnahmekriterium": [
+          {
+            "kriterium": "B",
+            "beleg": "PID 4.0, S. 27, Lfd. Nr. 12170/12180 ('SSQNOT zur Übermittlung von Mehr-/Mindermengen', PI 70095/70096, Sparte Gas = X)"
+          },
+          {
+            "kriterium": "C",
+            "beleg": "INVOIC AHB 1.0b S. 36, Bedingung [507] 'Dokumentennummer der SSQNOT' als Muss-Angabe in den Anwendungsfällen 31007/31008; INVOIC MIG 2.8e S. 27"
+          }
+        ]
       },
       "dokumentversion": {
         "version": "5.7",
@@ -241,11 +251,17 @@
         },
         "f6_neuere_noch_nicht_gueltige_version": {
           "antwort": "nein",
-          "erlaeuterung": "Die DVGW-Übersicht listet keine neuere SSQNOT-Version",
+          "erlaeuterung": "Keine veröffentlichte verbindliche Nachfolgeversion. Zur Klarstellung: Mitteilung 57 ist am 31.07.2026 tatsächlich **veröffentlicht** (nicht nur angekündigt), sie enthält aber ausschließlich **Konsultationsfassungen** für den Umsetzungstermin 01.04.2027 — Entwürfe ohne Verbindlichkeit (siehe Frage 7). Eine veröffentlichte, aber noch nicht gültige **verbindliche** Version gibt es zum Stichtag nicht: kein BDEW-Eintrag hat validFrom nach dem 01.10.2026, und nach Mitteilung 56 ist keine weitere Inkrafttretens-Mitteilung erschienen (Mitteilungsliste, Abruf 17.09.2026).",
           "beleg": [
             {
-              "quelle": "DVGW GABi Gastransport",
-              "url": "https://www.dvgw-sc.de/leistungen/it-dienstleistungen/datenaustausch-gas/gabi-gastransport"
+              "quelle": "BNetzA Mitteilung 57",
+              "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html",
+              "fundstelle": "veröffentlicht 31.07.2026; 'Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027'"
+            },
+            {
+              "quelle": "BDEW-API Abzug",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "0 Einträge mit validFrom > 2026-10-01"
             }
           ]
         },
@@ -314,6 +330,24 @@
             {
               "quelle": "BDEW-Marktprozesse id 20",
               "fundstelle": "AWH Mehr-/Mindermengen, gültig ab 06.06.2025"
+            }
+          ]
+        },
+        {
+          "art": "offene_frage",
+          "text": "O-14: Der Prüfidentifikator 70096 trägt in zwei am Stichtag gültigen Quellen unterschiedliche Bezeichnungen — PID 4.0 (BNetzA/BDEW, S. 27): 'Mehr-/Mindermengenmeldung RLP'; SSQNOT 5.7 (DVGW, S. 12): 'Mehr-/Mindermengenmeldung RLM'. Beide Schreibweisen werden unverändert festgehalten und NICHT aufgelöst; welche fachlich richtig ist (RLP = registrierende Leistungsmessung Profil / RLM = registrierende Leistungsmessung), ist nicht belegbar. Für 70095 stimmen beide Quellen überein ('SLP').",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "m56:PID_4_0_20260401.pdf",
+              "seite": 27,
+              "fundstelle": "12180 SSQNOT … Mehr-/Mindermengenmeldung RLP 70096"
+            },
+            {
+              "quelle": "dvgw:SSQNOT_5.7_Stand_2021-10-31",
+              "sha256": "3b499f4afa85ea6c14230a37835dcc0f28b115816203ab890ac318a556e8c60a",
+              "seite": 12,
+              "fundstelle": "70096 Mehr-/Mindermengenmeldung RLM"
             }
           ]
         }
