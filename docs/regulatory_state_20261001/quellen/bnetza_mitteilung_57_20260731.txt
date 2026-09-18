@@ -1,0 +1,85 @@
+
+Mit­tei­lung Nr. 57 zu den Da­ten­for­ma­ten zur Ab­wick­lung der Markt­kom­mu­ni­ka­ti­on
+Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.04.2027
+- Beschlusskammer 6 -
+- Beschlusskammer 7 -
+31.07.2026
+Die Projektgruppe EDI@Energy hat der Bundesnetzagentur überarbeitete Versionen folgender Nachrichtentypen und Dokumente im Entwurf übersandt:
+EDIFACT-Dokumente
+Allgemeine Festlegungen, Version 6.1e [Allgemeine_Festlegungen_6_1e_Konsultationsfassung_20260731.html]
+Anwendungsübersicht der Prüfidentifikatoren, Version 4.1
+ [PID_4_1_Konsultationsfassung_20260731.html]APERAK AHB, Version 1.1a
+ [APERAK_AHB_1_1a_Konsultationsfassung_20260731.html]APERAK MIG, Version 2.2a
+ [APERAK_MIG_2_2a_Konsultationsfassung_20260731.html]API-Guideline, Version 1.0c
+ [API_Guideline_1_0c_Konsultationsfassung_20260731.html]Codeliste der Artikelnummern und Artikel-IDs, Version 5.7
+ [Codeliste-Artikelnr_Artikel-ID_5_7_Konsultationsfassung_20260731.html]Codeliste der Konfigurationen, Version 1.4a
+ [Codeliste-Konfigurationen_1_4a_Konsultationsfassung_20260731.html]Codeliste der Verwendungszecke, Version 1.0a
+ [Codeliste-Verwendungszwecke_1_0a_Konsultationsfassung_20260731.html]CONTRL AHB, Version 1.0a
+ [CONTRL_AHB_1_0a_Konsultationsfassung_20260731.html]CONTRL MIG, Version 2.0c
+ [CONTRL_MIG_2_0c_Konsultationsfassung_20260731.html]IFTSTA AHB, Version 2.1a
+ [IFTSTA_AHB_2_1a_Konsultationsfassung_20260731.html]IFTSTA MIG, Version 2.1a
+ [IFTSTA_MIG_2_1a_Konsultationsfassung_20260731.html]ORDERS AHB, Version 1.1c
+ [ORDERS_AHB_1_1c_Konsultationsfassung_20260731.html]ORDRSP AHB, Version 1.1c
+ [ORDRSP_AHB_1_1c_Konsultationsfassung_20260731.html]QUOTES AHB, Version 1.2
+ [QUOTES_AHB_1_2_Konsultationsfassung_20260731.html]QUOTES MIG, Version 1.4
+ [QUOTES_MIG_1_4_Konsultationsfassung_20260731.html]UTILMD AHB, Strom Version 2.3
+ [UTILMD_AHB_Strom_2_3_Konsultationsfassung_20260731.html]UTILMD MIG, Strom Version 2.3
+ [UTILMD_MIG_Strom_S2_3_Konsultationsfassung_20260731.html]
+API-Webdienste
+API-Webdienste Strom - Release 2.0.0
+Entscheidungsbaum-Diagramme
+EBD und Codelisten 4.4 (pdf / 4 MB)   [EBD_und_Codelisten_4_4_Konsultationsfassung_20260731.pdf]
+Redispatch
+ActivationDocument AWT 1.1g
+ [ActivationDocument_AWT_1_1g_Konsultationsfassung_20260731.html]Änderungshistorie XML-Datenformate [%C3%84nderungshistorie_XML-Datenformate_20260731.html]
+Regelungen zum Übertragungsweg
+Regelungen zum Übertragungsweg, Version 1.11 (pdf / 947 KB)   [Rz%C3%9C_Regelungen_zum_%C3%9Cbertragungsweg_1_11_Konsultationsfassung_20260731.pdf]
+Regelungen zum Übertragungsweg für API-Webdienste, Version 1.3 (pdf / 441 KB)   [Rz%C3%9C_API-Webdienste_1_3__Konsultationsfassung_20260731.pdf]
+Die Beschlusskammern geben die betreffenden Dokumente nunmehr allen Interessenkreisen zur Kenntnis. Diese erhalten damit die Möglichkeit, zu den Inhalten der Dokumente Stellung zu nehmen.
+Nach Ablauf der Konsultation und Auswertung der Stellungnahmen durch die Projektgruppe wird die Bundesnetzagentur den für die Umsetzung verbindlichen Stand der Dokumente veröffentlichen. Diese Nachrichtentypversionen sind dann von allen Marktbeteiligten umzusetzen und grundsätzlich ab dem 01.04.2027 verbindlich zu verwenden. Anderweitige davon abweichende Umsetzungstermine, die sich aus den nachfolgenden Hinweisen, gesetzlichen Vorgaben oder Festlegungen ergeben, bleiben unberührt.
+Stellungnahmen zu den beigefügten Dokumenten, die auch gemeinschaftlich abgegeben werden können, werden erbeten bis
+Montag, 31.08.2026 (Ablauf des Tages).
+an die E-Mail-Adresse datenformate@bnetza.de.
+Beachten Sie hierzu bitte die nachstehenden Hinweise.
+Die Bundesnetzagentur bittet darum, für die Stellungnahmen zu EDIFACT-, EBD- und RzÜ-Dokumenten ausschließlich die unten verlinkten themenspezifischen Formblätter zu verwenden.
+Im Rahmen des Änderungsmanagements stellt die Bundesnetzagentur zweimal jährlich die sich ändernden EDI@Energy-Dokumente zur Konsultation. In der Konsultation haben die Marktteilnehmer die Möglichkeit, sich einerseits über die Änderungen in den Dokumenten zu informieren und andererseits zu den Änderungen Stellung zu nehmen. Die Konsultationsbeiträge sollen sich dabei ausschließlich auf die geänderten Stellen (gemäß Änderungshistorie) im jeweiligen EDI@Energy-Dokument beziehen. Die Rückmeldungen können sowohl inhaltliche Fehlerkorrekturen an den Änderungen beinhalten als auch einzelne Änderungen kommentieren.
+Die EDI@Energy hat darüber hinaus um die Veröffentlichung folgender Hinweise zu den Konsultationsdokumenten gebeten:
+Hinweise zu den EDI@Energy-EDIFACT-Datenformaten
+Mit Ihrer Beteiligung an der Konsultation haben Sie die Möglichkeit, an der gemeinsamen Konsultationssitzung von EDI@Energy und der BK6 teilzunehmen. Die Sitzung findet am 10.09.2026 in den Räumlichkeiten des BDEW statt. Wir würden uns freuen, Sie persönlich in Berlin begrüßen zu dürfen. Sofern eine Teilnahme vor Ort nicht möglich ist, besteht alternativ die Möglichkeit einer digitalen Teilnahme.
+Die PG EDI@Energy weist darauf hin, dass vorgeschlagen wird, dem Markt für die Implementierung der zum 01.10.2026 zu veröffentlichenden EDI@Energy-Dokumente ein Umsetzungszeitraum von zwölf Monaten anstelle der ansonsten üblichen sechs Monate einzuräumen. Die produktive Anwendung ist damit zum 01.10.2027 sicherzustellen. Dieser verlängerte Umsetzungszeitraum ermöglicht es, die Festlegung „MiSpeL“, sofern diese rechtzeitig vorliegt, sachgerecht zu berücksichtigen und erforderliche Anpassungen, insbesondere an der Berechnungsformel, noch vor der produktiven Einführung als API-Webdienst über die Datenformatkonsultation im Februar 2027 vorzunehmen. Auf diese Weise wird vermieden, dass der Markt unmittelbar nach Einführung erneut Anpassungen umsetzen muss.
+Die Netzlokations-ID wird zukünftig für jede Netzlokation im Strombereich vergeben und kommuniziert. Dies stellt eine Weiterentwicklung gegenüber der heutigen Situation dar, in der die Netzlokations-ID nur dann übermittelt wird, wenn sie prozessual erforderlich ist. Die durchgängige Vergabe und Kommunikation der Netzlokations-ID ist zugleich ein vorbereitender Schritt für die Einführung des MaBiS-Hubs.
+Jeder pauschalen Marktlokation wird zukünftig eine pauschale Messlokation zugeordnet, um sicherzustellen, dass jeder Marktlokation immer mindestens eine Messlokation zugeordnet ist. Damit verfügt jede Marktlokation im Strombereich zukünftig über mindestens eine zugeordnete Messlokation. Diese Messlokation kann entweder als pauschale Messlokation ohne Zähler oder als gemessene Messlokation mit Zähler ausgestaltet sein. Die durchgängige Vergabe und Kommunikation der Zählpunktbezeichnung für eine Messlokation ist zugleich ein vorbereitender Schritt für die Einführung des MaBiS-Hubs.
+Die UTILTS wird vollständig durch API-Webdienste ersetzt. Darüber hinaus wurden diese API-Webdienste um derzeit bekannte Anforderungen erweitert. Dadurch können künftig alle Berechnungen, die im Energiemarkt für die Wertebildung an einer Marktlokation, Tranche oder Netzlokation erforderlich sind, über die standardisierte Marktkommunikation ausgetauscht werden. Dies ist auch ein Ergebnis der Konzeptkonsultation September 2025: Entfernung der Aussage „Berechnungsformel muss beim Absender angefragt werden“. Die bisherige Einschränkung, dass nur eine Berechnungsformel je Lokation übermittelt werden konnte, wurde ebenfalls aufgehoben. Mittels der bereitgestellten API-Webdienste (Formel für verschiedene Lokationen und Formel für die Marktlokation) können zukünftig Berechnungsformeln für verschiedene Verwendungszwecke von Berechnungszielen übermittelt werden. Ab diesem Zeitpunkt sind auch Berechnungsformeln für Tranchen übermittelbar.
+Darüber hinaus wurden auch Zählzeiten, Schaltzeiten und Leistungskurven vollständig in die neue Struktur überführt. Leistungskurven wurden zudem um die Parameter für Erzeugung erweitert. Die darauf aufbauenden Reklamations- und Antwort-Anwendungsfälle wurden von der ORDERS und ORDRSP ebenfalls in API-Webdienste überführt.
+Lokationsbündel werden zukünftig über API-Webdienste übertragen. Diese nutzen nicht mehr die Lokationsbündelstruktur-Codes. Aus der UTILMD wurde die Lokationsbündelstruktur ausgebaut. Dadurch wird die bisherige Codeliste der Lokationsbündelstruktur obsolet. Der API-Webdienst „Lokationsbündel“ ermöglicht es, Messkonzepte im Energiemarkt umfassend zu übermitteln. Die Lokationsbündel wurden generisch gestaltet und werden mittels API-Webdienst übertragen. Dies ist auch ein Ergebnis der Konzeptkonsultation September 2025, dass Lokationsbündelstrukturen nicht mehr als „nicht standardisiert“ gekennzeichnet werden können. Hierdurch entfällt die bisherige Möglichkeit, besonders komplexe Anschlusssituationen aufgrund fehlender Abbildbarkeit in der Nachricht nicht zu übermitteln.
+In diesem Zusammenhang wurde auch die API-Guideline um ein Kapitel zur Syntax- und Zuordnungsprüfung von API-Webdiensten ergänzt.
+Hinweis: Die Überführung des Informationsaustausches von EDIFACT nach API wurde auch in der Anwendungsübersicht der Prüfidentifikatoren berücksichtigt.
+API-Webdienste
+Die zur Konsultation stehenden Anpassungen an den API-Webdiensten finden sich im Branch des entsprechenden Repositorys (github.com/EDI-Energy/api-electricity) mit der Endung „-consultation“.
+Beim Einreichen von Konsultationsbeiträgen ist so vorzugehen, wie in der API-Guideline (Version 1.0b) beschrieben. Zur verbesserten Lesbarkeit wird ergänzend eine Visualisierung in Form einer OpenAPI-Dokumentation bereitgestellt, die ausschließlich der unterstützenden und informativen Darstellung der Schnittstellen dient (https://edi-energy.github.io/api-electricity/konsultation/).
+Alle Schnittstellen, die in der letzten Konsultation veröffentlicht wurden, sind im Release 2.0.0 enthalten. Diese beinhalten die Ergebnisse der Konsultation Februar 2026. Zum damaligen Zeitpunkt wurde die Entscheidung getroffen, dass diese nicht regulär im April 2026 als Konsultationsergebnis veröffentlicht werden. Da diese bereits das Ergebnis einer Konsultation darstellen, werden zu diesen Anpassungen keine Rückmeldungen mehr erwartet.
+Hinweise zur Visualisierung in der OpenAPI-Dokumentation
+Zur verbesserten Lesbarkeit wird ergänzend eine Visualisierung in Form einer OpenAPI-Dokumentation bereitgestellt, die ausschließlich der unterstützenden und informativen Darstellung der Schnittstellen dient.
+Der API-Webdienst-Payload ist im JSON-Format codiert, vergleiche API-Guideline Kapitel 3.3.
+Die Beispiele (example value) im „request body“ der jeweiligen Schnittstelle in der Open API SwaggerUI sind automatisch generiert und basieren inhaltlich auf den einzelnen Beispielen der Schemas. Die so generierten Beispiele ergeben fachlich aufgrund der Wiederverwendung von Schemas in unterschiedlichen API-Webdiensten bzw. Schemas in der Regel keinen Sinn. Diese Beispiele dienen ausschließlich der Visualisierung der grundsätzlichen Struktur.
+Weiterhin sind die Beispiele ausschließlich Maximalausprägungen aller verwendeten Objekte im Body, in welchem auch optionale Objekte vollständig dargestellt werden. Der Status der einzelnen Objekte ergibt sich aus den in diesem API-Webdienst genutzten Schemas.
+Hinweis auf erläuternde Anwendungshilfen zu API-Webdiensten
+Voraussichtlich in der ersten Augustwoche wird der BDEW auf der Seite MaKo-Plattform/EDI@Energy die Anwendungshilfen
+Anwendungshilfe zur Abbildung der Berechnungsformeln in API-Webdiensten
+Anwendungshilfe zur Darstellung von Lokationsbündeln
+veröffentlichen. In diesen sind anhand von Beispielen die Ausprägung der entsprechenden, zur Konsultation gestellten API-Webdiensten beschrieben, um so das Verständnis für die entsprechenden Schnittstellen zu erhöhen.
+EDIFACT-Dokumente und Entscheidungsbaumdiagramme
+Im Dokument „Entscheidungsbaum-Diagramme und Codelisten für die Antwortnachrichten“ wurde in einzelnen EBD der Antwortcode „A99“ entfernt. Dies wurde in den EDIFACT-Dokumenten UTILMD und ORDRSP, in welchen dieser EBD-Code genutzt wird und damit verbunden die Nutzung des Freitextes für diesen Code vorhanden ist, nicht nachgezogen. Dies wird in den EDIFACT-Dokumenten nachgezogen, sobald das Konsultationsergebnis des Dokuments „Entscheidungsbaum-Diagramme und Codelisten für die Antwortnachrichten“ feststeht, sodass die relevanten Dokumente zum Zeitpunkt der Veröffentlichung des Konsultationsergebnisses wieder synchron zueinander sind.
+Hinweise zu den XML-Dateien
+Die zur Konsultation stehenden Nachrichtenbeschreibungen und Anwendungshandbücher stehen auf der BDEW MaKo-Plattform (unter www.bdew-mako.de) auch als XML-Dateien zur Verfügung. Für den Zugriff auf die als Konsultationsfassung gekennzeichneten kostenpflichtigen XML-Dateien benötigen Interessierte ein entsprechendes Abonnement.
+Hinweise zu den Entscheidungsbaum-Diagrammen und Codelisten
+Im Rahmen der Konsultation des EBD-Dokuments in der Version 4.4 wurden insbesondere die Nutzungszeiträume bestehender Antwortcodes angepasst und der befristete Antwortgrund A99 in verschiedenen EBD entfernt. 
+Darüber hinaus wurde die Prüflogik des EBD E_0622_Prüfen, ob Anmeldung direkt ablehnbar ist, für Einspeisefälle überarbeitet. 
+Eine weitere Änderung betrifft die Einschränkung zur Anwendung der Sonderrechnungen (SOR). Dabei soll diese ausschließlich für die Abrechnungsvariante „Arbeitspreis/Leistungspreis“ möglich sein. Hierfür erwarten wir gerne Rückmeldungen im Rahmen der Konsultation aus dem Markt. 
+Anhang:
+Formblatt Konsultationsbeitraege EDIFACT (xlsx / 44 KB)   [Formblatt_Konsultationsbeitraege_EDIFACT_Unternehmensname_20260731.xlsx]
+Formblatt Konsultationsbeitraege RZÜ (xlsx / 73 KB)   [Formblatt_Konsultationsbeitraege_RZ%C3%9C_Unternehmensname_20260731.xlsx]
+Formblatt Konsultationsbeitraege XML (xlsx / 25 KB)   [Formblatt_Konsultationsbeitraege_XML_Unternehmensname_20260731.xlsx]
+Formblatt Konsultationsbeitraege EBD (xlsx / 40 KB)   [Formblatt_Konsultationsbeitraege_EBD_Unternehmensname_20260731.xlsx]
+-- Ende der Mitteilung --
+      

@@ -1,0 +1,2573 @@
+{
+  "stichtag": "2026-10-01",
+  "erhebung": "Etappe 0 (Issue #64)",
+  "quelle_mitteilung": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html",
+  "bdew_snapshot": "quellen/bdew_mako_api_documents_20260917.json",
+  "anzahl": 34,
+  "dokumente": [
+    {
+      "lfd_nr": 1,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "Allgemeine Festlegungen 6.1d",
+      "dokumentname": "Allgemeine Festlegungen",
+      "dokumenttyp": "Allgemeine Festlegungen",
+      "kategorie": "Sonstiges",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "6.1d",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/Allgemeine_Festlegungen_6_1d_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "Allgemeine_Festlegungen_6_1d_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 2619000,
+      "sha256": "a9aa7fd0806dfdf52800302e9db564b5c145e6eaf930e68045f6c6fb16b7125b",
+      "seiten": 118,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "6.1d",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "01.08.2025"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "6.1c (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8319,
+          "titel": "Allgemeine Festlegungen 6.1d",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8320,
+          "titel": "Allgemeine Festlegungen 6.1d - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 2,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "Anwendungsübersicht der Prüfidentifikatoren 4.0",
+      "dokumentname": "Anwendungsübersicht der Prüfidentifikatoren",
+      "dokumenttyp": "Anwendungsübersicht der Prüfidentifikatoren",
+      "kategorie": "PID",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "4.0",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/PID_4_0_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "PID_4_0_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 3255401,
+      "sha256": "99be6b4b7dae232d5a4edf5eed06c183d10763fc38d45b8b8f5254ab398abdf7",
+      "seiten": 86,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "4.0",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "---------"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "3.3 (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8324,
+          "titel": "Anwendungsübersicht der Prüfidentifikatoren 4.0",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8325,
+          "titel": "Anwendungsübersicht der Prüfidentifikatoren 4.0 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8423,
+          "titel": "Anwendungsübersicht der Prüfidentifikatoren 4.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-08-11",
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8424,
+          "titel": "Anwendungsübersicht der Prüfidentifikatoren 4.0 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-08-11",
+          "fileType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8461,
+          "titel": "Anwendungsübersicht der Prüfidentifikatoren 4.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.08.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8462,
+          "titel": "Anwendungsübersicht der Prüfidentifikatoren 4.0 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 12.08.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 3,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "APERAK AHB 1.1",
+      "dokumentname": "APERAK AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "APERAK",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.1",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/APERAK_AHB_1_1_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "APERAK_AHB_1_1_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 1178713,
+      "sha256": "6c1aef9365d3cb05ef59b698fe8564819709a120059973885a4c6d5131f1dfc0",
+      "seiten": 55,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.1",
+        "stand_mig": "2.2",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [
+          "Informatorische Lesefassung"
+        ],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "1.0 (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8237,
+          "titel": "APERAK AHB 1.1 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8321,
+          "titel": "APERAK AHB 1.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8322,
+          "titel": "APERAK AHB 1.1 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8323,
+          "titel": "APERAK AHB 1.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 4,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "APERAK MIG 2.2",
+      "dokumentname": "APERAK MIG",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "APERAK",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "2.2",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/APERAK_MIG_2_2_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "APERAK_MIG_2_2_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 579132,
+      "sha256": "d4255b19d9b60db49475717ad1c0314c05dd6bb2665a4cca5799a0d0415fc83f",
+      "seiten": 27,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "2.2",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "2.1i (M42, verschoben durch M47)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8238,
+          "titel": "APERAK MIG 2.2 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8326,
+          "titel": "APERAK MIG 2.2 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8327,
+          "titel": "APERAK MIG 2.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8328,
+          "titel": "APERAK MIG 2.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 5,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "API Guideline 1.0b",
+      "dokumentname": "API Guideline",
+      "dokumenttyp": "API Guideline",
+      "kategorie": "API",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.0b",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/API_Guideline_1_0b_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "API_Guideline_1_0b_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 534426,
+      "sha256": "bb233b0262c9bf2aea4876ea3b27fac1c66de791d661408f9cbb97661d945f55",
+      "seiten": 22,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.0b",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "1.0a (M46, verschoben durch M47)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8329,
+          "titel": "API-Guideline 1.0b",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8330,
+          "titel": "API-Guideline 1.0b - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 6,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "Codeliste der Konfigurationen 1.4",
+      "dokumentname": "Codeliste der Konfigurationen",
+      "dokumenttyp": "Codeliste der Konfigurationen",
+      "kategorie": "Codeliste",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.4",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/Codeliste-Konfigurationen_1_4_20260401.pdf?__blob=publicationFile&v=2",
+      "dateiname": "Codeliste-Konfigurationen_1_4_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 875370,
+      "sha256": "2b20b9cb8c2e68ef8f95e126356936d02609adb36f86856a07d319da40a91edc",
+      "seiten": 64,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.4",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "02.02.2026"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "1.3c (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8331,
+          "titel": "Codeliste der Konfigurationen 1.4 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8332,
+          "titel": "Codeliste der Konfigurationen 1.4",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 7,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "Codeliste der Verwendungszwecke 1.0",
+      "dokumentname": "Codeliste der Verwendungszwecke",
+      "dokumenttyp": "Codeliste der Verwendungszwecke",
+      "kategorie": "Codeliste",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.0",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/Codeliste-Verwendungszwecke_1_0_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "Codeliste-Verwendungszwecke_1_0_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 190237,
+      "sha256": "113442f66f0db20236e4e1cbc125edd498fc78f7c81b326f023a1fb640fb7f41",
+      "seiten": 7,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.0",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "02.02.2026"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "— (neu)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8333,
+          "titel": "Codeliste der Verwendungszwecke 1.0",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8334,
+          "titel": "Codeliste der Verwendungszwecke 1.0 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8417,
+          "titel": "Codeliste der Verwendungszwecke 1.0 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8418,
+          "titel": "Codeliste der Verwendungszwecke 1.0 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 8,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "IFTSTA AHB 2.1",
+      "dokumentname": "IFTSTA AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "IFTSTA",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "2.1",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/IFTSTA_AHB_2_1_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "IFTSTA_AHB_2_1_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 2965914,
+      "sha256": "884ddab1323cf559b46a32ac246591a2e12d46acd195bbaa94ec166005291818",
+      "seiten": 76,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "2.1",
+        "stand_mig": "2.1",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "2.0h (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8239,
+          "titel": "IFTSTA AHB 2.1 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8335,
+          "titel": "IFTSTA AHB 2.1 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8336,
+          "titel": "IFTSTA AHB 2.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8337,
+          "titel": "IFTSTA AHB 2.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 9,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "IFTSTA MIG 2.1",
+      "dokumentname": "IFTSTA MIG",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "IFTSTA",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "2.1",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/IFTSTA_MIG_2_1_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "IFTSTA_MIG_2_1_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 1960388,
+      "sha256": "f54ab9a907200570d354181fe2ff7049cfb522c095e495e0109d5e095a924332",
+      "seiten": 144,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "2.1",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "2.0g (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8240,
+          "titel": "IFTSTA MIG 2.1 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8338,
+          "titel": "IFTSTA MIG 2.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8339,
+          "titel": "IFTSTA MIG 2.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8340,
+          "titel": "IFTSTA MIG 2.1 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 10,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "INVOIC AHB 1.0b",
+      "dokumentname": "INVOIC AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "INVOIC",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.0b",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/INVOIC_AHB_1_0b_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "INVOIC_AHB_1_0b_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 3087812,
+      "sha256": "6f8218ab4c84e593306d32ee80267bae81ce44532d1255fcae2bd20d2ca3de5a",
+      "seiten": 83,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.0b",
+        "stand_mig": "2.8e",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "Konsultationsfassung",
+          "Stand: 23.06.2025"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "1.0a (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8241,
+          "titel": "INVOIC AHB 1.0b - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8341,
+          "titel": "INVOIC AHB 1.0b - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8342,
+          "titel": "INVOIC AHB 1.0b",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8343,
+          "titel": "INVOIC AHB 1.0b",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 11,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "MSCONS AHB 3.2",
+      "dokumentname": "MSCONS AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "MSCONS",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "3.2",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/MSCONS_AHB_3_2_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "MSCONS_AHB_3_2_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 4327505,
+      "sha256": "e6f93364ddf4a0414f421ca652d2c0e0f6c89a1e8f4a5c89533f25b6a3c850ed",
+      "seiten": 156,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "3.2",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "01.08.2025"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "3.1g (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8242,
+          "titel": "MSCONS AHB 3.2 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8344,
+          "titel": "MSCONS AHB 3.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8345,
+          "titel": "MSCONS AHB 3.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8346,
+          "titel": "MSCONS AHB 3.2 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 12,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "MSCONS MIG 2.5",
+      "dokumentname": "MSCONS MIG",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "MSCONS",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "2.5",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/MSCONS_MIG_2_5_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "MSCONS_MIG_2_5_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 896648,
+      "sha256": "1be2e52bf8c0de13a3fb4f2b35a9dd4aeb3ec658d63bfc8cb47c15b5f98bde25",
+      "seiten": 51,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "2.5",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "2.4c (lt. Hinweis M46)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8243,
+          "titel": "MSCONS MIG 2.5 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8347,
+          "titel": "MSCONS MIG 2.5 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8348,
+          "titel": "MSCONS MIG 2.5",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8349,
+          "titel": "MSCONS MIG 2.5",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 13,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "ORDCHG AHB 1.1",
+      "dokumentname": "ORDCHG AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "ORDCHG",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.1",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/ORDCHG_AHB_1_1_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "ORDCHG_AHB_1_1_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 387177,
+      "sha256": "87536bd85bbab744194bf4da6687032a3afc0a975d59def4f08a417fcb8e7842",
+      "seiten": 10,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.1",
+        "stand_mig": "1.2",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "24.10.2023"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "1.0a (M46, verschoben durch M47)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8244,
+          "titel": "ORDCHG AHB 1.1 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8350,
+          "titel": "ORDCHG AHB 1.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8351,
+          "titel": "ORDCHG AHB 1.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8352,
+          "titel": "ORDCHG AHB 1.1 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 14,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "ORDCHG MIG 1.2",
+      "dokumentname": "ORDCHG MIG",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "ORDCHG",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.2",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/ORDCHG_MIG_1_2_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "ORDCHG_MIG_1_2_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 384451,
+      "sha256": "b0e46ffc40e0ff70ef24634d79d92557405c94eeca1c4f1f2d432db21715f4a6",
+      "seiten": 15,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.2",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "ungeklärt (Befund 01.04.2026, E.1)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8245,
+          "titel": "ORDCHG MIG 1.2 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8354,
+          "titel": "ORDCHG MIG 1.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8355,
+          "titel": "ORDCHG MIG 1.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8356,
+          "titel": "ORDCHG MIG 1.2 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 15,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "ORDERS AHB 1.1b",
+      "dokumentname": "ORDERS AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "ORDERS",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.1b",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/ORDERS_AHB_1_1b_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "ORDERS_AHB_1_1b_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 4989949,
+      "sha256": "8834dea31bf5cd7ea2fe8df2a15777baaa732e2bae3be328916f8bffc5daf919",
+      "seiten": 135,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.1b",
+        "stand_mig": "1.4c",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "01.08.2025"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "1.1a (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8246,
+          "titel": "ORDERS AHB 1.1b - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8357,
+          "titel": "ORDERS AHB 1.1b - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8358,
+          "titel": "ORDERS AHB 1.1b",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8359,
+          "titel": "ORDERS AHB 1.1b",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-06-28",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8409,
+          "titel": "ORDERS AHB 1.1b - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8419,
+          "titel": "ORDERS AHB 1.1b - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8420,
+          "titel": "ORDERS AHB 1.1b - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 16,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "ORDERS MIG 1.4c",
+      "dokumentname": "ORDERS MIG",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "ORDERS",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.4c",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/ORDERS_MIG_1_4c_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "ORDERS_MIG_1_4c_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 1930860,
+      "sha256": "d7c1f804d0b36a000a734948b27a5bdc05bf5da0fa0553437f88737144538690",
+      "seiten": 144,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.4c",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "1.4b (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8247,
+          "titel": "ORDERS MIG 1.4c - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8360,
+          "titel": "ORDERS MIG 1.4c",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8361,
+          "titel": "ORDERS MIG 1.4c - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8362,
+          "titel": "ORDERS MIG 1.4c",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 17,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "ORDRSP AHB 1.1b",
+      "dokumentname": "ORDRSP AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "ORDRSP",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.1b",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/ORDRSP_AHB_1_1b_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "ORDRSP_AHB_1_1b_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 3015343,
+      "sha256": "220ca24cb8db56cc4ed75af3f758833a35099f5f6f9ee6c37e785b44551173a7",
+      "seiten": 74,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.1b",
+        "stand_mig": "1.4c",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "03.02.2025"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "1.1a (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8248,
+          "titel": "ORDRSP AHB 1.1b - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8363,
+          "titel": "ORDRSP AHB 1.1b",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8364,
+          "titel": "ORDRSP AHB 1.1b - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8365,
+          "titel": "ORDRSP AHB 1.1b",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 18,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "ORDRSP MIG 1.4c",
+      "dokumentname": "ORDRSP MIG",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "ORDRSP",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.4c",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/ORDRSP_MIG_1_4c_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "ORDRSP_MIG_1_4c_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 716903,
+      "sha256": "947756afccc6cc3c2c306bb0340a65f1508d2cd37485cc59f272721fef3747f4",
+      "seiten": 42,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.4c",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "1.4b (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8249,
+          "titel": "ORDRSP MIG 1.4c - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8366,
+          "titel": "ORDRSP MIG 1.4c",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8367,
+          "titel": "ORDRSP MIG 1.4c",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8368,
+          "titel": "ORDRSP MIG 1.4c - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 19,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "PARTIN AHB 1.1",
+      "dokumentname": "PARTIN AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "PARTIN",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.1",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/PARTIN_AHB_1_1_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "PARTIN_AHB_1_1_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 3177089,
+      "sha256": "d2e2ee08b677d78d54430d05534f2baa130b8ef752d2dd613b0e22839c1c287f",
+      "seiten": 88,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.1",
+        "stand_mig": "1.1",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "Stand: 11.12.2025"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "1.0f (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8250,
+          "titel": "PARTIN AHB 1.1 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8369,
+          "titel": "PARTIN AHB 1.1 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8370,
+          "titel": "PARTIN AHB 1.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8371,
+          "titel": "PARTIN AHB 1.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 20,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "PARTIN MIG 1.1",
+      "dokumentname": "PARTIN MIG",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "PARTIN",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.1",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/PARTIN_MIG_1_1_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "PARTIN_MIG_1_1_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 1157806,
+      "sha256": "a90c3fdff2d33244779a85899e2da1013d70b362ef33c078f5cb85597b68f489",
+      "seiten": 64,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.1",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "1.0f (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8262,
+          "titel": "PARTIN MIG 1.1 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8372,
+          "titel": "PARTIN MIG 1.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8373,
+          "titel": "PARTIN MIG 1.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8374,
+          "titel": "PARTIN MIG 1.1 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 21,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "PRICAT AHB 2.1",
+      "dokumentname": "PRICAT AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "PRICAT",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "2.1",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/PRICAT_AHB_2_1_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "PRICAT_AHB_2_1_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 781680,
+      "sha256": "4c7e4c4d8a38bbae179d3bcdc4f82dfc57b754f9771e04500e2126580520e655",
+      "seiten": 27,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "2.1",
+        "stand_mig": "2.1",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "2.0f (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8251,
+          "titel": "PRICAT AHB 2.1 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8375,
+          "titel": "PRICAT AHB 2.1 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8376,
+          "titel": "PRICAT AHB 2.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8377,
+          "titel": "PRICAT AHB 2.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 22,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "PRICAT MIG 2.1",
+      "dokumentname": "PRICAT MIG",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "PRICAT",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "2.1",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/PRICAT_MIG_2_1_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "PRICAT_MIG_2_1_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 644781,
+      "sha256": "553a608a4b77042f17452c8c2f58031ee16ded57bb1d026fe9aaedebfafba46c",
+      "seiten": 31,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "2.1",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "2.0e (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8252,
+          "titel": "PRICAT MIG 2.1 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8378,
+          "titel": "PRICAT MIG 2.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8379,
+          "titel": "PRICAT MIG 2.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8380,
+          "titel": "PRICAT MIG 2.1 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 23,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "QUOTES AHB 1.1a",
+      "dokumentname": "QUOTES AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "QUOTES",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.1a",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/QUOTES_AHB_1_1a_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "QUOTES_AHB_1_1a_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 1559162,
+      "sha256": "237c1caffc7407edb754dd43acc5069fb58f9b680fc3881f20f0277564d8d6e0",
+      "seiten": 41,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.1a",
+        "stand_mig": "11..43bc",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": "zwei schwarze Textobjekte an identischer Position übereinander gesetzt: '1.4b' und '1.3c' — Deckblattangabe nicht eindeutig lesbar",
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "03.02.2025"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "1.1 (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8253,
+          "titel": "QUOTES AHB 1.1a - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8381,
+          "titel": "QUOTES AHB 1.1a - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8382,
+          "titel": "QUOTES AHB 1.1a",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8383,
+          "titel": "QUOTES AHB 1.1a",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 24,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "QUOTES MIG 1.3c",
+      "dokumentname": "QUOTES MIG",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "QUOTES",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.3c",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/QUOTES_MIG_1_3c_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "QUOTES_MIG_1_3c_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 1458186,
+      "sha256": "60d14847dea76940abb415ca482bc2e8eb613bb6db9333bef0330ae80880b362",
+      "seiten": 109,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.3c",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "1.3b (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8254,
+          "titel": "QUOTES MIG 1.3c - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8384,
+          "titel": "QUOTES MIG 1.3c",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8385,
+          "titel": "QUOTES MIG 1.3c",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8386,
+          "titel": "QUOTES MIG 1.3c - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 25,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "REQOTE AHB 1.2",
+      "dokumentname": "REQOTE AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "REQOTE",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.2",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/REQOTE_AHB_1_2_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "REQOTE_AHB_1_2_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 1114842,
+      "sha256": "6ed2162aa14a5516df1bac6bcbeb0b3b33e2d91d4a2e192bfae85cc70cc2796b",
+      "seiten": 31,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.2",
+        "stand_mig": "11..43bc",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": "zwei schwarze Textobjekte an identischer Position übereinander gesetzt: '1.4b' und '1.3c' — Deckblattangabe nicht eindeutig lesbar",
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "24.10.2023"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "1.1 (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8255,
+          "titel": "REQOTE AHB 1.2 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8387,
+          "titel": "REQOTE AHB 1.2 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8388,
+          "titel": "REQOTE AHB 1.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8389,
+          "titel": "REQOTE AHB 1.2",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-06-28",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8410,
+          "titel": "REQOTE AHB 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8425,
+          "titel": "REQOTE AHB 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8426,
+          "titel": "REQOTE AHB 1.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 26,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "UTILMD AHB Strom 2.2",
+      "dokumentname": "UTILMD AHB Strom",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "UTILMD",
+      "sparte": "Strom",
+      "sparte_begruendung": "Spartenangabe im Dokumenttitel",
+      "version": "2.2",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/UTILMD_AHB_Strom_2_2_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "UTILMD_AHB_Strom_2_2_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 14574989,
+      "sha256": "8ab521f836e6382bf17559a916b5a8ce94d03cdc58c29aa372ffbce06168efc8",
+      "seiten": 1397,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "2.2",
+        "stand_mig": "S2.2",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "Konsultationsfassung",
+          "11.12.2025"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "2.1 (M46, verschoben durch M47)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8258,
+          "titel": "UTILMD AHB Strom 2.2 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8393,
+          "titel": "UTILMD AHB Strom 2.2 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8394,
+          "titel": "UTILMD AHB Strom 2.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8395,
+          "titel": "UTILMD AHB Strom 2.2",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-06-28",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8412,
+          "titel": "UTILMD AHB Strom 2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8435,
+          "titel": "UTILMD AHB Strom 2.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8440,
+          "titel": "UTILMD AHB Strom 2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 27,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "UTILMD MIG Strom S2.2",
+      "dokumentname": "UTILMD MIG Strom",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "UTILMD",
+      "sparte": "Strom",
+      "sparte_begruendung": "Spartenangabe im Dokumenttitel",
+      "version": "S2.2",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/UTILMD_MIG_Strom_S2_2_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "UTILMD_MIG_Strom_S2_2_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 7165248,
+      "sha256": "fcade5ecb0caac9e2847d3cb1bfdd9ca94c3598fcfebc139d7fe9c6cbd243069",
+      "seiten": 559,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "S2.2",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "S2.1 (M46, verschoben durch M47)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8399,
+          "titel": "UTILMD MIG Strom S2.2 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8400,
+          "titel": "UTILMD MIG Strom S2.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8401,
+          "titel": "UTILMD MIG Strom S2.2",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-06-28",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8414,
+          "titel": "UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-08-05",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8432,
+          "titel": "UTILMD MIG Strom S2.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-08-05",
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8442,
+          "titel": "UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-08-05",
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8458,
+          "titel": "UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8459,
+          "titel": "UTILMD MIG Strom S2.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8460,
+          "titel": "UTILMD MIG Strom S2.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 28,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "UTILMD AHB Gas 1.2",
+      "dokumentname": "UTILMD AHB Gas",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "UTILMD",
+      "sparte": "Gas",
+      "sparte_begruendung": "Spartenangabe im Dokumenttitel",
+      "version": "1.2",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/UTILMD_AHB_Gas_1_2_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "UTILMD_AHB_Gas_1_2_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 10716762,
+      "sha256": "88a4cf9d82d699b048e1f34a5336d80d6613065ae8476c1571dccdd2d7e40cf9",
+      "seiten": 307,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.2",
+        "stand_mig": "G1.2",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "Konsultationsfassung",
+          "01.02.2026"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "1.1 (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8257,
+          "titel": "UTILMD AHB Gas 1.2 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8390,
+          "titel": "UTILMD AHB Gas 1.2",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-06-28",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8391,
+          "titel": "UTILMD AHB Gas 1.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8392,
+          "titel": "UTILMD AHB Gas 1.2 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8416,
+          "titel": "UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-08-05",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8427,
+          "titel": "UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-08-05",
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8428,
+          "titel": "UTILMD AHB Gas 1.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-08-05",
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8455,
+          "titel": "UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8456,
+          "titel": "UTILMD AHB Gas 1.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8457,
+          "titel": "UTILMD AHB Gas 1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 06.08.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 29,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "UTILMD MIG Gas G1.2",
+      "dokumentname": "UTILMD MIG Gas",
+      "dokumenttyp": "MIG",
+      "kategorie": "MIG",
+      "nachrichtentyp": "UTILMD",
+      "sparte": "Gas",
+      "sparte_begruendung": "Spartenangabe im Dokumenttitel",
+      "version": "G1.2",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/UTILMD_MIG_Gas_G1_2_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "UTILMD_MIG_Gas_G1_2_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 2417983,
+      "sha256": "b45a5ea72b5c107391c85e0fcfb02adf910e5ba20010864e17d06c3413301d6e",
+      "seiten": 169,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "G1.2",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "G1.1 (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8396,
+          "titel": "UTILMD MIG Gas G1.2",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-06-28",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8397,
+          "titel": "UTILMD MIG Gas G1.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8398,
+          "titel": "UTILMD MIG Gas G1.2 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8413,
+          "titel": "UTILMD MIG Gas G1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8437,
+          "titel": "UTILMD MIG Gas G1.2 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8438,
+          "titel": "UTILMD MIG Gas G1.2 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 29.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 30,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "EDIFACT-Dokumente",
+      "titel_in_mitteilung": "UTILTS AHB 1.1",
+      "dokumentname": "UTILTS AHB",
+      "dokumenttyp": "AHB",
+      "kategorie": "AHB",
+      "nachrichtentyp": "UTILTS",
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.1",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/UTILTS_AHB_1_1_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "UTILTS_AHB_1_1_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 1239671,
+      "sha256": "b0b8ae1bec4aac7a2ad61766d7da91d28f2b099e9279f16839ecc0bcadff0477",
+      "seiten": 48,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.1",
+        "stand_mig": "1.1e",
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": [
+          "Stand: 02.02.2026"
+        ]
+      },
+      "vorgaenger_laut_befund_20260401": "1.0 (M46, verschoben durch M47)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8261,
+          "titel": "UTILTS AHB 1.1 - Konsultationsfassung",
+          "validFrom": "2026-02-02",
+          "validTo": "2026-02-27",
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": false
+        },
+        {
+          "bdew_id": 8402,
+          "titel": "UTILTS AHB 1.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "text/xml",
+          "frei": false,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8403,
+          "titel": "UTILTS AHB 1.1",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8404,
+          "titel": "UTILTS AHB 1.1 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 31,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "Entscheidungsbaum-Diagramme",
+      "titel_in_mitteilung": "Entscheidungsbaum-Diagramme und Codelisten (Version 4.3)",
+      "dokumentname": "Entscheidungsbaum-Diagramme und Codelisten",
+      "dokumenttyp": "Entscheidungsbaum-Diagramme und Codelisten",
+      "kategorie": "EBD",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "4.3",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/EBD_und_Codelisten_4_3_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "EBD_und_Codelisten_4_3_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 8622762,
+      "sha256": "2099003fafbe7372780c2e6abe50dc4d24483ed42ed57a39804b47af1c6a3f32",
+      "seiten": 832,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "4.3",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": null,
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "4.2 (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8314,
+          "titel": "Entscheidungsbaum-Diagramme und Codelisten 4.3",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8315,
+          "titel": "Entscheidungsbaum-Diagramme und Codelisten 4.3 - informatorische Lesefassung",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8407,
+          "titel": "Entscheidungsbaum-Diagramme und Codelisten 4.3 - informatorische Lesefassung - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 23.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        },
+        {
+          "bdew_id": 8408,
+          "titel": "Entscheidungsbaum-Diagramme und Codelisten 4.3 - konsolidierte Lesefassung mit Fehlerkorrekturen Stand: 23.06.2026",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 32,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "Regelungen zum Übertragungsweg",
+      "titel_in_mitteilung": "Regelungen zum Übertragungsweg, Version 1.10",
+      "dokumentname": "Regelungen zum Übertragungsweg",
+      "dokumenttyp": "Regelungen zum Übertragungsweg",
+      "kategorie": "Übertragungsweg",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.10",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/Regelungen_zum_Uebertragungsweg_1_10_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "Regelungen_zum_Uebertragungsweg_1_10_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 1220485,
+      "sha256": "6d980f76add25b06df69a89a2def099e9f8ed546ad93b745df7ea5e627fb91c5",
+      "seiten": 41,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.10",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": "01.10.2026",
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "1.9 (M51)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8317,
+          "titel": "Regelungen zum Übertragungsweg 1.10",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 33,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "Regelungen zum Übertragungsweg",
+      "titel_in_mitteilung": "AS4-Profil, Version 1.2",
+      "dokumentname": "AS4-Profil",
+      "dokumenttyp": "AS4-Profil",
+      "kategorie": "AS4",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "1.2",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/AS4-Profil_1_2_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "AS4-Profil_1_2_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 775726,
+      "sha256": "979a4d0f6a0666e1d1198433eff8047fd139806313a43a5643ab8b10b71542c1",
+      "seiten": 26,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "1.2",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": "01.10.2026",
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "1.1 v13 (M46)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8316,
+          "titel": "AS4-Profil 1.2",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    },
+    {
+      "lfd_nr": 34,
+      "quelle": "BNetzA Mitteilung Nr. 56",
+      "mitteilung_abschnitt": "Regelungen zum Übertragungsweg",
+      "titel_in_mitteilung": "Regelungen zum Übertragungsweg AS4, Version 2.6",
+      "dokumentname": "Regelungen zum Übertragungsweg AS4",
+      "dokumenttyp": "Regelungen zum Übertragungsweg AS4",
+      "kategorie": "AS4",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_begruendung": "keine Spartenangabe im Titel; Mitteilung 56 spricht von 'spartenübergreifenden Nachrichtentypversionen' — tatsächliche Spartenanwendung erst in Etappe 2/3 prüfen",
+      "version": "2.6",
+      "veroeffentlicht": "2026-04-01",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_ab_beleg": "Mitteilung 56: 'verbindlich ab dem 01.10.2026'",
+      "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Anlagen/Regelungen_zum_Uebertragungsweg_AS4_2_6_20260401.pdf?__blob=publicationFile&v=1",
+      "dateiname": "Regelungen_zum_Uebertragungsweg_AS4_2_6_20260401.pdf",
+      "dateityp": "pdf",
+      "dateigroesse_bytes": 379824,
+      "sha256": "507d8b6e1879434ec33d44cdb04e2823d41039001803ca8d43328d83879c4d09",
+      "seiten": 12,
+      "abruf_utc": "2026-09-17T17:13Z",
+      "deckblatt": {
+        "version": "2.6",
+        "stand_mig": null,
+        "publikationsdatum": "01.04.2026",
+        "anzuwenden_ab": "01.10.2026",
+        "stand_mig_zeichenanalyse": null,
+        "sichtbare_vermerke": [],
+        "unsichtbarer_resttext": []
+      },
+      "vorgaenger_laut_befund_20260401": "2.5 (M54)",
+      "dokumentstatus": "verbindlich veröffentlicht (Basisfassung der Mitteilung)",
+      "bdew_eintraege_gleicher_version": [
+        {
+          "bdew_id": 8318,
+          "titel": "Regelungen zum Übertragungsweg für AS4 2.6",
+          "validFrom": "2026-10-01",
+          "validTo": null,
+          "fileType": "application/pdf",
+          "frei": true,
+          "am_stichtag_gueltig_lt_bdew": true
+        }
+      ]
+    }
+  ]
+}

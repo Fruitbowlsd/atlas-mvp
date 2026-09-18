@@ -1,0 +1,79 @@
+
+Mit­tei­lung Nr. 55 zu den Da­ten­for­ma­ten zur Ab­wick­lung der Markt­kom­mu­ni­ka­ti­on
+Konsultation von Nachrichtentypversionen für den Umsetzungstermin 01.10.2026
+- Beschlusskammer 6 -
+- Beschlusskammer 7 -
+02.02.2026
+Die Projektgruppe EDI@Energy hat der Bundesnetzagentur überarbeitete Versionen folgender Nachrichtentypen und Dokumente im Entwurf übersandt:
+EDIFACT-Dokumente
+Allgemeine Festlegungen 6.1d (pdf / 3 MB)   [Allgemeine_Festlegungen_6_1d_Konsultationsfassung_20260202.pdf]
+Anwendungsübersicht der Prüfidentifikatoren 4.0, Info (xlsx / 448 KB)   [PID_4_0_info_Konsultationsfassung_20260202.xlsx]
+Anwendungsübersicht der Prüfidentifikatoren 4.0 (pdf / 3 MB)   [PID_4_0_Konsultationsfassung_20260202.pdf]
+APERAK AHB 1.1 (pdf / 1 MB)   [APERAK_AHB_1_1_Konsultationsfassung_20260202.pdf]
+APERAK MIG 2.2 (pdf / 758 KB)   [APERAK_MIG_2_2_Konsultationsfassung_20260202.pdf]
+API Guideline 1.0b (pdf / 651 KB)   [API_Guideline_1_0b_Konsultationsfassung_20260202.pdf]
+Codeliste-Konfigurationen 1.4 (pdf / 867 KB)   [Codeliste-Konfigurationen_1_4_Konsultationsfassung_20260202.pdf]
+Codeliste-Verwendungszwecke 1.0 (pdf / 189 KB)   [Codeliste-Verwendungszwecke_1_0_Konsultationsfassung_20260202.pdf]
+IFTSTA AHB 2.1 (pdf / 4 MB)   [IFTSTA_AHB_2_1_Konsultationsfassung_20260202.pdf]
+IFTSTA MIG 2.1 (pdf / 3 MB)   [IFTSTA_MIG_2_1_Konsultationsfassung_20260202.pdf]
+INVOIC AHB 1.0b (pdf / 3 MB)   [INVOIC_AHB_1_0b_Konsultationsfassung_20260202.pdf]
+MSCONS AHB 3.2 (pdf / 4 MB)   [MSCONS_AHB_3_2_Konsultationsfassung_20260202.pdf]
+MSCONS MIG 2.5 (pdf / 872 KB)   [MSCONS_MIG_2_5_Konsultationsfassung_20260202.pdf]
+ORDCHG AHB 1.1 (pdf / 379 KB)   [ORDCHG_AHB_1_1_Konsultationsfassung_20260202.pdf]
+ORDCHG MIG 1.2 (pdf / 372 KB)   [ORDCHG_MIG_1_2_Konsultationsfassung_20260202.pdf]
+ORDERS AHB 1.1b (pdf / 5 MB)   [ORDERS_AHB_1_1b_Konsultationsfassung_20260202.pdf]
+ORDERS MIG 1.4c (pdf / 2 MB)   [ORDERS_MIG_1_4c_Konsultationsfassung_20260202.pdf]
+ORDRSP AHB 1.1b (pdf / 3 MB)   [ORDRSP_AHB_1_1b_Konsultationsfassung_20260202.pdf]
+ORDRSP MIG 1.4c (pdf / 681 KB)   [ORDRSP_MIG_1_4c_Konsultationsfassung_20260202.pdf]
+PARTIN AHB 1.1 (pdf / 4 MB)   [PARTIN_AHB_1_1_Konsultationsfassung_20260202.pdf]
+PARTIN MIG 1.1 (pdf / 2 MB)   [PARTIN_MIG_1_1_Konsultationsfassung_20260202.pdf]
+PRICAT AHB 2.1 (pdf / 1 MB)   [PRICAT_AHB_2_1_Konsultationsfassung_20260202.pdf]
+PRICAT MIG 2.1 (pdf / 884 KB)   [PRICAT_MIG_2_1_Konsultationsfassung_20260202.pdf]
+QUOTES AHB 1.1a (pdf / 2 MB)   [QUOTES_AHB_1_1a_Konsultationsfassung_20260202.pdf]
+QUOTES MIG 1.3c (pdf / 2 MB)   [QUOTES_MIG_1_3c_Konsultationsfassung_20260202.pdf]
+REQOTE AHB 1.2 (pdf / 1 MB)   [REQOTE_AHB_1_2_Konsultationsfassung_20260202.pdf]
+REQOTE MIG 1.3d (pdf / 2 MB)   [REQOTE_MIG_1_3d_Konsultationsfassung_20260202.pdf]
+UTILMD AHB Strom 2.2 (pdf / 25 MB)   [UTILMD_AHB_Strom_2_2_Konsultationsfassung_20260202.pdf]
+UTILMD MIG Strom S2.2 (pdf / 12 MB)   [UTILMD_MIG_Strom_S2_2_Konsultationsfassung_20260202.pdf]
+UTILMD AHB Gas 1.2 (pdf / 9 MB)   [UTILMD_AHB_Gas_1_2_Konsultationsfassung_20260202.pdf]
+UTILMD MIG Gas G1.2 (pdf / 4 MB)   [UTILMD_MIG_Gas_G1_2_Konsultationsfassung_20260202.pdf]
+UTILTS AHB 1.1 (pdf / 1 MB)   [UTILTS_AHB_1_1_Konsultationsfassung_20260202.pdf]
+API-Webdienste
+API-Webdienste Strom - Release 2.0.0
+Entscheidungsbaum-Diagramme
+EBD und Codelisten 4.3 (pdf / 8 MB)   [EBD_und_Codelisten_4_3_Konsultationsfassung_20260202.pdf]
+Regelungen zum Übertragungsweg
+Regelungen zum Übertragungsweg, Version 1.10 (pdf / 757 KB)   [Rz%C3%9C_Regelungen_zum_%C3%9Cbertragungsweg_1_10_Konsultationsfassung_20260202.pdf]
+AS4-Profil, Version 1.2 (pdf / 624 KB)   [Rz%C3%9C_AS4-Profil_1_2_Konsultationsfassung_20260202.pdf]
+Regelungen zum Übertragungsweg AS4, Version 2.6 (pdf / 231 KB)   [Rz%C3%9C_Regelungen_zum_%C3%9Cbertragungsweg_AS4_2_6_Konsultationsfassung_20260202.pdf]
+Die Beschlusskammern geben die betreffenden Dokumente nunmehr allen Interessenkreisen zur Kenntnis. Diese erhalten damit die Möglichkeit, zu den Inhalten der Dokumente Stellung zu nehmen.
+Nach Ablauf der Konsultation und Auswertung der Stellungnahmen durch die Projektgruppe wird die Bundesnetzagentur den für die Umsetzung verbindlichen Stand der Dokumente veröffentlichen. Diese Nachrichtentypversionen sind dann von allen Marktbeteiligten umzusetzen und grundsätzlich ab dem 01.10.2026 verbindlich zu verwenden. Anderweitige davon abweichende Umsetzungstermine, die sich aus gesetzlichen Vorgaben oder Festlegungen ergeben, bleiben unberührt.
+Stellungnahmen zu den beigefügten Dokumenten, die auch gemeinschaftlich abgegeben werden können, werden erbeten bis
+Freitag, 27.02.2026 (Ablauf des Tages).
+an die E-Mail-Adresse datenformate@bnetza.de.
+Beachten Sie hierzu bitte die nachstehenden Hinweise.
+Die Bundesnetzagentur bittet darum, für die Stellungnahmen zu EDIFACT-, EBD- und RzÜ-Dokumenten ausschließlich die unten verlinkten themenspezifischen Formblätter zu verwenden.
+Im Rahmen des Änderungsmanagements stellt die Bundesnetzagentur zweimal jährlich die sich ändernden EDI@Energy-Dokumente zur Konsultation. In der Konsultation haben die Marktteilnehmer die Möglichkeit, sich einerseits über die Änderungen in den Dokumenten zu informieren und andererseits zu den Änderungen Stellung zu nehmen. Die Konsultationsbeiträge sollen sich dabei ausschließlich auf die geänderten Stellen (gemäß Änderungshistorie) im jeweiligen EDI@Energy-Dokument beziehen. Die Rückmeldungen können sowohl inhaltliche Fehlerkorrekturen an den Änderungen beinhalten als auch einzelne Änderungen kommentieren.
+Die EDI@Energy hat darüber hinaus um die Veröffentlichung folgender Hinweise zu den Konsultationsdokumenten gebeten:
+Hinweise zu den EDI@Energy-EDIFACT-Datenformaten
+Allgemeiner Hinweis: Mit Ihrer Beteiligung an der Konsultation haben Sie die Möglichkeit, an der gemeinsamen Konsultationssitzung von EDI@Energy und der BK6 teilzunehmen. Die Sitzung findet am 05.03.2026 in den Räumlichkeiten des BDEW statt. Eine digitale Teilnahme ist nicht vorgesehen.
+CTA/COM Segmente
+Das in der Konsultation des „Konzepts zur Nutzung der Kontaktinformationen des Senders in den EDI@Energy Nachrichtentypen“ beschlossene Vorgehen wurde in den Datenformaten umgesetzt.
+OBIS-Kennzahlen
+Im Nachgang der Konsultation des „Konzepts zur Nutzung und Veröffentlichung von API-Webdiensten“ wurde statt eines Konzepts ein alternativer Lösungsvorschlag für die weitere Verwendung von OBIS-Kennzahlen beschlossen, welcher minimalinvasiv ist und die bestehende Struktur der OBIS-Kennzahl bestehen lässt. Diese Lösung findet sich in den folgenden Dokumenten:
+Codeliste der Verwendungszwecke
+UTILMD Strom
+ORDERS
+API-Webdienste
+Wie in der Konsultation des „Konzepts zur Nutzung und Veröffentlichung von API-Webdiensten“ im Oktober 2025 beschlossen, wurden die bestehenden API-Webdienste von Swagger auf die Plattform GitHub übertragen. Die zur Konsultation stehenden Anpassungen an den API-Webdiensten finden sich im Release 2.0.0 sowie dem Branch des entsprechenden Repository (github.com/EDI-Energy/api-electricity) mit der Endung „-consultation“. In der Konsultationsversion wurde der „API-Webdienst zur Ermittlung der MaLo-ID der Marktlokation“ in mehrere fachlich getrennte API-Webdienste überführt, sodass die Kopplung zwischen Anfrage- und Antwortlogik reduziert wurde. Beim Einreichen von Konsultationsbeiträgen ist so vorzugehen, wie in der Konzeptkonsultation beschlossen und in der API-Guideline (Version 1.0b) beschrieben. Zur verbesserten Lesbarkeit wird ergänzend eine Visualisierung in Form einer OpenAPI-Dokumentation bereitgestellt, die ausschließlich der unterstützenden und informativen Darstellung der Schnittstellen dient (https://edi-energy.github.io/api-electricity/konsultation).
+Hinweis: Wir bitten Sie außerdem um Ihre Rückmeldung dazu, welche zusätzlichen Informationen im Header eines API-Webdienstes übertragen werden sollen.
+Hinweise zu den XML-Dateien
+Die zur Konsultation stehenden Nachrichtenbeschreibungen und Anwendungshandbücher stehen auf der BDEW MaKo-Plattform (unter www.bdew-mako.de) auch als XML-Dateien zur Verfügung. Für den Zugriff auf die als Konsultationsfassung gekennzeichneten kostenpflichtigen XML-Dateien benötigen Interessierte ein entsprechendes Abonnement.
+Hinweise zu den Entscheidungsbaum-Diagrammen und Codelisten
+Es wird beabsichtigt gem. Kapitel 3.2 „Antwortgrund ‚Sonstiges‘“ die Nutzungsmöglichkeit der Codes für alle EBDs außer der Abrechnungs-EBDs, wie zum Beispiel E_0406 und E_0407, mit den nächsten Konsultationen nicht mehr zu verlängern. Wir bitten die Marktteilnehmer darum, uns mitzuteilen, in welchen Fällen die Codes A90, A96 und A99 noch genutzt werden und aus welchem Grund. Nutzen Sie hierzu bitte das Formblatt „Konsultationsbeiträge EBD“ unter Angabe des EBDs. Für die laufende Konsultation wird die befristete Nutzungsmöglichkeit der Codes A90, A96 und A99 um ein halbes Jahr verlängert.
+Anhang:
+Formblatt Konsultationsbeiträge EDIFACT (xlsx / 45 KB)   [Formblatt_Konsultationsbeitraege_EDIFACT_Unternehmensname_20260202.xlsx]
+Formblatt Konsultationsbeiträge EBD (xlsx / 39 KB)   [Formblatt_Konsultationsbeitraege_EBD_Unternehmensname_20060202.xlsx]
+Formblatt Konsultationsbeiträge RZÜ (xlsx / 72 KB)   [Formblatt_Konsultationsbeitraege_RZ%C3%9C_Unternehmensname_20260202.xlsx]
+-- Ende der Mitteilung --
+      

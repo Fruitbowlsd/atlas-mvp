@@ -1,0 +1,62 @@
+
+Mit­tei­lung Nr. 56 zu den Da­ten­for­ma­ten zur Ab­wick­lung der Markt­kom­mu­ni­ka­ti­on
+Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2026
+UTILMD Strom im Zusammenhang mit §10b EEG (Fernsteuerbarkeit)
+EDIFACT-Dokumente
+Entscheidungsbaum-Diagramme
+Regelungen zum Übertragungsweg
+Die EDI@Energy hat um die Veröffentlichung der folgenden ergänzenden Hinweise gebeten:
+Hinweis zu den API-Webdiensten
+Hinweise zu den XML-Dateien
+Inkrafttreten überarbeiteter Nachrichtentypversionen zum 01.10.2026
+- Beschlusskammer 6 -
+01.04.2026
+Im Rahmen des Änderungsmanagements für Nachrichtentypbeschreibungen hat die Bundesnetzagentur im Zeitraum vom 02.02.2026 bis 27.02.2026 neue spartenübergreifende Nachrichtentypversionen konsultiert, die von der Expertengruppe EDI@Energy unter Projektführung des BDEW erarbeitet worden waren. Die im Zuge der Konsultation eingegangenen Stellungnahmen wurden sodann mit Vertretern der Netzbetreiber, der Netznutzer, der Softwarebranche sowie der Bundesnetzagentur diskutiert. Erforderliche Überarbeitungen an den konsultierten Versionen sind sodann vorgenommen worden.
+Als Ergebnis des Konsultationsverfahrens veröffentlichen Bundesnetzagentur sowie BDEW folgende Dokumente auf ihren Internetseiten www.bundesnetzagentur.de sowie www.bdew-mako.de
+UTILMD Strom im Zusammenhang mit §10b EEG (Fernsteuerbarkeit)
+Im Zuge der Angabe zum Status der Fernsteuerbarkeit (Z24) erfolgt für den angegebenen Zeitraum die Erklärung, ob die Technische Ressource steuerbar (ZW5) oder nicht steuerbar (ZW6) ist. Sie erfolgt mit Wirkung zum angegebenen Stichtag im eigenen Namen des Direktvermarkters oder eines Dritten in seiner Marktrolle sowie mit Vollmacht und im Namen des Betreibers, sofern der Betreiber nicht selbst die Befugnisse des Direktvermarktungsunternehmens oder des Dritten wahrnimmt. Mit der Nutzung des Codes ZW5 wird bestätigt, dass sämtliche Anforderungen nach § 10b EEG 2023 erfüllt sind. Auf Nachfrage des Netzbetreibers können Nachweise hierfür vorgelegt werden.
+EDIFACT-Dokumente
+Allgemeine Festlegungen 6.1d (pdf / 2 MB)   [Allgemeine_Festlegungen_6_1d_20260401.pdf]
+Anwendungsübersicht der Prüfidentifikatoren 4.0 (pdf / 3 MB)   [PID_4_0_20260401.pdf]
+APERAK AHB 1.1 (pdf / 1 MB)   [APERAK_AHB_1_1_20260401.pdf]
+APERAK MIG 2.2 (pdf / 566 KB)   [APERAK_MIG_2_2_20260401.pdf]
+API Guideline 1.0b (pdf / 522 KB)   [API_Guideline_1_0b_20260401.pdf]
+Codeliste der Konfigurationen 1.4 (pdf / 855 KB)   [Codeliste-Konfigurationen_1_4_20260401.pdf]
+Codeliste der Verwendungszwecke 1.0 (pdf / 186 KB)   [Codeliste-Verwendungszwecke_1_0_20260401.pdf]
+IFTSTA AHB 2.1 (pdf / 3 MB)   [IFTSTA_AHB_2_1_20260401.pdf] 
+IFTSTA MIG 2.1 (pdf / 2 MB)   [IFTSTA_MIG_2_1_20260401.pdf]
+INVOIC AHB 1.0b (pdf / 3 MB)   [INVOIC_AHB_1_0b_20260401.pdf]
+MSCONS AHB 3.2 (pdf / 4 MB)   [MSCONS_AHB_3_2_20260401.pdf]
+MSCONS MIG 2.5 (pdf / 876 KB)   [MSCONS_MIG_2_5_20260401.pdf]
+ORDCHG AHB 1.1 (pdf / 378 KB)   [ORDCHG_AHB_1_1_20260401.pdf]
+ORDCHG MIG 1.2 (pdf / 375 KB)   [ORDCHG_MIG_1_2_20260401.pdf]
+ORDERS AHB 1.1b (pdf / 5 MB)   [ORDERS_AHB_1_1b_20260401.pdf] 
+ORDERS MIG 1.4c (pdf / 2 MB)   [ORDERS_MIG_1_4c_20260401.pdf]
+ORDRSP AHB 1.1b (pdf / 3 MB)   [ORDRSP_AHB_1_1b_20260401.pdf]
+ORDRSP MIG 1.4c (pdf / 700 KB)   [ORDRSP_MIG_1_4c_20260401.pdf]
+PARTIN AHB 1.1 (pdf / 3 MB)   [PARTIN_AHB_1_1_20260401.pdf]
+PARTIN MIG 1.1 (pdf / 1 MB)   [PARTIN_MIG_1_1_20260401.pdf]
+PRICAT AHB 2.1 (pdf / 763 KB)   [PRICAT_AHB_2_1_20260401.pdf]
+PRICAT MIG 2.1 (pdf / 630 KB)   [PRICAT_MIG_2_1_20260401.pdf]
+QUOTES AHB 1.1a (pdf / 1 MB)   [QUOTES_AHB_1_1a_20260401.pdf]
+QUOTES MIG 1.3c (pdf / 1 MB)   [QUOTES_MIG_1_3c_20260401.pdf]
+REQOTE AHB 1.2 (pdf / 1 MB)   [REQOTE_AHB_1_2_20260401.pdf]
+UTILMD AHB Strom 2.2 (pdf / 14 MB)   [UTILMD_AHB_Strom_2_2_20260401.pdf]
+UTILMD MIG Strom S2.2 (pdf / 7 MB)   [UTILMD_MIG_Strom_S2_2_20260401.pdf]
+UTILMD AHB Gas 1.2 (pdf / 10 MB)   [UTILMD_AHB_Gas_1_2_20260401.pdf]
+UTILMD MIG Gas G1.2 (pdf / 2 MB)   [UTILMD_MIG_Gas_G1_2_20260401.pdf]
+UTILTS AHB 1.1 (pdf / 1 MB)   [UTILTS_AHB_1_1_20260401.pdf]
+Entscheidungsbaum-Diagramme
+Entscheidungsbaum-Diagramme und Codelisten (Version 4.3) (pdf / 8 MB)   [EBD_und_Codelisten_4_3_20260401.pdf]
+Regelungen zum Übertragungsweg
+Regelungen zum Übertragungsweg, Version 1.10 (pdf / 1 MB)   [Regelungen_zum_Uebertragungsweg_1_10_20260401.pdf]
+AS4-Profil, Version 1.2 (pdf / 758 KB)   [AS4-Profil_1_2_20260401.pdf]
+Regelungen zum Übertragungsweg AS4, Version 2.6 (pdf / 371 KB)   [Regelungen_zum_Uebertragungsweg_AS4_2_6_20260401.pdf]
+Diese Versionen gelten für alle gemäß den Festlegungen zur Marktkommunikation umsetzungspflichtigen Marktteilnehmer verbindlich ab dem 01.10.2026. Etwaige abweichende Umsetzungstermine, die sich aus gesetzlichen Vorgaben oder aus Festlegungen der Bundesnetzagentur ergeben, bleiben unberührt.
+Die EDI@Energy hat um die Veröffentlichung der folgenden ergänzenden Hinweise gebeten:
+Hinweis zu den API-Webdiensten
+Die im Release 2.0.0 zur Konsultation gestellten Anpassungen an den API-Webdiensten sind nicht Bestandteil dieser Veröffentlichung. Es ist geplant, diese Anpassungen in der nächsten Version mit weiteren Anpassungen und weiteren API-Webdiensten zur Konsultation zu stellen.
+Hinweise zu den XML-Dateien
+Die veröffentlichten Nachrichtenbeschreibungen und Anwendungshandbücher stehen auf der BDEW MaKo-Plattform (unter www.bdew-mako.de) auch als XML-Dateien zur Verfügung. Für den Zugriff auf kostenpflichtigen XML-Dateien benötigen Interessierte ein entsprechendes Abonnement.
+-- Ende der Mitteilung --
+      
