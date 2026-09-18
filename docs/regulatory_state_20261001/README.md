@@ -1,6 +1,6 @@
 # Regulatory State 01.10.2026 — Rechercheartefakte
 
-Referenzfassung des Auftrags: [`auftrag.md`](auftrag.md) (Projektdokument vom **18.09.2026**, mit 5a, 6a, 11b–11e).
+Referenzfassung des Auftrags: [`auftrag.md`](auftrag.md) (Projektdokument vom **18.09.2026**, Stand nach O-18).
 
 Ticket: #64. Recherche zum vollständigen regulatorischen Stand der Marktkommunikation zum
 Stichtag **01.10.2026**. Es sind ausschließlich Rechercheartefakte zur menschlichen Prüfung:
@@ -14,19 +14,19 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 | 3 | Gasspezifika: SSQNOT, GeLi Gas 3.0, Gas-Anwendbarkeit der spartenübergreifenden Dokumente | **abgeschlossen** | [`etappe3_gas.md`](etappe3_gas.md), [`etappe3_gas_provenienz.json`](etappe3_gas_provenienz.json) |
 | 4 | PID, Codelisten, Allgemeine Festlegungen | **abgeschlossen** | [`etappe4_querschnitt.md`](etappe4_querschnitt.md), [`etappe4_querschnitt_provenienz.json`](etappe4_querschnitt_provenienz.json) |
 | 5 | Entscheidungsbaum-Diagramme | **abgeschlossen** | [`etappe5_ebd.md`](etappe5_ebd.md), [`etappe5_ebd_provenienz.json`](etappe5_ebd_provenienz.json) |
-| 6 | Übertragungsweg / AS4 / API / XML | offen | — |
+| 6 | Übertragungsweg / AS4 / API / XML (Redispatch 2.0) | **abgeschlossen**, Schema v0.8 und R-6a–c zur Bestätigung | [`etappe6_uebertragungsweg_api_xml.md`](etappe6_uebertragungsweg_api_xml.md), [`etappe6_uebertragungsweg_api_xml_provenienz.json`](etappe6_uebertragungsweg_api_xml_provenienz.json) |
 | 7 | Konsolidierung, Widersprüche, Regulatory-State-Objekt, Vorschlag `RegulatoryVersion` | offen | — |
 | 8 | Übergabebericht | offen | — |
 
 ## Bestätigte Grundlagen
 
-* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`; v0.2–v0.6: außerordentliche Veröffentlichung als eigener Typ, Pflichtfelder `mitteilungsbezug` und `aufnahmekriterium`, Quelle DVGW, Rolle `verworfen` gemäß Auftrag 11a); Rollen: [`rollendefinition.md`](rollendefinition.md)
+* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`; v0.2–v0.6: außerordentliche Veröffentlichung als eigener Typ, Pflichtfelder `mitteilungsbezug` und `aufnahmekriterium`, Quelle DVGW, Rolle `verworfen` gemäß Auftrag 11a; v0.7: Vermerk „versionslos, aber eindeutig“ (O-18); v0.8: Quelle GitHub-EDI@Energy, **zur Bestätigung**); Rollen: [`rollendefinition.md`](rollendefinition.md) (Ergänzung R-6a–c **zur Bestätigung**)
 * Aufnahmeregel (was gehört in den State): [`aufnahmeregel.md`](aufnahmeregel.md), seit 18.09.2026
 * Modell: Regulatory State als Ebene oberhalb von `RegulatoryVersion`, 1:n ([`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md)), bestätigt am 17.09.2026, **noch nicht umgesetzt**
 
 ## Kernbefunde für den Übergabebericht (Etappe 8)
 
-* **K-1 — Die amtliche Quelle kennt die maßgebliche Fassung oft nicht.** Über Etappe 1 und 2 (36 Dokumente, 209 Fassungen): 61 Fassungen sind bytegleiche Anlagen einer BNetzA-Mitteilung, 32 Konsultationsanlagen, **116 haben keinen Mitteilungsbezug — darunter 11 der 36 maßgeblichen Fassungen**. Wird in Etappe 8 hervorgehoben, nicht nur in Etappe 7 belegt.
+* **K-1 — Die amtliche Quelle kennt die maßgebliche Fassung oft nicht.** Über Etappe 1 und 2 (36 Dokumente, 209 Fassungen): 61 Fassungen sind bytegleiche Anlagen einer BNetzA-Mitteilung, 32 Konsultationsanlagen, **116 haben keinen Mitteilungsbezug — darunter 11 der 36 maßgeblichen Fassungen**. Wird in Etappe 8 hervorgehoben, nicht nur in Etappe 7 belegt. **Etappe 6 verschärft den Befund:** 18 der 37 maßgeblichen Fassungen haben keinen Mitteilungsbezug (14 konsolidierte Stände, die Änderungshistorie vom 19.02.2026, 3 GitHub-Releases).
 
 * **K-2 — Für Gas reichen BNetzA und BDEW nicht.** SSQNOT (Prüfidentifikatoren 70095/70096, in PID 4.0 und INVOIC referenziert) wird von der DVGW Service & Consult veröffentlicht und steht in keiner der 95 Mitteilungen und in keinem der 1.752 BDEW-Einträge.
 

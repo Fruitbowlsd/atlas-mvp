@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "atlas/regulatory_state/provenienz_schema_v0.json",
-  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.7)",
+  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.8)",
   "description": "Ein Datensatz je regulatorischer Dokumentversion am Stichtag. Drei Ebenen wie in Abschnitt 10 des Auftrags: Dokument → Dokumentversion → Fassungen (Dateien). Die Auswahl der maßgeblichen Fassung ist eine eigene, begründete Entscheidung und überschreibt keine Fassung. Nur Rechercheartefakt, kein Datenbankschema.",
   "type": "object",
   "required": [
@@ -25,7 +25,8 @@
         "0.4",
         "0.5",
         "0.6",
-        "0.7"
+        "0.7",
+        "0.8"
       ]
     },
     "stichtag": {
@@ -362,9 +363,10 @@
             "enum": [
               "BNetzA",
               "BDEW-MaKo",
-              "DVGW"
+              "DVGW",
+              "GitHub-EDI@Energy"
             ],
-            "description": "Veröffentlichende Stelle. 'DVGW' (ab v0.4) ist die DVGW Service & Consult GmbH (Edig@s/GABi Gastransport); sie veröffentlicht Gas-Nachrichtentypen, die weder bei der BNetzA noch auf BDEW-MaKo geführt werden."
+            "description": "Veröffentlichende Stelle. 'DVGW' (ab v0.4) ist die DVGW Service & Consult GmbH (Edig@s/GABi Gastransport); sie veröffentlicht Gas-Nachrichtentypen, die weder bei der BNetzA noch auf BDEW-MaKo geführt werden. 'GitHub-EDI@Energy' (ab v0.8) ist die Organisation EDI@Energy auf GitHub; dort werden API-Webdienste als OpenAPI-Dateien in Releases veröffentlicht, festgelegt in API-Guideline 1.0b Kap. 4 (Anlage der Mitteilung 56)."
           },
           "quelle_ref": {
             "type": "object",
@@ -392,6 +394,26 @@
               },
               "bdew_frei": {
                 "type": "boolean"
+              },
+              "github_repo": {
+                "type": "string",
+                "description": "ab v0.8: Repository, z. B. EDI-Energy/api-electricity"
+              },
+              "github_tag": {
+                "type": "string",
+                "description": "ab v0.8: Release-Tag"
+              },
+              "github_commit": {
+                "type": "string",
+                "description": "ab v0.8: Commit-SHA (Git, SHA-1), auf den der Tag zeigt"
+              },
+              "github_pfad": {
+                "type": "string",
+                "description": "ab v0.8: Dateipfad im Repository"
+              },
+              "github_release_veroeffentlicht": {
+                "type": "string",
+                "description": "ab v0.8: published_at des Releases (UTC)"
               }
             }
           },

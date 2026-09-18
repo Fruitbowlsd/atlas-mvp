@@ -131,3 +131,22 @@ alle weiteren Etappen; die Hinweise `offene_frage` in den vier Datensätzen sind
 `quellenauffaelligkeit` zurückgestuft.
 
 Die UTILMD-Datensätze aus Etappe 1 folgen dieser Reihenfolge bereits.
+
+## Ergänzung Etappe 6 (18.09.2026) — Fassungen, die Schritt 1–7 nicht kennen
+
+**Status: Vorschlag, zur Bestätigung.** Etappe 6 hat drei Fälle getroffen, die unter Schritt 8
+fallen („keine stille Einordnung“). Sie werden hier ausdrücklich als Regel ergänzt, nicht im
+Einzelfall entschieden.
+
+| Nr. | Fall | Regel | Betroffen |
+|---|---|---|---|
+| **R-6a** | Dokument **ohne PDF**: XML-Schema (XSD) oder API-Spezifikation (OpenAPI-YAML) | Die Fachdatei **ist** das Dokument. Abschnitt 7 („PDF als Referenz“) greift nicht; Schritte 4–6 gelten sinngemäß mit dem Dokumentformat statt PDF: neueste konsolidierte XSD → `massgeblich`, ältere → `ersetzt`, Basis-XSD → `ergaenzend` bzw. `massgeblich`. `massgebliche_fassung_pdf_sha256` bleibt `null`, der SHA-256 der Fachdatei steht an der Fassung. | 9 XSD-Dokumente, 3 API-Dokumente |
+| **R-6b** | **Wechsel des Veröffentlichungswegs** bei gleicher Version (Swagger/PDF-Verweis → GitHub-Release) | Die Fassung des abgelösten Wegs wird `ersetzt`, `ersetzt_durch` = Fassung des neuen Wegs. Voraussetzung ist ein Beleg, dass der Inhalt unverändert ist (hier: Release-Notiz „ohne inhaltliche Änderungen“) und dass der neue Weg geregelt ist (hier: API-Guideline 1.0b Kap. 4, Anlage der Mitteilung 56). Die amtliche Anlage der ursprünglichen Mitteilung bleibt `ergaenzend`, weil nur sie die Version mit der Mitteilung verbindet. | bdew:7313, 7314, 7650 |
+| **R-6c** | **Versionsloses Dokument**, das nur mit Publikationsdatum erscheint (Änderungshistorie XML) | Stand-Reihe nach Publikationsdatum des Deckblatts statt nach Fehlerkorrekturstand. Jüngste Veröffentlichung (PDF) → `massgeblich`, ältere PDF → `ersetzt` mit `ersetzt_durch` = nächstjüngere (BDEW bevorzugt, sonst BNetzA). | Änderungshistorie zu den XML-Datenformaten |
+
+**Offen (O-19a):** Ein Release mit **mehreren gleichrangigen Dateien** (Verzeichnisdienst API:
+Web-API und WebSocket-API) passt nicht in „genau eine maßgebliche Fassung je
+Dokumentversion“. Vorläufig ist die Web-API `massgeblich` und die WebSocket-API `ergaenzend`
+— das stimmt mit der Definition von `ergaenzend` („enthält Information, die der maßgeblichen
+Fassung fehlt“) überein, unterschlägt aber die Gleichrangigkeit. Eine Modellentscheidung
+dazu wird nicht eigenständig getroffen.

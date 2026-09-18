@@ -55,6 +55,13 @@ erhält dann `aufnahmekriterium.vermerk = "versionslos, aber eindeutig"` und das
   UTILMD MIG Gas G1.2, S. 143, mit dem Titel der Basisfassung; geprüft in BDEW-Dokumenten
   (1.752), BDEW-Marktprozessen (102), DVGW-Übersicht und 95 BNetzA-Mitteilungen: genau ein
   Dokument, genau eine Version.
+* Zweiter Anwendungsfall (Etappe 6): „Verzeichnisdienst API“ — Verweis in Regelungen zum
+  Verzeichnisdienst 1.1, S. 14 (Quellen [3], [4]), ohne Version. Hier ist die Prüfung
+  **nicht trivial**: Mitteilung 48 hat eine Version 1.1 konsultiert, die in keiner
+  verbindlichen Mitteilung erscheint. Am Stichtag gültig ist genau eine Version (Release
+  1.0.0); die Version 1.1 ist ein ähnlich benannter Stand **desselben** Dokuments, kein zweites
+  Dokument. Die Aufnahme trägt ohnehin schon Kriterium A (Anlage der Mitteilung 46); C mit
+  Vermerk steht zusätzlich.
 
 ## 3. Anwendung auf die DVGW-Reihe (Prüfung, nicht Behauptung)
 
