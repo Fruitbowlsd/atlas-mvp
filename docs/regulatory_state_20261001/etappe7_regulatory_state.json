@@ -23,8 +23,8 @@
     54,
     58
   ],
-  "status_vorschlag": "VALID",
-  "status_hinweis": "Vorschlag. Der Status wird erst mit Bestätigung des Übergabeberichts (Etappe 8) gesetzt; bis dahin Rechercheartefakt ohne Datenbankwirkung (Auftrag 15a).",
+  "status": "VALID",
+  "status_hinweis": "Gesetzt am 18.09.2026 mit Bestätigung des Übergabeberichts (Etappe 8, #64, PR #66). Rechercheartefakt ohne Datenbankwirkung (Auftrag 15a).",
   "verhaeltnis_regulatory_version": {
     "modell": "Regulatory State als Ebene oberhalb von RegulatoryVersion, 1:n über RegulatoryVersion.regulatory_state_id (nullable); bestätigt 17.09.2026 (Auftrag 9b)",
     "zuordnung": [

@@ -4,8 +4,9 @@
 **Grundlage:** Auftragsfassung vom 18.09.2026, Stand O-20-Entscheidung ([`auftrag.md`](auftrag.md));
 eingefrorene Datenbasis aus Etappe 7 ([`etappe7_regulatory_state.json`](etappe7_regulatory_state.json),
 Merge-Commit `f3594f9`, Nachtrag `96a3371`).
-**Status:** Entwurf, wartet auf Bestätigung. Erst danach wird der Status des Regulatory State auf
-`VALID` gesetzt. Bis dahin beginnt keine fachliche Analyse (Abschnitt 12/16).
+**Status:** Bestätigt am 18.09.2026. Der Regulatory State steht auf `VALID`
+(`etappe7_regulatory_state.json`), die fachliche Analyse (Abschnitt 12/16) ist freigegeben.
+P-1 bleibt als separate Produktentscheidung vorgemerkt, außerhalb dieses Auftrags.
 
 Dieser Bericht fasst nur zusammen. Er ändert keinen Datensatz, keine Rolle und keine Zahl aus
 Etappe 7. Jede Aussage verweist auf das Etappendokument, in dem der Beleg steht.
