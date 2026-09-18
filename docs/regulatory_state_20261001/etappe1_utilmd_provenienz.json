@@ -6,7 +6,7 @@
   "anzahl": 4,
   "datensaetze": [
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILMD-AHB-STROM",
@@ -735,7 +735,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILMD-MIG-STROM",
@@ -1544,7 +1544,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILMD-AHB-GAS",
@@ -2356,7 +2356,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILMD-MIG-GAS",
@@ -3014,5 +3014,5 @@
       }
     }
   ],
-  "schema_version": "0.6"
+  "schema_version": "0.7"
 }

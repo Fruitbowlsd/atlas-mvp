@@ -3,11 +3,11 @@
   "etappe": 4,
   "ticket": "#64",
   "schema": "provenienz_schema.json",
-  "schema_version": "0.6",
+  "schema_version": "0.7",
   "anzahl": 10,
   "datensaetze": [
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ALLGEMEINE-FESTLEGUNGEN",
@@ -363,7 +363,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PID",
@@ -949,7 +949,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CL-KONFIGURATIONEN",
@@ -1309,7 +1309,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CL-VERWENDUNGSZWECKE",
@@ -1756,7 +1756,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CL-OBIS",
@@ -2053,7 +2053,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CL-ARTIKELNUMMERN",
@@ -2469,7 +2469,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CL-ZEITREIHENTYPEN",
@@ -2795,7 +2795,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CL-LAENDERCODES",
@@ -3115,7 +3115,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CL-LOKATIONSBUENDEL",
@@ -3698,7 +3698,7 @@
       }
     },
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CL-SLP-TUM",
@@ -3712,7 +3712,9 @@
         "aufnahmekriterium": [
           {
             "kriterium": "C",
-            "beleg": "NUR TEILWEISE ERFÜLLT (O-18): UTILMD MIG Gas G1.2 (maßgeblich, S. 143) verweist für die Codes 89 und 293 auf das 'EDI@Energy Dokument „Codierung der Standardlastprofile nach Maßgaben der TU München für den deutschen Gasmarkt“' — mit Dokumentname, aber OHNE Version. Die 7 Treffer in UTILMD AHB Gas 1.2 lauten 'Kundenwertverfahren (z. B. TU München)' und sind Verfahrens-, keine Dokumentnennungen; sie tragen Kriterium C nicht (Korrektur gegenüber der Etappe-4-Fassung dieses Datensatzes)."
+            "vermerk": "versionslos, aber eindeutig",
+            "beleg": "UTILMD MIG Gas G1.2 (maßgebliche Fassung bdew:8437, S. 143) verweist für die Codes 89 und 293 auf das 'EDI@Energy Dokument „Codierung der Standardlastprofile nach Maßgaben der TU München für den deutschen Gasmarkt“' — Dokumentname ohne Version. Der Name entspricht dem Deckblatt der Basisfassung 1.1 (bdew:7351); maßgeblich ist nach Abschnitt 6 der neueste Stand (konsolidiert 22.05.2015, bdew:7352), unabhängig vom dort abweichenden Titel.",
+            "eindeutigkeitspruefung": "Geprüft am 18.09.2026 nach 'Standardlastprofil' und 'TU München': BDEW-Dokumenten-API (1.752 Einträge) — genau ein Dokument (Thema 138) mit genau einer Version (1.1); BDEW-Marktprozessdokumente (102) — 0; DVGW GABi Gastransport — 0; 95 BNetzA-Mitteilungen — 0. Ergebnis: eindeutig. Die 7 Treffer in UTILMD AHB Gas ('Kundenwertverfahren (z. B. TU München)') sind Verfahrensnennungen und tragen das Kriterium nicht."
           }
         ]
       },
@@ -3759,7 +3761,7 @@
         },
         "mitteilung": null,
         "quelle_ausserhalb_mitteilungsreihe": "Ausschließlich auf BDEW-MaKo veröffentlicht; in keiner der 95 Mitteilungen der BK6/BK7-Reihe genannt. Aufnahme über Kriterium C (Referenz aus UTILMD Gas).",
-        "dokumentstatus": "relevanz_unklar",
+        "dokumentstatus": "verbindlich_fortgeltend",
         "vorgaenger": null,
         "nachfolger": []
       },
@@ -3881,7 +3883,7 @@
         "regelschritte": [
           {
             "regel": "Aufnahme prüfen (aufnahmeregel.md)",
-            "ergebnis": "C nur teilweise: Dokumentname ohne Version in UTILMD MIG Gas G1.2 S. 143 (siehe O-18)"
+            "ergebnis": "C mit Vermerk 'versionslos, aber eindeutig' (Auftrag 11e, O-18); Eindeutigkeit geprüft"
           },
           {
             "regel": "Version am Stichtag bestimmen",
@@ -4001,8 +4003,8 @@
           ]
         },
         {
-          "art": "offene_frage",
-          "text": "O-18: Die Präzisierung von Kriterium C (Auftrag 11e: Dokumentname UND Version) ist hier nicht erfüllt. Der einzige Dokumentverweis steht in UTILMD MIG Gas G1.2 (S. 143) und nennt den Titel der Basisfassung dieser Codeliste ('Codierung der Standardlastprofile nach Maßgaben der TU München [und des BDEW] für den deutschen Gasmarkt', Deckblatt bdew:7351), aber keine Version. Die konsolidierte Fassung trägt einen anderen Titel ('Codeliste der Standardlastprofile nach TU München-Verfahren …'). Für den Namen gibt es genau ein Dokument mit genau einer Version (1.1); die Zuordnung ist damit eindeutig, aber nicht versioniert belegt. Die in Etappe 4 genannten 7 Treffer in UTILMD AHB Gas sind Verfahrensnennungen ('Kundenwertverfahren (z. B. TU München)') und wurden zu Unrecht als Referenz gezählt. Entscheidung offen: Aufnahme bei eindeutigem Namensverweis ohne Version zulassen oder nicht.",
+          "art": "querpruefung",
+          "text": "O-18 gelöst (Nutzerentscheidung 18.09.2026, Auftrag 11e): Ein Namensverweis ohne Version erfüllt Kriterium C, wenn die Eindeutigkeit ausdrücklich geprüft ist. Das ist hier der Fall (siehe aufnahmekriterium.eindeutigkeitspruefung). Der Titelunterschied zwischen Basisfassung ('Codierung der Standardlastprofile …') und konsolidierter Fassung ('Codeliste der Standardlastprofile …') ändert daran nichts; welche Fassung gilt, bestimmt die Prioritätsregel. Die frühere Zählung von 7 AHB-Treffern als Referenz war falsch und ist zurückgenommen.",
           "auswirkung_auf_auswahl": true,
           "beleg": [
             {

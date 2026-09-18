@@ -36,7 +36,25 @@ sie zum selben Stichtag in Kraft treten. Der Ausschluss wird **belegt**, nicht b
 Übergabebericht steht je ausgeschlossener Reihe, welche Prüfung negativ ausfiel.
 
 **Nicht ausreichend** sind: gleicher Stichtag, gleiche Sparte, thematische Nähe, Nennung in
-einer Anwendungshilfe ohne verbindlichen Formatbezug.
+einer Anwendungshilfe ohne verbindlichen Formatbezug, und **Gattungsnennungen** („Anwendungshilfe",
+„Kundenwertverfahren (z. B. TU München)") ohne Dokumentname.
+
+### Kriterium C bei Namensverweis ohne Version (seit 18.09.2026, O-18)
+
+Nennt das referenzierende Dokument einen Dokumentnamen **ohne Versionsnummer**, erfüllt das
+Kriterium C, wenn die **Eindeutigkeit ausdrücklich geprüft und belegt** ist: Für den genannten
+Namen gibt es genau ein Dokument mit genau einer am Stichtag gültigen Version. Der Datensatz
+erhält dann `aufnahmekriterium.vermerk = "versionslos, aber eindeutig"` und das Pflichtfeld
+`eindeutigkeitspruefung` mit den durchsuchten Quellen und dem Ergebnis (Schema v0.7).
+
+* Welche **Fassung** gilt, bestimmt weiter die Prioritätsregel (neuester Stand) — nicht der
+  Titel, den das referenzierende Dokument nennt, auch wenn er historisch ist.
+* Die Prüfung wird **je Fall** durchgeführt, nie aus einem früheren Fall fortgeschrieben.
+  Taucht ein zweites, ähnlich benanntes Dokument auf, ist der Fall neu zu bewerten.
+* Erster Anwendungsfall: Codeliste der Standardlastprofile nach TU München 1.1 — Verweis in
+  UTILMD MIG Gas G1.2, S. 143, mit dem Titel der Basisfassung; geprüft in BDEW-Dokumenten
+  (1.752), BDEW-Marktprozessen (102), DVGW-Übersicht und 95 BNetzA-Mitteilungen: genau ein
+  Dokument, genau eine Version.
 
 ## 3. Anwendung auf die DVGW-Reihe (Prüfung, nicht Behauptung)
 

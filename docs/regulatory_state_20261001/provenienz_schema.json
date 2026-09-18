@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "atlas/regulatory_state/provenienz_schema_v0.json",
-  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.6)",
+  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.7)",
   "description": "Ein Datensatz je regulatorischer Dokumentversion am Stichtag. Drei Ebenen wie in Abschnitt 10 des Auftrags: Dokument → Dokumentversion → Fassungen (Dateien). Die Auswahl der maßgeblichen Fassung ist eine eigene, begründete Entscheidung und überschreibt keine Fassung. Nur Rechercheartefakt, kein Datenbankschema.",
   "type": "object",
   "required": [
@@ -24,7 +24,8 @@
         "0.3",
         "0.4",
         "0.5",
-        "0.6"
+        "0.6",
+        "0.7"
       ]
     },
     "stichtag": {
@@ -116,8 +117,32 @@
               },
               "beleg": {
                 "type": "string"
+              },
+              "vermerk": {
+                "enum": [
+                  "versionslos, aber eindeutig"
+                ],
+                "description": "Ab v0.7 (Auftrag 11e, O-18): Kriterium C über einen Namensverweis ohne Versionsnummer. Nur zulässig mit ausdrücklich belegter Eindeutigkeitsprüfung."
+              },
+              "eindeutigkeitspruefung": {
+                "type": "string",
+                "description": "Welche Quellen nach dem genannten Namen durchsucht wurden und mit welchem Ergebnis (genau ein Dokument, genau eine gültige Version)."
               }
-            }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "required": [
+                    "vermerk"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "eindeutigkeitspruefung"
+                  ]
+                }
+              }
+            ]
           }
         }
       }

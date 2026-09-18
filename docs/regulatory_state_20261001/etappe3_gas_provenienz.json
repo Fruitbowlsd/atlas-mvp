@@ -3,11 +3,11 @@
   "etappe": 3,
   "ticket": "#64",
   "schema": "provenienz_schema.json",
-  "schema_version": "0.6",
+  "schema_version": "0.7",
   "anzahl": 1,
   "datensaetze": [
     {
-      "schema_version": "0.6",
+      "schema_version": "0.7",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "SSQNOT",
