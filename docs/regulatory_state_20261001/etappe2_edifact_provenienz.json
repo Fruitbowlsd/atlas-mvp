@@ -3,11 +3,11 @@
   "etappe": 2,
   "ticket": "#64",
   "schema": "provenienz_schema.json",
-  "schema_version": "0.5",
+  "schema_version": "0.6",
   "anzahl": 32,
   "datensaetze": [
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "APERAK-AHB",
@@ -506,7 +506,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "APERAK-MIG",
@@ -967,7 +967,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "IFTSTA-AHB",
@@ -1449,7 +1449,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "IFTSTA-MIG",
@@ -1910,7 +1910,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INVOIC-AHB",
@@ -2383,7 +2383,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "MSCONS-AHB",
@@ -2862,7 +2862,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "MSCONS-MIG",
@@ -3311,7 +3311,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDCHG-AHB",
@@ -3782,7 +3782,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDCHG-MIG",
@@ -4242,7 +4242,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDERS-AHB",
@@ -4884,7 +4884,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDERS-MIG",
@@ -5327,7 +5327,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDRSP-AHB",
@@ -5824,7 +5824,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "ORDRSP-MIG",
@@ -6267,7 +6267,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PARTIN-AHB",
@@ -6748,7 +6748,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PARTIN-MIG",
@@ -7191,7 +7191,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PRICAT-AHB",
@@ -7659,7 +7659,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "PRICAT-MIG",
@@ -8110,7 +8110,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "QUOTES-AHB",
@@ -8611,7 +8611,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "QUOTES-MIG",
@@ -9080,7 +9080,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REQOTE-AHB",
@@ -9716,7 +9716,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILTS-AHB",
@@ -10226,7 +10226,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "COMDIS-AHB",
@@ -10631,7 +10631,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "COMDIS-MIG",
@@ -11010,7 +11010,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REMADV-AHB",
@@ -11414,7 +11414,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REMADV-MIG",
@@ -11793,7 +11793,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INVOIC-MIG",
@@ -12173,7 +12173,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "REQOTE-MIG",
@@ -12567,7 +12567,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CONTRL-AHB",
@@ -13154,7 +13154,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "UTILTS-MIG",
@@ -13789,7 +13789,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "CONTRL-MIG",
@@ -14470,7 +14470,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INSRPT-AHB",
@@ -15163,7 +15163,7 @@
       }
     },
     {
-      "schema_version": "0.5",
+      "schema_version": "0.6",
       "stichtag": "2026-10-01",
       "dokument": {
         "dokument_schluessel": "INSRPT-MIG",

@@ -8,11 +8,17 @@
 
 ## Grundsatz
 
-**Das Schema kennt keine Rolle „verworfen“, und zwar mit Absicht.** Keine gefundene Fassung
-wird aus einem Datensatz entfernt oder als ungültig gestrichen (Abschnitt 10: Versionen nie
-überschreiben; Arbeitsweise: kein Feld geht still verloren). Jede Fassung bekommt eine
-Rolle, die ihr Verhältnis zur maßgeblichen Fassung beschreibt, und behält Hash, URL und
-Belege.
+Keine gefundene Fassung wird aus einem Datensatz entfernt oder als ungültig gestrichen
+(Auftrag Abschnitt 10: Versionen nie überschreiben; Arbeitsweise: kein Feld geht still
+verloren). Jede Fassung bekommt eine Rolle, die ihr Verhältnis zur maßgeblichen Fassung
+beschreibt, und behält Hash, URL und Belege.
+
+> **Korrektur am 18.09.2026:** Bis Schema v0.5 kannte dieses Dokument die Rolle `verworfen`
+> bewusst nicht. Der Auftrag (Abschnitt 11a) führt sie jedoch ausdrücklich. Ab **v0.6** gibt
+> es sie deshalb, mit der Definition des Auftrags: *fehlerhaft oder zurückgezogen, unabhängig
+> vom Vorhandensein einer neueren Fassung.* Sie ist damit **keine** Abstufung von `ersetzt`,
+> sondern ein Qualitätsurteil über die Fassung selbst und verlangt einen ausdrücklichen Beleg.
+> **Vergeben ist sie derzeit an keine einzige der 209 Fassungen** (Begründung unten).
 
 ## Die fünf Rollen
 
@@ -23,14 +29,17 @@ Belege.
 | **`ersetzt`** | **Zeitlich abgelöst.** Fassung eines **älteren Fehlerkorrekturstands derselben Version**. Zu ihrem Zeitpunkt war sie der richtige Stand, inzwischen gibt es einen neueren. | Fassungstyp `konsolidiert_fehlerkorrektur` (PDF oder XML), Stand älter als der neueste; **`ersetzt_durch` ist Pflicht** | ja: galt, bis der neuere Stand erschien |
 | `informativ` | **Aus Typgründen nie maßgeblich**, unabhängig vom Zeitpunkt | informatorische Lesefassungen (Word), Formatnebenfassungen (XML-Basis, XML des neuesten Stands neben dem PDF) | nein |
 | `nicht_verbindlich` | Hatte nie Verbindlichkeit | Konsultationsfassungen | nein |
+| **`verworfen`** | **Fehlerhaft oder zurückgezogen** — die Fassung hätte so nie gelten sollen | ausdrücklicher Beleg nötig (Rücknahme durch die Quelle, erklärter Fehler); **Pflichtangabe in `rolle_begruendung`** | nein: gilt unabhängig davon, ob es eine neuere Fassung gibt |
 
 ## Abgrenzung in einem Satz
 
 **`ersetzt`** sagt: *Diese Fassung war einmal die richtige und wurde durch eine neuere
 derselben Version abgelöst.* Sie wäre die Antwort auf die Frage „Welche Fassung galt am
 10.07.2026?“ und wird deshalb mit Nachfolger (`ersetzt_durch`) aufbewahrt.
-**„Verworfen“** würde heißen: *Diese Fassung war nie richtig oder gehört nicht hierher.*
-Diesen Fall löst das Schema nicht über eine Rolle:
+**`verworfen`** sagt: *Diese Fassung ist fehlerhaft oder zurückgezogen und hätte so nie
+gelten sollen.* Das ist ein Urteil über die Fassung, kein Zeitverhältnis — es gilt auch
+ohne neuere Fassung. Ohne ausdrücklichen Beleg wird die Rolle nicht vergeben; die übrigen
+Zweifelsfälle laufen weiterhin so:
 
 * **Nie maßgeblich wegen des Typs** → `informativ` oder `nicht_verbindlich`
 * **Zweifel, ob die Fassung zu dieser Version gehört oder korrekt ist** (z. B. falsch
@@ -43,13 +52,25 @@ Diesen Fall löst das Schema nicht über eine Rolle:
 
 1. `konsultationsfassung` → `nicht_verbindlich`
 2. informatorische Lesefassung (jeder Stand) → `informativ`
-3. neueste konsolidierte Fassung (ab v0.2: oder außerordentliche Veröffentlichung), PDF → `massgeblich`; dieselbe als XML → `informativ`
-4. ältere konsolidierte Fassung (PDF oder XML) → `ersetzt`, `ersetzt_durch` = gleichformatige
+3. Fassung mit Beleg für Fehlerhaftigkeit oder Rücknahme → `verworfen` (ab v0.6), mit Beleg
+4. neueste konsolidierte Fassung (ab v0.2: oder außerordentliche Veröffentlichung), PDF → `massgeblich`; dieselbe als XML → `informativ`
+5. ältere konsolidierte Fassung (PDF oder XML) → `ersetzt`, `ersetzt_durch` = gleichformatige
    Fassung des nächstneueren Stands
-5. Basis-PDF → `ergaenzend`, wenn Schritt 3 griff, sonst `massgeblich`
-6. Basis in anderem Format → `informativ`
-7. Fassungstyp, den diese Regeln nicht kennen → **keine stille Einordnung**: im
+6. Basis-PDF → `ergaenzend`, wenn Schritt 4 griff, sonst `massgeblich`
+7. Basis in anderem Format → `informativ`
+8. Fassungstyp, den diese Regeln nicht kennen → **keine stille Einordnung**: im
    Etappenbericht als Fall ausweisen und die Regel ausdrücklich ergänzen
+
+### Warum bisher keine Fassung `verworfen` ist
+
+Der naheliegende Kandidat wäre das Muster **`validTo` vor `validFrom`** in den BDEW-Daten:
+15 Fassungen tragen es (u. a. die XML-Basisdateien von UTILMD AHB Gas 1.2 und ORDERS AHB
+1.1b). Das Muster taugt aber **nicht** als Beleg für „zurückgezogen“, denn es trifft
+genauso die regulär abgelösten Fehlerkorrekturstände (z. B. UTILMD MIG Strom S2.2 Stand
+29.06.2026, korrekt `ersetzt`). Es ist die Art, wie die Plattform eine Datei beendet, nicht
+eine Aussage über ihre Richtigkeit. Ohne eine ausdrückliche Rücknahme- oder Fehlermeldung
+der Quelle wird deshalb nicht `verworfen` vergeben — Raten wäre hier schlimmer als eine
+leere Kategorie.
 
 ## Erweiterung v0.2 / v0.3 — Fassungen ohne Mitteilungsbezug (O-11, bestätigt)
 

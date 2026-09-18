@@ -1,6 +1,6 @@
 # Regulatory State 01.10.2026 — Rechercheartefakte
 
-Referenzfassung des Auftrags: [`auftrag.md`](auftrag.md) (Projektdokument vom 17.09.2026).
+Referenzfassung des Auftrags: [`auftrag.md`](auftrag.md) (Projektdokument vom **18.09.2026**, mit 5a, 6a, 11b–11e).
 
 Ticket: #64. Recherche zum vollständigen regulatorischen Stand der Marktkommunikation zum
 Stichtag **01.10.2026**. Es sind ausschließlich Rechercheartefakte zur menschlichen Prüfung:
@@ -20,7 +20,7 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 
 ## Bestätigte Grundlagen
 
-* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`; v0.2/v0.3 ergänzen die außerordentliche Veröffentlichung als eigenen Typ, das Pflichtfeld `mitteilungsbezug` und die Hinweisart `querpruefung`; die Auswahlregel dazu (O-11) ist am 17.09.2026 **bestätigt**); Rollen: [`rollendefinition.md`](rollendefinition.md)
+* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`; v0.2–v0.6: außerordentliche Veröffentlichung als eigener Typ, Pflichtfelder `mitteilungsbezug` und `aufnahmekriterium`, Quelle DVGW, Rolle `verworfen` gemäß Auftrag 11a); Rollen: [`rollendefinition.md`](rollendefinition.md)
 * Aufnahmeregel (was gehört in den State): [`aufnahmeregel.md`](aufnahmeregel.md), seit 18.09.2026
 * Modell: Regulatory State als Ebene oberhalb von `RegulatoryVersion`, 1:n ([`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md)), bestätigt am 17.09.2026, **noch nicht umgesetzt**
 

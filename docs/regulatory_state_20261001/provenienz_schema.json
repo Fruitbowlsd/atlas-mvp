@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "atlas/regulatory_state/provenienz_schema_v0.json",
-  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.5)",
+  "title": "Atlas Regulatory State — Provenienzdatensatz je Dokumentversion (v0.6)",
   "description": "Ein Datensatz je regulatorischer Dokumentversion am Stichtag. Drei Ebenen wie in Abschnitt 10 des Auftrags: Dokument → Dokumentversion → Fassungen (Dateien). Die Auswahl der maßgeblichen Fassung ist eine eigene, begründete Entscheidung und überschreibt keine Fassung. Nur Rechercheartefakt, kein Datenbankschema.",
   "type": "object",
   "required": [
@@ -23,7 +23,8 @@
         "0.2",
         "0.3",
         "0.4",
-        "0.5"
+        "0.5",
+        "0.6"
       ]
     },
     "stichtag": {
@@ -523,9 +524,10 @@
               "ergaenzend",
               "ersetzt",
               "informativ",
-              "nicht_verbindlich"
+              "nicht_verbindlich",
+              "verworfen"
             ],
-            "description": "Siehe rollendefinition.md. Es gibt bewusst KEINE Rolle 'verworfen': keine Fassung wird aus dem Datensatz entfernt oder als ungültig markiert. 'ersetzt' = Fassung eines älteren Stands (konsolidierte Fehlerkorrektur oder außerordentliche Veröffentlichung) derselben Version, zeitlich abgelöst durch die in 'ersetzt_durch' genannte Fassung; zu ihrem Zeitpunkt war sie Kandidat für maßgeblich. 'informativ'/'nicht_verbindlich' = aus Typgründen nie maßgeblich (Lesefassung, Formatnebenfassung, Konsultation)."
+            "description": "Siehe rollendefinition.md. Keine Fassung wird aus dem Datensatz entfernt. 'ersetzt' = Fassung eines älteren Stands (konsolidierte Fehlerkorrektur oder außerordentliche Veröffentlichung) derselben Version, zeitlich abgelöst durch die in 'ersetzt_durch' genannte Fassung; zu ihrem Zeitpunkt war sie Kandidat für maßgeblich. 'verworfen' (ab v0.6, Auftrag Abschnitt 11a) = die Fassung ist fehlerhaft oder zurückgezogen, unabhängig davon, ob eine neuere Fassung existiert; erfordert einen ausdrücklichen Beleg in 'rolle_begruendung'. 'informativ'/'nicht_verbindlich' = aus Typgründen nie maßgeblich (Lesefassung, Formatnebenfassung, Konsultation)."
           },
           "rolle_begruendung": {
             "type": "string"
