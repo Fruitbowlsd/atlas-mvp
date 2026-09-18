@@ -3712,7 +3712,7 @@
         "aufnahmekriterium": [
           {
             "kriterium": "C",
-            "beleg": "UTILMD AHB Gas 1.2 (7 Fundstellen), UTILMD MIG Gas G1.2 (2)"
+            "beleg": "NUR TEILWEISE ERFÜLLT (O-18): UTILMD MIG Gas G1.2 (maßgeblich, S. 143) verweist für die Codes 89 und 293 auf das 'EDI@Energy Dokument „Codierung der Standardlastprofile nach Maßgaben der TU München für den deutschen Gasmarkt“' — mit Dokumentname, aber OHNE Version. Die 7 Treffer in UTILMD AHB Gas 1.2 lauten 'Kundenwertverfahren (z. B. TU München)' und sind Verfahrens-, keine Dokumentnennungen; sie tragen Kriterium C nicht (Korrektur gegenüber der Etappe-4-Fassung dieses Datensatzes)."
           }
         ]
       },
@@ -3759,7 +3759,7 @@
         },
         "mitteilung": null,
         "quelle_ausserhalb_mitteilungsreihe": "Ausschließlich auf BDEW-MaKo veröffentlicht; in keiner der 95 Mitteilungen der BK6/BK7-Reihe genannt. Aufnahme über Kriterium C (Referenz aus UTILMD Gas).",
-        "dokumentstatus": "verbindlich_fortgeltend",
+        "dokumentstatus": "relevanz_unklar",
         "vorgaenger": null,
         "nachfolger": []
       },
@@ -3881,7 +3881,7 @@
         "regelschritte": [
           {
             "regel": "Aufnahme prüfen (aufnahmeregel.md)",
-            "ergebnis": "C: UTILMD AHB Gas 1.2 (7 Fundstellen), UTILMD MIG Gas G1.2 (2)"
+            "ergebnis": "C nur teilweise: Dokumentname ohne Version in UTILMD MIG Gas G1.2 S. 143 (siehe O-18)"
           },
           {
             "regel": "Version am Stichtag bestimmen",
@@ -3991,23 +3991,33 @@
       "hinweise": [
         {
           "art": "quellenauffaelligkeit",
-          "text": "Kein Treffer in den 95 Mitteilungen der BK6/BK7-Reihe: Die Codeliste ist ausschließlich auf BDEW-MaKo veröffentlicht (Fall K-1). Die Aufnahme stützt sich allein auf Kriterium C — UTILMD AHB Gas 1.2 (7 Fundstellen) und UTILMD MIG Gas G1.2 (2).",
-          "auswirkung_auf_auswahl": true,
-          "beleg": [
-            {
-              "quelle": "BNetzA Mitteilungsliste",
-              "fundstelle": "0 Treffer für 'TU München' / 'Standardlastprofile nach'"
-            }
-          ]
-        },
-        {
-          "art": "quellenauffaelligkeit",
           "text": "Deckblatt ohne Publikationsdatum; das Gültig-ab (01.10.2015) stammt aus dem BDEW-Feld validFrom und ist deshalb als 'abgeleitet' geführt.",
           "auswirkung_auf_auswahl": false,
           "beleg": [
             {
               "quelle": "bdew:7351",
               "seite": 1
+            }
+          ]
+        },
+        {
+          "art": "offene_frage",
+          "text": "O-18: Die Präzisierung von Kriterium C (Auftrag 11e: Dokumentname UND Version) ist hier nicht erfüllt. Der einzige Dokumentverweis steht in UTILMD MIG Gas G1.2 (S. 143) und nennt den Titel der Basisfassung dieser Codeliste ('Codierung der Standardlastprofile nach Maßgaben der TU München [und des BDEW] für den deutschen Gasmarkt', Deckblatt bdew:7351), aber keine Version. Die konsolidierte Fassung trägt einen anderen Titel ('Codeliste der Standardlastprofile nach TU München-Verfahren …'). Für den Namen gibt es genau ein Dokument mit genau einer Version (1.1); die Zuordnung ist damit eindeutig, aber nicht versioniert belegt. Die in Etappe 4 genannten 7 Treffer in UTILMD AHB Gas sind Verfahrensnennungen ('Kundenwertverfahren (z. B. TU München)') und wurden zu Unrecht als Referenz gezählt. Entscheidung offen: Aufnahme bei eindeutigem Namensverweis ohne Version zulassen oder nicht.",
+          "auswirkung_auf_auswahl": true,
+          "beleg": [
+            {
+              "quelle": "bdew:8437",
+              "seite": 143,
+              "fundstelle": "Codierung der Standardlastprofile nach Maßgaben der TU München für den deutschen Gasmarkt"
+            },
+            {
+              "quelle": "bdew:7351",
+              "seite": 1,
+              "fundstelle": "Codierung der Standardlastprofile nach Maßgaben der TU München und des BDEW für den deutschen Gasmarkt, Version 1.1"
+            },
+            {
+              "quelle": "bdew:8455",
+              "fundstelle": "7× 'Kundenwertverfahren (z. B. TU München)'"
             }
           ]
         }

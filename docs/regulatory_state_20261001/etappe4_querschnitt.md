@@ -33,12 +33,12 @@ Artefakt: [`etappe4_querschnitt_provenienz.json`](etappe4_querschnitt_provenienz
 | Codeliste der Zeitreihentypen | **1.1d** | 19 | 01.10.2021 | **konsolidiert Stand 16.07.2021** (BDEW 7356) | 12 | A + C |
 | Codeliste der europäischen Ländercodes | **1.0** | 58 ² | 01.10.2017 | **konsolidiert Stand 30.03.2023** (BDEW 7342) | 5 | A + C |
 | Codeliste der Lokationsbündelstrukturen | **1.0** | 33 | 01.10.2023 | **konsolidiert Stand 13.12.2024** (BDEW 7713) | 52 | A + B + C |
-| Codeliste der Standardlastprofile nach TU München-Verfahren | **1.1** | **keine** ³ | 01.10.2015 | **konsolidiert Stand 22.05.2015** (BDEW 7352) | 10 | **nur C** |
+| Codeliste der Standardlastprofile nach TU München-Verfahren | **1.1** | **keine** ³ | 01.10.2015 | **konsolidiert Stand 22.05.2015** (BDEW 7352) | 10 | **C nur teilweise — `relevanz_unklar` (O-18)** |
 
 ¹ Abweichender Umsetzungstermin, Mitteilung 51 wörtlich: „bereits zum 1. September 2025
 umzusetzen" (MsbG-Anpassungen, neue Artikel-ID ab 01.01.2026).
 ² Ältere Mitteilungsreihe (GPKE/GeLi Gas, Mitteilung Nr. 58), nicht die Reihe „Datenformate".
-³ In keiner der 95 Mitteilungen; nur auf BDEW-MaKo. Aufnahme allein über Kriterium C.
+³ In keiner der 95 Mitteilungen; nur auf BDEW-MaKo. **Korrektur 18.09.2026:** Kriterium C ist nur teilweise erfüllt. Einziger Dokumentverweis: UTILMD MIG Gas G1.2, S. 143 — mit Dokumentname (Titel der Basisfassung), aber ohne Version. Die zuvor gezählten 7 Treffer in UTILMD AHB Gas sind Verfahrensnennungen („Kundenwertverfahren (z. B. TU München)“) und keine Dokumentverweise. Status bis zur Entscheidung: `relevanz_unklar` (O-18).
 
 **Gültig bis** ist bei allen 10 offen. **6 von 10** sind nur mit einer konsolidierten Fassung
 maßgeblich abgedeckt — bei der PID sogar erst im zweiten Korrekturstand.
