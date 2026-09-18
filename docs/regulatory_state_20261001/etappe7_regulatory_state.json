@@ -1,0 +1,3474 @@
+{
+  "name": "Marktkommunikation 01.10.2026",
+  "stichtag": "2026-10-01",
+  "basis": {
+    "quelle": "BNetzA",
+    "mitteilung": 56,
+    "veroeffentlicht": "2026-04-01",
+    "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_56/Mitteilung_Nr_56.html"
+  },
+  "ergaenzende_quellen": [
+    "BDEW-MaKo (Fehlerkorrektur- und konsolidierte Stände, fortgeltende Versionen)",
+    "DVGW Service & Consult (SSQNOT, K-2)",
+    "GitHub EDI@Energy (API-Webdienste, geregelt durch API-Guideline 1.0b)"
+  ],
+  "fortgeltende_mitteilungen": [
+    19,
+    24,
+    33,
+    36,
+    43,
+    46,
+    51,
+    54,
+    58
+  ],
+  "status_vorschlag": "VALID",
+  "status_hinweis": "Vorschlag. Der Status wird erst mit Bestätigung des Übergabeberichts (Etappe 8) gesetzt; bis dahin Rechercheartefakt ohne Datenbankwirkung (Auftrag 15a).",
+  "verhaeltnis_regulatory_version": {
+    "modell": "Regulatory State als Ebene oberhalb von RegulatoryVersion, 1:n über RegulatoryVersion.regulatory_state_id (nullable); bestätigt 17.09.2026 (Auftrag 9b)",
+    "zuordnung": [
+      {
+        "rv": 1,
+        "inhalt": "GeLi Gas 2.0 / UTILMD Gas G1.1, ab 01.04.2026",
+        "regulatory_state_id": null,
+        "grund": "State 01.04.2026 wird nicht aufgebaut (Auftrag 13)"
+      },
+      {
+        "rv": 2,
+        "inhalt": "Mitteilung 56, ab 01.10.2026, Gas",
+        "regulatory_state_id": "Marktkommunikation 01.10.2026"
+      },
+      {
+        "rv": 3,
+        "inhalt": "UTILMD Strom 2.1, ab 06.06.2025",
+        "regulatory_state_id": null,
+        "grund": "liegt vor dem ersten State"
+      }
+    ],
+    "offene_produktentscheidung": {
+      "id": "P-1",
+      "text": "Für den 01.10.2026 gibt es keine Strom-RegulatoryVersion. Der State umfasst 81 Dokumente mit Strom-Bezug, hätte nach dem bestätigten Modell aber nur die Gas-RV 2. Anlage einer Strom-RV und Umgang mit RV 3 sind eine Produktentscheidung, kein Rechercheergebnis."
+    }
+  },
+  "kennzahlen": {
+    "dokumente": 85,
+    "fassungen": 402,
+    "massgebliche_fassungen": 86,
+    "rollen": {
+      "ergaenzend": 99,
+      "nicht_verbindlich": 33,
+      "informativ": 152,
+      "massgeblich": 86,
+      "ersetzt": 32
+    },
+    "quellen_massgeblich": {
+      "BDEW-MaKo": 81,
+      "DVGW": 1,
+      "GitHub-EDI@Energy": 4
+    },
+    "mitteilungsbezug_alle_fassungen": {
+      "anlage_der_mitteilung_bytegleich": 142,
+      "konsultationsanlage": 33,
+      "kein_mitteilungsbezug": 216,
+      "keine_mitteilungsreihe": 2,
+      "anlage_der_mitteilung": 9
+    },
+    "mitteilungsbezug_massgebliche_fassungen": {
+      "kein_mitteilungsbezug": 38,
+      "anlage_der_mitteilung_bytegleich": 43,
+      "keine_mitteilungsreihe": 1,
+      "anlage_der_mitteilung": 4
+    },
+    "dokumente_ohne_mitteilungsbezug_der_massgeblichen_fassung": 38,
+    "sparte": {
+      "Strom": 36,
+      "Gas": 4,
+      "beide": 45
+    },
+    "sparte_belegart": {
+      "belegt_titel": 4,
+      "angenommen_ohne_einzelnachweis": 4,
+      "belegt_pid": 30,
+      "belegt_referenzen": 7,
+      "belegt_dokument_selbst": 1,
+      "indirekt_referenzen": 2,
+      "belegt_herkunft": 30,
+      "angenommen_ohne_spartenangabe": 7
+    },
+    "dokumentstatus": {
+      "verbindlich": 34,
+      "verbindlich_fortgeltend": 51
+    },
+    "relevanz_unklar": []
+  },
+  "fragenkatalog_konsolidiert": {
+    "antworten": {
+      "f1_durch_mitteilung_geaendert=ja": 34,
+      "f1_durch_mitteilung_geaendert=nein": 51,
+      "f2_fortgeltende_vorversion=ja": 51,
+      "f2_fortgeltende_vorversion=nicht_anwendbar": 34,
+      "f3_bdew_gueltige_version=ja": 84,
+      "f3_bdew_gueltige_version=nein": 1,
+      "f4_fehlerkorrekturen=ja": 33,
+      "f4_fehlerkorrekturen=nein": 52,
+      "f5_konsolidierte_fassung=ja": 34,
+      "f5_konsolidierte_fassung=nein": 51,
+      "f6_neuere_noch_nicht_gueltige_version=nein": 85,
+      "f7_konsultationsfassung=ja": 25,
+      "f7_konsultationsfassung=nein": 60,
+      "f8_widerspruch_bnetza_bdew=ja": 1,
+      "f8_widerspruch_bnetza_bdew=nein": 84
+    },
+    "f6_neuere_noch_nicht_gueltige_version": "bei allen 85 Dokumenten 'nein'; BDEW-Abzug: 0 Einträge mit Gültigkeit nach dem Stichtag",
+    "f7_nachfolger_in_konsultation": [
+      {
+        "dokument": "UTILMD-AHB-STROM",
+        "version": "2.2",
+        "nachfolger": [
+          "2.3"
+        ]
+      },
+      {
+        "dokument": "UTILMD-MIG-STROM",
+        "version": "S2.2",
+        "nachfolger": [
+          "S2.3"
+        ]
+      },
+      {
+        "dokument": "APERAK-AHB",
+        "version": "1.1",
+        "nachfolger": [
+          "1.1a"
+        ]
+      },
+      {
+        "dokument": "APERAK-MIG",
+        "version": "2.2",
+        "nachfolger": [
+          "2.2a"
+        ]
+      },
+      {
+        "dokument": "IFTSTA-AHB",
+        "version": "2.1",
+        "nachfolger": [
+          "2.1a"
+        ]
+      },
+      {
+        "dokument": "IFTSTA-MIG",
+        "version": "2.1",
+        "nachfolger": [
+          "2.1a"
+        ]
+      },
+      {
+        "dokument": "ORDERS-AHB",
+        "version": "1.1b",
+        "nachfolger": [
+          "1.1c"
+        ]
+      },
+      {
+        "dokument": "ORDRSP-AHB",
+        "version": "1.1b",
+        "nachfolger": [
+          "1.1c"
+        ]
+      },
+      {
+        "dokument": "QUOTES-AHB",
+        "version": "1.1a",
+        "nachfolger": [
+          "1.2"
+        ]
+      },
+      {
+        "dokument": "QUOTES-MIG",
+        "version": "1.3c",
+        "nachfolger": [
+          "1.4"
+        ]
+      },
+      {
+        "dokument": "CONTRL-AHB",
+        "version": "1.0",
+        "nachfolger": [
+          "1.0a"
+        ]
+      },
+      {
+        "dokument": "CONTRL-MIG",
+        "version": "2.0b",
+        "nachfolger": [
+          "2.0c"
+        ]
+      },
+      {
+        "dokument": "ALLGEMEINE-FESTLEGUNGEN",
+        "version": "6.1d",
+        "nachfolger": [
+          "6.1e"
+        ]
+      },
+      {
+        "dokument": "PID",
+        "version": "4.0",
+        "nachfolger": [
+          "4.1"
+        ]
+      },
+      {
+        "dokument": "CL-KONFIGURATIONEN",
+        "version": "1.4",
+        "nachfolger": [
+          "1.4a"
+        ]
+      },
+      {
+        "dokument": "CL-VERWENDUNGSZWECKE",
+        "version": "1.0",
+        "nachfolger": [
+          "1.0a"
+        ]
+      },
+      {
+        "dokument": "CL-ARTIKELNUMMERN",
+        "version": "5.6",
+        "nachfolger": [
+          "5.7"
+        ]
+      },
+      {
+        "dokument": "EBD",
+        "version": "4.3",
+        "nachfolger": [
+          "4.4"
+        ]
+      },
+      {
+        "dokument": "RD-ACTIVATION-AWT",
+        "version": "1.1f",
+        "nachfolger": [
+          "1.1g"
+        ]
+      },
+      {
+        "dokument": "RD-AENDERUNGSHISTORIE",
+        "version": "ohne Versionsnummer",
+        "nachfolger": [
+          "Konsultationsfassung 31.07.2026"
+        ]
+      },
+      {
+        "dokument": "RZUE",
+        "version": "1.10",
+        "nachfolger": [
+          "1.11"
+        ]
+      },
+      {
+        "dokument": "API-GUIDELINE",
+        "version": "1.0b",
+        "nachfolger": [
+          "1.0c"
+        ]
+      },
+      {
+        "dokument": "RZUE-API",
+        "version": "1.2",
+        "nachfolger": [
+          "1.3"
+        ]
+      },
+      {
+        "dokument": "API-STEUERUNGSHANDLUNGEN",
+        "version": "1.0.0",
+        "nachfolger": [
+          "2.0.0 (Major-Version V2)"
+        ]
+      },
+      {
+        "dokument": "API-MALO-ID",
+        "version": "1.0.0",
+        "nachfolger": [
+          "2.0.0 (Major-Version V2)"
+        ]
+      }
+    ],
+    "f8_widersprueche": [
+      {
+        "dokument": "SSQNOT",
+        "text": "Bezeichnung des Prüfidentifikators 70096: PID 4.0 (BNetzA/BDEW) schreibt 'Mehr-/Mindermengenmeldung RLP', die SSQNOT 5.7 (DVGW) schreibt 'Mehr-/Mindermengenmeldung RLM'. Betrifft nicht die Versionsauswahl, aber die Bezeichnung desselben Prüfidentifikators in zwei Quellen."
+      }
+    ]
+  },
+  "vollstaendigkeit": {
+    "bdew_abzug_sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+    "bdew_eintraege_gesamt": 1752,
+    "am_stichtag_gueltig": 231,
+    "themen_mit_gueltigem_eintrag": 90,
+    "themen_durch_datensaetze_abgedeckt": 83,
+    "themen_ohne_datensatz": [
+      {
+        "topic": 140,
+        "titel": [
+          "Codeliste der Temperaturanbieter 1.0i",
+          "Codeliste der Temperaturanbieter 1.0i - informatorische Lesefassung"
+        ]
+      },
+      {
+        "topic": 147,
+        "titel": [
+          "EDI@Energy Anwendungshilfe Beispiele von Berechnungsformeln für das Solarpaket 1 1.1"
+        ]
+      },
+      {
+        "topic": 152,
+        "titel": [
+          "Gruppierungen der EDI@Energy Dokumente 2.2"
+        ]
+      },
+      {
+        "topic": 220,
+        "titel": [
+          "Änderungsantrag EBD 1.5"
+        ]
+      },
+      {
+        "topic": 250,
+        "titel": [
+          "BDEW-Anwendungshilfe - Abbildung der Berechnungsformeln in API-Webdiensten (Version 1.0) Stand 18.08.2026"
+        ]
+      },
+      {
+        "topic": 251,
+        "titel": [
+          "BDEW-Anwendungshilfe - Darstellung von Lokationsbündeln (Version 1.0) Stand: 18.08.2026"
+        ]
+      },
+      {
+        "topic": 252,
+        "titel": [
+          "BDEW-Anwendungshilfe - Einführungsszenario zu den neuen Segmenten und Codes zum 01. Oktober 2026 in der UTILMD (Version 1.1) Stand: 18.08.2026"
+        ]
+      }
+    ],
+    "gueltige_eintraege_in_abgedeckten_themen_ohne_fassung": 0,
+    "eintraege_mit_gueltigkeit_nach_stichtag": 0,
+    "datensaetze_ohne_bdew_thema": [
+      "SSQNOT"
+    ]
+  },
+  "baum": {
+    "EDIFACT": {
+      "APERAK": [
+        "AHB APERAK-AHB 1.1",
+        "MIG APERAK-MIG 2.2"
+      ],
+      "COMDIS": [
+        "AHB COMDIS-AHB 1.0h",
+        "MIG COMDIS-MIG 1.0g"
+      ],
+      "CONTRL": [
+        "AHB CONTRL-AHB 1.0",
+        "MIG CONTRL-MIG 2.0b"
+      ],
+      "IFTSTA": [
+        "AHB IFTSTA-AHB 2.1",
+        "MIG IFTSTA-MIG 2.1"
+      ],
+      "INSRPT": [
+        "AHB INSRPT-AHB 1.1g",
+        "MIG INSRPT-MIG 1.1a"
+      ],
+      "INVOIC": [
+        "AHB INVOIC-AHB 1.0b",
+        "MIG INVOIC-MIG 2.8e"
+      ],
+      "MSCONS": [
+        "AHB MSCONS-AHB 3.2",
+        "MIG MSCONS-MIG 2.5"
+      ],
+      "ORDCHG": [
+        "AHB ORDCHG-AHB 1.1",
+        "MIG ORDCHG-MIG 1.2"
+      ],
+      "ORDERS": [
+        "AHB ORDERS-AHB 1.1b",
+        "MIG ORDERS-MIG 1.4c"
+      ],
+      "ORDRSP": [
+        "AHB ORDRSP-AHB 1.1b",
+        "MIG ORDRSP-MIG 1.4c"
+      ],
+      "PARTIN": [
+        "AHB PARTIN-AHB 1.1",
+        "MIG PARTIN-MIG 1.1"
+      ],
+      "PRICAT": [
+        "AHB PRICAT-AHB 2.1",
+        "MIG PRICAT-MIG 2.1"
+      ],
+      "QUOTES": [
+        "AHB QUOTES-AHB 1.1a",
+        "MIG QUOTES-MIG 1.3c"
+      ],
+      "REMADV": [
+        "AHB REMADV-AHB 1.0a",
+        "MIG REMADV-MIG 2.9e"
+      ],
+      "REQOTE": [
+        "AHB REQOTE-AHB 1.2",
+        "MIG REQOTE-MIG 1.3c"
+      ],
+      "SSQNOT": [
+        "MIG SSQNOT 5.7"
+      ],
+      "UTILMD": [
+        "AHB UTILMD-AHB-GAS 1.2",
+        "AHB UTILMD-AHB-STROM 2.2",
+        "MIG UTILMD-MIG-GAS G1.2",
+        "MIG UTILMD-MIG-STROM S2.2"
+      ],
+      "UTILTS": [
+        "AHB UTILTS-AHB 1.1",
+        "MIG UTILTS-MIG 1.1e"
+      ]
+    },
+    "PID": [
+      "PID 4.0"
+    ],
+    "EBD": [
+      "EBD 4.3"
+    ],
+    "Codelisten": [
+      "CL-KONFIGURATIONEN 1.4",
+      "CL-VERWENDUNGSZWECKE 1.0",
+      "CL-OBIS 2.5c",
+      "CL-ARTIKELNUMMERN 5.6",
+      "CL-ZEITREIHENTYPEN 1.1d",
+      "CL-LAENDERCODES 1.0",
+      "CL-LOKATIONSBUENDEL 1.0",
+      "CL-SLP-TUM 1.1"
+    ],
+    "API": [
+      "API-GUIDELINE 1.0b",
+      "API-STEUERUNGSHANDLUNGEN 1.0.0",
+      "API-MALO-ID 1.0.0",
+      "API-VERZEICHNISDIENST 1.0.0"
+    ],
+    "XML": [
+      "RD-ACKNOWLEDGEMENT-AWT 1.0g",
+      "RD-ACKNOWLEDGEMENT-FB 1.0g",
+      "RD-ACKNOWLEDGEMENT-XSD 1.0g",
+      "RD-ACTIVATION-AWT 1.1f",
+      "RD-ACTIVATION-FB 1.1f",
+      "RD-ACTIVATION-XSD 1.1f",
+      "RD-KOSTENBLATT-AWT 1.0d",
+      "RD-KOSTENBLATT-FB 1.0d",
+      "RD-KOSTENBLATT-XSD 1.0d",
+      "RD-NETWORKCONSTRAINT-AWT 1.1b",
+      "RD-NETWORKCONSTRAINT-FB 1.1b",
+      "RD-NETWORKCONSTRAINT-XSD 1.1b",
+      "RD-PLANNEDRESOURCESCHEDULE-AWT 1.0f",
+      "RD-PLANNEDRESOURCESCHEDULE-FB 1.0f",
+      "RD-PLANNEDRESOURCESCHEDULE-XSD 1.0f",
+      "RD-STAMMDATEN-AWT 1.4b",
+      "RD-STAMMDATEN-FB 1.4b",
+      "RD-STAMMDATEN-XSD 1.4b",
+      "RD-STATUSREQUEST-AWT 1.1",
+      "RD-STATUSREQUEST-FB 1.1",
+      "RD-STATUSREQUEST-XSD 1.1",
+      "RD-UNAVAILABILITY-AWT 1.1b",
+      "RD-UNAVAILABILITY-FB 1.1b",
+      "RD-UNAVAILABILITY-XSD 1.1b",
+      "RD-KASKADE-AWT 1.0",
+      "RD-KASKADE-FB 1.0",
+      "RD-KASKADE-XSD 1.0",
+      "RD-AENDERUNGSHISTORIE ohne Versionsnummer"
+    ],
+    "AS4": [
+      "AS4-PROFIL 1.2",
+      "RZUE-AS4 2.6"
+    ],
+    "Übertragungsweg": [
+      "RZUE 1.10",
+      "RZV 1.1",
+      "RZUE-API 1.2"
+    ],
+    "Sonstiges": [
+      "ALLGEMEINE-FESTLEGUNGEN 6.1d"
+    ]
+  },
+  "eintraege": [
+    {
+      "dokument_schluessel": "UTILMD-AHB-STROM",
+      "dokumentname": "UTILMD AHB Strom",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "UTILMD",
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_titel",
+      "version": "2.2",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8440",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12279",
+          "dateityp": "application/pdf",
+          "sha256": "7a175760d48730fb3858d72716d771b18b157b2be51405f131d6cf1c8eda3fe4",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-06-29",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "2.3"
+      ],
+      "begruendung": "UTILMD AHB Strom 2.2 gilt ab 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und bis zum Stichtag keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Lesefassung mit Fehlerkorrekturen Stand 29.06.2026 (BDEW-MaKo), weil sie den neuesten Fehlerkorrekturstand dieser Version enthält.",
+      "provenienz_datei": "etappe1_utilmd_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "UTILMD-MIG-STROM",
+      "dokumentname": "UTILMD MIG Strom",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "UTILMD",
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_titel",
+      "version": "S2.2",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8458",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12305",
+          "dateityp": "application/pdf",
+          "sha256": "9f6dcf92e84f26bad9d183cc875c86093745d54efdd31862e9425663af514305",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-08-06",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "S2.3"
+      ],
+      "begruendung": "UTILMD MIG Strom S2.2 gilt ab 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und bis zum Stichtag keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Lesefassung mit Fehlerkorrekturen Stand 06.08.2026 (BDEW-MaKo), weil sie den neuesten Fehlerkorrekturstand dieser Version enthält.",
+      "provenienz_datei": "etappe1_utilmd_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "UTILMD-AHB-GAS",
+      "dokumentname": "UTILMD AHB Gas",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "UTILMD",
+      "sparte": "Gas",
+      "sparte_belegart": "belegt_titel",
+      "version": "1.2",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8455",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12302",
+          "dateityp": "application/pdf",
+          "sha256": "7562e2fd2fb24cbd04242d5820c4bab86f697c0c50f604ceb65652ff72c9e802",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-08-06",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "UTILMD AHB Gas 1.2 gilt ab 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und bis zum Stichtag keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Lesefassung mit Fehlerkorrekturen Stand 06.08.2026 (BDEW-MaKo), weil sie den neuesten Fehlerkorrekturstand dieser Version enthält.",
+      "provenienz_datei": "etappe1_utilmd_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "UTILMD-MIG-GAS",
+      "dokumentname": "UTILMD MIG Gas",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "UTILMD",
+      "sparte": "Gas",
+      "sparte_belegart": "belegt_titel",
+      "version": "G1.2",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8437",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12276",
+          "dateityp": "application/pdf",
+          "sha256": "8105c2bfca76550428d21c71b2fe3f0628d19b1ccd10a18e42b6ff874f2acfb5",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-06-29",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "UTILMD MIG Gas G1.2 gilt ab 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und bis zum Stichtag keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Lesefassung mit Fehlerkorrekturen Stand 29.06.2026 (BDEW-MaKo), weil sie den neuesten Fehlerkorrekturstand dieser Version enthält.",
+      "provenienz_datei": "etappe1_utilmd_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "APERAK-AHB",
+      "dokumentname": "APERAK AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "APERAK",
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_einzelnachweis",
+      "version": "1.1",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8321",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12147",
+          "dateityp": "application/pdf",
+          "sha256": "6c1aef9365d3cb05ef59b698fe8564819709a120059973885a4c6d5131f1dfc0",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.1a"
+      ],
+      "begruendung": "APERAK AHB 1.1 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "APERAK-MIG",
+      "dokumentname": "APERAK MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "APERAK",
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_einzelnachweis",
+      "version": "2.2",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8328",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12154",
+          "dateityp": "application/pdf",
+          "sha256": "d4255b19d9b60db49475717ad1c0314c05dd6bb2665a4cca5799a0d0415fc83f",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "2.2a"
+      ],
+      "begruendung": "APERAK MIG 2.2 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "IFTSTA-AHB",
+      "dokumentname": "IFTSTA AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "IFTSTA",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "2.1",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8336",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12163",
+          "dateityp": "application/pdf",
+          "sha256": "884ddab1323cf559b46a32ac246591a2e12d46acd195bbaa94ec166005291818",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "2.1a"
+      ],
+      "begruendung": "IFTSTA AHB 2.1 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "IFTSTA-MIG",
+      "dokumentname": "IFTSTA MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "IFTSTA",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "2.1",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8339",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12166",
+          "dateityp": "application/pdf",
+          "sha256": "f54ab9a907200570d354181fe2ff7049cfb522c095e495e0109d5e095a924332",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "2.1a"
+      ],
+      "begruendung": "IFTSTA MIG 2.1 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "INVOIC-AHB",
+      "dokumentname": "INVOIC AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "INVOIC",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.0b",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8342",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12169",
+          "dateityp": "application/pdf",
+          "sha256": "6f8218ab4c84e593306d32ee80267bae81ce44532d1255fcae2bd20d2ca3de5a",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "INVOIC AHB 1.0b gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "MSCONS-AHB",
+      "dokumentname": "MSCONS AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "MSCONS",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "3.2",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8345",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12172",
+          "dateityp": "application/pdf",
+          "sha256": "e6f93364ddf4a0414f421ca652d2c0e0f6c89a1e8f4a5c89533f25b6a3c850ed",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "MSCONS AHB 3.2 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "MSCONS-MIG",
+      "dokumentname": "MSCONS MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "MSCONS",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "2.5",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8348",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12175",
+          "dateityp": "application/pdf",
+          "sha256": "1be2e52bf8c0de13a3fb4f2b35a9dd4aeb3ec658d63bfc8cb47c15b5f98bde25",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "MSCONS MIG 2.5 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "ORDCHG-AHB",
+      "dokumentname": "ORDCHG AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "ORDCHG",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.1",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8351",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12178",
+          "dateityp": "application/pdf",
+          "sha256": "87536bd85bbab744194bf4da6687032a3afc0a975d59def4f08a417fcb8e7842",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "ORDCHG AHB 1.1 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "ORDCHG-MIG",
+      "dokumentname": "ORDCHG MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "ORDCHG",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.2",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8355",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12182",
+          "dateityp": "application/pdf",
+          "sha256": "b0e46ffc40e0ff70ef24634d79d92557405c94eeca1c4f1f2d432db21715f4a6",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "ORDCHG MIG 1.2 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "ORDERS-AHB",
+      "dokumentname": "ORDERS AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "ORDERS",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.1b",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8419",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12255",
+          "dateityp": "application/pdf",
+          "sha256": "6b8826a89fcb89cd867c702f810e62294ac320bccaa19a3e2360aab3dbd42ac1",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-06-29",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.1c"
+      ],
+      "begruendung": "ORDERS AHB 1.1b gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Fassung Stand 2026-06-29 (konsolidiert_fehlerkorrektur), weil sie der neueste Stand dieser Version ist.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "ORDERS-MIG",
+      "dokumentname": "ORDERS MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "ORDERS",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.4c",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8362",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12189",
+          "dateityp": "application/pdf",
+          "sha256": "d7c1f804d0b36a000a734948b27a5bdc05bf5da0fa0553437f88737144538690",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "ORDERS MIG 1.4c gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "ORDRSP-AHB",
+      "dokumentname": "ORDRSP AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "ORDRSP",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.1b",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8363",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12190",
+          "dateityp": "application/pdf",
+          "sha256": "220ca24cb8db56cc4ed75af3f758833a35099f5f6f9ee6c37e785b44551173a7",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.1c"
+      ],
+      "begruendung": "ORDRSP AHB 1.1b gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "ORDRSP-MIG",
+      "dokumentname": "ORDRSP MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "ORDRSP",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.4c",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8367",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12194",
+          "dateityp": "application/pdf",
+          "sha256": "947756afccc6cc3c2c306bb0340a65f1508d2cd37485cc59f272721fef3747f4",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "ORDRSP MIG 1.4c gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "PARTIN-AHB",
+      "dokumentname": "PARTIN AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "PARTIN",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.1",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8370",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12197",
+          "dateityp": "application/pdf",
+          "sha256": "d2e2ee08b677d78d54430d05534f2baa130b8ef752d2dd613b0e22839c1c287f",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "PARTIN AHB 1.1 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "PARTIN-MIG",
+      "dokumentname": "PARTIN MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "PARTIN",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.1",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8373",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12200",
+          "dateityp": "application/pdf",
+          "sha256": "a90c3fdff2d33244779a85899e2da1013d70b362ef33c078f5cb85597b68f489",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "PARTIN MIG 1.1 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "PRICAT-AHB",
+      "dokumentname": "PRICAT AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "PRICAT",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "2.1",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8376",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12203",
+          "dateityp": "application/pdf",
+          "sha256": "4c7e4c4d8a38bbae179d3bcdc4f82dfc57b754f9771e04500e2126580520e655",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "PRICAT AHB 2.1 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "PRICAT-MIG",
+      "dokumentname": "PRICAT MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "PRICAT",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "2.1",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8379",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12206",
+          "dateityp": "application/pdf",
+          "sha256": "553a608a4b77042f17452c8c2f58031ee16ded57bb1d026fe9aaedebfafba46c",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "PRICAT MIG 2.1 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "QUOTES-AHB",
+      "dokumentname": "QUOTES AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "QUOTES",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.1a",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8382",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12209",
+          "dateityp": "application/pdf",
+          "sha256": "237c1caffc7407edb754dd43acc5069fb58f9b680fc3881f20f0277564d8d6e0",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.2"
+      ],
+      "begruendung": "QUOTES AHB 1.1a gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "QUOTES-MIG",
+      "dokumentname": "QUOTES MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "QUOTES",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.3c",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8385",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12212",
+          "dateityp": "application/pdf",
+          "sha256": "60d14847dea76940abb415ca482bc2e8eb613bb6db9333bef0330ae80880b362",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.4"
+      ],
+      "begruendung": "QUOTES MIG 1.3c gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "REQOTE-AHB",
+      "dokumentname": "REQOTE AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "REQOTE",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.2",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8425",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12261",
+          "dateityp": "application/pdf",
+          "sha256": "1e3e7104bd3190247de91b86a83f44ff081e21315109cf75373d3298da89ec09",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-06-29",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "REQOTE AHB 1.2 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Fassung Stand 2026-06-29 (konsolidiert_fehlerkorrektur), weil sie der neueste Stand dieser Version ist.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "UTILTS-AHB",
+      "dokumentname": "UTILTS AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "UTILTS",
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.1",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8403",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12230",
+          "dateityp": "application/pdf",
+          "sha256": "b0b8ae1bec4aac7a2ad61766d7da91d28f2b099e9279f16839ecc0bcadff0477",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "UTILTS AHB 1.1 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "COMDIS-AHB",
+      "dokumentname": "COMDIS AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "COMDIS",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.0h",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8125",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11920",
+          "dateityp": "application/pdf",
+          "sha256": "5c72326a5d70b4e330bb792550661d692ed92d6de21ed34240b88da837146dac",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "COMDIS AHB 1.0h gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "COMDIS-MIG",
+      "dokumentname": "COMDIS MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "COMDIS",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.0g",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8128",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11923",
+          "dateityp": "application/pdf",
+          "sha256": "674a8c42546231e55dba25b34413ddce1228738a7fe0a979dee475156b4e8037",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "COMDIS MIG 1.0g gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "REMADV-AHB",
+      "dokumentname": "REMADV AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "REMADV",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.0a",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8154",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11949",
+          "dateityp": "application/pdf",
+          "sha256": "a0e23c0a6af6d48c308511fa5c6be65b227e7cb98409c9bc341915de99f7cd64",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "REMADV AHB 1.0a gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "REMADV-MIG",
+      "dokumentname": "REMADV MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "REMADV",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "2.9e",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8157",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11952",
+          "dateityp": "application/pdf",
+          "sha256": "0076cc6de841f705f82463a0a96b546a4487c7a9cc78c87b877b295b0a72e964",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "REMADV MIG 2.9e gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "INVOIC-MIG",
+      "dokumentname": "INVOIC MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "INVOIC",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "2.8e",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7873",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11590",
+          "dateityp": "application/pdf",
+          "sha256": "ffb74414f77257582133a61f51b943274b5022b65f75efb8ef6cf8511efad8a9",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "INVOIC MIG 2.8e gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "REQOTE-MIG",
+      "dokumentname": "REQOTE MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "REQOTE",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.3c",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7906",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11623",
+          "dateityp": "application/pdf",
+          "sha256": "6447176dbec93c80a750de98c81cd0d6168c345119c39d8054ad85d66279c631",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "REQOTE MIG 1.3c gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte oder außerordentliche Fassung existiert.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "CONTRL-AHB",
+      "dokumentname": "CONTRL AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "CONTRL",
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_einzelnachweis",
+      "version": "1.0",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8193",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12003",
+          "dateityp": "application/pdf",
+          "sha256": "6ad48c23071e501e250e5f40d776a0fbf75c6ec825df150de3bdf428e7f3f551",
+          "fassungstyp": "ausserordentliche_veroeffentlichung",
+          "stand_reihe_datum": "2025-12-11",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.0a"
+      ],
+      "begruendung": "CONTRL AHB 1.0 gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Fassung Stand 2025-12-11 (ausserordentliche_veroeffentlichung), weil sie der neueste Stand dieser Version ist.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "UTILTS-MIG",
+      "dokumentname": "UTILTS MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "UTILTS",
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.1e",
+      "gueltig_ab": "2025-06-06",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 46,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7707",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11170",
+          "dateityp": "application/pdf",
+          "sha256": "b1a8bb10328c03c0ceca5c56bcc8d75d79bac3b58d1d639cc57cf12fda93929c",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2024-12-13",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "UTILTS MIG 1.1e gilt am 01.10.2026, weil Mitteilung 46 sie verbindlich ab 06.06.2025 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Fassung Stand 2024-12-13 (konsolidiert_fehlerkorrektur), weil sie der neueste Stand dieser Version ist.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "CONTRL-MIG",
+      "dokumentname": "CONTRL MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "CONTRL",
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_einzelnachweis",
+      "version": "2.0b",
+      "gueltig_ab": "2022-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 24,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8195",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12005",
+          "dateityp": "application/pdf",
+          "sha256": "1c795e927f8451238df05a0a7ba5ae2ce88b731a5a38ed358446c6760ce3abb9",
+          "fassungstyp": "ausserordentliche_veroeffentlichung",
+          "stand_reihe_datum": "2025-12-11",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "2.0c"
+      ],
+      "begruendung": "CONTRL MIG 2.0b gilt am 01.10.2026, weil Mitteilung 24 sie verbindlich ab 01.10.2022 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Fassung Stand 2025-12-11 (ausserordentliche_veroeffentlichung), weil sie der neueste Stand dieser Version ist.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "INSRPT-AHB",
+      "dokumentname": "INSRPT AHB",
+      "kategorie": "AHB",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "INSRPT",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.1g",
+      "gueltig_ab": "2022-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 24,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8197",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12007",
+          "dateityp": "application/pdf",
+          "sha256": "1f770b7bdfc3c7c2c5d2c9564df018f3ea66733a131a6e17754f389be986eee2",
+          "fassungstyp": "ausserordentliche_veroeffentlichung",
+          "stand_reihe_datum": "2025-12-11",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "INSRPT AHB 1.1g gilt am 01.10.2026, weil Mitteilung 24 sie verbindlich ab 01.10.2022 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Fassung Stand 2025-12-11 (ausserordentliche_veroeffentlichung), weil sie der neueste Stand dieser Version ist.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "INSRPT-MIG",
+      "dokumentname": "INSRPT MIG",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "INSRPT",
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "1.1a",
+      "gueltig_ab": "2022-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 24,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7319",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/9352",
+          "dateityp": "application/pdf",
+          "sha256": "c587cda239639e7d90aa70ef89f2d0f1a3e0b0464519e430f3a05d5bb2bf3534",
+          "fassungstyp": "ausserordentliche_veroeffentlichung",
+          "stand_reihe_datum": "2024-07-26",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "INSRPT MIG 1.1a gilt am 01.10.2026, weil Mitteilung 24 sie verbindlich ab 01.10.2022 veröffentlicht und Mitteilung 56 sie nicht ändert und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Fassung Stand 2024-07-26 (ausserordentliche_veroeffentlichung), weil sie der neueste Stand dieser Version ist.",
+      "provenienz_datei": "etappe2_edifact_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "SSQNOT",
+      "dokumentname": "SSQNOT (Nachrichtenbeschreibung, Mehr-/Mindermengenmeldung)",
+      "kategorie": "MIG",
+      "baum": "EDIFACT",
+      "nachrichtentyp": "SSQNOT",
+      "sparte": "Gas",
+      "sparte_belegart": "belegt_pid",
+      "version": "5.7",
+      "gueltig_ab": "2019-12-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": null,
+      "quelle_ausserhalb_mitteilungsreihe": "DVGW Service & Consult GmbH, Reihe 'GABi Gastransport' (Edig@s-Nachrichtentypen). Grundlage der Anwendung ist die Kooperationsvereinbarung Gas bzw. GABi Gas; die Anwendungsfall-Tabelle des Dokuments nennt als Prozessbeschreibung 'KoV'. Die BNetzA-Mitteilungsreihe zu den Datenformaten führt SSQNOT nicht.",
+      "aufnahmekriterium": [
+        "B",
+        "C"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "dvgw:SSQNOT_5.7_Stand_2021-10-31",
+          "bestandteil": null,
+          "quelle": "DVGW",
+          "url": "https://www.dvgw-sc.de/medien/Dokumente_Datenaustausch/Nachrichtentypen/SSQNOT_5.7_Stand_2021-10-31_Fehlerkorrektur.pdf",
+          "dateityp": "application/pdf",
+          "sha256": "3b499f4afa85ea6c14230a37835dcc0f28b115816203ab890ac318a556e8c60a",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2021-10-31",
+          "mitteilungsbezug": "keine_mitteilungsreihe"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "SSQNOT 5.7 in der konsolidierten Lesefassung mit Fehlerkorrekturen Stand 31.10.2021 gilt am 01.10.2026, weil die DVGW-Übersicht sie als gültig ab 01.12.2019 führt, keine Nachfolgeversion existiert und die am Stichtag gültige PID 4.0 die Prüfidentifikatoren 70095/70096 weiterhin ausweist.",
+      "provenienz_datei": "etappe3_gas_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "ALLGEMEINE-FESTLEGUNGEN",
+      "dokumentname": "Allgemeine Festlegungen",
+      "kategorie": "Sonstiges",
+      "baum": "Sonstiges",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "belegt_referenzen",
+      "version": "6.1d",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "C"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8319",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12145",
+          "dateityp": "application/pdf",
+          "sha256": "a9aa7fd0806dfdf52800302e9db564b5c145e6eaf930e68045f6c6fb16b7125b",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "6.1e"
+      ],
+      "begruendung": "Allgemeine Festlegungen 6.1d gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte Fassung existiert.",
+      "provenienz_datei": "etappe4_querschnitt_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "PID",
+      "dokumentname": "Anwendungsübersicht der Prüfidentifikatoren",
+      "kategorie": "PID",
+      "baum": "PID",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "belegt_dokument_selbst",
+      "version": "4.0",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "B"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8461",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12308",
+          "dateityp": "application/pdf",
+          "sha256": "599bf735792208effbe141f77a72bb8f8ff91d6be6227f7efcb9fb41256b6290",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-08-12",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "4.1"
+      ],
+      "begruendung": "Anwendungsübersicht der Prüfidentifikatoren 4.0 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2026-08-12.",
+      "provenienz_datei": "etappe4_querschnitt_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "CL-KONFIGURATIONEN",
+      "dokumentname": "Codeliste der Konfigurationen",
+      "kategorie": "Codeliste",
+      "baum": "Codelisten",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "belegt_referenzen",
+      "version": "1.4",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "C"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8332",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12158",
+          "dateityp": "application/pdf",
+          "sha256": "2b20b9cb8c2e68ef8f95e126356936d02609adb36f86856a07d319da40a91edc",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.4a"
+      ],
+      "begruendung": "Codeliste der Konfigurationen 1.4 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte Fassung existiert.",
+      "provenienz_datei": "etappe4_querschnitt_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "CL-VERWENDUNGSZWECKE",
+      "dokumentname": "Codeliste der Verwendungszwecke",
+      "kategorie": "Codeliste",
+      "baum": "Codelisten",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "indirekt_referenzen",
+      "version": "1.0",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "C"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8417",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12253",
+          "dateityp": "application/pdf",
+          "sha256": "1571a878c66a514a6e2cf369724d01daf8e9979fe1e5f57ac7cf1e1d167dae0d",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-06-29",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.0a"
+      ],
+      "begruendung": "Codeliste der Verwendungszwecke 1.0 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2026-06-29.",
+      "provenienz_datei": "etappe4_querschnitt_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "CL-OBIS",
+      "dokumentname": "Codeliste der OBIS-Kennzahlen und Medien",
+      "kategorie": "Codeliste",
+      "baum": "Codelisten",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "belegt_referenzen",
+      "version": "2.5c",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "C"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8123",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11918",
+          "dateityp": "application/pdf",
+          "sha256": "bc43ff890fde3d02203e72b67e10bfeb966c53791d85246067c54c45a67c8aef",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Codeliste der OBIS-Kennzahlen und Medien 2.5c gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung (PDF), weil keine konsolidierte Fassung existiert.",
+      "provenienz_datei": "etappe4_querschnitt_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "CL-ARTIKELNUMMERN",
+      "dokumentname": "Codeliste der Artikelnummern und Artikel-ID",
+      "kategorie": "Codeliste",
+      "baum": "Codelisten",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "indirekt_referenzen",
+      "version": "5.6",
+      "gueltig_ab": "2025-09-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "C"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8113",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11908",
+          "dateityp": "application/pdf",
+          "sha256": "65595b40fb6f31543b4be838b60e819bd98d983bddaf54376c85639e13b28948",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2025-09-30",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "5.7"
+      ],
+      "begruendung": "Codeliste der Artikelnummern und Artikel-ID 5.6 gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.09.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2025-09-30.",
+      "provenienz_datei": "etappe4_querschnitt_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "CL-ZEITREIHENTYPEN",
+      "dokumentname": "Codeliste der Zeitreihentypen",
+      "kategorie": "Codeliste",
+      "baum": "Codelisten",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_referenzen",
+      "version": "1.1d",
+      "gueltig_ab": "2021-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 19,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "C"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7356",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/8854",
+          "dateityp": "application/pdf",
+          "sha256": "c4c5a21911ca3dbf86e255b0dab277eeb6ab98f12e6041d46fcdb1c814a88483",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2021-07-16",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Codeliste der Zeitreihentypen 1.1d gilt am 01.10.2026, weil Mitteilung 19 sie verbindlich ab 01.10.2021 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2021-07-16.",
+      "provenienz_datei": "etappe4_querschnitt_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "CL-LAENDERCODES",
+      "dokumentname": "Codeliste der europäischen Ländercodes",
+      "kategorie": "Codeliste",
+      "baum": "Codelisten",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "belegt_referenzen",
+      "version": "1.0",
+      "gueltig_ab": "2017-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 58,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "C"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7342",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/8856",
+          "dateityp": "application/pdf",
+          "sha256": "eaf6e278077ee5b5dbc866dc5adff4f184d5bc99f43994086b11becdb69d388a",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2023-03-30",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Codeliste der europäischen Ländercodes 1.0 gilt am 01.10.2026, weil Mitteilung 58 sie verbindlich ab 01.10.2017 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2023-03-30.",
+      "provenienz_datei": "etappe4_querschnitt_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "CL-LOKATIONSBUENDEL",
+      "dokumentname": "Codeliste der Lokationsbündelstrukturen",
+      "kategorie": "Codeliste",
+      "baum": "Codelisten",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_referenzen",
+      "version": "1.0",
+      "gueltig_ab": "2023-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 33,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "B",
+        "C"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7713",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11418",
+          "dateityp": "application/pdf",
+          "sha256": "0ae47f79bb719c48920fed9019657eec84659a7f7edbc11805444499dc11ac96",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2024-12-13",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Codeliste der Lokationsbündelstrukturen 1.0 gilt am 01.10.2026, weil Mitteilung 33 sie verbindlich ab 01.10.2023 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 2024-12-13.",
+      "provenienz_datei": "etappe4_querschnitt_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "CL-SLP-TUM",
+      "dokumentname": "Codeliste der Standardlastprofile nach TU München-Verfahren",
+      "kategorie": "Codeliste",
+      "baum": "Codelisten",
+      "nachrichtentyp": null,
+      "sparte": "Gas",
+      "sparte_belegart": "belegt_referenzen",
+      "version": "1.1",
+      "gueltig_ab": "2015-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": null,
+      "quelle_ausserhalb_mitteilungsreihe": "Ausschließlich auf BDEW-MaKo veröffentlicht; in keiner der 95 Mitteilungen der BK6/BK7-Reihe genannt. Aufnahme über Kriterium C (Referenz aus UTILMD Gas).",
+      "aufnahmekriterium": [
+        "C*"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7352",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/9089",
+          "dateityp": "application/pdf",
+          "sha256": "c57fcad76b92285810a4f6ac2bb1d901fd0a318270edf00263dfd920f0edf9c0",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2015-05-22",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Codeliste der Standardlastprofile nach TU München-Verfahren 1.1 gilt am 01.10.2026, weil BDEW sie seit 2015-10-01 ohne Endedatum führt und die maßgeblichen UTILMD-Gas-Dokumente sie referenzieren; maßgeblich ist die konsolidierte Fassung Stand 2015-05-22.",
+      "provenienz_datei": "etappe4_querschnitt_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "EBD",
+      "dokumentname": "Entscheidungsbaum-Diagramme und Codelisten für die Antwortnachrichten",
+      "kategorie": "EBD",
+      "baum": "EBD",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "belegt_pid",
+      "version": "4.3",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "C"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8408",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12242",
+          "dateityp": "application/pdf",
+          "sha256": "bf589a7a3a083f6f4c5283ec768e38be0b9c99a7d2083bc19c829fdaaf048730",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-06-23",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "4.4"
+      ],
+      "begruendung": "EBD und Codelisten 4.3 gilt ab 01.10.2026, weil Mitteilung 56 das Dokument verbindlich ab diesem Tag veröffentlicht und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Lesefassung mit Fehlerkorrekturen Stand 23.06.2026 als neuester Stand dieser Version.",
+      "provenienz_datei": "etappe5_ebd_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-ACKNOWLEDGEMENT-AWT",
+      "dokumentname": "AcknowledgementDocument AWT",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0g",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8166",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11962",
+          "dateityp": "application/pdf",
+          "sha256": "ac4f54d2ff8e3b7d032b5251cacbcc955eac3f72cec3d11061fc96b0c497c243",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "AcknowledgementDocument AWT 1.0g gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-ACKNOWLEDGEMENT-FB",
+      "dokumentname": "AcknowledgementDocument FB",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0g",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8180",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11978",
+          "dateityp": "application/pdf",
+          "sha256": "eb203a46e03ceedcad45210d22b28b10c85ca7f21a8fd1d6fd2f93d1c0ee5ad9",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "AcknowledgementDocument FB 1.0g gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-ACKNOWLEDGEMENT-XSD",
+      "dokumentname": "AcknowledgementDocument XSD",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0g",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8171",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11967",
+          "dateityp": "XSD",
+          "sha256": "8ed085d90dcf16c4dce3e8f451a838975da64a8b0a7b7ff62c0ef0074b7d7c51",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "AcknowledgementDocument XSD 1.0g gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-ACTIVATION-AWT",
+      "dokumentname": "ActivationDocument AWT",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1f",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8168",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11964",
+          "dateityp": "application/pdf",
+          "sha256": "a9aaf8b4926bdd3ecad422d5b86021e5c5b8e8d39ff9040355090aff22675bbc",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.1g"
+      ],
+      "begruendung": "ActivationDocument AWT 1.1f gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-ACTIVATION-FB",
+      "dokumentname": "ActivationDocument FB",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1f",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8267",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12087",
+          "dateityp": "application/pdf",
+          "sha256": "30c7253bc9ba9f0de79a59a13e5fd4aa56f73cbd56b4d35fc0c5656fe689c41b",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-02-19",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "ActivationDocument FB 1.1f gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 19.02.2026.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-ACTIVATION-XSD",
+      "dokumentname": "ActivationDocument XSD",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1f",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8266",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12086",
+          "dateityp": "XSD",
+          "sha256": "8da378e73c276c588cf0afefe2f563784476db960bd307d491547cc2bda5b7a0",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-02-19",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "ActivationDocument XSD 1.1f gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 19.02.2026.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-KOSTENBLATT-AWT",
+      "dokumentname": "Kostenblatt AWT",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0d",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8087",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11881",
+          "dateityp": "application/pdf",
+          "sha256": "aefd08d37b329941d44fa35a8a47139059d562b33b08916eaa96d081816c6b18",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2025-09-05",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Kostenblatt AWT 1.0d gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 05.09.2025.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-KOSTENBLATT-FB",
+      "dokumentname": "Kostenblatt FB",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0d",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7959",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11679",
+          "dateityp": "application/pdf",
+          "sha256": "fcc1555f40024ec950d4b85c4caa48ba04d28fe3db5ca283abeb3c1e437eb38a",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2025-04-16",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Kostenblatt FB 1.0d gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 16.04.2025.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-KOSTENBLATT-XSD",
+      "dokumentname": "Kostenblatt XSD",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0d",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7960",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11680",
+          "dateityp": "XSD",
+          "sha256": "e577eff9f0af927e6c70b5d59c5ed5df17bd60d5bfce68e4efeb98b35ef2c198",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2025-04-16",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Kostenblatt XSD 1.0d gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 16.04.2025.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-NETWORKCONSTRAINT-AWT",
+      "dokumentname": "NetworkConstraintDocument AWT",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1b",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7923",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11641",
+          "dateityp": "application/pdf",
+          "sha256": "5720f8ff78a8af7e5e23b7ecb88bcb79b223b8f24aa448406e859307d7da1860",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "NetworkConstraintDocument AWT 1.1b gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-NETWORKCONSTRAINT-FB",
+      "dokumentname": "NetworkConstraintDocument FB",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1b",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7921",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11639",
+          "dateityp": "application/pdf",
+          "sha256": "11e49c8b7142de0ff7052a2b24b922da89d69e7cf2c6e6150bfba65447308b2a",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "NetworkConstraintDocument FB 1.1b gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-NETWORKCONSTRAINT-XSD",
+      "dokumentname": "NetworkConstraintDocument XSD",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1b",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7934",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11652",
+          "dateityp": "XSD",
+          "sha256": "59f6b8f126d19c6074794519ca8e8b616d8072e036f267be9cfb3357923d287d",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "NetworkConstraintDocument XSD 1.1b gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-PLANNEDRESOURCESCHEDULE-AWT",
+      "dokumentname": "PlannedResourceScheduleDocument AWT",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0f",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7935",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11653",
+          "dateityp": "application/pdf",
+          "sha256": "dbff4b7c6d5c2826145d3084c74d24e575b18b2953537e532b5d301ba6b24149",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "PlannedResourceScheduleDocument AWT 1.0f gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-PLANNEDRESOURCESCHEDULE-FB",
+      "dokumentname": "PlannedResourceScheduleDocument FB",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0f",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8272",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12092",
+          "dateityp": "application/pdf",
+          "sha256": "39ff864976b786c7f185deae3fd87e70e8b5eb60e4515cdc2963389ab7da2950",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-02-19",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "PlannedResourceScheduleDocument FB 1.0f gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 19.02.2026.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-PLANNEDRESOURCESCHEDULE-XSD",
+      "dokumentname": "PlannedResourceScheduleDocument XSD",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0f",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8273",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12093",
+          "dateityp": "XSD",
+          "sha256": "759a59a4a982e54d5fd14b838131069d07d42f82526ea5277c991089e516cea0",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-02-19",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "PlannedResourceScheduleDocument XSD 1.0f gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 19.02.2026.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-STAMMDATEN-AWT",
+      "dokumentname": "Stammdaten AWT",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.4b",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7939",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11657",
+          "dateityp": "application/pdf",
+          "sha256": "daa54b3627d7d3a6c71fb772961c0c2833505709a6d71ba87228ae3bdfc59d8c",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Stammdaten AWT 1.4b gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-STAMMDATEN-FB",
+      "dokumentname": "Stammdaten FB",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.4b",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8274",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12094",
+          "dateityp": "application/pdf",
+          "sha256": "13577d24c50088cc367a5557c3482d870f618a3775fb1648fd7364d9e72a8471",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-02-19",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Stammdaten FB 1.4b gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 19.02.2026.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-STAMMDATEN-XSD",
+      "dokumentname": "Stammdaten XSD",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.4b",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8275",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12095",
+          "dateityp": "XSD",
+          "sha256": "f721c883a512a85a1f272093e27d6616369f777de912067f2fff5da3b8331483",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-02-19",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Stammdaten XSD 1.4b gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 19.02.2026.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-STATUSREQUEST-AWT",
+      "dokumentname": "StatusRequest_MarketDocument AWT",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7920",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11638",
+          "dateityp": "application/pdf",
+          "sha256": "c410c7ba272a8a3a7d68ec992b148892962f5b41ea42b70303dce05763f5b8d6",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "StatusRequest_MarketDocument AWT 1.1 gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-STATUSREQUEST-FB",
+      "dokumentname": "StatusRequest_MarketDocument FB",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7918",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11636",
+          "dateityp": "application/pdf",
+          "sha256": "f8e0f1e888d90b8377de3c5cadb1b45a4ab1af5084971a94b6c8c6b1cf9b87a0",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "StatusRequest_MarketDocument FB 1.1 gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-STATUSREQUEST-XSD",
+      "dokumentname": "StatusRequest_MarketDocument XSD",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7943",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11661",
+          "dateityp": "XSD",
+          "sha256": "d99f779007b86c3fc2a52b0956cd7029f9b15cd7e48b637335d139d7f995e2ce",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "StatusRequest_MarketDocument XSD 1.1 gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-UNAVAILABILITY-AWT",
+      "dokumentname": "Unavailability_MarketDocument AWT",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1b",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7917",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11635",
+          "dateityp": "application/pdf",
+          "sha256": "00a3f0a69cb960b6099bda1bc9e475012a52ef46f2897cb0192ad3031e3fcde9",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Unavailability_MarketDocument AWT 1.1b gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-UNAVAILABILITY-FB",
+      "dokumentname": "Unavailability_MarketDocument FB",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1b",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7965",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11685",
+          "dateityp": "application/pdf",
+          "sha256": "fdc1a9611fcbb1da20a41a92dfe76831263aa9e4bb8dccb3ea5203bc6acaade6",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2025-04-16",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Unavailability_MarketDocument FB 1.1b gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 16.04.2025.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-UNAVAILABILITY-XSD",
+      "dokumentname": "Unavailability_MarketDocument XSD",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.1b",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7966",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11686",
+          "dateityp": "XSD",
+          "sha256": "dc40e628efd42f03d0c3dc33c22dac3c73aba7d46f27bdfd26d83abae8ceb589",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2025-04-16",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Unavailability_MarketDocument XSD 1.1b gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 16.04.2025.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-KASKADE-AWT",
+      "dokumentname": "Kaskade AWT",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8173",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11970",
+          "dateityp": "application/pdf",
+          "sha256": "0876a15f9c2ecca5a4a2a68a0a2b95bf820dd066f661a15585d38ddb508e9af7",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Kaskade AWT 1.0 gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-KASKADE-FB",
+      "dokumentname": "Kaskade FB",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8270",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12090",
+          "dateityp": "application/pdf",
+          "sha256": "d2c177e6ed65246b9457eba09c5f27a1a9f10cfba8a464d7251b751bde0d60df",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-02-19",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Kaskade FB 1.0 gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 19.02.2026.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-KASKADE-XSD",
+      "dokumentname": "Kaskade XSD",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8271",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12091",
+          "dateityp": "XSD",
+          "sha256": "49f06021679f0bbe735dd9dac163d2d915cd6fd18273ce6cc7f3bd408e3149b8",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2026-02-19",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Kaskade XSD 1.0 gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 19.02.2026.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RD-AENDERUNGSHISTORIE",
+      "dokumentname": "Änderungshistorie zu den XML-Datenformaten für den Redispatch 2.0",
+      "kategorie": "XML",
+      "baum": "XML",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "ohne Versionsnummer",
+      "gueltig_ab": "2026-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 54,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8268",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12088",
+          "dateityp": "application/pdf",
+          "sha256": "a68097bfd0e3ec223ffd115f0eee2ee320cd6d760e6fb576fab21da0ce09b074",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "Konsultationsfassung 31.07.2026"
+      ],
+      "begruendung": "Änderungshistorie zu den XML-Datenformaten für den Redispatch 2.0 ohne Versionsnummer gilt am 01.10.2026, weil Mitteilung 54 sie verbindlich ab 01.04.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die jüngste Veröffentlichung vom 19.02.2026.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RZUE",
+      "dokumentname": "Regelungen zum Übertragungsweg",
+      "kategorie": "Übertragungsweg",
+      "baum": "Übertragungsweg",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_spartenangabe",
+      "version": "1.10",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8317",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12143",
+          "dateityp": "application/pdf",
+          "sha256": "6d980f76add25b06df69a89a2def099e9f8ed546ad93b745df7ea5e627fb91c5",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.11"
+      ],
+      "begruendung": "Regelungen zum Übertragungsweg 1.10 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "AS4-PROFIL",
+      "dokumentname": "AS4-Profil",
+      "kategorie": "AS4",
+      "baum": "AS4",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_spartenangabe",
+      "version": "1.2",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8316",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12142",
+          "dateityp": "application/pdf",
+          "sha256": "979a4d0f6a0666e1d1198433eff8047fd139806313a43a5643ab8b10b71542c1",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "AS4-Profil 1.2 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RZUE-AS4",
+      "dokumentname": "Regelungen zum Übertragungsweg für AS4",
+      "kategorie": "AS4",
+      "baum": "AS4",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_spartenangabe",
+      "version": "2.6",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8318",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12144",
+          "dateityp": "application/pdf",
+          "sha256": "507d8b6e1879434ec33d44cdb04e2823d41039001803ca8d43328d83879c4d09",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Regelungen zum Übertragungsweg für AS4 2.6 gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "API-GUIDELINE",
+      "dokumentname": "API-Guideline",
+      "kategorie": "API",
+      "baum": "API",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_spartenangabe",
+      "version": "1.0b",
+      "gueltig_ab": "2026-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich",
+      "mitteilung": 56,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8329",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/12155",
+          "dateityp": "application/pdf",
+          "sha256": "bb233b0262c9bf2aea4876ea3b27fac1c66de791d661408f9cbb97661d945f55",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.0c"
+      ],
+      "begruendung": "API-Guideline 1.0b gilt am 01.10.2026, weil Mitteilung 56 sie verbindlich ab 01.10.2026 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RZV",
+      "dokumentname": "Regelungen zum Verzeichnisdienst",
+      "kategorie": "Übertragungsweg",
+      "baum": "Übertragungsweg",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_spartenangabe",
+      "version": "1.1",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:7846",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11563",
+          "dateityp": "application/pdf",
+          "sha256": "b47542b633deb672a728347f36b215308ed01f73abfa0ed008ff3f5dfc72c42e",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "anlage_der_mitteilung_bytegleich"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Regelungen zum Verzeichnisdienst 1.1 gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die Basisfassung.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "RZUE-API",
+      "dokumentname": "Regelungen zum Übertragungsweg für API-Webdienste",
+      "kategorie": "Übertragungsweg",
+      "baum": "Übertragungsweg",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_spartenangabe",
+      "version": "1.2",
+      "gueltig_ab": "2025-10-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 51,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "bdew:8053",
+          "bestandteil": null,
+          "quelle": "BDEW-MaKo",
+          "url": "https://www.bdew-mako.de/api/downloadFile/11778",
+          "dateityp": "application/pdf",
+          "sha256": "0c64c7560f88422b604cd47f9d59da0749c8abd6e8c9409af48817f207a22a1a",
+          "fassungstyp": "konsolidiert_fehlerkorrektur",
+          "stand_reihe_datum": "2025-07-18",
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "1.3"
+      ],
+      "begruendung": "Regelungen zum Übertragungsweg für API-Webdienste 1.2 gilt am 01.10.2026, weil Mitteilung 51 sie verbindlich ab 01.10.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die konsolidierte Fassung Stand 18.07.2025.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "API-STEUERUNGSHANDLUNGEN",
+      "dokumentname": "API-Webdienste zur prozessualen Abwicklung von Steuerungshandlungen in Verbindung mit intelligenten Messsystemen (iMS) - Universalbestellprozess",
+      "kategorie": "API",
+      "baum": "API",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0.0",
+      "gueltig_ab": "2024-04-01",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 36,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "B"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "github:EDI-Energy/api-electricity@1.0.0/api/controlMeasures/controlMeasuresV1.yaml",
+          "bestandteil": null,
+          "quelle": "GitHub-EDI@Energy",
+          "url": "https://github.com/EDI-Energy/api-electricity/blob/1.0.0/api/controlMeasures/controlMeasuresV1.yaml",
+          "dateityp": "application/yaml (OpenAPI)",
+          "sha256": "f95feab0eaf74e9c9d37abcf73cea28c5b9bcaec46caa7c7929bce017fa77d46",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "2.0.0 (Major-Version V2)"
+      ],
+      "begruendung": "API-Webdienste zur prozessualen Abwicklung von Steuerungshandlungen in Verbindung mit intelligenten Messsystemen (iMS) - Universalbestellprozess 1.0.0 gilt am 01.10.2026, weil Mitteilung 36 sie verbindlich ab 01.04.2024 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die OpenAPI-Datei des GitHub-Releases 1.0.0.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "API-MALO-ID",
+      "dokumentname": "API-Webdienste zur Ermittlung der MaLo-ID der Marktlokation",
+      "kategorie": "API",
+      "baum": "API",
+      "nachrichtentyp": null,
+      "sparte": "Strom",
+      "sparte_belegart": "belegt_herkunft",
+      "version": "1.0.0",
+      "gueltig_ab": "2025-04-04",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 43,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "B"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "github:EDI-Energy/api-electricity@1.0.0/api/identificationId/maloIdentV1.yaml",
+          "bestandteil": null,
+          "quelle": "GitHub-EDI@Energy",
+          "url": "https://github.com/EDI-Energy/api-electricity/blob/1.0.0/api/identificationId/maloIdentV1.yaml",
+          "dateityp": "application/yaml (OpenAPI)",
+          "sha256": "077a53e42b8086b908ffc8b77c418961398e53ed515536b920713efe07ffc236",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [
+        "2.0.0 (Major-Version V2)"
+      ],
+      "begruendung": "API-Webdienste zur Ermittlung der MaLo-ID der Marktlokation 1.0.0 gilt am 01.10.2026, weil Mitteilung 43 sie verbindlich ab 04.04.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die OpenAPI-Datei des GitHub-Releases 1.0.0.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    },
+    {
+      "dokument_schluessel": "API-VERZEICHNISDIENST",
+      "dokumentname": "Verzeichnisdienst API",
+      "kategorie": "API",
+      "baum": "API",
+      "nachrichtentyp": null,
+      "sparte": "beide",
+      "sparte_belegart": "angenommen_ohne_spartenangabe",
+      "version": "1.0.0",
+      "gueltig_ab": "2025-04-04",
+      "gueltig_bis": null,
+      "dokumentstatus": "verbindlich_fortgeltend",
+      "mitteilung": 46,
+      "quelle_ausserhalb_mitteilungsreihe": null,
+      "aufnahmekriterium": [
+        "A",
+        "C*"
+      ],
+      "massgebliche_fassungen": [
+        {
+          "fassung_id": "github:EDI-Energy/api-directory-service@1.0.0/api/directoryServiceV1.yaml",
+          "bestandteil": "Web-API (OpenAPI)",
+          "quelle": "GitHub-EDI@Energy",
+          "url": "https://github.com/EDI-Energy/api-directory-service/blob/1.0.0/api/directoryServiceV1.yaml",
+          "dateityp": "application/yaml (OpenAPI)",
+          "sha256": "9fa66da1abbf29663c11d55fb2de6b9d0f123b03cbb5dc5f5cff5a124c58231b",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        },
+        {
+          "fassung_id": "github:EDI-Energy/api-directory-service@1.0.0/api/webSocketV1.yaml",
+          "bestandteil": "WebSocket-API (AsyncAPI)",
+          "quelle": "GitHub-EDI@Energy",
+          "url": "https://github.com/EDI-Energy/api-directory-service/blob/1.0.0/api/webSocketV1.yaml",
+          "dateityp": "application/yaml (OpenAPI)",
+          "sha256": "fa2c1a010818cfcaf3da654bb8480ce70f7be6f368dbb46a2625435fa0a2fe1a",
+          "fassungstyp": "basis",
+          "stand_reihe_datum": null,
+          "mitteilungsbezug": "kein_mitteilungsbezug"
+        }
+      ],
+      "nachfolger_in_konsultation": [],
+      "begruendung": "Verzeichnisdienst API 1.0.0 gilt am 01.10.2026, weil Mitteilung 46 sie verbindlich ab 04.04.2025 veröffentlicht hat und keine verbindliche Nachfolgeversion erschienen ist; maßgeblich ist die OpenAPI-Datei des GitHub-Releases 1.0.0.",
+      "provenienz_datei": "etappe6_uebertragungsweg_api_xml_provenienz.json"
+    }
+  ]
+}

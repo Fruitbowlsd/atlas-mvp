@@ -15,7 +15,7 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 | 4 | PID, Codelisten, Allgemeine Festlegungen | **abgeschlossen** | [`etappe4_querschnitt.md`](etappe4_querschnitt.md), [`etappe4_querschnitt_provenienz.json`](etappe4_querschnitt_provenienz.json) |
 | 5 | Entscheidungsbaum-Diagramme | **abgeschlossen** | [`etappe5_ebd.md`](etappe5_ebd.md), [`etappe5_ebd_provenienz.json`](etappe5_ebd_provenienz.json) |
 | 6 | Übertragungsweg / AS4 / API / XML (Redispatch 2.0) | **abgeschlossen**, Schema v0.8/v0.9 und R-6a–c bestätigt; O-19(a) gelöst, O-20 offen | [`etappe6_uebertragungsweg_api_xml.md`](etappe6_uebertragungsweg_api_xml.md), [`etappe6_uebertragungsweg_api_xml_provenienz.json`](etappe6_uebertragungsweg_api_xml_provenienz.json) |
-| 7 | Konsolidierung, Widersprüche, Regulatory-State-Objekt, Vorschlag `RegulatoryVersion` | offen | — |
+| 7 | Konsolidierung, Widersprüche, Regulatory-State-Objekt, Verhältnis zu `RegulatoryVersion` | **abgeschlossen**; Sparten-Korrektur und O-19(b) zur Bestätigung | [`etappe7_konsolidierung.md`](etappe7_konsolidierung.md), [`etappe7_regulatory_state.json`](etappe7_regulatory_state.json) |
 | 8 | Übergabebericht | offen | — |
 
 ## Bestätigte Grundlagen
@@ -26,7 +26,7 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 
 ## Kernbefunde für den Übergabebericht (Etappe 8)
 
-* **K-1 — Die amtliche Quelle kennt die maßgebliche Fassung oft nicht.** Über Etappe 1 und 2 (36 Dokumente, 209 Fassungen): 61 Fassungen sind bytegleiche Anlagen einer BNetzA-Mitteilung, 32 Konsultationsanlagen, **116 haben keinen Mitteilungsbezug — darunter 11 der 36 maßgeblichen Fassungen**. Wird in Etappe 8 hervorgehoben, nicht nur in Etappe 7 belegt. **Etappe 6 verschärft den Befund:** 18 der 37 maßgeblichen Fassungen haben keinen Mitteilungsbezug (14 konsolidierte Stände, die Änderungshistorie vom 19.02.2026, 3 GitHub-Releases).
+* **K-1 — Die amtliche Quelle kennt die maßgebliche Fassung oft nicht.** Über Etappe 1 und 2 (36 Dokumente, 209 Fassungen): 61 Fassungen sind bytegleiche Anlagen einer BNetzA-Mitteilung, 32 Konsultationsanlagen, **116 haben keinen Mitteilungsbezug — darunter 11 der 36 maßgeblichen Fassungen**. Wird in Etappe 8 hervorgehoben, nicht nur in Etappe 7 belegt. **Endstand Etappe 7: Bei 38 von 85 Dokumenten (45 %) hat die maßgebliche Fassung keinen Mitteilungsbezug** — darunter UTILMD, PID und EBD ausnahmslos.
 
 * **K-2 — Für Gas reichen BNetzA und BDEW nicht.** SSQNOT (Prüfidentifikatoren 70095/70096, in PID 4.0 und INVOIC referenziert) wird von der DVGW Service & Consult veröffentlicht und steht in keiner der 95 Mitteilungen und in keinem der 1.752 BDEW-Einträge.
 

@@ -16,7 +16,7 @@
         "kategorie": "Sonstiges",
         "nachrichtentyp": null,
         "sparte": "beide",
-        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "sparte_beleg": "Referenzsuche Etappe 7 (18.09.2026) in allen maßgeblichen Fassungen der Etappen 1–5: Fundstellen nach Sparte des referenzierenden Dokuments {'Strom': 14, 'Gas': 14, 'beide': 31}; u. a. UTILMD-MIG-GAS (13), UTILMD-MIG-STROM (12), APERAK-AHB (5), ORDERS-MIG (3), INVOIC-MIG (3), INVOIC-AHB (2). Fundstellen in Strom- und in Gas-spezifischen Dokumenten: 'beide' belegt.",
         "bdew_topic_id": 144,
         "aufnahmekriterium": [
           {
@@ -372,7 +372,7 @@
         "kategorie": "PID",
         "nachrichtentyp": null,
         "sparte": "beide",
-        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "sparte_beleg": "Belegt aus dem Dokument selbst: die Anwendungsübersicht führt je Zeile die Spalten 'Sparte Strom' und 'Sparte Gas' (Stand 12.08.2026: 1.352 Zeilen, beide Sparten besetzt).",
         "bdew_topic_id": 146,
         "aufnahmekriterium": [
           {
@@ -958,7 +958,7 @@
         "kategorie": "Codeliste",
         "nachrichtentyp": null,
         "sparte": "beide",
-        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "sparte_beleg": "Referenzsuche Etappe 7 (18.09.2026) in allen maßgeblichen Fassungen der Etappen 1–5: Fundstellen nach Sparte des referenzierenden Dokuments {'Strom': 81, 'Gas': 17, 'beide': 127}; u. a. UTILMD-AHB-STROM (74), ORDERS-AHB (49), REQOTE-AHB (26), UTILMD-AHB-GAS (17), QUOTES-AHB (15), ORDERS-MIG (13). Fundstellen in Strom- und in Gas-spezifischen Dokumenten: 'beide' belegt.",
         "bdew_topic_id": 134,
         "aufnahmekriterium": [
           {
@@ -1318,7 +1318,7 @@
         "kategorie": "Codeliste",
         "nachrichtentyp": null,
         "sparte": "beide",
-        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "sparte_beleg": "Referenzsuche Etappe 7 (18.09.2026) in allen maßgeblichen Fassungen der Etappen 1–5: Fundstellen nach Sparte des referenzierenden Dokuments {'Strom': 120, 'beide': 44}; u. a. UTILMD-AHB-STROM (92), UTILMD-MIG-STROM (28), ORDERS-AHB (28), ORDERS-MIG (16). 'beide' nur indirekt gestützt: keine Fundstelle in einem Gas-spezifischen Dokument; Gas-Bezug nur über spartenübergreifende Dokumente.",
         "bdew_topic_id": 249,
         "aufnahmekriterium": [
           {
@@ -1765,7 +1765,7 @@
         "kategorie": "Codeliste",
         "nachrichtentyp": null,
         "sparte": "beide",
-        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "sparte_beleg": "Referenzsuche Etappe 7 (18.09.2026) in allen maßgeblichen Fassungen der Etappen 1–5: Fundstellen nach Sparte des referenzierenden Dokuments {'Strom': 22, 'Gas': 16, 'beide': 30}; u. a. MSCONS-AHB (28), UTILMD-AHB-STROM (16), UTILMD-AHB-GAS (14), UTILMD-MIG-STROM (6), UTILMD-MIG-GAS (2), MSCONS-MIG (1). Fundstellen in Strom- und in Gas-spezifischen Dokumenten: 'beide' belegt.",
         "bdew_topic_id": 137,
         "aufnahmekriterium": [
           {
@@ -2062,7 +2062,7 @@
         "kategorie": "Codeliste",
         "nachrichtentyp": null,
         "sparte": "beide",
-        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "sparte_beleg": "Referenzsuche Etappe 7 (18.09.2026) in allen maßgeblichen Fassungen der Etappen 1–5: Fundstellen nach Sparte des referenzierenden Dokuments {'beide': 28}; u. a. PRICAT-AHB (11), INVOIC-AHB (10), QUOTES-AHB (3), APERAK-AHB (2), PRICAT-MIG (2). 'beide' nur indirekt gestützt: keine Fundstelle in einem Gas-spezifischen Dokument; Gas-Bezug nur über spartenübergreifende Dokumente.",
         "bdew_topic_id": 132,
         "aufnahmekriterium": [
           {
@@ -2477,8 +2477,8 @@
         "dokumenttyp": "Codeliste",
         "kategorie": "Codeliste",
         "nachrichtentyp": null,
-        "sparte": "beide",
-        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "sparte": "Strom",
+        "sparte_beleg": "Referenzsuche Etappe 7 (18.09.2026) in allen maßgeblichen Fassungen der Etappen 1–5: Fundstellen nach Sparte des referenzierenden Dokuments {'Strom': 9}; u. a. UTILMD-MIG-STROM (9). Referenziert ausschließlich aus Strom-Dokumenten. Korrektur Etappe 7: bisher 'beide' mit Pauschalbegründung, durch die Referenzen nicht gedeckt.",
         "bdew_topic_id": 141,
         "aufnahmekriterium": [
           {
@@ -2784,6 +2784,12 @@
               "seite": 1
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Sparte korrigiert in Etappe 7: beide → Strom. Grundlage: Referenzsuche über alle maßgeblichen Fassungen der Etappen 1–5 (siehe sparte_beleg). Die Etappe-4-Begründung 'Referenzen aus Dokumenten beider Sparten' traf auf dieses Dokument nicht zu.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": []
         }
       ],
       "analyse": {
@@ -2804,7 +2810,7 @@
         "kategorie": "Codeliste",
         "nachrichtentyp": null,
         "sparte": "beide",
-        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "sparte_beleg": "Referenzsuche Etappe 7 (18.09.2026) in allen maßgeblichen Fassungen der Etappen 1–5: Fundstellen nach Sparte des referenzierenden Dokuments {'Strom': 25, 'Gas': 24, 'beide': 49}; u. a. PARTIN-AHB (48), UTILMD-AHB-STROM (24), UTILMD-AHB-GAS (24), UTILMD-MIG-STROM (1), ORDRSP-AHB (1). Fundstellen in Strom- und in Gas-spezifischen Dokumenten: 'beide' belegt.",
         "bdew_topic_id": 133,
         "aufnahmekriterium": [
           {
@@ -3123,8 +3129,8 @@
         "dokumenttyp": "Codeliste",
         "kategorie": "Codeliste",
         "nachrichtentyp": null,
-        "sparte": "beide",
-        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "sparte": "Strom",
+        "sparte_beleg": "Referenzsuche Etappe 7 (18.09.2026) in allen maßgeblichen Fassungen der Etappen 1–5: Fundstellen nach Sparte des referenzierenden Dokuments {'Strom': 2}; u. a. UTILMD-AHB-STROM (2). Referenziert ausschließlich aus Strom-Dokumenten. Korrektur Etappe 7: bisher 'beide' mit Pauschalbegründung, durch die Referenzen nicht gedeckt.",
         "bdew_topic_id": 135,
         "aufnahmekriterium": [
           {
@@ -3687,6 +3693,12 @@
               "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_57/Mitteilung_Nr_57.html"
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Sparte korrigiert in Etappe 7: beide → Strom. Grundlage: Referenzsuche über alle maßgeblichen Fassungen der Etappen 1–5 (siehe sparte_beleg). Die Etappe-4-Begründung 'Referenzen aus Dokumenten beider Sparten' traf auf dieses Dokument nicht zu.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": []
         }
       ],
       "analyse": {
@@ -3706,8 +3718,8 @@
         "dokumenttyp": "Codeliste",
         "kategorie": "Codeliste",
         "nachrichtentyp": null,
-        "sparte": "beide",
-        "sparte_beleg": "Querschnittsdokument ohne Spartenangabe im Titel; die Referenzen stammen aus Dokumenten beider Sparten",
+        "sparte": "Gas",
+        "sparte_beleg": "Referenzsuche Etappe 7 (18.09.2026) in allen maßgeblichen Fassungen der Etappen 1–5: Fundstellen nach Sparte des referenzierenden Dokuments {'Gas': 9}; u. a. UTILMD-AHB-GAS (7), UTILMD-MIG-GAS (2). Referenziert ausschließlich aus Gas-Dokumenten. Korrektur Etappe 7: bisher 'beide' mit Pauschalbegründung, durch die Referenzen nicht gedeckt.",
         "bdew_topic_id": 138,
         "aufnahmekriterium": [
           {
@@ -4022,6 +4034,12 @@
               "fundstelle": "7× 'Kundenwertverfahren (z. B. TU München)'"
             }
           ]
+        },
+        {
+          "art": "querpruefung",
+          "text": "Sparte korrigiert in Etappe 7: beide → Gas. Grundlage: Referenzsuche über alle maßgeblichen Fassungen der Etappen 1–5 (siehe sparte_beleg). Die Etappe-4-Begründung 'Referenzen aus Dokumenten beider Sparten' traf auf dieses Dokument nicht zu.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": []
         }
       ],
       "analyse": {
