@@ -14,13 +14,13 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 | 3 | Gasspezifika: SSQNOT, GeLi Gas 3.0, Gas-Anwendbarkeit der spartenübergreifenden Dokumente | **abgeschlossen** | [`etappe3_gas.md`](etappe3_gas.md), [`etappe3_gas_provenienz.json`](etappe3_gas_provenienz.json) |
 | 4 | PID, Codelisten, Allgemeine Festlegungen | **abgeschlossen** | [`etappe4_querschnitt.md`](etappe4_querschnitt.md), [`etappe4_querschnitt_provenienz.json`](etappe4_querschnitt_provenienz.json) |
 | 5 | Entscheidungsbaum-Diagramme | **abgeschlossen** | [`etappe5_ebd.md`](etappe5_ebd.md), [`etappe5_ebd_provenienz.json`](etappe5_ebd_provenienz.json) |
-| 6 | Übertragungsweg / AS4 / API / XML (Redispatch 2.0) | **abgeschlossen**, Schema v0.8 und R-6a–c zur Bestätigung | [`etappe6_uebertragungsweg_api_xml.md`](etappe6_uebertragungsweg_api_xml.md), [`etappe6_uebertragungsweg_api_xml_provenienz.json`](etappe6_uebertragungsweg_api_xml_provenienz.json) |
+| 6 | Übertragungsweg / AS4 / API / XML (Redispatch 2.0) | **abgeschlossen**, Schema v0.8 und R-6a–c bestätigt; O-19(a) Schemafrage offen | [`etappe6_uebertragungsweg_api_xml.md`](etappe6_uebertragungsweg_api_xml.md), [`etappe6_uebertragungsweg_api_xml_provenienz.json`](etappe6_uebertragungsweg_api_xml_provenienz.json) |
 | 7 | Konsolidierung, Widersprüche, Regulatory-State-Objekt, Vorschlag `RegulatoryVersion` | offen | — |
 | 8 | Übergabebericht | offen | — |
 
 ## Bestätigte Grundlagen
 
-* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`; v0.2–v0.6: außerordentliche Veröffentlichung als eigener Typ, Pflichtfelder `mitteilungsbezug` und `aufnahmekriterium`, Quelle DVGW, Rolle `verworfen` gemäß Auftrag 11a; v0.7: Vermerk „versionslos, aber eindeutig“ (O-18); v0.8: Quelle GitHub-EDI@Energy, **zur Bestätigung**); Rollen: [`rollendefinition.md`](rollendefinition.md) (Ergänzung R-6a–c **zur Bestätigung**)
+* Provenienzschema: [`provenienz_schema.json`](provenienz_schema.json) (v0 bestätigt am 17.09.2026; v0.1 ergänzt `ersetzt_durch`; v0.2–v0.6: außerordentliche Veröffentlichung als eigener Typ, Pflichtfelder `mitteilungsbezug` und `aufnahmekriterium`, Quelle DVGW, Rolle `verworfen` gemäß Auftrag 11a; v0.7: Vermerk „versionslos, aber eindeutig“ (O-18); v0.8: Quelle GitHub-EDI@Energy, bestätigt 18.09.2026); Rollen: [`rollendefinition.md`](rollendefinition.md) (Ergänzung R-6a–c, bestätigt 18.09.2026)
 * Aufnahmeregel (was gehört in den State): [`aufnahmeregel.md`](aufnahmeregel.md), seit 18.09.2026
 * Modell: Regulatory State als Ebene oberhalb von `RegulatoryVersion`, 1:n ([`vorschlag_regulatory_state_modell.md`](vorschlag_regulatory_state_modell.md)), bestätigt am 17.09.2026, **noch nicht umgesetzt**
 

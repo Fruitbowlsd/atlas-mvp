@@ -4,8 +4,8 @@
 **Grundlage:** Auftragsfassung „Stand nach O-18“ ([`auftrag.md`](auftrag.md)); Aufnahme nach
 [`aufnahmeregel.md`](aufnahmeregel.md); Rollen nach [`rollendefinition.md`](rollendefinition.md)
 mit der neuen Ergänzung R-6a bis R-6c.
-**Status:** Etappe 6 abgeschlossen. Zur Bestätigung stehen Schema v0.8, die Regelergänzungen
-R-6a–c und der Zuschnitt der API-Dokumente.
+**Status:** Etappe 6 abgeschlossen. Schema v0.8, die Regelergänzungen R-6a–c und der Zuschnitt
+der API-Dokumente sind am 18.09.2026 bestätigt. Offen ist nur die Schemafrage O-19(a).
 
 Artefakt: [`etappe6_uebertragungsweg_api_xml_provenienz.json`](etappe6_uebertragungsweg_api_xml_provenienz.json)
 (37 Datensätze, 149 Fassungen, Schema **v0.8**). Alle 85 Datensätze der Etappen 1–6 sind
@@ -120,7 +120,7 @@ der Mitteilung verbinden.
 produktive Anwendung zum 01.10.2027 sicherzustellen. Für den Stichtag hat das keine Wirkung;
 es steht als `abweichender_termin` im Datensatz.
 
-**Zuschnitt (zur Bestätigung):** API-Webdienste Strom sind **zwei** Dokumente — so führen sie
+**Zuschnitt (bestätigt 18.09.2026):** API-Webdienste Strom sind **zwei** Dokumente — so führen sie
 PID 4.0 und die Mitteilungen 36/43, und so hießen sie bei BDEW bis 28.01.2026. Der
 BDEW-Sammeleintrag „API-Webdienste Strom – Release 1.0.0“ (Thema 247) ist nur der Verweis auf
 das Repository. Die Verzeichnisdienst API bleibt **ein** Dokument, denn sie ist eine Anlage
@@ -134,16 +134,22 @@ Version**. Die Eindeutigkeit wurde nach 11e je Fall geprüft, nicht aus dem SLP-
 
 * **BDEW (1.752):** nur Thema 241 — 7650 „Verzeichnisdienst API 1.0“ (Plattformgültigkeit bis
   28.01.2026), 8232/8233 Release 1.0.0 ab 29.01.2026. Am Stichtag genau eine Version.
-* **95 Mitteilungen:** Anlage in M44 (Konsultation), **M46 (verbindlich)** und **M48:
-  Konsultationsfassung einer Version 1.1** (Anzuwenden ab 01.10.2025). Version 1.1 erscheint
-  in keiner verbindlichen Mitteilung und nicht bei BDEW.
+* **95 Mitteilungen:** Anlage in M44 (01.08.2024, Konsultation), **M46 (01.10.2024,
+  verbindlich ab 04.04.2025, Version 1.0)** und **M48 (03.02.2025): Konsultationsfassung einer
+  Version 1.1** für den 01.10.2025. Die zugehörige verbindliche Mitteilung 51 (01.04.2025)
+  übernimmt 1.1 nicht; BDEW führt sie nicht.
 * **GitHub:** genau ein Repository, genau ein Release; die beiden Dateititel entsprechen
   wörtlich den zitierten Kapitelnamen.
 * **BDEW-Marktprozesse (102):** kein Treffer.
 
 Ergebnis: genau ein Dokument, genau eine gültige Version. Die Version 1.1 ist ein ähnlich
-benannter Stand **desselben** Dokuments. Nach der O-18-Regel („taucht ein ähnlich benanntes
-Dokument auf, neu bewerten“) ist sie ausdrücklich bewertet und nicht übergangen. Da
+benannter, **späterer** Stand **desselben** Dokuments: nach 1.0 konsultiert (M48 nach M46),
+aber **nicht übernommen**. Ihr Zieltermin 01.10.2025 ist verstrichen, ohne dass eine
+verbindliche Mitteilung sie veröffentlicht hat — derselbe Typ wie REQOTE MIG 1.3d
+(Etappe 0), kein anstehender Nachfolger wie in Mitteilung 57. *Korrektur 18.09.2026:* In
+meiner Rückmeldung zu Etappe 6 hatte ich 1.1 als „früheren Stand“ bezeichnet; das war falsch.
+Nach der O-18-Regel („taucht ein ähnlich benanntes Dokument auf, neu bewerten“) ist sie
+ausdrücklich bewertet und nicht übergangen. Da
 Kriterium A (M46) die Aufnahme bereits trägt, ist C hier nur Zusatzbeleg.
 
 ## 5. Mitteilung 54: nicht bytegleich, aber inhaltsgleich — Korrektur einer Zwischenmeldung
@@ -165,7 +171,7 @@ Datei direkt. Die Varianten `.pdf`/`.xml`/`.xsd`, die ich zusätzlich abgerufen 
 dieselben Bytes zurück — das ist eine Eigenschaft des Servers, keine dreifache
 Veröffentlichung. In den Datensätzen steht der amtliche `.html`-Link.
 
-## 6. Regelergänzungen und Schema v0.8 (zur Bestätigung)
+## 6. Regelergänzungen und Schema v0.8 (bestätigt 18.09.2026)
 
 Drei Fassungsarten kannten die Rollenregeln bisher nicht (Schritt 8: „keine stille
 Einordnung“). Sie sind in [`rollendefinition.md`](rollendefinition.md) ergänzt:
@@ -202,12 +208,29 @@ Keine Pflichtfelder neu, alle älteren Datensätze bleiben valide.
 ## 8. Offener Punkt
 
 **O-19 (neu) — Verzeichnisdienst API:**
-(a) Der Release besteht aus zwei gleichrangigen Dateien, das Schema erlaubt aber nur eine
-maßgebliche Fassung je Dokumentversion. Vorläufig ist die Web-API `massgeblich` und die
-WebSocket-API `ergaenzend`. Das ist eine **Modellentscheidung**, die ich nicht selbst treffe.
-(b) Version 1.1 wurde konsultiert (M48), aber nie verbindlich veröffentlicht. Die Regelungen
-zum Verzeichnisdienst 1.1 verweisen ohne Version. Ob sie inhaltlich die API 1.0 voraussetzen,
-ist nicht geprüft.
+
+(a) **Geprüft am 18.09.2026, ob Web-API und WebSocket-API eigenständig sind: Sie sind es
+nicht.** Technisch sind es zwei verschiedene Spezifikationen — OpenAPI 3.0.1 für die
+synchrone Suche (RzV 1.1 Kap. 3.3) und AsyncAPI 3.0.0 für Abonnements und
+Benachrichtigungen (Kap. 3.4). Normativ gehören sie untrennbar zusammen:
+
+* Jede Datei schreibt vor, dass die andere „ebenfalls umgesetzt werden“ muss.
+* Der Verbindungsaufbau zur WebSocket-API ist als Pfad `/ws/subscriptions/v1` in der
+  **Web-API** spezifiziert; das Nachrichtenprotokoll steht in der AsyncAPI-Datei.
+* Beide Dateien bezeichnen sich als Schnittstellen **eines** Dokuments „Verzeichnisdienst API“;
+  RzV 1.1 zitiert sie als dessen Kapitel.
+* Ein Release, ein Tag, ein BDEW-Eintrag, eine Mitteilungsanlage (M46).
+
+Eine Aufteilung in zwei Dokumente wie bei Steuerungshandlungen/MaLo-ID ist damit nicht
+begründbar. Die Schemafrage bleibt offen; vorläufig ist die WebSocket-API `ergaenzend`.
+Nebenbefund: Die maßgebliche Web-API-Datei enthält am Pfad `/ws/subscriptions/v1` noch den
+Platzhalter „TODO: Referenz auf AsyncAPI-Spec hinzufügen“, und beide Dateien verweisen für
+die gültige Fassung auf das PDF „Verzeichnisdienst API“, das BDEW seit 28.01.2026 nicht mehr
+führt.
+
+(b) Version 1.1 wurde konsultiert (M48), aber nicht übernommen. Ob die Regelungen zum
+Verzeichnisdienst 1.1 inhaltlich die API 1.0 voraussetzen, ist nicht geprüft. Niedrige
+Priorität, bleibt offen.
 
 ## 9. Nächste Schritte
 

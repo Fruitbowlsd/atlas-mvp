@@ -134,7 +134,8 @@ Die UTILMD-Datensätze aus Etappe 1 folgen dieser Reihenfolge bereits.
 
 ## Ergänzung Etappe 6 (18.09.2026) — Fassungen, die Schritt 1–7 nicht kennen
 
-**Status: Vorschlag, zur Bestätigung.** Etappe 6 hat drei Fälle getroffen, die unter Schritt 8
+**Status: bestätigt am 18.09.2026** (zusammen mit Schema v0.8 und dem Zuschnitt der
+API-Dokumente). Etappe 6 hat drei Fälle getroffen, die unter Schritt 8
 fallen („keine stille Einordnung“). Sie werden hier ausdrücklich als Regel ergänzt, nicht im
 Einzelfall entschieden.
 
@@ -148,5 +149,6 @@ Einzelfall entschieden.
 Web-API und WebSocket-API) passt nicht in „genau eine maßgebliche Fassung je
 Dokumentversion“. Vorläufig ist die Web-API `massgeblich` und die WebSocket-API `ergaenzend`
 — das stimmt mit der Definition von `ergaenzend` („enthält Information, die der maßgeblichen
-Fassung fehlt“) überein, unterschlägt aber die Gleichrangigkeit. Eine Modellentscheidung
-dazu wird nicht eigenständig getroffen.
+Fassung fehlt“) überein, unterschlägt aber die Gleichrangigkeit. Geprüft am 18.09.2026: Die
+beiden Dateien sind normativ untrennbar (siehe Etappe 6, Abschnitt 8), eine Aufteilung in zwei
+Dokumente scheidet aus. Die Modellentscheidung liegt beim Auftraggeber.

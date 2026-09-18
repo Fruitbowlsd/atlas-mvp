@@ -13624,7 +13624,7 @@
             "kriterium": "C",
             "beleg": "Regelungen zum Verzeichnisdienst 1.1 (Anlage der Mitteilung 51), S. 14, Quellen [3] und [4]: Kapitel 'Web-API' bzw. 'WebSocket-API' in EDI@Energy-Dokument 'Verzeichnisdienst API'; dazu S. 8 (WebSocket-API [4])",
             "vermerk": "versionslos, aber eindeutig",
-            "eindeutigkeitspruefung": "Geprüft am 18.09.2026 nach dem Namen 'Verzeichnisdienst API': (1) BDEW-Dokumente (1.752): nur Thema 241 — id 7650 'Verzeichnisdienst API 1.0' (PDF, Plattformgültigkeit 04.04.2025–28.01.2026) sowie ids 8232/8233 'Release 1.0.0' und 'OpenAPI-Dokumentation' ab 29.01.2026 ohne Ende; am Stichtag genau eine Version. (2) 95 BNetzA-Mitteilungen: Anlage in M44 (Konsultation, v02), M46 (verbindlich ab 04.04.2025, v03, Version 1.0) und M48 (Konsultationsfassung Version 1.1, Anzuwenden ab 01.10.2025); Version 1.1 erscheint in keiner verbindlichen Mitteilung (M51 nennt sie nicht) und bei BDEW nicht. (3) GitHub EDI-Energy: genau ein Repository 'api-directory-service' mit genau einem Release (1.0.0); dessen zwei OpenAPI-Dateien tragen genau die zitierten Kapitelnamen ('Verzeichnisdienst Web-API', 'Verzeichnisdienst WebSocket-API'). (4) BDEW-Marktprozesse (102): kein Treffer. Ergebnis: genau ein Dokument, genau eine am Stichtag gültige Version (1.0.0). Die konsultierte, nie verbindliche Version 1.1 ist ein ähnlich benannter Stand desselben Dokuments und kein zweites Dokument (siehe O-19)."
+            "eindeutigkeitspruefung": "Geprüft am 18.09.2026 nach dem Namen 'Verzeichnisdienst API': (1) BDEW-Dokumente (1.752): nur Thema 241 — id 7650 'Verzeichnisdienst API 1.0' (PDF, Plattformgültigkeit 04.04.2025–28.01.2026) sowie ids 8232/8233 'Release 1.0.0' und 'OpenAPI-Dokumentation' ab 29.01.2026 ohne Ende; am Stichtag genau eine Version. (2) 95 BNetzA-Mitteilungen: Anlage in M44 (veröffentlicht 01.08.2024, Konsultation, v02), M46 (veröffentlicht 01.10.2024, verbindlich ab 04.04.2025, v03, Version 1.0) und M48 (veröffentlicht 03.02.2025, Konsultationsfassung Version 1.1 für den 01.10.2025). Die zugehörige verbindliche Mitteilung 51 (veröffentlicht 01.04.2025, verbindlich ab 01.10.2025) übernimmt Version 1.1 nicht; auch BDEW führt sie nicht. (3) GitHub EDI-Energy: genau ein Repository 'api-directory-service' mit genau einem Release (1.0.0); dessen zwei OpenAPI-Dateien tragen genau die zitierten Kapitelnamen ('Verzeichnisdienst Web-API', 'Verzeichnisdienst WebSocket-API'). (4) BDEW-Marktprozesse (102): kein Treffer. Ergebnis: genau ein Dokument, genau eine am Stichtag gültige Version (1.0.0). Version 1.1 ist ein ähnlich benannter, späterer Stand desselben Dokuments und kein zweites Dokument: konsultiert nach Version 1.0 (M48 nach M46), aber nicht übernommen — ihr Zieltermin 01.10.2025 ist verstrichen, ohne dass eine verbindliche Mitteilung sie veröffentlicht hat (Typ wie REQOTE MIG 1.3d, Etappe 0; kein anstehender Nachfolger wie in Mitteilung 57)."
           }
         ]
       },
@@ -13765,7 +13765,7 @@
           },
           "aenderungshistorie": null,
           "rolle": "ergaenzend",
-          "rolle_begruendung": "Kapitel 'WebSocket-API' desselben Releases 1.0.0 (Regelungen zum Verzeichnisdienst 1.1, S. 14, Quelle [4]); fachlich gleichrangig verbindlich, das Schema kennt aber nur eine maßgebliche Fassung je Dokumentversion — offener Punkt O-19",
+          "rolle_begruendung": "Kapitel 'WebSocket-API' desselben Releases 1.0.0 (Regelungen zum Verzeichnisdienst 1.1, S. 14, Quelle [4]); normativ gleichrangig und untrennbar (beide Spezifikationen verlangen die Umsetzung der jeweils anderen), das Schema kennt aber nur eine maßgebliche Fassung je Dokumentversion — offener Punkt O-19(a)",
           "ersetzt_durch": null,
           "abruf_utc": "2026-09-18T09:30:00Z",
           "mitteilungsbezug": {
@@ -13974,7 +13974,7 @@
         "ergaenzende_fassungen": [
           {
             "fassung_id": "github:EDI-Energy/api-directory-service@1.0.0/api/webSocketV1.yaml",
-            "zweck": "Kapitel 'WebSocket-API' desselben Releases 1.0.0 (Regelungen zum Verzeichnisdienst 1.1, S. 14, Quelle [4]); fachlich gleichrangig verbindlich, das Schema kennt aber nur eine maßgebliche Fassung je Dokumentversion — offener Punkt O-19"
+            "zweck": "Kapitel 'WebSocket-API' desselben Releases 1.0.0 (Regelungen zum Verzeichnisdienst 1.1, S. 14, Quelle [4]); normativ gleichrangig und untrennbar (beide Spezifikationen verlangen die Umsetzung der jeweils anderen), das Schema kennt aber nur eine maßgebliche Fassung je Dokumentversion — offener Punkt O-19(a)"
           },
           {
             "fassung_id": "bnetza:M46/Verzeichnisdienst_API_v03.pdf",
@@ -14101,7 +14101,7 @@
         },
         {
           "art": "offene_frage",
-          "text": "O-19: (a) Der Release 1.0.0 besteht aus zwei OpenAPI-Dateien (Web-API, WebSocket-API), die Regelungen zum Verzeichnisdienst 1.1 zitieren beide als Kapitel eines Dokuments. Das Schema erlaubt je Dokumentversion genau eine maßgebliche Fassung; die WebSocket-API steht deshalb vorläufig als 'ergaenzend'. (b) Version 1.1 wurde mit Mitteilung 48 für den 01.10.2025 konsultiert, erscheint aber in keiner verbindlichen Mitteilung; die Regelungen zum Verzeichnisdienst 1.1 (M51) verweisen ohne Version. Ob RzV 1.1 inhaltlich die API 1.0/1.0.0 voraussetzt, ist nicht geprüft.",
+          "text": "O-19: (a) Der Release 1.0.0 besteht aus zwei Spezifikationen: Web-API (OpenAPI 3.0.1, synchrone Suche, RzV 1.1 Kap. 3.3) und WebSocket-API (AsyncAPI 3.0.0, Abonnements und Benachrichtigungen, RzV 1.1 Kap. 3.4). Technisch verschieden, normativ untrennbar: Jede Datei schreibt vor, dass die andere 'ebenfalls umgesetzt werden' muss; der Verbindungsaufbau zur WebSocket-API ist als Pfad /ws/subscriptions/v1 in der Web-API spezifiziert; beide Dateien bezeichnen sich als Schnittstellen eines Dokuments 'Verzeichnisdienst API'; RzV 1.1 zitiert beide als Kapitel dieses Dokuments; ein Release, ein Tag, ein BDEW-Eintrag. Eine Aufteilung in zwei Dokumente wie bei Steuerungshandlungen/MaLo-ID ist deshalb nicht begründbar. Das Schema erlaubt je Dokumentversion genau eine maßgebliche Fassung; die WebSocket-API steht vorläufig als 'ergaenzend' — Schemafrage offen. (b) Version 1.1 wurde mit Mitteilung 48 (03.02.2025) für den 01.10.2025 konsultiert, von Mitteilung 51 aber nicht übernommen; ob RzV 1.1 inhaltlich die API 1.0/1.0.0 voraussetzt, ist nicht geprüft (niedrige Priorität).",
           "auswirkung_auf_auswahl": false,
           "beleg": [
             {
@@ -14111,6 +14111,24 @@
             {
               "quelle": "BNetzA Mitteilung 51",
               "url": "https://www.bundesnetzagentur.de/DE/Beschlusskammern/BK06/BK6_83_Zug_Mess/835_mitteilungen_datenformate/Mitteilung_51/Mitteilung_Nr_51.html"
+            }
+          ]
+        },
+        {
+          "art": "dokumentauffaelligkeit",
+          "text": "Die maßgebliche Web-API-Spezifikation enthält am Pfad /ws/subscriptions/v1 einen offenen Platzhalter: 'Das Protokoll … ist in [*TODO: Referenz auf AsyncAPI-Spec hinzufügen*] definiert.' Beide Spezifikationen verweisen zudem für 'die jeweils gültige Fassung und deren zwei öffentlich abrufbare Internetadressen' auf das EDI@Energy-Dokument 'Verzeichnisdienst API' — dessen PDF (bdew:7650) führt BDEW seit 28.01.2026 nicht mehr. Beobachtung, ohne Wirkung auf die Auswahl.",
+          "auswirkung_auf_auswahl": false,
+          "beleg": [
+            {
+              "quelle": "GitHub EDI-Energy/api-directory-service@1.0.0",
+              "url": "https://github.com/EDI-Energy/api-directory-service/blob/1.0.0/api/directoryServiceV1.yaml",
+              "fundstelle": "paths./ws/subscriptions/v1.get.description; info.description"
+            },
+            {
+              "quelle": "BDEW-API id 7650",
+              "url": "https://www.bdew-mako.de/api/documents",
+              "sha256": "016a6f8c8944eed721af08e6c97c55e4740ed056996cba482e70467401fb709f",
+              "fundstelle": "Vorgängereintrag: title=\"Verzeichnisdienst API 1.0\", validFrom=2025-04-04, validTo=2026-01-28"
             }
           ]
         }

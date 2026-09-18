@@ -57,9 +57,10 @@ erhält dann `aufnahmekriterium.vermerk = "versionslos, aber eindeutig"` und das
   Dokument, genau eine Version.
 * Zweiter Anwendungsfall (Etappe 6): „Verzeichnisdienst API“ — Verweis in Regelungen zum
   Verzeichnisdienst 1.1, S. 14 (Quellen [3], [4]), ohne Version. Hier ist die Prüfung
-  **nicht trivial**: Mitteilung 48 hat eine Version 1.1 konsultiert, die in keiner
-  verbindlichen Mitteilung erscheint. Am Stichtag gültig ist genau eine Version (Release
-  1.0.0); die Version 1.1 ist ein ähnlich benannter Stand **desselben** Dokuments, kein zweites
+  **nicht trivial**: Mitteilung 48 (03.02.2025, nach M46 vom 01.10.2024) hat eine Version
+  1.1 für den 01.10.2025 konsultiert, die die verbindliche Mitteilung 51 nicht übernommen hat.
+  Am Stichtag gültig ist genau eine Version (Release 1.0.0); die Version 1.1 ist ein ähnlich
+  benannter, späterer, aber nicht übernommener Stand **desselben** Dokuments, kein zweites
   Dokument. Die Aufnahme trägt ohnehin schon Kriterium A (Anlage der Mitteilung 46); C mit
   Vermerk steht zusätzlich.
 
