@@ -12930,9 +12930,9 @@
             "ausserordentlich_grund": null
           },
           "aenderungshistorie": null,
-          "rolle": "ersetzt",
-          "rolle_begruendung": "Fassung aus der Swagger-Zeit derselben Version; BDEW-Plattformgültigkeit endete am 28.01.2026, Nachfolgeeintrag ab 29.01.2026 ist der GitHub-Release; Release-Notiz: 'Überführung … von Swagger auf GitHub ohne inhaltliche Änderungen' (Regelergänzung R-6b); Beleg 'Inhalt unverändert' nur indirekt, Direktvergleich mit SwaggerHub nicht mehr möglich (O-20)",
-          "ersetzt_durch": "github:EDI-Energy/api-electricity@1.0.0/api/controlMeasures/controlMeasuresV1.yaml",
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Fassung der Swagger-Zeit derselben Version (3-seitiges Linkblatt auf SwaggerHub); BDEW-Plattformgültigkeit endete am 28.01.2026. Die Kanalwechsel-Regel R-6b ist nicht erfüllt: 'Inhalt unverändert' ist nur durch die Release-Notiz belegt, die SwaggerHub-Spezifikation ist gelöscht (O-20, entschieden 18.09.2026: keine Rolle 'ersetzt'). Bleibt als Beleg für Version, Titel und Gültigkeitsangaben der Mitteilungszeit.",
+          "ersetzt_durch": null,
           "abruf_utc": "2026-09-18T09:30:00Z",
           "mitteilungsbezug": {
             "art": "anlage_der_mitteilung_bytegleich",
@@ -13015,6 +13015,10 @@
           }
         ],
         "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:7313",
+            "zweck": "Fassung der Swagger-Zeit derselben Version (3-seitiges Linkblatt auf SwaggerHub); BDEW-Plattformgültigkeit endete am 28.01.2026. Die Kanalwechsel-Regel R-6b ist nicht erfüllt: 'Inhalt unverändert' ist nur durch die Release-Notiz belegt, die SwaggerHub-Spezifikation ist gelöscht (O-20, entschieden 18.09.2026: keine Rolle 'ersetzt'). Bleibt als Beleg für Version, Titel und Gültigkeitsangaben der Mitteilungszeit."
+          },
           {
             "fassung_id": "bnetza:M36/API-Webdienste_1_0_0_20231024.pdf",
             "zweck": "Amtliche Anlage der Mitteilung 36: einziger Mitteilungsbeleg der Version (PDF mit Verweis auf die damalige Swagger-Veröffentlichung)"
@@ -13140,7 +13144,7 @@
         },
         {
           "art": "offene_frage",
-          "text": "O-20 (für den Übergabebericht): Kanalwechsel-Regel R-6b verlangt zwei Belege. (2) 'neuer Weg geregelt' ist erfüllt (API-Guideline 1.0b Kap. 4, Anlage M56). (1) 'Inhalt nachweislich unverändert' ist nur indirekt erfüllt: Die alten PDFs enthalten nur Links auf SwaggerHub; die dort hinterlegten Spezifikationen sind gelöscht (api.swaggerhub.com: HTTP 404, geprüft 18.09.2026), das Internet Archive hat nur HTTP-302-Weiterleitungen gespeichert. Ein Direktvergleich ist damit nicht möglich. Tragend sind: Release-Notiz 'ohne inhaltliche Änderungen' (Herausgebererklärung), die OpenAPI-Datei wurde in einem einzigen Commit angelegt und bis zum Tag 1.0.0 nicht verändert (10.12.2025); die servers-Angabe nennt noch die SwaggerHub-Kennung der Mitteilungsfassung. Die PDF-Fassung bleibt 'ersetzt' (keine andere Rolle passt); Beleglage im Übergabebericht als offene Beobachtung.",
+          "text": "O-20 (für den Übergabebericht): Kanalwechsel-Regel R-6b verlangt zwei Belege. (2) 'neuer Weg geregelt' ist erfüllt (API-Guideline 1.0b Kap. 4, Anlage M56). (1) 'Inhalt nachweislich unverändert' ist nur indirekt erfüllt: Die alten PDFs enthalten nur Links auf SwaggerHub; die dort hinterlegten Spezifikationen sind gelöscht (api.swaggerhub.com: HTTP 404, geprüft 18.09.2026), das Internet Archive hat nur HTTP-302-Weiterleitungen gespeichert. Ein Direktvergleich ist damit nicht möglich. Tragend sind: Release-Notiz 'ohne inhaltliche Änderungen' (Herausgebererklärung), die OpenAPI-Datei wurde in einem einzigen Commit angelegt und bis zum Tag 1.0.0 nicht verändert (10.12.2025); die servers-Angabe nennt noch die SwaggerHub-Kennung der Mitteilungsfassung. Entschieden 18.09.2026: R-6b ist damit nicht erfüllt; die alte PDF-Fassung ist nicht 'ersetzt', sondern 'ergaenzend'. Offene Beobachtung für den Übergabebericht.",
           "auswirkung_auf_auswahl": false,
           "beleg": [
             {
@@ -13387,9 +13391,9 @@
             "ausserordentlich_grund": null
           },
           "aenderungshistorie": null,
-          "rolle": "ersetzt",
-          "rolle_begruendung": "Fassung aus der Swagger-Zeit derselben Version; BDEW-Plattformgültigkeit endete am 28.01.2026, Nachfolgeeintrag ab 29.01.2026 ist der GitHub-Release; Release-Notiz: 'Überführung … von Swagger auf GitHub ohne inhaltliche Änderungen' (Regelergänzung R-6b); Beleg 'Inhalt unverändert' nur indirekt, Direktvergleich mit SwaggerHub nicht mehr möglich (O-20)",
-          "ersetzt_durch": "github:EDI-Energy/api-electricity@1.0.0/api/identificationId/maloIdentV1.yaml",
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Fassung der Swagger-Zeit derselben Version (3-seitiges Linkblatt auf SwaggerHub); BDEW-Plattformgültigkeit endete am 28.01.2026. Die Kanalwechsel-Regel R-6b ist nicht erfüllt: 'Inhalt unverändert' ist nur durch die Release-Notiz belegt, die SwaggerHub-Spezifikation ist gelöscht (O-20, entschieden 18.09.2026: keine Rolle 'ersetzt'). Bleibt als Beleg für Version, Titel und Gültigkeitsangaben der Mitteilungszeit.",
+          "ersetzt_durch": null,
           "abruf_utc": "2026-09-18T09:30:00Z",
           "mitteilungsbezug": {
             "art": "anlage_der_mitteilung_bytegleich",
@@ -13472,6 +13476,10 @@
           }
         ],
         "ergaenzende_fassungen": [
+          {
+            "fassung_id": "bdew:7314",
+            "zweck": "Fassung der Swagger-Zeit derselben Version (3-seitiges Linkblatt auf SwaggerHub); BDEW-Plattformgültigkeit endete am 28.01.2026. Die Kanalwechsel-Regel R-6b ist nicht erfüllt: 'Inhalt unverändert' ist nur durch die Release-Notiz belegt, die SwaggerHub-Spezifikation ist gelöscht (O-20, entschieden 18.09.2026: keine Rolle 'ersetzt'). Bleibt als Beleg für Version, Titel und Gültigkeitsangaben der Mitteilungszeit."
+          },
           {
             "fassung_id": "bnetza:M43/API-Webdienste_MaLo-ID_1_0_0_20240703.pdf",
             "zweck": "Amtliche Anlage der Mitteilung 43: einziger Mitteilungsbeleg der Version (PDF mit Verweis auf die damalige Swagger-Veröffentlichung)"
@@ -13597,7 +13605,7 @@
         },
         {
           "art": "offene_frage",
-          "text": "O-20 (für den Übergabebericht): Kanalwechsel-Regel R-6b verlangt zwei Belege. (2) 'neuer Weg geregelt' ist erfüllt (API-Guideline 1.0b Kap. 4, Anlage M56). (1) 'Inhalt nachweislich unverändert' ist nur indirekt erfüllt: Die alten PDFs enthalten nur Links auf SwaggerHub; die dort hinterlegten Spezifikationen sind gelöscht (api.swaggerhub.com: HTTP 404, geprüft 18.09.2026), das Internet Archive hat nur HTTP-302-Weiterleitungen gespeichert. Ein Direktvergleich ist damit nicht möglich. Tragend sind: Release-Notiz 'ohne inhaltliche Änderungen' (Herausgebererklärung), die OpenAPI-Datei wurde in einem einzigen Commit angelegt und bis zum Tag 1.0.0 nicht verändert (10.12.2025); die servers-Angabe nennt noch die SwaggerHub-Kennung der Mitteilungsfassung. Die PDF-Fassung bleibt 'ersetzt' (keine andere Rolle passt); Beleglage im Übergabebericht als offene Beobachtung.",
+          "text": "O-20 (für den Übergabebericht): Kanalwechsel-Regel R-6b verlangt zwei Belege. (2) 'neuer Weg geregelt' ist erfüllt (API-Guideline 1.0b Kap. 4, Anlage M56). (1) 'Inhalt nachweislich unverändert' ist nur indirekt erfüllt: Die alten PDFs enthalten nur Links auf SwaggerHub; die dort hinterlegten Spezifikationen sind gelöscht (api.swaggerhub.com: HTTP 404, geprüft 18.09.2026), das Internet Archive hat nur HTTP-302-Weiterleitungen gespeichert. Ein Direktvergleich ist damit nicht möglich. Tragend sind: Release-Notiz 'ohne inhaltliche Änderungen' (Herausgebererklärung), die OpenAPI-Datei wurde in einem einzigen Commit angelegt und bis zum Tag 1.0.0 nicht verändert (10.12.2025); die servers-Angabe nennt noch die SwaggerHub-Kennung der Mitteilungsfassung. Entschieden 18.09.2026: R-6b ist damit nicht erfüllt; die alte PDF-Fassung ist nicht 'ersetzt', sondern 'ergaenzend'. Offene Beobachtung für den Übergabebericht.",
           "auswirkung_auf_auswahl": false,
           "beleg": [
             {
@@ -13886,9 +13894,9 @@
             "ausserordentlich_grund": null
           },
           "aenderungshistorie": null,
-          "rolle": "ersetzt",
-          "rolle_begruendung": "Fassung aus der Swagger-Zeit derselben Version; BDEW-Plattformgültigkeit endete am 28.01.2026, Nachfolgeeintrag ab 29.01.2026 ist der GitHub-Release; Release-Notiz: 'Überführung … von Swagger auf GitHub ohne inhaltliche Änderungen' (Regelergänzung R-6b); Beleg 'Inhalt unverändert' nur indirekt, Direktvergleich mit SwaggerHub nicht mehr möglich (O-20)",
-          "ersetzt_durch": "github:EDI-Energy/api-directory-service@1.0.0/api/directoryServiceV1.yaml",
+          "rolle": "ergaenzend",
+          "rolle_begruendung": "Fassung der Swagger-Zeit derselben Version (3-seitiges Linkblatt auf SwaggerHub); BDEW-Plattformgültigkeit endete am 28.01.2026. Die Kanalwechsel-Regel R-6b ist nicht erfüllt: 'Inhalt unverändert' ist nur durch die Release-Notiz belegt, die SwaggerHub-Spezifikation ist gelöscht (O-20, entschieden 18.09.2026: keine Rolle 'ersetzt'). Bleibt als Beleg für Version, Titel und Gültigkeitsangaben der Mitteilungszeit.",
+          "ersetzt_durch": null,
           "abruf_utc": "2026-09-18T09:30:00Z",
           "mitteilungsbezug": {
             "art": "anlage_der_mitteilung",
@@ -14021,6 +14029,10 @@
         ],
         "ergaenzende_fassungen": [
           {
+            "fassung_id": "bdew:7650",
+            "zweck": "Fassung der Swagger-Zeit derselben Version (3-seitiges Linkblatt auf SwaggerHub); BDEW-Plattformgültigkeit endete am 28.01.2026. Die Kanalwechsel-Regel R-6b ist nicht erfüllt: 'Inhalt unverändert' ist nur durch die Release-Notiz belegt, die SwaggerHub-Spezifikation ist gelöscht (O-20, entschieden 18.09.2026: keine Rolle 'ersetzt'). Bleibt als Beleg für Version, Titel und Gültigkeitsangaben der Mitteilungszeit."
+          },
+          {
             "fassung_id": "bnetza:M46/Verzeichnisdienst_API_v03.pdf",
             "zweck": "Amtliche Anlage der Mitteilung 46: einziger Mitteilungsbeleg der Version (PDF mit Verweis auf die damalige Swagger-Veröffentlichung)"
           }
@@ -14145,7 +14157,7 @@
         },
         {
           "art": "offene_frage",
-          "text": "O-20 (für den Übergabebericht): Kanalwechsel-Regel R-6b verlangt zwei Belege. (2) 'neuer Weg geregelt' ist erfüllt (API-Guideline 1.0b Kap. 4, Anlage M56). (1) 'Inhalt nachweislich unverändert' ist nur indirekt erfüllt: Die alten PDFs enthalten nur Links auf SwaggerHub; die dort hinterlegten Spezifikationen sind gelöscht (api.swaggerhub.com: HTTP 404, geprüft 18.09.2026), das Internet Archive hat nur HTTP-302-Weiterleitungen gespeichert. Ein Direktvergleich ist damit nicht möglich. Tragend sind: Release-Notiz 'ohne inhaltliche Änderungen' (Herausgebererklärung), die OpenAPI-Datei wurde in einem einzigen Commit angelegt und bis zum Tag 1.0.0 nicht verändert (11.12.2025), sie entspricht nachweislich Version 1.0 und nicht der konsultierten 1.1 (keine Felder status/activeUntil, Beispieldatum 2024-10-01); in der Web-API-Datei steht zudem noch der Platzhalter 'TODO: Referenz auf AsyncAPI-Spec hinzufügen', und beide Dateien verweisen für die gültige Fassung auf das PDF, das BDEW seit 28.01.2026 nicht mehr führt. Die PDF-Fassung bleibt 'ersetzt' (keine andere Rolle passt); Beleglage im Übergabebericht als offene Beobachtung.",
+          "text": "O-20 (für den Übergabebericht): Kanalwechsel-Regel R-6b verlangt zwei Belege. (2) 'neuer Weg geregelt' ist erfüllt (API-Guideline 1.0b Kap. 4, Anlage M56). (1) 'Inhalt nachweislich unverändert' ist nur indirekt erfüllt: Die alten PDFs enthalten nur Links auf SwaggerHub; die dort hinterlegten Spezifikationen sind gelöscht (api.swaggerhub.com: HTTP 404, geprüft 18.09.2026), das Internet Archive hat nur HTTP-302-Weiterleitungen gespeichert. Ein Direktvergleich ist damit nicht möglich. Tragend sind: Release-Notiz 'ohne inhaltliche Änderungen' (Herausgebererklärung), die OpenAPI-Datei wurde in einem einzigen Commit angelegt und bis zum Tag 1.0.0 nicht verändert (11.12.2025), sie entspricht nachweislich Version 1.0 und nicht der konsultierten 1.1 (keine Felder status/activeUntil, Beispieldatum 2024-10-01); in der Web-API-Datei steht zudem noch der Platzhalter 'TODO: Referenz auf AsyncAPI-Spec hinzufügen', und beide Dateien verweisen für die gültige Fassung auf das PDF, das BDEW seit 28.01.2026 nicht mehr führt. Entschieden 18.09.2026: R-6b ist damit nicht erfüllt; die alte PDF-Fassung ist nicht 'ersetzt', sondern 'ergaenzend'. Offene Beobachtung für den Übergabebericht.",
           "auswirkung_auf_auswahl": false,
           "beleg": [
             {

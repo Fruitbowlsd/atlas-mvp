@@ -3,7 +3,7 @@
 **Ticket:** #64 · **Stichtag:** 01.10.2026 · **Erhebung:** 18.09.2026
 **Grundlage:** Auftragsfassung „Etappe-7-Zwischenergebnis“ ([`auftrag.md`](auftrag.md)); alle
 Provenienzdatensätze der Etappen 1–6; BDEW-Abzug `016a6f8c…01fb709f` (unverändert seit 17.09.).
-**Status:** Etappe 7 abgeschlossen. Zur Bestätigung stehen zwei Punkte (Abschnitt 7 und 9).
+**Status:** Etappe 7 abgeschlossen. Sparten-Korrektur (Abschnitt 7) und O-19(b) am 18.09.2026 bestätigt; O-20 entschieden (R-6b nicht erfüllt, alte API-PDFs `ergaenzend`). Datenbasis eingefroren.
 
 Artefakt: [`etappe7_regulatory_state.json`](etappe7_regulatory_state.json) — das
 Regulatory-State-Objekt nach Abschnitt 15 mit allen 85 maßgeblichen Dokumentversionen, Baum,
@@ -145,7 +145,7 @@ widerlegt das für drei Codelisten:
 | Lokationsbündelstrukturen 1.0 | nur UTILMD AHB **Strom** (2) | beide | **Strom** |
 | Standardlastprofile nach TU München 1.1 | nur UTILMD AHB/MIG **Gas** (9) | beide | **Gas** |
 
-Die Datensätze sind korrigiert und tragen je einen Hinweis `querpruefung`. Bei allen zehn steht
+Die Datensätze sind korrigiert und tragen je einen Hinweis `querpruefung`. **Bestätigt am 18.09.2026.** Bei allen zehn steht
 jetzt die tatsächliche Referenzverteilung im `sparte_beleg`. Die Versionsauswahl ändert sich
 nicht. Das Skript liegt als `fix_e4_sparte.py` im Arbeitsverzeichnis.
 
@@ -170,8 +170,8 @@ nicht. Das Skript liegt als `fix_e4_sparte.py` im Arbeitsverzeichnis.
 | **O-5 (Rest)** | Name „SSQNOT zur Übermittlung von Mehr-/Mindermengen“ aus PID 4.0 existiert als Dokument nicht | offen, ohne Wirkung auf die Auswahl |
 | **O-15** | Lokationsbündel: M33-Anlage HTTP 404, zwei Stände 12./13.12.2024 (Faktor 7) | offen |
 | **O-17** | S_0088 (PI 55024) ohne Ziel | bewusst nicht aufgelöst |
-| **O-19(b)** | RzV 1.1 ↔ API 1.0 | **Teilantwort zur Bestätigung:** RzV 4.6 setzt API 1.1 nicht voraus, die Pflicht hat aber kein Schnittstellenfeld |
-| **O-20** | Kanalwechsel-Regel: Beleg „Inhalt unverändert“ bei allen drei API-Dokumenten nur indirekt | offene Beobachtung für Etappe 8 |
+| **O-19(b)** | RzV 1.1 ↔ API 1.0 | **beantwortet (bestätigt 18.09.2026):** RzV 4.6 setzt API 1.1 nicht voraus. Der Befund „Ankündigungspflicht ohne Schnittstellenfeld“ wird im Übergabebericht als eigener Hinweis geführt |
+| **O-20** | Kanalwechsel-Regel R-6b bei allen drei API-Dokumenten nicht erfüllt (Inhaltsbeleg nur per Release-Notiz) | entschieden: alte PDFs `ergaenzend`; offene Beobachtung für Etappe 8 |
 | **O-10** | MIG Gas G1.2: Vermerk „erst zum 1.4.2026“ | für die fachliche Analyse (12/16) |
 
 Gelöst seit Etappe 0: O-1, O-2, O-3, O-4, O-6, O-7, O-8, O-9, O-11 (mit O-12), O-13, O-16, O-18,

@@ -142,7 +142,7 @@ Einzelfall entschieden.
 | Nr. | Fall | Regel | Betroffen |
 |---|---|---|---|
 | **R-6a** | Dokument **ohne PDF**: XML-Schema (XSD) oder API-Spezifikation (OpenAPI-YAML) | Die Fachdatei **ist** das Dokument. Abschnitt 7 („PDF als Referenz“) greift nicht; Schritte 4–6 gelten sinngemäß mit dem Dokumentformat statt PDF: neueste konsolidierte XSD → `massgeblich`, ältere → `ersetzt`, Basis-XSD → `ergaenzend` bzw. `massgeblich`. `massgebliche_fassung_pdf_sha256` bleibt `null`, der SHA-256 der Fachdatei steht an der Fassung. | 9 XSD-Dokumente, 3 API-Dokumente |
-| **R-6b** | **Wechsel des Veröffentlichungswegs** bei gleicher Version (Swagger/PDF-Verweis → GitHub-Release) | Die Fassung des abgelösten Wegs wird `ersetzt`, `ersetzt_durch` = Fassung des neuen Wegs. Voraussetzung ist ein Beleg, dass der Inhalt unverändert ist (hier: Release-Notiz „ohne inhaltliche Änderungen“) und dass der neue Weg geregelt ist (hier: API-Guideline 1.0b Kap. 4, Anlage der Mitteilung 56). Die amtliche Anlage der ursprünglichen Mitteilung bleibt `ergaenzend`, weil nur sie die Version mit der Mitteilung verbindet. | bdew:7313, 7314, 7650 |
+| **R-6b** | **Wechsel des Veröffentlichungswegs** bei gleicher Version (Swagger/PDF-Verweis → GitHub-Release) | Die Fassung des abgelösten Wegs wird `ersetzt`, `ersetzt_durch` = Fassung des neuen Wegs. Voraussetzung ist ein Beleg, dass der Inhalt unverändert ist (hier: Release-Notiz „ohne inhaltliche Änderungen“) und dass der neue Weg geregelt ist (hier: API-Guideline 1.0b Kap. 4, Anlage der Mitteilung 56). Die amtliche Anlage der ursprünglichen Mitteilung bleibt `ergaenzend`, weil nur sie die Version mit der Mitteilung verbindet. | **derzeit kein erfüllter Anwendungsfall** (O-20): bei bdew:7313, 7314, 7650 fehlt der nachweisliche Inhaltsbeleg |
 | **R-6c** | **Versionsloses Dokument**, das nur mit Publikationsdatum erscheint (Änderungshistorie XML) | Stand-Reihe nach Publikationsdatum des Deckblatts statt nach Fehlerkorrekturstand. Jüngste Veröffentlichung (PDF) → `massgeblich`, ältere PDF → `ersetzt` mit `ersetzt_durch` = nächstjüngere (BDEW bevorzugt, sonst BNetzA). | Änderungshistorie zu den XML-Datenformaten |
 
 **O-19(a) gelöst (bestätigt 18.09.2026, Schema v0.9):** Ein Release aus mehreren gleichrangigen,
@@ -156,5 +156,7 @@ Steuerungshandlungen/MaLo-ID (Mitteilungen 36/43) —, bleiben es getrennte Doku
 **O-20 (zu R-6b):** Bei allen drei API-Dokumenten ist Beleg (1) „Inhalt unverändert“ nur indirekt
 erbracht (Herausgebererklärung in der Release-Notiz, unveränderte Datei seit dem Import, beim
 Verzeichnisdienst zusätzlich Inhaltsmerkmale der Version 1.0). Ein Direktvergleich ist nicht
-möglich, weil SwaggerHub die Spezifikationen gelöscht hat. Die alten PDFs bleiben `ersetzt`; die
-Beleglage wird im Übergabebericht als offene Beobachtung geführt.
+möglich, weil SwaggerHub die Spezifikationen gelöscht hat, und die alten PDFs sind nur
+Linkblätter. **Entschieden 18.09.2026:** R-6b verlangt einen nachweislichen Beleg; er fehlt bei
+allen drei. Die alten PDFs sind deshalb `ergaenzend`, nicht `ersetzt`. Die Regel selbst bleibt
+bestehen. Die Beleglage wird im Übergabebericht als offene Beobachtung geführt.

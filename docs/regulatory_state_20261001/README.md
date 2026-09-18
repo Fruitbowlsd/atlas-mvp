@@ -14,8 +14,8 @@ keine Schemaänderung, kein Import, kein Schreibvorgang in die Datenbank.
 | 3 | Gasspezifika: SSQNOT, GeLi Gas 3.0, Gas-Anwendbarkeit der spartenübergreifenden Dokumente | **abgeschlossen** | [`etappe3_gas.md`](etappe3_gas.md), [`etappe3_gas_provenienz.json`](etappe3_gas_provenienz.json) |
 | 4 | PID, Codelisten, Allgemeine Festlegungen | **abgeschlossen** | [`etappe4_querschnitt.md`](etappe4_querschnitt.md), [`etappe4_querschnitt_provenienz.json`](etappe4_querschnitt_provenienz.json) |
 | 5 | Entscheidungsbaum-Diagramme | **abgeschlossen** | [`etappe5_ebd.md`](etappe5_ebd.md), [`etappe5_ebd_provenienz.json`](etappe5_ebd_provenienz.json) |
-| 6 | Übertragungsweg / AS4 / API / XML (Redispatch 2.0) | **abgeschlossen**, Schema v0.8/v0.9 und R-6a–c bestätigt; O-19(a) gelöst, O-20 offen | [`etappe6_uebertragungsweg_api_xml.md`](etappe6_uebertragungsweg_api_xml.md), [`etappe6_uebertragungsweg_api_xml_provenienz.json`](etappe6_uebertragungsweg_api_xml_provenienz.json) |
-| 7 | Konsolidierung, Widersprüche, Regulatory-State-Objekt, Verhältnis zu `RegulatoryVersion` | **abgeschlossen**; Sparten-Korrektur und O-19(b) zur Bestätigung | [`etappe7_konsolidierung.md`](etappe7_konsolidierung.md), [`etappe7_regulatory_state.json`](etappe7_regulatory_state.json) |
+| 6 | Übertragungsweg / AS4 / API / XML (Redispatch 2.0) | **abgeschlossen**, Schema v0.8/v0.9 und R-6a–c bestätigt; O-19 gelöst, O-20 entschieden (R-6b nicht erfüllt) | [`etappe6_uebertragungsweg_api_xml.md`](etappe6_uebertragungsweg_api_xml.md), [`etappe6_uebertragungsweg_api_xml_provenienz.json`](etappe6_uebertragungsweg_api_xml_provenienz.json) |
+| 7 | Konsolidierung, Widersprüche, Regulatory-State-Objekt, Verhältnis zu `RegulatoryVersion` | **abgeschlossen und bestätigt**; Datenbasis eingefroren | [`etappe7_konsolidierung.md`](etappe7_konsolidierung.md), [`etappe7_regulatory_state.json`](etappe7_regulatory_state.json) |
 | 8 | Übergabebericht | offen | — |
 
 ## Bestätigte Grundlagen

@@ -111,9 +111,10 @@ Die Kette ist lückenlos belegt:
    (3 Zeilen, S. 31).
 
 Die maßgeblichen Fassungen sind die OpenAPI-Dateien am Release-Tag 1.0.0 mit SHA-256 und
-Commit (`api-electricity` 4b4bfde6…, `api-directory-service` 74a01c6b…). Die BDEW-PDFs sind
-nach R-6b `ersetzt`; die BNetzA-Anlagen bleiben `ergaenzend`, weil nur sie die Version mit
-der Mitteilung verbinden.
+Commit (`api-electricity` 4b4bfde6…, `api-directory-service` 74a01c6b…). Die BDEW-PDFs und die
+BNetzA-Anlagen sind `ergaenzend`. *Korrektur O-20 (18.09.2026):* In Etappe 6 standen die
+BDEW-PDFs nach R-6b auf `ersetzt`. Die Regel ist aber nicht erfüllt, weil der Beleg „Inhalt
+unverändert“ nur aus der Release-Notiz stammt (siehe Abschnitt 8).
 
 **Release 2.0.0** (`api-electricity`, veröffentlicht 24.07.2026, Ziel-Branch
 `2026-07-31-consultation`) ist ein Konsultations-Release. Seine Notiz nennt „anzuwenden ab
@@ -244,7 +245,11 @@ Weg geregelt“ ist erfüllt. Beleg (1) „Inhalt unverändert“ ist nur indire
 PDFs verlinken nur auf SwaggerHub, dort sind die Spezifikationen gelöscht (HTTP 404), das
 Internet Archive hat keinen Inhalt gespeichert. Tragend bleiben die Release-Notiz, die seit dem
 Import unveränderten Dateien und — beim Verzeichnisdienst — die Merkmale der Version 1.0 (keine
-1.1-Felder, Beispieldatum 2024-10-01). Die alten PDFs bleiben `ersetzt`; die Beleglage geht als
+1.1-Felder, Beispieldatum 2024-10-01). Alle drei alten
+PDFs sind reine Linkblätter (rund 1.100 Zeichen, keine Pfade oder Schemas), ein Textvergleich
+kann den Inhalt also nicht belegen. Der Bytevergleich bei Steuerungshandlungen/MaLo-ID betraf
+PDF gegen PDF (BNetzA ↔ BDEW), nicht die Spezifikation. **Entschieden 18.09.2026:** R-6b ist bei
+keinem der drei erfüllt; die alten PDFs sind `ergaenzend` statt `ersetzt`, die Beleglage geht als
 offene Beobachtung in den Übergabebericht.
 
 ## 9. Nächste Schritte
